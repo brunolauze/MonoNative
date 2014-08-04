@@ -17,7 +17,8 @@ Then an end result example is:
 using namespace mscorlib::System;
 using namespace mscorlib::System::Collections::Generic;
 
-var *list = new List<String>();
+var *list = new List&lt;String&gt;();
+
 list->Add(String("TEST"));
 int count = list->Count;
 
