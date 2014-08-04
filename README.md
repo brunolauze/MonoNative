@@ -13,25 +13,21 @@ The generic types are 100% templated to avoid declaring any speciality explicitl
 
 Then an end result example is:
 
-
+```C#
 using namespace mscorlib::System;
 using namespace mscorlib::System::Collections::Generic;
 
-var *list = new List&lt;String&gt;();
-
+var *list = new List<String>();
 list->Add(String("TEST"));
 int count = list->Count;
-
-if (count == 0)
-{
+if (count == 0) {
    Console::WriteLine("Added TEST String");
 }
 
 list->Clear();
 count = list->Count;
 
-if (count == 0)
-{
+if (count == 0) {
    Console::WriteLine("Clear done");
 }
-
+```
