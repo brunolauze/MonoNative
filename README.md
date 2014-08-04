@@ -21,13 +21,13 @@ var *list = new List<String>();
 list->Add(String("TEST"));
 int count = list->Count;
 if (count == 0) {
-   Console::WriteLine("Added TEST String");
+   Console::WriteLine(String("Added TEST String"));
 }
 
 list->Clear();
 count = list->Count;
 
 if (count == 0) {
-   Console::WriteLine("Clear done");
+   Console::WriteLine(String("Clear done"));
 }
 ```
