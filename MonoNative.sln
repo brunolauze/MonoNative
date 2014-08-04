@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "MonoNative", "MonoNative\MonoNative.cproj", "{430C54BA-323D-41D7-AD3E-F87E91858EAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoNative.Generator", "MonoNative.Generator\MonoNative.Generator.csproj", "{AC66FEF7-EA17-45C0-8BCD-BFD776B9BA21}"
+EndProject
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "MonoNative.Tests", "MonoNative.Tests\MonoNative.Tests.cproj", "{5B962D01-9B76-43A9-9AC8-EE27BC6C623D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoNativeHelper", "MonoNativeHelper\MonoNativeHelper.csproj", "{EFA1DA24-627F-455A-98A7-FA334E8B3FC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B962D01-9B76-43A9-9AC8-EE27BC6C623D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B962D01-9B76-43A9-9AC8-EE27BC6C623D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B962D01-9B76-43A9-9AC8-EE27BC6C623D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B962D01-9B76-43A9-9AC8-EE27BC6C623D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC66FEF7-EA17-45C0-8BCD-BFD776B9BA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC66FEF7-EA17-45C0-8BCD-BFD776B9BA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC66FEF7-EA17-45C0-8BCD-BFD776B9BA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC66FEF7-EA17-45C0-8BCD-BFD776B9BA21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA1DA24-627F-455A-98A7-FA334E8B3FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA1DA24-627F-455A-98A7-FA334E8B3FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA1DA24-627F-455A-98A7-FA334E8B3FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA1DA24-627F-455A-98A7-FA334E8B3FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MonoNative.Generator\MonoNative.Generator.csproj
+	EndGlobalSection
+EndGlobal
