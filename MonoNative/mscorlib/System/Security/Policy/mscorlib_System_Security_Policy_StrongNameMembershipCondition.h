@@ -5,8 +5,8 @@
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_StrongNamePublicKeyBlob.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Version.h>
-#include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_IMembershipCondition.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
+#include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_IMembershipCondition.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityPolicyEncodable.h>
 
 namespace mscorlib
@@ -60,15 +60,15 @@ namespace mscorlib
 
 				class StrongNameMembershipCondition
 					: public mscorlib::System::Object
-					, public virtual mscorlib::System::Security::Policy::IMembershipCondition
 					, public virtual mscorlib::System::Security::ISecurityEncodable
+					, public virtual mscorlib::System::Security::Policy::IMembershipCondition
 					, public virtual mscorlib::System::Security::ISecurityPolicyEncodable
 				{
 				public:
 					StrongNameMembershipCondition(mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob blob, mscorlib::System::String name, mscorlib::System::Version version)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Policy.StrongNameMembershipCondition"))
-					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
+					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
 					{
 						MonoType *__parameter_types__[3];
@@ -84,16 +84,16 @@ namespace mscorlib
 				
 					StrongNameMembershipCondition(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
-					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
+					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
 					{
 					};
 				
 					StrongNameMembershipCondition(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
-					, mscorlib::System::Security::Policy::IMembershipCondition(nativeObject)
 					, mscorlib::System::Security::ISecurityEncodable(nativeObject)
+					, mscorlib::System::Security::Policy::IMembershipCondition(nativeObject)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(nativeObject)
 					{
 					};

@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_CRYPTOGRAPHY_HASHALGORITHM_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
+#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 
 namespace mscorlib
 {
@@ -41,21 +41,21 @@ namespace mscorlib
 
 				class HashAlgorithm
 					: public mscorlib::System::Object
-					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 					, public virtual mscorlib::System::IDisposable
+					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 				{
 				public:
 					HashAlgorithm(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 					};
 				
 					HashAlgorithm(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					, mscorlib::System::IDisposable(nativeObject)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					{
 					};
 				

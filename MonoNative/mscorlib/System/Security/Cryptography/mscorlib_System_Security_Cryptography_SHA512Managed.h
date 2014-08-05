@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_CRYPTOGRAPHY_SHA512MANAGED_H
 
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_SHA512.h>
-#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
+#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
 namespace mscorlib
@@ -42,29 +42,29 @@ namespace mscorlib
 
 				class SHA512Managed
 					: public mscorlib::System::Security::Cryptography::SHA512
-					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 					, public virtual mscorlib::System::IDisposable
+					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 				{
 				public:
 					SHA512Managed()
 					: mscorlib::System::Security::Cryptography::SHA512(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.SHA512Managed"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "SHA512Managed");
 					};
 				
 					SHA512Managed(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::Cryptography::SHA512(nativeTypeInfo)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 					};
 				
 					SHA512Managed(MonoObject *nativeObject)
 					: mscorlib::System::Security::Cryptography::SHA512(nativeObject)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					, mscorlib::System::IDisposable(nativeObject)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					{
 					};
 				

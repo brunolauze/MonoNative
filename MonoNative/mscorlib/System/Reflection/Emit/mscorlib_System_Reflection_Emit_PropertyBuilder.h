@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_PropertyInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__PropertyInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__PropertyBuilder.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__PropertyInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_PropertyAttributes.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -86,16 +86,16 @@ namespace mscorlib
 				class PropertyBuilder
 					: public mscorlib::System::Reflection::PropertyInfo
 					, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
-					, public virtual mscorlib::System::Runtime::InteropServices::_PropertyInfo
 					, public virtual mscorlib::System::Runtime::InteropServices::_PropertyBuilder
+					, public virtual mscorlib::System::Runtime::InteropServices::_PropertyInfo
 					, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 				{
 				public:
 					PropertyBuilder(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Reflection::PropertyInfo(nativeTypeInfo)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
-					, mscorlib::System::Runtime::InteropServices::_PropertyInfo(NULL)
 					, mscorlib::System::Runtime::InteropServices::_PropertyBuilder(NULL)
+					, mscorlib::System::Runtime::InteropServices::_PropertyInfo(NULL)
 					, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 					{
 					};
@@ -103,8 +103,8 @@ namespace mscorlib
 					PropertyBuilder(MonoObject *nativeObject)
 					: mscorlib::System::Reflection::PropertyInfo(nativeObject)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
-					, mscorlib::System::Runtime::InteropServices::_PropertyInfo(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_PropertyBuilder(nativeObject)
+					, mscorlib::System::Runtime::InteropServices::_PropertyInfo(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 					{
 					};

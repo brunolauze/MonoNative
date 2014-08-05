@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_FromBase64TransformMode.h>
-#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
+#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 
 namespace mscorlib
 {
@@ -29,22 +29,22 @@ namespace mscorlib
 
 				class FromBase64Transform
 					: public mscorlib::System::Object
-					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 					, public virtual mscorlib::System::IDisposable
+					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 				{
 				public:
 					FromBase64Transform()
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.FromBase64Transform"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "FromBase64Transform");
 					};
 				
 					FromBase64Transform(mscorlib::System::Security::Cryptography::FromBase64TransformMode::__ENUM__ whitespaces)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.FromBase64Transform"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -55,15 +55,15 @@ namespace mscorlib
 				
 					FromBase64Transform(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 					};
 				
 					FromBase64Transform(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					, mscorlib::System::IDisposable(nativeObject)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					{
 					};
 				

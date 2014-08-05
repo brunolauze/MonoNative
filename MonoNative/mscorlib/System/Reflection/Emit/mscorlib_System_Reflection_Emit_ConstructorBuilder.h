@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ConstructorInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__ConstructorBuilder.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__ConstructorInfo.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__ConstructorBuilder.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MethodBase.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_CallingConventions.h>
@@ -105,8 +105,8 @@ namespace mscorlib
 				class ConstructorBuilder
 					: public mscorlib::System::Reflection::ConstructorInfo
 					, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
-					, public virtual mscorlib::System::Runtime::InteropServices::_ConstructorBuilder
 					, public virtual mscorlib::System::Runtime::InteropServices::_ConstructorInfo
+					, public virtual mscorlib::System::Runtime::InteropServices::_ConstructorBuilder
 					, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 					, public virtual mscorlib::System::Runtime::InteropServices::_MethodBase
 				{
@@ -114,8 +114,8 @@ namespace mscorlib
 					ConstructorBuilder(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Reflection::ConstructorInfo(nativeTypeInfo)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
-					, mscorlib::System::Runtime::InteropServices::_ConstructorBuilder(NULL)
 					, mscorlib::System::Runtime::InteropServices::_ConstructorInfo(NULL)
+					, mscorlib::System::Runtime::InteropServices::_ConstructorBuilder(NULL)
 					, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 					, mscorlib::System::Runtime::InteropServices::_MethodBase(NULL)
 					{
@@ -124,8 +124,8 @@ namespace mscorlib
 					ConstructorBuilder(MonoObject *nativeObject)
 					: mscorlib::System::Reflection::ConstructorInfo(nativeObject)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
-					, mscorlib::System::Runtime::InteropServices::_ConstructorBuilder(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_ConstructorInfo(nativeObject)
+					, mscorlib::System::Runtime::InteropServices::_ConstructorBuilder(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_MethodBase(nativeObject)
 					{

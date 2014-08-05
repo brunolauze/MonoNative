@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_CRYPTOGRAPHY_HMACMD5_H
 
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_HMAC.h>
-#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
+#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
 namespace mscorlib
@@ -42,22 +42,22 @@ namespace mscorlib
 
 				class HMACMD5
 					: public mscorlib::System::Security::Cryptography::HMAC
-					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 					, public virtual mscorlib::System::IDisposable
+					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 				{
 				public:
 					HMACMD5()
 					: mscorlib::System::Security::Cryptography::HMAC(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.HMACMD5"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "HMACMD5");
 					};
 				
 					HMACMD5(std::vector<mscorlib::System::Byte*> key)
 					: mscorlib::System::Security::Cryptography::HMAC(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.HMACMD5"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -68,15 +68,15 @@ namespace mscorlib
 				
 					HMACMD5(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::Cryptography::HMAC(nativeTypeInfo)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 					};
 				
 					HMACMD5(MonoObject *nativeObject)
 					: mscorlib::System::Security::Cryptography::HMAC(nativeObject)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					, mscorlib::System::IDisposable(nativeObject)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					{
 					};
 				

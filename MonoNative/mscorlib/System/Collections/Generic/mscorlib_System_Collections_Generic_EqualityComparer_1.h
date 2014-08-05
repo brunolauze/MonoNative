@@ -81,7 +81,7 @@ namespace mscorlib
 
 					//Get Set Static Properties Methods
 					//	Get:Default
-					static mscorlib::System::Collections::Generic::EqualityComparer<T>  get_Default() const
+					static mscorlib::System::Collections::Generic::EqualityComparer<T>  get_Default()
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());

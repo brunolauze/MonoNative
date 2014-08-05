@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_DSA.h>
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_CspParameters.h>
-#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICspAsymmetricAlgorithm.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
+#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICspAsymmetricAlgorithm.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
 namespace mscorlib
@@ -61,22 +61,22 @@ namespace mscorlib
 
 				class DSACryptoServiceProvider
 					: public mscorlib::System::Security::Cryptography::DSA
-					, public virtual mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm
 					, public virtual mscorlib::System::IDisposable
+					, public virtual mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm
 				{
 				public:
 					DSACryptoServiceProvider()
 					: mscorlib::System::Security::Cryptography::DSA(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.DSACryptoServiceProvider"))
-					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "DSACryptoServiceProvider");
 					};
 				
 					DSACryptoServiceProvider(mscorlib::System::Security::Cryptography::CspParameters parameters)
 					: mscorlib::System::Security::Cryptography::DSA(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.DSACryptoServiceProvider"))
-					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -87,8 +87,8 @@ namespace mscorlib
 				
 					DSACryptoServiceProvider(mscorlib::System::Int32 dwKeySize)
 					: mscorlib::System::Security::Cryptography::DSA(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.DSACryptoServiceProvider"))
-					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -99,8 +99,8 @@ namespace mscorlib
 				
 					DSACryptoServiceProvider(mscorlib::System::Int32 dwKeySize, mscorlib::System::Security::Cryptography::CspParameters parameters)
 					: mscorlib::System::Security::Cryptography::DSA(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.DSACryptoServiceProvider"))
-					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -113,15 +113,15 @@ namespace mscorlib
 				
 					DSACryptoServiceProvider(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::Cryptography::DSA(nativeTypeInfo)
-					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
 					{
 					};
 				
 					DSACryptoServiceProvider(MonoObject *nativeObject)
 					: mscorlib::System::Security::Cryptography::DSA(nativeObject)
-					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(nativeObject)
 					, mscorlib::System::IDisposable(nativeObject)
+					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(nativeObject)
 					{
 					};
 				

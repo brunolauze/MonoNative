@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_FieldInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__FieldBuilder.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__FieldInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_FieldAttributes.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -86,16 +86,16 @@ namespace mscorlib
 				class FieldBuilder
 					: public mscorlib::System::Reflection::FieldInfo
 					, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
-					, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 					, public virtual mscorlib::System::Runtime::InteropServices::_FieldBuilder
+					, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 					, public virtual mscorlib::System::Runtime::InteropServices::_FieldInfo
 				{
 				public:
 					FieldBuilder(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Reflection::FieldInfo(nativeTypeInfo)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
-					, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 					, mscorlib::System::Runtime::InteropServices::_FieldBuilder(NULL)
+					, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 					, mscorlib::System::Runtime::InteropServices::_FieldInfo(NULL)
 					{
 					};
@@ -103,8 +103,8 @@ namespace mscorlib
 					FieldBuilder(MonoObject *nativeObject)
 					: mscorlib::System::Reflection::FieldInfo(nativeObject)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
-					, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_FieldBuilder(nativeObject)
+					, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_FieldInfo(nativeObject)
 					{
 					};

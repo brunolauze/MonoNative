@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_CRYPTOGRAPHY_RIPEMD160MANAGED_H
 
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_RIPEMD160.h>
-#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
+#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
 namespace mscorlib
@@ -42,29 +42,29 @@ namespace mscorlib
 
 				class RIPEMD160Managed
 					: public mscorlib::System::Security::Cryptography::RIPEMD160
-					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 					, public virtual mscorlib::System::IDisposable
+					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 				{
 				public:
 					RIPEMD160Managed()
 					: mscorlib::System::Security::Cryptography::RIPEMD160(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.RIPEMD160Managed"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "RIPEMD160Managed");
 					};
 				
 					RIPEMD160Managed(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::Cryptography::RIPEMD160(nativeTypeInfo)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 					};
 				
 					RIPEMD160Managed(MonoObject *nativeObject)
 					: mscorlib::System::Security::Cryptography::RIPEMD160(nativeObject)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					, mscorlib::System::IDisposable(nativeObject)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					{
 					};
 				

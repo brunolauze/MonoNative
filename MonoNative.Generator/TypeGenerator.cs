@@ -970,7 +970,7 @@ namespace MonoNative.Generator
 			{
 				if (!IsCircularProperty (property)) {
 					sb.AppendLine (indent + "\t//\tGet" + (property.CanWrite ? "/Set:" : ":") + property.Name);
-					sb.AppendLine (indent + "\tstatic " + property.PropertyType.ToParameterTypeName () + " get_" + property.Name + "() const");
+					sb.AppendLine (indent + "\tstatic " + property.PropertyType.ToParameterTypeName () + " get_" + property.Name + "()");
 					sb.AppendLine (indent + "\t{");
 					WriteInvoke (type, sb, indent, property.GetGetMethod (true));
 					sb.AppendLine (indent + "\t}");

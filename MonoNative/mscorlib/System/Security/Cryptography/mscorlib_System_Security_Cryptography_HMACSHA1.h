@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_CRYPTOGRAPHY_HMACSHA1_H
 
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_HMAC.h>
-#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
+#include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
 namespace mscorlib
@@ -42,22 +42,22 @@ namespace mscorlib
 
 				class HMACSHA1
 					: public mscorlib::System::Security::Cryptography::HMAC
-					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 					, public virtual mscorlib::System::IDisposable
+					, public virtual mscorlib::System::Security::Cryptography::ICryptoTransform
 				{
 				public:
 					HMACSHA1()
 					: mscorlib::System::Security::Cryptography::HMAC(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.HMACSHA1"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "HMACSHA1");
 					};
 				
 					HMACSHA1(std::vector<mscorlib::System::Byte*> key)
 					: mscorlib::System::Security::Cryptography::HMAC(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.HMACSHA1"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -68,8 +68,8 @@ namespace mscorlib
 				
 					HMACSHA1(std::vector<mscorlib::System::Byte*> key, mscorlib::System::Boolean useManagedSha1)
 					: mscorlib::System::Security::Cryptography::HMAC(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.HMACSHA1"))
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -82,15 +82,15 @@ namespace mscorlib
 				
 					HMACSHA1(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::Cryptography::HMAC(nativeTypeInfo)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					, mscorlib::System::IDisposable(NULL)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(NULL)
 					{
 					};
 				
 					HMACSHA1(MonoObject *nativeObject)
 					: mscorlib::System::Security::Cryptography::HMAC(nativeObject)
-					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					, mscorlib::System::IDisposable(nativeObject)
+					, mscorlib::System::Security::Cryptography::ICryptoTransform(nativeObject)
 					{
 					};
 				

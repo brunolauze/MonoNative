@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessageSink.h>
-#include <mscorlib/System/Runtime/Remoting/Channels/mscorlib_System_Runtime_Remoting_Channels_IClientChannelSinkStack.h>
 #include <mscorlib/System/Runtime/Remoting/Channels/mscorlib_System_Runtime_Remoting_Channels_IClientResponseChannelSinkStack.h>
+#include <mscorlib/System/Runtime/Remoting/Channels/mscorlib_System_Runtime_Remoting_Channels_IClientChannelSinkStack.h>
 #include <mscorlib/System/Runtime/Remoting/Channels/mscorlib_System_Runtime_Remoting_Channels_ITransportHeaders.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Channels/mscorlib_System_Runtime_Remoting_Channels_IClientChannelSink.h>
@@ -47,22 +47,22 @@ namespace mscorlib
 
 					class ClientChannelSinkStack
 						: public mscorlib::System::Object
-						, public virtual mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack
 						, public virtual mscorlib::System::Runtime::Remoting::Channels::IClientResponseChannelSinkStack
+						, public virtual mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack
 					{
 					public:
 						ClientChannelSinkStack()
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Channels.ClientChannelSinkStack"))
-						, mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack(NULL)
 						, mscorlib::System::Runtime::Remoting::Channels::IClientResponseChannelSinkStack(NULL)
+						, mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack(NULL)
 						{
 							__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting.Channels", "ClientChannelSinkStack");
 						};
 					
 						ClientChannelSinkStack(mscorlib::System::Runtime::Remoting::Messaging::IMessageSink replySink)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Channels.ClientChannelSinkStack"))
-						, mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack(NULL)
 						, mscorlib::System::Runtime::Remoting::Channels::IClientResponseChannelSinkStack(NULL)
+						, mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack(NULL)
 						{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
@@ -73,15 +73,15 @@ namespace mscorlib
 					
 						ClientChannelSinkStack(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Object(nativeTypeInfo)
-						, mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack(NULL)
 						, mscorlib::System::Runtime::Remoting::Channels::IClientResponseChannelSinkStack(NULL)
+						, mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack(NULL)
 						{
 						};
 					
 						ClientChannelSinkStack(MonoObject *nativeObject)
 						: mscorlib::System::Object(nativeObject)
-						, mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Channels::IClientResponseChannelSinkStack(nativeObject)
+						, mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkStack(nativeObject)
 						{
 						};
 					

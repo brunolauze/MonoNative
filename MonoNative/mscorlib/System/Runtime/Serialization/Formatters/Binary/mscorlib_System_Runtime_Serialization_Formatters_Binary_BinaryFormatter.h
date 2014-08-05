@@ -4,8 +4,8 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISurrogateSelector.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IFormatter.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IRemotingFormatter.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IFormatter.h>
 #include <mscorlib/System/Runtime/Serialization/Formatters/mscorlib_System_Runtime_Serialization_Formatters_FormatterAssemblyStyle.h>
 #include <mscorlib/System/Runtime/Serialization/Formatters/mscorlib_System_Runtime_Serialization_Formatters_FormatterTypeStyle.h>
 #include <mscorlib/System/Runtime/Serialization/Formatters/mscorlib_System_Runtime_Serialization_Formatters_TypeFilterLevel.h>
@@ -85,22 +85,22 @@ namespace mscorlib
 
 						class BinaryFormatter
 							: public mscorlib::System::Object
-							, public virtual mscorlib::System::Runtime::Serialization::IFormatter
 							, public virtual mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter
+							, public virtual mscorlib::System::Runtime::Serialization::IFormatter
 						{
 						public:
 							BinaryFormatter()
 							: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Serialization.Formatters.Binary.BinaryFormatter"))
-							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
 							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
+							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
 							{
 								__native_object__ = Global::New("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter");
 							};
 						
 							BinaryFormatter(mscorlib::System::Runtime::Serialization::ISurrogateSelector selector, mscorlib::System::Runtime::Serialization::StreamingContext context)
 							: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Serialization.Formatters.Binary.BinaryFormatter"))
-							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
 							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
+							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
 							{
 								MonoType *__parameter_types__[2];
 								void *__parameters__[2];
@@ -113,15 +113,15 @@ namespace mscorlib
 						
 							BinaryFormatter(mscorlib::NativeTypeInfo *nativeTypeInfo)
 							: mscorlib::System::Object(nativeTypeInfo)
-							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
 							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
+							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
 							{
 							};
 						
 							BinaryFormatter(MonoObject *nativeObject)
 							: mscorlib::System::Object(nativeObject)
-							, mscorlib::System::Runtime::Serialization::IFormatter(nativeObject)
 							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(nativeObject)
+							, mscorlib::System::Runtime::Serialization::IFormatter(nativeObject)
 							{
 							};
 						

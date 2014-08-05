@@ -4,8 +4,8 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/IO/mscorlib_System_IO_Stream.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/Resources/mscorlib_System_Resources_IResourceWriter.h>
+#include <mscorlib/System/mscorlib_System_IDisposable.h>
 
 namespace mscorlib
 {
@@ -27,14 +27,14 @@ namespace mscorlib
 
 			class ResourceWriter
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::IDisposable
 				, public virtual mscorlib::System::Resources::IResourceWriter
+				, public virtual mscorlib::System::IDisposable
 			{
 			public:
 				ResourceWriter(mscorlib::System::IO::Stream stream)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Resources.ResourceWriter"))
-				, mscorlib::System::IDisposable(NULL)
 				, mscorlib::System::Resources::IResourceWriter(NULL)
+				, mscorlib::System::IDisposable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -45,8 +45,8 @@ namespace mscorlib
 			
 				ResourceWriter(mscorlib::System::String fileName)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Resources.ResourceWriter"))
-				, mscorlib::System::IDisposable(NULL)
 				, mscorlib::System::Resources::IResourceWriter(NULL)
+				, mscorlib::System::IDisposable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -57,15 +57,15 @@ namespace mscorlib
 			
 				ResourceWriter(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::IDisposable(NULL)
 				, mscorlib::System::Resources::IResourceWriter(NULL)
+				, mscorlib::System::IDisposable(NULL)
 				{
 				};
 			
 				ResourceWriter(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::IDisposable(nativeObject)
 				, mscorlib::System::Resources::IResourceWriter(nativeObject)
+				, mscorlib::System::IDisposable(nativeObject)
 				{
 				};
 			

@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_COLLECTIONS_OBJECTMODEL_KEYEDCOLLECTION_2_H
 
 #include <mscorlib/System/Collections/ObjectModel/mscorlib_System_Collections_ObjectModel_Collection_1.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IList_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyList_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IList.h>
@@ -28,8 +28,8 @@ namespace mscorlib
 				template<typename TKey, typename TItem>
 				class KeyedCollection
 					: public mscorlib::System::Collections::ObjectModel::Collection<TItem>
-					, public virtual mscorlib::System::Collections::ICollection
 					, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>
+					, public virtual mscorlib::System::Collections::ICollection
 					, public virtual mscorlib::System::Collections::Generic::IList<TItem>
 					, public virtual mscorlib::System::Collections::Generic::IReadOnlyList<TItem>
 					, public virtual mscorlib::System::Collections::IList
@@ -40,8 +40,8 @@ namespace mscorlib
 				public:
 					KeyedCollection(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Collections::ObjectModel::Collection<TItem>(nativeTypeInfo)
-					, mscorlib::System::Collections::ICollection(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>(NULL)
+					, mscorlib::System::Collections::ICollection(NULL)
 					, mscorlib::System::Collections::Generic::IList<TItem>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyList<TItem>(NULL)
 					, mscorlib::System::Collections::IList(NULL)
@@ -53,8 +53,8 @@ namespace mscorlib
 				
 					KeyedCollection(MonoObject *nativeObject)
 					: mscorlib::System::Collections::ObjectModel::Collection<TItem>(nativeObject)
-					, mscorlib::System::Collections::ICollection(nativeObject)
 					, mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>(nativeObject)
+					, mscorlib::System::Collections::ICollection(nativeObject)
 					, mscorlib::System::Collections::Generic::IList<TItem>(nativeObject)
 					, mscorlib::System::Collections::Generic::IReadOnlyList<TItem>(nativeObject)
 					, mscorlib::System::Collections::IList(nativeObject)

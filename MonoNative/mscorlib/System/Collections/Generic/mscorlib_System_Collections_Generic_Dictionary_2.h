@@ -14,8 +14,8 @@
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_ICollection_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
-#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_KeyValuePair_2.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionaryEnumerator.h>
+#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_KeyValuePair_2.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyDictionary_2.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
@@ -404,26 +404,26 @@ namespace mscorlib
 					class Enumerator
 						: public mscorlib::System::ValueType
 						, public virtual mscorlib::System::Collections::IEnumerator
+						, public virtual mscorlib::System::Collections::IDictionaryEnumerator
 						, public virtual mscorlib::System::IDisposable
 						, public virtual mscorlib::System::Collections::Generic::IEnumerator<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>
-						, public virtual mscorlib::System::Collections::IDictionaryEnumerator
 					{
 					public:
 						Enumerator(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::ValueType(nativeTypeInfo)
 						, mscorlib::System::Collections::IEnumerator(NULL)
+						, mscorlib::System::Collections::IDictionaryEnumerator(NULL)
 						, mscorlib::System::IDisposable(NULL)
 						, mscorlib::System::Collections::Generic::IEnumerator<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
-						, mscorlib::System::Collections::IDictionaryEnumerator(NULL)
 						{
 						};
 					
 						Enumerator(MonoObject *nativeObject)
 						: mscorlib::System::ValueType(nativeObject)
 						, mscorlib::System::Collections::IEnumerator(nativeObject)
+						, mscorlib::System::Collections::IDictionaryEnumerator(nativeObject)
 						, mscorlib::System::IDisposable(nativeObject)
 						, mscorlib::System::Collections::Generic::IEnumerator<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(nativeObject)
-						, mscorlib::System::Collections::IDictionaryEnumerator(nativeObject)
 						{
 						};
 					

@@ -6,8 +6,8 @@
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage.h>
-#include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Activation/mscorlib_System_Runtime_Remoting_Activation_IConstructionReturnMessage.h>
+#include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessage.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
@@ -89,8 +89,8 @@ namespace mscorlib
 						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage
 						, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage
-						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMessage
 						, public virtual mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage
+						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMessage
 					{
 					public:
 						ConstructionResponse(std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*> h, mscorlib::System::Runtime::Remoting::Messaging::IMethodCallMessage mcm)
@@ -98,8 +98,8 @@ namespace mscorlib
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage(NULL)
 						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage(NULL)
-						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(NULL)
 						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(NULL)
+						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(NULL)
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
@@ -115,8 +115,8 @@ namespace mscorlib
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage(NULL)
 						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage(NULL)
-						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(NULL)
 						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(NULL)
+						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(NULL)
 						{
 						};
 					
@@ -125,8 +125,8 @@ namespace mscorlib
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage(nativeObject)
 						, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage(nativeObject)
-						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(nativeObject)
+						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(nativeObject)
 						{
 						};
 					

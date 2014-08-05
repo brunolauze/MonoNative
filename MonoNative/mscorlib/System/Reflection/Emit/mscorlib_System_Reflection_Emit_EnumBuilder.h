@@ -3,10 +3,10 @@
 
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_TypeInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__EnumBuilder.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_IReflectableType.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Type.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__EnumBuilder.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_IReflect.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_BindingFlags.h>
@@ -116,20 +116,20 @@ namespace mscorlib
 				class EnumBuilder
 					: public mscorlib::System::Reflection::TypeInfo
 					, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
-					, public virtual mscorlib::System::Runtime::InteropServices::_EnumBuilder
 					, public virtual mscorlib::System::Reflection::IReflectableType
 					, public virtual mscorlib::System::Runtime::InteropServices::_Type
 					, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
+					, public virtual mscorlib::System::Runtime::InteropServices::_EnumBuilder
 					, public virtual mscorlib::System::Reflection::IReflect
 				{
 				public:
 					EnumBuilder(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Reflection::TypeInfo(nativeTypeInfo)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
-					, mscorlib::System::Runtime::InteropServices::_EnumBuilder(NULL)
 					, mscorlib::System::Reflection::IReflectableType(NULL)
 					, mscorlib::System::Runtime::InteropServices::_Type(NULL)
 					, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
+					, mscorlib::System::Runtime::InteropServices::_EnumBuilder(NULL)
 					, mscorlib::System::Reflection::IReflect(NULL)
 					{
 					};
@@ -137,10 +137,10 @@ namespace mscorlib
 					EnumBuilder(MonoObject *nativeObject)
 					: mscorlib::System::Reflection::TypeInfo(nativeObject)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
-					, mscorlib::System::Runtime::InteropServices::_EnumBuilder(nativeObject)
 					, mscorlib::System::Reflection::IReflectableType(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_Type(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
+					, mscorlib::System::Runtime::InteropServices::_EnumBuilder(nativeObject)
 					, mscorlib::System::Reflection::IReflect(nativeObject)
 					{
 					};
