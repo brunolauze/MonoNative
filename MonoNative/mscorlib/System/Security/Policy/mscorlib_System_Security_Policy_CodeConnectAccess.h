@@ -71,29 +71,33 @@ namespace mscorlib
 					__declspec(property(get=get_Scheme)) mscorlib::System::String  Scheme;
 
 					//Public Static Fields
-					static Property<mscorlib::System::String> AnyScheme;
-					static Property<mscorlib::System::Int32> DefaultPort;
-					static Property<mscorlib::System::Int32> OriginPort;
-					static Property<mscorlib::System::String> OriginScheme;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Policy::CodeConnectAccess> AnyScheme;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Security::Policy::CodeConnectAccess> DefaultPort;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Security::Policy::CodeConnectAccess> OriginPort;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Policy::CodeConnectAccess> OriginScheme;
 
 					//Get Set Properties Methods
 					//	Get:Port
-					mscorlib::System::Int32  get_Port();
+					mscorlib::System::Int32  get_Port() const;
 
 					//	Get:Scheme
-					mscorlib::System::String  get_Scheme();
+					mscorlib::System::String  get_Scheme() const;
 
 					//	Get/Set:AnyScheme
 					static mscorlib::System::String  get_AnyScheme();
+					static void set_AnyScheme(mscorlib::System::String  value);
 
 					//	Get/Set:DefaultPort
 					static mscorlib::System::Int32  get_DefaultPort();
+					static void set_DefaultPort(mscorlib::System::Int32  value);
 
 					//	Get/Set:OriginPort
 					static mscorlib::System::Int32  get_OriginPort();
+					static void set_OriginPort(mscorlib::System::Int32  value);
 
 					//	Get/Set:OriginScheme
 					static mscorlib::System::String  get_OriginScheme();
+					static void set_OriginScheme(mscorlib::System::String  value);
 
 				
 				protected:

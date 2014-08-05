@@ -94,23 +94,23 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Category
-					mscorlib::System::String  get_Category();
+					mscorlib::System::String  get_Category() const;
 					void set_Category(mscorlib::System::String  value);
 
 					//	Get/Set:Enabled
-					mscorlib::System::Boolean  get_Enabled();
+					mscorlib::System::Boolean  get_Enabled() const;
 					void set_Enabled(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Setting
-					mscorlib::System::String  get_Setting();
+					mscorlib::System::String  get_Setting() const;
 					void set_Setting(mscorlib::System::String  value);
 
 					//	Get/Set:Value
-					mscorlib::System::String  get_Value();
+					mscorlib::System::String  get_Value() const;
 					void set_Value(mscorlib::System::String  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

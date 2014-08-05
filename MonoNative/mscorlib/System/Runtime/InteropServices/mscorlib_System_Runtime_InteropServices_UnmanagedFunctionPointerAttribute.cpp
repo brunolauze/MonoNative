@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:CallingConvention
-				mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__  UnmanagedFunctionPointerAttribute::get_CallingConvention()
+				mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__  UnmanagedFunctionPointerAttribute::get_CallingConvention() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UnmanagedFunctionPointerAttribute", 0, NULL, "get_CallingConvention", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__*)mono_object_unbox(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  UnmanagedFunctionPointerAttribute::get_TypeId()
+				mscorlib::System::Object  UnmanagedFunctionPointerAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get/Set:CharSet
-				mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__ UnmanagedFunctionPointerAttribute::get_CharSet()
+				mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__ UnmanagedFunctionPointerAttribute::get_CharSet() const
 				{
 					return static_cast<mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "CharSet"));
 				}
@@ -42,7 +42,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:SetLastError
-				mscorlib::System::Boolean UnmanagedFunctionPointerAttribute::get_SetLastError()
+				mscorlib::System::Boolean UnmanagedFunctionPointerAttribute::get_SetLastError() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "SetLastError");
 				}
@@ -52,7 +52,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:BestFitMapping
-				mscorlib::System::Boolean UnmanagedFunctionPointerAttribute::get_BestFitMapping()
+				mscorlib::System::Boolean UnmanagedFunctionPointerAttribute::get_BestFitMapping() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "BestFitMapping");
 				}
@@ -62,7 +62,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:ThrowOnUnmappableChar
-				mscorlib::System::Boolean UnmanagedFunctionPointerAttribute::get_ThrowOnUnmappableChar()
+				mscorlib::System::Boolean UnmanagedFunctionPointerAttribute::get_ThrowOnUnmappableChar() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "ThrowOnUnmappableChar");
 				}

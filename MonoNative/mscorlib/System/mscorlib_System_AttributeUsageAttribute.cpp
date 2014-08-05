@@ -12,7 +12,7 @@ namespace mscorlib
 		//Public Methods
 		//Get Set Properties Methods
 		//	Get/Set:AllowMultiple
-		mscorlib::System::Boolean  AttributeUsageAttribute::get_AllowMultiple()
+		mscorlib::System::Boolean  AttributeUsageAttribute::get_AllowMultiple() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AttributeUsageAttribute", 0, NULL, "get_AllowMultiple", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -29,7 +29,7 @@ namespace mscorlib
 
 
 		//	Get/Set:Inherited
-		mscorlib::System::Boolean  AttributeUsageAttribute::get_Inherited()
+		mscorlib::System::Boolean  AttributeUsageAttribute::get_Inherited() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AttributeUsageAttribute", 0, NULL, "get_Inherited", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -46,7 +46,7 @@ namespace mscorlib
 
 
 		//	Get:ValidOn
-		mscorlib::System::AttributeTargets::__ENUM__  AttributeUsageAttribute::get_ValidOn()
+		mscorlib::System::AttributeTargets::__ENUM__  AttributeUsageAttribute::get_ValidOn() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AttributeUsageAttribute", 0, NULL, "get_ValidOn", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::AttributeTargets::__ENUM__*)mono_object_unbox(__result__);
@@ -54,7 +54,7 @@ namespace mscorlib
 
 
 		//	Get:TypeId
-		mscorlib::System::Object  AttributeUsageAttribute::get_TypeId()
+		mscorlib::System::Object  AttributeUsageAttribute::get_TypeId() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Object(__result__);

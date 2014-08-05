@@ -129,10 +129,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CurrentCount
-				mscorlib::System::Int32  get_CurrentCount();
+				mscorlib::System::Int32  get_CurrentCount() const;
 
 				//	Get:AvailableWaitHandle
-				mscorlib::System::Threading::WaitHandle  get_AvailableWaitHandle();
+				mscorlib::System::Threading::WaitHandle  get_AvailableWaitHandle() const;
 
 			
 			protected:

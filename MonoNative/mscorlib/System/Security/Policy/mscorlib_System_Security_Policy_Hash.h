@@ -112,10 +112,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:MD5
-					std::vector<mscorlib::System::Byte*>  get_MD5();
+					std::vector<mscorlib::System::Byte*>  get_MD5() const;
 
 					//	Get:SHA1
-					std::vector<mscorlib::System::Byte*>  get_SHA1();
+					std::vector<mscorlib::System::Byte*>  get_SHA1() const;
 
 				
 				protected:

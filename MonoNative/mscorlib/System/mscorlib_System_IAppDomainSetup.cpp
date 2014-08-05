@@ -10,7 +10,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get/Set:ApplicationBase
-		mscorlib::System::String  IAppDomainSetup::get_ApplicationBase()
+		mscorlib::System::String  IAppDomainSetup::get_ApplicationBase() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_ApplicationBase", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -27,7 +27,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ApplicationName
-		mscorlib::System::String  IAppDomainSetup::get_ApplicationName()
+		mscorlib::System::String  IAppDomainSetup::get_ApplicationName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_ApplicationName", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -44,7 +44,7 @@ namespace mscorlib
 
 
 		//	Get/Set:CachePath
-		mscorlib::System::String  IAppDomainSetup::get_CachePath()
+		mscorlib::System::String  IAppDomainSetup::get_CachePath() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_CachePath", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -61,7 +61,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ConfigurationFile
-		mscorlib::System::String  IAppDomainSetup::get_ConfigurationFile()
+		mscorlib::System::String  IAppDomainSetup::get_ConfigurationFile() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_ConfigurationFile", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -78,7 +78,7 @@ namespace mscorlib
 
 
 		//	Get/Set:DynamicBase
-		mscorlib::System::String  IAppDomainSetup::get_DynamicBase()
+		mscorlib::System::String  IAppDomainSetup::get_DynamicBase() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_DynamicBase", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -95,7 +95,7 @@ namespace mscorlib
 
 
 		//	Get/Set:LicenseFile
-		mscorlib::System::String  IAppDomainSetup::get_LicenseFile()
+		mscorlib::System::String  IAppDomainSetup::get_LicenseFile() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_LicenseFile", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -112,7 +112,7 @@ namespace mscorlib
 
 
 		//	Get/Set:PrivateBinPath
-		mscorlib::System::String  IAppDomainSetup::get_PrivateBinPath()
+		mscorlib::System::String  IAppDomainSetup::get_PrivateBinPath() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_PrivateBinPath", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -129,7 +129,7 @@ namespace mscorlib
 
 
 		//	Get/Set:PrivateBinPathProbe
-		mscorlib::System::String  IAppDomainSetup::get_PrivateBinPathProbe()
+		mscorlib::System::String  IAppDomainSetup::get_PrivateBinPathProbe() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_PrivateBinPathProbe", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -146,7 +146,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ShadowCopyDirectories
-		mscorlib::System::String  IAppDomainSetup::get_ShadowCopyDirectories()
+		mscorlib::System::String  IAppDomainSetup::get_ShadowCopyDirectories() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_ShadowCopyDirectories", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -163,7 +163,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ShadowCopyFiles
-		mscorlib::System::String  IAppDomainSetup::get_ShadowCopyFiles()
+		mscorlib::System::String  IAppDomainSetup::get_ShadowCopyFiles() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAppDomainSetup", 0, NULL, "get_ShadowCopyFiles", __mscorlib_System_IAppDomainSetup, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);

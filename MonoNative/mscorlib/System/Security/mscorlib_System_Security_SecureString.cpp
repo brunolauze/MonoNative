@@ -81,7 +81,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Length
-			mscorlib::System::Int32  SecureString::get_Length()
+			mscorlib::System::Int32  SecureString::get_Length() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecureString", 0, NULL, "get_Length", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

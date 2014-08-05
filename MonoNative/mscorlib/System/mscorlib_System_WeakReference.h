@@ -99,14 +99,14 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsAlive
-			mscorlib::System::Boolean  get_IsAlive();
+			mscorlib::System::Boolean  get_IsAlive() const;
 
 			//	Get/Set:Target
-			mscorlib::System::Object  get_Target();
+			mscorlib::System::Object  get_Target() const;
 			void set_Target(mscorlib::System::Object  value);
 
 			//	Get:TrackResurrection
-			mscorlib::System::Boolean  get_TrackResurrection();
+			mscorlib::System::Boolean  get_TrackResurrection() const;
 
 		
 		protected:

@@ -79,32 +79,32 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ANSICodePage
-				mscorlib::System::Int32  get_ANSICodePage();
+				mscorlib::System::Int32  get_ANSICodePage() const;
 
 				//	Get:EBCDICCodePage
-				mscorlib::System::Int32  get_EBCDICCodePage();
+				mscorlib::System::Int32  get_EBCDICCodePage() const;
 
 				//	Get:LCID
-				mscorlib::System::Int32  get_LCID();
+				mscorlib::System::Int32  get_LCID() const;
 
 				//	Get/Set:ListSeparator
-				mscorlib::System::String  get_ListSeparator();
+				mscorlib::System::String  get_ListSeparator() const;
 				void set_ListSeparator(mscorlib::System::String  value);
 
 				//	Get:MacCodePage
-				mscorlib::System::Int32  get_MacCodePage();
+				mscorlib::System::Int32  get_MacCodePage() const;
 
 				//	Get:OEMCodePage
-				mscorlib::System::Int32  get_OEMCodePage();
+				mscorlib::System::Int32  get_OEMCodePage() const;
 
 				//	Get:CultureName
-				mscorlib::System::String  get_CultureName();
+				mscorlib::System::String  get_CultureName() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get:IsRightToLeft
-				mscorlib::System::Boolean  get_IsRightToLeft();
+				mscorlib::System::Boolean  get_IsRightToLeft() const;
 
 			
 			protected:

@@ -3,11 +3,11 @@
 
 #include <mscorlib/System/Collections/ObjectModel/mscorlib_System_Collections_ObjectModel_Collection_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
+#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IList_1.h>
+#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyList_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IList.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
-#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyList_1.h>
-#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_ICollection_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEqualityComparer_1.h>
@@ -29,11 +29,11 @@ namespace mscorlib
 				class KeyedCollection
 					: public mscorlib::System::Collections::ObjectModel::Collection<TItem>
 					, public virtual mscorlib::System::Collections::ICollection
+					, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>
 					, public virtual mscorlib::System::Collections::Generic::IList<TItem>
+					, public virtual mscorlib::System::Collections::Generic::IReadOnlyList<TItem>
 					, public virtual mscorlib::System::Collections::IList
 					, public virtual mscorlib::System::Collections::IEnumerable
-					, public virtual mscorlib::System::Collections::Generic::IReadOnlyList<TItem>
-					, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>
 					, public virtual mscorlib::System::Collections::Generic::ICollection<TItem>
 					, public virtual mscorlib::System::Collections::Generic::IEnumerable<TItem>
 				{
@@ -41,11 +41,11 @@ namespace mscorlib
 					KeyedCollection(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Collections::ObjectModel::Collection<TItem>(nativeTypeInfo)
 					, mscorlib::System::Collections::ICollection(NULL)
+					, mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>(NULL)
 					, mscorlib::System::Collections::Generic::IList<TItem>(NULL)
+					, mscorlib::System::Collections::Generic::IReadOnlyList<TItem>(NULL)
 					, mscorlib::System::Collections::IList(NULL)
 					, mscorlib::System::Collections::IEnumerable(NULL)
-					, mscorlib::System::Collections::Generic::IReadOnlyList<TItem>(NULL)
-					, mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>(NULL)
 					, mscorlib::System::Collections::Generic::ICollection<TItem>(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<TItem>(NULL)
 					{
@@ -54,11 +54,11 @@ namespace mscorlib
 					KeyedCollection(MonoObject *nativeObject)
 					: mscorlib::System::Collections::ObjectModel::Collection<TItem>(nativeObject)
 					, mscorlib::System::Collections::ICollection(nativeObject)
+					, mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>(nativeObject)
 					, mscorlib::System::Collections::Generic::IList<TItem>(nativeObject)
+					, mscorlib::System::Collections::Generic::IReadOnlyList<TItem>(nativeObject)
 					, mscorlib::System::Collections::IList(nativeObject)
 					, mscorlib::System::Collections::IEnumerable(nativeObject)
-					, mscorlib::System::Collections::Generic::IReadOnlyList<TItem>(nativeObject)
-					, mscorlib::System::Collections::Generic::IReadOnlyCollection<TItem>(nativeObject)
 					, mscorlib::System::Collections::Generic::ICollection<TItem>(nativeObject)
 					, mscorlib::System::Collections::Generic::IEnumerable<TItem>(nativeObject)
 					{
@@ -109,7 +109,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Comparer
-					mscorlib::System::Collections::Generic::IEqualityComparer<TKey>  get_Comparer()
+					mscorlib::System::Collections::Generic::IEqualityComparer<TKey>  get_Comparer() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -119,7 +119,7 @@ namespace mscorlib
 					}
 
 					//	Get:Item
-					TItem  get_Item(TKey key)
+					TItem  get_Item(TKey key) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -133,7 +133,7 @@ namespace mscorlib
 					}
 
 					//	Get:Count
-					mscorlib::System::Int32  get_Count()
+					mscorlib::System::Int32  get_Count() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(TItem).name());
@@ -142,7 +142,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:Item
-					TItem  get_Item(mscorlib::System::Int32 index)
+					TItem  get_Item(mscorlib::System::Int32 index) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];

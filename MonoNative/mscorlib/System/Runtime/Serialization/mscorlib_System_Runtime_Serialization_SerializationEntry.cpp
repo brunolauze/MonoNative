@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:Name
-				mscorlib::System::String  SerializationEntry::get_Name()
+				mscorlib::System::String  SerializationEntry::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationEntry", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:ObjectType
-				mscorlib::System::Type  SerializationEntry::get_ObjectType()
+				mscorlib::System::Type  SerializationEntry::get_ObjectType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationEntry", 0, NULL, "get_ObjectType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get:Value
-				mscorlib::System::Object  SerializationEntry::get_Value()
+				mscorlib::System::Object  SerializationEntry::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationEntry", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

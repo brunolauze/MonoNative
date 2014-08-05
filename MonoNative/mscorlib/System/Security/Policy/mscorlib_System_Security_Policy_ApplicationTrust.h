@@ -134,27 +134,27 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:ApplicationIdentity
-					mscorlib::System::ApplicationIdentity  get_ApplicationIdentity();
+					mscorlib::System::ApplicationIdentity  get_ApplicationIdentity() const;
 					void set_ApplicationIdentity(mscorlib::System::ApplicationIdentity  value);
 
 					//	Get/Set:DefaultGrantSet
-					mscorlib::System::Security::Policy::PolicyStatement  get_DefaultGrantSet();
+					mscorlib::System::Security::Policy::PolicyStatement  get_DefaultGrantSet() const;
 					void set_DefaultGrantSet(mscorlib::System::Security::Policy::PolicyStatement  value);
 
 					//	Get/Set:ExtraInfo
-					mscorlib::System::Object  get_ExtraInfo();
+					mscorlib::System::Object  get_ExtraInfo() const;
 					void set_ExtraInfo(mscorlib::System::Object  value);
 
 					//	Get/Set:IsApplicationTrustedToRun
-					mscorlib::System::Boolean  get_IsApplicationTrustedToRun();
+					mscorlib::System::Boolean  get_IsApplicationTrustedToRun() const;
 					void set_IsApplicationTrustedToRun(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Persist
-					mscorlib::System::Boolean  get_Persist();
+					mscorlib::System::Boolean  get_Persist() const;
 					void set_Persist(mscorlib::System::Boolean  value);
 
 					//	Get:FullTrustAssemblies
-					mscorlib::System::Collections::Generic::IList<mscorlib::System::Security::Policy::StrongName>  get_FullTrustAssemblies();
+					mscorlib::System::Collections::Generic::IList<mscorlib::System::Security::Policy::StrongName>  get_FullTrustAssemblies() const;
 
 				
 				protected:

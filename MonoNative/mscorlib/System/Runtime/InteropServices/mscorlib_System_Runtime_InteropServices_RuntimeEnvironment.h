@@ -73,11 +73,12 @@ namespace mscorlib
 
 
 					//Public Static Properties
-					static Property<mscorlib::System::String> SystemConfigurationFile;
+					static Property<mscorlib::System::String , mscorlib::System::Runtime::InteropServices::RuntimeEnvironment> SystemConfigurationFile;
 
 					//Get Set Static Properties Methods
 					//	Get:SystemConfigurationFile
 					static mscorlib::System::String  get_SystemConfigurationFile();
+					static void set_SystemConfigurationFile(mscorlib::System::String  value);
 
 
 				

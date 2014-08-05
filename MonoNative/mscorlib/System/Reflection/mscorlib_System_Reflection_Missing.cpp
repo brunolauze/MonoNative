@@ -18,6 +18,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "System.Reflection", "Missing", 0, NULL, "Value");
 			}
 
+			void Missing::set_Value(mscorlib::System::Reflection::Missing  value)
+			{
+				throw;
+			}
 
 
 		}

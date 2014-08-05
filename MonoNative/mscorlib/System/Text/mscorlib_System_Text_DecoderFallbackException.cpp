@@ -17,7 +17,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get:BytesUnknown
-			std::vector<mscorlib::System::Byte*>  DecoderFallbackException::get_BytesUnknown()
+			std::vector<mscorlib::System::Byte*>  DecoderFallbackException::get_BytesUnknown() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "DecoderFallbackException", 0, NULL, "get_BytesUnknown", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -33,7 +33,7 @@ namespace mscorlib
 
 
 			//	Get:Index
-			mscorlib::System::Int32  DecoderFallbackException::get_Index()
+			mscorlib::System::Int32  DecoderFallbackException::get_Index() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "DecoderFallbackException", 0, NULL, "get_Index", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -41,7 +41,7 @@ namespace mscorlib
 
 
 			//	Get:ParamName
-			mscorlib::System::String  DecoderFallbackException::get_ParamName()
+			mscorlib::System::String  DecoderFallbackException::get_ParamName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ArgumentException", 0, NULL, "get_ParamName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -49,7 +49,7 @@ namespace mscorlib
 
 
 			//	Get:Message
-			mscorlib::System::String  DecoderFallbackException::get_Message()
+			mscorlib::System::String  DecoderFallbackException::get_Message() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ArgumentException", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -57,7 +57,7 @@ namespace mscorlib
 
 
 			//	Get:InnerException
-			mscorlib::System::Exception  DecoderFallbackException::get_InnerException()
+			mscorlib::System::Exception  DecoderFallbackException::get_InnerException() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_InnerException", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Exception(__result__);
@@ -65,7 +65,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HelpLink
-			mscorlib::System::String  DecoderFallbackException::get_HelpLink()
+			mscorlib::System::String  DecoderFallbackException::get_HelpLink() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HelpLink", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -82,7 +82,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HResult
-			mscorlib::System::Int32  DecoderFallbackException::get_HResult()
+			mscorlib::System::Int32  DecoderFallbackException::get_HResult() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HResult", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -99,7 +99,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Source
-			mscorlib::System::String  DecoderFallbackException::get_Source()
+			mscorlib::System::String  DecoderFallbackException::get_Source() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Source", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -116,7 +116,7 @@ namespace mscorlib
 
 
 			//	Get:StackTrace
-			mscorlib::System::String  DecoderFallbackException::get_StackTrace()
+			mscorlib::System::String  DecoderFallbackException::get_StackTrace() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 			//	Get:TargetSite
-			mscorlib::System::Reflection::MethodBase  DecoderFallbackException::get_TargetSite()
+			mscorlib::System::Reflection::MethodBase  DecoderFallbackException::get_TargetSite() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_TargetSite", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MethodBase(__result__);
@@ -132,7 +132,7 @@ namespace mscorlib
 
 
 			//	Get:Data
-			mscorlib::System::Collections::IDictionary  DecoderFallbackException::get_Data()
+			mscorlib::System::Collections::IDictionary  DecoderFallbackException::get_Data() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Data", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::IDictionary(__result__);

@@ -154,7 +154,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:UserEntryPoint
-				mscorlib::System::Diagnostics::SymbolStore::SymbolToken  ISymbolReader::get_UserEntryPoint()
+				mscorlib::System::Diagnostics::SymbolStore::SymbolToken  ISymbolReader::get_UserEntryPoint() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolReader", 0, NULL, "get_UserEntryPoint", __mscorlib_System_Diagnostics_SymbolStore_ISymbolReader, 0, NULL, NULL, NULL);
 					return mscorlib::System::Diagnostics::SymbolStore::SymbolToken(__result__);

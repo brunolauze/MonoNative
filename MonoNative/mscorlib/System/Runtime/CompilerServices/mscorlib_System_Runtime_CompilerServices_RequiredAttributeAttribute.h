@@ -72,10 +72,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:RequiredContract
-					mscorlib::System::Type  get_RequiredContract();
+					mscorlib::System::Type  get_RequiredContract() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

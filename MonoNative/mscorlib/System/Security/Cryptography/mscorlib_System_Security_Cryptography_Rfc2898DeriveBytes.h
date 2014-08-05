@@ -135,11 +135,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:IterationCount
-					mscorlib::System::Int32  get_IterationCount();
+					mscorlib::System::Int32  get_IterationCount() const;
 					void set_IterationCount(mscorlib::System::Int32  value);
 
 					//	Get/Set:Salt
-					std::vector<mscorlib::System::Byte*>  get_Salt();
+					std::vector<mscorlib::System::Byte*>  get_Salt() const;
 					void set_Salt(std::vector<mscorlib::System::Byte*>  value);
 
 				

@@ -106,34 +106,34 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:ProduceLegacyHmacValues
-					mscorlib::System::Boolean  get_ProduceLegacyHmacValues();
+					mscorlib::System::Boolean  get_ProduceLegacyHmacValues() const;
 					void set_ProduceLegacyHmacValues(mscorlib::System::Boolean  value);
 
 					//	Get/Set:HashName
-					mscorlib::System::String  get_HashName();
+					mscorlib::System::String  get_HashName() const;
 					void set_HashName(mscorlib::System::String  value);
 
 					//	Get/Set:Key
-					std::vector<mscorlib::System::Byte*>  get_Key();
+					std::vector<mscorlib::System::Byte*>  get_Key() const;
 					void set_Key(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get:CanTransformMultipleBlocks
-					mscorlib::System::Boolean  get_CanTransformMultipleBlocks();
+					mscorlib::System::Boolean  get_CanTransformMultipleBlocks() const;
 
 					//	Get:CanReuseTransform
-					mscorlib::System::Boolean  get_CanReuseTransform();
+					mscorlib::System::Boolean  get_CanReuseTransform() const;
 
 					//	Get:Hash
-					std::vector<mscorlib::System::Byte*>  get_Hash();
+					std::vector<mscorlib::System::Byte*>  get_Hash() const;
 
 					//	Get:HashSize
-					mscorlib::System::Int32  get_HashSize();
+					mscorlib::System::Int32  get_HashSize() const;
 
 					//	Get:InputBlockSize
-					mscorlib::System::Int32  get_InputBlockSize();
+					mscorlib::System::Int32  get_InputBlockSize() const;
 
 					//	Get:OutputBlockSize
-					mscorlib::System::Int32  get_OutputBlockSize();
+					mscorlib::System::Int32  get_OutputBlockSize() const;
 
 				
 				protected:

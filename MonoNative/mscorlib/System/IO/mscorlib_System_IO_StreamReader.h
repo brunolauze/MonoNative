@@ -247,20 +247,21 @@ namespace mscorlib
 				__declspec(property(get=get_EndOfStream)) mscorlib::System::Boolean  EndOfStream;
 
 				//Public Static Fields
-				static Property<mscorlib::System::IO::StreamReader> Null;
+				static Property<mscorlib::System::IO::StreamReader , mscorlib::System::IO::StreamReader> Null;
 
 				//Get Set Properties Methods
 				//	Get:BaseStream
-				mscorlib::System::IO::Stream  get_BaseStream();
+				mscorlib::System::IO::Stream  get_BaseStream() const;
 
 				//	Get:CurrentEncoding
-				mscorlib::System::Text::Encoding  get_CurrentEncoding();
+				mscorlib::System::Text::Encoding  get_CurrentEncoding() const;
 
 				//	Get:EndOfStream
-				mscorlib::System::Boolean  get_EndOfStream();
+				mscorlib::System::Boolean  get_EndOfStream() const;
 
 				//	Get/Set:Null
 				static mscorlib::System::IO::StreamReader  get_Null();
+				static void set_Null(mscorlib::System::IO::StreamReader  value);
 
 			
 			protected:

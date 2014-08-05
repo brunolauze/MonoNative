@@ -6,11 +6,11 @@
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IComparer.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEqualityComparer.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
+#include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
-#include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionaryEnumerator.h>
 
 namespace mscorlib
@@ -51,34 +51,34 @@ namespace mscorlib
 
 			class Hashtable
 				: public mscorlib::System::Object
+				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
+				, public virtual mscorlib::System::ICloneable
 				, public virtual mscorlib::System::Collections::ICollection
 				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				, public virtual mscorlib::System::Collections::IEnumerable
 				, public virtual mscorlib::System::Collections::IDictionary
-				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
-				, public virtual mscorlib::System::ICloneable
 			{
 			public:
 				Hashtable()
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					__native_object__ = Global::New("mscorlib", "System.Collections", "Hashtable");
 				};
 			
 				Hashtable(mscorlib::System::Int32 capacity, mscorlib::System::Single loadFactor, mscorlib::System::Collections::IHashCodeProvider hcp, mscorlib::System::Collections::IComparer comparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[4];
 					void *__parameters__[4];
@@ -95,12 +95,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Int32 capacity, mscorlib::System::Single loadFactor)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -113,12 +113,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Int32 capacity)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -129,12 +129,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Int32 capacity, mscorlib::System::Collections::IHashCodeProvider hcp, mscorlib::System::Collections::IComparer comparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
@@ -149,12 +149,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Collections::IDictionary d, mscorlib::System::Single loadFactor, mscorlib::System::Collections::IHashCodeProvider hcp, mscorlib::System::Collections::IComparer comparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[4];
 					void *__parameters__[4];
@@ -171,12 +171,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Collections::IDictionary d, mscorlib::System::Single loadFactor)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -189,12 +189,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Collections::IDictionary d)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -205,12 +205,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Collections::IDictionary d, mscorlib::System::Collections::IHashCodeProvider hcp, mscorlib::System::Collections::IComparer comparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
@@ -225,12 +225,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Collections::IHashCodeProvider hcp, mscorlib::System::Collections::IComparer comparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -243,12 +243,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Collections::IDictionary d, mscorlib::System::Collections::IEqualityComparer equalityComparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -261,12 +261,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Collections::IDictionary d, mscorlib::System::Single loadFactor, mscorlib::System::Collections::IEqualityComparer equalityComparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
@@ -281,12 +281,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Collections::IEqualityComparer equalityComparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -297,12 +297,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Int32 capacity, mscorlib::System::Collections::IEqualityComparer equalityComparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -315,12 +315,12 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::System::Int32 capacity, mscorlib::System::Single loadFactor, mscorlib::System::Collections::IEqualityComparer equalityComparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Hashtable"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
@@ -335,23 +335,23 @@ namespace mscorlib
 			
 				Hashtable(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 				};
 			
 				Hashtable(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
+				, mscorlib::System::ICloneable(nativeObject)
 				, mscorlib::System::Collections::ICollection(nativeObject)
 				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				, mscorlib::System::Collections::IEnumerable(nativeObject)
 				, mscorlib::System::Collections::IDictionary(nativeObject)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
-				, mscorlib::System::ICloneable(nativeObject)
 				{
 				};
 			
@@ -392,28 +392,28 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  get_Count();
+				mscorlib::System::Int32  get_Count() const;
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  get_IsSynchronized();
+				mscorlib::System::Boolean  get_IsSynchronized() const;
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  get_SyncRoot();
+				mscorlib::System::Object  get_SyncRoot() const;
 
 				//	Get:IsFixedSize
-				mscorlib::System::Boolean  get_IsFixedSize();
+				mscorlib::System::Boolean  get_IsFixedSize() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get:Keys
-				mscorlib::System::Collections::ICollection  get_Keys();
+				mscorlib::System::Collections::ICollection  get_Keys() const;
 
 				//	Get:Values
-				mscorlib::System::Collections::ICollection  get_Values();
+				mscorlib::System::Collections::ICollection  get_Values() const;
 
 				//	Get/Set:Item
-				mscorlib::System::Object  get_Item(mscorlib::System::Object key);
+				mscorlib::System::Object  get_Item(mscorlib::System::Object key) const;
 				void set_Item(mscorlib::System::Object key, mscorlib::System::Object  value);
 
 			

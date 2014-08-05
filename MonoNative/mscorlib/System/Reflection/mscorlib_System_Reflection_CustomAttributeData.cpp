@@ -83,7 +83,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Constructor
-			mscorlib::System::Reflection::ConstructorInfo  CustomAttributeData::get_Constructor()
+			mscorlib::System::Reflection::ConstructorInfo  CustomAttributeData::get_Constructor() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeData", 0, NULL, "get_Constructor", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::ConstructorInfo(__result__);
@@ -91,7 +91,7 @@ namespace mscorlib
 
 
 			//	Get:ConstructorArguments
-			mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeTypedArgument>  CustomAttributeData::get_ConstructorArguments()
+			mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeTypedArgument>  CustomAttributeData::get_ConstructorArguments() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeData", 0, NULL, "get_ConstructorArguments", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeTypedArgument>(__result__);
@@ -99,7 +99,7 @@ namespace mscorlib
 
 
 			//	Get:NamedArguments
-			mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeNamedArgument>  CustomAttributeData::get_NamedArguments()
+			mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeNamedArgument>  CustomAttributeData::get_NamedArguments() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeData", 0, NULL, "get_NamedArguments", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeNamedArgument>(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 			//	Get:AttributeType
-			mscorlib::System::Type  CustomAttributeData::get_AttributeType()
+			mscorlib::System::Type  CustomAttributeData::get_AttributeType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeData", 0, NULL, "get_AttributeType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);

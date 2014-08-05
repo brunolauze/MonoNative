@@ -58,10 +58,11 @@ namespace mscorlib
 
 
 					//Public Static Fields
-					static Property<mscorlib::System::Guid> Microsoft;
+					static Property<mscorlib::System::Guid , mscorlib::System::Diagnostics::SymbolStore::SymLanguageVendor> Microsoft;
 
 					//	Get/Set:Microsoft
 					static mscorlib::System::Guid  get_Microsoft();
+					static void set_Microsoft(mscorlib::System::Guid  value);
 
 				
 				protected:

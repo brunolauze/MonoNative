@@ -58,19 +58,19 @@ namespace mscorlib
 					__declspec(property(get=get_dwTickCountDeadline, put=set_dwTickCountDeadline)) mscorlib::System::Int32  dwTickCountDeadline;
 
 					//	Get/Set:cbStruct
-					mscorlib::System::Int32  get_cbStruct();
+					mscorlib::System::Int32  get_cbStruct() const;
 					void set_cbStruct(mscorlib::System::Int32  value);
 
 					//	Get/Set:grfFlags
-					mscorlib::System::Int32  get_grfFlags();
+					mscorlib::System::Int32  get_grfFlags() const;
 					void set_grfFlags(mscorlib::System::Int32  value);
 
 					//	Get/Set:grfMode
-					mscorlib::System::Int32  get_grfMode();
+					mscorlib::System::Int32  get_grfMode() const;
 					void set_grfMode(mscorlib::System::Int32  value);
 
 					//	Get/Set:dwTickCountDeadline
-					mscorlib::System::Int32  get_dwTickCountDeadline();
+					mscorlib::System::Int32  get_dwTickCountDeadline() const;
 					void set_dwTickCountDeadline(mscorlib::System::Int32  value);
 
 				

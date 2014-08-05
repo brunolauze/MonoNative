@@ -86,7 +86,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Length
-				mscorlib::System::Int32  get_Length();
+				mscorlib::System::Int32  get_Length() const;
 
 			
 			protected:

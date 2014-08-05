@@ -78,11 +78,11 @@ namespace mscorlib
 						__declspec(property(get=get_paramdesc, put=set_paramdesc)) mscorlib::System::Runtime::InteropServices::PARAMDESC  paramdesc;
 
 						//	Get/Set:idldesc
-						mscorlib::System::Runtime::InteropServices::IDLDESC  get_idldesc();
+						mscorlib::System::Runtime::InteropServices::IDLDESC  get_idldesc() const;
 						void set_idldesc(mscorlib::System::Runtime::InteropServices::IDLDESC  value);
 
 						//	Get/Set:paramdesc
-						mscorlib::System::Runtime::InteropServices::PARAMDESC  get_paramdesc();
+						mscorlib::System::Runtime::InteropServices::PARAMDESC  get_paramdesc() const;
 						void set_paramdesc(mscorlib::System::Runtime::InteropServices::PARAMDESC  value);
 
 					
@@ -120,11 +120,11 @@ namespace mscorlib
 					__declspec(property(get=get_desc, put=set_desc)) mscorlib::System::Runtime::InteropServices::ELEMDESC::DESCUNION  desc;
 
 					//	Get/Set:tdesc
-					mscorlib::System::Runtime::InteropServices::TYPEDESC  get_tdesc();
+					mscorlib::System::Runtime::InteropServices::TYPEDESC  get_tdesc() const;
 					void set_tdesc(mscorlib::System::Runtime::InteropServices::TYPEDESC  value);
 
 					//	Get/Set:desc
-					mscorlib::System::Runtime::InteropServices::ELEMDESC::DESCUNION  get_desc();
+					mscorlib::System::Runtime::InteropServices::ELEMDESC::DESCUNION  get_desc() const;
 					void set_desc(mscorlib::System::Runtime::InteropServices::ELEMDESC::DESCUNION  value);
 
 				

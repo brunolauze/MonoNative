@@ -18,7 +18,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:rgvarg
-					mscorlib::System::IntPtr DISPPARAMS::get_rgvarg()
+					mscorlib::System::IntPtr DISPPARAMS::get_rgvarg() const
 					{
 						return Global::GetFieldValue(__native_object__, "rgvarg");
 					}
@@ -28,7 +28,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:rgdispidNamedArgs
-					mscorlib::System::IntPtr DISPPARAMS::get_rgdispidNamedArgs()
+					mscorlib::System::IntPtr DISPPARAMS::get_rgdispidNamedArgs() const
 					{
 						return Global::GetFieldValue(__native_object__, "rgdispidNamedArgs");
 					}
@@ -38,7 +38,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cArgs
-					mscorlib::System::Int32 DISPPARAMS::get_cArgs()
+					mscorlib::System::Int32 DISPPARAMS::get_cArgs() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "cArgs");
 					}
@@ -48,7 +48,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cNamedArgs
-					mscorlib::System::Int32 DISPPARAMS::get_cNamedArgs()
+					mscorlib::System::Int32 DISPPARAMS::get_cNamedArgs() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "cNamedArgs");
 					}

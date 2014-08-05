@@ -36,7 +36,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Arguments
-				mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  EventCommandEventArgs::get_Arguments()
+				mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  EventCommandEventArgs::get_Arguments() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Tracing", "EventCommandEventArgs", 0, NULL, "get_Arguments", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>(__result__);
@@ -44,7 +44,7 @@ namespace mscorlib
 
 
 				//	Get:Command
-				mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__  EventCommandEventArgs::get_Command()
+				mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__  EventCommandEventArgs::get_Command() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Tracing", "EventCommandEventArgs", 0, NULL, "get_Command", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__*)mono_object_unbox(__result__);

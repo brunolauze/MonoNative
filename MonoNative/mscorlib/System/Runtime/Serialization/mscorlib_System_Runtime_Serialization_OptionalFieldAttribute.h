@@ -68,11 +68,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:VersionAdded
-					mscorlib::System::Int32  get_VersionAdded();
+					mscorlib::System::Int32  get_VersionAdded() const;
 					void set_VersionAdded(mscorlib::System::Int32  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

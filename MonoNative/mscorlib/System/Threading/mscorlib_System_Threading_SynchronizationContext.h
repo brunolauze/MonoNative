@@ -64,11 +64,12 @@ namespace mscorlib
 
 
 				//Public Static Properties
-				static Property<mscorlib::System::Threading::SynchronizationContext> Current;
+				static Property<mscorlib::System::Threading::SynchronizationContext , mscorlib::System::Threading::SynchronizationContext> Current;
 
 				//Get Set Static Properties Methods
 				//	Get:Current
 				static mscorlib::System::Threading::SynchronizationContext  get_Current();
+				static void set_Current(mscorlib::System::Threading::SynchronizationContext  value);
 
 
 			

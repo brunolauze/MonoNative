@@ -99,7 +99,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:TypeNameConverter
-			mscorlib::Callback<mscorlib::System::String  (mscorlib::System::Type )>  ResourceWriter::get_TypeNameConverter()
+			mscorlib::Callback<mscorlib::System::String  (mscorlib::System::Type )>  ResourceWriter::get_TypeNameConverter() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceWriter", 0, NULL, "get_TypeNameConverter", __native_object__, 0, NULL, NULL, NULL);
 				void* __delegate_result__ = mono_object_unbox(__result__);

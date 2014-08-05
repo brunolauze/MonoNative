@@ -21,6 +21,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymDocumentType", 0, NULL, "Text");
 				}
 
+				void SymDocumentType::set_Text(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 
 			}

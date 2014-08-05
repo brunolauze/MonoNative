@@ -34,7 +34,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:BlockSize
-				mscorlib::System::Int32  Rijndael::get_BlockSize()
+				mscorlib::System::Int32  Rijndael::get_BlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_BlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -51,7 +51,7 @@ namespace mscorlib
 
 
 				//	Get/Set:FeedbackSize
-				mscorlib::System::Int32  Rijndael::get_FeedbackSize()
+				mscorlib::System::Int32  Rijndael::get_FeedbackSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_FeedbackSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 				//	Get/Set:IV
-				std::vector<mscorlib::System::Byte*>  Rijndael::get_IV()
+				std::vector<mscorlib::System::Byte*>  Rijndael::get_IV() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_IV", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -93,7 +93,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Key
-				std::vector<mscorlib::System::Byte*>  Rijndael::get_Key()
+				std::vector<mscorlib::System::Byte*>  Rijndael::get_Key() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_Key", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -118,7 +118,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeySize
-				mscorlib::System::Int32  Rijndael::get_KeySize()
+				mscorlib::System::Int32  Rijndael::get_KeySize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_KeySize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -135,7 +135,7 @@ namespace mscorlib
 
 
 				//	Get:LegalBlockSizes
-				std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  Rijndael::get_LegalBlockSizes()
+				std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  Rijndael::get_LegalBlockSizes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_LegalBlockSizes", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -151,7 +151,7 @@ namespace mscorlib
 
 
 				//	Get:LegalKeySizes
-				std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  Rijndael::get_LegalKeySizes()
+				std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  Rijndael::get_LegalKeySizes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_LegalKeySizes", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -167,7 +167,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Mode
-				mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  Rijndael::get_Mode()
+				mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  Rijndael::get_Mode() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_Mode", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Cryptography::CipherMode::__ENUM__*)mono_object_unbox(__result__);
@@ -184,7 +184,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Padding
-				mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  Rijndael::get_Padding()
+				mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  Rijndael::get_Padding() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_Padding", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__*)mono_object_unbox(__result__);

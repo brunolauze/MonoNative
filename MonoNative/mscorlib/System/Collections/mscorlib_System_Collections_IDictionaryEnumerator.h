@@ -39,7 +39,7 @@ namespace mscorlib
 			
 
 				__declspec(property(get=get___mscorlib_System_Collections_IDictionaryEnumerator, put=set___mscorlib_System_Collections_IDictionaryEnumerator)) MonoObject *__mscorlib_System_Collections_IDictionaryEnumerator;
-				MonoObject* get___mscorlib_System_Collections_IDictionaryEnumerator()
+				MonoObject* get___mscorlib_System_Collections_IDictionaryEnumerator() const
 				{
 					return IDictionaryEnumerator::__mscorlib_System_Collections_IEnumerator;
 				}
@@ -61,13 +61,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Entry
-				mscorlib::System::Collections::DictionaryEntry  get_Entry();
+				mscorlib::System::Collections::DictionaryEntry  get_Entry() const;
 
 				//	Get:Key
-				mscorlib::System::Object  get_Key();
+				mscorlib::System::Object  get_Key() const;
 
 				//	Get:Value
-				mscorlib::System::Object  get_Value();
+				mscorlib::System::Object  get_Value() const;
 
 			
 			protected:

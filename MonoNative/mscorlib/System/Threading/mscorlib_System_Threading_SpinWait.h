@@ -61,10 +61,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:NextSpinWillYield
-				mscorlib::System::Boolean  get_NextSpinWillYield();
+				mscorlib::System::Boolean  get_NextSpinWillYield() const;
 
 				//	Get:Count
-				mscorlib::System::Int32  get_Count();
+				mscorlib::System::Int32  get_Count() const;
 
 			
 			protected:

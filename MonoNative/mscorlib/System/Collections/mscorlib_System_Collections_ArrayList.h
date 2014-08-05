@@ -3,9 +3,9 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
+#include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IList.h>
-#include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerator.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IComparer.h>
 
@@ -30,28 +30,28 @@ namespace mscorlib
 
 			class ArrayList
 				: public mscorlib::System::Object
+				, public virtual mscorlib::System::ICloneable
 				, public virtual mscorlib::System::Collections::ICollection
 				, public virtual mscorlib::System::Collections::IEnumerable
 				, public virtual mscorlib::System::Collections::IList
-				, public virtual mscorlib::System::ICloneable
 			{
 			public:
 				ArrayList()
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.ArrayList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IList(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					__native_object__ = Global::New("mscorlib", "System.Collections", "ArrayList");
 				};
 			
 				ArrayList(mscorlib::System::Collections::ICollection c)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.ArrayList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IList(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -62,10 +62,10 @@ namespace mscorlib
 			
 				ArrayList(mscorlib::System::Int32 capacity)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.ArrayList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IList(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -76,19 +76,19 @@ namespace mscorlib
 			
 				ArrayList(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IList(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 				};
 			
 				ArrayList(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
+				, mscorlib::System::ICloneable(nativeObject)
 				, mscorlib::System::Collections::ICollection(nativeObject)
 				, mscorlib::System::Collections::IEnumerable(nativeObject)
 				, mscorlib::System::Collections::IList(nativeObject)
-				, mscorlib::System::ICloneable(nativeObject)
 				{
 				};
 			
@@ -152,27 +152,27 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Item
-				mscorlib::System::Object  get_Item(mscorlib::System::Int32 index);
+				mscorlib::System::Object  get_Item(mscorlib::System::Int32 index) const;
 				void set_Item(mscorlib::System::Int32 index, mscorlib::System::Object  value);
 
 				//	Get:Count
-				mscorlib::System::Int32  get_Count();
+				mscorlib::System::Int32  get_Count() const;
 
 				//	Get/Set:Capacity
-				mscorlib::System::Int32  get_Capacity();
+				mscorlib::System::Int32  get_Capacity() const;
 				void set_Capacity(mscorlib::System::Int32  value);
 
 				//	Get:IsFixedSize
-				mscorlib::System::Boolean  get_IsFixedSize();
+				mscorlib::System::Boolean  get_IsFixedSize() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  get_IsSynchronized();
+				mscorlib::System::Boolean  get_IsSynchronized() const;
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  get_SyncRoot();
+				mscorlib::System::Object  get_SyncRoot() const;
 
 			
 			protected:

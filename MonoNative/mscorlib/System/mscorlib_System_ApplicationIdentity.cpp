@@ -17,7 +17,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:CodeBase
-		mscorlib::System::String  ApplicationIdentity::get_CodeBase()
+		mscorlib::System::String  ApplicationIdentity::get_CodeBase() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ApplicationIdentity", 0, NULL, "get_CodeBase", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -25,7 +25,7 @@ namespace mscorlib
 
 
 		//	Get:FullName
-		mscorlib::System::String  ApplicationIdentity::get_FullName()
+		mscorlib::System::String  ApplicationIdentity::get_FullName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ApplicationIdentity", 0, NULL, "get_FullName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);

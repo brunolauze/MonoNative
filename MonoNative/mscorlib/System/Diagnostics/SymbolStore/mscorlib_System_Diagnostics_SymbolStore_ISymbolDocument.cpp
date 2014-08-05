@@ -65,7 +65,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CheckSumAlgorithmId
-				mscorlib::System::Guid  ISymbolDocument::get_CheckSumAlgorithmId()
+				mscorlib::System::Guid  ISymbolDocument::get_CheckSumAlgorithmId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolDocument", 0, NULL, "get_CheckSumAlgorithmId", __mscorlib_System_Diagnostics_SymbolStore_ISymbolDocument, 0, NULL, NULL, NULL);
 					return mscorlib::System::Guid(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get:DocumentType
-				mscorlib::System::Guid  ISymbolDocument::get_DocumentType()
+				mscorlib::System::Guid  ISymbolDocument::get_DocumentType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolDocument", 0, NULL, "get_DocumentType", __mscorlib_System_Diagnostics_SymbolStore_ISymbolDocument, 0, NULL, NULL, NULL);
 					return mscorlib::System::Guid(__result__);
@@ -81,7 +81,7 @@ namespace mscorlib
 
 
 				//	Get:HasEmbeddedSource
-				mscorlib::System::Boolean  ISymbolDocument::get_HasEmbeddedSource()
+				mscorlib::System::Boolean  ISymbolDocument::get_HasEmbeddedSource() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolDocument", 0, NULL, "get_HasEmbeddedSource", __mscorlib_System_Diagnostics_SymbolStore_ISymbolDocument, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -89,7 +89,7 @@ namespace mscorlib
 
 
 				//	Get:Language
-				mscorlib::System::Guid  ISymbolDocument::get_Language()
+				mscorlib::System::Guid  ISymbolDocument::get_Language() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolDocument", 0, NULL, "get_Language", __mscorlib_System_Diagnostics_SymbolStore_ISymbolDocument, 0, NULL, NULL, NULL);
 					return mscorlib::System::Guid(__result__);
@@ -97,7 +97,7 @@ namespace mscorlib
 
 
 				//	Get:LanguageVendor
-				mscorlib::System::Guid  ISymbolDocument::get_LanguageVendor()
+				mscorlib::System::Guid  ISymbolDocument::get_LanguageVendor() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolDocument", 0, NULL, "get_LanguageVendor", __mscorlib_System_Diagnostics_SymbolStore_ISymbolDocument, 0, NULL, NULL, NULL);
 					return mscorlib::System::Guid(__result__);
@@ -105,7 +105,7 @@ namespace mscorlib
 
 
 				//	Get:SourceLength
-				mscorlib::System::Int32  ISymbolDocument::get_SourceLength()
+				mscorlib::System::Int32  ISymbolDocument::get_SourceLength() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolDocument", 0, NULL, "get_SourceLength", __mscorlib_System_Diagnostics_SymbolStore_ISymbolDocument, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -113,7 +113,7 @@ namespace mscorlib
 
 
 				//	Get:URL
-				mscorlib::System::String  ISymbolDocument::get_URL()
+				mscorlib::System::String  ISymbolDocument::get_URL() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolDocument", 0, NULL, "get_URL", __mscorlib_System_Diagnostics_SymbolStore_ISymbolDocument, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

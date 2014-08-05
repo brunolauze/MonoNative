@@ -92,14 +92,15 @@ namespace mscorlib
 
 
 					//Public Static Properties
-					static Property<mscorlib::System::String> ApplicationId;
-					static Property<mscorlib::System::String> ApplicationName;
-					static Property<mscorlib::System::Runtime::Remoting::CustomErrorsModes::__ENUM__> CustomErrorsMode;
-					static Property<mscorlib::System::String> ProcessId;
+					static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::RemotingConfiguration> ApplicationId;
+					static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::RemotingConfiguration> ApplicationName;
+					static Property<mscorlib::System::Runtime::Remoting::CustomErrorsModes::__ENUM__ , mscorlib::System::Runtime::Remoting::RemotingConfiguration> CustomErrorsMode;
+					static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::RemotingConfiguration> ProcessId;
 
 					//Get Set Static Properties Methods
 					//	Get:ApplicationId
 					static mscorlib::System::String  get_ApplicationId();
+					static void set_ApplicationId(mscorlib::System::String  value);
 
 					//	Get/Set:ApplicationName
 					static mscorlib::System::String  get_ApplicationName();
@@ -111,6 +112,7 @@ namespace mscorlib
 
 					//	Get:ProcessId
 					static mscorlib::System::String  get_ProcessId();
+					static void set_ProcessId(mscorlib::System::String  value);
 
 
 				

@@ -25,7 +25,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Message
-		mscorlib::System::String  ObjectDisposedException::get_Message()
+		mscorlib::System::String  ObjectDisposedException::get_Message() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ObjectDisposedException", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -33,7 +33,7 @@ namespace mscorlib
 
 
 		//	Get:ObjectName
-		mscorlib::System::String  ObjectDisposedException::get_ObjectName()
+		mscorlib::System::String  ObjectDisposedException::get_ObjectName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ObjectDisposedException", 0, NULL, "get_ObjectName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -41,7 +41,7 @@ namespace mscorlib
 
 
 		//	Get:InnerException
-		mscorlib::System::Exception  ObjectDisposedException::get_InnerException()
+		mscorlib::System::Exception  ObjectDisposedException::get_InnerException() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_InnerException", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Exception(__result__);
@@ -49,7 +49,7 @@ namespace mscorlib
 
 
 		//	Get/Set:HelpLink
-		mscorlib::System::String  ObjectDisposedException::get_HelpLink()
+		mscorlib::System::String  ObjectDisposedException::get_HelpLink() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HelpLink", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -66,7 +66,7 @@ namespace mscorlib
 
 
 		//	Get/Set:HResult
-		mscorlib::System::Int32  ObjectDisposedException::get_HResult()
+		mscorlib::System::Int32  ObjectDisposedException::get_HResult() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HResult", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -83,7 +83,7 @@ namespace mscorlib
 
 
 		//	Get/Set:Source
-		mscorlib::System::String  ObjectDisposedException::get_Source()
+		mscorlib::System::String  ObjectDisposedException::get_Source() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Source", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -100,7 +100,7 @@ namespace mscorlib
 
 
 		//	Get:StackTrace
-		mscorlib::System::String  ObjectDisposedException::get_StackTrace()
+		mscorlib::System::String  ObjectDisposedException::get_StackTrace() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -108,7 +108,7 @@ namespace mscorlib
 
 
 		//	Get:TargetSite
-		mscorlib::System::Reflection::MethodBase  ObjectDisposedException::get_TargetSite()
+		mscorlib::System::Reflection::MethodBase  ObjectDisposedException::get_TargetSite() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_TargetSite", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Reflection::MethodBase(__result__);
@@ -116,7 +116,7 @@ namespace mscorlib
 
 
 		//	Get:Data
-		mscorlib::System::Collections::IDictionary  ObjectDisposedException::get_Data()
+		mscorlib::System::Collections::IDictionary  ObjectDisposedException::get_Data() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Data", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Collections::IDictionary(__result__);

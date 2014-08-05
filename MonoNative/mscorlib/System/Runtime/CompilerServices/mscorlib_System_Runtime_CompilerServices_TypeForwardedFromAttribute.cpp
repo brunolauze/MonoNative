@@ -15,7 +15,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:AssemblyFullName
-				mscorlib::System::String  TypeForwardedFromAttribute::get_AssemblyFullName()
+				mscorlib::System::String  TypeForwardedFromAttribute::get_AssemblyFullName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "TypeForwardedFromAttribute", 0, NULL, "get_AssemblyFullName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -23,7 +23,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  TypeForwardedFromAttribute::get_TypeId()
+				mscorlib::System::Object  TypeForwardedFromAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

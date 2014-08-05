@@ -78,27 +78,27 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:IgnorePersistedDecision
-					mscorlib::System::Boolean  get_IgnorePersistedDecision();
+					mscorlib::System::Boolean  get_IgnorePersistedDecision() const;
 					void set_IgnorePersistedDecision(mscorlib::System::Boolean  value);
 
 					//	Get/Set:KeepAlive
-					mscorlib::System::Boolean  get_KeepAlive();
+					mscorlib::System::Boolean  get_KeepAlive() const;
 					void set_KeepAlive(mscorlib::System::Boolean  value);
 
 					//	Get/Set:NoPrompt
-					mscorlib::System::Boolean  get_NoPrompt();
+					mscorlib::System::Boolean  get_NoPrompt() const;
 					void set_NoPrompt(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Persist
-					mscorlib::System::Boolean  get_Persist();
+					mscorlib::System::Boolean  get_Persist() const;
 					void set_Persist(mscorlib::System::Boolean  value);
 
 					//	Get/Set:PreviousApplicationIdentity
-					mscorlib::System::ApplicationIdentity  get_PreviousApplicationIdentity();
+					mscorlib::System::ApplicationIdentity  get_PreviousApplicationIdentity() const;
 					void set_PreviousApplicationIdentity(mscorlib::System::ApplicationIdentity  value);
 
 					//	Get/Set:UIContext
-					mscorlib::System::Security::Policy::TrustManagerUIContext::__ENUM__  get_UIContext();
+					mscorlib::System::Security::Policy::TrustManagerUIContext::__ENUM__  get_UIContext() const;
 					void set_UIContext(mscorlib::System::Security::Policy::TrustManagerUIContext::__ENUM__  value);
 
 				

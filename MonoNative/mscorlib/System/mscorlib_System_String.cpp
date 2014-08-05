@@ -1406,7 +1406,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Chars
-		mscorlib::System::Char  String::get_Chars(mscorlib::System::Int32 index)
+		mscorlib::System::Char  String::get_Chars(mscorlib::System::Int32 index) const
 		{
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
@@ -1418,7 +1418,7 @@ namespace mscorlib
 
 
 		//	Get:Length
-		mscorlib::System::Int32  String::get_Length()
+		mscorlib::System::Int32  String::get_Length() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "get_Length", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -1431,6 +1431,10 @@ namespace mscorlib
 			return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue("mscorlib", "System", "String", 0, NULL, "Empty"));
 		}
 
+		void String::set_Empty(mscorlib::System::String  value)
+		{
+			throw;
+		}
 
 
 	}

@@ -15,6 +15,9 @@ namespace mscorlib
 			namespace Claims
 			{
 
+				Property<mscorlib::Callback<mscorlib::System::Security::Claims::ClaimsPrincipal  ()> , mscorlib::System::Security::Claims::ClaimsPrincipal> mscorlib::System::Security::Claims::ClaimsPrincipal::ClaimsPrincipalSelector(&mscorlib::System::Security::Claims::ClaimsPrincipal::get_ClaimsPrincipalSelector, &mscorlib::System::Security::Claims::ClaimsPrincipal::set_ClaimsPrincipalSelector);
+				Property<mscorlib::System::Security::Claims::ClaimsPrincipal , mscorlib::System::Security::Claims::ClaimsPrincipal> mscorlib::System::Security::Claims::ClaimsPrincipal::Current(&mscorlib::System::Security::Claims::ClaimsPrincipal::get_Current, &mscorlib::System::Security::Claims::ClaimsPrincipal::set_Current);
+				Property<mscorlib::Callback<mscorlib::System::Security::Claims::ClaimsIdentity  (mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity> )> , mscorlib::System::Security::Claims::ClaimsPrincipal> mscorlib::System::Security::Claims::ClaimsPrincipal::PrimaryIdentitySelector(&mscorlib::System::Security::Claims::ClaimsPrincipal::get_PrimaryIdentitySelector, &mscorlib::System::Security::Claims::ClaimsPrincipal::set_PrimaryIdentitySelector);
 				//Public Methods
 				void ClaimsPrincipal::AddIdentities(mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity> identities)
 				{
@@ -76,7 +79,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Claims
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  ClaimsPrincipal::get_Claims()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  ClaimsPrincipal::get_Claims() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsPrincipal", 0, NULL, "get_Claims", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>(__result__);
@@ -84,7 +87,7 @@ namespace mscorlib
 
 
 				//	Get:Identities
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity>  ClaimsPrincipal::get_Identities()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity>  ClaimsPrincipal::get_Identities() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsPrincipal", 0, NULL, "get_Identities", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity>(__result__);
@@ -92,7 +95,7 @@ namespace mscorlib
 
 
 				//	Get:Identity
-				mscorlib::System::Security::Principal::IIdentity  ClaimsPrincipal::get_Identity()
+				mscorlib::System::Security::Principal::IIdentity  ClaimsPrincipal::get_Identity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsPrincipal", 0, NULL, "get_Identity", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::IIdentity(__result__);
@@ -123,6 +126,11 @@ namespace mscorlib
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsPrincipal", 0, NULL, "get_Current", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Claims::ClaimsPrincipal(__result__);
+				}
+
+				void ClaimsPrincipal::set_Current(mscorlib::System::Security::Claims::ClaimsPrincipal  value)
+				{
+					throw;
 				}
 
 

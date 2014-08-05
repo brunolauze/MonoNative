@@ -59,7 +59,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:EndOffset
-				mscorlib::System::Int32  ISymbolScope::get_EndOffset()
+				mscorlib::System::Int32  ISymbolScope::get_EndOffset() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolScope", 0, NULL, "get_EndOffset", __mscorlib_System_Diagnostics_SymbolStore_ISymbolScope, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -67,7 +67,7 @@ namespace mscorlib
 
 
 				//	Get:Method
-				mscorlib::System::Diagnostics::SymbolStore::ISymbolMethod  ISymbolScope::get_Method()
+				mscorlib::System::Diagnostics::SymbolStore::ISymbolMethod  ISymbolScope::get_Method() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolScope", 0, NULL, "get_Method", __mscorlib_System_Diagnostics_SymbolStore_ISymbolScope, 0, NULL, NULL, NULL);
 					return mscorlib::System::Diagnostics::SymbolStore::ISymbolMethod(__result__);
@@ -75,7 +75,7 @@ namespace mscorlib
 
 
 				//	Get:Parent
-				mscorlib::System::Diagnostics::SymbolStore::ISymbolScope  ISymbolScope::get_Parent()
+				mscorlib::System::Diagnostics::SymbolStore::ISymbolScope  ISymbolScope::get_Parent() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolScope", 0, NULL, "get_Parent", __mscorlib_System_Diagnostics_SymbolStore_ISymbolScope, 0, NULL, NULL, NULL);
 					return mscorlib::System::Diagnostics::SymbolStore::ISymbolScope(__result__);
@@ -83,7 +83,7 @@ namespace mscorlib
 
 
 				//	Get:StartOffset
-				mscorlib::System::Int32  ISymbolScope::get_StartOffset()
+				mscorlib::System::Int32  ISymbolScope::get_StartOffset() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolScope", 0, NULL, "get_StartOffset", __mscorlib_System_Diagnostics_SymbolStore_ISymbolScope, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

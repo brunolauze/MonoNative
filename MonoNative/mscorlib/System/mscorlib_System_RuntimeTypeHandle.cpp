@@ -59,7 +59,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Value
-		mscorlib::System::IntPtr  RuntimeTypeHandle::get_Value()
+		mscorlib::System::IntPtr  RuntimeTypeHandle::get_Value() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "RuntimeTypeHandle", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::IntPtr(__result__);

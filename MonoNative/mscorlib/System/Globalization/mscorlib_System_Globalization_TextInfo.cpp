@@ -102,7 +102,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:ANSICodePage
-			mscorlib::System::Int32  TextInfo::get_ANSICodePage()
+			mscorlib::System::Int32  TextInfo::get_ANSICodePage() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_ANSICodePage", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -110,7 +110,7 @@ namespace mscorlib
 
 
 			//	Get:EBCDICCodePage
-			mscorlib::System::Int32  TextInfo::get_EBCDICCodePage()
+			mscorlib::System::Int32  TextInfo::get_EBCDICCodePage() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_EBCDICCodePage", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -118,7 +118,7 @@ namespace mscorlib
 
 
 			//	Get:LCID
-			mscorlib::System::Int32  TextInfo::get_LCID()
+			mscorlib::System::Int32  TextInfo::get_LCID() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_LCID", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -126,7 +126,7 @@ namespace mscorlib
 
 
 			//	Get/Set:ListSeparator
-			mscorlib::System::String  TextInfo::get_ListSeparator()
+			mscorlib::System::String  TextInfo::get_ListSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_ListSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -143,7 +143,7 @@ namespace mscorlib
 
 
 			//	Get:MacCodePage
-			mscorlib::System::Int32  TextInfo::get_MacCodePage()
+			mscorlib::System::Int32  TextInfo::get_MacCodePage() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_MacCodePage", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -151,7 +151,7 @@ namespace mscorlib
 
 
 			//	Get:OEMCodePage
-			mscorlib::System::Int32  TextInfo::get_OEMCodePage()
+			mscorlib::System::Int32  TextInfo::get_OEMCodePage() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_OEMCodePage", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -159,7 +159,7 @@ namespace mscorlib
 
 
 			//	Get:CultureName
-			mscorlib::System::String  TextInfo::get_CultureName()
+			mscorlib::System::String  TextInfo::get_CultureName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_CultureName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -167,7 +167,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  TextInfo::get_IsReadOnly()
+			mscorlib::System::Boolean  TextInfo::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -175,7 +175,7 @@ namespace mscorlib
 
 
 			//	Get:IsRightToLeft
-			mscorlib::System::Boolean  TextInfo::get_IsRightToLeft()
+			mscorlib::System::Boolean  TextInfo::get_IsRightToLeft() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "get_IsRightToLeft", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

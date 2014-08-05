@@ -2,12 +2,12 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_ARRAY_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IStructuralComparable.h>
+#include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IStructuralEquatable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IList.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IStructuralComparable.h>
-#include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerator.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IComparer.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IComparer_1.h>
@@ -31,33 +31,33 @@ namespace mscorlib
 
 		class Array
 			: public mscorlib::System::Object
+			, public virtual mscorlib::System::Collections::IStructuralComparable
+			, public virtual mscorlib::System::ICloneable
 			, public virtual mscorlib::System::Collections::ICollection
 			, public virtual mscorlib::System::Collections::IStructuralEquatable
 			, public virtual mscorlib::System::Collections::IList
 			, public virtual mscorlib::System::Collections::IEnumerable
-			, public virtual mscorlib::System::Collections::IStructuralComparable
-			, public virtual mscorlib::System::ICloneable
 		{
 		public:
 			Array(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::Object(nativeTypeInfo)
+			, mscorlib::System::Collections::IStructuralComparable(NULL)
+			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::Collections::ICollection(NULL)
 			, mscorlib::System::Collections::IStructuralEquatable(NULL)
 			, mscorlib::System::Collections::IList(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
-			, mscorlib::System::Collections::IStructuralComparable(NULL)
-			, mscorlib::System::ICloneable(NULL)
 			{
 			};
 		
 			Array(MonoObject *nativeObject)
 			: mscorlib::System::Object(nativeObject)
+			, mscorlib::System::Collections::IStructuralComparable(nativeObject)
+			, mscorlib::System::ICloneable(nativeObject)
 			, mscorlib::System::Collections::ICollection(nativeObject)
 			, mscorlib::System::Collections::IStructuralEquatable(nativeObject)
 			, mscorlib::System::Collections::IList(nativeObject)
 			, mscorlib::System::Collections::IEnumerable(nativeObject)
-			, mscorlib::System::Collections::IStructuralComparable(nativeObject)
-			, mscorlib::System::ICloneable(nativeObject)
 			{
 			};
 		
@@ -639,25 +639,25 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Length
-			mscorlib::System::Int32  get_Length();
+			mscorlib::System::Int32  get_Length() const;
 
 			//	Get:LongLength
-			mscorlib::System::Int64  get_LongLength();
+			mscorlib::System::Int64  get_LongLength() const;
 
 			//	Get:Rank
-			mscorlib::System::Int32  get_Rank();
+			mscorlib::System::Int32  get_Rank() const;
 
 			//	Get:IsSynchronized
-			mscorlib::System::Boolean  get_IsSynchronized();
+			mscorlib::System::Boolean  get_IsSynchronized() const;
 
 			//	Get:SyncRoot
-			mscorlib::System::Object  get_SyncRoot();
+			mscorlib::System::Object  get_SyncRoot() const;
 
 			//	Get:IsFixedSize
-			mscorlib::System::Boolean  get_IsFixedSize();
+			mscorlib::System::Boolean  get_IsFixedSize() const;
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  get_IsReadOnly();
+			mscorlib::System::Boolean  get_IsReadOnly() const;
 
 		
 		protected:

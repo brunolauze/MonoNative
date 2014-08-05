@@ -34,7 +34,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:AvailableFreeSpace
-			mscorlib::System::Int64  DriveInfo::get_AvailableFreeSpace()
+			mscorlib::System::Int64  DriveInfo::get_AvailableFreeSpace() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_AvailableFreeSpace", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -42,7 +42,7 @@ namespace mscorlib
 
 
 			//	Get:TotalFreeSpace
-			mscorlib::System::Int64  DriveInfo::get_TotalFreeSpace()
+			mscorlib::System::Int64  DriveInfo::get_TotalFreeSpace() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_TotalFreeSpace", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -50,7 +50,7 @@ namespace mscorlib
 
 
 			//	Get:TotalSize
-			mscorlib::System::Int64  DriveInfo::get_TotalSize()
+			mscorlib::System::Int64  DriveInfo::get_TotalSize() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_TotalSize", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -58,7 +58,7 @@ namespace mscorlib
 
 
 			//	Get/Set:VolumeLabel
-			mscorlib::System::String  DriveInfo::get_VolumeLabel()
+			mscorlib::System::String  DriveInfo::get_VolumeLabel() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_VolumeLabel", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -75,7 +75,7 @@ namespace mscorlib
 
 
 			//	Get:DriveFormat
-			mscorlib::System::String  DriveInfo::get_DriveFormat()
+			mscorlib::System::String  DriveInfo::get_DriveFormat() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_DriveFormat", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -83,7 +83,7 @@ namespace mscorlib
 
 
 			//	Get:DriveType
-			mscorlib::System::IO::DriveType::__ENUM__  DriveInfo::get_DriveType()
+			mscorlib::System::IO::DriveType::__ENUM__  DriveInfo::get_DriveType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_DriveType", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::IO::DriveType::__ENUM__*)mono_object_unbox(__result__);
@@ -91,7 +91,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  DriveInfo::get_Name()
+			mscorlib::System::String  DriveInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -99,7 +99,7 @@ namespace mscorlib
 
 
 			//	Get:RootDirectory
-			mscorlib::System::IO::DirectoryInfo  DriveInfo::get_RootDirectory()
+			mscorlib::System::IO::DirectoryInfo  DriveInfo::get_RootDirectory() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_RootDirectory", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IO::DirectoryInfo(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 			//	Get:IsReady
-			mscorlib::System::Boolean  DriveInfo::get_IsReady()
+			mscorlib::System::Boolean  DriveInfo::get_IsReady() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DriveInfo", 0, NULL, "get_IsReady", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

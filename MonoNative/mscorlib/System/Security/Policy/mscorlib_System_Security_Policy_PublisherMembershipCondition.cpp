@@ -93,7 +93,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Certificate
-				mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  PublisherMembershipCondition::get_Certificate()
+				mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  PublisherMembershipCondition::get_Certificate() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PublisherMembershipCondition", 0, NULL, "get_Certificate", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate(__result__);

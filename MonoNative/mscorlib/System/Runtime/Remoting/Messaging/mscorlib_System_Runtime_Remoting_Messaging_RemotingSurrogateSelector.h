@@ -91,7 +91,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Filter
-						mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::String , mscorlib::System::Object )>  get_Filter();
+						mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::String , mscorlib::System::Object )>  get_Filter() const;
 						void set_Filter(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::String , mscorlib::System::Object )>  value);
 
 					

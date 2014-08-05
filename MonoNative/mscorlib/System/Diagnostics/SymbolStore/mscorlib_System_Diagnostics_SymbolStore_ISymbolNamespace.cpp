@@ -44,7 +44,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Name
-				mscorlib::System::String  ISymbolNamespace::get_Name()
+				mscorlib::System::String  ISymbolNamespace::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolNamespace", 0, NULL, "get_Name", __mscorlib_System_Diagnostics_SymbolStore_ISymbolNamespace, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

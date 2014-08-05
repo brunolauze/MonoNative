@@ -118,7 +118,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:RootScope
-				mscorlib::System::Diagnostics::SymbolStore::ISymbolScope  ISymbolMethod::get_RootScope()
+				mscorlib::System::Diagnostics::SymbolStore::ISymbolScope  ISymbolMethod::get_RootScope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolMethod", 0, NULL, "get_RootScope", __mscorlib_System_Diagnostics_SymbolStore_ISymbolMethod, 0, NULL, NULL, NULL);
 					return mscorlib::System::Diagnostics::SymbolStore::ISymbolScope(__result__);
@@ -126,7 +126,7 @@ namespace mscorlib
 
 
 				//	Get:SequencePointCount
-				mscorlib::System::Int32  ISymbolMethod::get_SequencePointCount()
+				mscorlib::System::Int32  ISymbolMethod::get_SequencePointCount() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolMethod", 0, NULL, "get_SequencePointCount", __mscorlib_System_Diagnostics_SymbolStore_ISymbolMethod, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -134,7 +134,7 @@ namespace mscorlib
 
 
 				//	Get:Token
-				mscorlib::System::Diagnostics::SymbolStore::SymbolToken  ISymbolMethod::get_Token()
+				mscorlib::System::Diagnostics::SymbolStore::SymbolToken  ISymbolMethod::get_Token() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolMethod", 0, NULL, "get_Token", __mscorlib_System_Diagnostics_SymbolStore_ISymbolMethod, 0, NULL, NULL, NULL);
 					return mscorlib::System::Diagnostics::SymbolStore::SymbolToken(__result__);

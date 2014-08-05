@@ -78,10 +78,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Scope
-				mscorlib::System::Security::SecurityCriticalScope::__ENUM__  get_Scope();
+				mscorlib::System::Security::SecurityCriticalScope::__ENUM__  get_Scope() const;
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

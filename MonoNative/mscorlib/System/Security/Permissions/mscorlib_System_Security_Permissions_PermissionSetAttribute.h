@@ -95,35 +95,35 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:File
-					mscorlib::System::String  get_File();
+					mscorlib::System::String  get_File() const;
 					void set_File(mscorlib::System::String  value);
 
 					//	Get/Set:Hex
-					mscorlib::System::String  get_Hex();
+					mscorlib::System::String  get_Hex() const;
 					void set_Hex(mscorlib::System::String  value);
 
 					//	Get/Set:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 					void set_Name(mscorlib::System::String  value);
 
 					//	Get/Set:UnicodeEncoded
-					mscorlib::System::Boolean  get_UnicodeEncoded();
+					mscorlib::System::Boolean  get_UnicodeEncoded() const;
 					void set_UnicodeEncoded(mscorlib::System::Boolean  value);
 
 					//	Get/Set:XML
-					mscorlib::System::String  get_XML();
+					mscorlib::System::String  get_XML() const;
 					void set_XML(mscorlib::System::String  value);
 
 					//	Get/Set:Unrestricted
-					mscorlib::System::Boolean  get_Unrestricted();
+					mscorlib::System::Boolean  get_Unrestricted() const;
 					void set_Unrestricted(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Action
-					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action();
+					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action() const;
 					void set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

@@ -43,7 +43,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Directory
-				mscorlib::System::String  ApplicationDirectory::get_Directory()
+				mscorlib::System::String  ApplicationDirectory::get_Directory() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationDirectory", 0, NULL, "get_Directory", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

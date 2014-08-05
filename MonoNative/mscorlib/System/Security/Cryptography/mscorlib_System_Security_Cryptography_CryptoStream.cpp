@@ -125,7 +125,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CanRead
-				mscorlib::System::Boolean  CryptoStream::get_CanRead()
+				mscorlib::System::Boolean  CryptoStream::get_CanRead() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoStream", 0, NULL, "get_CanRead", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -133,7 +133,7 @@ namespace mscorlib
 
 
 				//	Get:CanSeek
-				mscorlib::System::Boolean  CryptoStream::get_CanSeek()
+				mscorlib::System::Boolean  CryptoStream::get_CanSeek() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoStream", 0, NULL, "get_CanSeek", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 
 
 				//	Get:CanWrite
-				mscorlib::System::Boolean  CryptoStream::get_CanWrite()
+				mscorlib::System::Boolean  CryptoStream::get_CanWrite() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoStream", 0, NULL, "get_CanWrite", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -149,7 +149,7 @@ namespace mscorlib
 
 
 				//	Get:Length
-				mscorlib::System::Int64  CryptoStream::get_Length()
+				mscorlib::System::Int64  CryptoStream::get_Length() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoStream", 0, NULL, "get_Length", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -157,7 +157,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Position
-				mscorlib::System::Int64  CryptoStream::get_Position()
+				mscorlib::System::Int64  CryptoStream::get_Position() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoStream", 0, NULL, "get_Position", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -174,7 +174,7 @@ namespace mscorlib
 
 
 				//	Get:HasFlushedFinalBlock
-				mscorlib::System::Boolean  CryptoStream::get_HasFlushedFinalBlock()
+				mscorlib::System::Boolean  CryptoStream::get_HasFlushedFinalBlock() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoStream", 0, NULL, "get_HasFlushedFinalBlock", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -182,7 +182,7 @@ namespace mscorlib
 
 
 				//	Get:CanTimeout
-				mscorlib::System::Boolean  CryptoStream::get_CanTimeout()
+				mscorlib::System::Boolean  CryptoStream::get_CanTimeout() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Stream", 0, NULL, "get_CanTimeout", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -190,7 +190,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ReadTimeout
-				mscorlib::System::Int32  CryptoStream::get_ReadTimeout()
+				mscorlib::System::Int32  CryptoStream::get_ReadTimeout() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Stream", 0, NULL, "get_ReadTimeout", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -207,7 +207,7 @@ namespace mscorlib
 
 
 				//	Get/Set:WriteTimeout
-				mscorlib::System::Int32  CryptoStream::get_WriteTimeout()
+				mscorlib::System::Int32  CryptoStream::get_WriteTimeout() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Stream", 0, NULL, "get_WriteTimeout", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

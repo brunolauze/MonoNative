@@ -58,15 +58,15 @@ namespace mscorlib
 					__declspec(property(get=get_lpvardesc, put=set_lpvardesc)) mscorlib::System::IntPtr  lpvardesc;
 
 					//	Get/Set:lpfuncdesc
-					mscorlib::System::IntPtr  get_lpfuncdesc();
+					mscorlib::System::IntPtr  get_lpfuncdesc() const;
 					void set_lpfuncdesc(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:lptcomp
-					mscorlib::System::IntPtr  get_lptcomp();
+					mscorlib::System::IntPtr  get_lptcomp() const;
 					void set_lptcomp(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:lpvardesc
-					mscorlib::System::IntPtr  get_lpvardesc();
+					mscorlib::System::IntPtr  get_lpvardesc() const;
 					void set_lpvardesc(mscorlib::System::IntPtr  value);
 
 				

@@ -4,10 +4,10 @@
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_MethodResponse.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage.h>
-#include <mscorlib/System/Runtime/Remoting/Activation/mscorlib_System_Runtime_Remoting_Activation_IConstructionReturnMessage.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessage.h>
+#include <mscorlib/System/Runtime/Remoting/Activation/mscorlib_System_Runtime_Remoting_Activation_IConstructionReturnMessage.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
@@ -87,19 +87,19 @@ namespace mscorlib
 					class ConstructionResponse
 						: public mscorlib::System::Runtime::Remoting::Messaging::MethodResponse
 						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage
-						, public virtual mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage
 						, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage
 						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMessage
+						, public virtual mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage
 					{
 					public:
 						ConstructionResponse(std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*> h, mscorlib::System::Runtime::Remoting::Messaging::IMethodCallMessage mcm)
 						: mscorlib::System::Runtime::Remoting::Messaging::MethodResponse(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Messaging.ConstructionResponse"))
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage(NULL)
-						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(NULL)
 						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage(NULL)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(NULL)
+						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(NULL)
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
@@ -113,20 +113,20 @@ namespace mscorlib
 						ConstructionResponse(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Runtime::Remoting::Messaging::MethodResponse(nativeTypeInfo)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage(NULL)
-						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(NULL)
 						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage(NULL)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(NULL)
+						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(NULL)
 						{
 						};
 					
 						ConstructionResponse(MonoObject *nativeObject)
 						: mscorlib::System::Runtime::Remoting::Messaging::MethodResponse(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage(nativeObject)
-						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(nativeObject)
 						, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(nativeObject)
+						, mscorlib::System::Runtime::Remoting::Activation::IConstructionReturnMessage(nativeObject)
 						{
 						};
 					
@@ -161,46 +161,46 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Properties
-						mscorlib::System::Collections::IDictionary  get_Properties();
+						mscorlib::System::Collections::IDictionary  get_Properties() const;
 
 						//	Get:ArgCount
-						mscorlib::System::Int32  get_ArgCount();
+						mscorlib::System::Int32  get_ArgCount() const;
 
 						//	Get:Args
-						std::vector<mscorlib::System::Object*>  get_Args();
+						std::vector<mscorlib::System::Object*>  get_Args() const;
 
 						//	Get:Exception
-						mscorlib::System::Exception  get_Exception();
+						mscorlib::System::Exception  get_Exception() const;
 
 						//	Get:HasVarArgs
-						mscorlib::System::Boolean  get_HasVarArgs();
+						mscorlib::System::Boolean  get_HasVarArgs() const;
 
 						//	Get:LogicalCallContext
-						mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext  get_LogicalCallContext();
+						mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext  get_LogicalCallContext() const;
 
 						//	Get:MethodBase
-						mscorlib::System::Reflection::MethodBase  get_MethodBase();
+						mscorlib::System::Reflection::MethodBase  get_MethodBase() const;
 
 						//	Get:MethodName
-						mscorlib::System::String  get_MethodName();
+						mscorlib::System::String  get_MethodName() const;
 
 						//	Get:MethodSignature
-						mscorlib::System::Object  get_MethodSignature();
+						mscorlib::System::Object  get_MethodSignature() const;
 
 						//	Get:OutArgCount
-						mscorlib::System::Int32  get_OutArgCount();
+						mscorlib::System::Int32  get_OutArgCount() const;
 
 						//	Get:OutArgs
-						std::vector<mscorlib::System::Object*>  get_OutArgs();
+						std::vector<mscorlib::System::Object*>  get_OutArgs() const;
 
 						//	Get:ReturnValue
-						mscorlib::System::Object  get_ReturnValue();
+						mscorlib::System::Object  get_ReturnValue() const;
 
 						//	Get:TypeName
-						mscorlib::System::String  get_TypeName();
+						mscorlib::System::String  get_TypeName() const;
 
 						//	Get/Set:Uri
-						mscorlib::System::String  get_Uri();
+						mscorlib::System::String  get_Uri() const;
 						void set_Uri(mscorlib::System::String  value);
 
 					

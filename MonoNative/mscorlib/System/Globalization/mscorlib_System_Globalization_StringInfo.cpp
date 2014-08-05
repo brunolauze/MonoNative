@@ -114,7 +114,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:LengthInTextElements
-			mscorlib::System::Int32  StringInfo::get_LengthInTextElements()
+			mscorlib::System::Int32  StringInfo::get_LengthInTextElements() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "get_LengthInTextElements", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -122,7 +122,7 @@ namespace mscorlib
 
 
 			//	Get/Set:String
-			mscorlib::System::String  StringInfo::get_String()
+			mscorlib::System::String  StringInfo::get_String() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "get_String", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);

@@ -15,7 +15,7 @@ namespace mscorlib
 
 				//Public Methods
 				//	Get/Set:pUnk
-				mscorlib::System::Object CONNECTDATA::get_pUnk()
+				mscorlib::System::Object CONNECTDATA::get_pUnk() const
 				{
 					return Global::GetFieldValue(__native_object__, "pUnk");
 				}
@@ -25,7 +25,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:dwCookie
-				mscorlib::System::Int32 CONNECTDATA::get_dwCookie()
+				mscorlib::System::Int32 CONNECTDATA::get_dwCookie() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "dwCookie");
 				}

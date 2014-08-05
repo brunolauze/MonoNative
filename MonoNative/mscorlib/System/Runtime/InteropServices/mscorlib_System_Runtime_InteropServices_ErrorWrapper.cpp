@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:ErrorCode
-				mscorlib::System::Int32  ErrorWrapper::get_ErrorCode()
+				mscorlib::System::Int32  ErrorWrapper::get_ErrorCode() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ErrorWrapper", 0, NULL, "get_ErrorCode", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

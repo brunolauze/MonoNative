@@ -16,6 +16,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "EventArgs", 0, NULL, "Empty");
 		}
 
+		void EventArgs::set_Empty(mscorlib::System::EventArgs  value)
+		{
+			throw;
+		}
 
 
 	}

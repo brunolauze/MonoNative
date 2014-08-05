@@ -123,7 +123,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:BaseStream
-				mscorlib::System::IO::Stream  get_BaseStream();
+				mscorlib::System::IO::Stream  get_BaseStream() const;
 
 			
 			protected:

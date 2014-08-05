@@ -33,7 +33,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:DemandedResources
-			mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  HostProtectionException::get_DemandedResources()
+			mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  HostProtectionException::get_DemandedResources() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "HostProtectionException", 0, NULL, "get_DemandedResources", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__*)mono_object_unbox(__result__);
@@ -41,7 +41,7 @@ namespace mscorlib
 
 
 			//	Get:ProtectedResources
-			mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  HostProtectionException::get_ProtectedResources()
+			mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  HostProtectionException::get_ProtectedResources() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "HostProtectionException", 0, NULL, "get_ProtectedResources", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__*)mono_object_unbox(__result__);
@@ -49,7 +49,7 @@ namespace mscorlib
 
 
 			//	Get:InnerException
-			mscorlib::System::Exception  HostProtectionException::get_InnerException()
+			mscorlib::System::Exception  HostProtectionException::get_InnerException() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_InnerException", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Exception(__result__);
@@ -57,7 +57,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HelpLink
-			mscorlib::System::String  HostProtectionException::get_HelpLink()
+			mscorlib::System::String  HostProtectionException::get_HelpLink() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HelpLink", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -74,7 +74,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HResult
-			mscorlib::System::Int32  HostProtectionException::get_HResult()
+			mscorlib::System::Int32  HostProtectionException::get_HResult() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HResult", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -91,7 +91,7 @@ namespace mscorlib
 
 
 			//	Get:Message
-			mscorlib::System::String  HostProtectionException::get_Message()
+			mscorlib::System::String  HostProtectionException::get_Message() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -99,7 +99,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Source
-			mscorlib::System::String  HostProtectionException::get_Source()
+			mscorlib::System::String  HostProtectionException::get_Source() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Source", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -116,7 +116,7 @@ namespace mscorlib
 
 
 			//	Get:StackTrace
-			mscorlib::System::String  HostProtectionException::get_StackTrace()
+			mscorlib::System::String  HostProtectionException::get_StackTrace() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 			//	Get:TargetSite
-			mscorlib::System::Reflection::MethodBase  HostProtectionException::get_TargetSite()
+			mscorlib::System::Reflection::MethodBase  HostProtectionException::get_TargetSite() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_TargetSite", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MethodBase(__result__);
@@ -132,7 +132,7 @@ namespace mscorlib
 
 
 			//	Get:Data
-			mscorlib::System::Collections::IDictionary  HostProtectionException::get_Data()
+			mscorlib::System::Collections::IDictionary  HostProtectionException::get_Data() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Data", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::IDictionary(__result__);

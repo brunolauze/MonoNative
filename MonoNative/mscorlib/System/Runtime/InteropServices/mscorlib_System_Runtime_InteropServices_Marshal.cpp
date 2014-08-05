@@ -1743,6 +1743,10 @@ namespace mscorlib
 					return Global::GetFieldInt32Value("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "SystemMaxDBCSCharSize");
 				}
 
+				void Marshal::set_SystemMaxDBCSCharSize(mscorlib::System::Int32  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:SystemDefaultCharSize
 				mscorlib::System::Int32 Marshal::get_SystemDefaultCharSize()
@@ -1750,6 +1754,10 @@ namespace mscorlib
 					return Global::GetFieldInt32Value("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "SystemDefaultCharSize");
 				}
 
+				void Marshal::set_SystemDefaultCharSize(mscorlib::System::Int32  value)
+				{
+					throw;
+				}
 
 
 			}

@@ -17,6 +17,7 @@ namespace mscorlib
 				namespace Contexts
 				{
 
+					Property<mscorlib::System::Runtime::Remoting::Contexts::Context , mscorlib::System::Runtime::Remoting::Contexts::Context> mscorlib::System::Runtime::Remoting::Contexts::Context::DefaultContext(&mscorlib::System::Runtime::Remoting::Contexts::Context::get_DefaultContext, &mscorlib::System::Runtime::Remoting::Contexts::Context::set_DefaultContext);
 					//Public Methods
 					mscorlib::System::Boolean Context::RegisterDynamicProperty(mscorlib::System::Runtime::Remoting::Contexts::IDynamicProperty prop, mscorlib::System::ContextBoundObject obj, mscorlib::System::Runtime::Remoting::Contexts::Context ctx)
 					{
@@ -143,7 +144,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ContextID
-					mscorlib::System::Int32  Context::get_ContextID()
+					mscorlib::System::Int32  Context::get_ContextID() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "get_ContextID", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -151,7 +152,7 @@ namespace mscorlib
 
 
 					//	Get:ContextProperties
-					std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextProperty*>  Context::get_ContextProperties()
+					std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextProperty*>  Context::get_ContextProperties() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "get_ContextProperties", __native_object__, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -172,6 +173,11 @@ namespace mscorlib
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "get_DefaultContext", NullMonoObject, 0, NULL, NULL, NULL);
 						return mscorlib::System::Runtime::Remoting::Contexts::Context(__result__);
+					}
+
+					void Context::set_DefaultContext(mscorlib::System::Runtime::Remoting::Contexts::Context  value)
+					{
+						throw;
 					}
 
 

@@ -3,11 +3,11 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_PermissionState.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_IStackWalk.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_IPermission.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerator.h>
 
@@ -46,20 +46,20 @@ namespace mscorlib
 
 			class PermissionSet
 				: public mscorlib::System::Object
+				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 				, public virtual mscorlib::System::Collections::ICollection
 				, public virtual mscorlib::System::Security::ISecurityEncodable
-				, public virtual mscorlib::System::Collections::IEnumerable
-				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 				, public virtual mscorlib::System::Security::IStackWalk
+				, public virtual mscorlib::System::Collections::IEnumerable
 			{
 			public:
 				PermissionSet(mscorlib::System::Security::Permissions::PermissionState::__ENUM__ state)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.PermissionSet"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Security::ISecurityEncodable(NULL)
-				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::Security::IStackWalk(NULL)
+				, mscorlib::System::Collections::IEnumerable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -70,11 +70,11 @@ namespace mscorlib
 			
 				PermissionSet(mscorlib::System::Security::PermissionSet &permSet)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.PermissionSet"))
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Security::ISecurityEncodable(NULL)
-				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::Security::IStackWalk(NULL)
+				, mscorlib::System::Collections::IEnumerable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -85,21 +85,21 @@ namespace mscorlib
 			
 				PermissionSet(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Security::ISecurityEncodable(NULL)
-				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::Security::IStackWalk(NULL)
+				, mscorlib::System::Collections::IEnumerable(NULL)
 				{
 				};
 			
 				PermissionSet(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 				, mscorlib::System::Collections::ICollection(nativeObject)
 				, mscorlib::System::Security::ISecurityEncodable(nativeObject)
-				, mscorlib::System::Collections::IEnumerable(nativeObject)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 				, mscorlib::System::Security::IStackWalk(nativeObject)
+				, mscorlib::System::Collections::IEnumerable(nativeObject)
 				{
 				};
 			
@@ -148,16 +148,16 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  get_Count();
+				mscorlib::System::Int32  get_Count() const;
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  get_IsSynchronized();
+				mscorlib::System::Boolean  get_IsSynchronized() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  get_SyncRoot();
+				mscorlib::System::Object  get_SyncRoot() const;
 
 			
 			protected:

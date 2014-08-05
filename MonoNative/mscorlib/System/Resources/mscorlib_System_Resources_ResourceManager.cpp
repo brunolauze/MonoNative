@@ -114,7 +114,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:BaseName
-			mscorlib::System::String  ResourceManager::get_BaseName()
+			mscorlib::System::String  ResourceManager::get_BaseName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "get_BaseName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -122,7 +122,7 @@ namespace mscorlib
 
 
 			//	Get/Set:IgnoreCase
-			mscorlib::System::Boolean  ResourceManager::get_IgnoreCase()
+			mscorlib::System::Boolean  ResourceManager::get_IgnoreCase() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "get_IgnoreCase", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -139,7 +139,7 @@ namespace mscorlib
 
 
 			//	Get:ResourceSetType
-			mscorlib::System::Type  ResourceManager::get_ResourceSetType()
+			mscorlib::System::Type  ResourceManager::get_ResourceSetType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "get_ResourceSetType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -152,6 +152,10 @@ namespace mscorlib
 				return Global::GetFieldInt32Value("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "HeaderVersionNumber");
 			}
 
+			void ResourceManager::set_HeaderVersionNumber(mscorlib::System::Int32  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:MagicNumber
 			mscorlib::System::Int32 ResourceManager::get_MagicNumber()
@@ -159,6 +163,10 @@ namespace mscorlib
 				return Global::GetFieldInt32Value("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "MagicNumber");
 			}
 
+			void ResourceManager::set_MagicNumber(mscorlib::System::Int32  value)
+			{
+				throw;
+			}
 
 
 		}

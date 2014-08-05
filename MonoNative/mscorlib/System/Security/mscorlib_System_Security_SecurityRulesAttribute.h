@@ -72,15 +72,15 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:RuleSet
-				mscorlib::System::Security::SecurityRuleSet::__ENUM__  get_RuleSet();
+				mscorlib::System::Security::SecurityRuleSet::__ENUM__  get_RuleSet() const;
 				void set_RuleSet(mscorlib::System::Security::SecurityRuleSet::__ENUM__  value);
 
 				//	Get/Set:SkipVerificationInFullTrust
-				mscorlib::System::Boolean  get_SkipVerificationInFullTrust();
+				mscorlib::System::Boolean  get_SkipVerificationInFullTrust() const;
 				void set_SkipVerificationInFullTrust(mscorlib::System::Boolean  value);
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

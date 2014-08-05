@@ -12,7 +12,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get/Set:Description
-			mscorlib::System::String  DebuggerVisualizerAttribute::get_Description()
+			mscorlib::System::String  DebuggerVisualizerAttribute::get_Description() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerVisualizerAttribute", 0, NULL, "get_Description", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -29,7 +29,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Target
-			mscorlib::System::Type  DebuggerVisualizerAttribute::get_Target()
+			mscorlib::System::Type  DebuggerVisualizerAttribute::get_Target() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerVisualizerAttribute", 0, NULL, "get_Target", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -46,7 +46,7 @@ namespace mscorlib
 
 
 			//	Get/Set:TargetTypeName
-			mscorlib::System::String  DebuggerVisualizerAttribute::get_TargetTypeName()
+			mscorlib::System::String  DebuggerVisualizerAttribute::get_TargetTypeName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerVisualizerAttribute", 0, NULL, "get_TargetTypeName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -63,7 +63,7 @@ namespace mscorlib
 
 
 			//	Get:VisualizerObjectSourceTypeName
-			mscorlib::System::String  DebuggerVisualizerAttribute::get_VisualizerObjectSourceTypeName()
+			mscorlib::System::String  DebuggerVisualizerAttribute::get_VisualizerObjectSourceTypeName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerVisualizerAttribute", 0, NULL, "get_VisualizerObjectSourceTypeName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -71,7 +71,7 @@ namespace mscorlib
 
 
 			//	Get:VisualizerTypeName
-			mscorlib::System::String  DebuggerVisualizerAttribute::get_VisualizerTypeName()
+			mscorlib::System::String  DebuggerVisualizerAttribute::get_VisualizerTypeName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerVisualizerAttribute", 0, NULL, "get_VisualizerTypeName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -79,7 +79,7 @@ namespace mscorlib
 
 
 			//	Get:TypeId
-			mscorlib::System::Object  DebuggerVisualizerAttribute::get_TypeId()
+			mscorlib::System::Object  DebuggerVisualizerAttribute::get_TypeId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

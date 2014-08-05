@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:All
-				mscorlib::System::String  FileIOPermissionAttribute::get_All()
+				mscorlib::System::String  FileIOPermissionAttribute::get_All() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_All", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Append
-				mscorlib::System::String  FileIOPermissionAttribute::get_Append()
+				mscorlib::System::String  FileIOPermissionAttribute::get_Append() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_Append", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:PathDiscovery
-				mscorlib::System::String  FileIOPermissionAttribute::get_PathDiscovery()
+				mscorlib::System::String  FileIOPermissionAttribute::get_PathDiscovery() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_PathDiscovery", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Read
-				mscorlib::System::String  FileIOPermissionAttribute::get_Read()
+				mscorlib::System::String  FileIOPermissionAttribute::get_Read() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_Read", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Write
-				mscorlib::System::String  FileIOPermissionAttribute::get_Write()
+				mscorlib::System::String  FileIOPermissionAttribute::get_Write() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_Write", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get/Set:AllFiles
-				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermissionAttribute::get_AllFiles()
+				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermissionAttribute::get_AllFiles() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_AllFiles", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__*)mono_object_unbox(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 				//	Get/Set:AllLocalFiles
-				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermissionAttribute::get_AllLocalFiles()
+				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermissionAttribute::get_AllLocalFiles() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_AllLocalFiles", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__*)mono_object_unbox(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ChangeAccessControl
-				mscorlib::System::String  FileIOPermissionAttribute::get_ChangeAccessControl()
+				mscorlib::System::String  FileIOPermissionAttribute::get_ChangeAccessControl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_ChangeAccessControl", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -158,7 +158,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ViewAccessControl
-				mscorlib::System::String  FileIOPermissionAttribute::get_ViewAccessControl()
+				mscorlib::System::String  FileIOPermissionAttribute::get_ViewAccessControl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_ViewAccessControl", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -175,7 +175,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ViewAndModify
-				mscorlib::System::String  FileIOPermissionAttribute::get_ViewAndModify()
+				mscorlib::System::String  FileIOPermissionAttribute::get_ViewAndModify() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_ViewAndModify", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -192,7 +192,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  FileIOPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  FileIOPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -209,7 +209,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  FileIOPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  FileIOPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -226,7 +226,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  FileIOPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  FileIOPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

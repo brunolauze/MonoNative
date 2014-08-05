@@ -116,7 +116,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsReaderLockHeld
-			mscorlib::System::Boolean  ReaderWriterLock::get_IsReaderLockHeld()
+			mscorlib::System::Boolean  ReaderWriterLock::get_IsReaderLockHeld() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "ReaderWriterLock", 0, NULL, "get_IsReaderLockHeld", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 			//	Get:IsWriterLockHeld
-			mscorlib::System::Boolean  ReaderWriterLock::get_IsWriterLockHeld()
+			mscorlib::System::Boolean  ReaderWriterLock::get_IsWriterLockHeld() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "ReaderWriterLock", 0, NULL, "get_IsWriterLockHeld", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -132,7 +132,7 @@ namespace mscorlib
 
 
 			//	Get:WriterSeqNum
-			mscorlib::System::Int32  ReaderWriterLock::get_WriterSeqNum()
+			mscorlib::System::Int32  ReaderWriterLock::get_WriterSeqNum() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "ReaderWriterLock", 0, NULL, "get_WriterSeqNum", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

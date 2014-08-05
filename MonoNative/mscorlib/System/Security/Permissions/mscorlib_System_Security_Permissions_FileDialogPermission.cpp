@@ -74,7 +74,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Access
-				mscorlib::System::Security::Permissions::FileDialogPermissionAccess::__ENUM__  FileDialogPermission::get_Access()
+				mscorlib::System::Security::Permissions::FileDialogPermissionAccess::__ENUM__  FileDialogPermission::get_Access() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileDialogPermission", 0, NULL, "get_Access", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::FileDialogPermissionAccess::__ENUM__*)mono_object_unbox(__result__);

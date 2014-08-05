@@ -19,7 +19,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:memid
-					mscorlib::System::Int32 FUNCDESC::get_memid()
+					mscorlib::System::Int32 FUNCDESC::get_memid() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "memid");
 					}
@@ -29,7 +29,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:lprgscode
-					mscorlib::System::IntPtr FUNCDESC::get_lprgscode()
+					mscorlib::System::IntPtr FUNCDESC::get_lprgscode() const
 					{
 						return Global::GetFieldValue(__native_object__, "lprgscode");
 					}
@@ -39,7 +39,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:lprgelemdescParam
-					mscorlib::System::IntPtr FUNCDESC::get_lprgelemdescParam()
+					mscorlib::System::IntPtr FUNCDESC::get_lprgelemdescParam() const
 					{
 						return Global::GetFieldValue(__native_object__, "lprgelemdescParam");
 					}
@@ -49,7 +49,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:funckind
-					mscorlib::System::Runtime::InteropServices::ComTypes::FUNCKIND::__ENUM__ FUNCDESC::get_funckind()
+					mscorlib::System::Runtime::InteropServices::ComTypes::FUNCKIND::__ENUM__ FUNCDESC::get_funckind() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::FUNCKIND::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "funckind"));
 					}
@@ -59,7 +59,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:invkind
-					mscorlib::System::Runtime::InteropServices::ComTypes::INVOKEKIND::__ENUM__ FUNCDESC::get_invkind()
+					mscorlib::System::Runtime::InteropServices::ComTypes::INVOKEKIND::__ENUM__ FUNCDESC::get_invkind() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::INVOKEKIND::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "invkind"));
 					}
@@ -69,7 +69,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:callconv
-					mscorlib::System::Runtime::InteropServices::ComTypes::CALLCONV::__ENUM__ FUNCDESC::get_callconv()
+					mscorlib::System::Runtime::InteropServices::ComTypes::CALLCONV::__ENUM__ FUNCDESC::get_callconv() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::CALLCONV::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "callconv"));
 					}
@@ -79,7 +79,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cParams
-					mscorlib::System::Int16 FUNCDESC::get_cParams()
+					mscorlib::System::Int16 FUNCDESC::get_cParams() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "cParams");
 					}
@@ -89,7 +89,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cParamsOpt
-					mscorlib::System::Int16 FUNCDESC::get_cParamsOpt()
+					mscorlib::System::Int16 FUNCDESC::get_cParamsOpt() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "cParamsOpt");
 					}
@@ -99,7 +99,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:oVft
-					mscorlib::System::Int16 FUNCDESC::get_oVft()
+					mscorlib::System::Int16 FUNCDESC::get_oVft() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "oVft");
 					}
@@ -109,7 +109,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cScodes
-					mscorlib::System::Int16 FUNCDESC::get_cScodes()
+					mscorlib::System::Int16 FUNCDESC::get_cScodes() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "cScodes");
 					}
@@ -119,7 +119,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:elemdescFunc
-					mscorlib::System::Runtime::InteropServices::ComTypes::ELEMDESC FUNCDESC::get_elemdescFunc()
+					mscorlib::System::Runtime::InteropServices::ComTypes::ELEMDESC FUNCDESC::get_elemdescFunc() const
 					{
 						return Global::GetFieldValue(__native_object__, "elemdescFunc");
 					}
@@ -129,7 +129,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wFuncFlags
-					mscorlib::System::Int16 FUNCDESC::get_wFuncFlags()
+					mscorlib::System::Int16 FUNCDESC::get_wFuncFlags() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "wFuncFlags");
 					}

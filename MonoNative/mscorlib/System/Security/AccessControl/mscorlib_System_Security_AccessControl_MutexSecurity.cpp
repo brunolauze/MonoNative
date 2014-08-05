@@ -163,7 +163,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:AccessRightType
-				mscorlib::System::Type  MutexSecurity::get_AccessRightType()
+				mscorlib::System::Type  MutexSecurity::get_AccessRightType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "MutexSecurity", 0, NULL, "get_AccessRightType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -171,7 +171,7 @@ namespace mscorlib
 
 
 				//	Get:AccessRuleType
-				mscorlib::System::Type  MutexSecurity::get_AccessRuleType()
+				mscorlib::System::Type  MutexSecurity::get_AccessRuleType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "MutexSecurity", 0, NULL, "get_AccessRuleType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -179,7 +179,7 @@ namespace mscorlib
 
 
 				//	Get:AuditRuleType
-				mscorlib::System::Type  MutexSecurity::get_AuditRuleType()
+				mscorlib::System::Type  MutexSecurity::get_AuditRuleType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "MutexSecurity", 0, NULL, "get_AuditRuleType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -187,7 +187,7 @@ namespace mscorlib
 
 
 				//	Get:AreAccessRulesCanonical
-				mscorlib::System::Boolean  MutexSecurity::get_AreAccessRulesCanonical()
+				mscorlib::System::Boolean  MutexSecurity::get_AreAccessRulesCanonical() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "get_AreAccessRulesCanonical", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -195,7 +195,7 @@ namespace mscorlib
 
 
 				//	Get:AreAccessRulesProtected
-				mscorlib::System::Boolean  MutexSecurity::get_AreAccessRulesProtected()
+				mscorlib::System::Boolean  MutexSecurity::get_AreAccessRulesProtected() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "get_AreAccessRulesProtected", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -203,7 +203,7 @@ namespace mscorlib
 
 
 				//	Get:AreAuditRulesCanonical
-				mscorlib::System::Boolean  MutexSecurity::get_AreAuditRulesCanonical()
+				mscorlib::System::Boolean  MutexSecurity::get_AreAuditRulesCanonical() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "get_AreAuditRulesCanonical", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -211,7 +211,7 @@ namespace mscorlib
 
 
 				//	Get:AreAuditRulesProtected
-				mscorlib::System::Boolean  MutexSecurity::get_AreAuditRulesProtected()
+				mscorlib::System::Boolean  MutexSecurity::get_AreAuditRulesProtected() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "get_AreAuditRulesProtected", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

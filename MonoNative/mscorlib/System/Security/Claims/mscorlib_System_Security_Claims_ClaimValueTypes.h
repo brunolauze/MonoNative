@@ -51,33 +51,33 @@ namespace mscorlib
 
 
 					//Public Static Fields
-					static Property<mscorlib::System::String> Base64Binary;
-					static Property<mscorlib::System::String> Base64Octet;
-					static Property<mscorlib::System::String> Boolean;
-					static Property<mscorlib::System::String> Date;
-					static Property<mscorlib::System::String> DateTime;
-					static Property<mscorlib::System::String> DaytimeDuration;
-					static Property<mscorlib::System::String> DnsName;
-					static Property<mscorlib::System::String> Double;
-					static Property<mscorlib::System::String> DsaKeyValue;
-					static Property<mscorlib::System::String> Email;
-					static Property<mscorlib::System::String> Fqbn;
-					static Property<mscorlib::System::String> HexBinary;
-					static Property<mscorlib::System::String> Integer;
-					static Property<mscorlib::System::String> Integer32;
-					static Property<mscorlib::System::String> Integer64;
-					static Property<mscorlib::System::String> KeyInfo;
-					static Property<mscorlib::System::String> Rfc822Name;
-					static Property<mscorlib::System::String> Rsa;
-					static Property<mscorlib::System::String> RsaKeyValue;
-					static Property<mscorlib::System::String> Sid;
-					static Property<mscorlib::System::String> String;
-					static Property<mscorlib::System::String> Time;
-					static Property<mscorlib::System::String> UInteger32;
-					static Property<mscorlib::System::String> UInteger64;
-					static Property<mscorlib::System::String> UpnName;
-					static Property<mscorlib::System::String> X500Name;
-					static Property<mscorlib::System::String> YearMonthDuration;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Base64Binary;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Base64Octet;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Boolean;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Date;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> DateTime;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> DaytimeDuration;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> DnsName;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Double;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> DsaKeyValue;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Email;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Fqbn;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> HexBinary;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Integer;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Integer32;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Integer64;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> KeyInfo;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Rfc822Name;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Rsa;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> RsaKeyValue;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Sid;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> String;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> Time;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> UInteger32;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> UInteger64;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> UpnName;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> X500Name;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimValueTypes> YearMonthDuration;
 
 					//	Get/Set:Base64Binary
 					static mscorlib::System::String  get_Base64Binary();

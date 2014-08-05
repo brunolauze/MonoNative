@@ -103,7 +103,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:RenewalTime
-						mscorlib::System::TimeSpan  get_RenewalTime();
+						mscorlib::System::TimeSpan  get_RenewalTime() const;
 						void set_RenewalTime(mscorlib::System::TimeSpan  value);
 
 					

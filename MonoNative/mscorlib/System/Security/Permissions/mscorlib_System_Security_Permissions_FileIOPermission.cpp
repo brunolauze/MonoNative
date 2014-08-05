@@ -151,7 +151,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:AllFiles
-				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermission::get_AllFiles()
+				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermission::get_AllFiles() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermission", 0, NULL, "get_AllFiles", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__*)mono_object_unbox(__result__);
@@ -168,7 +168,7 @@ namespace mscorlib
 
 
 				//	Get/Set:AllLocalFiles
-				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermission::get_AllLocalFiles()
+				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermission::get_AllLocalFiles() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermission", 0, NULL, "get_AllLocalFiles", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__*)mono_object_unbox(__result__);

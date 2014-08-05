@@ -109,7 +109,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:KeyExchangeAlgorithm
-				mscorlib::System::String  RSA::get_KeyExchangeAlgorithm()
+				mscorlib::System::String  RSA::get_KeyExchangeAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "get_KeyExchangeAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -117,7 +117,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeySize
-				mscorlib::System::Int32  RSA::get_KeySize()
+				mscorlib::System::Int32  RSA::get_KeySize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "get_KeySize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -134,7 +134,7 @@ namespace mscorlib
 
 
 				//	Get:LegalKeySizes
-				std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  RSA::get_LegalKeySizes()
+				std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  RSA::get_LegalKeySizes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "get_LegalKeySizes", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -150,7 +150,7 @@ namespace mscorlib
 
 
 				//	Get:SignatureAlgorithm
-				mscorlib::System::String  RSA::get_SignatureAlgorithm()
+				mscorlib::System::String  RSA::get_SignatureAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "get_SignatureAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

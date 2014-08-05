@@ -29,6 +29,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "System.Threading", "Timeout", 0, NULL, "InfiniteTimeSpan");
 			}
 
+			void Timeout::set_InfiniteTimeSpan(mscorlib::System::TimeSpan  value)
+			{
+				throw;
+			}
 
 
 		}

@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_REFLECTION_MEMBERINFO_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MemberTypes.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IList_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
@@ -42,21 +42,21 @@ namespace mscorlib
 
 			class MemberInfo
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 				, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
+				, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 			{
 			public:
 				MemberInfo(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 				, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
+				, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 				{
 				};
 			
 				MemberInfo(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 				, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
+				, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 				{
 				};
 			
@@ -90,25 +90,25 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:DeclaringType
-				mscorlib::System::Type  get_DeclaringType();
+				mscorlib::System::Type  get_DeclaringType() const;
 
 				//	Get:MemberType
-				mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+				mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get:ReflectedType
-				mscorlib::System::Type  get_ReflectedType();
+				mscorlib::System::Type  get_ReflectedType() const;
 
 				//	Get:Module
-				mscorlib::System::Reflection::Module  get_Module();
+				mscorlib::System::Reflection::Module  get_Module() const;
 
 				//	Get:MetadataToken
-				mscorlib::System::Int32  get_MetadataToken();
+				mscorlib::System::Int32  get_MetadataToken() const;
 
 				//	Get:CustomAttributes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes();
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes() const;
 
 			
 			protected:

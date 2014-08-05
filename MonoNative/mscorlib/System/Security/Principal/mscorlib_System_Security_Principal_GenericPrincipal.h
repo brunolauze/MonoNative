@@ -74,7 +74,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Identity
-					mscorlib::System::Security::Principal::IIdentity  get_Identity();
+					mscorlib::System::Security::Principal::IIdentity  get_Identity() const;
 
 				
 				protected:

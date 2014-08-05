@@ -169,7 +169,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:DynamicMethod
-				mscorlib::System::Reflection::Emit::DynamicMethod  DynamicILInfo::get_DynamicMethod()
+				mscorlib::System::Reflection::Emit::DynamicMethod  DynamicILInfo::get_DynamicMethod() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicILInfo", 0, NULL, "get_DynamicMethod", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::Emit::DynamicMethod(__result__);

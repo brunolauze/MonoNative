@@ -72,11 +72,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:StateMachineType
-					mscorlib::System::Type  get_StateMachineType();
+					mscorlib::System::Type  get_StateMachineType() const;
 					void set_StateMachineType(mscorlib::System::Type  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

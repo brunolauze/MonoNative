@@ -78,7 +78,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:AsyncResult
-			mscorlib::System::IAsyncResult  Overlapped::get_AsyncResult()
+			mscorlib::System::IAsyncResult  Overlapped::get_AsyncResult() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Overlapped", 0, NULL, "get_AsyncResult", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IAsyncResult(__result__);
@@ -95,7 +95,7 @@ namespace mscorlib
 
 
 			//	Get/Set:EventHandle
-			mscorlib::System::Int32  Overlapped::get_EventHandle()
+			mscorlib::System::Int32  Overlapped::get_EventHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Overlapped", 0, NULL, "get_EventHandle", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -112,7 +112,7 @@ namespace mscorlib
 
 
 			//	Get/Set:EventHandleIntPtr
-			mscorlib::System::IntPtr  Overlapped::get_EventHandleIntPtr()
+			mscorlib::System::IntPtr  Overlapped::get_EventHandleIntPtr() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Overlapped", 0, NULL, "get_EventHandleIntPtr", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IntPtr(__result__);
@@ -129,7 +129,7 @@ namespace mscorlib
 
 
 			//	Get/Set:OffsetHigh
-			mscorlib::System::Int32  Overlapped::get_OffsetHigh()
+			mscorlib::System::Int32  Overlapped::get_OffsetHigh() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Overlapped", 0, NULL, "get_OffsetHigh", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -146,7 +146,7 @@ namespace mscorlib
 
 
 			//	Get/Set:OffsetLow
-			mscorlib::System::Int32  Overlapped::get_OffsetLow()
+			mscorlib::System::Int32  Overlapped::get_OffsetLow() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Overlapped", 0, NULL, "get_OffsetLow", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

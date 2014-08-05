@@ -65,10 +65,10 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:ExceptionObject
-			mscorlib::System::Object  get_ExceptionObject();
+			mscorlib::System::Object  get_ExceptionObject() const;
 
 			//	Get:IsTerminating
-			mscorlib::System::Boolean  get_IsTerminating();
+			mscorlib::System::Boolean  get_IsTerminating() const;
 
 		
 		protected:

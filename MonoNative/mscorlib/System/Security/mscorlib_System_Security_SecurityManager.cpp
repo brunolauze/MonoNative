@@ -15,6 +15,8 @@ namespace mscorlib
 		namespace Security
 		{
 
+			Property<mscorlib::System::Boolean , mscorlib::System::Security::SecurityManager> mscorlib::System::Security::SecurityManager::CheckExecutionRights(&mscorlib::System::Security::SecurityManager::get_CheckExecutionRights, &mscorlib::System::Security::SecurityManager::set_CheckExecutionRights);
+			Property<mscorlib::System::Boolean , mscorlib::System::Security::SecurityManager> mscorlib::System::Security::SecurityManager::SecurityEnabled(&mscorlib::System::Security::SecurityManager::get_SecurityEnabled, &mscorlib::System::Security::SecurityManager::set_SecurityEnabled);
 			//Public Methods
 			void SecurityManager::GetZoneAndOrigin(mscorlib::System::Collections::ArrayList zone, mscorlib::System::Collections::ArrayList origin)
 			{

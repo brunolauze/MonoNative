@@ -61,16 +61,16 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:IsStopped
-					mscorlib::System::Boolean  get_IsStopped();
+					mscorlib::System::Boolean  get_IsStopped() const;
 
 					//	Get:IsExceptional
-					mscorlib::System::Boolean  get_IsExceptional();
+					mscorlib::System::Boolean  get_IsExceptional() const;
 
 					//	Get:LowestBreakIteration
-					mscorlib::System::Nullable<mscorlib::System::Int64>  get_LowestBreakIteration();
+					mscorlib::System::Nullable<mscorlib::System::Int64>  get_LowestBreakIteration() const;
 
 					//	Get:ShouldExitCurrentIteration
-					mscorlib::System::Boolean  get_ShouldExitCurrentIteration();
+					mscorlib::System::Boolean  get_ShouldExitCurrentIteration() const;
 
 				
 				protected:

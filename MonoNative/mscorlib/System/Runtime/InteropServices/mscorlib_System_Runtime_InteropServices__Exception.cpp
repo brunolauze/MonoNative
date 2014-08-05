@@ -65,7 +65,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:HelpLink
-				mscorlib::System::String  _Exception::get_HelpLink()
+				mscorlib::System::String  _Exception::get_HelpLink() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Exception", 0, NULL, "get_HelpLink", __mscorlib_System_Runtime_InteropServices__Exception, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -82,7 +82,7 @@ namespace mscorlib
 
 
 				//	Get:InnerException
-				mscorlib::System::Exception  _Exception::get_InnerException()
+				mscorlib::System::Exception  _Exception::get_InnerException() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Exception", 0, NULL, "get_InnerException", __mscorlib_System_Runtime_InteropServices__Exception, 0, NULL, NULL, NULL);
 					return mscorlib::System::Exception(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get:Message
-				mscorlib::System::String  _Exception::get_Message()
+				mscorlib::System::String  _Exception::get_Message() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Exception", 0, NULL, "get_Message", __mscorlib_System_Runtime_InteropServices__Exception, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -98,7 +98,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Source
-				mscorlib::System::String  _Exception::get_Source()
+				mscorlib::System::String  _Exception::get_Source() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Exception", 0, NULL, "get_Source", __mscorlib_System_Runtime_InteropServices__Exception, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -115,7 +115,7 @@ namespace mscorlib
 
 
 				//	Get:StackTrace
-				mscorlib::System::String  _Exception::get_StackTrace()
+				mscorlib::System::String  _Exception::get_StackTrace() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Exception", 0, NULL, "get_StackTrace", __mscorlib_System_Runtime_InteropServices__Exception, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -123,7 +123,7 @@ namespace mscorlib
 
 
 				//	Get:TargetSite
-				mscorlib::System::Reflection::MethodBase  _Exception::get_TargetSite()
+				mscorlib::System::Reflection::MethodBase  _Exception::get_TargetSite() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Exception", 0, NULL, "get_TargetSite", __mscorlib_System_Runtime_InteropServices__Exception, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::MethodBase(__result__);

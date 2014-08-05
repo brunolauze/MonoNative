@@ -2,10 +2,10 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_STRINGCOMPARER_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IEqualityComparer.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEqualityComparer_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IComparer.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IComparer_1.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IEqualityComparer.h>
 
 namespace mscorlib
 {
@@ -38,27 +38,27 @@ namespace mscorlib
 
 		class StringComparer
 			: public mscorlib::System::Object
+			, public virtual mscorlib::System::Collections::IEqualityComparer
 			, public virtual mscorlib::System::Collections::Generic::IEqualityComparer<mscorlib::System::String>
 			, public virtual mscorlib::System::Collections::IComparer
 			, public virtual mscorlib::System::Collections::Generic::IComparer<mscorlib::System::String>
-			, public virtual mscorlib::System::Collections::IEqualityComparer
 		{
 		public:
 			StringComparer(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::Object(nativeTypeInfo)
+			, mscorlib::System::Collections::IEqualityComparer(NULL)
 			, mscorlib::System::Collections::Generic::IEqualityComparer<mscorlib::System::String>(NULL)
 			, mscorlib::System::Collections::IComparer(NULL)
 			, mscorlib::System::Collections::Generic::IComparer<mscorlib::System::String>(NULL)
-			, mscorlib::System::Collections::IEqualityComparer(NULL)
 			{
 			};
 		
 			StringComparer(MonoObject *nativeObject)
 			: mscorlib::System::Object(nativeObject)
+			, mscorlib::System::Collections::IEqualityComparer(nativeObject)
 			, mscorlib::System::Collections::Generic::IEqualityComparer<mscorlib::System::String>(nativeObject)
 			, mscorlib::System::Collections::IComparer(nativeObject)
 			, mscorlib::System::Collections::Generic::IComparer<mscorlib::System::String>(nativeObject)
-			, mscorlib::System::Collections::IEqualityComparer(nativeObject)
 			{
 			};
 		
@@ -83,31 +83,37 @@ namespace mscorlib
 
 
 			//Public Static Properties
-			static Property<mscorlib::System::StringComparer> CurrentCulture;
-			static Property<mscorlib::System::StringComparer> CurrentCultureIgnoreCase;
-			static Property<mscorlib::System::StringComparer> InvariantCulture;
-			static Property<mscorlib::System::StringComparer> InvariantCultureIgnoreCase;
-			static Property<mscorlib::System::StringComparer> Ordinal;
-			static Property<mscorlib::System::StringComparer> OrdinalIgnoreCase;
+			static Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> CurrentCulture;
+			static Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> CurrentCultureIgnoreCase;
+			static Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> InvariantCulture;
+			static Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> InvariantCultureIgnoreCase;
+			static Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> Ordinal;
+			static Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> OrdinalIgnoreCase;
 
 			//Get Set Static Properties Methods
 			//	Get:CurrentCulture
 			static mscorlib::System::StringComparer  get_CurrentCulture();
+			static void set_CurrentCulture(mscorlib::System::StringComparer  value);
 
 			//	Get:CurrentCultureIgnoreCase
 			static mscorlib::System::StringComparer  get_CurrentCultureIgnoreCase();
+			static void set_CurrentCultureIgnoreCase(mscorlib::System::StringComparer  value);
 
 			//	Get:InvariantCulture
 			static mscorlib::System::StringComparer  get_InvariantCulture();
+			static void set_InvariantCulture(mscorlib::System::StringComparer  value);
 
 			//	Get:InvariantCultureIgnoreCase
 			static mscorlib::System::StringComparer  get_InvariantCultureIgnoreCase();
+			static void set_InvariantCultureIgnoreCase(mscorlib::System::StringComparer  value);
 
 			//	Get:Ordinal
 			static mscorlib::System::StringComparer  get_Ordinal();
+			static void set_Ordinal(mscorlib::System::StringComparer  value);
 
 			//	Get:OrdinalIgnoreCase
 			static mscorlib::System::StringComparer  get_OrdinalIgnoreCase();
+			static void set_OrdinalIgnoreCase(mscorlib::System::StringComparer  value);
 
 
 		

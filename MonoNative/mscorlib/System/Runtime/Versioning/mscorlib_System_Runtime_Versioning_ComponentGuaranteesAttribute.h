@@ -73,10 +73,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Guarantees
-					mscorlib::System::Runtime::Versioning::ComponentGuaranteesOptions::__ENUM__  get_Guarantees();
+					mscorlib::System::Runtime::Versioning::ComponentGuaranteesOptions::__ENUM__  get_Guarantees() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

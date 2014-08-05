@@ -72,7 +72,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:AuthenticationType
-				mscorlib::System::String  WindowsIdentity::get_AuthenticationType()
+				mscorlib::System::String  WindowsIdentity::get_AuthenticationType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_AuthenticationType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 				//	Get:IsAnonymous
-				mscorlib::System::Boolean  WindowsIdentity::get_IsAnonymous()
+				mscorlib::System::Boolean  WindowsIdentity::get_IsAnonymous() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_IsAnonymous", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -88,7 +88,7 @@ namespace mscorlib
 
 
 				//	Get:IsAuthenticated
-				mscorlib::System::Boolean  WindowsIdentity::get_IsAuthenticated()
+				mscorlib::System::Boolean  WindowsIdentity::get_IsAuthenticated() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_IsAuthenticated", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -96,7 +96,7 @@ namespace mscorlib
 
 
 				//	Get:IsGuest
-				mscorlib::System::Boolean  WindowsIdentity::get_IsGuest()
+				mscorlib::System::Boolean  WindowsIdentity::get_IsGuest() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_IsGuest", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -104,7 +104,7 @@ namespace mscorlib
 
 
 				//	Get:IsSystem
-				mscorlib::System::Boolean  WindowsIdentity::get_IsSystem()
+				mscorlib::System::Boolean  WindowsIdentity::get_IsSystem() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_IsSystem", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -112,7 +112,7 @@ namespace mscorlib
 
 
 				//	Get:Name
-				mscorlib::System::String  WindowsIdentity::get_Name()
+				mscorlib::System::String  WindowsIdentity::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -120,7 +120,7 @@ namespace mscorlib
 
 
 				//	Get:Token
-				mscorlib::System::IntPtr  WindowsIdentity::get_Token()
+				mscorlib::System::IntPtr  WindowsIdentity::get_Token() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_Token", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::IntPtr(__result__);
@@ -128,7 +128,7 @@ namespace mscorlib
 
 
 				//	Get:Groups
-				mscorlib::System::Security::Principal::IdentityReferenceCollection  WindowsIdentity::get_Groups()
+				mscorlib::System::Security::Principal::IdentityReferenceCollection  WindowsIdentity::get_Groups() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_Groups", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::IdentityReferenceCollection(__result__);
@@ -136,7 +136,7 @@ namespace mscorlib
 
 
 				//	Get:ImpersonationLevel
-				mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__  WindowsIdentity::get_ImpersonationLevel()
+				mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__  WindowsIdentity::get_ImpersonationLevel() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_ImpersonationLevel", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__*)mono_object_unbox(__result__);
@@ -144,7 +144,7 @@ namespace mscorlib
 
 
 				//	Get:Owner
-				mscorlib::System::Security::Principal::SecurityIdentifier  WindowsIdentity::get_Owner()
+				mscorlib::System::Security::Principal::SecurityIdentifier  WindowsIdentity::get_Owner() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_Owner", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::SecurityIdentifier(__result__);
@@ -152,7 +152,7 @@ namespace mscorlib
 
 
 				//	Get:User
-				mscorlib::System::Security::Principal::SecurityIdentifier  WindowsIdentity::get_User()
+				mscorlib::System::Security::Principal::SecurityIdentifier  WindowsIdentity::get_User() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_User", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::SecurityIdentifier(__result__);
@@ -160,7 +160,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Actor
-				mscorlib::System::Security::Claims::ClaimsIdentity  WindowsIdentity::get_Actor()
+				mscorlib::System::Security::Claims::ClaimsIdentity  WindowsIdentity::get_Actor() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "get_Actor", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Claims::ClaimsIdentity(__result__);
@@ -177,7 +177,7 @@ namespace mscorlib
 
 
 				//	Get/Set:BootstrapContext
-				mscorlib::System::Object  WindowsIdentity::get_BootstrapContext()
+				mscorlib::System::Object  WindowsIdentity::get_BootstrapContext() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "get_BootstrapContext", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -194,7 +194,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Label
-				mscorlib::System::String  WindowsIdentity::get_Label()
+				mscorlib::System::String  WindowsIdentity::get_Label() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "get_Label", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -211,7 +211,7 @@ namespace mscorlib
 
 
 				//	Get/Set:NameClaimType
-				mscorlib::System::String  WindowsIdentity::get_NameClaimType()
+				mscorlib::System::String  WindowsIdentity::get_NameClaimType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "get_NameClaimType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -228,7 +228,7 @@ namespace mscorlib
 
 
 				//	Get/Set:RoleClaimType
-				mscorlib::System::String  WindowsIdentity::get_RoleClaimType()
+				mscorlib::System::String  WindowsIdentity::get_RoleClaimType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "get_RoleClaimType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -245,7 +245,7 @@ namespace mscorlib
 
 
 				//	Get:Claims
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  WindowsIdentity::get_Claims()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  WindowsIdentity::get_Claims() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "get_Claims", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>(__result__);

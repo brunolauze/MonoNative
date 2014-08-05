@@ -106,19 +106,19 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Attributes
-				mscorlib::System::Collections::Hashtable  get_Attributes();
+				mscorlib::System::Collections::Hashtable  get_Attributes() const;
 				void set_Attributes(mscorlib::System::Collections::Hashtable  value);
 
 				//	Get/Set:Children
-				mscorlib::System::Collections::ArrayList  get_Children();
+				mscorlib::System::Collections::ArrayList  get_Children() const;
 				void set_Children(mscorlib::System::Collections::ArrayList  value);
 
 				//	Get/Set:Tag
-				mscorlib::System::String  get_Tag();
+				mscorlib::System::String  get_Tag() const;
 				void set_Tag(mscorlib::System::String  value);
 
 				//	Get/Set:Text
-				mscorlib::System::String  get_Text();
+				mscorlib::System::String  get_Text() const;
 				void set_Text(mscorlib::System::String  value);
 
 			

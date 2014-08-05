@@ -59,19 +59,19 @@ namespace mscorlib
 					__declspec(property(get=get_cNamedArgs, put=set_cNamedArgs)) mscorlib::System::Int32  cNamedArgs;
 
 					//	Get/Set:rgvarg
-					mscorlib::System::IntPtr  get_rgvarg();
+					mscorlib::System::IntPtr  get_rgvarg() const;
 					void set_rgvarg(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:rgdispidNamedArgs
-					mscorlib::System::IntPtr  get_rgdispidNamedArgs();
+					mscorlib::System::IntPtr  get_rgdispidNamedArgs() const;
 					void set_rgdispidNamedArgs(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:cArgs
-					mscorlib::System::Int32  get_cArgs();
+					mscorlib::System::Int32  get_cArgs() const;
 					void set_cArgs(mscorlib::System::Int32  value);
 
 					//	Get/Set:cNamedArgs
-					mscorlib::System::Int32  get_cNamedArgs();
+					mscorlib::System::Int32  get_cNamedArgs() const;
 					void set_cNamedArgs(mscorlib::System::Int32  value);
 
 				

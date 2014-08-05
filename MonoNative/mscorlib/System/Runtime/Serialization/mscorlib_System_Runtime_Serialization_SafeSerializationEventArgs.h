@@ -74,7 +74,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:StreamingContext
-					mscorlib::System::Runtime::Serialization::StreamingContext  get_StreamingContext();
+					mscorlib::System::Runtime::Serialization::StreamingContext  get_StreamingContext() const;
 
 				
 				protected:

@@ -349,7 +349,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Issuer
-					mscorlib::System::String  X509Certificate::get_Issuer()
+					mscorlib::System::String  X509Certificate::get_Issuer() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "get_Issuer", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -357,7 +357,7 @@ namespace mscorlib
 
 
 					//	Get:Subject
-					mscorlib::System::String  X509Certificate::get_Subject()
+					mscorlib::System::String  X509Certificate::get_Subject() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "get_Subject", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -365,7 +365,7 @@ namespace mscorlib
 
 
 					//	Get:Handle
-					mscorlib::System::IntPtr  X509Certificate::get_Handle()
+					mscorlib::System::IntPtr  X509Certificate::get_Handle() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::IntPtr(__result__);

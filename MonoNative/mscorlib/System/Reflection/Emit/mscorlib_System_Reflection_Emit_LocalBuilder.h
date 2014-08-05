@@ -64,13 +64,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:LocalType
-					mscorlib::System::Type  get_LocalType();
+					mscorlib::System::Type  get_LocalType() const;
 
 					//	Get:IsPinned
-					mscorlib::System::Boolean  get_IsPinned();
+					mscorlib::System::Boolean  get_IsPinned() const;
 
 					//	Get:LocalIndex
-					mscorlib::System::Int32  get_LocalIndex();
+					mscorlib::System::Int32  get_LocalIndex() const;
 
 				
 				protected:

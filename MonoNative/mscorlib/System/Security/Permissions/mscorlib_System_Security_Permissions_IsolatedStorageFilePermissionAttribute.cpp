@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:UsageAllowed
-				mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  IsolatedStorageFilePermissionAttribute::get_UsageAllowed()
+				mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  IsolatedStorageFilePermissionAttribute::get_UsageAllowed() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "IsolatedStoragePermissionAttribute", 0, NULL, "get_UsageAllowed", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:UserQuota
-				mscorlib::System::Int64  IsolatedStorageFilePermissionAttribute::get_UserQuota()
+				mscorlib::System::Int64  IsolatedStorageFilePermissionAttribute::get_UserQuota() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "IsolatedStoragePermissionAttribute", 0, NULL, "get_UserQuota", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  IsolatedStorageFilePermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  IsolatedStorageFilePermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  IsolatedStorageFilePermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  IsolatedStorageFilePermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  IsolatedStorageFilePermissionAttribute::get_TypeId()
+				mscorlib::System::Object  IsolatedStorageFilePermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

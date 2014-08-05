@@ -28,7 +28,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Types
-			std::vector<mscorlib::System::Type*>  ReflectionTypeLoadException::get_Types()
+			std::vector<mscorlib::System::Type*>  ReflectionTypeLoadException::get_Types() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ReflectionTypeLoadException", 0, NULL, "get_Types", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -44,7 +44,7 @@ namespace mscorlib
 
 
 			//	Get:LoaderExceptions
-			std::vector<mscorlib::System::Exception*>  ReflectionTypeLoadException::get_LoaderExceptions()
+			std::vector<mscorlib::System::Exception*>  ReflectionTypeLoadException::get_LoaderExceptions() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ReflectionTypeLoadException", 0, NULL, "get_LoaderExceptions", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -60,7 +60,7 @@ namespace mscorlib
 
 
 			//	Get:InnerException
-			mscorlib::System::Exception  ReflectionTypeLoadException::get_InnerException()
+			mscorlib::System::Exception  ReflectionTypeLoadException::get_InnerException() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_InnerException", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Exception(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HelpLink
-			mscorlib::System::String  ReflectionTypeLoadException::get_HelpLink()
+			mscorlib::System::String  ReflectionTypeLoadException::get_HelpLink() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HelpLink", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HResult
-			mscorlib::System::Int32  ReflectionTypeLoadException::get_HResult()
+			mscorlib::System::Int32  ReflectionTypeLoadException::get_HResult() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HResult", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -102,7 +102,7 @@ namespace mscorlib
 
 
 			//	Get:Message
-			mscorlib::System::String  ReflectionTypeLoadException::get_Message()
+			mscorlib::System::String  ReflectionTypeLoadException::get_Message() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -110,7 +110,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Source
-			mscorlib::System::String  ReflectionTypeLoadException::get_Source()
+			mscorlib::System::String  ReflectionTypeLoadException::get_Source() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Source", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -127,7 +127,7 @@ namespace mscorlib
 
 
 			//	Get:StackTrace
-			mscorlib::System::String  ReflectionTypeLoadException::get_StackTrace()
+			mscorlib::System::String  ReflectionTypeLoadException::get_StackTrace() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -135,7 +135,7 @@ namespace mscorlib
 
 
 			//	Get:TargetSite
-			mscorlib::System::Reflection::MethodBase  ReflectionTypeLoadException::get_TargetSite()
+			mscorlib::System::Reflection::MethodBase  ReflectionTypeLoadException::get_TargetSite() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_TargetSite", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MethodBase(__result__);
@@ -143,7 +143,7 @@ namespace mscorlib
 
 
 			//	Get:Data
-			mscorlib::System::Collections::IDictionary  ReflectionTypeLoadException::get_Data()
+			mscorlib::System::Collections::IDictionary  ReflectionTypeLoadException::get_Data() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Data", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::IDictionary(__result__);

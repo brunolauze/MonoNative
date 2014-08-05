@@ -92,7 +92,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Url
-				mscorlib::System::String  UrlMembershipCondition::get_Url()
+				mscorlib::System::String  UrlMembershipCondition::get_Url() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "UrlMembershipCondition", 0, NULL, "get_Url", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

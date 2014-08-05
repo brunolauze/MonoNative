@@ -51,10 +51,10 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:ChannelName
-						mscorlib::System::String  get_ChannelName();
+						mscorlib::System::String  get_ChannelName() const;
 
 						//	Get:ChannelPriority
-						mscorlib::System::Int32  get_ChannelPriority();
+						mscorlib::System::Int32  get_ChannelPriority() const;
 
 					
 					protected:

@@ -78,10 +78,11 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::DBNull> Value;
+			static Property<mscorlib::System::DBNull , mscorlib::System::DBNull> Value;
 
 			//	Get/Set:Value
 			static mscorlib::System::DBNull  get_Value();
+			static void set_Value(mscorlib::System::DBNull  value);
 
 		
 		protected:

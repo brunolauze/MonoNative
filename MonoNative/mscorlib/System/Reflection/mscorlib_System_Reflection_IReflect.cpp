@@ -211,7 +211,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:UnderlyingSystemType
-			mscorlib::System::Type  IReflect::get_UnderlyingSystemType()
+			mscorlib::System::Type  IReflect::get_UnderlyingSystemType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "get_UnderlyingSystemType", __mscorlib_System_Reflection_IReflect, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);

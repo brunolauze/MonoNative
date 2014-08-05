@@ -31,7 +31,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Collections_Generic_IReadOnlyCollection_1, put=set___mscorlib_System_Collections_Generic_IReadOnlyCollection_1)) MonoObject *__mscorlib_System_Collections_Generic_IReadOnlyCollection_1;
-					MonoObject* get___mscorlib_System_Collections_Generic_IReadOnlyCollection_1()
+					MonoObject* get___mscorlib_System_Collections_Generic_IReadOnlyCollection_1() const
 					{
 						return IReadOnlyCollection::__mscorlib_System_Collections_Generic_IEnumerable_1;
 					}
@@ -51,7 +51,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Count
-					mscorlib::System::Int32  get_Count()
+					mscorlib::System::Int32  get_Count() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());

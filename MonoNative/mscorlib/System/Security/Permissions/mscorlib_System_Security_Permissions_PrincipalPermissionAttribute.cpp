@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Authenticated
-				mscorlib::System::Boolean  PrincipalPermissionAttribute::get_Authenticated()
+				mscorlib::System::Boolean  PrincipalPermissionAttribute::get_Authenticated() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "PrincipalPermissionAttribute", 0, NULL, "get_Authenticated", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Name
-				mscorlib::System::String  PrincipalPermissionAttribute::get_Name()
+				mscorlib::System::String  PrincipalPermissionAttribute::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "PrincipalPermissionAttribute", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Role
-				mscorlib::System::String  PrincipalPermissionAttribute::get_Role()
+				mscorlib::System::String  PrincipalPermissionAttribute::get_Role() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "PrincipalPermissionAttribute", 0, NULL, "get_Role", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  PrincipalPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  PrincipalPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  PrincipalPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  PrincipalPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  PrincipalPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  PrincipalPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

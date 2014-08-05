@@ -73,15 +73,15 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:ExceptionType
-						mscorlib::System::String  get_ExceptionType();
+						mscorlib::System::String  get_ExceptionType() const;
 						void set_ExceptionType(mscorlib::System::String  value);
 
 						//	Get/Set:ExceptionMessage
-						mscorlib::System::String  get_ExceptionMessage();
+						mscorlib::System::String  get_ExceptionMessage() const;
 						void set_ExceptionMessage(mscorlib::System::String  value);
 
 						//	Get/Set:StackTrace
-						mscorlib::System::String  get_StackTrace();
+						mscorlib::System::String  get_StackTrace() const;
 						void set_StackTrace(mscorlib::System::String  value);
 
 					

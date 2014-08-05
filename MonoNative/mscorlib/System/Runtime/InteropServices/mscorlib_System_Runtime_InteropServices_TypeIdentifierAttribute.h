@@ -82,13 +82,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Scope
-					mscorlib::System::String  get_Scope();
+					mscorlib::System::String  get_Scope() const;
 
 					//	Get:Identifier
-					mscorlib::System::String  get_Identifier();
+					mscorlib::System::String  get_Identifier() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Flags
-				mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  KeyContainerPermissionAttribute::get_Flags()
+				mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  KeyContainerPermissionAttribute::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAttribute", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeyContainerName
-				mscorlib::System::String  KeyContainerPermissionAttribute::get_KeyContainerName()
+				mscorlib::System::String  KeyContainerPermissionAttribute::get_KeyContainerName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAttribute", 0, NULL, "get_KeyContainerName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeySpec
-				mscorlib::System::Int32  KeyContainerPermissionAttribute::get_KeySpec()
+				mscorlib::System::Int32  KeyContainerPermissionAttribute::get_KeySpec() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAttribute", 0, NULL, "get_KeySpec", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeyStore
-				mscorlib::System::String  KeyContainerPermissionAttribute::get_KeyStore()
+				mscorlib::System::String  KeyContainerPermissionAttribute::get_KeyStore() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAttribute", 0, NULL, "get_KeyStore", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ProviderName
-				mscorlib::System::String  KeyContainerPermissionAttribute::get_ProviderName()
+				mscorlib::System::String  KeyContainerPermissionAttribute::get_ProviderName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAttribute", 0, NULL, "get_ProviderName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ProviderType
-				mscorlib::System::Int32  KeyContainerPermissionAttribute::get_ProviderType()
+				mscorlib::System::Int32  KeyContainerPermissionAttribute::get_ProviderType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAttribute", 0, NULL, "get_ProviderType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  KeyContainerPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  KeyContainerPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  KeyContainerPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  KeyContainerPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -158,7 +158,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  KeyContainerPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  KeyContainerPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

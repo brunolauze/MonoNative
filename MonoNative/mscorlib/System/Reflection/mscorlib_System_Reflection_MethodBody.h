@@ -74,19 +74,19 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ExceptionHandlingClauses
-				mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::ExceptionHandlingClause>  get_ExceptionHandlingClauses();
+				mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::ExceptionHandlingClause>  get_ExceptionHandlingClauses() const;
 
 				//	Get:LocalVariables
-				mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::LocalVariableInfo>  get_LocalVariables();
+				mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::LocalVariableInfo>  get_LocalVariables() const;
 
 				//	Get:InitLocals
-				mscorlib::System::Boolean  get_InitLocals();
+				mscorlib::System::Boolean  get_InitLocals() const;
 
 				//	Get:LocalSignatureMetadataToken
-				mscorlib::System::Int32  get_LocalSignatureMetadataToken();
+				mscorlib::System::Int32  get_LocalSignatureMetadataToken() const;
 
 				//	Get:MaxStackSize
-				mscorlib::System::Int32  get_MaxStackSize();
+				mscorlib::System::Int32  get_MaxStackSize() const;
 
 			
 			protected:

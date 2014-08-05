@@ -124,48 +124,48 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get:IsSingleByte
-				mscorlib::System::Boolean  get_IsSingleByte();
+				mscorlib::System::Boolean  get_IsSingleByte() const;
 
 				//	Get/Set:DecoderFallback
-				mscorlib::System::Text::DecoderFallback  get_DecoderFallback();
+				mscorlib::System::Text::DecoderFallback  get_DecoderFallback() const;
 				void set_DecoderFallback(mscorlib::System::Text::DecoderFallback  value);
 
 				//	Get/Set:EncoderFallback
-				mscorlib::System::Text::EncoderFallback  get_EncoderFallback();
+				mscorlib::System::Text::EncoderFallback  get_EncoderFallback() const;
 				void set_EncoderFallback(mscorlib::System::Text::EncoderFallback  value);
 
 				//	Get:BodyName
-				mscorlib::System::String  get_BodyName();
+				mscorlib::System::String  get_BodyName() const;
 
 				//	Get:CodePage
-				mscorlib::System::Int32  get_CodePage();
+				mscorlib::System::Int32  get_CodePage() const;
 
 				//	Get:EncodingName
-				mscorlib::System::String  get_EncodingName();
+				mscorlib::System::String  get_EncodingName() const;
 
 				//	Get:HeaderName
-				mscorlib::System::String  get_HeaderName();
+				mscorlib::System::String  get_HeaderName() const;
 
 				//	Get:IsBrowserDisplay
-				mscorlib::System::Boolean  get_IsBrowserDisplay();
+				mscorlib::System::Boolean  get_IsBrowserDisplay() const;
 
 				//	Get:IsBrowserSave
-				mscorlib::System::Boolean  get_IsBrowserSave();
+				mscorlib::System::Boolean  get_IsBrowserSave() const;
 
 				//	Get:IsMailNewsDisplay
-				mscorlib::System::Boolean  get_IsMailNewsDisplay();
+				mscorlib::System::Boolean  get_IsMailNewsDisplay() const;
 
 				//	Get:IsMailNewsSave
-				mscorlib::System::Boolean  get_IsMailNewsSave();
+				mscorlib::System::Boolean  get_IsMailNewsSave() const;
 
 				//	Get:WebName
-				mscorlib::System::String  get_WebName();
+				mscorlib::System::String  get_WebName() const;
 
 				//	Get:WindowsCodePage
-				mscorlib::System::Int32  get_WindowsCodePage();
+				mscorlib::System::Int32  get_WindowsCodePage() const;
 
 			
 			protected:

@@ -19,7 +19,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:pwcsName
-					mscorlib::System::String STATSTG::get_pwcsName()
+					mscorlib::System::String STATSTG::get_pwcsName() const
 					{
 						return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "pwcsName"));
 					}
@@ -29,7 +29,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:type
-					mscorlib::System::Int32 STATSTG::get_type()
+					mscorlib::System::Int32 STATSTG::get_type() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "type");
 					}
@@ -39,7 +39,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cbSize
-					mscorlib::System::Int64 STATSTG::get_cbSize()
+					mscorlib::System::Int64 STATSTG::get_cbSize() const
 					{
 						return Global::GetFieldInt64Value(__native_object__, "cbSize");
 					}
@@ -49,7 +49,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:mtime
-					mscorlib::System::Runtime::InteropServices::ComTypes::FILETIME STATSTG::get_mtime()
+					mscorlib::System::Runtime::InteropServices::ComTypes::FILETIME STATSTG::get_mtime() const
 					{
 						return Global::GetFieldValue(__native_object__, "mtime");
 					}
@@ -59,7 +59,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:ctime
-					mscorlib::System::Runtime::InteropServices::ComTypes::FILETIME STATSTG::get_ctime()
+					mscorlib::System::Runtime::InteropServices::ComTypes::FILETIME STATSTG::get_ctime() const
 					{
 						return Global::GetFieldValue(__native_object__, "ctime");
 					}
@@ -69,7 +69,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:atime
-					mscorlib::System::Runtime::InteropServices::ComTypes::FILETIME STATSTG::get_atime()
+					mscorlib::System::Runtime::InteropServices::ComTypes::FILETIME STATSTG::get_atime() const
 					{
 						return Global::GetFieldValue(__native_object__, "atime");
 					}
@@ -79,7 +79,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:grfMode
-					mscorlib::System::Int32 STATSTG::get_grfMode()
+					mscorlib::System::Int32 STATSTG::get_grfMode() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "grfMode");
 					}
@@ -89,7 +89,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:grfLocksSupported
-					mscorlib::System::Int32 STATSTG::get_grfLocksSupported()
+					mscorlib::System::Int32 STATSTG::get_grfLocksSupported() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "grfLocksSupported");
 					}
@@ -99,7 +99,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:clsid
-					mscorlib::System::Guid STATSTG::get_clsid()
+					mscorlib::System::Guid STATSTG::get_clsid() const
 					{
 						return Global::GetFieldValue(__native_object__, "clsid");
 					}
@@ -109,7 +109,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:grfStateBits
-					mscorlib::System::Int32 STATSTG::get_grfStateBits()
+					mscorlib::System::Int32 STATSTG::get_grfStateBits() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "grfStateBits");
 					}
@@ -119,7 +119,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:reserved
-					mscorlib::System::Int32 STATSTG::get_reserved()
+					mscorlib::System::Int32 STATSTG::get_reserved() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "reserved");
 					}

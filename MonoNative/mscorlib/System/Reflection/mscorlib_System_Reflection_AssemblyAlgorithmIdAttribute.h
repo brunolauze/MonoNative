@@ -82,10 +82,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:AlgorithmId
-				mscorlib::System::UInt32  get_AlgorithmId();
+				mscorlib::System::UInt32  get_AlgorithmId() const;
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

@@ -60,11 +60,11 @@ namespace mscorlib
 						__declspec(property(get=get_wParamFlags, put=set_wParamFlags)) mscorlib::System::Runtime::InteropServices::ComTypes::PARAMFLAG::__ENUM__  wParamFlags;
 
 						//	Get/Set:lpVarValue
-						mscorlib::System::IntPtr  get_lpVarValue();
+						mscorlib::System::IntPtr  get_lpVarValue() const;
 						void set_lpVarValue(mscorlib::System::IntPtr  value);
 
 						//	Get/Set:wParamFlags
-						mscorlib::System::Runtime::InteropServices::ComTypes::PARAMFLAG::__ENUM__  get_wParamFlags();
+						mscorlib::System::Runtime::InteropServices::ComTypes::PARAMFLAG::__ENUM__  get_wParamFlags() const;
 						void set_wParamFlags(mscorlib::System::Runtime::InteropServices::ComTypes::PARAMFLAG::__ENUM__  value);
 
 					

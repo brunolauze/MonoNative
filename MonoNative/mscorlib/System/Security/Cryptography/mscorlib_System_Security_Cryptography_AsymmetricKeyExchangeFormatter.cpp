@@ -65,7 +65,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Parameters
-				mscorlib::System::String  AsymmetricKeyExchangeFormatter::get_Parameters()
+				mscorlib::System::String  AsymmetricKeyExchangeFormatter::get_Parameters() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricKeyExchangeFormatter", 0, NULL, "get_Parameters", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

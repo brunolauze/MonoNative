@@ -17,7 +17,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get/Set:NamespaceName
-					mscorlib::System::String  DesignerNamespaceResolveEventArgs::get_NamespaceName()
+					mscorlib::System::String  DesignerNamespaceResolveEventArgs::get_NamespaceName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "DesignerNamespaceResolveEventArgs", 0, NULL, "get_NamespaceName", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ResolvedAssemblyFiles
-					mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::String>  DesignerNamespaceResolveEventArgs::get_ResolvedAssemblyFiles()
+					mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::String>  DesignerNamespaceResolveEventArgs::get_ResolvedAssemblyFiles() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "DesignerNamespaceResolveEventArgs", 0, NULL, "get_ResolvedAssemblyFiles", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::String>(__result__);

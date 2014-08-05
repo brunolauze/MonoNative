@@ -107,32 +107,32 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 					//	Get:Count
-					mscorlib::System::Int32  get_Count();
+					mscorlib::System::Int32  get_Count() const;
 
 					//	Get:IsCanonical
-					mscorlib::System::Boolean  get_IsCanonical();
+					mscorlib::System::Boolean  get_IsCanonical() const;
 
 					//	Get:IsContainer
-					mscorlib::System::Boolean  get_IsContainer();
+					mscorlib::System::Boolean  get_IsContainer() const;
 
 					//	Get:IsDS
-					mscorlib::System::Boolean  get_IsDS();
+					mscorlib::System::Boolean  get_IsDS() const;
 
 					//	Get:Revision
-					mscorlib::System::Byte  get_Revision();
+					mscorlib::System::Byte  get_Revision() const;
 
 					//	Get/Set:Item
-					mscorlib::System::Security::AccessControl::GenericAce  get_Item(mscorlib::System::Int32 index);
+					mscorlib::System::Security::AccessControl::GenericAce  get_Item(mscorlib::System::Int32 index) const;
 					void set_Item(mscorlib::System::Int32 index, mscorlib::System::Security::AccessControl::GenericAce  value);
 
 					//	Get:IsSynchronized
-					mscorlib::System::Boolean  get_IsSynchronized();
+					mscorlib::System::Boolean  get_IsSynchronized() const;
 
 					//	Get:SyncRoot
-					mscorlib::System::Object  get_SyncRoot();
+					mscorlib::System::Object  get_SyncRoot() const;
 
 				
 				protected:

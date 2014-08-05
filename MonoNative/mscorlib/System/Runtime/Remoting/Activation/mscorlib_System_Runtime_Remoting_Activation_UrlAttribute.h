@@ -3,9 +3,9 @@
 
 #include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_ContextAttribute.h>
 #include <mscorlib/System/mscorlib_System_String.h>
+#include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContextAttribute.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Attribute.h>
 #include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContextProperty.h>
-#include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContextAttribute.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Runtime/Remoting/Activation/mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage.h>
 
@@ -51,16 +51,16 @@ namespace mscorlib
 
 					class UrlAttribute
 						: public mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute
+						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute
 						, public virtual mscorlib::System::Runtime::InteropServices::_Attribute
 						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContextProperty
-						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute
 					{
 					public:
 						UrlAttribute(mscorlib::System::String callsiteURL)
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Activation.UrlAttribute"))
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(NULL)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
@@ -71,17 +71,17 @@ namespace mscorlib
 					
 						UrlAttribute(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(nativeTypeInfo)
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(NULL)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						{
 						};
 					
 						UrlAttribute(MonoObject *nativeObject)
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(nativeObject)
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(nativeObject)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(nativeObject)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(nativeObject)
 						{
 						};
 					
@@ -109,13 +109,13 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:UrlValue
-						mscorlib::System::String  get_UrlValue();
+						mscorlib::System::String  get_UrlValue() const;
 
 						//	Get:Name
-						mscorlib::System::String  get_Name();
+						mscorlib::System::String  get_Name() const;
 
 						//	Get:TypeId
-						mscorlib::System::Object  get_TypeId();
+						mscorlib::System::Object  get_TypeId() const;
 
 					
 					protected:

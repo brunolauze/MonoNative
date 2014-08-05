@@ -56,7 +56,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Method
-		mscorlib::System::Reflection::MethodInfo  MulticastDelegate::get_Method()
+		mscorlib::System::Reflection::MethodInfo  MulticastDelegate::get_Method() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "get_Method", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 		//	Get:Target
-		mscorlib::System::Object  MulticastDelegate::get_Target()
+		mscorlib::System::Object  MulticastDelegate::get_Target() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "get_Target", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Object(__result__);

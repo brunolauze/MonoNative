@@ -13,7 +13,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get:Value
-			mscorlib::System::String  DebuggerDisplayAttribute::get_Value()
+			mscorlib::System::String  DebuggerDisplayAttribute::get_Value() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerDisplayAttribute", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -21,7 +21,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Target
-			mscorlib::System::Type  DebuggerDisplayAttribute::get_Target()
+			mscorlib::System::Type  DebuggerDisplayAttribute::get_Target() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerDisplayAttribute", 0, NULL, "get_Target", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -38,7 +38,7 @@ namespace mscorlib
 
 
 			//	Get/Set:TargetTypeName
-			mscorlib::System::String  DebuggerDisplayAttribute::get_TargetTypeName()
+			mscorlib::System::String  DebuggerDisplayAttribute::get_TargetTypeName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerDisplayAttribute", 0, NULL, "get_TargetTypeName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -55,7 +55,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Type
-			mscorlib::System::String  DebuggerDisplayAttribute::get_Type()
+			mscorlib::System::String  DebuggerDisplayAttribute::get_Type() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerDisplayAttribute", 0, NULL, "get_Type", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -72,7 +72,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Name
-			mscorlib::System::String  DebuggerDisplayAttribute::get_Name()
+			mscorlib::System::String  DebuggerDisplayAttribute::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerDisplayAttribute", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -89,7 +89,7 @@ namespace mscorlib
 
 
 			//	Get:TypeId
-			mscorlib::System::Object  DebuggerDisplayAttribute::get_TypeId()
+			mscorlib::System::Object  DebuggerDisplayAttribute::get_TypeId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

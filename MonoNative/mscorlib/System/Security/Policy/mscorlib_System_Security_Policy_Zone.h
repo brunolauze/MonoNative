@@ -95,7 +95,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:SecurityZone
-					mscorlib::System::Security::SecurityZone::__ENUM__  get_SecurityZone();
+					mscorlib::System::Security::SecurityZone::__ENUM__  get_SecurityZone() const;
 
 				
 				protected:

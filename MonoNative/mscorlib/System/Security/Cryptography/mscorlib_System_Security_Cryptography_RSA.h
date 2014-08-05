@@ -89,17 +89,17 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:KeyExchangeAlgorithm
-					mscorlib::System::String  get_KeyExchangeAlgorithm();
+					mscorlib::System::String  get_KeyExchangeAlgorithm() const;
 
 					//	Get/Set:KeySize
-					mscorlib::System::Int32  get_KeySize();
+					mscorlib::System::Int32  get_KeySize() const;
 					void set_KeySize(mscorlib::System::Int32  value);
 
 					//	Get:LegalKeySizes
-					std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  get_LegalKeySizes();
+					std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  get_LegalKeySizes() const;
 
 					//	Get:SignatureAlgorithm
-					mscorlib::System::String  get_SignatureAlgorithm();
+					mscorlib::System::String  get_SignatureAlgorithm() const;
 
 				
 				protected:

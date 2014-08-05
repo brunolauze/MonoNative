@@ -67,7 +67,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Exception
-					mscorlib::System::Exception  get_Exception();
+					mscorlib::System::Exception  get_Exception() const;
 
 				
 				protected:

@@ -67,26 +67,31 @@ namespace mscorlib
 
 
 				//Public Static Fields
-				static Property<mscorlib::System::Char*> InvalidPathChars;
-				static Property<mscorlib::System::Char> AltDirectorySeparatorChar;
-				static Property<mscorlib::System::Char> DirectorySeparatorChar;
-				static Property<mscorlib::System::Char> PathSeparator;
-				static Property<mscorlib::System::Char> VolumeSeparatorChar;
+				static Property<std::vector<mscorlib::System::Char*> , mscorlib::System::IO::Path> InvalidPathChars;
+				static Property<mscorlib::System::Char , mscorlib::System::IO::Path> AltDirectorySeparatorChar;
+				static Property<mscorlib::System::Char , mscorlib::System::IO::Path> DirectorySeparatorChar;
+				static Property<mscorlib::System::Char , mscorlib::System::IO::Path> PathSeparator;
+				static Property<mscorlib::System::Char , mscorlib::System::IO::Path> VolumeSeparatorChar;
 
 				//	Get/Set:InvalidPathChars
 				static std::vector<mscorlib::System::Char*>  get_InvalidPathChars();
+				static void set_InvalidPathChars(std::vector<mscorlib::System::Char*>  value);
 
 				//	Get/Set:AltDirectorySeparatorChar
 				static mscorlib::System::Char  get_AltDirectorySeparatorChar();
+				static void set_AltDirectorySeparatorChar(mscorlib::System::Char  value);
 
 				//	Get/Set:DirectorySeparatorChar
 				static mscorlib::System::Char  get_DirectorySeparatorChar();
+				static void set_DirectorySeparatorChar(mscorlib::System::Char  value);
 
 				//	Get/Set:PathSeparator
 				static mscorlib::System::Char  get_PathSeparator();
+				static void set_PathSeparator(mscorlib::System::Char  value);
 
 				//	Get/Set:VolumeSeparatorChar
 				static mscorlib::System::Char  get_VolumeSeparatorChar();
+				static void set_VolumeSeparatorChar(mscorlib::System::Char  value);
 
 			
 			protected:

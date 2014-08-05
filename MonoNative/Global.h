@@ -2,9 +2,7 @@
 #define __MONONATIVE_GLOBAL_H
 #include <unistd.h>
 extern "C" {
-	#define __OPTIMIZE__
 	#include <glib.h>
-	#undef __OPTIMIZE__
 	#include <mono/jit/jit.h>
 	#include <mono/metadata/object.h>
 	#include <mono/metadata/reflection.h>
@@ -129,30 +127,23 @@ private:
 };
 
 
-/*
-template<typename T>
-class ObjectRegister
+template<typename _Prop_t,
+         class _ObjClass_t>
+class Property
 {
-public:
-	static int Register(std::string const& s) {
-		ObjectFactory<T>::getMap()->insert(std::make_pair(s, &createT<T>));
-		return 0;
-	};
-};
-*/
+    typedef _Prop_t (*_pmGet_t)();
+    typedef void (*_pmSet_t)(_Prop_t);
+   
+    _pmGet_t     m_pmGet;
+    _pmSet_t     m_pmSet;
 
-template<typename T>
-class  Property
-{
 public:
-	typedef T *(GetterDelegate)();
-	typedef void *(SetterDelegate)(T&);
-	GetterDelegate Getter;
-	SetterDelegate Setter;
-	operator T&() { return Getter(); };
-	T & operator=(T& obj) { Setter(obj); return Getter(); };
+    Property(_pmGet_t pmGet, _pmSet_t pmSet)
+    :  m_pmGet(pmGet), m_pmSet(pmSet)
+    {}
+    operator _Prop_t() { return (_ObjClass_t::m_pmGet)(); }
+    void operator =(_Prop_t value) { (_ObjClass_t::m_pmSet)(value); }
 };
-
 
 namespace mscorlib
 {

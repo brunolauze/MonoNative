@@ -76,7 +76,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:WrappedObject
-					mscorlib::System::Decimal  get_WrappedObject();
+					mscorlib::System::Decimal  get_WrappedObject() const;
 
 				
 				protected:

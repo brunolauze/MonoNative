@@ -133,13 +133,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ByteLength
-					mscorlib::System::UInt64  get_ByteLength();
+					mscorlib::System::UInt64  get_ByteLength() const;
 
 					//	Get:IsInvalid
-					mscorlib::System::Boolean  get_IsInvalid();
+					mscorlib::System::Boolean  get_IsInvalid() const;
 
 					//	Get:IsClosed
-					mscorlib::System::Boolean  get_IsClosed();
+					mscorlib::System::Boolean  get_IsClosed() const;
 
 				
 				protected:

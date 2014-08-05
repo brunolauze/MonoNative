@@ -74,7 +74,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Token
-			mscorlib::System::Threading::CancellationToken  CancellationTokenSource::get_Token()
+			mscorlib::System::Threading::CancellationToken  CancellationTokenSource::get_Token() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CancellationTokenSource", 0, NULL, "get_Token", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::CancellationToken(__result__);
@@ -82,7 +82,7 @@ namespace mscorlib
 
 
 			//	Get:IsCancellationRequested
-			mscorlib::System::Boolean  CancellationTokenSource::get_IsCancellationRequested()
+			mscorlib::System::Boolean  CancellationTokenSource::get_IsCancellationRequested() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CancellationTokenSource", 0, NULL, "get_IsCancellationRequested", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

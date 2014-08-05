@@ -5,9 +5,9 @@
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_StrongNamePublicKeyBlob.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Version.h>
+#include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_IMembershipCondition.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityPolicyEncodable.h>
-#include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_IMembershipCondition.h>
 
 namespace mscorlib
 {
@@ -60,16 +60,16 @@ namespace mscorlib
 
 				class StrongNameMembershipCondition
 					: public mscorlib::System::Object
+					, public virtual mscorlib::System::Security::Policy::IMembershipCondition
 					, public virtual mscorlib::System::Security::ISecurityEncodable
 					, public virtual mscorlib::System::Security::ISecurityPolicyEncodable
-					, public virtual mscorlib::System::Security::Policy::IMembershipCondition
 				{
 				public:
 					StrongNameMembershipCondition(mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob blob, mscorlib::System::String name, mscorlib::System::Version version)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Policy.StrongNameMembershipCondition"))
+					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
-					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
@@ -84,17 +84,17 @@ namespace mscorlib
 				
 					StrongNameMembershipCondition(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
+					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
-					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					{
 					};
 				
 					StrongNameMembershipCondition(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
+					, mscorlib::System::Security::Policy::IMembershipCondition(nativeObject)
 					, mscorlib::System::Security::ISecurityEncodable(nativeObject)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(nativeObject)
-					, mscorlib::System::Security::Policy::IMembershipCondition(nativeObject)
 					{
 					};
 				
@@ -127,15 +127,15 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 					void set_Name(mscorlib::System::String  value);
 
 					//	Get/Set:Version
-					mscorlib::System::Version  get_Version();
+					mscorlib::System::Version  get_Version() const;
 					void set_Version(mscorlib::System::Version  value);
 
 					//	Get/Set:PublicKey
-					mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  get_PublicKey();
+					mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  get_PublicKey() const;
 					void set_PublicKey(mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  value);
 
 				

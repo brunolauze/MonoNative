@@ -19,6 +19,8 @@ namespace mscorlib
 			namespace Tasks
 			{
 
+				Property<mscorlib::System::Threading::Tasks::TaskFactoryBase , mscorlib::System::Threading::Tasks::TaskBase> mscorlib::System::Threading::Tasks::TaskBase::Factory(&mscorlib::System::Threading::Tasks::TaskBase::get_Factory, &mscorlib::System::Threading::Tasks::TaskBase::set_Factory);
+				Property<mscorlib::System::Nullable<mscorlib::System::Int32> , mscorlib::System::Threading::Tasks::TaskBase> mscorlib::System::Threading::Tasks::TaskBase::CurrentId(&mscorlib::System::Threading::Tasks::TaskBase::get_CurrentId, &mscorlib::System::Threading::Tasks::TaskBase::set_CurrentId);
 				//Public Methods
 				void TaskBase::Start()
 				{
@@ -483,7 +485,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Exception
-				mscorlib::System::AggregateException  TaskBase::get_Exception()
+				mscorlib::System::AggregateException  TaskBase::get_Exception() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_Exception", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::AggregateException(__result__);
@@ -491,7 +493,7 @@ namespace mscorlib
 
 
 				//	Get:IsCanceled
-				mscorlib::System::Boolean  TaskBase::get_IsCanceled()
+				mscorlib::System::Boolean  TaskBase::get_IsCanceled() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_IsCanceled", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -499,7 +501,7 @@ namespace mscorlib
 
 
 				//	Get:IsCompleted
-				mscorlib::System::Boolean  TaskBase::get_IsCompleted()
+				mscorlib::System::Boolean  TaskBase::get_IsCompleted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_IsCompleted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -507,7 +509,7 @@ namespace mscorlib
 
 
 				//	Get:IsFaulted
-				mscorlib::System::Boolean  TaskBase::get_IsFaulted()
+				mscorlib::System::Boolean  TaskBase::get_IsFaulted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_IsFaulted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -515,7 +517,7 @@ namespace mscorlib
 
 
 				//	Get:CreationOptions
-				mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  TaskBase::get_CreationOptions()
+				mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  TaskBase::get_CreationOptions() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_CreationOptions", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__*)mono_object_unbox(__result__);
@@ -523,7 +525,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Status
-				mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  TaskBase::get_Status()
+				mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  TaskBase::get_Status() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_Status", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__*)mono_object_unbox(__result__);
@@ -540,7 +542,7 @@ namespace mscorlib
 
 
 				//	Get:AsyncState
-				mscorlib::System::Object  TaskBase::get_AsyncState()
+				mscorlib::System::Object  TaskBase::get_AsyncState() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_AsyncState", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -548,7 +550,7 @@ namespace mscorlib
 
 
 				//	Get:Id
-				mscorlib::System::Int32  TaskBase::get_Id()
+				mscorlib::System::Int32  TaskBase::get_Id() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_Id", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -563,12 +565,22 @@ namespace mscorlib
 					return mscorlib::System::Threading::Tasks::TaskFactoryBase(__result__);
 				}
 
+				void TaskBase::set_Factory(mscorlib::System::Threading::Tasks::TaskFactoryBase  value)
+				{
+					throw;
+				}
+
 
 				//	Get:CurrentId
 				mscorlib::System::Nullable<mscorlib::System::Int32>  TaskBase::get_CurrentId()
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_CurrentId", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::Nullable<mscorlib::System::Int32>(__result__);
+				}
+
+				void TaskBase::set_CurrentId(mscorlib::System::Nullable<mscorlib::System::Int32>  value)
+				{
+					throw;
 				}
 
 

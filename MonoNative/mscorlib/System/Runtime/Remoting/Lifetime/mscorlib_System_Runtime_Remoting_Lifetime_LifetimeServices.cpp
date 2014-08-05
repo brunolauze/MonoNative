@@ -16,6 +16,10 @@ namespace mscorlib
 				namespace Lifetime
 				{
 
+					Property<mscorlib::System::TimeSpan , mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices> mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::LeaseManagerPollTime(&mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::get_LeaseManagerPollTime, &mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::set_LeaseManagerPollTime);
+					Property<mscorlib::System::TimeSpan , mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices> mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::LeaseTime(&mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::get_LeaseTime, &mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::set_LeaseTime);
+					Property<mscorlib::System::TimeSpan , mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices> mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::RenewOnCallTime(&mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::get_RenewOnCallTime, &mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::set_RenewOnCallTime);
+					Property<mscorlib::System::TimeSpan , mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices> mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::SponsorshipTimeout(&mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::get_SponsorshipTimeout, &mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices::set_SponsorshipTimeout);
 					//Public Methods
 					//Get Set Static Properties Methods
 					//	Get/Set:LeaseManagerPollTime

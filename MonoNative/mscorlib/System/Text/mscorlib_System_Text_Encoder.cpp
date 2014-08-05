@@ -140,7 +140,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:Fallback
-			mscorlib::System::Text::EncoderFallback  Encoder::get_Fallback()
+			mscorlib::System::Text::EncoderFallback  Encoder::get_Fallback() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoder", 0, NULL, "get_Fallback", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Text::EncoderFallback(__result__);
@@ -157,7 +157,7 @@ namespace mscorlib
 
 
 			//	Get:FallbackBuffer
-			mscorlib::System::Text::EncoderFallbackBuffer  Encoder::get_FallbackBuffer()
+			mscorlib::System::Text::EncoderFallbackBuffer  Encoder::get_FallbackBuffer() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoder", 0, NULL, "get_FallbackBuffer", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Text::EncoderFallbackBuffer(__result__);

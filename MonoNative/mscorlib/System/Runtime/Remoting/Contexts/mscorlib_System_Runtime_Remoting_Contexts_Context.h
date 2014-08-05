@@ -80,18 +80,19 @@ namespace mscorlib
 						__declspec(property(get=get_ContextProperties)) std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextProperty*>  ContextProperties;
 
 						//Public Static Properties
-						static Property<mscorlib::System::Runtime::Remoting::Contexts::Context> DefaultContext;
+						static Property<mscorlib::System::Runtime::Remoting::Contexts::Context , mscorlib::System::Runtime::Remoting::Contexts::Context> DefaultContext;
 
 						//Get Set Properties Methods
 						//	Get:ContextID
-						mscorlib::System::Int32  get_ContextID();
+						mscorlib::System::Int32  get_ContextID() const;
 
 						//	Get:ContextProperties
-						std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextProperty*>  get_ContextProperties();
+						std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextProperty*>  get_ContextProperties() const;
 
 						//Get Set Static Properties Methods
 						//	Get:DefaultContext
 						static mscorlib::System::Runtime::Remoting::Contexts::Context  get_DefaultContext();
+						static void set_DefaultContext(mscorlib::System::Runtime::Remoting::Contexts::Context  value);
 
 
 					

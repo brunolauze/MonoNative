@@ -493,6 +493,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "Decimal", 0, NULL, "MinValue");
 		}
 
+		void Decimal::set_MinValue(mscorlib::System::Decimal  value)
+		{
+			throw;
+		}
 
 			//	Get/Set:MaxValue
 		mscorlib::System::Decimal Decimal::get_MaxValue()
@@ -500,6 +504,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "Decimal", 0, NULL, "MaxValue");
 		}
 
+		void Decimal::set_MaxValue(mscorlib::System::Decimal  value)
+		{
+			throw;
+		}
 
 			//	Get/Set:MinusOne
 		mscorlib::System::Decimal Decimal::get_MinusOne()
@@ -507,6 +515,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "Decimal", 0, NULL, "MinusOne");
 		}
 
+		void Decimal::set_MinusOne(mscorlib::System::Decimal  value)
+		{
+			throw;
+		}
 
 			//	Get/Set:One
 		mscorlib::System::Decimal Decimal::get_One()
@@ -514,6 +526,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "Decimal", 0, NULL, "One");
 		}
 
+		void Decimal::set_One(mscorlib::System::Decimal  value)
+		{
+			throw;
+		}
 
 			//	Get/Set:Zero
 		mscorlib::System::Decimal Decimal::get_Zero()
@@ -521,6 +537,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "Decimal", 0, NULL, "Zero");
 		}
 
+		void Decimal::set_Zero(mscorlib::System::Decimal  value)
+		{
+			throw;
+		}
 
 
 	}

@@ -29,7 +29,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ChannelName
-					mscorlib::System::String  IChannel::get_ChannelName()
+					mscorlib::System::String  IChannel::get_ChannelName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannel", 0, NULL, "get_ChannelName", __mscorlib_System_Runtime_Remoting_Channels_IChannel, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -37,7 +37,7 @@ namespace mscorlib
 
 
 					//	Get:ChannelPriority
-					mscorlib::System::Int32  IChannel::get_ChannelPriority()
+					mscorlib::System::Int32  IChannel::get_ChannelPriority() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannel", 0, NULL, "get_ChannelPriority", __mscorlib_System_Runtime_Remoting_Channels_IChannel, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

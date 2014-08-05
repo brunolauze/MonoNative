@@ -5,9 +5,9 @@
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_PermissionState.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_EnvironmentPermissionAccess.h>
 #include <mscorlib/System/mscorlib_System_String.h>
+#include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IUnrestrictedPermission.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_IPermission.h>
-#include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IUnrestrictedPermission.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_IStackWalk.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
@@ -45,17 +45,17 @@ namespace mscorlib
 
 				class EnvironmentPermission
 					: public mscorlib::System::Security::CodeAccessPermission
+					, public virtual mscorlib::System::Security::Permissions::IUnrestrictedPermission
 					, public virtual mscorlib::System::Security::ISecurityEncodable
 					, public virtual mscorlib::System::Security::IPermission
-					, public virtual mscorlib::System::Security::Permissions::IUnrestrictedPermission
 					, public virtual mscorlib::System::Security::IStackWalk
 				{
 				public:
 					EnvironmentPermission(mscorlib::System::Security::Permissions::PermissionState::__ENUM__ state)
 					: mscorlib::System::Security::CodeAccessPermission(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Permissions.EnvironmentPermission"))
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::IStackWalk(NULL)
 					{
 						MonoType *__parameter_types__[1];
@@ -67,9 +67,9 @@ namespace mscorlib
 				
 					EnvironmentPermission(mscorlib::System::Security::Permissions::EnvironmentPermissionAccess::__ENUM__ flag, mscorlib::System::String pathList)
 					: mscorlib::System::Security::CodeAccessPermission(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Permissions.EnvironmentPermission"))
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::IStackWalk(NULL)
 					{
 						MonoType *__parameter_types__[2];
@@ -83,18 +83,18 @@ namespace mscorlib
 				
 					EnvironmentPermission(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::CodeAccessPermission(nativeTypeInfo)
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::IStackWalk(NULL)
 					{
 					};
 				
 					EnvironmentPermission(MonoObject *nativeObject)
 					: mscorlib::System::Security::CodeAccessPermission(nativeObject)
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(nativeObject)
 					, mscorlib::System::Security::ISecurityEncodable(nativeObject)
 					, mscorlib::System::Security::IPermission(nativeObject)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(nativeObject)
 					, mscorlib::System::Security::IStackWalk(nativeObject)
 					{
 					};

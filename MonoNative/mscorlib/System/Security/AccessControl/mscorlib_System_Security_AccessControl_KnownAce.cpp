@@ -18,7 +18,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:AccessMask
-				mscorlib::System::Int32  KnownAce::get_AccessMask()
+				mscorlib::System::Int32  KnownAce::get_AccessMask() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "KnownAce", 0, NULL, "get_AccessMask", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -35,7 +35,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SecurityIdentifier
-				mscorlib::System::Security::Principal::SecurityIdentifier  KnownAce::get_SecurityIdentifier()
+				mscorlib::System::Security::Principal::SecurityIdentifier  KnownAce::get_SecurityIdentifier() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "KnownAce", 0, NULL, "get_SecurityIdentifier", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::SecurityIdentifier(__result__);
@@ -52,7 +52,7 @@ namespace mscorlib
 
 
 				//	Get/Set:AceFlags
-				mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  KnownAce::get_AceFlags()
+				mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  KnownAce::get_AceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AceFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::AceFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -69,7 +69,7 @@ namespace mscorlib
 
 
 				//	Get:AceType
-				mscorlib::System::Security::AccessControl::AceType::__ENUM__  KnownAce::get_AceType()
+				mscorlib::System::Security::AccessControl::AceType::__ENUM__  KnownAce::get_AceType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AceType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::AceType::__ENUM__*)mono_object_unbox(__result__);
@@ -77,7 +77,7 @@ namespace mscorlib
 
 
 				//	Get:AuditFlags
-				mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  KnownAce::get_AuditFlags()
+				mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  KnownAce::get_AuditFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AuditFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 				//	Get:BinaryLength
-				mscorlib::System::Int32  KnownAce::get_BinaryLength()
+				mscorlib::System::Int32  KnownAce::get_BinaryLength() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_BinaryLength", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -93,7 +93,7 @@ namespace mscorlib
 
 
 				//	Get:InheritanceFlags
-				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  KnownAce::get_InheritanceFlags()
+				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  KnownAce::get_InheritanceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -101,7 +101,7 @@ namespace mscorlib
 
 
 				//	Get:IsInherited
-				mscorlib::System::Boolean  KnownAce::get_IsInherited()
+				mscorlib::System::Boolean  KnownAce::get_IsInherited() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_IsInherited", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -109,7 +109,7 @@ namespace mscorlib
 
 
 				//	Get:PropagationFlags
-				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  KnownAce::get_PropagationFlags()
+				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  KnownAce::get_PropagationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);

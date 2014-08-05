@@ -111,31 +111,31 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Attributes
-					mscorlib::System::Reflection::PropertyAttributes::__ENUM__  get_Attributes();
+					mscorlib::System::Reflection::PropertyAttributes::__ENUM__  get_Attributes() const;
 
 					//	Get:CanRead
-					mscorlib::System::Boolean  get_CanRead();
+					mscorlib::System::Boolean  get_CanRead() const;
 
 					//	Get:CanWrite
-					mscorlib::System::Boolean  get_CanWrite();
+					mscorlib::System::Boolean  get_CanWrite() const;
 
 					//	Get:DeclaringType
-					mscorlib::System::Type  get_DeclaringType();
+					mscorlib::System::Type  get_DeclaringType() const;
 
 					//	Get:IsSpecialName
-					mscorlib::System::Boolean  get_IsSpecialName();
+					mscorlib::System::Boolean  get_IsSpecialName() const;
 
 					//	Get:MemberType
-					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:PropertyType
-					mscorlib::System::Type  get_PropertyType();
+					mscorlib::System::Type  get_PropertyType() const;
 
 					//	Get:ReflectedType
-					mscorlib::System::Type  get_ReflectedType();
+					mscorlib::System::Type  get_ReflectedType() const;
 
 				
 				protected:

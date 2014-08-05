@@ -4,9 +4,9 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/IO/mscorlib_System_IO_Stream.h>
 #include <mscorlib/System/mscorlib_System_String.h>
+#include <mscorlib/System/Resources/mscorlib_System_Resources_IResourceReader.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
-#include <mscorlib/System/Resources/mscorlib_System_Resources_IResourceReader.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionaryEnumerator.h>
 
 namespace mscorlib
@@ -29,16 +29,16 @@ namespace mscorlib
 
 			class ResourceReader
 				: public mscorlib::System::Object
+				, public virtual mscorlib::System::Resources::IResourceReader
 				, public virtual mscorlib::System::IDisposable
 				, public virtual mscorlib::System::Collections::IEnumerable
-				, public virtual mscorlib::System::Resources::IResourceReader
 			{
 			public:
 				ResourceReader(mscorlib::System::IO::Stream stream)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Resources.ResourceReader"))
+				, mscorlib::System::Resources::IResourceReader(NULL)
 				, mscorlib::System::IDisposable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::Resources::IResourceReader(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -49,9 +49,9 @@ namespace mscorlib
 			
 				ResourceReader(mscorlib::System::String fileName)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Resources.ResourceReader"))
+				, mscorlib::System::Resources::IResourceReader(NULL)
 				, mscorlib::System::IDisposable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::Resources::IResourceReader(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -62,17 +62,17 @@ namespace mscorlib
 			
 				ResourceReader(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
+				, mscorlib::System::Resources::IResourceReader(NULL)
 				, mscorlib::System::IDisposable(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::Resources::IResourceReader(NULL)
 				{
 				};
 			
 				ResourceReader(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
+				, mscorlib::System::Resources::IResourceReader(nativeObject)
 				, mscorlib::System::IDisposable(nativeObject)
 				, mscorlib::System::Collections::IEnumerable(nativeObject)
-				, mscorlib::System::Resources::IResourceReader(nativeObject)
 				{
 				};
 			

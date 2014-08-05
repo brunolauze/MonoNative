@@ -142,38 +142,38 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ControlFlags
-					mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  get_ControlFlags();
+					mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  get_ControlFlags() const;
 
 					//	Get/Set:DiscretionaryAcl
-					mscorlib::System::Security::AccessControl::DiscretionaryAcl  get_DiscretionaryAcl();
+					mscorlib::System::Security::AccessControl::DiscretionaryAcl  get_DiscretionaryAcl() const;
 					void set_DiscretionaryAcl(mscorlib::System::Security::AccessControl::DiscretionaryAcl  value);
 
 					//	Get/Set:Group
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_Group();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_Group() const;
 					void set_Group(mscorlib::System::Security::Principal::SecurityIdentifier  value);
 
 					//	Get:IsContainer
-					mscorlib::System::Boolean  get_IsContainer();
+					mscorlib::System::Boolean  get_IsContainer() const;
 
 					//	Get:IsDiscretionaryAclCanonical
-					mscorlib::System::Boolean  get_IsDiscretionaryAclCanonical();
+					mscorlib::System::Boolean  get_IsDiscretionaryAclCanonical() const;
 
 					//	Get:IsDS
-					mscorlib::System::Boolean  get_IsDS();
+					mscorlib::System::Boolean  get_IsDS() const;
 
 					//	Get:IsSystemAclCanonical
-					mscorlib::System::Boolean  get_IsSystemAclCanonical();
+					mscorlib::System::Boolean  get_IsSystemAclCanonical() const;
 
 					//	Get/Set:Owner
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_Owner();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_Owner() const;
 					void set_Owner(mscorlib::System::Security::Principal::SecurityIdentifier  value);
 
 					//	Get/Set:SystemAcl
-					mscorlib::System::Security::AccessControl::SystemAcl  get_SystemAcl();
+					mscorlib::System::Security::AccessControl::SystemAcl  get_SystemAcl() const;
 					void set_SystemAcl(mscorlib::System::Security::AccessControl::SystemAcl  value);
 
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 				
 				protected:

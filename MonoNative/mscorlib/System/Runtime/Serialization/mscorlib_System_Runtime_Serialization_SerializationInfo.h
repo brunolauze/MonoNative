@@ -112,24 +112,24 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:AssemblyName
-					mscorlib::System::String  get_AssemblyName();
+					mscorlib::System::String  get_AssemblyName() const;
 					void set_AssemblyName(mscorlib::System::String  value);
 
 					//	Get/Set:FullTypeName
-					mscorlib::System::String  get_FullTypeName();
+					mscorlib::System::String  get_FullTypeName() const;
 					void set_FullTypeName(mscorlib::System::String  value);
 
 					//	Get:MemberCount
-					mscorlib::System::Int32  get_MemberCount();
+					mscorlib::System::Int32  get_MemberCount() const;
 
 					//	Get:IsAssemblyNameSetExplicit
-					mscorlib::System::Boolean  get_IsAssemblyNameSetExplicit();
+					mscorlib::System::Boolean  get_IsAssemblyNameSetExplicit() const;
 
 					//	Get:IsFullTypeNameSetExplicit
-					mscorlib::System::Boolean  get_IsFullTypeNameSetExplicit();
+					mscorlib::System::Boolean  get_IsFullTypeNameSetExplicit() const;
 
 					//	Get:ObjectType
-					mscorlib::System::Type  get_ObjectType();
+					mscorlib::System::Type  get_ObjectType() const;
 
 				
 				protected:

@@ -21,7 +21,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Options
-				mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__  IsolatedStorageSecurityState::get_Options()
+				mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__  IsolatedStorageSecurityState::get_Options() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageSecurityState", 0, NULL, "get_Options", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__*)mono_object_unbox(__result__);
@@ -29,7 +29,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Quota
-				mscorlib::System::Int64  IsolatedStorageSecurityState::get_Quota()
+				mscorlib::System::Int64  IsolatedStorageSecurityState::get_Quota() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageSecurityState", 0, NULL, "get_Quota", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -46,7 +46,7 @@ namespace mscorlib
 
 
 				//	Get:UsedSize
-				mscorlib::System::Int64  IsolatedStorageSecurityState::get_UsedSize()
+				mscorlib::System::Int64  IsolatedStorageSecurityState::get_UsedSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageSecurityState", 0, NULL, "get_UsedSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);

@@ -67,7 +67,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:HasInfo
-					mscorlib::System::Boolean  LogicalCallContext::get_HasInfo()
+					mscorlib::System::Boolean  LogicalCallContext::get_HasInfo() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "LogicalCallContext", 0, NULL, "get_HasInfo", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

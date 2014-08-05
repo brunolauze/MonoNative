@@ -15,7 +15,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:IsSecured
-					mscorlib::System::Boolean  ISecurableChannel::get_IsSecured()
+					mscorlib::System::Boolean  ISecurableChannel::get_IsSecured() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "ISecurableChannel", 0, NULL, "get_IsSecured", __mscorlib_System_Runtime_Remoting_Channels_ISecurableChannel, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

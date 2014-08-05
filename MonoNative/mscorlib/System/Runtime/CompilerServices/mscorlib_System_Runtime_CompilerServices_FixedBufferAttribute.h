@@ -75,13 +75,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ElementType
-					mscorlib::System::Type  get_ElementType();
+					mscorlib::System::Type  get_ElementType() const;
 
 					//	Get:Length
-					mscorlib::System::Int32  get_Length();
+					mscorlib::System::Int32  get_Length() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

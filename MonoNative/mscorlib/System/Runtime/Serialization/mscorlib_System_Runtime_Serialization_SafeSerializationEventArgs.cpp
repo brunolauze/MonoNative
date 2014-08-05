@@ -26,7 +26,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:StreamingContext
-				mscorlib::System::Runtime::Serialization::StreamingContext  SafeSerializationEventArgs::get_StreamingContext()
+				mscorlib::System::Runtime::Serialization::StreamingContext  SafeSerializationEventArgs::get_StreamingContext() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SafeSerializationEventArgs", 0, NULL, "get_StreamingContext", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Serialization::StreamingContext(__result__);

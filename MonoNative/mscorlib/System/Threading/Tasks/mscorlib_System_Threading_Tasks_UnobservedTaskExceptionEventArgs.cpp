@@ -21,7 +21,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Exception
-				mscorlib::System::AggregateException  UnobservedTaskExceptionEventArgs::get_Exception()
+				mscorlib::System::AggregateException  UnobservedTaskExceptionEventArgs::get_Exception() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "UnobservedTaskExceptionEventArgs", 0, NULL, "get_Exception", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::AggregateException(__result__);
@@ -29,7 +29,7 @@ namespace mscorlib
 
 
 				//	Get:Observed
-				mscorlib::System::Boolean  UnobservedTaskExceptionEventArgs::get_Observed()
+				mscorlib::System::Boolean  UnobservedTaskExceptionEventArgs::get_Observed() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "UnobservedTaskExceptionEventArgs", 0, NULL, "get_Observed", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

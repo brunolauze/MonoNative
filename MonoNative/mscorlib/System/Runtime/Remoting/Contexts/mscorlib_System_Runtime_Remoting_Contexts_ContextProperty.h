@@ -58,10 +58,10 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Name
-						mscorlib::System::String  get_Name();
+						mscorlib::System::String  get_Name() const;
 
 						//	Get:Property
-						mscorlib::System::Object  get_Property();
+						mscorlib::System::Object  get_Property() const;
 
 					
 					protected:

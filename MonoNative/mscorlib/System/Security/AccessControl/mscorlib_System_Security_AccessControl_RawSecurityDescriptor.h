@@ -108,30 +108,30 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ControlFlags
-					mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  get_ControlFlags();
+					mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  get_ControlFlags() const;
 
 					//	Get/Set:DiscretionaryAcl
-					mscorlib::System::Security::AccessControl::RawAcl  get_DiscretionaryAcl();
+					mscorlib::System::Security::AccessControl::RawAcl  get_DiscretionaryAcl() const;
 					void set_DiscretionaryAcl(mscorlib::System::Security::AccessControl::RawAcl  value);
 
 					//	Get/Set:Group
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_Group();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_Group() const;
 					void set_Group(mscorlib::System::Security::Principal::SecurityIdentifier  value);
 
 					//	Get/Set:Owner
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_Owner();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_Owner() const;
 					void set_Owner(mscorlib::System::Security::Principal::SecurityIdentifier  value);
 
 					//	Get/Set:ResourceManagerControl
-					mscorlib::System::Byte  get_ResourceManagerControl();
+					mscorlib::System::Byte  get_ResourceManagerControl() const;
 					void set_ResourceManagerControl(mscorlib::System::Byte  value);
 
 					//	Get/Set:SystemAcl
-					mscorlib::System::Security::AccessControl::RawAcl  get_SystemAcl();
+					mscorlib::System::Security::AccessControl::RawAcl  get_SystemAcl() const;
 					void set_SystemAcl(mscorlib::System::Security::AccessControl::RawAcl  value);
 
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 				
 				protected:

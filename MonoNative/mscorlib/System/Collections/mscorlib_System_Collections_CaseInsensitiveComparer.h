@@ -73,15 +73,17 @@ namespace mscorlib
 
 
 				//Public Static Properties
-				static Property<mscorlib::System::Collections::CaseInsensitiveComparer> Default;
-				static Property<mscorlib::System::Collections::CaseInsensitiveComparer> DefaultInvariant;
+				static Property<mscorlib::System::Collections::CaseInsensitiveComparer , mscorlib::System::Collections::CaseInsensitiveComparer> Default;
+				static Property<mscorlib::System::Collections::CaseInsensitiveComparer , mscorlib::System::Collections::CaseInsensitiveComparer> DefaultInvariant;
 
 				//Get Set Static Properties Methods
 				//	Get:Default
 				static mscorlib::System::Collections::CaseInsensitiveComparer  get_Default();
+				static void set_Default(mscorlib::System::Collections::CaseInsensitiveComparer  value);
 
 				//	Get:DefaultInvariant
 				static mscorlib::System::Collections::CaseInsensitiveComparer  get_DefaultInvariant();
+				static void set_DefaultInvariant(mscorlib::System::Collections::CaseInsensitiveComparer  value);
 
 
 			

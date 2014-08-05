@@ -76,7 +76,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Parameters
-					mscorlib::System::String  get_Parameters();
+					mscorlib::System::String  get_Parameters() const;
 					void set_Parameters(mscorlib::System::String  value);
 
 				

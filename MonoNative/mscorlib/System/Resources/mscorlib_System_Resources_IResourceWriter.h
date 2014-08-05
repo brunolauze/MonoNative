@@ -37,7 +37,7 @@ namespace mscorlib
 			
 
 				__declspec(property(get=get___mscorlib_System_Resources_IResourceWriter, put=set___mscorlib_System_Resources_IResourceWriter)) MonoObject *__mscorlib_System_Resources_IResourceWriter;
-				MonoObject* get___mscorlib_System_Resources_IResourceWriter()
+				MonoObject* get___mscorlib_System_Resources_IResourceWriter() const
 				{
 					return IResourceWriter::__mscorlib_System_IDisposable;
 				}

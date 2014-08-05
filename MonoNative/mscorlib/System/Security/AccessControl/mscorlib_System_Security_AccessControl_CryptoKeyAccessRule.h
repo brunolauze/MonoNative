@@ -94,22 +94,22 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CryptoKeyRights
-					mscorlib::System::Security::AccessControl::CryptoKeyRights::__ENUM__  get_CryptoKeyRights();
+					mscorlib::System::Security::AccessControl::CryptoKeyRights::__ENUM__  get_CryptoKeyRights() const;
 
 					//	Get:AccessControlType
-					mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__  get_AccessControlType();
+					mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__  get_AccessControlType() const;
 
 					//	Get:IdentityReference
-					mscorlib::System::Security::Principal::IdentityReference  get_IdentityReference();
+					mscorlib::System::Security::Principal::IdentityReference  get_IdentityReference() const;
 
 					//	Get:InheritanceFlags
-					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags();
+					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags() const;
 
 					//	Get:IsInherited
-					mscorlib::System::Boolean  get_IsInherited();
+					mscorlib::System::Boolean  get_IsInherited() const;
 
 					//	Get:PropagationFlags
-					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags();
+					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags() const;
 
 				
 				protected:

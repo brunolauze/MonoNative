@@ -159,39 +159,40 @@ namespace mscorlib
 					__declspec(property(get=get_Scope)) mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  Scope;
 
 					//Public Static Properties
-					static Property<mscorlib::System::Boolean> IsEnabled;
+					static Property<mscorlib::System::Boolean , mscorlib::System::IO::IsolatedStorage::IsolatedStorageFile> IsEnabled;
 
 					//Get Set Properties Methods
 					//	Get:CurrentSize
-					mscorlib::System::UInt64  get_CurrentSize();
+					mscorlib::System::UInt64  get_CurrentSize() const;
 
 					//	Get:MaximumSize
-					mscorlib::System::UInt64  get_MaximumSize();
+					mscorlib::System::UInt64  get_MaximumSize() const;
 
 					//	Get:AvailableFreeSpace
-					mscorlib::System::Int64  get_AvailableFreeSpace();
+					mscorlib::System::Int64  get_AvailableFreeSpace() const;
 
 					//	Get:Quota
-					mscorlib::System::Int64  get_Quota();
+					mscorlib::System::Int64  get_Quota() const;
 
 					//	Get:UsedSize
-					mscorlib::System::Int64  get_UsedSize();
+					mscorlib::System::Int64  get_UsedSize() const;
 
 					//	Get:ApplicationIdentity
-					mscorlib::System::Object  get_ApplicationIdentity();
+					mscorlib::System::Object  get_ApplicationIdentity() const;
 
 					//	Get:AssemblyIdentity
-					mscorlib::System::Object  get_AssemblyIdentity();
+					mscorlib::System::Object  get_AssemblyIdentity() const;
 
 					//	Get:DomainIdentity
-					mscorlib::System::Object  get_DomainIdentity();
+					mscorlib::System::Object  get_DomainIdentity() const;
 
 					//	Get:Scope
-					mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  get_Scope();
+					mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  get_Scope() const;
 
 					//Get Set Static Properties Methods
 					//	Get:IsEnabled
 					static mscorlib::System::Boolean  get_IsEnabled();
+					static void set_IsEnabled(mscorlib::System::Boolean  value);
 
 
 				

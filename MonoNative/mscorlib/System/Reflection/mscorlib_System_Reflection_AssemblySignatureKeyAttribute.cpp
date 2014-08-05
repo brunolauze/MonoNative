@@ -13,7 +13,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get/Set:PublicKey
-			mscorlib::System::String  AssemblySignatureKeyAttribute::get_PublicKey()
+			mscorlib::System::String  AssemblySignatureKeyAttribute::get_PublicKey() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblySignatureKeyAttribute", 0, NULL, "get_PublicKey", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -30,7 +30,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Countersignature
-			mscorlib::System::String  AssemblySignatureKeyAttribute::get_Countersignature()
+			mscorlib::System::String  AssemblySignatureKeyAttribute::get_Countersignature() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblySignatureKeyAttribute", 0, NULL, "get_Countersignature", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -47,7 +47,7 @@ namespace mscorlib
 
 
 			//	Get:TypeId
-			mscorlib::System::Object  AssemblySignatureKeyAttribute::get_TypeId()
+			mscorlib::System::Object  AssemblySignatureKeyAttribute::get_TypeId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

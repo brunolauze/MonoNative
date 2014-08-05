@@ -61,10 +61,10 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Level
-						mscorlib::System::Runtime::Remoting::Activation::ActivatorLevel::__ENUM__  get_Level();
+						mscorlib::System::Runtime::Remoting::Activation::ActivatorLevel::__ENUM__  get_Level() const;
 
 						//	Get/Set:NextActivator
-						mscorlib::System::Runtime::Remoting::Activation::IActivator  get_NextActivator();
+						mscorlib::System::Runtime::Remoting::Activation::IActivator  get_NextActivator() const;
 						void set_NextActivator(mscorlib::System::Runtime::Remoting::Activation::IActivator  value);
 
 					

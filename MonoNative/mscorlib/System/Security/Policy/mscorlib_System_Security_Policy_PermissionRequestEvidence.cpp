@@ -28,7 +28,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:DeniedPermissions
-				mscorlib::System::Security::PermissionSet  PermissionRequestEvidence::get_DeniedPermissions()
+				mscorlib::System::Security::PermissionSet  PermissionRequestEvidence::get_DeniedPermissions() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PermissionRequestEvidence", 0, NULL, "get_DeniedPermissions", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::PermissionSet(__result__);
@@ -36,7 +36,7 @@ namespace mscorlib
 
 
 				//	Get:OptionalPermissions
-				mscorlib::System::Security::PermissionSet  PermissionRequestEvidence::get_OptionalPermissions()
+				mscorlib::System::Security::PermissionSet  PermissionRequestEvidence::get_OptionalPermissions() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PermissionRequestEvidence", 0, NULL, "get_OptionalPermissions", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::PermissionSet(__result__);
@@ -44,7 +44,7 @@ namespace mscorlib
 
 
 				//	Get:RequestedPermissions
-				mscorlib::System::Security::PermissionSet  PermissionRequestEvidence::get_RequestedPermissions()
+				mscorlib::System::Security::PermissionSet  PermissionRequestEvidence::get_RequestedPermissions() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PermissionRequestEvidence", 0, NULL, "get_RequestedPermissions", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::PermissionSet(__result__);

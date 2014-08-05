@@ -57,7 +57,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CurrentLeaseTime
-					mscorlib::System::TimeSpan  ILease::get_CurrentLeaseTime()
+					mscorlib::System::TimeSpan  ILease::get_CurrentLeaseTime() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Lifetime", "ILease", 0, NULL, "get_CurrentLeaseTime", __mscorlib_System_Runtime_Remoting_Lifetime_ILease, 0, NULL, NULL, NULL);
 						return mscorlib::System::TimeSpan(__result__);
@@ -65,7 +65,7 @@ namespace mscorlib
 
 
 					//	Get:CurrentState
-					mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__  ILease::get_CurrentState()
+					mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__  ILease::get_CurrentState() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Lifetime", "ILease", 0, NULL, "get_CurrentState", __mscorlib_System_Runtime_Remoting_Lifetime_ILease, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__*)mono_object_unbox(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 					//	Get/Set:InitialLeaseTime
-					mscorlib::System::TimeSpan  ILease::get_InitialLeaseTime()
+					mscorlib::System::TimeSpan  ILease::get_InitialLeaseTime() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Lifetime", "ILease", 0, NULL, "get_InitialLeaseTime", __mscorlib_System_Runtime_Remoting_Lifetime_ILease, 0, NULL, NULL, NULL);
 						return mscorlib::System::TimeSpan(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 					//	Get/Set:RenewOnCallTime
-					mscorlib::System::TimeSpan  ILease::get_RenewOnCallTime()
+					mscorlib::System::TimeSpan  ILease::get_RenewOnCallTime() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Lifetime", "ILease", 0, NULL, "get_RenewOnCallTime", __mscorlib_System_Runtime_Remoting_Lifetime_ILease, 0, NULL, NULL, NULL);
 						return mscorlib::System::TimeSpan(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 					//	Get/Set:SponsorshipTimeout
-					mscorlib::System::TimeSpan  ILease::get_SponsorshipTimeout()
+					mscorlib::System::TimeSpan  ILease::get_SponsorshipTimeout() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Lifetime", "ILease", 0, NULL, "get_SponsorshipTimeout", __mscorlib_System_Runtime_Remoting_Lifetime_ILease, 0, NULL, NULL, NULL);
 						return mscorlib::System::TimeSpan(__result__);

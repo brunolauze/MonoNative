@@ -61,10 +61,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Current
-				mscorlib::System::Object  get_Current();
+				mscorlib::System::Object  get_Current() const;
 
 				//	Get:ElementIndex
-				mscorlib::System::Int32  get_ElementIndex();
+				mscorlib::System::Int32  get_ElementIndex() const;
 
 			
 			protected:

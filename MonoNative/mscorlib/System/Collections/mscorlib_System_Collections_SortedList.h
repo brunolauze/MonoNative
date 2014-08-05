@@ -4,9 +4,9 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IComparer.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
+#include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
-#include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionaryEnumerator.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IList.h>
 
@@ -31,28 +31,28 @@ namespace mscorlib
 
 			class SortedList
 				: public mscorlib::System::Object
+				, public virtual mscorlib::System::ICloneable
 				, public virtual mscorlib::System::Collections::ICollection
 				, public virtual mscorlib::System::Collections::IEnumerable
 				, public virtual mscorlib::System::Collections::IDictionary
-				, public virtual mscorlib::System::ICloneable
 			{
 			public:
 				SortedList()
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.SortedList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					__native_object__ = Global::New("mscorlib", "System.Collections", "SortedList");
 				};
 			
 				SortedList(mscorlib::System::Int32 initialCapacity)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.SortedList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -63,10 +63,10 @@ namespace mscorlib
 			
 				SortedList(mscorlib::System::Collections::IComparer comparer, mscorlib::System::Int32 capacity)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.SortedList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -79,10 +79,10 @@ namespace mscorlib
 			
 				SortedList(mscorlib::System::Collections::IComparer comparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.SortedList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -93,10 +93,10 @@ namespace mscorlib
 			
 				SortedList(mscorlib::System::Collections::IDictionary d)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.SortedList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -107,10 +107,10 @@ namespace mscorlib
 			
 				SortedList(mscorlib::System::Collections::IDictionary d, mscorlib::System::Collections::IComparer comparer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.SortedList"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -123,19 +123,19 @@ namespace mscorlib
 			
 				SortedList(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
 				, mscorlib::System::Collections::IDictionary(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 				};
 			
 				SortedList(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
+				, mscorlib::System::ICloneable(nativeObject)
 				, mscorlib::System::Collections::ICollection(nativeObject)
 				, mscorlib::System::Collections::IEnumerable(nativeObject)
 				, mscorlib::System::Collections::IDictionary(nativeObject)
-				, mscorlib::System::ICloneable(nativeObject)
 				{
 				};
 			
@@ -183,32 +183,32 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  get_Count();
+				mscorlib::System::Int32  get_Count() const;
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  get_IsSynchronized();
+				mscorlib::System::Boolean  get_IsSynchronized() const;
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  get_SyncRoot();
+				mscorlib::System::Object  get_SyncRoot() const;
 
 				//	Get:IsFixedSize
-				mscorlib::System::Boolean  get_IsFixedSize();
+				mscorlib::System::Boolean  get_IsFixedSize() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get:Keys
-				mscorlib::System::Collections::ICollection  get_Keys();
+				mscorlib::System::Collections::ICollection  get_Keys() const;
 
 				//	Get:Values
-				mscorlib::System::Collections::ICollection  get_Values();
+				mscorlib::System::Collections::ICollection  get_Values() const;
 
 				//	Get/Set:Item
-				mscorlib::System::Object  get_Item(mscorlib::System::Object key);
+				mscorlib::System::Object  get_Item(mscorlib::System::Object key) const;
 				void set_Item(mscorlib::System::Object key, mscorlib::System::Object  value);
 
 				//	Get/Set:Capacity
-				mscorlib::System::Int32  get_Capacity();
+				mscorlib::System::Int32  get_Capacity() const;
 				void set_Capacity(mscorlib::System::Int32  value);
 
 			

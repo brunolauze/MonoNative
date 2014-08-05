@@ -77,7 +77,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Current
-					mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntry  get_Current();
+					mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntry  get_Current() const;
 
 				
 				protected:

@@ -143,7 +143,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:MDStreamVersion
-		mscorlib::System::Int32  ModuleHandle::get_MDStreamVersion()
+		mscorlib::System::Int32  ModuleHandle::get_MDStreamVersion() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ModuleHandle", 0, NULL, "get_MDStreamVersion", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -156,6 +156,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "ModuleHandle", 0, NULL, "EmptyHandle");
 		}
 
+		void ModuleHandle::set_EmptyHandle(mscorlib::System::ModuleHandle  value)
+		{
+			throw;
+		}
 
 
 	}

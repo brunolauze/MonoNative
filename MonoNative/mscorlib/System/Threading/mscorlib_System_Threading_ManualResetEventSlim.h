@@ -114,13 +114,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsSet
-				mscorlib::System::Boolean  get_IsSet();
+				mscorlib::System::Boolean  get_IsSet() const;
 
 				//	Get:SpinCount
-				mscorlib::System::Int32  get_SpinCount();
+				mscorlib::System::Int32  get_SpinCount() const;
 
 				//	Get:WaitHandle
-				mscorlib::System::Threading::WaitHandle  get_WaitHandle();
+				mscorlib::System::Threading::WaitHandle  get_WaitHandle() const;
 
 			
 			protected:

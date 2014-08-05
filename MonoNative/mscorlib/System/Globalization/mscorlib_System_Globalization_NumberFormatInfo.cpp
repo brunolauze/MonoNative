@@ -11,6 +11,8 @@ namespace mscorlib
 		namespace Globalization
 		{
 
+			Property<mscorlib::System::Globalization::NumberFormatInfo , mscorlib::System::Globalization::NumberFormatInfo> mscorlib::System::Globalization::NumberFormatInfo::CurrentInfo(&mscorlib::System::Globalization::NumberFormatInfo::get_CurrentInfo, &mscorlib::System::Globalization::NumberFormatInfo::set_CurrentInfo);
+			Property<mscorlib::System::Globalization::NumberFormatInfo , mscorlib::System::Globalization::NumberFormatInfo> mscorlib::System::Globalization::NumberFormatInfo::InvariantInfo(&mscorlib::System::Globalization::NumberFormatInfo::get_InvariantInfo, &mscorlib::System::Globalization::NumberFormatInfo::set_InvariantInfo);
 			//Public Methods
 			mscorlib::System::Object NumberFormatInfo::GetFormat(mscorlib::System::Type formatType)
 			{
@@ -50,7 +52,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:CurrencyDecimalDigits
-			mscorlib::System::Int32  NumberFormatInfo::get_CurrencyDecimalDigits()
+			mscorlib::System::Int32  NumberFormatInfo::get_CurrencyDecimalDigits() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_CurrencyDecimalDigits", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -67,7 +69,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CurrencyDecimalSeparator
-			mscorlib::System::String  NumberFormatInfo::get_CurrencyDecimalSeparator()
+			mscorlib::System::String  NumberFormatInfo::get_CurrencyDecimalSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_CurrencyDecimalSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -84,7 +86,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CurrencyGroupSeparator
-			mscorlib::System::String  NumberFormatInfo::get_CurrencyGroupSeparator()
+			mscorlib::System::String  NumberFormatInfo::get_CurrencyGroupSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_CurrencyGroupSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -101,7 +103,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CurrencyGroupSizes
-			std::vector<mscorlib::System::Int32*>  NumberFormatInfo::get_CurrencyGroupSizes()
+			std::vector<mscorlib::System::Int32*>  NumberFormatInfo::get_CurrencyGroupSizes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_CurrencyGroupSizes", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -126,7 +128,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CurrencyNegativePattern
-			mscorlib::System::Int32  NumberFormatInfo::get_CurrencyNegativePattern()
+			mscorlib::System::Int32  NumberFormatInfo::get_CurrencyNegativePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_CurrencyNegativePattern", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -143,7 +145,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CurrencyPositivePattern
-			mscorlib::System::Int32  NumberFormatInfo::get_CurrencyPositivePattern()
+			mscorlib::System::Int32  NumberFormatInfo::get_CurrencyPositivePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_CurrencyPositivePattern", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -160,7 +162,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CurrencySymbol
-			mscorlib::System::String  NumberFormatInfo::get_CurrencySymbol()
+			mscorlib::System::String  NumberFormatInfo::get_CurrencySymbol() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_CurrencySymbol", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -177,7 +179,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  NumberFormatInfo::get_IsReadOnly()
+			mscorlib::System::Boolean  NumberFormatInfo::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -185,7 +187,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NaNSymbol
-			mscorlib::System::String  NumberFormatInfo::get_NaNSymbol()
+			mscorlib::System::String  NumberFormatInfo::get_NaNSymbol() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NaNSymbol", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -202,7 +204,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NativeDigits
-			std::vector<mscorlib::System::String*>  NumberFormatInfo::get_NativeDigits()
+			std::vector<mscorlib::System::String*>  NumberFormatInfo::get_NativeDigits() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NativeDigits", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -227,7 +229,7 @@ namespace mscorlib
 
 
 			//	Get/Set:DigitSubstitution
-			mscorlib::System::Globalization::DigitShapes::__ENUM__  NumberFormatInfo::get_DigitSubstitution()
+			mscorlib::System::Globalization::DigitShapes::__ENUM__  NumberFormatInfo::get_DigitSubstitution() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_DigitSubstitution", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Globalization::DigitShapes::__ENUM__*)mono_object_unbox(__result__);
@@ -244,7 +246,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NegativeInfinitySymbol
-			mscorlib::System::String  NumberFormatInfo::get_NegativeInfinitySymbol()
+			mscorlib::System::String  NumberFormatInfo::get_NegativeInfinitySymbol() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NegativeInfinitySymbol", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -261,7 +263,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NegativeSign
-			mscorlib::System::String  NumberFormatInfo::get_NegativeSign()
+			mscorlib::System::String  NumberFormatInfo::get_NegativeSign() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NegativeSign", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -278,7 +280,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NumberDecimalDigits
-			mscorlib::System::Int32  NumberFormatInfo::get_NumberDecimalDigits()
+			mscorlib::System::Int32  NumberFormatInfo::get_NumberDecimalDigits() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NumberDecimalDigits", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -295,7 +297,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NumberDecimalSeparator
-			mscorlib::System::String  NumberFormatInfo::get_NumberDecimalSeparator()
+			mscorlib::System::String  NumberFormatInfo::get_NumberDecimalSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NumberDecimalSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -312,7 +314,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NumberGroupSeparator
-			mscorlib::System::String  NumberFormatInfo::get_NumberGroupSeparator()
+			mscorlib::System::String  NumberFormatInfo::get_NumberGroupSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NumberGroupSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -329,7 +331,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NumberGroupSizes
-			std::vector<mscorlib::System::Int32*>  NumberFormatInfo::get_NumberGroupSizes()
+			std::vector<mscorlib::System::Int32*>  NumberFormatInfo::get_NumberGroupSizes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NumberGroupSizes", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -354,7 +356,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NumberNegativePattern
-			mscorlib::System::Int32  NumberFormatInfo::get_NumberNegativePattern()
+			mscorlib::System::Int32  NumberFormatInfo::get_NumberNegativePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_NumberNegativePattern", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -371,7 +373,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PercentDecimalDigits
-			mscorlib::System::Int32  NumberFormatInfo::get_PercentDecimalDigits()
+			mscorlib::System::Int32  NumberFormatInfo::get_PercentDecimalDigits() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PercentDecimalDigits", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -388,7 +390,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PercentDecimalSeparator
-			mscorlib::System::String  NumberFormatInfo::get_PercentDecimalSeparator()
+			mscorlib::System::String  NumberFormatInfo::get_PercentDecimalSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PercentDecimalSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -405,7 +407,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PercentGroupSeparator
-			mscorlib::System::String  NumberFormatInfo::get_PercentGroupSeparator()
+			mscorlib::System::String  NumberFormatInfo::get_PercentGroupSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PercentGroupSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -422,7 +424,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PercentGroupSizes
-			std::vector<mscorlib::System::Int32*>  NumberFormatInfo::get_PercentGroupSizes()
+			std::vector<mscorlib::System::Int32*>  NumberFormatInfo::get_PercentGroupSizes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PercentGroupSizes", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -447,7 +449,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PercentNegativePattern
-			mscorlib::System::Int32  NumberFormatInfo::get_PercentNegativePattern()
+			mscorlib::System::Int32  NumberFormatInfo::get_PercentNegativePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PercentNegativePattern", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -464,7 +466,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PercentPositivePattern
-			mscorlib::System::Int32  NumberFormatInfo::get_PercentPositivePattern()
+			mscorlib::System::Int32  NumberFormatInfo::get_PercentPositivePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PercentPositivePattern", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -481,7 +483,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PercentSymbol
-			mscorlib::System::String  NumberFormatInfo::get_PercentSymbol()
+			mscorlib::System::String  NumberFormatInfo::get_PercentSymbol() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PercentSymbol", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -498,7 +500,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PerMilleSymbol
-			mscorlib::System::String  NumberFormatInfo::get_PerMilleSymbol()
+			mscorlib::System::String  NumberFormatInfo::get_PerMilleSymbol() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PerMilleSymbol", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -515,7 +517,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PositiveInfinitySymbol
-			mscorlib::System::String  NumberFormatInfo::get_PositiveInfinitySymbol()
+			mscorlib::System::String  NumberFormatInfo::get_PositiveInfinitySymbol() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PositiveInfinitySymbol", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -532,7 +534,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PositiveSign
-			mscorlib::System::String  NumberFormatInfo::get_PositiveSign()
+			mscorlib::System::String  NumberFormatInfo::get_PositiveSign() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_PositiveSign", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -556,12 +558,22 @@ namespace mscorlib
 				return mscorlib::System::Globalization::NumberFormatInfo(__result__);
 			}
 
+			void NumberFormatInfo::set_CurrentInfo(mscorlib::System::Globalization::NumberFormatInfo  value)
+			{
+				throw;
+			}
+
 
 			//	Get:InvariantInfo
 			mscorlib::System::Globalization::NumberFormatInfo  NumberFormatInfo::get_InvariantInfo()
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_InvariantInfo", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::NumberFormatInfo(__result__);
+			}
+
+			void NumberFormatInfo::set_InvariantInfo(mscorlib::System::Globalization::NumberFormatInfo  value)
+			{
+				throw;
 			}
 
 

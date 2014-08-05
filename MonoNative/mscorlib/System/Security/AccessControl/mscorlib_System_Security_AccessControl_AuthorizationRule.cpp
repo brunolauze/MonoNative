@@ -17,7 +17,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:IdentityReference
-				mscorlib::System::Security::Principal::IdentityReference  AuthorizationRule::get_IdentityReference()
+				mscorlib::System::Security::Principal::IdentityReference  AuthorizationRule::get_IdentityReference() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_IdentityReference", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::IdentityReference(__result__);
@@ -25,7 +25,7 @@ namespace mscorlib
 
 
 				//	Get:InheritanceFlags
-				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  AuthorizationRule::get_InheritanceFlags()
+				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  AuthorizationRule::get_InheritanceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -33,7 +33,7 @@ namespace mscorlib
 
 
 				//	Get:IsInherited
-				mscorlib::System::Boolean  AuthorizationRule::get_IsInherited()
+				mscorlib::System::Boolean  AuthorizationRule::get_IsInherited() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_IsInherited", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -41,7 +41,7 @@ namespace mscorlib
 
 
 				//	Get:PropagationFlags
-				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  AuthorizationRule::get_PropagationFlags()
+				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  AuthorizationRule::get_PropagationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);

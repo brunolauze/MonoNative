@@ -56,11 +56,11 @@ namespace mscorlib
 					__declspec(property(get=get_dwHighDateTime, put=set_dwHighDateTime)) mscorlib::System::Int32  dwHighDateTime;
 
 					//	Get/Set:dwLowDateTime
-					mscorlib::System::Int32  get_dwLowDateTime();
+					mscorlib::System::Int32  get_dwLowDateTime() const;
 					void set_dwLowDateTime(mscorlib::System::Int32  value);
 
 					//	Get/Set:dwHighDateTime
-					mscorlib::System::Int32  get_dwHighDateTime();
+					mscorlib::System::Int32  get_dwHighDateTime() const;
 					void set_dwHighDateTime(mscorlib::System::Int32  value);
 
 				

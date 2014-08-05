@@ -16,6 +16,7 @@ namespace mscorlib
 				namespace Channels
 				{
 
+					Property<std::vector<mscorlib::System::Runtime::Remoting::Channels::IChannel*> , mscorlib::System::Runtime::Remoting::Channels::ChannelServices> mscorlib::System::Runtime::Remoting::Channels::ChannelServices::RegisteredChannels(&mscorlib::System::Runtime::Remoting::Channels::ChannelServices::get_RegisteredChannels, &mscorlib::System::Runtime::Remoting::Channels::ChannelServices::set_RegisteredChannels);
 					//Public Methods
 					mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink ChannelServices::CreateServerChannelSinkChain(mscorlib::System::Runtime::Remoting::Channels::IServerChannelSinkProvider provider, mscorlib::System::Runtime::Remoting::Channels::IChannelReceiver channel)
 					{
@@ -146,6 +147,11 @@ namespace mscorlib
 							__array_result__.push_back(new mscorlib::System::Runtime::Remoting::Channels::IChannel (__array_item__));
 						}
 						return __array_result__;
+					}
+
+					void ChannelServices::set_RegisteredChannels(std::vector<mscorlib::System::Runtime::Remoting::Channels::IChannel*>  value)
+					{
+						throw;
 					}
 
 

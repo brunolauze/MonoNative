@@ -13,7 +13,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:EnvoySinks
-				mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  IEnvoyInfo::get_EnvoySinks()
+				mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  IEnvoyInfo::get_EnvoySinks() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "IEnvoyInfo", 0, NULL, "get_EnvoySinks", __mscorlib_System_Runtime_Remoting_IEnvoyInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Remoting::Messaging::IMessageSink(__result__);

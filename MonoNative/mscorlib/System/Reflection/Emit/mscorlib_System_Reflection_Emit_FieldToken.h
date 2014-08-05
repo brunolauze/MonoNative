@@ -58,14 +58,15 @@ namespace mscorlib
 					__declspec(property(get=get_Token)) mscorlib::System::Int32  Token;
 
 					//Public Static Fields
-					static Property<mscorlib::System::Reflection::Emit::FieldToken> Empty;
+					static Property<mscorlib::System::Reflection::Emit::FieldToken , mscorlib::System::Reflection::Emit::FieldToken> Empty;
 
 					//Get Set Properties Methods
 					//	Get:Token
-					mscorlib::System::Int32  get_Token();
+					mscorlib::System::Int32  get_Token() const;
 
 					//	Get/Set:Empty
 					static mscorlib::System::Reflection::Emit::FieldToken  get_Empty();
+					static void set_Empty(mscorlib::System::Reflection::Emit::FieldToken  value);
 
 				
 				protected:

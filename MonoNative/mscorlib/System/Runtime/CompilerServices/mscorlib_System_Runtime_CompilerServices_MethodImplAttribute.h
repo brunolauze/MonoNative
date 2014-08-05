@@ -95,13 +95,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Value
-					mscorlib::System::Runtime::CompilerServices::MethodImplOptions::__ENUM__  get_Value();
+					mscorlib::System::Runtime::CompilerServices::MethodImplOptions::__ENUM__  get_Value() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 					//	Get/Set:MethodCodeType
-					mscorlib::System::Runtime::CompilerServices::MethodCodeType::__ENUM__  get_MethodCodeType();
+					mscorlib::System::Runtime::CompilerServices::MethodCodeType::__ENUM__  get_MethodCodeType() const;
 					void set_MethodCodeType(mscorlib::System::Runtime::CompilerServices::MethodCodeType::__ENUM__  value);
 
 				

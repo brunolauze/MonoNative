@@ -133,7 +133,7 @@ namespace mscorlib
 
 
 				//Public Static Fields
-				static Property<mscorlib::System::Int32> OFFSET_UNKNOWN;
+				static Property<mscorlib::System::Int32 , mscorlib::System::Diagnostics::StackFrame> OFFSET_UNKNOWN;
 
 				//	Get/Set:OFFSET_UNKNOWN
 				static mscorlib::System::Int32  get_OFFSET_UNKNOWN();

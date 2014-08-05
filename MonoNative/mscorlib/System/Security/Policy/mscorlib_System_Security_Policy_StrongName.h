@@ -101,13 +101,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:PublicKey
-					mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  get_PublicKey();
+					mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  get_PublicKey() const;
 
 					//	Get:Version
-					mscorlib::System::Version  get_Version();
+					mscorlib::System::Version  get_Version() const;
 
 				
 				protected:

@@ -14,7 +14,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get/Set:Key
-			mscorlib::System::Object  DictionaryEntry::get_Key()
+			mscorlib::System::Object  DictionaryEntry::get_Key() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "DictionaryEntry", 0, NULL, "get_Key", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);
@@ -31,7 +31,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Value
-			mscorlib::System::Object  DictionaryEntry::get_Value()
+			mscorlib::System::Object  DictionaryEntry::get_Value() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "DictionaryEntry", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

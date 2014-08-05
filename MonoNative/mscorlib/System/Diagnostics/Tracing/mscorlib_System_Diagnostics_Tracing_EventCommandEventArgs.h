@@ -61,10 +61,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Arguments
-					mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  get_Arguments();
+					mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  get_Arguments() const;
 
 					//	Get:Command
-					mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__  get_Command();
+					mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__  get_Command() const;
 
 				
 				protected:

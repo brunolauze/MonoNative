@@ -74,11 +74,11 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:DefaultInterface
-						mscorlib::System::Type  get_DefaultInterface();
+						mscorlib::System::Type  get_DefaultInterface() const;
 						void set_DefaultInterface(mscorlib::System::Type  value);
 
 						//	Get:TypeId
-						mscorlib::System::Object  get_TypeId();
+						mscorlib::System::Object  get_TypeId() const;
 
 					
 					protected:

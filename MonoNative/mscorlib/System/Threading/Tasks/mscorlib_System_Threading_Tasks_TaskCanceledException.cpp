@@ -19,7 +19,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:Task
-				mscorlib::System::Threading::Tasks::TaskBase  TaskCanceledException::get_Task()
+				mscorlib::System::Threading::Tasks::TaskBase  TaskCanceledException::get_Task() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "TaskCanceledException", 0, NULL, "get_Task", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::Tasks::TaskBase(__result__);
@@ -27,7 +27,7 @@ namespace mscorlib
 
 
 				//	Get:CancellationToken
-				mscorlib::System::Threading::CancellationToken  TaskCanceledException::get_CancellationToken()
+				mscorlib::System::Threading::CancellationToken  TaskCanceledException::get_CancellationToken() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "OperationCanceledException", 0, NULL, "get_CancellationToken", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::CancellationToken(__result__);
@@ -35,7 +35,7 @@ namespace mscorlib
 
 
 				//	Get:InnerException
-				mscorlib::System::Exception  TaskCanceledException::get_InnerException()
+				mscorlib::System::Exception  TaskCanceledException::get_InnerException() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_InnerException", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Exception(__result__);
@@ -43,7 +43,7 @@ namespace mscorlib
 
 
 				//	Get/Set:HelpLink
-				mscorlib::System::String  TaskCanceledException::get_HelpLink()
+				mscorlib::System::String  TaskCanceledException::get_HelpLink() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HelpLink", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -60,7 +60,7 @@ namespace mscorlib
 
 
 				//	Get/Set:HResult
-				mscorlib::System::Int32  TaskCanceledException::get_HResult()
+				mscorlib::System::Int32  TaskCanceledException::get_HResult() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HResult", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -77,7 +77,7 @@ namespace mscorlib
 
 
 				//	Get:Message
-				mscorlib::System::String  TaskCanceledException::get_Message()
+				mscorlib::System::String  TaskCanceledException::get_Message() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Source
-				mscorlib::System::String  TaskCanceledException::get_Source()
+				mscorlib::System::String  TaskCanceledException::get_Source() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Source", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -102,7 +102,7 @@ namespace mscorlib
 
 
 				//	Get:StackTrace
-				mscorlib::System::String  TaskCanceledException::get_StackTrace()
+				mscorlib::System::String  TaskCanceledException::get_StackTrace() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -110,7 +110,7 @@ namespace mscorlib
 
 
 				//	Get:TargetSite
-				mscorlib::System::Reflection::MethodBase  TaskCanceledException::get_TargetSite()
+				mscorlib::System::Reflection::MethodBase  TaskCanceledException::get_TargetSite() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_TargetSite", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::MethodBase(__result__);
@@ -118,7 +118,7 @@ namespace mscorlib
 
 
 				//	Get:Data
-				mscorlib::System::Collections::IDictionary  TaskCanceledException::get_Data()
+				mscorlib::System::Collections::IDictionary  TaskCanceledException::get_Data() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Data", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::IDictionary(__result__);

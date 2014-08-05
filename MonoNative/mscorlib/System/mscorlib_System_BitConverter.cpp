@@ -373,6 +373,10 @@ namespace mscorlib
 			return Global::GetFieldBooleanValue("mscorlib", "System", "BitConverter", 0, NULL, "IsLittleEndian");
 		}
 
+		void BitConverter::set_IsLittleEndian(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
 
 
 	}

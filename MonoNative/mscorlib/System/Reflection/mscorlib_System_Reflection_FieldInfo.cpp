@@ -152,7 +152,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Attributes
-			mscorlib::System::Reflection::FieldAttributes::__ENUM__  FieldInfo::get_Attributes()
+			mscorlib::System::Reflection::FieldAttributes::__ENUM__  FieldInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::FieldAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -160,7 +160,7 @@ namespace mscorlib
 
 
 			//	Get:FieldHandle
-			mscorlib::System::RuntimeFieldHandle  FieldInfo::get_FieldHandle()
+			mscorlib::System::RuntimeFieldHandle  FieldInfo::get_FieldHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_FieldHandle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::RuntimeFieldHandle(__result__);
@@ -168,7 +168,7 @@ namespace mscorlib
 
 
 			//	Get:FieldType
-			mscorlib::System::Type  FieldInfo::get_FieldType()
+			mscorlib::System::Type  FieldInfo::get_FieldType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_FieldType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -176,7 +176,7 @@ namespace mscorlib
 
 
 			//	Get:MemberType
-			mscorlib::System::Reflection::MemberTypes::__ENUM__  FieldInfo::get_MemberType()
+			mscorlib::System::Reflection::MemberTypes::__ENUM__  FieldInfo::get_MemberType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -184,7 +184,7 @@ namespace mscorlib
 
 
 			//	Get:IsLiteral
-			mscorlib::System::Boolean  FieldInfo::get_IsLiteral()
+			mscorlib::System::Boolean  FieldInfo::get_IsLiteral() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsLiteral", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -192,7 +192,7 @@ namespace mscorlib
 
 
 			//	Get:IsStatic
-			mscorlib::System::Boolean  FieldInfo::get_IsStatic()
+			mscorlib::System::Boolean  FieldInfo::get_IsStatic() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsStatic", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -200,7 +200,7 @@ namespace mscorlib
 
 
 			//	Get:IsInitOnly
-			mscorlib::System::Boolean  FieldInfo::get_IsInitOnly()
+			mscorlib::System::Boolean  FieldInfo::get_IsInitOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsInitOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -208,7 +208,7 @@ namespace mscorlib
 
 
 			//	Get:IsPublic
-			mscorlib::System::Boolean  FieldInfo::get_IsPublic()
+			mscorlib::System::Boolean  FieldInfo::get_IsPublic() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsPublic", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -216,7 +216,7 @@ namespace mscorlib
 
 
 			//	Get:IsPrivate
-			mscorlib::System::Boolean  FieldInfo::get_IsPrivate()
+			mscorlib::System::Boolean  FieldInfo::get_IsPrivate() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsPrivate", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -224,7 +224,7 @@ namespace mscorlib
 
 
 			//	Get:IsFamily
-			mscorlib::System::Boolean  FieldInfo::get_IsFamily()
+			mscorlib::System::Boolean  FieldInfo::get_IsFamily() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsFamily", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -232,7 +232,7 @@ namespace mscorlib
 
 
 			//	Get:IsAssembly
-			mscorlib::System::Boolean  FieldInfo::get_IsAssembly()
+			mscorlib::System::Boolean  FieldInfo::get_IsAssembly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsAssembly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -240,7 +240,7 @@ namespace mscorlib
 
 
 			//	Get:IsFamilyAndAssembly
-			mscorlib::System::Boolean  FieldInfo::get_IsFamilyAndAssembly()
+			mscorlib::System::Boolean  FieldInfo::get_IsFamilyAndAssembly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsFamilyAndAssembly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -248,7 +248,7 @@ namespace mscorlib
 
 
 			//	Get:IsFamilyOrAssembly
-			mscorlib::System::Boolean  FieldInfo::get_IsFamilyOrAssembly()
+			mscorlib::System::Boolean  FieldInfo::get_IsFamilyOrAssembly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsFamilyOrAssembly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -256,7 +256,7 @@ namespace mscorlib
 
 
 			//	Get:IsPinvokeImpl
-			mscorlib::System::Boolean  FieldInfo::get_IsPinvokeImpl()
+			mscorlib::System::Boolean  FieldInfo::get_IsPinvokeImpl() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsPinvokeImpl", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -264,7 +264,7 @@ namespace mscorlib
 
 
 			//	Get:IsSpecialName
-			mscorlib::System::Boolean  FieldInfo::get_IsSpecialName()
+			mscorlib::System::Boolean  FieldInfo::get_IsSpecialName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsSpecialName", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -272,7 +272,7 @@ namespace mscorlib
 
 
 			//	Get:IsNotSerialized
-			mscorlib::System::Boolean  FieldInfo::get_IsNotSerialized()
+			mscorlib::System::Boolean  FieldInfo::get_IsNotSerialized() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsNotSerialized", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -280,7 +280,7 @@ namespace mscorlib
 
 
 			//	Get:IsSecurityCritical
-			mscorlib::System::Boolean  FieldInfo::get_IsSecurityCritical()
+			mscorlib::System::Boolean  FieldInfo::get_IsSecurityCritical() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsSecurityCritical", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -288,7 +288,7 @@ namespace mscorlib
 
 
 			//	Get:IsSecuritySafeCritical
-			mscorlib::System::Boolean  FieldInfo::get_IsSecuritySafeCritical()
+			mscorlib::System::Boolean  FieldInfo::get_IsSecuritySafeCritical() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsSecuritySafeCritical", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -296,7 +296,7 @@ namespace mscorlib
 
 
 			//	Get:IsSecurityTransparent
-			mscorlib::System::Boolean  FieldInfo::get_IsSecurityTransparent()
+			mscorlib::System::Boolean  FieldInfo::get_IsSecurityTransparent() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_IsSecurityTransparent", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -304,7 +304,7 @@ namespace mscorlib
 
 
 			//	Get:DeclaringType
-			mscorlib::System::Type  FieldInfo::get_DeclaringType()
+			mscorlib::System::Type  FieldInfo::get_DeclaringType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_DeclaringType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -312,7 +312,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  FieldInfo::get_Name()
+			mscorlib::System::String  FieldInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -320,7 +320,7 @@ namespace mscorlib
 
 
 			//	Get:ReflectedType
-			mscorlib::System::Type  FieldInfo::get_ReflectedType()
+			mscorlib::System::Type  FieldInfo::get_ReflectedType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_ReflectedType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -328,7 +328,7 @@ namespace mscorlib
 
 
 			//	Get:Module
-			mscorlib::System::Reflection::Module  FieldInfo::get_Module()
+			mscorlib::System::Reflection::Module  FieldInfo::get_Module() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_Module", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::Module(__result__);
@@ -336,7 +336,7 @@ namespace mscorlib
 
 
 			//	Get:MetadataToken
-			mscorlib::System::Int32  FieldInfo::get_MetadataToken()
+			mscorlib::System::Int32  FieldInfo::get_MetadataToken() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_MetadataToken", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -344,7 +344,7 @@ namespace mscorlib
 
 
 			//	Get:CustomAttributes
-			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  FieldInfo::get_CustomAttributes()
+			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  FieldInfo::get_CustomAttributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_CustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>(__result__);

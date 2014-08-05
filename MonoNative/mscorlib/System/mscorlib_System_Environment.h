@@ -138,30 +138,31 @@ namespace mscorlib
 
 
 			//Public Static Properties
-			static Property<mscorlib::System::String> CommandLine;
-			static Property<mscorlib::System::String> CurrentDirectory;
-			static Property<mscorlib::System::Int32> CurrentManagedThreadId;
-			static Property<mscorlib::System::Int32> ExitCode;
-			static Property<mscorlib::System::Boolean> HasShutdownStarted;
-			static Property<mscorlib::System::String> MachineName;
-			static Property<mscorlib::System::String> NewLine;
-			static Property<mscorlib::System::OperatingSystem> OSVersion;
-			static Property<mscorlib::System::String> StackTrace;
-			static Property<mscorlib::System::String> SystemDirectory;
-			static Property<mscorlib::System::Int32> TickCount;
-			static Property<mscorlib::System::String> UserDomainName;
-			static Property<mscorlib::System::Boolean> UserInteractive;
-			static Property<mscorlib::System::String> UserName;
-			static Property<mscorlib::System::Version> Version;
-			static Property<mscorlib::System::Int64> WorkingSet;
-			static Property<mscorlib::System::Boolean> Is64BitOperatingSystem;
-			static Property<mscorlib::System::Int32> SystemPageSize;
-			static Property<mscorlib::System::Boolean> Is64BitProcess;
-			static Property<mscorlib::System::Int32> ProcessorCount;
+			static Property<mscorlib::System::String , mscorlib::System::Environment> CommandLine;
+			static Property<mscorlib::System::String , mscorlib::System::Environment> CurrentDirectory;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Environment> CurrentManagedThreadId;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Environment> ExitCode;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Environment> HasShutdownStarted;
+			static Property<mscorlib::System::String , mscorlib::System::Environment> MachineName;
+			static Property<mscorlib::System::String , mscorlib::System::Environment> NewLine;
+			static Property<mscorlib::System::OperatingSystem , mscorlib::System::Environment> OSVersion;
+			static Property<mscorlib::System::String , mscorlib::System::Environment> StackTrace;
+			static Property<mscorlib::System::String , mscorlib::System::Environment> SystemDirectory;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Environment> TickCount;
+			static Property<mscorlib::System::String , mscorlib::System::Environment> UserDomainName;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Environment> UserInteractive;
+			static Property<mscorlib::System::String , mscorlib::System::Environment> UserName;
+			static Property<mscorlib::System::Version , mscorlib::System::Environment> Version;
+			static Property<mscorlib::System::Int64 , mscorlib::System::Environment> WorkingSet;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Environment> Is64BitOperatingSystem;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Environment> SystemPageSize;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Environment> Is64BitProcess;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Environment> ProcessorCount;
 
 			//Get Set Static Properties Methods
 			//	Get:CommandLine
 			static mscorlib::System::String  get_CommandLine();
+			static void set_CommandLine(mscorlib::System::String  value);
 
 			//	Get/Set:CurrentDirectory
 			static mscorlib::System::String  get_CurrentDirectory();
@@ -169,6 +170,7 @@ namespace mscorlib
 
 			//	Get:CurrentManagedThreadId
 			static mscorlib::System::Int32  get_CurrentManagedThreadId();
+			static void set_CurrentManagedThreadId(mscorlib::System::Int32  value);
 
 			//	Get/Set:ExitCode
 			static mscorlib::System::Int32  get_ExitCode();
@@ -176,51 +178,67 @@ namespace mscorlib
 
 			//	Get:HasShutdownStarted
 			static mscorlib::System::Boolean  get_HasShutdownStarted();
+			static void set_HasShutdownStarted(mscorlib::System::Boolean  value);
 
 			//	Get:MachineName
 			static mscorlib::System::String  get_MachineName();
+			static void set_MachineName(mscorlib::System::String  value);
 
 			//	Get:NewLine
 			static mscorlib::System::String  get_NewLine();
+			static void set_NewLine(mscorlib::System::String  value);
 
 			//	Get:OSVersion
 			static mscorlib::System::OperatingSystem  get_OSVersion();
+			static void set_OSVersion(mscorlib::System::OperatingSystem  value);
 
 			//	Get:StackTrace
 			static mscorlib::System::String  get_StackTrace();
+			static void set_StackTrace(mscorlib::System::String  value);
 
 			//	Get:SystemDirectory
 			static mscorlib::System::String  get_SystemDirectory();
+			static void set_SystemDirectory(mscorlib::System::String  value);
 
 			//	Get:TickCount
 			static mscorlib::System::Int32  get_TickCount();
+			static void set_TickCount(mscorlib::System::Int32  value);
 
 			//	Get:UserDomainName
 			static mscorlib::System::String  get_UserDomainName();
+			static void set_UserDomainName(mscorlib::System::String  value);
 
 			//	Get:UserInteractive
 			static mscorlib::System::Boolean  get_UserInteractive();
+			static void set_UserInteractive(mscorlib::System::Boolean  value);
 
 			//	Get:UserName
 			static mscorlib::System::String  get_UserName();
+			static void set_UserName(mscorlib::System::String  value);
 
 			//	Get:Version
 			static mscorlib::System::Version  get_Version();
+			static void set_Version(mscorlib::System::Version  value);
 
 			//	Get:WorkingSet
 			static mscorlib::System::Int64  get_WorkingSet();
+			static void set_WorkingSet(mscorlib::System::Int64  value);
 
 			//	Get:Is64BitOperatingSystem
 			static mscorlib::System::Boolean  get_Is64BitOperatingSystem();
+			static void set_Is64BitOperatingSystem(mscorlib::System::Boolean  value);
 
 			//	Get:SystemPageSize
 			static mscorlib::System::Int32  get_SystemPageSize();
+			static void set_SystemPageSize(mscorlib::System::Int32  value);
 
 			//	Get:Is64BitProcess
 			static mscorlib::System::Boolean  get_Is64BitProcess();
+			static void set_Is64BitProcess(mscorlib::System::Boolean  value);
 
 			//	Get:ProcessorCount
 			static mscorlib::System::Int32  get_ProcessorCount();
+			static void set_ProcessorCount(mscorlib::System::Int32  value);
 
 
 		

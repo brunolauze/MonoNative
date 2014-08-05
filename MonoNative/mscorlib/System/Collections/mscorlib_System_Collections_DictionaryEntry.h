@@ -67,11 +67,11 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Key
-				mscorlib::System::Object  get_Key();
+				mscorlib::System::Object  get_Key() const;
 				void set_Key(mscorlib::System::Object  value);
 
 				//	Get/Set:Value
-				mscorlib::System::Object  get_Value();
+				mscorlib::System::Object  get_Value() const;
 				void set_Value(mscorlib::System::Object  value);
 
 			

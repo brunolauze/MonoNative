@@ -378,7 +378,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Days
-		mscorlib::System::Int32  TimeSpan::get_Days()
+		mscorlib::System::Int32  TimeSpan::get_Days() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_Days", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -386,7 +386,7 @@ namespace mscorlib
 
 
 		//	Get:Hours
-		mscorlib::System::Int32  TimeSpan::get_Hours()
+		mscorlib::System::Int32  TimeSpan::get_Hours() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_Hours", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -394,7 +394,7 @@ namespace mscorlib
 
 
 		//	Get:Milliseconds
-		mscorlib::System::Int32  TimeSpan::get_Milliseconds()
+		mscorlib::System::Int32  TimeSpan::get_Milliseconds() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_Milliseconds", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -402,7 +402,7 @@ namespace mscorlib
 
 
 		//	Get:Minutes
-		mscorlib::System::Int32  TimeSpan::get_Minutes()
+		mscorlib::System::Int32  TimeSpan::get_Minutes() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_Minutes", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -410,7 +410,7 @@ namespace mscorlib
 
 
 		//	Get:Seconds
-		mscorlib::System::Int32  TimeSpan::get_Seconds()
+		mscorlib::System::Int32  TimeSpan::get_Seconds() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_Seconds", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -418,7 +418,7 @@ namespace mscorlib
 
 
 		//	Get:Ticks
-		mscorlib::System::Int64  TimeSpan::get_Ticks()
+		mscorlib::System::Int64  TimeSpan::get_Ticks() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_Ticks", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -426,7 +426,7 @@ namespace mscorlib
 
 
 		//	Get:TotalDays
-		mscorlib::System::Double  TimeSpan::get_TotalDays()
+		mscorlib::System::Double  TimeSpan::get_TotalDays() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_TotalDays", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Double*)mono_object_unbox(__result__);
@@ -434,7 +434,7 @@ namespace mscorlib
 
 
 		//	Get:TotalHours
-		mscorlib::System::Double  TimeSpan::get_TotalHours()
+		mscorlib::System::Double  TimeSpan::get_TotalHours() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_TotalHours", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Double*)mono_object_unbox(__result__);
@@ -442,7 +442,7 @@ namespace mscorlib
 
 
 		//	Get:TotalMilliseconds
-		mscorlib::System::Double  TimeSpan::get_TotalMilliseconds()
+		mscorlib::System::Double  TimeSpan::get_TotalMilliseconds() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_TotalMilliseconds", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Double*)mono_object_unbox(__result__);
@@ -450,7 +450,7 @@ namespace mscorlib
 
 
 		//	Get:TotalMinutes
-		mscorlib::System::Double  TimeSpan::get_TotalMinutes()
+		mscorlib::System::Double  TimeSpan::get_TotalMinutes() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_TotalMinutes", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Double*)mono_object_unbox(__result__);
@@ -458,7 +458,7 @@ namespace mscorlib
 
 
 		//	Get:TotalSeconds
-		mscorlib::System::Double  TimeSpan::get_TotalSeconds()
+		mscorlib::System::Double  TimeSpan::get_TotalSeconds() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "get_TotalSeconds", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Double*)mono_object_unbox(__result__);
@@ -471,6 +471,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "TimeSpan", 0, NULL, "MaxValue");
 		}
 
+		void TimeSpan::set_MaxValue(mscorlib::System::TimeSpan  value)
+		{
+			throw;
+		}
 
 			//	Get/Set:MinValue
 		mscorlib::System::TimeSpan TimeSpan::get_MinValue()
@@ -478,6 +482,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "TimeSpan", 0, NULL, "MinValue");
 		}
 
+		void TimeSpan::set_MinValue(mscorlib::System::TimeSpan  value)
+		{
+			throw;
+		}
 
 			//	Get/Set:Zero
 		mscorlib::System::TimeSpan TimeSpan::get_Zero()
@@ -485,6 +493,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "TimeSpan", 0, NULL, "Zero");
 		}
 
+		void TimeSpan::set_Zero(mscorlib::System::TimeSpan  value)
+		{
+			throw;
+		}
 
 			//	Get/Set:TicksPerDay
 		mscorlib::System::Int64 TimeSpan::get_TicksPerDay()

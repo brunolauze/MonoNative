@@ -50,7 +50,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:ChannelInfo
-				mscorlib::System::Runtime::Remoting::IChannelInfo  ObjRef::get_ChannelInfo()
+				mscorlib::System::Runtime::Remoting::IChannelInfo  ObjRef::get_ChannelInfo() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "ObjRef", 0, NULL, "get_ChannelInfo", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Remoting::IChannelInfo(__result__);
@@ -67,7 +67,7 @@ namespace mscorlib
 
 
 				//	Get/Set:EnvoyInfo
-				mscorlib::System::Runtime::Remoting::IEnvoyInfo  ObjRef::get_EnvoyInfo()
+				mscorlib::System::Runtime::Remoting::IEnvoyInfo  ObjRef::get_EnvoyInfo() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "ObjRef", 0, NULL, "get_EnvoyInfo", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Remoting::IEnvoyInfo(__result__);
@@ -84,7 +84,7 @@ namespace mscorlib
 
 
 				//	Get/Set:TypeInfo
-				mscorlib::System::Runtime::Remoting::IRemotingTypeInfo  ObjRef::get_TypeInfo()
+				mscorlib::System::Runtime::Remoting::IRemotingTypeInfo  ObjRef::get_TypeInfo() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "ObjRef", 0, NULL, "get_TypeInfo", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Remoting::IRemotingTypeInfo(__result__);
@@ -101,7 +101,7 @@ namespace mscorlib
 
 
 				//	Get/Set:URI
-				mscorlib::System::String  ObjRef::get_URI()
+				mscorlib::System::String  ObjRef::get_URI() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "ObjRef", 0, NULL, "get_URI", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

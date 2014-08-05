@@ -35,7 +35,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Next
-					mscorlib::System::Runtime::Remoting::Channels::IServerChannelSinkProvider  IServerChannelSinkProvider::get_Next()
+					mscorlib::System::Runtime::Remoting::Channels::IServerChannelSinkProvider  IServerChannelSinkProvider::get_Next() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IServerChannelSinkProvider", 0, NULL, "get_Next", __mscorlib_System_Runtime_Remoting_Channels_IServerChannelSinkProvider, 0, NULL, NULL, NULL);
 						return mscorlib::System::Runtime::Remoting::Channels::IServerChannelSinkProvider(__result__);

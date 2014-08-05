@@ -83,16 +83,17 @@ namespace mscorlib
 							__declspec(property(get=get_Value, put=set_Value)) mscorlib::System::String  Value;
 
 							//Public Static Properties
-							static Property<mscorlib::System::String> XsdType;
+							static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapIdrefs> XsdType;
 
 							//Get Set Properties Methods
 							//	Get/Set:Value
-							mscorlib::System::String  get_Value();
+							mscorlib::System::String  get_Value() const;
 							void set_Value(mscorlib::System::String  value);
 
 							//Get Set Static Properties Methods
 							//	Get:XsdType
 							static mscorlib::System::String  get_XsdType();
+							static void set_XsdType(mscorlib::System::String  value);
 
 
 						

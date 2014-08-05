@@ -38,7 +38,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Binder
-				mscorlib::System::Runtime::Serialization::SerializationBinder  IFormatter::get_Binder()
+				mscorlib::System::Runtime::Serialization::SerializationBinder  IFormatter::get_Binder() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "IFormatter", 0, NULL, "get_Binder", __mscorlib_System_Runtime_Serialization_IFormatter, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Serialization::SerializationBinder(__result__);
@@ -55,7 +55,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Context
-				mscorlib::System::Runtime::Serialization::StreamingContext  IFormatter::get_Context()
+				mscorlib::System::Runtime::Serialization::StreamingContext  IFormatter::get_Context() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "IFormatter", 0, NULL, "get_Context", __mscorlib_System_Runtime_Serialization_IFormatter, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Serialization::StreamingContext(__result__);
@@ -72,7 +72,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SurrogateSelector
-				mscorlib::System::Runtime::Serialization::ISurrogateSelector  IFormatter::get_SurrogateSelector()
+				mscorlib::System::Runtime::Serialization::ISurrogateSelector  IFormatter::get_SurrogateSelector() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "IFormatter", 0, NULL, "get_SurrogateSelector", __mscorlib_System_Runtime_Serialization_IFormatter, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Serialization::ISurrogateSelector(__result__);

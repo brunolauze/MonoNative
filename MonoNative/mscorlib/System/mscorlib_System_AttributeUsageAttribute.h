@@ -71,18 +71,18 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:AllowMultiple
-			mscorlib::System::Boolean  get_AllowMultiple();
+			mscorlib::System::Boolean  get_AllowMultiple() const;
 			void set_AllowMultiple(mscorlib::System::Boolean  value);
 
 			//	Get/Set:Inherited
-			mscorlib::System::Boolean  get_Inherited();
+			mscorlib::System::Boolean  get_Inherited() const;
 			void set_Inherited(mscorlib::System::Boolean  value);
 
 			//	Get:ValidOn
-			mscorlib::System::AttributeTargets::__ENUM__  get_ValidOn();
+			mscorlib::System::AttributeTargets::__ENUM__  get_ValidOn() const;
 
 			//	Get:TypeId
-			mscorlib::System::Object  get_TypeId();
+			mscorlib::System::Object  get_TypeId() const;
 
 		
 		protected:

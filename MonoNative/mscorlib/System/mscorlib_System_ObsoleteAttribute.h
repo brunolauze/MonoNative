@@ -89,13 +89,13 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Message
-			mscorlib::System::String  get_Message();
+			mscorlib::System::String  get_Message() const;
 
 			//	Get:IsError
-			mscorlib::System::Boolean  get_IsError();
+			mscorlib::System::Boolean  get_IsError() const;
 
 			//	Get:TypeId
-			mscorlib::System::Object  get_TypeId();
+			mscorlib::System::Object  get_TypeId() const;
 
 		
 		protected:

@@ -16,7 +16,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ChannelUris
-					std::vector<mscorlib::System::String*>  IChannelDataStore::get_ChannelUris()
+					std::vector<mscorlib::System::String*>  IChannelDataStore::get_ChannelUris() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelDataStore", 0, NULL, "get_ChannelUris", __mscorlib_System_Runtime_Remoting_Channels_IChannelDataStore, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 					//	Get/Set:Item
-					mscorlib::System::Object  IChannelDataStore::get_Item(mscorlib::System::Object key)
+					mscorlib::System::Object  IChannelDataStore::get_Item(mscorlib::System::Object key) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];

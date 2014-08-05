@@ -17,7 +17,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:IgnorePersistedDecision
-				mscorlib::System::Boolean  TrustManagerContext::get_IgnorePersistedDecision()
+				mscorlib::System::Boolean  TrustManagerContext::get_IgnorePersistedDecision() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "TrustManagerContext", 0, NULL, "get_IgnorePersistedDecision", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeepAlive
-				mscorlib::System::Boolean  TrustManagerContext::get_KeepAlive()
+				mscorlib::System::Boolean  TrustManagerContext::get_KeepAlive() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "TrustManagerContext", 0, NULL, "get_KeepAlive", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -51,7 +51,7 @@ namespace mscorlib
 
 
 				//	Get/Set:NoPrompt
-				mscorlib::System::Boolean  TrustManagerContext::get_NoPrompt()
+				mscorlib::System::Boolean  TrustManagerContext::get_NoPrompt() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "TrustManagerContext", 0, NULL, "get_NoPrompt", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Persist
-				mscorlib::System::Boolean  TrustManagerContext::get_Persist()
+				mscorlib::System::Boolean  TrustManagerContext::get_Persist() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "TrustManagerContext", 0, NULL, "get_Persist", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 				//	Get/Set:PreviousApplicationIdentity
-				mscorlib::System::ApplicationIdentity  TrustManagerContext::get_PreviousApplicationIdentity()
+				mscorlib::System::ApplicationIdentity  TrustManagerContext::get_PreviousApplicationIdentity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "TrustManagerContext", 0, NULL, "get_PreviousApplicationIdentity", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::ApplicationIdentity(__result__);
@@ -102,7 +102,7 @@ namespace mscorlib
 
 
 				//	Get/Set:UIContext
-				mscorlib::System::Security::Policy::TrustManagerUIContext::__ENUM__  TrustManagerContext::get_UIContext()
+				mscorlib::System::Security::Policy::TrustManagerUIContext::__ENUM__  TrustManagerContext::get_UIContext() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "TrustManagerContext", 0, NULL, "get_UIContext", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Policy::TrustManagerUIContext::__ENUM__*)mono_object_unbox(__result__);

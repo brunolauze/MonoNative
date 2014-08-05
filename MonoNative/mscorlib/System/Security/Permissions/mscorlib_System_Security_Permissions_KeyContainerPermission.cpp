@@ -76,7 +76,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:AccessEntries
-				mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntryCollection  KeyContainerPermission::get_AccessEntries()
+				mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntryCollection  KeyContainerPermission::get_AccessEntries() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermission", 0, NULL, "get_AccessEntries", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntryCollection(__result__);
@@ -84,7 +84,7 @@ namespace mscorlib
 
 
 				//	Get:Flags
-				mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  KeyContainerPermission::get_Flags()
+				mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  KeyContainerPermission::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermission", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__*)mono_object_unbox(__result__);

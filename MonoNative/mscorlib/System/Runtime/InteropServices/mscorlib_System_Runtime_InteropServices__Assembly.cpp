@@ -468,7 +468,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CodeBase
-				mscorlib::System::String  _Assembly::get_CodeBase()
+				mscorlib::System::String  _Assembly::get_CodeBase() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Assembly", 0, NULL, "get_CodeBase", __mscorlib_System_Runtime_InteropServices__Assembly, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -476,7 +476,7 @@ namespace mscorlib
 
 
 				//	Get:EscapedCodeBase
-				mscorlib::System::String  _Assembly::get_EscapedCodeBase()
+				mscorlib::System::String  _Assembly::get_EscapedCodeBase() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Assembly", 0, NULL, "get_EscapedCodeBase", __mscorlib_System_Runtime_InteropServices__Assembly, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -484,7 +484,7 @@ namespace mscorlib
 
 
 				//	Get:FullName
-				mscorlib::System::String  _Assembly::get_FullName()
+				mscorlib::System::String  _Assembly::get_FullName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Assembly", 0, NULL, "get_FullName", __mscorlib_System_Runtime_InteropServices__Assembly, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -492,7 +492,7 @@ namespace mscorlib
 
 
 				//	Get:EntryPoint
-				mscorlib::System::Reflection::MethodInfo  _Assembly::get_EntryPoint()
+				mscorlib::System::Reflection::MethodInfo  _Assembly::get_EntryPoint() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Assembly", 0, NULL, "get_EntryPoint", __mscorlib_System_Runtime_InteropServices__Assembly, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -500,7 +500,7 @@ namespace mscorlib
 
 
 				//	Get:Location
-				mscorlib::System::String  _Assembly::get_Location()
+				mscorlib::System::String  _Assembly::get_Location() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Assembly", 0, NULL, "get_Location", __mscorlib_System_Runtime_InteropServices__Assembly, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -508,7 +508,7 @@ namespace mscorlib
 
 
 				//	Get:Evidence
-				mscorlib::System::Security::Policy::Evidence  _Assembly::get_Evidence()
+				mscorlib::System::Security::Policy::Evidence  _Assembly::get_Evidence() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Assembly", 0, NULL, "get_Evidence", __mscorlib_System_Runtime_InteropServices__Assembly, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Policy::Evidence(__result__);
@@ -516,7 +516,7 @@ namespace mscorlib
 
 
 				//	Get:GlobalAssemblyCache
-				mscorlib::System::Boolean  _Assembly::get_GlobalAssemblyCache()
+				mscorlib::System::Boolean  _Assembly::get_GlobalAssemblyCache() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_Assembly", 0, NULL, "get_GlobalAssemblyCache", __mscorlib_System_Runtime_InteropServices__Assembly, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

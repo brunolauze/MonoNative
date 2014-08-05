@@ -146,35 +146,35 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Flags
-					mscorlib::System::Security::Cryptography::CspProviderFlags::__ENUM__  get_Flags();
+					mscorlib::System::Security::Cryptography::CspProviderFlags::__ENUM__  get_Flags() const;
 					void set_Flags(mscorlib::System::Security::Cryptography::CspProviderFlags::__ENUM__  value);
 
 					//	Get/Set:CryptoKeySecurity
-					mscorlib::System::Security::AccessControl::CryptoKeySecurity  get_CryptoKeySecurity();
+					mscorlib::System::Security::AccessControl::CryptoKeySecurity  get_CryptoKeySecurity() const;
 					void set_CryptoKeySecurity(mscorlib::System::Security::AccessControl::CryptoKeySecurity  value);
 
 					//	Get/Set:KeyPassword
-					mscorlib::System::Security::SecureString  get_KeyPassword();
+					mscorlib::System::Security::SecureString  get_KeyPassword() const;
 					void set_KeyPassword(mscorlib::System::Security::SecureString  value);
 
 					//	Get/Set:ParentWindowHandle
-					mscorlib::System::IntPtr  get_ParentWindowHandle();
+					mscorlib::System::IntPtr  get_ParentWindowHandle() const;
 					void set_ParentWindowHandle(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:KeyContainerName
-					mscorlib::System::String  get_KeyContainerName();
+					mscorlib::System::String  get_KeyContainerName() const;
 					void set_KeyContainerName(mscorlib::System::String  value);
 
 					//	Get/Set:KeyNumber
-					mscorlib::System::Int32  get_KeyNumber();
+					mscorlib::System::Int32  get_KeyNumber() const;
 					void set_KeyNumber(mscorlib::System::Int32  value);
 
 					//	Get/Set:ProviderName
-					mscorlib::System::String  get_ProviderName();
+					mscorlib::System::String  get_ProviderName() const;
 					void set_ProviderName(mscorlib::System::String  value);
 
 					//	Get/Set:ProviderType
-					mscorlib::System::Int32  get_ProviderType();
+					mscorlib::System::Int32  get_ProviderType() const;
 					void set_ProviderType(mscorlib::System::Int32  value);
 
 				

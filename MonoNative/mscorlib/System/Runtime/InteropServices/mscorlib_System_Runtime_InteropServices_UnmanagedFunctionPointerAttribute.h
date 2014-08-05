@@ -80,25 +80,25 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CallingConvention
-					mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__  get_CallingConvention();
+					mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__  get_CallingConvention() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 					//	Get/Set:CharSet
-					mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__  get_CharSet();
+					mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__  get_CharSet() const;
 					void set_CharSet(mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__  value);
 
 					//	Get/Set:SetLastError
-					mscorlib::System::Boolean  get_SetLastError();
+					mscorlib::System::Boolean  get_SetLastError() const;
 					void set_SetLastError(mscorlib::System::Boolean  value);
 
 					//	Get/Set:BestFitMapping
-					mscorlib::System::Boolean  get_BestFitMapping();
+					mscorlib::System::Boolean  get_BestFitMapping() const;
 					void set_BestFitMapping(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ThrowOnUnmappableChar
-					mscorlib::System::Boolean  get_ThrowOnUnmappableChar();
+					mscorlib::System::Boolean  get_ThrowOnUnmappableChar() const;
 					void set_ThrowOnUnmappableChar(mscorlib::System::Boolean  value);
 
 				

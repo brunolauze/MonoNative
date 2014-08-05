@@ -2,10 +2,10 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_REFLECTION_EMIT_PROPERTYBUILDER_H
 
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_PropertyInfo.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__PropertyInfo.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__PropertyInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__PropertyBuilder.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_PropertyAttributes.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_BindingFlags.h>
@@ -85,27 +85,27 @@ namespace mscorlib
 
 				class PropertyBuilder
 					: public mscorlib::System::Reflection::PropertyInfo
-					, public virtual mscorlib::System::Runtime::InteropServices::_PropertyInfo
-					, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 					, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
+					, public virtual mscorlib::System::Runtime::InteropServices::_PropertyInfo
 					, public virtual mscorlib::System::Runtime::InteropServices::_PropertyBuilder
+					, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 				{
 				public:
 					PropertyBuilder(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Reflection::PropertyInfo(nativeTypeInfo)
-					, mscorlib::System::Runtime::InteropServices::_PropertyInfo(NULL)
-					, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
+					, mscorlib::System::Runtime::InteropServices::_PropertyInfo(NULL)
 					, mscorlib::System::Runtime::InteropServices::_PropertyBuilder(NULL)
+					, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 					{
 					};
 				
 					PropertyBuilder(MonoObject *nativeObject)
 					: mscorlib::System::Reflection::PropertyInfo(nativeObject)
-					, mscorlib::System::Runtime::InteropServices::_PropertyInfo(nativeObject)
-					, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 					, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
+					, mscorlib::System::Runtime::InteropServices::_PropertyInfo(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_PropertyBuilder(nativeObject)
+					, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 					{
 					};
 				
@@ -158,49 +158,49 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Attributes
-					mscorlib::System::Reflection::PropertyAttributes::__ENUM__  get_Attributes();
+					mscorlib::System::Reflection::PropertyAttributes::__ENUM__  get_Attributes() const;
 
 					//	Get:CanRead
-					mscorlib::System::Boolean  get_CanRead();
+					mscorlib::System::Boolean  get_CanRead() const;
 
 					//	Get:CanWrite
-					mscorlib::System::Boolean  get_CanWrite();
+					mscorlib::System::Boolean  get_CanWrite() const;
 
 					//	Get:DeclaringType
-					mscorlib::System::Type  get_DeclaringType();
+					mscorlib::System::Type  get_DeclaringType() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:PropertyToken
-					mscorlib::System::Reflection::Emit::PropertyToken  get_PropertyToken();
+					mscorlib::System::Reflection::Emit::PropertyToken  get_PropertyToken() const;
 
 					//	Get:PropertyType
-					mscorlib::System::Type  get_PropertyType();
+					mscorlib::System::Type  get_PropertyType() const;
 
 					//	Get:ReflectedType
-					mscorlib::System::Type  get_ReflectedType();
+					mscorlib::System::Type  get_ReflectedType() const;
 
 					//	Get:Module
-					mscorlib::System::Reflection::Module  get_Module();
+					mscorlib::System::Reflection::Module  get_Module() const;
 
 					//	Get:GetMethod
-					mscorlib::System::Reflection::MethodInfo  get_GetMethod();
+					mscorlib::System::Reflection::MethodInfo  get_GetMethod() const;
 
 					//	Get:SetMethod
-					mscorlib::System::Reflection::MethodInfo  get_SetMethod();
+					mscorlib::System::Reflection::MethodInfo  get_SetMethod() const;
 
 					//	Get:IsSpecialName
-					mscorlib::System::Boolean  get_IsSpecialName();
+					mscorlib::System::Boolean  get_IsSpecialName() const;
 
 					//	Get:MemberType
-					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 					//	Get:MetadataToken
-					mscorlib::System::Int32  get_MetadataToken();
+					mscorlib::System::Int32  get_MetadataToken() const;
 
 					//	Get:CustomAttributes
-					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes();
+					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes() const;
 
 				
 				protected:

@@ -35,7 +35,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Collections_Generic_IDictionary_2, put=set___mscorlib_System_Collections_Generic_IDictionary_2)) MonoObject *__mscorlib_System_Collections_Generic_IDictionary_2;
-					MonoObject* get___mscorlib_System_Collections_Generic_IDictionary_2()
+					MonoObject* get___mscorlib_System_Collections_Generic_IDictionary_2() const
 					{
 						return IDictionary::__mscorlib_System_Collections_Generic_ICollection_1;
 					}
@@ -110,7 +110,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Item
-					TValue  get_Item(TKey key)
+					TValue  get_Item(TKey key) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -138,7 +138,7 @@ namespace mscorlib
 				
 
 					//	Get:Keys
-					mscorlib::System::Collections::Generic::ICollection<TKey>  get_Keys()
+					mscorlib::System::Collections::Generic::ICollection<TKey>  get_Keys() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -148,7 +148,7 @@ namespace mscorlib
 					}
 
 					//	Get:Values
-					mscorlib::System::Collections::Generic::ICollection<TValue>  get_Values()
+					mscorlib::System::Collections::Generic::ICollection<TValue>  get_Values() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());

@@ -74,7 +74,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Clipboard
-				mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__  UIPermission::get_Clipboard()
+				mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__  UIPermission::get_Clipboard() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "UIPermission", 0, NULL, "get_Clipboard", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__*)mono_object_unbox(__result__);
@@ -91,7 +91,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Window
-				mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__  UIPermission::get_Window()
+				mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__  UIPermission::get_Window() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "UIPermission", 0, NULL, "get_Window", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__*)mono_object_unbox(__result__);

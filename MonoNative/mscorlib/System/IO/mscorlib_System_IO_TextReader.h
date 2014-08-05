@@ -84,10 +84,11 @@ namespace mscorlib
 
 
 				//Public Static Fields
-				static Property<mscorlib::System::IO::TextReader> Null;
+				static Property<mscorlib::System::IO::TextReader , mscorlib::System::IO::TextReader> Null;
 
 				//	Get/Set:Null
 				static mscorlib::System::IO::TextReader  get_Null();
+				static void set_Null(mscorlib::System::IO::TextReader  value);
 
 			
 			protected:

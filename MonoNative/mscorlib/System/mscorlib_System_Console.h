@@ -139,43 +139,46 @@ namespace mscorlib
 
 
 			//Public Static Properties
-			static Property<mscorlib::System::IO::TextWriter> Error;
-			static Property<mscorlib::System::IO::TextWriter> Out;
-			static Property<mscorlib::System::IO::TextReader> In;
-			static Property<mscorlib::System::Text::Encoding> InputEncoding;
-			static Property<mscorlib::System::Text::Encoding> OutputEncoding;
-			static Property<mscorlib::System::ConsoleColor::__ENUM__> BackgroundColor;
-			static Property<mscorlib::System::Int32> BufferHeight;
-			static Property<mscorlib::System::Int32> BufferWidth;
-			static Property<mscorlib::System::Boolean> CapsLock;
-			static Property<mscorlib::System::Int32> CursorLeft;
-			static Property<mscorlib::System::Int32> CursorTop;
-			static Property<mscorlib::System::Int32> CursorSize;
-			static Property<mscorlib::System::Boolean> CursorVisible;
-			static Property<mscorlib::System::ConsoleColor::__ENUM__> ForegroundColor;
-			static Property<mscorlib::System::Boolean> KeyAvailable;
-			static Property<mscorlib::System::Int32> LargestWindowHeight;
-			static Property<mscorlib::System::Int32> LargestWindowWidth;
-			static Property<mscorlib::System::Boolean> NumberLock;
-			static Property<mscorlib::System::String> Title;
-			static Property<mscorlib::System::Boolean> TreatControlCAsInput;
-			static Property<mscorlib::System::Int32> WindowHeight;
-			static Property<mscorlib::System::Int32> WindowLeft;
-			static Property<mscorlib::System::Int32> WindowTop;
-			static Property<mscorlib::System::Int32> WindowWidth;
-			static Property<mscorlib::System::Boolean> IsErrorRedirected;
-			static Property<mscorlib::System::Boolean> IsOutputRedirected;
-			static Property<mscorlib::System::Boolean> IsInputRedirected;
+			static Property<mscorlib::System::IO::TextWriter , mscorlib::System::Console> Error;
+			static Property<mscorlib::System::IO::TextWriter , mscorlib::System::Console> Out;
+			static Property<mscorlib::System::IO::TextReader , mscorlib::System::Console> In;
+			static Property<mscorlib::System::Text::Encoding , mscorlib::System::Console> InputEncoding;
+			static Property<mscorlib::System::Text::Encoding , mscorlib::System::Console> OutputEncoding;
+			static Property<mscorlib::System::ConsoleColor::__ENUM__ , mscorlib::System::Console> BackgroundColor;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> BufferHeight;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> BufferWidth;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Console> CapsLock;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> CursorLeft;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> CursorTop;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> CursorSize;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Console> CursorVisible;
+			static Property<mscorlib::System::ConsoleColor::__ENUM__ , mscorlib::System::Console> ForegroundColor;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Console> KeyAvailable;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> LargestWindowHeight;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> LargestWindowWidth;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Console> NumberLock;
+			static Property<mscorlib::System::String , mscorlib::System::Console> Title;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Console> TreatControlCAsInput;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> WindowHeight;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> WindowLeft;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> WindowTop;
+			static Property<mscorlib::System::Int32 , mscorlib::System::Console> WindowWidth;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Console> IsErrorRedirected;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Console> IsOutputRedirected;
+			static Property<mscorlib::System::Boolean , mscorlib::System::Console> IsInputRedirected;
 
 			//Get Set Static Properties Methods
 			//	Get:Error
 			static mscorlib::System::IO::TextWriter  get_Error();
+			static void set_Error(mscorlib::System::IO::TextWriter  value);
 
 			//	Get:Out
 			static mscorlib::System::IO::TextWriter  get_Out();
+			static void set_Out(mscorlib::System::IO::TextWriter  value);
 
 			//	Get:In
 			static mscorlib::System::IO::TextReader  get_In();
+			static void set_In(mscorlib::System::IO::TextReader  value);
 
 			//	Get/Set:InputEncoding
 			static mscorlib::System::Text::Encoding  get_InputEncoding();
@@ -199,6 +202,7 @@ namespace mscorlib
 
 			//	Get:CapsLock
 			static mscorlib::System::Boolean  get_CapsLock();
+			static void set_CapsLock(mscorlib::System::Boolean  value);
 
 			//	Get/Set:CursorLeft
 			static mscorlib::System::Int32  get_CursorLeft();
@@ -222,15 +226,19 @@ namespace mscorlib
 
 			//	Get:KeyAvailable
 			static mscorlib::System::Boolean  get_KeyAvailable();
+			static void set_KeyAvailable(mscorlib::System::Boolean  value);
 
 			//	Get:LargestWindowHeight
 			static mscorlib::System::Int32  get_LargestWindowHeight();
+			static void set_LargestWindowHeight(mscorlib::System::Int32  value);
 
 			//	Get:LargestWindowWidth
 			static mscorlib::System::Int32  get_LargestWindowWidth();
+			static void set_LargestWindowWidth(mscorlib::System::Int32  value);
 
 			//	Get:NumberLock
 			static mscorlib::System::Boolean  get_NumberLock();
+			static void set_NumberLock(mscorlib::System::Boolean  value);
 
 			//	Get/Set:Title
 			static mscorlib::System::String  get_Title();
@@ -258,12 +266,15 @@ namespace mscorlib
 
 			//	Get:IsErrorRedirected
 			static mscorlib::System::Boolean  get_IsErrorRedirected();
+			static void set_IsErrorRedirected(mscorlib::System::Boolean  value);
 
 			//	Get:IsOutputRedirected
 			static mscorlib::System::Boolean  get_IsOutputRedirected();
+			static void set_IsOutputRedirected(mscorlib::System::Boolean  value);
 
 			//	Get:IsInputRedirected
 			static mscorlib::System::Boolean  get_IsInputRedirected();
+			static void set_IsInputRedirected(mscorlib::System::Boolean  value);
 
 
 		

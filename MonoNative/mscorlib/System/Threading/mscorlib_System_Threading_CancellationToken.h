@@ -87,21 +87,22 @@ namespace mscorlib
 				__declspec(property(get=get_WaitHandle)) mscorlib::System::Threading::WaitHandle  WaitHandle;
 
 				//Public Static Properties
-				static Property<mscorlib::System::Threading::CancellationToken> None;
+				static Property<mscorlib::System::Threading::CancellationToken , mscorlib::System::Threading::CancellationToken> None;
 
 				//Get Set Properties Methods
 				//	Get:CanBeCanceled
-				mscorlib::System::Boolean  get_CanBeCanceled();
+				mscorlib::System::Boolean  get_CanBeCanceled() const;
 
 				//	Get:IsCancellationRequested
-				mscorlib::System::Boolean  get_IsCancellationRequested();
+				mscorlib::System::Boolean  get_IsCancellationRequested() const;
 
 				//	Get:WaitHandle
-				mscorlib::System::Threading::WaitHandle  get_WaitHandle();
+				mscorlib::System::Threading::WaitHandle  get_WaitHandle() const;
 
 				//Get Set Static Properties Methods
 				//	Get:None
 				static mscorlib::System::Threading::CancellationToken  get_None();
+				static void set_None(mscorlib::System::Threading::CancellationToken  value);
 
 
 			

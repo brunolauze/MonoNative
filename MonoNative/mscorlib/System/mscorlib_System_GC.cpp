@@ -10,6 +10,7 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::Int32 , mscorlib::System::GC> mscorlib::System::GC::MaxGeneration(&mscorlib::System::GC::get_MaxGeneration, &mscorlib::System::GC::set_MaxGeneration);
 		//Public Methods
 		void GC::Collect()
 		{
@@ -193,6 +194,11 @@ namespace mscorlib
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "GC", 0, NULL, "get_MaxGeneration", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		void GC::set_MaxGeneration(mscorlib::System::Int32  value)
+		{
+			throw;
 		}
 
 

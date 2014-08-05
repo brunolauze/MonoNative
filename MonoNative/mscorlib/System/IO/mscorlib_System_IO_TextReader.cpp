@@ -131,6 +131,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "System.IO", "TextReader", 0, NULL, "Null");
 			}
 
+			void TextReader::set_Null(mscorlib::System::IO::TextReader  value)
+			{
+				throw;
+			}
 
 
 		}

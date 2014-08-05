@@ -92,15 +92,15 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:CancellationToken
-					mscorlib::System::Threading::CancellationToken  get_CancellationToken();
+					mscorlib::System::Threading::CancellationToken  get_CancellationToken() const;
 					void set_CancellationToken(mscorlib::System::Threading::CancellationToken  value);
 
 					//	Get/Set:MaxDegreeOfParallelism
-					mscorlib::System::Int32  get_MaxDegreeOfParallelism();
+					mscorlib::System::Int32  get_MaxDegreeOfParallelism() const;
 					void set_MaxDegreeOfParallelism(mscorlib::System::Int32  value);
 
 					//	Get/Set:TaskScheduler
-					mscorlib::System::Threading::Tasks::TaskScheduler  get_TaskScheduler();
+					mscorlib::System::Threading::Tasks::TaskScheduler  get_TaskScheduler() const;
 					void set_TaskScheduler(mscorlib::System::Threading::Tasks::TaskScheduler  value);
 
 				

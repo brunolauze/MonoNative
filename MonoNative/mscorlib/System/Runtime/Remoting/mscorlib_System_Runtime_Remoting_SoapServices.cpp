@@ -15,6 +15,10 @@ namespace mscorlib
 			namespace Remoting
 			{
 
+				Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::SoapServices> mscorlib::System::Runtime::Remoting::SoapServices::XmlNsForClrType(&mscorlib::System::Runtime::Remoting::SoapServices::get_XmlNsForClrType, &mscorlib::System::Runtime::Remoting::SoapServices::set_XmlNsForClrType);
+				Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::SoapServices> mscorlib::System::Runtime::Remoting::SoapServices::XmlNsForClrTypeWithAssembly(&mscorlib::System::Runtime::Remoting::SoapServices::get_XmlNsForClrTypeWithAssembly, &mscorlib::System::Runtime::Remoting::SoapServices::set_XmlNsForClrTypeWithAssembly);
+				Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::SoapServices> mscorlib::System::Runtime::Remoting::SoapServices::XmlNsForClrTypeWithNs(&mscorlib::System::Runtime::Remoting::SoapServices::get_XmlNsForClrTypeWithNs, &mscorlib::System::Runtime::Remoting::SoapServices::set_XmlNsForClrTypeWithNs);
+				Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::SoapServices> mscorlib::System::Runtime::Remoting::SoapServices::XmlNsForClrTypeWithNsAndAssembly(&mscorlib::System::Runtime::Remoting::SoapServices::get_XmlNsForClrTypeWithNsAndAssembly, &mscorlib::System::Runtime::Remoting::SoapServices::set_XmlNsForClrTypeWithNsAndAssembly);
 				//Public Methods
 				mscorlib::System::String SoapServices::CodeXmlNamespaceForClrTypeNamespace(mscorlib::System::String typeNamespace, mscorlib::System::String assemblyName)
 				{
@@ -266,12 +270,22 @@ namespace mscorlib
 					return mscorlib::System::String(__result__);
 				}
 
+				void SoapServices::set_XmlNsForClrType(mscorlib::System::String  value)
+				{
+					throw;
+				}
+
 
 				//	Get:XmlNsForClrTypeWithAssembly
 				mscorlib::System::String  SoapServices::get_XmlNsForClrTypeWithAssembly()
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "get_XmlNsForClrTypeWithAssembly", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
+				}
+
+				void SoapServices::set_XmlNsForClrTypeWithAssembly(mscorlib::System::String  value)
+				{
+					throw;
 				}
 
 
@@ -282,12 +296,22 @@ namespace mscorlib
 					return mscorlib::System::String(__result__);
 				}
 
+				void SoapServices::set_XmlNsForClrTypeWithNs(mscorlib::System::String  value)
+				{
+					throw;
+				}
+
 
 				//	Get:XmlNsForClrTypeWithNsAndAssembly
 				mscorlib::System::String  SoapServices::get_XmlNsForClrTypeWithNsAndAssembly()
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "get_XmlNsForClrTypeWithNsAndAssembly", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
+				}
+
+				void SoapServices::set_XmlNsForClrTypeWithNsAndAssembly(mscorlib::System::String  value)
+				{
+					throw;
 				}
 
 

@@ -80,23 +80,23 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Clipboard
-					mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__  get_Clipboard();
+					mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__  get_Clipboard() const;
 					void set_Clipboard(mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__  value);
 
 					//	Get/Set:Window
-					mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__  get_Window();
+					mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__  get_Window() const;
 					void set_Window(mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__  value);
 
 					//	Get/Set:Unrestricted
-					mscorlib::System::Boolean  get_Unrestricted();
+					mscorlib::System::Boolean  get_Unrestricted() const;
 					void set_Unrestricted(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Action
-					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action();
+					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action() const;
 					void set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

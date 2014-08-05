@@ -15,7 +15,7 @@ namespace mscorlib
 
 				//Public Methods
 				//	Get/Set:dwLowDateTime
-				mscorlib::System::Int32 FILETIME::get_dwLowDateTime()
+				mscorlib::System::Int32 FILETIME::get_dwLowDateTime() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "dwLowDateTime");
 				}
@@ -25,7 +25,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:dwHighDateTime
-				mscorlib::System::Int32 FILETIME::get_dwHighDateTime()
+				mscorlib::System::Int32 FILETIME::get_dwHighDateTime() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "dwHighDateTime");
 				}

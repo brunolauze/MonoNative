@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_COMPILERSERVICES_RUNTIMEHELPERS_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_IAsyncResult.h>
 
 namespace mscorlib
@@ -106,11 +106,12 @@ namespace mscorlib
 
 
 					//Public Static Properties
-					static Property<mscorlib::System::Int32> OffsetToStringData;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Runtime::CompilerServices::RuntimeHelpers> OffsetToStringData;
 
 					//Get Set Static Properties Methods
 					//	Get:OffsetToStringData
 					static mscorlib::System::Int32  get_OffsetToStringData();
+					static void set_OffsetToStringData(mscorlib::System::Int32  value);
 
 
 				

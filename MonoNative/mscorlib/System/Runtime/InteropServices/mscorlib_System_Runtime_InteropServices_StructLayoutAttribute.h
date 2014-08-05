@@ -90,21 +90,21 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Value
-					mscorlib::System::Runtime::InteropServices::LayoutKind::__ENUM__  get_Value();
+					mscorlib::System::Runtime::InteropServices::LayoutKind::__ENUM__  get_Value() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 					//	Get/Set:CharSet
-					mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__  get_CharSet();
+					mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__  get_CharSet() const;
 					void set_CharSet(mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__  value);
 
 					//	Get/Set:Pack
-					mscorlib::System::Int32  get_Pack();
+					mscorlib::System::Int32  get_Pack() const;
 					void set_Pack(mscorlib::System::Int32  value);
 
 					//	Get/Set:Size
-					mscorlib::System::Int32  get_Size();
+					mscorlib::System::Int32  get_Size() const;
 					void set_Size(mscorlib::System::Int32  value);
 
 				

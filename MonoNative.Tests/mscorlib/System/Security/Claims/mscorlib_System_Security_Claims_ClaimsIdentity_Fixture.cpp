@@ -33,7 +33,7 @@ namespace mscorlib
 					
 				}
 				
-				//ClaimsIdentity(mscorlib::System::String authenticationType)
+				//ClaimsIdentity(mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims)
 				TEST(mscorlib_System_Security_Claims_ClaimsIdentity_Fixture,Constructor_2)
 				{
 					
@@ -43,7 +43,7 @@ namespace mscorlib
 					
 				}
 				
-				//ClaimsIdentity(mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims, mscorlib::System::String authenticationType)
+				//ClaimsIdentity(mscorlib::System::String authenticationType)
 				TEST(mscorlib_System_Security_Claims_ClaimsIdentity_Fixture,Constructor_3)
 				{
 					
@@ -53,7 +53,7 @@ namespace mscorlib
 					
 				}
 				
-				//ClaimsIdentity(mscorlib::System::String authenticationType, mscorlib::System::String nameType, mscorlib::System::String roleType)
+				//ClaimsIdentity(mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims, mscorlib::System::String authenticationType)
 				TEST(mscorlib_System_Security_Claims_ClaimsIdentity_Fixture,Constructor_4)
 				{
 					
@@ -63,7 +63,7 @@ namespace mscorlib
 					
 				}
 				
-				//ClaimsIdentity(mscorlib::System::Security::Principal::IIdentity identity)
+				//ClaimsIdentity(mscorlib::System::String authenticationType, mscorlib::System::String nameType, mscorlib::System::String roleType)
 				TEST(mscorlib_System_Security_Claims_ClaimsIdentity_Fixture,Constructor_5)
 				{
 					
@@ -73,7 +73,7 @@ namespace mscorlib
 					
 				}
 				
-				//ClaimsIdentity(mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims, mscorlib::System::String authenticationType, mscorlib::System::String nameType, mscorlib::System::String roleType)
+				//ClaimsIdentity(mscorlib::System::Security::Principal::IIdentity identity)
 				TEST(mscorlib_System_Security_Claims_ClaimsIdentity_Fixture,Constructor_6)
 				{
 					
@@ -83,7 +83,7 @@ namespace mscorlib
 					
 				}
 				
-				//ClaimsIdentity(mscorlib::System::Security::Principal::IIdentity identity, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims)
+				//ClaimsIdentity(mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims, mscorlib::System::String authenticationType, mscorlib::System::String nameType, mscorlib::System::String roleType)
 				TEST(mscorlib_System_Security_Claims_ClaimsIdentity_Fixture,Constructor_7)
 				{
 					
@@ -93,8 +93,18 @@ namespace mscorlib
 					
 				}
 				
-				//ClaimsIdentity(mscorlib::System::Security::Principal::IIdentity identity, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims, mscorlib::System::String authenticationType, mscorlib::System::String nameType, mscorlib::System::String roleType)
+				//ClaimsIdentity(mscorlib::System::Security::Principal::IIdentity identity, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims)
 				TEST(mscorlib_System_Security_Claims_ClaimsIdentity_Fixture,Constructor_8)
+				{
+					
+					mscorlib::System::Security::Claims::ClaimsIdentity *value = new mscorlib::System::Security::Claims::ClaimsIdentity();
+					EXPECT_NE(NULL, value->GetNativeObject());
+					
+					
+				}
+				
+				//ClaimsIdentity(mscorlib::System::Security::Principal::IIdentity identity, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims, mscorlib::System::String authenticationType, mscorlib::System::String nameType, mscorlib::System::String roleType)
+				TEST(mscorlib_System_Security_Claims_ClaimsIdentity_Fixture,Constructor_9)
 				{
 					
 					mscorlib::System::Security::Claims::ClaimsIdentity *value = new mscorlib::System::Security::Claims::ClaimsIdentity();

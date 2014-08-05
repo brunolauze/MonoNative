@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ConcurrentScheduler
-				mscorlib::System::Threading::Tasks::TaskScheduler  ConcurrentExclusiveSchedulerPair::get_ConcurrentScheduler()
+				mscorlib::System::Threading::Tasks::TaskScheduler  ConcurrentExclusiveSchedulerPair::get_ConcurrentScheduler() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "ConcurrentExclusiveSchedulerPair", 0, NULL, "get_ConcurrentScheduler", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::Tasks::TaskScheduler(__result__);
@@ -30,7 +30,7 @@ namespace mscorlib
 
 
 				//	Get:ExclusiveScheduler
-				mscorlib::System::Threading::Tasks::TaskScheduler  ConcurrentExclusiveSchedulerPair::get_ExclusiveScheduler()
+				mscorlib::System::Threading::Tasks::TaskScheduler  ConcurrentExclusiveSchedulerPair::get_ExclusiveScheduler() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "ConcurrentExclusiveSchedulerPair", 0, NULL, "get_ExclusiveScheduler", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::Tasks::TaskScheduler(__result__);
@@ -38,7 +38,7 @@ namespace mscorlib
 
 
 				//	Get:Completion
-				mscorlib::System::Threading::Tasks::TaskBase  ConcurrentExclusiveSchedulerPair::get_Completion()
+				mscorlib::System::Threading::Tasks::TaskBase  ConcurrentExclusiveSchedulerPair::get_Completion() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "ConcurrentExclusiveSchedulerPair", 0, NULL, "get_Completion", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::Tasks::TaskBase(__result__);

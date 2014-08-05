@@ -44,7 +44,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:BinaryLength
-				mscorlib::System::Int32  CommonAcl::get_BinaryLength()
+				mscorlib::System::Int32  CommonAcl::get_BinaryLength() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonAcl", 0, NULL, "get_BinaryLength", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -52,7 +52,7 @@ namespace mscorlib
 
 
 				//	Get:Count
-				mscorlib::System::Int32  CommonAcl::get_Count()
+				mscorlib::System::Int32  CommonAcl::get_Count() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonAcl", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -60,7 +60,7 @@ namespace mscorlib
 
 
 				//	Get:IsCanonical
-				mscorlib::System::Boolean  CommonAcl::get_IsCanonical()
+				mscorlib::System::Boolean  CommonAcl::get_IsCanonical() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonAcl", 0, NULL, "get_IsCanonical", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 				//	Get:IsContainer
-				mscorlib::System::Boolean  CommonAcl::get_IsContainer()
+				mscorlib::System::Boolean  CommonAcl::get_IsContainer() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonAcl", 0, NULL, "get_IsContainer", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -76,7 +76,7 @@ namespace mscorlib
 
 
 				//	Get:IsDS
-				mscorlib::System::Boolean  CommonAcl::get_IsDS()
+				mscorlib::System::Boolean  CommonAcl::get_IsDS() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonAcl", 0, NULL, "get_IsDS", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -84,7 +84,7 @@ namespace mscorlib
 
 
 				//	Get:Revision
-				mscorlib::System::Byte  CommonAcl::get_Revision()
+				mscorlib::System::Byte  CommonAcl::get_Revision() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonAcl", 0, NULL, "get_Revision", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Byte(__result__);
@@ -92,7 +92,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Item
-				mscorlib::System::Security::AccessControl::GenericAce  CommonAcl::get_Item(mscorlib::System::Int32 index)
+				mscorlib::System::Security::AccessControl::GenericAce  CommonAcl::get_Item(mscorlib::System::Int32 index) const
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -115,7 +115,7 @@ namespace mscorlib
 
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  CommonAcl::get_IsSynchronized()
+				mscorlib::System::Boolean  CommonAcl::get_IsSynchronized() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAcl", 0, NULL, "get_IsSynchronized", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -123,7 +123,7 @@ namespace mscorlib
 
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  CommonAcl::get_SyncRoot()
+				mscorlib::System::Object  CommonAcl::get_SyncRoot() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAcl", 0, NULL, "get_SyncRoot", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

@@ -79,39 +79,39 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:SoapOptions
-						mscorlib::System::Runtime::Remoting::Metadata::SoapOption::__ENUM__  get_SoapOptions();
+						mscorlib::System::Runtime::Remoting::Metadata::SoapOption::__ENUM__  get_SoapOptions() const;
 						void set_SoapOptions(mscorlib::System::Runtime::Remoting::Metadata::SoapOption::__ENUM__  value);
 
 						//	Get/Set:UseAttribute
-						mscorlib::System::Boolean  get_UseAttribute();
+						mscorlib::System::Boolean  get_UseAttribute() const;
 						void set_UseAttribute(mscorlib::System::Boolean  value);
 
 						//	Get/Set:XmlElementName
-						mscorlib::System::String  get_XmlElementName();
+						mscorlib::System::String  get_XmlElementName() const;
 						void set_XmlElementName(mscorlib::System::String  value);
 
 						//	Get/Set:XmlFieldOrder
-						mscorlib::System::Runtime::Remoting::Metadata::XmlFieldOrderOption::__ENUM__  get_XmlFieldOrder();
+						mscorlib::System::Runtime::Remoting::Metadata::XmlFieldOrderOption::__ENUM__  get_XmlFieldOrder() const;
 						void set_XmlFieldOrder(mscorlib::System::Runtime::Remoting::Metadata::XmlFieldOrderOption::__ENUM__  value);
 
 						//	Get/Set:XmlNamespace
-						mscorlib::System::String  get_XmlNamespace();
+						mscorlib::System::String  get_XmlNamespace() const;
 						void set_XmlNamespace(mscorlib::System::String  value);
 
 						//	Get/Set:XmlTypeName
-						mscorlib::System::String  get_XmlTypeName();
+						mscorlib::System::String  get_XmlTypeName() const;
 						void set_XmlTypeName(mscorlib::System::String  value);
 
 						//	Get/Set:XmlTypeNamespace
-						mscorlib::System::String  get_XmlTypeNamespace();
+						mscorlib::System::String  get_XmlTypeNamespace() const;
 						void set_XmlTypeNamespace(mscorlib::System::String  value);
 
 						//	Get/Set:Embedded
-						mscorlib::System::Boolean  get_Embedded();
+						mscorlib::System::Boolean  get_Embedded() const;
 						void set_Embedded(mscorlib::System::Boolean  value);
 
 						//	Get:TypeId
-						mscorlib::System::Object  get_TypeId();
+						mscorlib::System::Object  get_TypeId() const;
 
 					
 					protected:

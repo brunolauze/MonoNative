@@ -64,11 +64,12 @@ namespace mscorlib
 
 
 							//Public Static Properties
-							static Property<mscorlib::System::String> XsdType;
+							static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDateTime> XsdType;
 
 							//Get Set Static Properties Methods
 							//	Get:XsdType
 							static mscorlib::System::String  get_XsdType();
+							static void set_XsdType(mscorlib::System::String  value);
 
 
 						

@@ -105,7 +105,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:HasValue
-			mscorlib::System::Boolean  get_HasValue()
+			mscorlib::System::Boolean  get_HasValue() const
 			{
 				MonoType *__generic_types__[1];
 				__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -114,7 +114,7 @@ namespace mscorlib
 			}
 
 			//	Get:Value
-			T  get_Value()
+			T  get_Value() const
 			{
 				MonoType *__generic_types__[1];
 				__generic_types__[0] = Global::GetType(typeid(T).name());

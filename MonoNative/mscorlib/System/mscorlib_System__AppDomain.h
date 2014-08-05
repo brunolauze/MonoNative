@@ -197,22 +197,22 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:BaseDirectory
-			mscorlib::System::String  get_BaseDirectory();
+			mscorlib::System::String  get_BaseDirectory() const;
 
 			//	Get:DynamicDirectory
-			mscorlib::System::String  get_DynamicDirectory();
+			mscorlib::System::String  get_DynamicDirectory() const;
 
 			//	Get:Evidence
-			mscorlib::System::Security::Policy::Evidence  get_Evidence();
+			mscorlib::System::Security::Policy::Evidence  get_Evidence() const;
 
 			//	Get:FriendlyName
-			mscorlib::System::String  get_FriendlyName();
+			mscorlib::System::String  get_FriendlyName() const;
 
 			//	Get:RelativeSearchPath
-			mscorlib::System::String  get_RelativeSearchPath();
+			mscorlib::System::String  get_RelativeSearchPath() const;
 
 			//	Get:ShadowCopyFiles
-			mscorlib::System::Boolean  get_ShadowCopyFiles();
+			mscorlib::System::Boolean  get_ShadowCopyFiles() const;
 
 		
 		protected:

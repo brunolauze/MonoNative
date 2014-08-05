@@ -40,7 +40,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:SortId
-			mscorlib::System::Guid  SortVersion::get_SortId()
+			mscorlib::System::Guid  SortVersion::get_SortId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "SortVersion", 0, NULL, "get_SortId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Guid(__result__);
@@ -57,7 +57,7 @@ namespace mscorlib
 
 
 			//	Get/Set:FullVersion
-			mscorlib::System::Int32  SortVersion::get_FullVersion()
+			mscorlib::System::Int32  SortVersion::get_FullVersion() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "SortVersion", 0, NULL, "get_FullVersion", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

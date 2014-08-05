@@ -96,45 +96,45 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Value
-					mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  get_Value();
+					mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  get_Value() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 					//	Get/Set:MarshalCookie
-					mscorlib::System::String  get_MarshalCookie();
+					mscorlib::System::String  get_MarshalCookie() const;
 					void set_MarshalCookie(mscorlib::System::String  value);
 
 					//	Get/Set:MarshalType
-					mscorlib::System::String  get_MarshalType();
+					mscorlib::System::String  get_MarshalType() const;
 					void set_MarshalType(mscorlib::System::String  value);
 
 					//	Get/Set:MarshalTypeRef
-					mscorlib::System::Type  get_MarshalTypeRef();
+					mscorlib::System::Type  get_MarshalTypeRef() const;
 					void set_MarshalTypeRef(mscorlib::System::Type  value);
 
 					//	Get/Set:SafeArrayUserDefinedSubType
-					mscorlib::System::Type  get_SafeArrayUserDefinedSubType();
+					mscorlib::System::Type  get_SafeArrayUserDefinedSubType() const;
 					void set_SafeArrayUserDefinedSubType(mscorlib::System::Type  value);
 
 					//	Get/Set:ArraySubType
-					mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  get_ArraySubType();
+					mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  get_ArraySubType() const;
 					void set_ArraySubType(mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  value);
 
 					//	Get/Set:SafeArraySubType
-					mscorlib::System::Runtime::InteropServices::VarEnum::__ENUM__  get_SafeArraySubType();
+					mscorlib::System::Runtime::InteropServices::VarEnum::__ENUM__  get_SafeArraySubType() const;
 					void set_SafeArraySubType(mscorlib::System::Runtime::InteropServices::VarEnum::__ENUM__  value);
 
 					//	Get/Set:SizeConst
-					mscorlib::System::Int32  get_SizeConst();
+					mscorlib::System::Int32  get_SizeConst() const;
 					void set_SizeConst(mscorlib::System::Int32  value);
 
 					//	Get/Set:IidParameterIndex
-					mscorlib::System::Int32  get_IidParameterIndex();
+					mscorlib::System::Int32  get_IidParameterIndex() const;
 					void set_IidParameterIndex(mscorlib::System::Int32  value);
 
 					//	Get/Set:SizeParamIndex
-					mscorlib::System::Int16  get_SizeParamIndex();
+					mscorlib::System::Int16  get_SizeParamIndex() const;
 					void set_SizeParamIndex(mscorlib::System::Int16  value);
 
 				

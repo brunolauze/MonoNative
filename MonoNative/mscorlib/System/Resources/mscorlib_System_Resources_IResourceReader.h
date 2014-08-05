@@ -29,7 +29,7 @@ namespace mscorlib
 			
 
 				__declspec(property(get=get___mscorlib_System_Resources_IResourceReader, put=set___mscorlib_System_Resources_IResourceReader)) MonoObject *__mscorlib_System_Resources_IResourceReader;
-				MonoObject* get___mscorlib_System_Resources_IResourceReader()
+				MonoObject* get___mscorlib_System_Resources_IResourceReader() const
 				{
 					return IResourceReader::__mscorlib_System_Collections_IEnumerable;
 				}

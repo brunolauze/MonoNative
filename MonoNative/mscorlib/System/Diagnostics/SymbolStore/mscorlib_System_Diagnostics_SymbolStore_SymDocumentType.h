@@ -58,10 +58,11 @@ namespace mscorlib
 
 
 					//Public Static Fields
-					static Property<mscorlib::System::Guid> Text;
+					static Property<mscorlib::System::Guid , mscorlib::System::Diagnostics::SymbolStore::SymDocumentType> Text;
 
 					//	Get/Set:Text
 					static mscorlib::System::Guid  get_Text();
+					static void set_Text(mscorlib::System::Guid  value);
 
 				
 				protected:

@@ -38,7 +38,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:NextSink
-					mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  IMessageSink::get_NextSink()
+					mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  IMessageSink::get_NextSink() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "IMessageSink", 0, NULL, "get_NextSink", __mscorlib_System_Runtime_Remoting_Messaging_IMessageSink, 0, NULL, NULL, NULL);
 						return mscorlib::System::Runtime::Remoting::Messaging::IMessageSink(__result__);

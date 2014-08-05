@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:MajorVersion
-				mscorlib::System::Int32  ComCompatibleVersionAttribute::get_MajorVersion()
+				mscorlib::System::Int32  ComCompatibleVersionAttribute::get_MajorVersion() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ComCompatibleVersionAttribute", 0, NULL, "get_MajorVersion", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:MinorVersion
-				mscorlib::System::Int32  ComCompatibleVersionAttribute::get_MinorVersion()
+				mscorlib::System::Int32  ComCompatibleVersionAttribute::get_MinorVersion() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ComCompatibleVersionAttribute", 0, NULL, "get_MinorVersion", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get:BuildNumber
-				mscorlib::System::Int32  ComCompatibleVersionAttribute::get_BuildNumber()
+				mscorlib::System::Int32  ComCompatibleVersionAttribute::get_BuildNumber() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ComCompatibleVersionAttribute", 0, NULL, "get_BuildNumber", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -40,7 +40,7 @@ namespace mscorlib
 
 
 				//	Get:RevisionNumber
-				mscorlib::System::Int32  ComCompatibleVersionAttribute::get_RevisionNumber()
+				mscorlib::System::Int32  ComCompatibleVersionAttribute::get_RevisionNumber() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ComCompatibleVersionAttribute", 0, NULL, "get_RevisionNumber", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -48,7 +48,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  ComCompatibleVersionAttribute::get_TypeId()
+				mscorlib::System::Object  ComCompatibleVersionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

@@ -76,35 +76,35 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:ResponseXmlElementName
-						mscorlib::System::String  get_ResponseXmlElementName();
+						mscorlib::System::String  get_ResponseXmlElementName() const;
 						void set_ResponseXmlElementName(mscorlib::System::String  value);
 
 						//	Get/Set:ResponseXmlNamespace
-						mscorlib::System::String  get_ResponseXmlNamespace();
+						mscorlib::System::String  get_ResponseXmlNamespace() const;
 						void set_ResponseXmlNamespace(mscorlib::System::String  value);
 
 						//	Get/Set:ReturnXmlElementName
-						mscorlib::System::String  get_ReturnXmlElementName();
+						mscorlib::System::String  get_ReturnXmlElementName() const;
 						void set_ReturnXmlElementName(mscorlib::System::String  value);
 
 						//	Get/Set:SoapAction
-						mscorlib::System::String  get_SoapAction();
+						mscorlib::System::String  get_SoapAction() const;
 						void set_SoapAction(mscorlib::System::String  value);
 
 						//	Get/Set:UseAttribute
-						mscorlib::System::Boolean  get_UseAttribute();
+						mscorlib::System::Boolean  get_UseAttribute() const;
 						void set_UseAttribute(mscorlib::System::Boolean  value);
 
 						//	Get/Set:XmlNamespace
-						mscorlib::System::String  get_XmlNamespace();
+						mscorlib::System::String  get_XmlNamespace() const;
 						void set_XmlNamespace(mscorlib::System::String  value);
 
 						//	Get/Set:Embedded
-						mscorlib::System::Boolean  get_Embedded();
+						mscorlib::System::Boolean  get_Embedded() const;
 						void set_Embedded(mscorlib::System::Boolean  value);
 
 						//	Get:TypeId
-						mscorlib::System::Object  get_TypeId();
+						mscorlib::System::Object  get_TypeId() const;
 
 					
 					protected:

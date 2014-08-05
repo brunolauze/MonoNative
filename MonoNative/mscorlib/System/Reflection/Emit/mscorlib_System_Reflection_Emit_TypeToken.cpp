@@ -42,7 +42,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Token
-				mscorlib::System::Int32  TypeToken::get_Token()
+				mscorlib::System::Int32  TypeToken::get_Token() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "TypeToken", 0, NULL, "get_Token", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -55,6 +55,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Reflection.Emit", "TypeToken", 0, NULL, "Empty");
 				}
 
+				void TypeToken::set_Empty(mscorlib::System::Reflection::Emit::TypeToken  value)
+				{
+					throw;
+				}
 
 
 			}

@@ -79,27 +79,27 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Authenticated
-					mscorlib::System::Boolean  get_Authenticated();
+					mscorlib::System::Boolean  get_Authenticated() const;
 					void set_Authenticated(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 					void set_Name(mscorlib::System::String  value);
 
 					//	Get/Set:Role
-					mscorlib::System::String  get_Role();
+					mscorlib::System::String  get_Role() const;
 					void set_Role(mscorlib::System::String  value);
 
 					//	Get/Set:Unrestricted
-					mscorlib::System::Boolean  get_Unrestricted();
+					mscorlib::System::Boolean  get_Unrestricted() const;
 					void set_Unrestricted(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Action
-					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action();
+					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action() const;
 					void set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

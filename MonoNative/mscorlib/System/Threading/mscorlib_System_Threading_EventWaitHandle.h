@@ -168,11 +168,11 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Handle
-				mscorlib::System::IntPtr  get_Handle();
+				mscorlib::System::IntPtr  get_Handle() const;
 				void set_Handle(mscorlib::System::IntPtr  value);
 
 				//	Get/Set:SafeWaitHandle
-				mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  get_SafeWaitHandle();
+				mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  get_SafeWaitHandle() const;
 				void set_SafeWaitHandle(mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  value);
 
 			

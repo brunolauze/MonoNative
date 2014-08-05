@@ -63,27 +63,27 @@ namespace mscorlib
 					__declspec(property(get=get_wLibFlags, put=set_wLibFlags)) mscorlib::System::Runtime::InteropServices::LIBFLAGS::__ENUM__  wLibFlags;
 
 					//	Get/Set:guid
-					mscorlib::System::Guid  get_guid();
+					mscorlib::System::Guid  get_guid() const;
 					void set_guid(mscorlib::System::Guid  value);
 
 					//	Get/Set:lcid
-					mscorlib::System::Int32  get_lcid();
+					mscorlib::System::Int32  get_lcid() const;
 					void set_lcid(mscorlib::System::Int32  value);
 
 					//	Get/Set:syskind
-					mscorlib::System::Runtime::InteropServices::SYSKIND::__ENUM__  get_syskind();
+					mscorlib::System::Runtime::InteropServices::SYSKIND::__ENUM__  get_syskind() const;
 					void set_syskind(mscorlib::System::Runtime::InteropServices::SYSKIND::__ENUM__  value);
 
 					//	Get/Set:wMajorVerNum
-					mscorlib::System::Int16  get_wMajorVerNum();
+					mscorlib::System::Int16  get_wMajorVerNum() const;
 					void set_wMajorVerNum(mscorlib::System::Int16  value);
 
 					//	Get/Set:wMinorVerNum
-					mscorlib::System::Int16  get_wMinorVerNum();
+					mscorlib::System::Int16  get_wMinorVerNum() const;
 					void set_wMinorVerNum(mscorlib::System::Int16  value);
 
 					//	Get/Set:wLibFlags
-					mscorlib::System::Runtime::InteropServices::LIBFLAGS::__ENUM__  get_wLibFlags();
+					mscorlib::System::Runtime::InteropServices::LIBFLAGS::__ENUM__  get_wLibFlags() const;
 					void set_wLibFlags(mscorlib::System::Runtime::InteropServices::LIBFLAGS::__ENUM__  value);
 
 				

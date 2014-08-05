@@ -99,19 +99,19 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:ApplicationEvidence
-					mscorlib::System::Security::Policy::Evidence  get_ApplicationEvidence();
+					mscorlib::System::Security::Policy::Evidence  get_ApplicationEvidence() const;
 					void set_ApplicationEvidence(mscorlib::System::Security::Policy::Evidence  value);
 
 					//	Get/Set:ApplicationId
-					mscorlib::System::ApplicationId  get_ApplicationId();
+					mscorlib::System::ApplicationId  get_ApplicationId() const;
 					void set_ApplicationId(mscorlib::System::ApplicationId  value);
 
 					//	Get/Set:DefaultRequestSet
-					mscorlib::System::Security::PermissionSet  get_DefaultRequestSet();
+					mscorlib::System::Security::PermissionSet  get_DefaultRequestSet() const;
 					void set_DefaultRequestSet(mscorlib::System::Security::PermissionSet  value);
 
 					//	Get/Set:DeploymentId
-					mscorlib::System::ApplicationId  get_DeploymentId();
+					mscorlib::System::ApplicationId  get_DeploymentId() const;
 					void set_DeploymentId(mscorlib::System::ApplicationId  value);
 
 				

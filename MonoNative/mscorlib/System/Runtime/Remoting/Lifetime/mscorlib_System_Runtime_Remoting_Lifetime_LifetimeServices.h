@@ -60,10 +60,10 @@ namespace mscorlib
 
 
 						//Public Static Properties
-						static Property<mscorlib::System::TimeSpan> LeaseManagerPollTime;
-						static Property<mscorlib::System::TimeSpan> LeaseTime;
-						static Property<mscorlib::System::TimeSpan> RenewOnCallTime;
-						static Property<mscorlib::System::TimeSpan> SponsorshipTimeout;
+						static Property<mscorlib::System::TimeSpan , mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices> LeaseManagerPollTime;
+						static Property<mscorlib::System::TimeSpan , mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices> LeaseTime;
+						static Property<mscorlib::System::TimeSpan , mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices> RenewOnCallTime;
+						static Property<mscorlib::System::TimeSpan , mscorlib::System::Runtime::Remoting::Lifetime::LifetimeServices> SponsorshipTimeout;
 
 						//Get Set Static Properties Methods
 						//	Get/Set:LeaseManagerPollTime

@@ -3294,6 +3294,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "Convert", 0, NULL, "DBNull");
 		}
 
+		void Convert::set_DBNull(mscorlib::System::Object  value)
+		{
+			throw;
+		}
 
 
 	}

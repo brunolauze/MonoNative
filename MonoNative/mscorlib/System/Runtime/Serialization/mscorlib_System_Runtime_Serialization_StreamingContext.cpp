@@ -32,7 +32,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Context
-				mscorlib::System::Object  StreamingContext::get_Context()
+				mscorlib::System::Object  StreamingContext::get_Context() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "StreamingContext", 0, NULL, "get_Context", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -40,7 +40,7 @@ namespace mscorlib
 
 
 				//	Get:State
-				mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__  StreamingContext::get_State()
+				mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__  StreamingContext::get_State() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "StreamingContext", 0, NULL, "get_State", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__*)mono_object_unbox(__result__);

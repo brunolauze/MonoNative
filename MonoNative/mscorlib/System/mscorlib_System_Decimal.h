@@ -3,12 +3,12 @@
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
-#include <mscorlib/System/mscorlib_System_IConvertible.h>
-#include <mscorlib/System/mscorlib_System_IComparable.h>
-#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
+#include <mscorlib/System/mscorlib_System_IConvertible.h>
+#include <mscorlib/System/mscorlib_System_IComparable.h>
+#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_TypeCode.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
@@ -34,22 +34,22 @@ namespace mscorlib
 
 		class Decimal
 			: public mscorlib::System::ValueType
-			, public virtual mscorlib::System::IConvertible
-			, public virtual mscorlib::System::IObjectComparable
-			, public virtual mscorlib::System::IFormattable
 			, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 			, public virtual mscorlib::System::IComparable<mscorlib::System::Decimal>
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::Decimal>
+			, public virtual mscorlib::System::IConvertible
+			, public virtual mscorlib::System::IObjectComparable
+			, public virtual mscorlib::System::IFormattable
 		{
 		public:
 			Decimal(mscorlib::System::Int32 lo, mscorlib::System::Int32 mid, mscorlib::System::Int32 hi, mscorlib::System::Boolean isNegative, mscorlib::System::Byte scale)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Decimal"))
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[5];
 				void *__parameters__[5];
@@ -68,12 +68,12 @@ namespace mscorlib
 		
 			Decimal(mscorlib::System::Int32 value)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Decimal"))
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -84,12 +84,12 @@ namespace mscorlib
 		
 			Decimal(mscorlib::System::UInt32 value)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Decimal"))
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -100,12 +100,12 @@ namespace mscorlib
 		
 			Decimal(mscorlib::System::Int64 value)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Decimal"))
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -116,12 +116,12 @@ namespace mscorlib
 		
 			Decimal(mscorlib::System::UInt64 value)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Decimal"))
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -132,12 +132,12 @@ namespace mscorlib
 		
 			Decimal(mscorlib::System::Single value)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Decimal"))
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -148,12 +148,12 @@ namespace mscorlib
 		
 			Decimal(mscorlib::System::Double value)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Decimal"))
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -164,12 +164,12 @@ namespace mscorlib
 		
 			Decimal(std::vector<mscorlib::System::Int32*> bits)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Decimal"))
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -180,23 +180,23 @@ namespace mscorlib
 		
 			Decimal(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
-			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(NULL)
+			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 			};
 		
 			Decimal(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
-			, mscorlib::System::IConvertible(nativeObject)
-			, mscorlib::System::IObjectComparable(nativeObject)
-			, mscorlib::System::IFormattable(nativeObject)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::Decimal>(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::Decimal>(nativeObject)
+			, mscorlib::System::IConvertible(nativeObject)
+			, mscorlib::System::IObjectComparable(nativeObject)
+			, mscorlib::System::IFormattable(nativeObject)
 			{
 			};
 		
@@ -258,26 +258,31 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::Decimal> MinValue;
-			static Property<mscorlib::System::Decimal> MaxValue;
-			static Property<mscorlib::System::Decimal> MinusOne;
-			static Property<mscorlib::System::Decimal> One;
-			static Property<mscorlib::System::Decimal> Zero;
+			static Property<mscorlib::System::Decimal , mscorlib::System::Decimal> MinValue;
+			static Property<mscorlib::System::Decimal , mscorlib::System::Decimal> MaxValue;
+			static Property<mscorlib::System::Decimal , mscorlib::System::Decimal> MinusOne;
+			static Property<mscorlib::System::Decimal , mscorlib::System::Decimal> One;
+			static Property<mscorlib::System::Decimal , mscorlib::System::Decimal> Zero;
 
 			//	Get/Set:MinValue
 			static mscorlib::System::Decimal  get_MinValue();
+			static void set_MinValue(mscorlib::System::Decimal  value);
 
 			//	Get/Set:MaxValue
 			static mscorlib::System::Decimal  get_MaxValue();
+			static void set_MaxValue(mscorlib::System::Decimal  value);
 
 			//	Get/Set:MinusOne
 			static mscorlib::System::Decimal  get_MinusOne();
+			static void set_MinusOne(mscorlib::System::Decimal  value);
 
 			//	Get/Set:One
 			static mscorlib::System::Decimal  get_One();
+			static void set_One(mscorlib::System::Decimal  value);
 
 			//	Get/Set:Zero
 			static mscorlib::System::Decimal  get_Zero();
+			static void set_Zero(mscorlib::System::Decimal  value);
 
 		
 		protected:

@@ -80,10 +80,10 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Form
-			mscorlib::System::ActivationContext::ContextForm::__ENUM__  get_Form();
+			mscorlib::System::ActivationContext::ContextForm::__ENUM__  get_Form() const;
 
 			//	Get:Identity
-			mscorlib::System::ApplicationIdentity  get_Identity();
+			mscorlib::System::ApplicationIdentity  get_Identity() const;
 
 		
 		protected:

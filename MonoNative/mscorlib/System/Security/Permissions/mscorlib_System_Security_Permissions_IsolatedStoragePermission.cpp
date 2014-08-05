@@ -38,7 +38,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:UserQuota
-				mscorlib::System::Int64  IsolatedStoragePermission::get_UserQuota()
+				mscorlib::System::Int64  IsolatedStoragePermission::get_UserQuota() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "IsolatedStoragePermission", 0, NULL, "get_UserQuota", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -55,7 +55,7 @@ namespace mscorlib
 
 
 				//	Get/Set:UsageAllowed
-				mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  IsolatedStoragePermission::get_UsageAllowed()
+				mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  IsolatedStoragePermission::get_UsageAllowed() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "IsolatedStoragePermission", 0, NULL, "get_UsageAllowed", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__*)mono_object_unbox(__result__);

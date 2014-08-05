@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_GLOBALIZATION_DATETIMEFORMATINFO_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
+#include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/mscorlib_System_DayOfWeek.h>
 #include <mscorlib/System/Globalization/mscorlib_System_Globalization_CalendarWeekRule.h>
 
@@ -40,29 +40,29 @@ namespace mscorlib
 
 			class DateTimeFormatInfo
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::IFormatProvider
 				, public virtual mscorlib::System::ICloneable
+				, public virtual mscorlib::System::IFormatProvider
 			{
 			public:
 				DateTimeFormatInfo()
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Globalization.DateTimeFormatInfo"))
-				, mscorlib::System::IFormatProvider(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::IFormatProvider(NULL)
 				{
 					__native_object__ = Global::New("mscorlib", "System.Globalization", "DateTimeFormatInfo");
 				};
 			
 				DateTimeFormatInfo(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::IFormatProvider(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::IFormatProvider(NULL)
 				{
 				};
 			
 				DateTimeFormatInfo(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::IFormatProvider(nativeObject)
 				, mscorlib::System::ICloneable(nativeObject)
+				, mscorlib::System::IFormatProvider(nativeObject)
 				{
 				};
 			
@@ -123,115 +123,117 @@ namespace mscorlib
 				__declspec(property(get=get_UniversalSortableDateTimePattern)) mscorlib::System::String  UniversalSortableDateTimePattern;
 
 				//Public Static Properties
-				static Property<mscorlib::System::Globalization::DateTimeFormatInfo> CurrentInfo;
-				static Property<mscorlib::System::Globalization::DateTimeFormatInfo> InvariantInfo;
+				static Property<mscorlib::System::Globalization::DateTimeFormatInfo , mscorlib::System::Globalization::DateTimeFormatInfo> CurrentInfo;
+				static Property<mscorlib::System::Globalization::DateTimeFormatInfo , mscorlib::System::Globalization::DateTimeFormatInfo> InvariantInfo;
 
 				//Get Set Properties Methods
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get/Set:AbbreviatedDayNames
-				std::vector<mscorlib::System::String*>  get_AbbreviatedDayNames();
+				std::vector<mscorlib::System::String*>  get_AbbreviatedDayNames() const;
 				void set_AbbreviatedDayNames(std::vector<mscorlib::System::String*>  value);
 
 				//	Get/Set:AbbreviatedMonthNames
-				std::vector<mscorlib::System::String*>  get_AbbreviatedMonthNames();
+				std::vector<mscorlib::System::String*>  get_AbbreviatedMonthNames() const;
 				void set_AbbreviatedMonthNames(std::vector<mscorlib::System::String*>  value);
 
 				//	Get/Set:DayNames
-				std::vector<mscorlib::System::String*>  get_DayNames();
+				std::vector<mscorlib::System::String*>  get_DayNames() const;
 				void set_DayNames(std::vector<mscorlib::System::String*>  value);
 
 				//	Get/Set:MonthNames
-				std::vector<mscorlib::System::String*>  get_MonthNames();
+				std::vector<mscorlib::System::String*>  get_MonthNames() const;
 				void set_MonthNames(std::vector<mscorlib::System::String*>  value);
 
 				//	Get/Set:AbbreviatedMonthGenitiveNames
-				std::vector<mscorlib::System::String*>  get_AbbreviatedMonthGenitiveNames();
+				std::vector<mscorlib::System::String*>  get_AbbreviatedMonthGenitiveNames() const;
 				void set_AbbreviatedMonthGenitiveNames(std::vector<mscorlib::System::String*>  value);
 
 				//	Get/Set:MonthGenitiveNames
-				std::vector<mscorlib::System::String*>  get_MonthGenitiveNames();
+				std::vector<mscorlib::System::String*>  get_MonthGenitiveNames() const;
 				void set_MonthGenitiveNames(std::vector<mscorlib::System::String*>  value);
 
 				//	Get:NativeCalendarName
-				mscorlib::System::String  get_NativeCalendarName();
+				mscorlib::System::String  get_NativeCalendarName() const;
 
 				//	Get/Set:ShortestDayNames
-				std::vector<mscorlib::System::String*>  get_ShortestDayNames();
+				std::vector<mscorlib::System::String*>  get_ShortestDayNames() const;
 				void set_ShortestDayNames(std::vector<mscorlib::System::String*>  value);
 
 				//	Get/Set:AMDesignator
-				mscorlib::System::String  get_AMDesignator();
+				mscorlib::System::String  get_AMDesignator() const;
 				void set_AMDesignator(mscorlib::System::String  value);
 
 				//	Get/Set:PMDesignator
-				mscorlib::System::String  get_PMDesignator();
+				mscorlib::System::String  get_PMDesignator() const;
 				void set_PMDesignator(mscorlib::System::String  value);
 
 				//	Get/Set:DateSeparator
-				mscorlib::System::String  get_DateSeparator();
+				mscorlib::System::String  get_DateSeparator() const;
 				void set_DateSeparator(mscorlib::System::String  value);
 
 				//	Get/Set:TimeSeparator
-				mscorlib::System::String  get_TimeSeparator();
+				mscorlib::System::String  get_TimeSeparator() const;
 				void set_TimeSeparator(mscorlib::System::String  value);
 
 				//	Get/Set:LongDatePattern
-				mscorlib::System::String  get_LongDatePattern();
+				mscorlib::System::String  get_LongDatePattern() const;
 				void set_LongDatePattern(mscorlib::System::String  value);
 
 				//	Get/Set:ShortDatePattern
-				mscorlib::System::String  get_ShortDatePattern();
+				mscorlib::System::String  get_ShortDatePattern() const;
 				void set_ShortDatePattern(mscorlib::System::String  value);
 
 				//	Get/Set:ShortTimePattern
-				mscorlib::System::String  get_ShortTimePattern();
+				mscorlib::System::String  get_ShortTimePattern() const;
 				void set_ShortTimePattern(mscorlib::System::String  value);
 
 				//	Get/Set:LongTimePattern
-				mscorlib::System::String  get_LongTimePattern();
+				mscorlib::System::String  get_LongTimePattern() const;
 				void set_LongTimePattern(mscorlib::System::String  value);
 
 				//	Get/Set:MonthDayPattern
-				mscorlib::System::String  get_MonthDayPattern();
+				mscorlib::System::String  get_MonthDayPattern() const;
 				void set_MonthDayPattern(mscorlib::System::String  value);
 
 				//	Get/Set:YearMonthPattern
-				mscorlib::System::String  get_YearMonthPattern();
+				mscorlib::System::String  get_YearMonthPattern() const;
 				void set_YearMonthPattern(mscorlib::System::String  value);
 
 				//	Get/Set:FullDateTimePattern
-				mscorlib::System::String  get_FullDateTimePattern();
+				mscorlib::System::String  get_FullDateTimePattern() const;
 				void set_FullDateTimePattern(mscorlib::System::String  value);
 
 				//	Get/Set:FirstDayOfWeek
-				mscorlib::System::DayOfWeek::__ENUM__  get_FirstDayOfWeek();
+				mscorlib::System::DayOfWeek::__ENUM__  get_FirstDayOfWeek() const;
 				void set_FirstDayOfWeek(mscorlib::System::DayOfWeek::__ENUM__  value);
 
 				//	Get/Set:Calendar
-				mscorlib::System::Globalization::Calendar  get_Calendar();
+				mscorlib::System::Globalization::Calendar  get_Calendar() const;
 				void set_Calendar(mscorlib::System::Globalization::Calendar  value);
 
 				//	Get/Set:CalendarWeekRule
-				mscorlib::System::Globalization::CalendarWeekRule::__ENUM__  get_CalendarWeekRule();
+				mscorlib::System::Globalization::CalendarWeekRule::__ENUM__  get_CalendarWeekRule() const;
 				void set_CalendarWeekRule(mscorlib::System::Globalization::CalendarWeekRule::__ENUM__  value);
 
 				//	Get:RFC1123Pattern
-				mscorlib::System::String  get_RFC1123Pattern();
+				mscorlib::System::String  get_RFC1123Pattern() const;
 
 				//	Get:SortableDateTimePattern
-				mscorlib::System::String  get_SortableDateTimePattern();
+				mscorlib::System::String  get_SortableDateTimePattern() const;
 
 				//	Get:UniversalSortableDateTimePattern
-				mscorlib::System::String  get_UniversalSortableDateTimePattern();
+				mscorlib::System::String  get_UniversalSortableDateTimePattern() const;
 
 				//Get Set Static Properties Methods
 				//	Get:CurrentInfo
 				static mscorlib::System::Globalization::DateTimeFormatInfo  get_CurrentInfo();
+				static void set_CurrentInfo(mscorlib::System::Globalization::DateTimeFormatInfo  value);
 
 				//	Get:InvariantInfo
 				static mscorlib::System::Globalization::DateTimeFormatInfo  get_InvariantInfo();
+				static void set_InvariantInfo(mscorlib::System::Globalization::DateTimeFormatInfo  value);
 
 
 			

@@ -75,7 +75,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:WrappedObject
-					mscorlib::System::String  get_WrappedObject();
+					mscorlib::System::String  get_WrappedObject() const;
 
 				
 				protected:

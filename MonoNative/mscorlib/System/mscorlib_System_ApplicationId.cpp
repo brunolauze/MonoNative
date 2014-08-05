@@ -40,7 +40,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Culture
-		mscorlib::System::String  ApplicationId::get_Culture()
+		mscorlib::System::String  ApplicationId::get_Culture() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ApplicationId", 0, NULL, "get_Culture", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -48,7 +48,7 @@ namespace mscorlib
 
 
 		//	Get:Name
-		mscorlib::System::String  ApplicationId::get_Name()
+		mscorlib::System::String  ApplicationId::get_Name() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ApplicationId", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 		//	Get:ProcessorArchitecture
-		mscorlib::System::String  ApplicationId::get_ProcessorArchitecture()
+		mscorlib::System::String  ApplicationId::get_ProcessorArchitecture() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ApplicationId", 0, NULL, "get_ProcessorArchitecture", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 		//	Get:PublicKeyToken
-		std::vector<mscorlib::System::Byte*>  ApplicationId::get_PublicKeyToken()
+		std::vector<mscorlib::System::Byte*>  ApplicationId::get_PublicKeyToken() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ApplicationId", 0, NULL, "get_PublicKeyToken", __native_object__, 0, NULL, NULL, NULL);
 			MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 		//	Get:Version
-		mscorlib::System::Version  ApplicationId::get_Version()
+		mscorlib::System::Version  ApplicationId::get_Version() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ApplicationId", 0, NULL, "get_Version", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Version(__result__);

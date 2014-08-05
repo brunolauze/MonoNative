@@ -196,10 +196,11 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::Guid> Empty;
+			static Property<mscorlib::System::Guid , mscorlib::System::Guid> Empty;
 
 			//	Get/Set:Empty
 			static mscorlib::System::Guid  get_Empty();
+			static void set_Empty(mscorlib::System::Guid  value);
 
 		
 		protected:

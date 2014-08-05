@@ -63,7 +63,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:HashName
-				mscorlib::System::String  PasswordDeriveBytes::get_HashName()
+				mscorlib::System::String  PasswordDeriveBytes::get_HashName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 0, NULL, "get_HashName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 				//	Get/Set:IterationCount
-				mscorlib::System::Int32  PasswordDeriveBytes::get_IterationCount()
+				mscorlib::System::Int32  PasswordDeriveBytes::get_IterationCount() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 0, NULL, "get_IterationCount", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -97,7 +97,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Salt
-				std::vector<mscorlib::System::Byte*>  PasswordDeriveBytes::get_Salt()
+				std::vector<mscorlib::System::Byte*>  PasswordDeriveBytes::get_Salt() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 0, NULL, "get_Salt", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;

@@ -19,7 +19,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:memid
-					mscorlib::System::Int32 VARDESC::get_memid()
+					mscorlib::System::Int32 VARDESC::get_memid() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "memid");
 					}
@@ -29,7 +29,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:lpstrSchema
-					mscorlib::System::String VARDESC::get_lpstrSchema()
+					mscorlib::System::String VARDESC::get_lpstrSchema() const
 					{
 						return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "lpstrSchema"));
 					}
@@ -39,7 +39,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:desc
-					mscorlib::System::Runtime::InteropServices::ComTypes::VARDESC::DESCUNION VARDESC::get_desc()
+					mscorlib::System::Runtime::InteropServices::ComTypes::VARDESC::DESCUNION VARDESC::get_desc() const
 					{
 						return Global::GetFieldValue(__native_object__, "desc");
 					}
@@ -49,7 +49,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:elemdescVar
-					mscorlib::System::Runtime::InteropServices::ComTypes::ELEMDESC VARDESC::get_elemdescVar()
+					mscorlib::System::Runtime::InteropServices::ComTypes::ELEMDESC VARDESC::get_elemdescVar() const
 					{
 						return Global::GetFieldValue(__native_object__, "elemdescVar");
 					}
@@ -59,7 +59,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wVarFlags
-					mscorlib::System::Int16 VARDESC::get_wVarFlags()
+					mscorlib::System::Int16 VARDESC::get_wVarFlags() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "wVarFlags");
 					}
@@ -69,7 +69,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:varkind
-					mscorlib::System::Runtime::InteropServices::ComTypes::VARKIND::__ENUM__ VARDESC::get_varkind()
+					mscorlib::System::Runtime::InteropServices::ComTypes::VARKIND::__ENUM__ VARDESC::get_varkind() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::VARKIND::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "varkind"));
 					}
@@ -81,7 +81,7 @@ namespace mscorlib
 					//DESCUNION Nested Type Implementation
 					//Public Methods
 					//	Get/Set:lpvarValue
-					mscorlib::System::IntPtr VARDESC::DESCUNION::get_lpvarValue()
+					mscorlib::System::IntPtr VARDESC::DESCUNION::get_lpvarValue() const
 					{
 						return Global::GetFieldValue(__native_object__, "lpvarValue");
 					}
@@ -91,7 +91,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:oInst
-					mscorlib::System::Int32 VARDESC::DESCUNION::get_oInst()
+					mscorlib::System::Int32 VARDESC::DESCUNION::get_oInst() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "oInst");
 					}

@@ -18,7 +18,7 @@ namespace mscorlib
 
 				//Public Methods
 				//	Get/Set:tdesc
-				mscorlib::System::Runtime::InteropServices::TYPEDESC ELEMDESC::get_tdesc()
+				mscorlib::System::Runtime::InteropServices::TYPEDESC ELEMDESC::get_tdesc() const
 				{
 					return Global::GetFieldValue(__native_object__, "tdesc");
 				}
@@ -28,7 +28,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:desc
-				mscorlib::System::Runtime::InteropServices::ELEMDESC::DESCUNION ELEMDESC::get_desc()
+				mscorlib::System::Runtime::InteropServices::ELEMDESC::DESCUNION ELEMDESC::get_desc() const
 				{
 					return Global::GetFieldValue(__native_object__, "desc");
 				}
@@ -40,7 +40,7 @@ namespace mscorlib
 				//DESCUNION Nested Type Implementation
 				//Public Methods
 				//	Get/Set:idldesc
-				mscorlib::System::Runtime::InteropServices::IDLDESC ELEMDESC::DESCUNION::get_idldesc()
+				mscorlib::System::Runtime::InteropServices::IDLDESC ELEMDESC::DESCUNION::get_idldesc() const
 				{
 					return Global::GetFieldValue(__native_object__, "idldesc");
 				}
@@ -50,7 +50,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:paramdesc
-				mscorlib::System::Runtime::InteropServices::PARAMDESC ELEMDESC::DESCUNION::get_paramdesc()
+				mscorlib::System::Runtime::InteropServices::PARAMDESC ELEMDESC::DESCUNION::get_paramdesc() const
 				{
 					return Global::GetFieldValue(__native_object__, "paramdesc");
 				}

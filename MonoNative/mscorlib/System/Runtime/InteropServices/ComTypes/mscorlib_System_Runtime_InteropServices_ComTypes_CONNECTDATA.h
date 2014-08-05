@@ -58,11 +58,11 @@ namespace mscorlib
 						__declspec(property(get=get_dwCookie, put=set_dwCookie)) mscorlib::System::Int32  dwCookie;
 
 						//	Get/Set:pUnk
-						mscorlib::System::Object  get_pUnk();
+						mscorlib::System::Object  get_pUnk() const;
 						void set_pUnk(mscorlib::System::Object  value);
 
 						//	Get/Set:dwCookie
-						mscorlib::System::Int32  get_dwCookie();
+						mscorlib::System::Int32  get_dwCookie() const;
 						void set_dwCookie(mscorlib::System::Int32  value);
 
 					

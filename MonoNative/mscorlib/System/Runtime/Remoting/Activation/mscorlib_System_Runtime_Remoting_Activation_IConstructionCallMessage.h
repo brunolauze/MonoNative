@@ -1,9 +1,9 @@
 #ifndef __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_ACTIVATION_ICONSTRUCTIONCALLMESSAGE_H
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_ACTIVATION_ICONSTRUCTIONCALLMESSAGE_H
 
+#include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessage.h>
-#include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IList.h>
 
@@ -49,15 +49,15 @@ namespace mscorlib
 				{
 
 					class IConstructionCallMessage
-						: public virtual mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage
+						: public virtual mscorlib::System::Runtime::Remoting::Messaging::IMethodCallMessage
+						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage
 						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMessage
-						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMethodCallMessage
 					{
 					public:
 						IConstructionCallMessage(MonoObject *nativeObject)
-						: mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage(nativeObject)
+						: mscorlib::System::Runtime::Remoting::Messaging::IMethodCallMessage(nativeObject)
+						, mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMessage(nativeObject)
-						, mscorlib::System::Runtime::Remoting::Messaging::IMethodCallMessage(nativeObject)
 						{
 						};
 					
@@ -67,7 +67,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage, put=set___mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage)) MonoObject *__mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage() const
 						{
 							return IConstructionCallMessage::__mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage;
 						}
@@ -91,20 +91,20 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:ActivationType
-						mscorlib::System::Type  get_ActivationType();
+						mscorlib::System::Type  get_ActivationType() const;
 
 						//	Get:ActivationTypeName
-						mscorlib::System::String  get_ActivationTypeName();
+						mscorlib::System::String  get_ActivationTypeName() const;
 
 						//	Get/Set:Activator
-						mscorlib::System::Runtime::Remoting::Activation::IActivator  get_Activator();
+						mscorlib::System::Runtime::Remoting::Activation::IActivator  get_Activator() const;
 						void set_Activator(mscorlib::System::Runtime::Remoting::Activation::IActivator  value);
 
 						//	Get:CallSiteActivationAttributes
-						std::vector<mscorlib::System::Object*>  get_CallSiteActivationAttributes();
+						std::vector<mscorlib::System::Object*>  get_CallSiteActivationAttributes() const;
 
 						//	Get:ContextProperties
-						mscorlib::System::Collections::IList  get_ContextProperties();
+						mscorlib::System::Collections::IList  get_ContextProperties() const;
 
 					
 					protected:

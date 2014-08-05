@@ -70,7 +70,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:SupportsDynamicPartitions
-					mscorlib::System::Boolean  get_SupportsDynamicPartitions()
+					mscorlib::System::Boolean  get_SupportsDynamicPartitions() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(TSource).name());

@@ -69,23 +69,23 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Exclude
-				mscorlib::System::Boolean  get_Exclude();
+				mscorlib::System::Boolean  get_Exclude() const;
 				void set_Exclude(mscorlib::System::Boolean  value);
 
 				//	Get/Set:StripAfterObfuscation
-				mscorlib::System::Boolean  get_StripAfterObfuscation();
+				mscorlib::System::Boolean  get_StripAfterObfuscation() const;
 				void set_StripAfterObfuscation(mscorlib::System::Boolean  value);
 
 				//	Get/Set:ApplyToMembers
-				mscorlib::System::Boolean  get_ApplyToMembers();
+				mscorlib::System::Boolean  get_ApplyToMembers() const;
 				void set_ApplyToMembers(mscorlib::System::Boolean  value);
 
 				//	Get/Set:Feature
-				mscorlib::System::String  get_Feature();
+				mscorlib::System::String  get_Feature() const;
 				void set_Feature(mscorlib::System::String  value);
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

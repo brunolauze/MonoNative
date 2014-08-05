@@ -87,13 +87,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ConsumptionScope
-					mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  get_ConsumptionScope();
+					mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  get_ConsumptionScope() const;
 
 					//	Get:ResourceScope
-					mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  get_ResourceScope();
+					mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  get_ResourceScope() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

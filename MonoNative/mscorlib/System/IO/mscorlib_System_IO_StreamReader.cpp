@@ -116,7 +116,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:BaseStream
-			mscorlib::System::IO::Stream  StreamReader::get_BaseStream()
+			mscorlib::System::IO::Stream  StreamReader::get_BaseStream() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamReader", 0, NULL, "get_BaseStream", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IO::Stream(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 			//	Get:CurrentEncoding
-			mscorlib::System::Text::Encoding  StreamReader::get_CurrentEncoding()
+			mscorlib::System::Text::Encoding  StreamReader::get_CurrentEncoding() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamReader", 0, NULL, "get_CurrentEncoding", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Text::Encoding(__result__);
@@ -132,7 +132,7 @@ namespace mscorlib
 
 
 			//	Get:EndOfStream
-			mscorlib::System::Boolean  StreamReader::get_EndOfStream()
+			mscorlib::System::Boolean  StreamReader::get_EndOfStream() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamReader", 0, NULL, "get_EndOfStream", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -145,6 +145,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "System.IO", "StreamReader", 0, NULL, "Null");
 			}
 
+			void StreamReader::set_Null(mscorlib::System::IO::StreamReader  value)
+			{
+				throw;
+			}
 
 
 		}

@@ -30,7 +30,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Detail
-					mscorlib::System::Object  SoapFault::get_Detail()
+					mscorlib::System::Object  SoapFault::get_Detail() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapFault", 0, NULL, "get_Detail", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);
@@ -47,7 +47,7 @@ namespace mscorlib
 
 
 					//	Get/Set:FaultActor
-					mscorlib::System::String  SoapFault::get_FaultActor()
+					mscorlib::System::String  SoapFault::get_FaultActor() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapFault", 0, NULL, "get_FaultActor", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 					//	Get/Set:FaultCode
-					mscorlib::System::String  SoapFault::get_FaultCode()
+					mscorlib::System::String  SoapFault::get_FaultCode() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapFault", 0, NULL, "get_FaultCode", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -81,7 +81,7 @@ namespace mscorlib
 
 
 					//	Get/Set:FaultString
-					mscorlib::System::String  SoapFault::get_FaultString()
+					mscorlib::System::String  SoapFault::get_FaultString() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapFault", 0, NULL, "get_FaultString", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);

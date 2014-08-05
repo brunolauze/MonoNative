@@ -447,14 +447,16 @@ namespace mscorlib
 
 
 					//Public Static Fields
-					static Property<mscorlib::System::Int32> SystemMaxDBCSCharSize;
-					static Property<mscorlib::System::Int32> SystemDefaultCharSize;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Runtime::InteropServices::Marshal> SystemMaxDBCSCharSize;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Runtime::InteropServices::Marshal> SystemDefaultCharSize;
 
 					//	Get/Set:SystemMaxDBCSCharSize
 					static mscorlib::System::Int32  get_SystemMaxDBCSCharSize();
+					static void set_SystemMaxDBCSCharSize(mscorlib::System::Int32  value);
 
 					//	Get/Set:SystemDefaultCharSize
 					static mscorlib::System::Int32  get_SystemDefaultCharSize();
+					static void set_SystemDefaultCharSize(mscorlib::System::Int32  value);
 
 				
 				protected:

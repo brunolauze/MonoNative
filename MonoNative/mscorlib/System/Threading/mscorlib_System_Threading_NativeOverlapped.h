@@ -58,23 +58,23 @@ namespace mscorlib
 				__declspec(property(get=get_EventHandle, put=set_EventHandle)) mscorlib::System::IntPtr  EventHandle;
 
 				//	Get/Set:InternalLow
-				mscorlib::System::IntPtr  get_InternalLow();
+				mscorlib::System::IntPtr  get_InternalLow() const;
 				void set_InternalLow(mscorlib::System::IntPtr  value);
 
 				//	Get/Set:InternalHigh
-				mscorlib::System::IntPtr  get_InternalHigh();
+				mscorlib::System::IntPtr  get_InternalHigh() const;
 				void set_InternalHigh(mscorlib::System::IntPtr  value);
 
 				//	Get/Set:OffsetLow
-				mscorlib::System::Int32  get_OffsetLow();
+				mscorlib::System::Int32  get_OffsetLow() const;
 				void set_OffsetLow(mscorlib::System::Int32  value);
 
 				//	Get/Set:OffsetHigh
-				mscorlib::System::Int32  get_OffsetHigh();
+				mscorlib::System::Int32  get_OffsetHigh() const;
 				void set_OffsetHigh(mscorlib::System::Int32  value);
 
 				//	Get/Set:EventHandle
-				mscorlib::System::IntPtr  get_EventHandle();
+				mscorlib::System::IntPtr  get_EventHandle() const;
 				void set_EventHandle(mscorlib::System::IntPtr  value);
 
 			

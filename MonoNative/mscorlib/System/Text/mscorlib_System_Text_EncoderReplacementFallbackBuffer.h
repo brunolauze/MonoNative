@@ -70,7 +70,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Remaining
-				mscorlib::System::Int32  get_Remaining();
+				mscorlib::System::Int32  get_Remaining() const;
 
 			
 			protected:

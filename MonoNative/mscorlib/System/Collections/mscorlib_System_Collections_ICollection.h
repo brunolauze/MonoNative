@@ -36,7 +36,7 @@ namespace mscorlib
 			
 
 				__declspec(property(get=get___mscorlib_System_Collections_ICollection, put=set___mscorlib_System_Collections_ICollection)) MonoObject *__mscorlib_System_Collections_ICollection;
-				MonoObject* get___mscorlib_System_Collections_ICollection()
+				MonoObject* get___mscorlib_System_Collections_ICollection() const
 				{
 					return ICollection::__mscorlib_System_Collections_IEnumerable;
 				}
@@ -59,13 +59,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  get_Count();
+				mscorlib::System::Int32  get_Count() const;
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  get_IsSynchronized();
+				mscorlib::System::Boolean  get_IsSynchronized() const;
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  get_SyncRoot();
+				mscorlib::System::Object  get_SyncRoot() const;
 
 			
 			protected:

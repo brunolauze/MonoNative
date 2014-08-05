@@ -122,70 +122,70 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Attributes
-					mscorlib::System::Reflection::MethodAttributes::__ENUM__  get_Attributes();
+					mscorlib::System::Reflection::MethodAttributes::__ENUM__  get_Attributes() const;
 
 					//	Get:CallingConvention
-					mscorlib::System::Reflection::CallingConventions::__ENUM__  get_CallingConvention();
+					mscorlib::System::Reflection::CallingConventions::__ENUM__  get_CallingConvention() const;
 
 					//	Get:DeclaringType
-					mscorlib::System::Type  get_DeclaringType();
+					mscorlib::System::Type  get_DeclaringType() const;
 
 					//	Get:IsAbstract
-					mscorlib::System::Boolean  get_IsAbstract();
+					mscorlib::System::Boolean  get_IsAbstract() const;
 
 					//	Get:IsAssembly
-					mscorlib::System::Boolean  get_IsAssembly();
+					mscorlib::System::Boolean  get_IsAssembly() const;
 
 					//	Get:IsConstructor
-					mscorlib::System::Boolean  get_IsConstructor();
+					mscorlib::System::Boolean  get_IsConstructor() const;
 
 					//	Get:IsFamily
-					mscorlib::System::Boolean  get_IsFamily();
+					mscorlib::System::Boolean  get_IsFamily() const;
 
 					//	Get:IsFamilyAndAssembly
-					mscorlib::System::Boolean  get_IsFamilyAndAssembly();
+					mscorlib::System::Boolean  get_IsFamilyAndAssembly() const;
 
 					//	Get:IsFamilyOrAssembly
-					mscorlib::System::Boolean  get_IsFamilyOrAssembly();
+					mscorlib::System::Boolean  get_IsFamilyOrAssembly() const;
 
 					//	Get:IsFinal
-					mscorlib::System::Boolean  get_IsFinal();
+					mscorlib::System::Boolean  get_IsFinal() const;
 
 					//	Get:IsHideBySig
-					mscorlib::System::Boolean  get_IsHideBySig();
+					mscorlib::System::Boolean  get_IsHideBySig() const;
 
 					//	Get:IsPrivate
-					mscorlib::System::Boolean  get_IsPrivate();
+					mscorlib::System::Boolean  get_IsPrivate() const;
 
 					//	Get:IsPublic
-					mscorlib::System::Boolean  get_IsPublic();
+					mscorlib::System::Boolean  get_IsPublic() const;
 
 					//	Get:IsSpecialName
-					mscorlib::System::Boolean  get_IsSpecialName();
+					mscorlib::System::Boolean  get_IsSpecialName() const;
 
 					//	Get:IsStatic
-					mscorlib::System::Boolean  get_IsStatic();
+					mscorlib::System::Boolean  get_IsStatic() const;
 
 					//	Get:IsVirtual
-					mscorlib::System::Boolean  get_IsVirtual();
+					mscorlib::System::Boolean  get_IsVirtual() const;
 
 					//	Get:MemberType
-					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 					//	Get:MethodHandle
-					mscorlib::System::RuntimeMethodHandle  get_MethodHandle();
+					mscorlib::System::RuntimeMethodHandle  get_MethodHandle() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:ReflectedType
-					mscorlib::System::Type  get_ReflectedType();
+					mscorlib::System::Type  get_ReflectedType() const;
 
 					//	Get:ReturnType
-					mscorlib::System::Type  get_ReturnType();
+					mscorlib::System::Type  get_ReturnType() const;
 
 					//	Get:ReturnTypeCustomAttributes
-					mscorlib::System::Reflection::ICustomAttributeProvider  get_ReturnTypeCustomAttributes();
+					mscorlib::System::Reflection::ICustomAttributeProvider  get_ReturnTypeCustomAttributes() const;
 
 				
 				protected:

@@ -84,10 +84,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CompilationRelaxations
-					mscorlib::System::Int32  get_CompilationRelaxations();
+					mscorlib::System::Int32  get_CompilationRelaxations() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

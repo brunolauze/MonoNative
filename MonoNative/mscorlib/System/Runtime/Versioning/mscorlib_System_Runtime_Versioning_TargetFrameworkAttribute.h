@@ -73,15 +73,15 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:FrameworkName
-					mscorlib::System::String  get_FrameworkName();
+					mscorlib::System::String  get_FrameworkName() const;
 					void set_FrameworkName(mscorlib::System::String  value);
 
 					//	Get/Set:FrameworkDisplayName
-					mscorlib::System::String  get_FrameworkDisplayName();
+					mscorlib::System::String  get_FrameworkDisplayName() const;
 					void set_FrameworkDisplayName(mscorlib::System::String  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

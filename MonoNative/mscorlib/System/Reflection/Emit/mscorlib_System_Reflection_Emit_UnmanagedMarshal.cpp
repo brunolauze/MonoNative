@@ -67,7 +67,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:BaseType
-				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  UnmanagedMarshal::get_BaseType()
+				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  UnmanagedMarshal::get_BaseType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "get_BaseType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__*)mono_object_unbox(__result__);
@@ -75,7 +75,7 @@ namespace mscorlib
 
 
 				//	Get:ElementCount
-				mscorlib::System::Int32  UnmanagedMarshal::get_ElementCount()
+				mscorlib::System::Int32  UnmanagedMarshal::get_ElementCount() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "get_ElementCount", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -83,7 +83,7 @@ namespace mscorlib
 
 
 				//	Get:GetUnmanagedType
-				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  UnmanagedMarshal::get_GetUnmanagedType()
+				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  UnmanagedMarshal::get_GetUnmanagedType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "get_GetUnmanagedType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__*)mono_object_unbox(__result__);
@@ -91,7 +91,7 @@ namespace mscorlib
 
 
 				//	Get:IIDGuid
-				mscorlib::System::Guid  UnmanagedMarshal::get_IIDGuid()
+				mscorlib::System::Guid  UnmanagedMarshal::get_IIDGuid() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "get_IIDGuid", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Guid(__result__);

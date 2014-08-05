@@ -43,6 +43,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "System.Collections", "Comparer", 0, NULL, "Default");
 			}
 
+			void Comparer::set_Default(mscorlib::System::Collections::Comparer  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:DefaultInvariant
 			mscorlib::System::Collections::Comparer Comparer::get_DefaultInvariant()
@@ -50,6 +54,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "System.Collections", "Comparer", 0, NULL, "DefaultInvariant");
 			}
 
+			void Comparer::set_DefaultInvariant(mscorlib::System::Collections::Comparer  value)
+			{
+				throw;
+			}
 
 
 		}

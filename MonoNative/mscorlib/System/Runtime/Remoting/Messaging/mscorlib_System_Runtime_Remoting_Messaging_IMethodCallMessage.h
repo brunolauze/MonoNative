@@ -43,7 +43,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage, put=set___mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage)) MonoObject *__mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage() const
 						{
 							return IMethodCallMessage::__mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage;
 						}
@@ -66,10 +66,10 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:InArgCount
-						mscorlib::System::Int32  get_InArgCount();
+						mscorlib::System::Int32  get_InArgCount() const;
 
 						//	Get:InArgs
-						std::vector<mscorlib::System::Object*>  get_InArgs();
+						std::vector<mscorlib::System::Object*>  get_InArgs() const;
 
 					
 					protected:

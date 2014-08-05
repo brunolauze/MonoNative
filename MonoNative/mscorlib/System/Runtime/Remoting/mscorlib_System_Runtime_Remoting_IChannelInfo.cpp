@@ -13,7 +13,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:ChannelData
-				std::vector<mscorlib::System::Object*>  IChannelInfo::get_ChannelData()
+				std::vector<mscorlib::System::Object*>  IChannelInfo::get_ChannelData() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "IChannelInfo", 0, NULL, "get_ChannelData", __mscorlib_System_Runtime_Remoting_IChannelInfo, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;

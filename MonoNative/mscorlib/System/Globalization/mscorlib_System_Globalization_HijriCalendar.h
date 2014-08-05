@@ -91,34 +91,35 @@ namespace mscorlib
 				__declspec(property(get=get_IsReadOnly)) mscorlib::System::Boolean  IsReadOnly;
 
 				//Public Static Fields
-				static Property<mscorlib::System::Int32> HijriEra;
+				static Property<mscorlib::System::Int32 , mscorlib::System::Globalization::HijriCalendar> HijriEra;
 
 				//Get Set Properties Methods
 				//	Get:Eras
-				std::vector<mscorlib::System::Int32*>  get_Eras();
+				std::vector<mscorlib::System::Int32*>  get_Eras() const;
 
 				//	Get/Set:TwoDigitYearMax
-				mscorlib::System::Int32  get_TwoDigitYearMax();
+				mscorlib::System::Int32  get_TwoDigitYearMax() const;
 				void set_TwoDigitYearMax(mscorlib::System::Int32  value);
 
 				//	Get:AlgorithmType
-				mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  get_AlgorithmType();
+				mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  get_AlgorithmType() const;
 
 				//	Get:MinSupportedDateTime
-				mscorlib::System::DateTime  get_MinSupportedDateTime();
+				mscorlib::System::DateTime  get_MinSupportedDateTime() const;
 
 				//	Get:MaxSupportedDateTime
-				mscorlib::System::DateTime  get_MaxSupportedDateTime();
+				mscorlib::System::DateTime  get_MaxSupportedDateTime() const;
 
 				//	Get/Set:HijriAdjustment
-				mscorlib::System::Int32  get_HijriAdjustment();
+				mscorlib::System::Int32  get_HijriAdjustment() const;
 				void set_HijriAdjustment(mscorlib::System::Int32  value);
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get/Set:HijriEra
 				static mscorlib::System::Int32  get_HijriEra();
+				static void set_HijriEra(mscorlib::System::Int32  value);
 
 			
 			protected:

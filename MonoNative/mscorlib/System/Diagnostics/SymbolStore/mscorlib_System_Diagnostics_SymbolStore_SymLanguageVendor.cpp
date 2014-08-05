@@ -21,6 +21,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageVendor", 0, NULL, "Microsoft");
 				}
 
+				void SymLanguageVendor::set_Microsoft(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 
 			}

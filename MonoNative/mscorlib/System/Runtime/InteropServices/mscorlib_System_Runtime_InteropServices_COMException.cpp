@@ -24,7 +24,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ErrorCode
-				mscorlib::System::Int32  COMException::get_ErrorCode()
+				mscorlib::System::Int32  COMException::get_ErrorCode() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ExternalException", 0, NULL, "get_ErrorCode", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get:InnerException
-				mscorlib::System::Exception  COMException::get_InnerException()
+				mscorlib::System::Exception  COMException::get_InnerException() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_InnerException", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Exception(__result__);
@@ -40,7 +40,7 @@ namespace mscorlib
 
 
 				//	Get/Set:HelpLink
-				mscorlib::System::String  COMException::get_HelpLink()
+				mscorlib::System::String  COMException::get_HelpLink() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HelpLink", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -57,7 +57,7 @@ namespace mscorlib
 
 
 				//	Get/Set:HResult
-				mscorlib::System::Int32  COMException::get_HResult()
+				mscorlib::System::Int32  COMException::get_HResult() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HResult", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -74,7 +74,7 @@ namespace mscorlib
 
 
 				//	Get:Message
-				mscorlib::System::String  COMException::get_Message()
+				mscorlib::System::String  COMException::get_Message() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -82,7 +82,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Source
-				mscorlib::System::String  COMException::get_Source()
+				mscorlib::System::String  COMException::get_Source() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Source", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -99,7 +99,7 @@ namespace mscorlib
 
 
 				//	Get:StackTrace
-				mscorlib::System::String  COMException::get_StackTrace()
+				mscorlib::System::String  COMException::get_StackTrace() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get:TargetSite
-				mscorlib::System::Reflection::MethodBase  COMException::get_TargetSite()
+				mscorlib::System::Reflection::MethodBase  COMException::get_TargetSite() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_TargetSite", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::MethodBase(__result__);
@@ -115,7 +115,7 @@ namespace mscorlib
 
 
 				//	Get:Data
-				mscorlib::System::Collections::IDictionary  COMException::get_Data()
+				mscorlib::System::Collections::IDictionary  COMException::get_Data() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Data", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::IDictionary(__result__);

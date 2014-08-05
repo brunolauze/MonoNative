@@ -115,7 +115,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Certificate
-					mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  get_Certificate();
+					mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  get_Certificate() const;
 					void set_Certificate(mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  value);
 
 				

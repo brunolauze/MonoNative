@@ -364,10 +364,11 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::Object> DBNull;
+			static Property<mscorlib::System::Object , mscorlib::System::Convert> DBNull;
 
 			//	Get/Set:DBNull
 			static mscorlib::System::Object  get_DBNull();
+			static void set_DBNull(mscorlib::System::Object  value);
 
 		
 		protected:

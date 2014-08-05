@@ -71,10 +71,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Handle
-					mscorlib::System::IntPtr  get_Handle();
+					mscorlib::System::IntPtr  get_Handle() const;
 
 					//	Get:Wrapper
-					mscorlib::System::Object  get_Wrapper();
+					mscorlib::System::Object  get_Wrapper() const;
 
 				
 				protected:

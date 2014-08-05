@@ -61,16 +61,16 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:EndOffset
-					mscorlib::System::Int32  get_EndOffset();
+					mscorlib::System::Int32  get_EndOffset() const;
 
 					//	Get:Method
-					mscorlib::System::Diagnostics::SymbolStore::ISymbolMethod  get_Method();
+					mscorlib::System::Diagnostics::SymbolStore::ISymbolMethod  get_Method() const;
 
 					//	Get:Parent
-					mscorlib::System::Diagnostics::SymbolStore::ISymbolScope  get_Parent();
+					mscorlib::System::Diagnostics::SymbolStore::ISymbolScope  get_Parent() const;
 
 					//	Get:StartOffset
-					mscorlib::System::Int32  get_StartOffset();
+					mscorlib::System::Int32  get_StartOffset() const;
 
 				
 				protected:

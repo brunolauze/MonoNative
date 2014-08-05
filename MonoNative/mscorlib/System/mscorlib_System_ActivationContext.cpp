@@ -41,7 +41,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Form
-		mscorlib::System::ActivationContext::ContextForm::__ENUM__  ActivationContext::get_Form()
+		mscorlib::System::ActivationContext::ContextForm::__ENUM__  ActivationContext::get_Form() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ActivationContext", 0, NULL, "get_Form", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::ActivationContext::ContextForm::__ENUM__*)mono_object_unbox(__result__);
@@ -49,7 +49,7 @@ namespace mscorlib
 
 
 		//	Get:Identity
-		mscorlib::System::ApplicationIdentity  ActivationContext::get_Identity()
+		mscorlib::System::ApplicationIdentity  ActivationContext::get_Identity() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ActivationContext", 0, NULL, "get_Identity", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::ApplicationIdentity(__result__);

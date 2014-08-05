@@ -56,7 +56,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:AsyncState
-					mscorlib::System::Object  AsyncResult::get_AsyncState()
+					mscorlib::System::Object  AsyncResult::get_AsyncState() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "AsyncResult", 0, NULL, "get_AsyncState", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 					//	Get:AsyncWaitHandle
-					mscorlib::System::Threading::WaitHandle  AsyncResult::get_AsyncWaitHandle()
+					mscorlib::System::Threading::WaitHandle  AsyncResult::get_AsyncWaitHandle() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "AsyncResult", 0, NULL, "get_AsyncWaitHandle", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Threading::WaitHandle(__result__);
@@ -72,7 +72,7 @@ namespace mscorlib
 
 
 					//	Get:CompletedSynchronously
-					mscorlib::System::Boolean  AsyncResult::get_CompletedSynchronously()
+					mscorlib::System::Boolean  AsyncResult::get_CompletedSynchronously() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "AsyncResult", 0, NULL, "get_CompletedSynchronously", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 					//	Get:IsCompleted
-					mscorlib::System::Boolean  AsyncResult::get_IsCompleted()
+					mscorlib::System::Boolean  AsyncResult::get_IsCompleted() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "AsyncResult", 0, NULL, "get_IsCompleted", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -88,7 +88,7 @@ namespace mscorlib
 
 
 					//	Get/Set:EndInvokeCalled
-					mscorlib::System::Boolean  AsyncResult::get_EndInvokeCalled()
+					mscorlib::System::Boolean  AsyncResult::get_EndInvokeCalled() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "AsyncResult", 0, NULL, "get_EndInvokeCalled", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -105,7 +105,7 @@ namespace mscorlib
 
 
 					//	Get:AsyncDelegate
-					mscorlib::System::Object  AsyncResult::get_AsyncDelegate()
+					mscorlib::System::Object  AsyncResult::get_AsyncDelegate() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "AsyncResult", 0, NULL, "get_AsyncDelegate", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);
@@ -113,7 +113,7 @@ namespace mscorlib
 
 
 					//	Get:NextSink
-					mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  AsyncResult::get_NextSink()
+					mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  AsyncResult::get_NextSink() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "AsyncResult", 0, NULL, "get_NextSink", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Runtime::Remoting::Messaging::IMessageSink(__result__);

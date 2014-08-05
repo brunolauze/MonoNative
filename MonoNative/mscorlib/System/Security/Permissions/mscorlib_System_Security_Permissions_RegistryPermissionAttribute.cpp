@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:All
-				mscorlib::System::String  RegistryPermissionAttribute::get_All()
+				mscorlib::System::String  RegistryPermissionAttribute::get_All() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermissionAttribute", 0, NULL, "get_All", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Create
-				mscorlib::System::String  RegistryPermissionAttribute::get_Create()
+				mscorlib::System::String  RegistryPermissionAttribute::get_Create() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermissionAttribute", 0, NULL, "get_Create", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Read
-				mscorlib::System::String  RegistryPermissionAttribute::get_Read()
+				mscorlib::System::String  RegistryPermissionAttribute::get_Read() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermissionAttribute", 0, NULL, "get_Read", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Write
-				mscorlib::System::String  RegistryPermissionAttribute::get_Write()
+				mscorlib::System::String  RegistryPermissionAttribute::get_Write() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermissionAttribute", 0, NULL, "get_Write", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ChangeAccessControl
-				mscorlib::System::String  RegistryPermissionAttribute::get_ChangeAccessControl()
+				mscorlib::System::String  RegistryPermissionAttribute::get_ChangeAccessControl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermissionAttribute", 0, NULL, "get_ChangeAccessControl", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ViewAccessControl
-				mscorlib::System::String  RegistryPermissionAttribute::get_ViewAccessControl()
+				mscorlib::System::String  RegistryPermissionAttribute::get_ViewAccessControl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermissionAttribute", 0, NULL, "get_ViewAccessControl", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ViewAndModify
-				mscorlib::System::String  RegistryPermissionAttribute::get_ViewAndModify()
+				mscorlib::System::String  RegistryPermissionAttribute::get_ViewAndModify() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermissionAttribute", 0, NULL, "get_ViewAndModify", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  RegistryPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  RegistryPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -158,7 +158,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  RegistryPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  RegistryPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -175,7 +175,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  RegistryPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  RegistryPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

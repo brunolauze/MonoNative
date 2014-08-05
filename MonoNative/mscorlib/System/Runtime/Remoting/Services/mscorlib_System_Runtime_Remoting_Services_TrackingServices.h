@@ -62,11 +62,12 @@ namespace mscorlib
 
 
 						//Public Static Properties
-						static Property<mscorlib::System::Runtime::Remoting::Services::ITrackingHandler*> RegisteredHandlers;
+						static Property<std::vector<mscorlib::System::Runtime::Remoting::Services::ITrackingHandler*> , mscorlib::System::Runtime::Remoting::Services::TrackingServices> RegisteredHandlers;
 
 						//Get Set Static Properties Methods
 						//	Get:RegisteredHandlers
 						static std::vector<mscorlib::System::Runtime::Remoting::Services::ITrackingHandler*>  get_RegisteredHandlers();
+						static void set_RegisteredHandlers(std::vector<mscorlib::System::Runtime::Remoting::Services::ITrackingHandler*>  value);
 
 
 					

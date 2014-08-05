@@ -70,7 +70,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Directory
-					mscorlib::System::String  get_Directory();
+					mscorlib::System::String  get_Directory() const;
 
 				
 				protected:

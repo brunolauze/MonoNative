@@ -32,7 +32,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:SourceException
-				mscorlib::System::Exception  ExceptionDispatchInfo::get_SourceException()
+				mscorlib::System::Exception  ExceptionDispatchInfo::get_SourceException() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.ExceptionServices", "ExceptionDispatchInfo", 0, NULL, "get_SourceException", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Exception(__result__);

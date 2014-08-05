@@ -63,7 +63,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:MemberType
-			mscorlib::System::Reflection::MemberTypes::__ENUM__  ConstructorInfo::get_MemberType()
+			mscorlib::System::Reflection::MemberTypes::__ENUM__  ConstructorInfo::get_MemberType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ConstructorInfo", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -71,7 +71,7 @@ namespace mscorlib
 
 
 			//	Get:MethodHandle
-			mscorlib::System::RuntimeMethodHandle  ConstructorInfo::get_MethodHandle()
+			mscorlib::System::RuntimeMethodHandle  ConstructorInfo::get_MethodHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_MethodHandle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::RuntimeMethodHandle(__result__);
@@ -79,7 +79,7 @@ namespace mscorlib
 
 
 			//	Get:Attributes
-			mscorlib::System::Reflection::MethodAttributes::__ENUM__  ConstructorInfo::get_Attributes()
+			mscorlib::System::Reflection::MethodAttributes::__ENUM__  ConstructorInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::MethodAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -87,7 +87,7 @@ namespace mscorlib
 
 
 			//	Get:CallingConvention
-			mscorlib::System::Reflection::CallingConventions::__ENUM__  ConstructorInfo::get_CallingConvention()
+			mscorlib::System::Reflection::CallingConventions::__ENUM__  ConstructorInfo::get_CallingConvention() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_CallingConvention", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::CallingConventions::__ENUM__*)mono_object_unbox(__result__);
@@ -95,7 +95,7 @@ namespace mscorlib
 
 
 			//	Get:IsPublic
-			mscorlib::System::Boolean  ConstructorInfo::get_IsPublic()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsPublic() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsPublic", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -103,7 +103,7 @@ namespace mscorlib
 
 
 			//	Get:IsPrivate
-			mscorlib::System::Boolean  ConstructorInfo::get_IsPrivate()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsPrivate() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsPrivate", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -111,7 +111,7 @@ namespace mscorlib
 
 
 			//	Get:IsFamily
-			mscorlib::System::Boolean  ConstructorInfo::get_IsFamily()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsFamily() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsFamily", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -119,7 +119,7 @@ namespace mscorlib
 
 
 			//	Get:IsAssembly
-			mscorlib::System::Boolean  ConstructorInfo::get_IsAssembly()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsAssembly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsAssembly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -127,7 +127,7 @@ namespace mscorlib
 
 
 			//	Get:IsFamilyAndAssembly
-			mscorlib::System::Boolean  ConstructorInfo::get_IsFamilyAndAssembly()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsFamilyAndAssembly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsFamilyAndAssembly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -135,7 +135,7 @@ namespace mscorlib
 
 
 			//	Get:IsFamilyOrAssembly
-			mscorlib::System::Boolean  ConstructorInfo::get_IsFamilyOrAssembly()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsFamilyOrAssembly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsFamilyOrAssembly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -143,7 +143,7 @@ namespace mscorlib
 
 
 			//	Get:IsStatic
-			mscorlib::System::Boolean  ConstructorInfo::get_IsStatic()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsStatic() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsStatic", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -151,7 +151,7 @@ namespace mscorlib
 
 
 			//	Get:IsFinal
-			mscorlib::System::Boolean  ConstructorInfo::get_IsFinal()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsFinal() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsFinal", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -159,7 +159,7 @@ namespace mscorlib
 
 
 			//	Get:IsVirtual
-			mscorlib::System::Boolean  ConstructorInfo::get_IsVirtual()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsVirtual() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsVirtual", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -167,7 +167,7 @@ namespace mscorlib
 
 
 			//	Get:IsHideBySig
-			mscorlib::System::Boolean  ConstructorInfo::get_IsHideBySig()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsHideBySig() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsHideBySig", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -175,7 +175,7 @@ namespace mscorlib
 
 
 			//	Get:IsAbstract
-			mscorlib::System::Boolean  ConstructorInfo::get_IsAbstract()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsAbstract() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsAbstract", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -183,7 +183,7 @@ namespace mscorlib
 
 
 			//	Get:IsSpecialName
-			mscorlib::System::Boolean  ConstructorInfo::get_IsSpecialName()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsSpecialName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsSpecialName", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -191,7 +191,7 @@ namespace mscorlib
 
 
 			//	Get:IsConstructor
-			mscorlib::System::Boolean  ConstructorInfo::get_IsConstructor()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsConstructor() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsConstructor", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -199,7 +199,7 @@ namespace mscorlib
 
 
 			//	Get:ContainsGenericParameters
-			mscorlib::System::Boolean  ConstructorInfo::get_ContainsGenericParameters()
+			mscorlib::System::Boolean  ConstructorInfo::get_ContainsGenericParameters() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_ContainsGenericParameters", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -207,7 +207,7 @@ namespace mscorlib
 
 
 			//	Get:IsGenericMethodDefinition
-			mscorlib::System::Boolean  ConstructorInfo::get_IsGenericMethodDefinition()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsGenericMethodDefinition() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsGenericMethodDefinition", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -215,7 +215,7 @@ namespace mscorlib
 
 
 			//	Get:IsGenericMethod
-			mscorlib::System::Boolean  ConstructorInfo::get_IsGenericMethod()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsGenericMethod() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsGenericMethod", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -223,7 +223,7 @@ namespace mscorlib
 
 
 			//	Get:IsSecurityCritical
-			mscorlib::System::Boolean  ConstructorInfo::get_IsSecurityCritical()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsSecurityCritical() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsSecurityCritical", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -231,7 +231,7 @@ namespace mscorlib
 
 
 			//	Get:IsSecuritySafeCritical
-			mscorlib::System::Boolean  ConstructorInfo::get_IsSecuritySafeCritical()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsSecuritySafeCritical() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsSecuritySafeCritical", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -239,7 +239,7 @@ namespace mscorlib
 
 
 			//	Get:IsSecurityTransparent
-			mscorlib::System::Boolean  ConstructorInfo::get_IsSecurityTransparent()
+			mscorlib::System::Boolean  ConstructorInfo::get_IsSecurityTransparent() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsSecurityTransparent", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -247,7 +247,7 @@ namespace mscorlib
 
 
 			//	Get:MethodImplementationFlags
-			mscorlib::System::Reflection::MethodImplAttributes::__ENUM__  ConstructorInfo::get_MethodImplementationFlags()
+			mscorlib::System::Reflection::MethodImplAttributes::__ENUM__  ConstructorInfo::get_MethodImplementationFlags() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_MethodImplementationFlags", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::MethodImplAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -255,7 +255,7 @@ namespace mscorlib
 
 
 			//	Get:DeclaringType
-			mscorlib::System::Type  ConstructorInfo::get_DeclaringType()
+			mscorlib::System::Type  ConstructorInfo::get_DeclaringType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_DeclaringType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -263,7 +263,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  ConstructorInfo::get_Name()
+			mscorlib::System::String  ConstructorInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -271,7 +271,7 @@ namespace mscorlib
 
 
 			//	Get:ReflectedType
-			mscorlib::System::Type  ConstructorInfo::get_ReflectedType()
+			mscorlib::System::Type  ConstructorInfo::get_ReflectedType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_ReflectedType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -279,7 +279,7 @@ namespace mscorlib
 
 
 			//	Get:Module
-			mscorlib::System::Reflection::Module  ConstructorInfo::get_Module()
+			mscorlib::System::Reflection::Module  ConstructorInfo::get_Module() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_Module", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::Module(__result__);
@@ -287,7 +287,7 @@ namespace mscorlib
 
 
 			//	Get:MetadataToken
-			mscorlib::System::Int32  ConstructorInfo::get_MetadataToken()
+			mscorlib::System::Int32  ConstructorInfo::get_MetadataToken() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_MetadataToken", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -295,7 +295,7 @@ namespace mscorlib
 
 
 			//	Get:CustomAttributes
-			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  ConstructorInfo::get_CustomAttributes()
+			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  ConstructorInfo::get_CustomAttributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_CustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>(__result__);
@@ -308,6 +308,10 @@ namespace mscorlib
 				return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue("mscorlib", "System.Reflection", "ConstructorInfo", 0, NULL, "ConstructorName"));
 			}
 
+			void ConstructorInfo::set_ConstructorName(mscorlib::System::String  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:TypeConstructorName
 			mscorlib::System::String ConstructorInfo::get_TypeConstructorName()
@@ -315,6 +319,10 @@ namespace mscorlib
 				return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue("mscorlib", "System.Reflection", "ConstructorInfo", 0, NULL, "TypeConstructorName"));
 			}
 
+			void ConstructorInfo::set_TypeConstructorName(mscorlib::System::String  value)
+			{
+				throw;
+			}
 
 
 		}

@@ -3,17 +3,17 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IDictionary_2.h>
+#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_ICollection_1.h>
-#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerator_1.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_KeyValuePair_2.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyDictionary_2.h>
+#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
 
 namespace mscorlib
 {
@@ -27,40 +27,40 @@ namespace mscorlib
 				template<typename TKey, typename TValue>
 				class ReadOnlyDictionary
 					: public mscorlib::System::Object
-					, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>
-					, public virtual mscorlib::System::Collections::ICollection
-					, public virtual mscorlib::System::Collections::IDictionary
-					, public virtual mscorlib::System::Collections::IEnumerable
 					, public virtual mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>
 					, public virtual mscorlib::System::Collections::Generic::IDictionary<TKey,TValue>
 					, public virtual mscorlib::System::Collections::Generic::IReadOnlyDictionary<TKey,TValue>
 					, public virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>
+					, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>
+					, public virtual mscorlib::System::Collections::ICollection
+					, public virtual mscorlib::System::Collections::IDictionary
+					, public virtual mscorlib::System::Collections::IEnumerable
 				{
 				public:
 					template<typename TKey, typename TValue>
 					class ValueCollection
 						: public mscorlib::System::Object
+						, public virtual mscorlib::System::Collections::Generic::IEnumerable<TValue>
 						, public virtual mscorlib::System::Collections::ICollection
 						, public virtual mscorlib::System::Collections::IEnumerable
 						, public virtual mscorlib::System::Collections::Generic::ICollection<TValue>
-						, public virtual mscorlib::System::Collections::Generic::IEnumerable<TValue>
 					{
 					public:
 						ValueCollection(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Object(nativeTypeInfo)
+						, mscorlib::System::Collections::Generic::IEnumerable<TValue>(NULL)
 						, mscorlib::System::Collections::ICollection(NULL)
 						, mscorlib::System::Collections::IEnumerable(NULL)
 						, mscorlib::System::Collections::Generic::ICollection<TValue>(NULL)
-						, mscorlib::System::Collections::Generic::IEnumerable<TValue>(NULL)
 						{
 						};
 					
 						ValueCollection(MonoObject *nativeObject)
 						: mscorlib::System::Object(nativeObject)
+						, mscorlib::System::Collections::Generic::IEnumerable<TValue>(nativeObject)
 						, mscorlib::System::Collections::ICollection(nativeObject)
 						, mscorlib::System::Collections::IEnumerable(nativeObject)
 						, mscorlib::System::Collections::Generic::ICollection<TValue>(nativeObject)
-						, mscorlib::System::Collections::Generic::IEnumerable<TValue>(nativeObject)
 						{
 						};
 					
@@ -105,7 +105,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Count
-						mscorlib::System::Int32  get_Count()
+						mscorlib::System::Int32  get_Count() const
 						{
 							MonoType *__generic_types__[2];
 							__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -124,27 +124,27 @@ namespace mscorlib
 					template<typename TKey, typename TValue>
 					class KeyCollection
 						: public mscorlib::System::Object
-						, public virtual mscorlib::System::Collections::ICollection
-						, public virtual mscorlib::System::Collections::IEnumerable
 						, public virtual mscorlib::System::Collections::Generic::ICollection<TKey>
 						, public virtual mscorlib::System::Collections::Generic::IEnumerable<TKey>
+						, public virtual mscorlib::System::Collections::ICollection
+						, public virtual mscorlib::System::Collections::IEnumerable
 					{
 					public:
 						KeyCollection(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Object(nativeTypeInfo)
-						, mscorlib::System::Collections::ICollection(NULL)
-						, mscorlib::System::Collections::IEnumerable(NULL)
 						, mscorlib::System::Collections::Generic::ICollection<TKey>(NULL)
 						, mscorlib::System::Collections::Generic::IEnumerable<TKey>(NULL)
+						, mscorlib::System::Collections::ICollection(NULL)
+						, mscorlib::System::Collections::IEnumerable(NULL)
 						{
 						};
 					
 						KeyCollection(MonoObject *nativeObject)
 						: mscorlib::System::Object(nativeObject)
-						, mscorlib::System::Collections::ICollection(nativeObject)
-						, mscorlib::System::Collections::IEnumerable(nativeObject)
 						, mscorlib::System::Collections::Generic::ICollection<TKey>(nativeObject)
 						, mscorlib::System::Collections::Generic::IEnumerable<TKey>(nativeObject)
+						, mscorlib::System::Collections::ICollection(nativeObject)
+						, mscorlib::System::Collections::IEnumerable(nativeObject)
 						{
 						};
 					
@@ -189,7 +189,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Count
-						mscorlib::System::Int32  get_Count()
+						mscorlib::System::Int32  get_Count() const
 						{
 							MonoType *__generic_types__[2];
 							__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -207,14 +207,14 @@ namespace mscorlib
 					
 					ReadOnlyDictionary(mscorlib::System::Collections::Generic::IDictionary<TKey,TValue> dictionary)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.ObjectModel.ReadOnlyDictionary`2"))
-					, mscorlib::System::Collections::Generic::IReadOnlyCollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
-					, mscorlib::System::Collections::ICollection(NULL)
-					, mscorlib::System::Collections::IDictionary(NULL)
-					, mscorlib::System::Collections::IEnumerable(NULL)
 					, mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
 					, mscorlib::System::Collections::Generic::IDictionary<TKey,TValue>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyDictionary<TKey,TValue>(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
+					, mscorlib::System::Collections::Generic::IReadOnlyCollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
+					, mscorlib::System::Collections::ICollection(NULL)
+					, mscorlib::System::Collections::IDictionary(NULL)
+					, mscorlib::System::Collections::IEnumerable(NULL)
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -228,27 +228,27 @@ namespace mscorlib
 				
 					ReadOnlyDictionary(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
-					, mscorlib::System::Collections::Generic::IReadOnlyCollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
-					, mscorlib::System::Collections::ICollection(NULL)
-					, mscorlib::System::Collections::IDictionary(NULL)
-					, mscorlib::System::Collections::IEnumerable(NULL)
 					, mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
 					, mscorlib::System::Collections::Generic::IDictionary<TKey,TValue>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyDictionary<TKey,TValue>(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
+					, mscorlib::System::Collections::Generic::IReadOnlyCollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(NULL)
+					, mscorlib::System::Collections::ICollection(NULL)
+					, mscorlib::System::Collections::IDictionary(NULL)
+					, mscorlib::System::Collections::IEnumerable(NULL)
 					{
 					};
 				
 					ReadOnlyDictionary(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
-					, mscorlib::System::Collections::Generic::IReadOnlyCollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(nativeObject)
-					, mscorlib::System::Collections::ICollection(nativeObject)
-					, mscorlib::System::Collections::IDictionary(nativeObject)
-					, mscorlib::System::Collections::IEnumerable(nativeObject)
 					, mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(nativeObject)
 					, mscorlib::System::Collections::Generic::IDictionary<TKey,TValue>(nativeObject)
 					, mscorlib::System::Collections::Generic::IReadOnlyDictionary<TKey,TValue>(nativeObject)
 					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(nativeObject)
+					, mscorlib::System::Collections::Generic::IReadOnlyCollection<mscorlib::System::Collections::Generic::KeyValuePair<TKey,TValue>>(nativeObject)
+					, mscorlib::System::Collections::ICollection(nativeObject)
+					, mscorlib::System::Collections::IDictionary(nativeObject)
+					, mscorlib::System::Collections::IEnumerable(nativeObject)
 					{
 					};
 				
@@ -307,7 +307,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Item
-					TValue  get_Item(TKey key)
+					TValue  get_Item(TKey key) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -321,7 +321,7 @@ namespace mscorlib
 					}
 
 					//	Get:Keys
-					mscorlib::System::Collections::ObjectModel::ReadOnlyDictionary<TKey,TValue>::KeyCollection<TKey,TValue>  get_Keys()
+					mscorlib::System::Collections::ObjectModel::ReadOnlyDictionary<TKey,TValue>::KeyCollection<TKey,TValue>  get_Keys() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -331,7 +331,7 @@ namespace mscorlib
 					}
 
 					//	Get:Values
-					mscorlib::System::Collections::ObjectModel::ReadOnlyDictionary<TKey,TValue>::ValueCollection<TKey,TValue>  get_Values()
+					mscorlib::System::Collections::ObjectModel::ReadOnlyDictionary<TKey,TValue>::ValueCollection<TKey,TValue>  get_Values() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -341,7 +341,7 @@ namespace mscorlib
 					}
 
 					//	Get:Count
-					mscorlib::System::Int32  get_Count()
+					mscorlib::System::Int32  get_Count() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());

@@ -111,33 +111,33 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:MergeLogic
-					mscorlib::System::String  get_MergeLogic();
+					mscorlib::System::String  get_MergeLogic() const;
 
 					//	Get/Set:PolicyStatement
-					mscorlib::System::Security::Policy::PolicyStatement  get_PolicyStatement();
+					mscorlib::System::Security::Policy::PolicyStatement  get_PolicyStatement() const;
 					void set_PolicyStatement(mscorlib::System::Security::Policy::PolicyStatement  value);
 
 					//	Get/Set:Description
-					mscorlib::System::String  get_Description();
+					mscorlib::System::String  get_Description() const;
 					void set_Description(mscorlib::System::String  value);
 
 					//	Get/Set:MembershipCondition
-					mscorlib::System::Security::Policy::IMembershipCondition  get_MembershipCondition();
+					mscorlib::System::Security::Policy::IMembershipCondition  get_MembershipCondition() const;
 					void set_MembershipCondition(mscorlib::System::Security::Policy::IMembershipCondition  value);
 
 					//	Get/Set:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 					void set_Name(mscorlib::System::String  value);
 
 					//	Get/Set:Children
-					mscorlib::System::Collections::IList  get_Children();
+					mscorlib::System::Collections::IList  get_Children() const;
 					void set_Children(mscorlib::System::Collections::IList  value);
 
 					//	Get:AttributeString
-					mscorlib::System::String  get_AttributeString();
+					mscorlib::System::String  get_AttributeString() const;
 
 					//	Get:PermissionSetName
-					mscorlib::System::String  get_PermissionSetName();
+					mscorlib::System::String  get_PermissionSetName() const;
 
 				
 				protected:

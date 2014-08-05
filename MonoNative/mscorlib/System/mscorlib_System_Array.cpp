@@ -723,7 +723,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Length
-		mscorlib::System::Int32  Array::get_Length()
+		mscorlib::System::Int32  Array::get_Length() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "get_Length", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -731,7 +731,7 @@ namespace mscorlib
 
 
 		//	Get:LongLength
-		mscorlib::System::Int64  Array::get_LongLength()
+		mscorlib::System::Int64  Array::get_LongLength() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "get_LongLength", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -739,7 +739,7 @@ namespace mscorlib
 
 
 		//	Get:Rank
-		mscorlib::System::Int32  Array::get_Rank()
+		mscorlib::System::Int32  Array::get_Rank() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "get_Rank", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -747,7 +747,7 @@ namespace mscorlib
 
 
 		//	Get:IsSynchronized
-		mscorlib::System::Boolean  Array::get_IsSynchronized()
+		mscorlib::System::Boolean  Array::get_IsSynchronized() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "get_IsSynchronized", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -755,7 +755,7 @@ namespace mscorlib
 
 
 		//	Get:SyncRoot
-		mscorlib::System::Object  Array::get_SyncRoot()
+		mscorlib::System::Object  Array::get_SyncRoot() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "get_SyncRoot", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Object(__result__);
@@ -763,7 +763,7 @@ namespace mscorlib
 
 
 		//	Get:IsFixedSize
-		mscorlib::System::Boolean  Array::get_IsFixedSize()
+		mscorlib::System::Boolean  Array::get_IsFixedSize() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "get_IsFixedSize", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -771,7 +771,7 @@ namespace mscorlib
 
 
 		//	Get:IsReadOnly
-		mscorlib::System::Boolean  Array::get_IsReadOnly()
+		mscorlib::System::Boolean  Array::get_IsReadOnly() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

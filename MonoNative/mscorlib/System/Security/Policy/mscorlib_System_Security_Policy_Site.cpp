@@ -64,7 +64,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Name
-				mscorlib::System::String  Site::get_Name()
+				mscorlib::System::String  Site::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Site", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

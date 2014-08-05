@@ -101,7 +101,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Build
-		mscorlib::System::Int32  Version::get_Build()
+		mscorlib::System::Int32  Version::get_Build() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "get_Build", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -109,7 +109,7 @@ namespace mscorlib
 
 
 		//	Get:Major
-		mscorlib::System::Int32  Version::get_Major()
+		mscorlib::System::Int32  Version::get_Major() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "get_Major", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -117,7 +117,7 @@ namespace mscorlib
 
 
 		//	Get:Minor
-		mscorlib::System::Int32  Version::get_Minor()
+		mscorlib::System::Int32  Version::get_Minor() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "get_Minor", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -125,7 +125,7 @@ namespace mscorlib
 
 
 		//	Get:Revision
-		mscorlib::System::Int32  Version::get_Revision()
+		mscorlib::System::Int32  Version::get_Revision() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "get_Revision", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -133,7 +133,7 @@ namespace mscorlib
 
 
 		//	Get:MajorRevision
-		mscorlib::System::Int16  Version::get_MajorRevision()
+		mscorlib::System::Int16  Version::get_MajorRevision() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "get_MajorRevision", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 
 
 		//	Get:MinorRevision
-		mscorlib::System::Int16  Version::get_MinorRevision()
+		mscorlib::System::Int16  Version::get_MinorRevision() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "get_MinorRevision", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int16*)mono_object_unbox(__result__);

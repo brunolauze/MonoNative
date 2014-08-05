@@ -18,6 +18,7 @@ namespace mscorlib
 					namespace W3cXsd2001
 					{
 
+						Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapBase64Binary> mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapBase64Binary::XsdType(&mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapBase64Binary::get_XsdType, &mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapBase64Binary::set_XsdType);
 						//Public Methods
 						mscorlib::System::String SoapBase64Binary::GetXsdType()
 						{
@@ -43,7 +44,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Value
-						std::vector<mscorlib::System::Byte*>  SoapBase64Binary::get_Value()
+						std::vector<mscorlib::System::Byte*>  SoapBase64Binary::get_Value() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapBase64Binary", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 							MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -73,6 +74,11 @@ namespace mscorlib
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapBase64Binary", 0, NULL, "get_XsdType", NullMonoObject, 0, NULL, NULL, NULL);
 							return mscorlib::System::String(__result__);
+						}
+
+						void SoapBase64Binary::set_XsdType(mscorlib::System::String  value)
+						{
+							throw;
 						}
 
 

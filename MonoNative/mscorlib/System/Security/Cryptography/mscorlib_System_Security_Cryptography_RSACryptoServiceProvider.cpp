@@ -18,6 +18,7 @@ namespace mscorlib
 			namespace Cryptography
 			{
 
+				Property<mscorlib::System::Boolean , mscorlib::System::Security::Cryptography::RSACryptoServiceProvider> mscorlib::System::Security::Cryptography::RSACryptoServiceProvider::UseMachineKeyStore(&mscorlib::System::Security::Cryptography::RSACryptoServiceProvider::get_UseMachineKeyStore, &mscorlib::System::Security::Cryptography::RSACryptoServiceProvider::set_UseMachineKeyStore);
 				//Public Methods
 				std::vector<mscorlib::System::Byte*> RSACryptoServiceProvider::Decrypt(std::vector<mscorlib::System::Byte*> rgb, mscorlib::System::Boolean fOAEP)
 				{
@@ -255,7 +256,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:KeyExchangeAlgorithm
-				mscorlib::System::String  RSACryptoServiceProvider::get_KeyExchangeAlgorithm()
+				mscorlib::System::String  RSACryptoServiceProvider::get_KeyExchangeAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSACryptoServiceProvider", 0, NULL, "get_KeyExchangeAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -263,7 +264,7 @@ namespace mscorlib
 
 
 				//	Get:KeySize
-				mscorlib::System::Int32  RSACryptoServiceProvider::get_KeySize()
+				mscorlib::System::Int32  RSACryptoServiceProvider::get_KeySize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSACryptoServiceProvider", 0, NULL, "get_KeySize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -271,7 +272,7 @@ namespace mscorlib
 
 
 				//	Get/Set:PersistKeyInCsp
-				mscorlib::System::Boolean  RSACryptoServiceProvider::get_PersistKeyInCsp()
+				mscorlib::System::Boolean  RSACryptoServiceProvider::get_PersistKeyInCsp() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSACryptoServiceProvider", 0, NULL, "get_PersistKeyInCsp", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -288,7 +289,7 @@ namespace mscorlib
 
 
 				//	Get:PublicOnly
-				mscorlib::System::Boolean  RSACryptoServiceProvider::get_PublicOnly()
+				mscorlib::System::Boolean  RSACryptoServiceProvider::get_PublicOnly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSACryptoServiceProvider", 0, NULL, "get_PublicOnly", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -296,7 +297,7 @@ namespace mscorlib
 
 
 				//	Get:SignatureAlgorithm
-				mscorlib::System::String  RSACryptoServiceProvider::get_SignatureAlgorithm()
+				mscorlib::System::String  RSACryptoServiceProvider::get_SignatureAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSACryptoServiceProvider", 0, NULL, "get_SignatureAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -304,7 +305,7 @@ namespace mscorlib
 
 
 				//	Get:CspKeyContainerInfo
-				mscorlib::System::Security::Cryptography::CspKeyContainerInfo  RSACryptoServiceProvider::get_CspKeyContainerInfo()
+				mscorlib::System::Security::Cryptography::CspKeyContainerInfo  RSACryptoServiceProvider::get_CspKeyContainerInfo() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSACryptoServiceProvider", 0, NULL, "get_CspKeyContainerInfo", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Cryptography::CspKeyContainerInfo(__result__);
@@ -312,7 +313,7 @@ namespace mscorlib
 
 
 				//	Get:LegalKeySizes
-				std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  RSACryptoServiceProvider::get_LegalKeySizes()
+				std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  RSACryptoServiceProvider::get_LegalKeySizes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "get_LegalKeySizes", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;

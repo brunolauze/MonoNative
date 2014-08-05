@@ -92,7 +92,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:Handle
-			mscorlib::System::IntPtr  EventWaitHandle::get_Handle()
+			mscorlib::System::IntPtr  EventWaitHandle::get_Handle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "WaitHandle", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IntPtr(__result__);
@@ -109,7 +109,7 @@ namespace mscorlib
 
 
 			//	Get/Set:SafeWaitHandle
-			mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  EventWaitHandle::get_SafeWaitHandle()
+			mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  EventWaitHandle::get_SafeWaitHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "WaitHandle", 0, NULL, "get_SafeWaitHandle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle(__result__);

@@ -104,13 +104,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ActivationContext
-					mscorlib::System::ActivationContext  get_ActivationContext();
+					mscorlib::System::ActivationContext  get_ActivationContext() const;
 
 					//	Get:ActivationData
-					std::vector<mscorlib::System::String*>  get_ActivationData();
+					std::vector<mscorlib::System::String*>  get_ActivationData() const;
 
 					//	Get:ApplicationIdentity
-					mscorlib::System::ApplicationIdentity  get_ApplicationIdentity();
+					mscorlib::System::ApplicationIdentity  get_ApplicationIdentity() const;
 
 				
 				protected:

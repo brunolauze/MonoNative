@@ -29,7 +29,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Channels_IServerFormatterSinkProvider, put=set___mscorlib_System_Runtime_Remoting_Channels_IServerFormatterSinkProvider)) MonoObject *__mscorlib_System_Runtime_Remoting_Channels_IServerFormatterSinkProvider;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Channels_IServerFormatterSinkProvider()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Channels_IServerFormatterSinkProvider() const
 						{
 							return IServerFormatterSinkProvider::__mscorlib_System_Runtime_Remoting_Channels_IServerChannelSinkProvider;
 						}

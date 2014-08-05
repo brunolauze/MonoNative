@@ -65,7 +65,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Rng
-				mscorlib::System::Security::Cryptography::RandomNumberGenerator  RSAPKCS1KeyExchangeFormatter::get_Rng()
+				mscorlib::System::Security::Cryptography::RandomNumberGenerator  RSAPKCS1KeyExchangeFormatter::get_Rng() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSAPKCS1KeyExchangeFormatter", 0, NULL, "get_Rng", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Cryptography::RandomNumberGenerator(__result__);
@@ -82,7 +82,7 @@ namespace mscorlib
 
 
 				//	Get:Parameters
-				mscorlib::System::String  RSAPKCS1KeyExchangeFormatter::get_Parameters()
+				mscorlib::System::String  RSAPKCS1KeyExchangeFormatter::get_Parameters() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSAPKCS1KeyExchangeFormatter", 0, NULL, "get_Parameters", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

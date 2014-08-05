@@ -102,7 +102,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:AllowUnassigned
-			mscorlib::System::Boolean  IdnMapping::get_AllowUnassigned()
+			mscorlib::System::Boolean  IdnMapping::get_AllowUnassigned() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "get_AllowUnassigned", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -119,7 +119,7 @@ namespace mscorlib
 
 
 			//	Get/Set:UseStd3AsciiRules
-			mscorlib::System::Boolean  IdnMapping::get_UseStd3AsciiRules()
+			mscorlib::System::Boolean  IdnMapping::get_UseStd3AsciiRules() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "get_UseStd3AsciiRules", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

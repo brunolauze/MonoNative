@@ -10,6 +10,12 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> mscorlib::System::StringComparer::CurrentCulture(&mscorlib::System::StringComparer::get_CurrentCulture, &mscorlib::System::StringComparer::set_CurrentCulture);
+		Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> mscorlib::System::StringComparer::CurrentCultureIgnoreCase(&mscorlib::System::StringComparer::get_CurrentCultureIgnoreCase, &mscorlib::System::StringComparer::set_CurrentCultureIgnoreCase);
+		Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> mscorlib::System::StringComparer::InvariantCulture(&mscorlib::System::StringComparer::get_InvariantCulture, &mscorlib::System::StringComparer::set_InvariantCulture);
+		Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> mscorlib::System::StringComparer::InvariantCultureIgnoreCase(&mscorlib::System::StringComparer::get_InvariantCultureIgnoreCase, &mscorlib::System::StringComparer::set_InvariantCultureIgnoreCase);
+		Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> mscorlib::System::StringComparer::Ordinal(&mscorlib::System::StringComparer::get_Ordinal, &mscorlib::System::StringComparer::set_Ordinal);
+		Property<mscorlib::System::StringComparer , mscorlib::System::StringComparer> mscorlib::System::StringComparer::OrdinalIgnoreCase(&mscorlib::System::StringComparer::get_OrdinalIgnoreCase, &mscorlib::System::StringComparer::set_OrdinalIgnoreCase);
 		//Public Methods
 		mscorlib::System::StringComparer StringComparer::Create(mscorlib::System::Globalization::CultureInfo culture, mscorlib::System::Boolean ignoreCase)
 		{
@@ -99,12 +105,22 @@ namespace mscorlib
 			return mscorlib::System::StringComparer(__result__);
 		}
 
+		void StringComparer::set_CurrentCulture(mscorlib::System::StringComparer  value)
+		{
+			throw;
+		}
+
 
 		//	Get:CurrentCultureIgnoreCase
 		mscorlib::System::StringComparer  StringComparer::get_CurrentCultureIgnoreCase()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "StringComparer", 0, NULL, "get_CurrentCultureIgnoreCase", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::StringComparer(__result__);
+		}
+
+		void StringComparer::set_CurrentCultureIgnoreCase(mscorlib::System::StringComparer  value)
+		{
+			throw;
 		}
 
 
@@ -115,12 +131,22 @@ namespace mscorlib
 			return mscorlib::System::StringComparer(__result__);
 		}
 
+		void StringComparer::set_InvariantCulture(mscorlib::System::StringComparer  value)
+		{
+			throw;
+		}
+
 
 		//	Get:InvariantCultureIgnoreCase
 		mscorlib::System::StringComparer  StringComparer::get_InvariantCultureIgnoreCase()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "StringComparer", 0, NULL, "get_InvariantCultureIgnoreCase", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::StringComparer(__result__);
+		}
+
+		void StringComparer::set_InvariantCultureIgnoreCase(mscorlib::System::StringComparer  value)
+		{
+			throw;
 		}
 
 
@@ -131,12 +157,22 @@ namespace mscorlib
 			return mscorlib::System::StringComparer(__result__);
 		}
 
+		void StringComparer::set_Ordinal(mscorlib::System::StringComparer  value)
+		{
+			throw;
+		}
+
 
 		//	Get:OrdinalIgnoreCase
 		mscorlib::System::StringComparer  StringComparer::get_OrdinalIgnoreCase()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "StringComparer", 0, NULL, "get_OrdinalIgnoreCase", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::StringComparer(__result__);
+		}
+
+		void StringComparer::set_OrdinalIgnoreCase(mscorlib::System::StringComparer  value)
+		{
+			throw;
 		}
 
 

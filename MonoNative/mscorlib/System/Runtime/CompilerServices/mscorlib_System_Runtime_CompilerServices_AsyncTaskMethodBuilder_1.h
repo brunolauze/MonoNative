@@ -123,7 +123,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Task
-					mscorlib::System::Threading::Tasks::Task<TResult>  get_Task()
+					mscorlib::System::Threading::Tasks::Task<TResult>  get_Task() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(TResult).name());

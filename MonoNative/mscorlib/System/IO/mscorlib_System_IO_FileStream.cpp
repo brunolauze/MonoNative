@@ -228,7 +228,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:CanRead
-			mscorlib::System::Boolean  FileStream::get_CanRead()
+			mscorlib::System::Boolean  FileStream::get_CanRead() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_CanRead", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -236,7 +236,7 @@ namespace mscorlib
 
 
 			//	Get:CanWrite
-			mscorlib::System::Boolean  FileStream::get_CanWrite()
+			mscorlib::System::Boolean  FileStream::get_CanWrite() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_CanWrite", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -244,7 +244,7 @@ namespace mscorlib
 
 
 			//	Get:CanSeek
-			mscorlib::System::Boolean  FileStream::get_CanSeek()
+			mscorlib::System::Boolean  FileStream::get_CanSeek() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_CanSeek", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -252,7 +252,7 @@ namespace mscorlib
 
 
 			//	Get:IsAsync
-			mscorlib::System::Boolean  FileStream::get_IsAsync()
+			mscorlib::System::Boolean  FileStream::get_IsAsync() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_IsAsync", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -260,7 +260,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  FileStream::get_Name()
+			mscorlib::System::String  FileStream::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -268,7 +268,7 @@ namespace mscorlib
 
 
 			//	Get:Length
-			mscorlib::System::Int64  FileStream::get_Length()
+			mscorlib::System::Int64  FileStream::get_Length() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_Length", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -276,7 +276,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Position
-			mscorlib::System::Int64  FileStream::get_Position()
+			mscorlib::System::Int64  FileStream::get_Position() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_Position", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -293,7 +293,7 @@ namespace mscorlib
 
 
 			//	Get:Handle
-			mscorlib::System::IntPtr  FileStream::get_Handle()
+			mscorlib::System::IntPtr  FileStream::get_Handle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IntPtr(__result__);
@@ -301,7 +301,7 @@ namespace mscorlib
 
 
 			//	Get:SafeFileHandle
-			mscorlib::Microsoft::Win32::SafeHandles::SafeFileHandle  FileStream::get_SafeFileHandle()
+			mscorlib::Microsoft::Win32::SafeHandles::SafeFileHandle  FileStream::get_SafeFileHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_SafeFileHandle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::Microsoft::Win32::SafeHandles::SafeFileHandle(__result__);
@@ -309,7 +309,7 @@ namespace mscorlib
 
 
 			//	Get:CanTimeout
-			mscorlib::System::Boolean  FileStream::get_CanTimeout()
+			mscorlib::System::Boolean  FileStream::get_CanTimeout() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Stream", 0, NULL, "get_CanTimeout", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -317,7 +317,7 @@ namespace mscorlib
 
 
 			//	Get/Set:ReadTimeout
-			mscorlib::System::Int32  FileStream::get_ReadTimeout()
+			mscorlib::System::Int32  FileStream::get_ReadTimeout() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Stream", 0, NULL, "get_ReadTimeout", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -334,7 +334,7 @@ namespace mscorlib
 
 
 			//	Get/Set:WriteTimeout
-			mscorlib::System::Int32  FileStream::get_WriteTimeout()
+			mscorlib::System::Int32  FileStream::get_WriteTimeout() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Stream", 0, NULL, "get_WriteTimeout", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

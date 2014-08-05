@@ -15,7 +15,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:RegistryRights
-				mscorlib::System::Security::AccessControl::RegistryRights::__ENUM__  RegistryAccessRule::get_RegistryRights()
+				mscorlib::System::Security::AccessControl::RegistryRights::__ENUM__  RegistryAccessRule::get_RegistryRights() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "RegistryAccessRule", 0, NULL, "get_RegistryRights", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::RegistryRights::__ENUM__*)mono_object_unbox(__result__);
@@ -23,7 +23,7 @@ namespace mscorlib
 
 
 				//	Get:AccessControlType
-				mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__  RegistryAccessRule::get_AccessControlType()
+				mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__  RegistryAccessRule::get_AccessControlType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AccessRule", 0, NULL, "get_AccessControlType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__*)mono_object_unbox(__result__);
@@ -31,7 +31,7 @@ namespace mscorlib
 
 
 				//	Get:IdentityReference
-				mscorlib::System::Security::Principal::IdentityReference  RegistryAccessRule::get_IdentityReference()
+				mscorlib::System::Security::Principal::IdentityReference  RegistryAccessRule::get_IdentityReference() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_IdentityReference", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::IdentityReference(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get:InheritanceFlags
-				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  RegistryAccessRule::get_InheritanceFlags()
+				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  RegistryAccessRule::get_InheritanceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -47,7 +47,7 @@ namespace mscorlib
 
 
 				//	Get:IsInherited
-				mscorlib::System::Boolean  RegistryAccessRule::get_IsInherited()
+				mscorlib::System::Boolean  RegistryAccessRule::get_IsInherited() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_IsInherited", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -55,7 +55,7 @@ namespace mscorlib
 
 
 				//	Get:PropagationFlags
-				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  RegistryAccessRule::get_PropagationFlags()
+				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  RegistryAccessRule::get_PropagationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);

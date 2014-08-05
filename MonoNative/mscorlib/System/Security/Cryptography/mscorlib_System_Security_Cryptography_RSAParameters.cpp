@@ -16,7 +16,7 @@ namespace mscorlib
 
 				//Public Methods
 				//	Get/Set:P
-				std::vector<mscorlib::System::Byte*> RSAParameters::get_P()
+				std::vector<mscorlib::System::Byte*> RSAParameters::get_P() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "RSAParameters", 0, NULL, "P");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -35,7 +35,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:Q
-				std::vector<mscorlib::System::Byte*> RSAParameters::get_Q()
+				std::vector<mscorlib::System::Byte*> RSAParameters::get_Q() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "RSAParameters", 0, NULL, "Q");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -54,7 +54,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:D
-				std::vector<mscorlib::System::Byte*> RSAParameters::get_D()
+				std::vector<mscorlib::System::Byte*> RSAParameters::get_D() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "RSAParameters", 0, NULL, "D");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -73,7 +73,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:DP
-				std::vector<mscorlib::System::Byte*> RSAParameters::get_DP()
+				std::vector<mscorlib::System::Byte*> RSAParameters::get_DP() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "RSAParameters", 0, NULL, "DP");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -92,7 +92,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:DQ
-				std::vector<mscorlib::System::Byte*> RSAParameters::get_DQ()
+				std::vector<mscorlib::System::Byte*> RSAParameters::get_DQ() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "RSAParameters", 0, NULL, "DQ");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -111,7 +111,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:InverseQ
-				std::vector<mscorlib::System::Byte*> RSAParameters::get_InverseQ()
+				std::vector<mscorlib::System::Byte*> RSAParameters::get_InverseQ() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "RSAParameters", 0, NULL, "InverseQ");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -130,7 +130,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:Modulus
-				std::vector<mscorlib::System::Byte*> RSAParameters::get_Modulus()
+				std::vector<mscorlib::System::Byte*> RSAParameters::get_Modulus() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "RSAParameters", 0, NULL, "Modulus");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -149,7 +149,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:Exponent
-				std::vector<mscorlib::System::Byte*> RSAParameters::get_Exponent()
+				std::vector<mscorlib::System::Byte*> RSAParameters::get_Exponent() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "RSAParameters", 0, NULL, "Exponent");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;

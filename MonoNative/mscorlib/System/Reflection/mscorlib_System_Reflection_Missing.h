@@ -53,10 +53,11 @@ namespace mscorlib
 
 
 				//Public Static Fields
-				static Property<mscorlib::System::Reflection::Missing> Value;
+				static Property<mscorlib::System::Reflection::Missing , mscorlib::System::Reflection::Missing> Value;
 
 				//	Get/Set:Value
 				static mscorlib::System::Reflection::Missing  get_Value();
+				static void set_Value(mscorlib::System::Reflection::Missing  value);
 
 			
 			protected:

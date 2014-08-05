@@ -60,11 +60,11 @@ namespace mscorlib
 						__declspec(property(get=get_wIDLFlags, put=set_wIDLFlags)) mscorlib::System::Runtime::InteropServices::ComTypes::IDLFLAG::__ENUM__  wIDLFlags;
 
 						//	Get/Set:dwReserved
-						mscorlib::System::IntPtr  get_dwReserved();
+						mscorlib::System::IntPtr  get_dwReserved() const;
 						void set_dwReserved(mscorlib::System::IntPtr  value);
 
 						//	Get/Set:wIDLFlags
-						mscorlib::System::Runtime::InteropServices::ComTypes::IDLFLAG::__ENUM__  get_wIDLFlags();
+						mscorlib::System::Runtime::InteropServices::ComTypes::IDLFLAG::__ENUM__  get_wIDLFlags() const;
 						void set_wIDLFlags(mscorlib::System::Runtime::InteropServices::ComTypes::IDLFLAG::__ENUM__  value);
 
 					

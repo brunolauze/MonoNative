@@ -140,7 +140,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Encoding
-			mscorlib::System::Text::Encoding  StringWriter::get_Encoding()
+			mscorlib::System::Text::Encoding  StringWriter::get_Encoding() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StringWriter", 0, NULL, "get_Encoding", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Text::Encoding(__result__);
@@ -148,7 +148,7 @@ namespace mscorlib
 
 
 			//	Get:FormatProvider
-			mscorlib::System::IFormatProvider  StringWriter::get_FormatProvider()
+			mscorlib::System::IFormatProvider  StringWriter::get_FormatProvider() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "TextWriter", 0, NULL, "get_FormatProvider", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IFormatProvider(__result__);
@@ -156,7 +156,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NewLine
-			mscorlib::System::String  StringWriter::get_NewLine()
+			mscorlib::System::String  StringWriter::get_NewLine() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "TextWriter", 0, NULL, "get_NewLine", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);

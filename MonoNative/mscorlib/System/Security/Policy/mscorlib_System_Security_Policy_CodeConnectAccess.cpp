@@ -51,7 +51,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Port
-				mscorlib::System::Int32  CodeConnectAccess::get_Port()
+				mscorlib::System::Int32  CodeConnectAccess::get_Port() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeConnectAccess", 0, NULL, "get_Port", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -59,7 +59,7 @@ namespace mscorlib
 
 
 				//	Get:Scheme
-				mscorlib::System::String  CodeConnectAccess::get_Scheme()
+				mscorlib::System::String  CodeConnectAccess::get_Scheme() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeConnectAccess", 0, NULL, "get_Scheme", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -72,6 +72,10 @@ namespace mscorlib
 					return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue("mscorlib", "System.Security.Policy", "CodeConnectAccess", 0, NULL, "AnyScheme"));
 				}
 
+				void CodeConnectAccess::set_AnyScheme(mscorlib::System::String  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:DefaultPort
 				mscorlib::System::Int32 CodeConnectAccess::get_DefaultPort()
@@ -79,6 +83,10 @@ namespace mscorlib
 					return Global::GetFieldInt32Value("mscorlib", "System.Security.Policy", "CodeConnectAccess", 0, NULL, "DefaultPort");
 				}
 
+				void CodeConnectAccess::set_DefaultPort(mscorlib::System::Int32  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:OriginPort
 				mscorlib::System::Int32 CodeConnectAccess::get_OriginPort()
@@ -86,6 +94,10 @@ namespace mscorlib
 					return Global::GetFieldInt32Value("mscorlib", "System.Security.Policy", "CodeConnectAccess", 0, NULL, "OriginPort");
 				}
 
+				void CodeConnectAccess::set_OriginPort(mscorlib::System::Int32  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:OriginScheme
 				mscorlib::System::String CodeConnectAccess::get_OriginScheme()
@@ -93,6 +105,10 @@ namespace mscorlib
 					return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue("mscorlib", "System.Security.Policy", "CodeConnectAccess", 0, NULL, "OriginScheme"));
 				}
 
+				void CodeConnectAccess::set_OriginScheme(mscorlib::System::String  value)
+				{
+					throw;
+				}
 
 
 			}

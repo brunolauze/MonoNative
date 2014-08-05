@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:VersionAdded
-				mscorlib::System::Int32  OptionalFieldAttribute::get_VersionAdded()
+				mscorlib::System::Int32  OptionalFieldAttribute::get_VersionAdded() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "OptionalFieldAttribute", 0, NULL, "get_VersionAdded", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -33,7 +33,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  OptionalFieldAttribute::get_TypeId()
+				mscorlib::System::Object  OptionalFieldAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

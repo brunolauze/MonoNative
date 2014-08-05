@@ -76,11 +76,11 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Fallback
-				mscorlib::System::Text::EncoderFallback  get_Fallback();
+				mscorlib::System::Text::EncoderFallback  get_Fallback() const;
 				void set_Fallback(mscorlib::System::Text::EncoderFallback  value);
 
 				//	Get:FallbackBuffer
-				mscorlib::System::Text::EncoderFallbackBuffer  get_FallbackBuffer();
+				mscorlib::System::Text::EncoderFallbackBuffer  get_FallbackBuffer() const;
 
 			
 			protected:

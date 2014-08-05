@@ -18,7 +18,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:lpVarValue
-					mscorlib::System::IntPtr PARAMDESC::get_lpVarValue()
+					mscorlib::System::IntPtr PARAMDESC::get_lpVarValue() const
 					{
 						return Global::GetFieldValue(__native_object__, "lpVarValue");
 					}
@@ -28,7 +28,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wParamFlags
-					mscorlib::System::Runtime::InteropServices::ComTypes::PARAMFLAG::__ENUM__ PARAMDESC::get_wParamFlags()
+					mscorlib::System::Runtime::InteropServices::ComTypes::PARAMFLAG::__ENUM__ PARAMDESC::get_wParamFlags() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::PARAMFLAG::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "wParamFlags"));
 					}

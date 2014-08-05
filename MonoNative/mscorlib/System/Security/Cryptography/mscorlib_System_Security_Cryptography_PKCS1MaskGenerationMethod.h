@@ -64,7 +64,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:HashName
-					mscorlib::System::String  get_HashName();
+					mscorlib::System::String  get_HashName() const;
 					void set_HashName(mscorlib::System::String  value);
 
 				

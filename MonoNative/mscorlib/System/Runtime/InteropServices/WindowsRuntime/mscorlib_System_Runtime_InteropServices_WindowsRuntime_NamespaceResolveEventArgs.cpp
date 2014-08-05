@@ -17,7 +17,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get/Set:NamespaceName
-					mscorlib::System::String  NamespaceResolveEventArgs::get_NamespaceName()
+					mscorlib::System::String  NamespaceResolveEventArgs::get_NamespaceName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "NamespaceResolveEventArgs", 0, NULL, "get_NamespaceName", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 					//	Get/Set:RequestingAssembly
-					mscorlib::System::Reflection::Assembly  NamespaceResolveEventArgs::get_RequestingAssembly()
+					mscorlib::System::Reflection::Assembly  NamespaceResolveEventArgs::get_RequestingAssembly() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "NamespaceResolveEventArgs", 0, NULL, "get_RequestingAssembly", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Reflection::Assembly(__result__);
@@ -51,7 +51,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ResolvedAssemblies
-					mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::Reflection::Assembly>  NamespaceResolveEventArgs::get_ResolvedAssemblies()
+					mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::Reflection::Assembly>  NamespaceResolveEventArgs::get_ResolvedAssemblies() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "NamespaceResolveEventArgs", 0, NULL, "get_ResolvedAssemblies", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::Reflection::Assembly>(__result__);

@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:CompilationRelaxations
-				mscorlib::System::Int32  CompilationRelaxationsAttribute::get_CompilationRelaxations()
+				mscorlib::System::Int32  CompilationRelaxationsAttribute::get_CompilationRelaxations() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "CompilationRelaxationsAttribute", 0, NULL, "get_CompilationRelaxations", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  CompilationRelaxationsAttribute::get_TypeId()
+				mscorlib::System::Object  CompilationRelaxationsAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

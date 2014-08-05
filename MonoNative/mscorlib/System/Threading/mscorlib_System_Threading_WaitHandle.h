@@ -112,15 +112,15 @@ namespace mscorlib
 				__declspec(property(get=get_SafeWaitHandle, put=set_SafeWaitHandle)) mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  SafeWaitHandle;
 
 				//Public Static Fields
-				static Property<mscorlib::System::Int32> WaitTimeout;
+				static Property<mscorlib::System::Int32 , mscorlib::System::Threading::WaitHandle> WaitTimeout;
 
 				//Get Set Properties Methods
 				//	Get/Set:Handle
-				mscorlib::System::IntPtr  get_Handle();
+				mscorlib::System::IntPtr  get_Handle() const;
 				void set_Handle(mscorlib::System::IntPtr  value);
 
 				//	Get/Set:SafeWaitHandle
-				mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  get_SafeWaitHandle();
+				mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  get_SafeWaitHandle() const;
 				void set_SafeWaitHandle(mscorlib::Microsoft::Win32::SafeHandles::SafeWaitHandle  value);
 
 				//	Get/Set:WaitTimeout

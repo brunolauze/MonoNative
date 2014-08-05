@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_MESSAGING_LOGICALCALLCONTEXT_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 
 namespace mscorlib
 {
@@ -46,21 +46,21 @@ namespace mscorlib
 
 					class LogicalCallContext
 						: public mscorlib::System::Object
-						, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 						, public virtual mscorlib::System::ICloneable
+						, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 					{
 					public:
 						LogicalCallContext(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Object(nativeTypeInfo)
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::ICloneable(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 						};
 					
 						LogicalCallContext(MonoObject *nativeObject)
 						: mscorlib::System::Object(nativeObject)
-						, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 						, mscorlib::System::ICloneable(nativeObject)
+						, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 						{
 						};
 					
@@ -87,7 +87,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:HasInfo
-						mscorlib::System::Boolean  get_HasInfo();
+						mscorlib::System::Boolean  get_HasInfo() const;
 
 					
 					protected:

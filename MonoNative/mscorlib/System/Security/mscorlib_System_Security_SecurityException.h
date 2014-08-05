@@ -12,8 +12,8 @@
 #include <mscorlib/System/Security/mscorlib_System_Security_PermissionSet.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_SecurityAction.h>
 #include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_Evidence.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Exception.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_SecurityZone.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
 
@@ -56,22 +56,22 @@ namespace mscorlib
 
 			class SecurityException
 				: public mscorlib::System::SystemException
-				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				, public virtual mscorlib::System::Runtime::InteropServices::_Exception
+				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			{
 			public:
 				SecurityException()
 				: mscorlib::System::SystemException(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.SecurityException"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Exception(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					__native_object__ = Global::New("mscorlib", "System.Security", "SecurityException");
 				};
 			
 				SecurityException(mscorlib::System::String message)
 				: mscorlib::System::SystemException(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.SecurityException"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Exception(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -82,8 +82,8 @@ namespace mscorlib
 			
 				SecurityException(mscorlib::System::String message, mscorlib::System::Exception inner)
 				: mscorlib::System::SystemException(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.SecurityException"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Exception(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -96,8 +96,8 @@ namespace mscorlib
 			
 				SecurityException(mscorlib::System::String message, mscorlib::System::Type type)
 				: mscorlib::System::SystemException(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.SecurityException"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Exception(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -110,8 +110,8 @@ namespace mscorlib
 			
 				SecurityException(mscorlib::System::String message, mscorlib::System::Type type, mscorlib::System::String state)
 				: mscorlib::System::SystemException(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.SecurityException"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Exception(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
@@ -126,8 +126,8 @@ namespace mscorlib
 			
 				SecurityException(mscorlib::System::String message, mscorlib::System::Object deny, mscorlib::System::Object permitOnly, mscorlib::System::Reflection::MethodInfo method, mscorlib::System::Object demanded, mscorlib::System::Security::IPermission permThatFailed)
 				: mscorlib::System::SystemException(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.SecurityException"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Exception(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[6];
 					void *__parameters__[6];
@@ -148,8 +148,8 @@ namespace mscorlib
 			
 				SecurityException(mscorlib::System::String message, mscorlib::System::Reflection::AssemblyName assemblyName, mscorlib::System::Security::PermissionSet grant, mscorlib::System::Security::PermissionSet refused, mscorlib::System::Reflection::MethodInfo method, mscorlib::System::Security::Permissions::SecurityAction::__ENUM__ action, mscorlib::System::Object demanded, mscorlib::System::Security::IPermission permThatFailed, mscorlib::System::Security::Policy::Evidence evidence)
 				: mscorlib::System::SystemException(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.SecurityException"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Exception(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[9];
 					void *__parameters__[9];
@@ -176,15 +176,15 @@ namespace mscorlib
 			
 				SecurityException(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::SystemException(nativeTypeInfo)
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Exception(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 				};
 			
 				SecurityException(MonoObject *nativeObject)
 				: mscorlib::System::SystemException(nativeObject)
-				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				, mscorlib::System::Runtime::InteropServices::_Exception(nativeObject)
+				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				{
 				};
 			
@@ -228,83 +228,83 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action();
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action() const;
 				void set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value);
 
 				//	Get/Set:DenySetInstance
-				mscorlib::System::Object  get_DenySetInstance();
+				mscorlib::System::Object  get_DenySetInstance() const;
 				void set_DenySetInstance(mscorlib::System::Object  value);
 
 				//	Get/Set:FailedAssemblyInfo
-				mscorlib::System::Reflection::AssemblyName  get_FailedAssemblyInfo();
+				mscorlib::System::Reflection::AssemblyName  get_FailedAssemblyInfo() const;
 				void set_FailedAssemblyInfo(mscorlib::System::Reflection::AssemblyName  value);
 
 				//	Get/Set:Method
-				mscorlib::System::Reflection::MethodInfo  get_Method();
+				mscorlib::System::Reflection::MethodInfo  get_Method() const;
 				void set_Method(mscorlib::System::Reflection::MethodInfo  value);
 
 				//	Get/Set:PermitOnlySetInstance
-				mscorlib::System::Object  get_PermitOnlySetInstance();
+				mscorlib::System::Object  get_PermitOnlySetInstance() const;
 				void set_PermitOnlySetInstance(mscorlib::System::Object  value);
 
 				//	Get/Set:Url
-				mscorlib::System::String  get_Url();
+				mscorlib::System::String  get_Url() const;
 				void set_Url(mscorlib::System::String  value);
 
 				//	Get/Set:Zone
-				mscorlib::System::Security::SecurityZone::__ENUM__  get_Zone();
+				mscorlib::System::Security::SecurityZone::__ENUM__  get_Zone() const;
 				void set_Zone(mscorlib::System::Security::SecurityZone::__ENUM__  value);
 
 				//	Get/Set:Demanded
-				mscorlib::System::Object  get_Demanded();
+				mscorlib::System::Object  get_Demanded() const;
 				void set_Demanded(mscorlib::System::Object  value);
 
 				//	Get/Set:FirstPermissionThatFailed
-				mscorlib::System::Security::IPermission  get_FirstPermissionThatFailed();
+				mscorlib::System::Security::IPermission  get_FirstPermissionThatFailed() const;
 				void set_FirstPermissionThatFailed(mscorlib::System::Security::IPermission  value);
 
 				//	Get/Set:PermissionState
-				mscorlib::System::String  get_PermissionState();
+				mscorlib::System::String  get_PermissionState() const;
 				void set_PermissionState(mscorlib::System::String  value);
 
 				//	Get/Set:PermissionType
-				mscorlib::System::Type  get_PermissionType();
+				mscorlib::System::Type  get_PermissionType() const;
 				void set_PermissionType(mscorlib::System::Type  value);
 
 				//	Get/Set:GrantedSet
-				mscorlib::System::String  get_GrantedSet();
+				mscorlib::System::String  get_GrantedSet() const;
 				void set_GrantedSet(mscorlib::System::String  value);
 
 				//	Get/Set:RefusedSet
-				mscorlib::System::String  get_RefusedSet();
+				mscorlib::System::String  get_RefusedSet() const;
 				void set_RefusedSet(mscorlib::System::String  value);
 
 				//	Get:InnerException
-				mscorlib::System::Exception  get_InnerException();
+				mscorlib::System::Exception  get_InnerException() const;
 
 				//	Get/Set:HelpLink
-				mscorlib::System::String  get_HelpLink();
+				mscorlib::System::String  get_HelpLink() const;
 				void set_HelpLink(mscorlib::System::String  value);
 
 				//	Get/Set:HResult
-				mscorlib::System::Int32  get_HResult();
+				mscorlib::System::Int32  get_HResult() const;
 				void set_HResult(mscorlib::System::Int32  value);
 
 				//	Get:Message
-				mscorlib::System::String  get_Message();
+				mscorlib::System::String  get_Message() const;
 
 				//	Get/Set:Source
-				mscorlib::System::String  get_Source();
+				mscorlib::System::String  get_Source() const;
 				void set_Source(mscorlib::System::String  value);
 
 				//	Get:StackTrace
-				mscorlib::System::String  get_StackTrace();
+				mscorlib::System::String  get_StackTrace() const;
 
 				//	Get:TargetSite
-				mscorlib::System::Reflection::MethodBase  get_TargetSite();
+				mscorlib::System::Reflection::MethodBase  get_TargetSite() const;
 
 				//	Get:Data
-				mscorlib::System::Collections::IDictionary  get_Data();
+				mscorlib::System::Collections::IDictionary  get_Data() const;
 
 			
 			protected:

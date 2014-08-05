@@ -75,13 +75,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:DeniedPermissions
-					mscorlib::System::Security::PermissionSet  get_DeniedPermissions();
+					mscorlib::System::Security::PermissionSet  get_DeniedPermissions() const;
 
 					//	Get:OptionalPermissions
-					mscorlib::System::Security::PermissionSet  get_OptionalPermissions();
+					mscorlib::System::Security::PermissionSet  get_OptionalPermissions() const;
 
 					//	Get:RequestedPermissions
-					mscorlib::System::Security::PermissionSet  get_RequestedPermissions();
+					mscorlib::System::Security::PermissionSet  get_RequestedPermissions() const;
 
 				
 				protected:

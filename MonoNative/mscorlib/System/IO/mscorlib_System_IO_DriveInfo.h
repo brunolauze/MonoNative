@@ -92,32 +92,32 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:AvailableFreeSpace
-				mscorlib::System::Int64  get_AvailableFreeSpace();
+				mscorlib::System::Int64  get_AvailableFreeSpace() const;
 
 				//	Get:TotalFreeSpace
-				mscorlib::System::Int64  get_TotalFreeSpace();
+				mscorlib::System::Int64  get_TotalFreeSpace() const;
 
 				//	Get:TotalSize
-				mscorlib::System::Int64  get_TotalSize();
+				mscorlib::System::Int64  get_TotalSize() const;
 
 				//	Get/Set:VolumeLabel
-				mscorlib::System::String  get_VolumeLabel();
+				mscorlib::System::String  get_VolumeLabel() const;
 				void set_VolumeLabel(mscorlib::System::String  value);
 
 				//	Get:DriveFormat
-				mscorlib::System::String  get_DriveFormat();
+				mscorlib::System::String  get_DriveFormat() const;
 
 				//	Get:DriveType
-				mscorlib::System::IO::DriveType::__ENUM__  get_DriveType();
+				mscorlib::System::IO::DriveType::__ENUM__  get_DriveType() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get:RootDirectory
-				mscorlib::System::IO::DirectoryInfo  get_RootDirectory();
+				mscorlib::System::IO::DirectoryInfo  get_RootDirectory() const;
 
 				//	Get:IsReady
-				mscorlib::System::Boolean  get_IsReady();
+				mscorlib::System::Boolean  get_IsReady() const;
 
 			
 			protected:

@@ -36,7 +36,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:DefaultString
-			mscorlib::System::String  EncoderReplacementFallback::get_DefaultString()
+			mscorlib::System::String  EncoderReplacementFallback::get_DefaultString() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "EncoderReplacementFallback", 0, NULL, "get_DefaultString", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -44,7 +44,7 @@ namespace mscorlib
 
 
 			//	Get:MaxCharCount
-			mscorlib::System::Int32  EncoderReplacementFallback::get_MaxCharCount()
+			mscorlib::System::Int32  EncoderReplacementFallback::get_MaxCharCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "EncoderReplacementFallback", 0, NULL, "get_MaxCharCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

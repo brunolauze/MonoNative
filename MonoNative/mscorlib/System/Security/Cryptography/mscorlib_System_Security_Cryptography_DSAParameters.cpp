@@ -16,7 +16,7 @@ namespace mscorlib
 
 				//Public Methods
 				//	Get/Set:Counter
-				mscorlib::System::Int32 DSAParameters::get_Counter()
+				mscorlib::System::Int32 DSAParameters::get_Counter() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "Counter");
 				}
@@ -26,7 +26,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:G
-				std::vector<mscorlib::System::Byte*> DSAParameters::get_G()
+				std::vector<mscorlib::System::Byte*> DSAParameters::get_G() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "DSAParameters", 0, NULL, "G");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -45,7 +45,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:J
-				std::vector<mscorlib::System::Byte*> DSAParameters::get_J()
+				std::vector<mscorlib::System::Byte*> DSAParameters::get_J() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "DSAParameters", 0, NULL, "J");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -64,7 +64,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:P
-				std::vector<mscorlib::System::Byte*> DSAParameters::get_P()
+				std::vector<mscorlib::System::Byte*> DSAParameters::get_P() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "DSAParameters", 0, NULL, "P");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -83,7 +83,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:Q
-				std::vector<mscorlib::System::Byte*> DSAParameters::get_Q()
+				std::vector<mscorlib::System::Byte*> DSAParameters::get_Q() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "DSAParameters", 0, NULL, "Q");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -102,7 +102,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:Seed
-				std::vector<mscorlib::System::Byte*> DSAParameters::get_Seed()
+				std::vector<mscorlib::System::Byte*> DSAParameters::get_Seed() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "DSAParameters", 0, NULL, "Seed");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -121,7 +121,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:X
-				std::vector<mscorlib::System::Byte*> DSAParameters::get_X()
+				std::vector<mscorlib::System::Byte*> DSAParameters::get_X() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "DSAParameters", 0, NULL, "X");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -140,7 +140,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:Y
-				std::vector<mscorlib::System::Byte*> DSAParameters::get_Y()
+				std::vector<mscorlib::System::Byte*> DSAParameters::get_Y() const
 				{
 					MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Security.Cryptography", "DSAParameters", 0, NULL, "Y");
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;

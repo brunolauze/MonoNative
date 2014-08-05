@@ -25,7 +25,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Identity
-				mscorlib::System::Security::Principal::IIdentity  IPrincipal::get_Identity()
+				mscorlib::System::Security::Principal::IIdentity  IPrincipal::get_Identity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "IPrincipal", 0, NULL, "get_Identity", __mscorlib_System_Security_Principal_IPrincipal, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::IIdentity(__result__);

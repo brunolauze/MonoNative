@@ -221,7 +221,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Attributes
-				mscorlib::System::Reflection::FieldAttributes::__ENUM__  _FieldInfo::get_Attributes()
+				mscorlib::System::Reflection::FieldAttributes::__ENUM__  _FieldInfo::get_Attributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_Attributes", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::FieldAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -229,7 +229,7 @@ namespace mscorlib
 
 
 				//	Get:DeclaringType
-				mscorlib::System::Type  _FieldInfo::get_DeclaringType()
+				mscorlib::System::Type  _FieldInfo::get_DeclaringType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_DeclaringType", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -237,7 +237,7 @@ namespace mscorlib
 
 
 				//	Get:FieldHandle
-				mscorlib::System::RuntimeFieldHandle  _FieldInfo::get_FieldHandle()
+				mscorlib::System::RuntimeFieldHandle  _FieldInfo::get_FieldHandle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_FieldHandle", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::RuntimeFieldHandle(__result__);
@@ -245,7 +245,7 @@ namespace mscorlib
 
 
 				//	Get:FieldType
-				mscorlib::System::Type  _FieldInfo::get_FieldType()
+				mscorlib::System::Type  _FieldInfo::get_FieldType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_FieldType", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -253,7 +253,7 @@ namespace mscorlib
 
 
 				//	Get:IsAssembly
-				mscorlib::System::Boolean  _FieldInfo::get_IsAssembly()
+				mscorlib::System::Boolean  _FieldInfo::get_IsAssembly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsAssembly", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -261,7 +261,7 @@ namespace mscorlib
 
 
 				//	Get:IsFamily
-				mscorlib::System::Boolean  _FieldInfo::get_IsFamily()
+				mscorlib::System::Boolean  _FieldInfo::get_IsFamily() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsFamily", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -269,7 +269,7 @@ namespace mscorlib
 
 
 				//	Get:IsFamilyAndAssembly
-				mscorlib::System::Boolean  _FieldInfo::get_IsFamilyAndAssembly()
+				mscorlib::System::Boolean  _FieldInfo::get_IsFamilyAndAssembly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsFamilyAndAssembly", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -277,7 +277,7 @@ namespace mscorlib
 
 
 				//	Get:IsFamilyOrAssembly
-				mscorlib::System::Boolean  _FieldInfo::get_IsFamilyOrAssembly()
+				mscorlib::System::Boolean  _FieldInfo::get_IsFamilyOrAssembly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsFamilyOrAssembly", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -285,7 +285,7 @@ namespace mscorlib
 
 
 				//	Get:IsInitOnly
-				mscorlib::System::Boolean  _FieldInfo::get_IsInitOnly()
+				mscorlib::System::Boolean  _FieldInfo::get_IsInitOnly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsInitOnly", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -293,7 +293,7 @@ namespace mscorlib
 
 
 				//	Get:IsLiteral
-				mscorlib::System::Boolean  _FieldInfo::get_IsLiteral()
+				mscorlib::System::Boolean  _FieldInfo::get_IsLiteral() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsLiteral", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -301,7 +301,7 @@ namespace mscorlib
 
 
 				//	Get:IsNotSerialized
-				mscorlib::System::Boolean  _FieldInfo::get_IsNotSerialized()
+				mscorlib::System::Boolean  _FieldInfo::get_IsNotSerialized() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsNotSerialized", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -309,7 +309,7 @@ namespace mscorlib
 
 
 				//	Get:IsPinvokeImpl
-				mscorlib::System::Boolean  _FieldInfo::get_IsPinvokeImpl()
+				mscorlib::System::Boolean  _FieldInfo::get_IsPinvokeImpl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsPinvokeImpl", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -317,7 +317,7 @@ namespace mscorlib
 
 
 				//	Get:IsPrivate
-				mscorlib::System::Boolean  _FieldInfo::get_IsPrivate()
+				mscorlib::System::Boolean  _FieldInfo::get_IsPrivate() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsPrivate", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -325,7 +325,7 @@ namespace mscorlib
 
 
 				//	Get:IsPublic
-				mscorlib::System::Boolean  _FieldInfo::get_IsPublic()
+				mscorlib::System::Boolean  _FieldInfo::get_IsPublic() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsPublic", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -333,7 +333,7 @@ namespace mscorlib
 
 
 				//	Get:IsSpecialName
-				mscorlib::System::Boolean  _FieldInfo::get_IsSpecialName()
+				mscorlib::System::Boolean  _FieldInfo::get_IsSpecialName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsSpecialName", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -341,7 +341,7 @@ namespace mscorlib
 
 
 				//	Get:IsStatic
-				mscorlib::System::Boolean  _FieldInfo::get_IsStatic()
+				mscorlib::System::Boolean  _FieldInfo::get_IsStatic() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_IsStatic", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -349,7 +349,7 @@ namespace mscorlib
 
 
 				//	Get:MemberType
-				mscorlib::System::Reflection::MemberTypes::__ENUM__  _FieldInfo::get_MemberType()
+				mscorlib::System::Reflection::MemberTypes::__ENUM__  _FieldInfo::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_MemberType", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -357,7 +357,7 @@ namespace mscorlib
 
 
 				//	Get:Name
-				mscorlib::System::String  _FieldInfo::get_Name()
+				mscorlib::System::String  _FieldInfo::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_Name", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -365,7 +365,7 @@ namespace mscorlib
 
 
 				//	Get:ReflectedType
-				mscorlib::System::Type  _FieldInfo::get_ReflectedType()
+				mscorlib::System::Type  _FieldInfo::get_ReflectedType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_FieldInfo", 0, NULL, "get_ReflectedType", __mscorlib_System_Runtime_InteropServices__FieldInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);

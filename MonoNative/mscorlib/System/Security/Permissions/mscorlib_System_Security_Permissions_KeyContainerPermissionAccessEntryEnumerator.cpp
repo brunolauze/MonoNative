@@ -28,7 +28,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Current
-				mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntry  KeyContainerPermissionAccessEntryEnumerator::get_Current()
+				mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntry  KeyContainerPermissionAccessEntryEnumerator::get_Current() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntryEnumerator", 0, NULL, "get_Current", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntry(__result__);

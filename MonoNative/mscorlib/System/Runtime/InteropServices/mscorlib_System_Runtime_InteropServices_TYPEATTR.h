@@ -93,78 +93,78 @@ namespace mscorlib
 					__declspec(property(get=get_idldescType, put=set_idldescType)) mscorlib::System::Runtime::InteropServices::IDLDESC  idldescType;
 
 					//Public Static Fields
-					static Property<mscorlib::System::Int32> MEMBER_ID_NIL;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Runtime::InteropServices::TYPEATTR> MEMBER_ID_NIL;
 
 					//	Get/Set:guid
-					mscorlib::System::Guid  get_guid();
+					mscorlib::System::Guid  get_guid() const;
 					void set_guid(mscorlib::System::Guid  value);
 
 					//	Get/Set:lcid
-					mscorlib::System::Int32  get_lcid();
+					mscorlib::System::Int32  get_lcid() const;
 					void set_lcid(mscorlib::System::Int32  value);
 
 					//	Get/Set:dwReserved
-					mscorlib::System::Int32  get_dwReserved();
+					mscorlib::System::Int32  get_dwReserved() const;
 					void set_dwReserved(mscorlib::System::Int32  value);
 
 					//	Get/Set:memidConstructor
-					mscorlib::System::Int32  get_memidConstructor();
+					mscorlib::System::Int32  get_memidConstructor() const;
 					void set_memidConstructor(mscorlib::System::Int32  value);
 
 					//	Get/Set:memidDestructor
-					mscorlib::System::Int32  get_memidDestructor();
+					mscorlib::System::Int32  get_memidDestructor() const;
 					void set_memidDestructor(mscorlib::System::Int32  value);
 
 					//	Get/Set:lpstrSchema
-					mscorlib::System::IntPtr  get_lpstrSchema();
+					mscorlib::System::IntPtr  get_lpstrSchema() const;
 					void set_lpstrSchema(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:cbSizeInstance
-					mscorlib::System::Int32  get_cbSizeInstance();
+					mscorlib::System::Int32  get_cbSizeInstance() const;
 					void set_cbSizeInstance(mscorlib::System::Int32  value);
 
 					//	Get/Set:typekind
-					mscorlib::System::Runtime::InteropServices::TYPEKIND::__ENUM__  get_typekind();
+					mscorlib::System::Runtime::InteropServices::TYPEKIND::__ENUM__  get_typekind() const;
 					void set_typekind(mscorlib::System::Runtime::InteropServices::TYPEKIND::__ENUM__  value);
 
 					//	Get/Set:cFuncs
-					mscorlib::System::Int16  get_cFuncs();
+					mscorlib::System::Int16  get_cFuncs() const;
 					void set_cFuncs(mscorlib::System::Int16  value);
 
 					//	Get/Set:cVars
-					mscorlib::System::Int16  get_cVars();
+					mscorlib::System::Int16  get_cVars() const;
 					void set_cVars(mscorlib::System::Int16  value);
 
 					//	Get/Set:cImplTypes
-					mscorlib::System::Int16  get_cImplTypes();
+					mscorlib::System::Int16  get_cImplTypes() const;
 					void set_cImplTypes(mscorlib::System::Int16  value);
 
 					//	Get/Set:cbSizeVft
-					mscorlib::System::Int16  get_cbSizeVft();
+					mscorlib::System::Int16  get_cbSizeVft() const;
 					void set_cbSizeVft(mscorlib::System::Int16  value);
 
 					//	Get/Set:cbAlignment
-					mscorlib::System::Int16  get_cbAlignment();
+					mscorlib::System::Int16  get_cbAlignment() const;
 					void set_cbAlignment(mscorlib::System::Int16  value);
 
 					//	Get/Set:wTypeFlags
-					mscorlib::System::Runtime::InteropServices::TYPEFLAGS::__ENUM__  get_wTypeFlags();
+					mscorlib::System::Runtime::InteropServices::TYPEFLAGS::__ENUM__  get_wTypeFlags() const;
 					void set_wTypeFlags(mscorlib::System::Runtime::InteropServices::TYPEFLAGS::__ENUM__  value);
 
 					//	Get/Set:wMajorVerNum
-					mscorlib::System::Int16  get_wMajorVerNum();
+					mscorlib::System::Int16  get_wMajorVerNum() const;
 					void set_wMajorVerNum(mscorlib::System::Int16  value);
 
 					//	Get/Set:wMinorVerNum
-					mscorlib::System::Int16  get_wMinorVerNum();
+					mscorlib::System::Int16  get_wMinorVerNum() const;
 					void set_wMinorVerNum(mscorlib::System::Int16  value);
 
 					//	Get/Set:tdescAlias
-					mscorlib::System::Runtime::InteropServices::TYPEDESC  get_tdescAlias();
+					mscorlib::System::Runtime::InteropServices::TYPEDESC  get_tdescAlias() const;
 					void set_tdescAlias(mscorlib::System::Runtime::InteropServices::TYPEDESC  value);
 
 					//	Get/Set:idldescType
-					mscorlib::System::Runtime::InteropServices::IDLDESC  get_idldescType();
+					mscorlib::System::Runtime::InteropServices::IDLDESC  get_idldescType() const;
 					void set_idldescType(mscorlib::System::Runtime::InteropServices::IDLDESC  value);
 
 					//	Get/Set:MEMBER_ID_NIL

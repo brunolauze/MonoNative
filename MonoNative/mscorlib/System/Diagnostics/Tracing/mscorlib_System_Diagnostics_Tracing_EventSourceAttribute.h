@@ -70,19 +70,19 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Guid
-					mscorlib::System::String  get_Guid();
+					mscorlib::System::String  get_Guid() const;
 					void set_Guid(mscorlib::System::String  value);
 
 					//	Get/Set:LocalizationResources
-					mscorlib::System::String  get_LocalizationResources();
+					mscorlib::System::String  get_LocalizationResources() const;
 					void set_LocalizationResources(mscorlib::System::String  value);
 
 					//	Get/Set:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 					void set_Name(mscorlib::System::String  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

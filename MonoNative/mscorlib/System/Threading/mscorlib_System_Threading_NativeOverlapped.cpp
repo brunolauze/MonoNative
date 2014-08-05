@@ -14,7 +14,7 @@ namespace mscorlib
 
 			//Public Methods
 			//	Get/Set:InternalLow
-			mscorlib::System::IntPtr NativeOverlapped::get_InternalLow()
+			mscorlib::System::IntPtr NativeOverlapped::get_InternalLow() const
 			{
 				return Global::GetFieldValue(__native_object__, "InternalLow");
 			}
@@ -24,7 +24,7 @@ namespace mscorlib
 			}
 
 			//	Get/Set:InternalHigh
-			mscorlib::System::IntPtr NativeOverlapped::get_InternalHigh()
+			mscorlib::System::IntPtr NativeOverlapped::get_InternalHigh() const
 			{
 				return Global::GetFieldValue(__native_object__, "InternalHigh");
 			}
@@ -34,7 +34,7 @@ namespace mscorlib
 			}
 
 			//	Get/Set:OffsetLow
-			mscorlib::System::Int32 NativeOverlapped::get_OffsetLow()
+			mscorlib::System::Int32 NativeOverlapped::get_OffsetLow() const
 			{
 				return Global::GetFieldInt32Value(__native_object__, "OffsetLow");
 			}
@@ -44,7 +44,7 @@ namespace mscorlib
 			}
 
 			//	Get/Set:OffsetHigh
-			mscorlib::System::Int32 NativeOverlapped::get_OffsetHigh()
+			mscorlib::System::Int32 NativeOverlapped::get_OffsetHigh() const
 			{
 				return Global::GetFieldInt32Value(__native_object__, "OffsetHigh");
 			}
@@ -54,7 +54,7 @@ namespace mscorlib
 			}
 
 			//	Get/Set:EventHandle
-			mscorlib::System::IntPtr NativeOverlapped::get_EventHandle()
+			mscorlib::System::IntPtr NativeOverlapped::get_EventHandle() const
 			{
 				return Global::GetFieldValue(__native_object__, "EventHandle");
 			}

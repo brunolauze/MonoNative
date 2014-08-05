@@ -153,19 +153,19 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get:SubKeyCount
-				mscorlib::System::Int32  get_SubKeyCount();
+				mscorlib::System::Int32  get_SubKeyCount() const;
 
 				//	Get:ValueCount
-				mscorlib::System::Int32  get_ValueCount();
+				mscorlib::System::Int32  get_ValueCount() const;
 
 				//	Get:Handle
-				mscorlib::Microsoft::Win32::SafeHandles::SafeRegistryHandle  get_Handle();
+				mscorlib::Microsoft::Win32::SafeHandles::SafeRegistryHandle  get_Handle() const;
 
 				//	Get:View
-				mscorlib::Microsoft::Win32::RegistryView::__ENUM__  get_View();
+				mscorlib::Microsoft::Win32::RegistryView::__ENUM__  get_View() const;
 
 			
 			protected:

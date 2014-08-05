@@ -12,6 +12,8 @@ namespace mscorlib
 		namespace Globalization
 		{
 
+			Property<mscorlib::System::Globalization::DateTimeFormatInfo , mscorlib::System::Globalization::DateTimeFormatInfo> mscorlib::System::Globalization::DateTimeFormatInfo::CurrentInfo(&mscorlib::System::Globalization::DateTimeFormatInfo::get_CurrentInfo, &mscorlib::System::Globalization::DateTimeFormatInfo::set_CurrentInfo);
+			Property<mscorlib::System::Globalization::DateTimeFormatInfo , mscorlib::System::Globalization::DateTimeFormatInfo> mscorlib::System::Globalization::DateTimeFormatInfo::InvariantInfo(&mscorlib::System::Globalization::DateTimeFormatInfo::get_InvariantInfo, &mscorlib::System::Globalization::DateTimeFormatInfo::set_InvariantInfo);
 			//Public Methods
 			mscorlib::System::Globalization::DateTimeFormatInfo DateTimeFormatInfo::GetInstance(mscorlib::System::IFormatProvider provider)
 			{
@@ -174,7 +176,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  DateTimeFormatInfo::get_IsReadOnly()
+			mscorlib::System::Boolean  DateTimeFormatInfo::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -182,7 +184,7 @@ namespace mscorlib
 
 
 			//	Get/Set:AbbreviatedDayNames
-			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_AbbreviatedDayNames()
+			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_AbbreviatedDayNames() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_AbbreviatedDayNames", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -207,7 +209,7 @@ namespace mscorlib
 
 
 			//	Get/Set:AbbreviatedMonthNames
-			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_AbbreviatedMonthNames()
+			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_AbbreviatedMonthNames() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_AbbreviatedMonthNames", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -232,7 +234,7 @@ namespace mscorlib
 
 
 			//	Get/Set:DayNames
-			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_DayNames()
+			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_DayNames() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_DayNames", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -257,7 +259,7 @@ namespace mscorlib
 
 
 			//	Get/Set:MonthNames
-			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_MonthNames()
+			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_MonthNames() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_MonthNames", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -282,7 +284,7 @@ namespace mscorlib
 
 
 			//	Get/Set:AbbreviatedMonthGenitiveNames
-			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_AbbreviatedMonthGenitiveNames()
+			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_AbbreviatedMonthGenitiveNames() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_AbbreviatedMonthGenitiveNames", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -307,7 +309,7 @@ namespace mscorlib
 
 
 			//	Get/Set:MonthGenitiveNames
-			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_MonthGenitiveNames()
+			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_MonthGenitiveNames() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_MonthGenitiveNames", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -332,7 +334,7 @@ namespace mscorlib
 
 
 			//	Get:NativeCalendarName
-			mscorlib::System::String  DateTimeFormatInfo::get_NativeCalendarName()
+			mscorlib::System::String  DateTimeFormatInfo::get_NativeCalendarName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_NativeCalendarName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -340,7 +342,7 @@ namespace mscorlib
 
 
 			//	Get/Set:ShortestDayNames
-			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_ShortestDayNames()
+			std::vector<mscorlib::System::String*>  DateTimeFormatInfo::get_ShortestDayNames() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_ShortestDayNames", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -365,7 +367,7 @@ namespace mscorlib
 
 
 			//	Get/Set:AMDesignator
-			mscorlib::System::String  DateTimeFormatInfo::get_AMDesignator()
+			mscorlib::System::String  DateTimeFormatInfo::get_AMDesignator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_AMDesignator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -382,7 +384,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PMDesignator
-			mscorlib::System::String  DateTimeFormatInfo::get_PMDesignator()
+			mscorlib::System::String  DateTimeFormatInfo::get_PMDesignator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_PMDesignator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -399,7 +401,7 @@ namespace mscorlib
 
 
 			//	Get/Set:DateSeparator
-			mscorlib::System::String  DateTimeFormatInfo::get_DateSeparator()
+			mscorlib::System::String  DateTimeFormatInfo::get_DateSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_DateSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -416,7 +418,7 @@ namespace mscorlib
 
 
 			//	Get/Set:TimeSeparator
-			mscorlib::System::String  DateTimeFormatInfo::get_TimeSeparator()
+			mscorlib::System::String  DateTimeFormatInfo::get_TimeSeparator() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_TimeSeparator", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -433,7 +435,7 @@ namespace mscorlib
 
 
 			//	Get/Set:LongDatePattern
-			mscorlib::System::String  DateTimeFormatInfo::get_LongDatePattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_LongDatePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_LongDatePattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -450,7 +452,7 @@ namespace mscorlib
 
 
 			//	Get/Set:ShortDatePattern
-			mscorlib::System::String  DateTimeFormatInfo::get_ShortDatePattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_ShortDatePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_ShortDatePattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -467,7 +469,7 @@ namespace mscorlib
 
 
 			//	Get/Set:ShortTimePattern
-			mscorlib::System::String  DateTimeFormatInfo::get_ShortTimePattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_ShortTimePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_ShortTimePattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -484,7 +486,7 @@ namespace mscorlib
 
 
 			//	Get/Set:LongTimePattern
-			mscorlib::System::String  DateTimeFormatInfo::get_LongTimePattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_LongTimePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_LongTimePattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -501,7 +503,7 @@ namespace mscorlib
 
 
 			//	Get/Set:MonthDayPattern
-			mscorlib::System::String  DateTimeFormatInfo::get_MonthDayPattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_MonthDayPattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_MonthDayPattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -518,7 +520,7 @@ namespace mscorlib
 
 
 			//	Get/Set:YearMonthPattern
-			mscorlib::System::String  DateTimeFormatInfo::get_YearMonthPattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_YearMonthPattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_YearMonthPattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -535,7 +537,7 @@ namespace mscorlib
 
 
 			//	Get/Set:FullDateTimePattern
-			mscorlib::System::String  DateTimeFormatInfo::get_FullDateTimePattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_FullDateTimePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_FullDateTimePattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -552,7 +554,7 @@ namespace mscorlib
 
 
 			//	Get/Set:FirstDayOfWeek
-			mscorlib::System::DayOfWeek::__ENUM__  DateTimeFormatInfo::get_FirstDayOfWeek()
+			mscorlib::System::DayOfWeek::__ENUM__  DateTimeFormatInfo::get_FirstDayOfWeek() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_FirstDayOfWeek", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__);
@@ -569,7 +571,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Calendar
-			mscorlib::System::Globalization::Calendar  DateTimeFormatInfo::get_Calendar()
+			mscorlib::System::Globalization::Calendar  DateTimeFormatInfo::get_Calendar() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_Calendar", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::Calendar(__result__);
@@ -586,7 +588,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CalendarWeekRule
-			mscorlib::System::Globalization::CalendarWeekRule::__ENUM__  DateTimeFormatInfo::get_CalendarWeekRule()
+			mscorlib::System::Globalization::CalendarWeekRule::__ENUM__  DateTimeFormatInfo::get_CalendarWeekRule() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_CalendarWeekRule", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Globalization::CalendarWeekRule::__ENUM__*)mono_object_unbox(__result__);
@@ -603,7 +605,7 @@ namespace mscorlib
 
 
 			//	Get:RFC1123Pattern
-			mscorlib::System::String  DateTimeFormatInfo::get_RFC1123Pattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_RFC1123Pattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_RFC1123Pattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -611,7 +613,7 @@ namespace mscorlib
 
 
 			//	Get:SortableDateTimePattern
-			mscorlib::System::String  DateTimeFormatInfo::get_SortableDateTimePattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_SortableDateTimePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_SortableDateTimePattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -619,7 +621,7 @@ namespace mscorlib
 
 
 			//	Get:UniversalSortableDateTimePattern
-			mscorlib::System::String  DateTimeFormatInfo::get_UniversalSortableDateTimePattern()
+			mscorlib::System::String  DateTimeFormatInfo::get_UniversalSortableDateTimePattern() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_UniversalSortableDateTimePattern", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -634,12 +636,22 @@ namespace mscorlib
 				return mscorlib::System::Globalization::DateTimeFormatInfo(__result__);
 			}
 
+			void DateTimeFormatInfo::set_CurrentInfo(mscorlib::System::Globalization::DateTimeFormatInfo  value)
+			{
+				throw;
+			}
+
 
 			//	Get:InvariantInfo
 			mscorlib::System::Globalization::DateTimeFormatInfo  DateTimeFormatInfo::get_InvariantInfo()
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_InvariantInfo", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::DateTimeFormatInfo(__result__);
+			}
+
+			void DateTimeFormatInfo::set_InvariantInfo(mscorlib::System::Globalization::DateTimeFormatInfo  value)
+			{
+				throw;
 			}
 
 

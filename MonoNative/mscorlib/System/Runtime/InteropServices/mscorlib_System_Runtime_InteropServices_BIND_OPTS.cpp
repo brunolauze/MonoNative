@@ -15,7 +15,7 @@ namespace mscorlib
 
 				//Public Methods
 				//	Get/Set:cbStruct
-				mscorlib::System::Int32 BIND_OPTS::get_cbStruct()
+				mscorlib::System::Int32 BIND_OPTS::get_cbStruct() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "cbStruct");
 				}
@@ -25,7 +25,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:grfFlags
-				mscorlib::System::Int32 BIND_OPTS::get_grfFlags()
+				mscorlib::System::Int32 BIND_OPTS::get_grfFlags() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "grfFlags");
 				}
@@ -35,7 +35,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:grfMode
-				mscorlib::System::Int32 BIND_OPTS::get_grfMode()
+				mscorlib::System::Int32 BIND_OPTS::get_grfMode() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "grfMode");
 				}
@@ -45,7 +45,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:dwTickCountDeadline
-				mscorlib::System::Int32 BIND_OPTS::get_dwTickCountDeadline()
+				mscorlib::System::Int32 BIND_OPTS::get_dwTickCountDeadline() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "dwTickCountDeadline");
 				}

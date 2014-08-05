@@ -68,10 +68,10 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:CodeBase
-			mscorlib::System::String  get_CodeBase();
+			mscorlib::System::String  get_CodeBase() const;
 
 			//	Get:FullName
-			mscorlib::System::String  get_FullName();
+			mscorlib::System::String  get_FullName() const;
 
 		
 		protected:

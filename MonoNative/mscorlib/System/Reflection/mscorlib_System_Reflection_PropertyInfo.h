@@ -2,9 +2,9 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_REFLECTION_PROPERTYINFO_H
 
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MemberInfo.h>
+#include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__PropertyInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
-#include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_PropertyAttributes.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MemberTypes.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -62,24 +62,24 @@ namespace mscorlib
 
 			class PropertyInfo
 				: public mscorlib::System::Reflection::MemberInfo
+				, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
 				, public virtual mscorlib::System::Runtime::InteropServices::_PropertyInfo
 				, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
-				, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
 			{
 			public:
 				PropertyInfo(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Reflection::MemberInfo(nativeTypeInfo)
+				, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
 				, mscorlib::System::Runtime::InteropServices::_PropertyInfo(NULL)
 				, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
-				, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
 				{
 				};
 			
 				PropertyInfo(MonoObject *nativeObject)
 				: mscorlib::System::Reflection::MemberInfo(nativeObject)
+				, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
 				, mscorlib::System::Runtime::InteropServices::_PropertyInfo(nativeObject)
 				, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
-				, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
 				{
 				};
 			
@@ -133,46 +133,46 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Attributes
-				mscorlib::System::Reflection::PropertyAttributes::__ENUM__  get_Attributes();
+				mscorlib::System::Reflection::PropertyAttributes::__ENUM__  get_Attributes() const;
 
 				//	Get:CanRead
-				mscorlib::System::Boolean  get_CanRead();
+				mscorlib::System::Boolean  get_CanRead() const;
 
 				//	Get:CanWrite
-				mscorlib::System::Boolean  get_CanWrite();
+				mscorlib::System::Boolean  get_CanWrite() const;
 
 				//	Get:GetMethod
-				mscorlib::System::Reflection::MethodInfo  get_GetMethod();
+				mscorlib::System::Reflection::MethodInfo  get_GetMethod() const;
 
 				//	Get:SetMethod
-				mscorlib::System::Reflection::MethodInfo  get_SetMethod();
+				mscorlib::System::Reflection::MethodInfo  get_SetMethod() const;
 
 				//	Get:IsSpecialName
-				mscorlib::System::Boolean  get_IsSpecialName();
+				mscorlib::System::Boolean  get_IsSpecialName() const;
 
 				//	Get:MemberType
-				mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+				mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 				//	Get:PropertyType
-				mscorlib::System::Type  get_PropertyType();
+				mscorlib::System::Type  get_PropertyType() const;
 
 				//	Get:DeclaringType
-				mscorlib::System::Type  get_DeclaringType();
+				mscorlib::System::Type  get_DeclaringType() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get:ReflectedType
-				mscorlib::System::Type  get_ReflectedType();
+				mscorlib::System::Type  get_ReflectedType() const;
 
 				//	Get:Module
-				mscorlib::System::Reflection::Module  get_Module();
+				mscorlib::System::Reflection::Module  get_Module() const;
 
 				//	Get:MetadataToken
-				mscorlib::System::Int32  get_MetadataToken();
+				mscorlib::System::Int32  get_MetadataToken() const;
 
 				//	Get:CustomAttributes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes();
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes() const;
 
 			
 			protected:

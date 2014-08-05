@@ -113,23 +113,23 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:FullTrustAssemblies
-					mscorlib::System::Collections::IList  get_FullTrustAssemblies();
+					mscorlib::System::Collections::IList  get_FullTrustAssemblies() const;
 
 					//	Get:Label
-					mscorlib::System::String  get_Label();
+					mscorlib::System::String  get_Label() const;
 
 					//	Get:NamedPermissionSets
-					mscorlib::System::Collections::IList  get_NamedPermissionSets();
+					mscorlib::System::Collections::IList  get_NamedPermissionSets() const;
 
 					//	Get/Set:RootCodeGroup
-					mscorlib::System::Security::Policy::CodeGroup  get_RootCodeGroup();
+					mscorlib::System::Security::Policy::CodeGroup  get_RootCodeGroup() const;
 					void set_RootCodeGroup(mscorlib::System::Security::Policy::CodeGroup  value);
 
 					//	Get:StoreLocation
-					mscorlib::System::String  get_StoreLocation();
+					mscorlib::System::String  get_StoreLocation() const;
 
 					//	Get:Type
-					mscorlib::System::Security::PolicyLevelType::__ENUM__  get_Type();
+					mscorlib::System::Security::PolicyLevelType::__ENUM__  get_Type() const;
 
 				
 				protected:

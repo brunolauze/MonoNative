@@ -71,13 +71,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Start
-				mscorlib::System::DateTime  get_Start();
+				mscorlib::System::DateTime  get_Start() const;
 
 				//	Get:End
-				mscorlib::System::DateTime  get_End();
+				mscorlib::System::DateTime  get_End() const;
 
 				//	Get:Delta
-				mscorlib::System::TimeSpan  get_Delta();
+				mscorlib::System::TimeSpan  get_Delta() const;
 
 			
 			protected:

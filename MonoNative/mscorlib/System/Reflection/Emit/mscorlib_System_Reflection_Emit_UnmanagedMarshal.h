@@ -65,16 +65,16 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:BaseType
-					mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  get_BaseType();
+					mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  get_BaseType() const;
 
 					//	Get:ElementCount
-					mscorlib::System::Int32  get_ElementCount();
+					mscorlib::System::Int32  get_ElementCount() const;
 
 					//	Get:GetUnmanagedType
-					mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  get_GetUnmanagedType();
+					mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  get_GetUnmanagedType() const;
 
 					//	Get:IIDGuid
-					mscorlib::System::Guid  get_IIDGuid();
+					mscorlib::System::Guid  get_IIDGuid() const;
 
 				
 				protected:

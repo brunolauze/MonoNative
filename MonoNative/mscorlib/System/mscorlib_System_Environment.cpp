@@ -13,6 +13,26 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::String , mscorlib::System::Environment> mscorlib::System::Environment::CommandLine(&mscorlib::System::Environment::get_CommandLine, &mscorlib::System::Environment::set_CommandLine);
+		Property<mscorlib::System::String , mscorlib::System::Environment> mscorlib::System::Environment::CurrentDirectory(&mscorlib::System::Environment::get_CurrentDirectory, &mscorlib::System::Environment::set_CurrentDirectory);
+		Property<mscorlib::System::Int32 , mscorlib::System::Environment> mscorlib::System::Environment::CurrentManagedThreadId(&mscorlib::System::Environment::get_CurrentManagedThreadId, &mscorlib::System::Environment::set_CurrentManagedThreadId);
+		Property<mscorlib::System::Int32 , mscorlib::System::Environment> mscorlib::System::Environment::ExitCode(&mscorlib::System::Environment::get_ExitCode, &mscorlib::System::Environment::set_ExitCode);
+		Property<mscorlib::System::Boolean , mscorlib::System::Environment> mscorlib::System::Environment::HasShutdownStarted(&mscorlib::System::Environment::get_HasShutdownStarted, &mscorlib::System::Environment::set_HasShutdownStarted);
+		Property<mscorlib::System::String , mscorlib::System::Environment> mscorlib::System::Environment::MachineName(&mscorlib::System::Environment::get_MachineName, &mscorlib::System::Environment::set_MachineName);
+		Property<mscorlib::System::String , mscorlib::System::Environment> mscorlib::System::Environment::NewLine(&mscorlib::System::Environment::get_NewLine, &mscorlib::System::Environment::set_NewLine);
+		Property<mscorlib::System::OperatingSystem , mscorlib::System::Environment> mscorlib::System::Environment::OSVersion(&mscorlib::System::Environment::get_OSVersion, &mscorlib::System::Environment::set_OSVersion);
+		Property<mscorlib::System::String , mscorlib::System::Environment> mscorlib::System::Environment::StackTrace(&mscorlib::System::Environment::get_StackTrace, &mscorlib::System::Environment::set_StackTrace);
+		Property<mscorlib::System::String , mscorlib::System::Environment> mscorlib::System::Environment::SystemDirectory(&mscorlib::System::Environment::get_SystemDirectory, &mscorlib::System::Environment::set_SystemDirectory);
+		Property<mscorlib::System::Int32 , mscorlib::System::Environment> mscorlib::System::Environment::TickCount(&mscorlib::System::Environment::get_TickCount, &mscorlib::System::Environment::set_TickCount);
+		Property<mscorlib::System::String , mscorlib::System::Environment> mscorlib::System::Environment::UserDomainName(&mscorlib::System::Environment::get_UserDomainName, &mscorlib::System::Environment::set_UserDomainName);
+		Property<mscorlib::System::Boolean , mscorlib::System::Environment> mscorlib::System::Environment::UserInteractive(&mscorlib::System::Environment::get_UserInteractive, &mscorlib::System::Environment::set_UserInteractive);
+		Property<mscorlib::System::String , mscorlib::System::Environment> mscorlib::System::Environment::UserName(&mscorlib::System::Environment::get_UserName, &mscorlib::System::Environment::set_UserName);
+		Property<mscorlib::System::Version , mscorlib::System::Environment> mscorlib::System::Environment::Version(&mscorlib::System::Environment::get_Version, &mscorlib::System::Environment::set_Version);
+		Property<mscorlib::System::Int64 , mscorlib::System::Environment> mscorlib::System::Environment::WorkingSet(&mscorlib::System::Environment::get_WorkingSet, &mscorlib::System::Environment::set_WorkingSet);
+		Property<mscorlib::System::Boolean , mscorlib::System::Environment> mscorlib::System::Environment::Is64BitOperatingSystem(&mscorlib::System::Environment::get_Is64BitOperatingSystem, &mscorlib::System::Environment::set_Is64BitOperatingSystem);
+		Property<mscorlib::System::Int32 , mscorlib::System::Environment> mscorlib::System::Environment::SystemPageSize(&mscorlib::System::Environment::get_SystemPageSize, &mscorlib::System::Environment::set_SystemPageSize);
+		Property<mscorlib::System::Boolean , mscorlib::System::Environment> mscorlib::System::Environment::Is64BitProcess(&mscorlib::System::Environment::get_Is64BitProcess, &mscorlib::System::Environment::set_Is64BitProcess);
+		Property<mscorlib::System::Int32 , mscorlib::System::Environment> mscorlib::System::Environment::ProcessorCount(&mscorlib::System::Environment::get_ProcessorCount, &mscorlib::System::Environment::set_ProcessorCount);
 		//Public Methods
 		void Environment::Exit(mscorlib::System::Int32 exitCode)
 		{
@@ -173,6 +193,11 @@ namespace mscorlib
 			return mscorlib::System::String(__result__);
 		}
 
+		void Environment::set_CommandLine(mscorlib::System::String  value)
+		{
+			throw;
+		}
+
 
 		//	Get/Set:CurrentDirectory
 		mscorlib::System::String  Environment::get_CurrentDirectory()
@@ -196,6 +221,11 @@ namespace mscorlib
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_CurrentManagedThreadId", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		void Environment::set_CurrentManagedThreadId(mscorlib::System::Int32  value)
+		{
+			throw;
 		}
 
 
@@ -223,12 +253,22 @@ namespace mscorlib
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
 
+		void Environment::set_HasShutdownStarted(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
+
 
 		//	Get:MachineName
 		mscorlib::System::String  Environment::get_MachineName()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_MachineName", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
+		}
+
+		void Environment::set_MachineName(mscorlib::System::String  value)
+		{
+			throw;
 		}
 
 
@@ -239,12 +279,22 @@ namespace mscorlib
 			return mscorlib::System::String(__result__);
 		}
 
+		void Environment::set_NewLine(mscorlib::System::String  value)
+		{
+			throw;
+		}
+
 
 		//	Get:OSVersion
 		mscorlib::System::OperatingSystem  Environment::get_OSVersion()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_OSVersion", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::OperatingSystem(__result__);
+		}
+
+		void Environment::set_OSVersion(mscorlib::System::OperatingSystem  value)
+		{
+			throw;
 		}
 
 
@@ -255,12 +305,22 @@ namespace mscorlib
 			return mscorlib::System::String(__result__);
 		}
 
+		void Environment::set_StackTrace(mscorlib::System::String  value)
+		{
+			throw;
+		}
+
 
 		//	Get:SystemDirectory
 		mscorlib::System::String  Environment::get_SystemDirectory()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_SystemDirectory", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
+		}
+
+		void Environment::set_SystemDirectory(mscorlib::System::String  value)
+		{
+			throw;
 		}
 
 
@@ -271,12 +331,22 @@ namespace mscorlib
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 		}
 
+		void Environment::set_TickCount(mscorlib::System::Int32  value)
+		{
+			throw;
+		}
+
 
 		//	Get:UserDomainName
 		mscorlib::System::String  Environment::get_UserDomainName()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_UserDomainName", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
+		}
+
+		void Environment::set_UserDomainName(mscorlib::System::String  value)
+		{
+			throw;
 		}
 
 
@@ -287,12 +357,22 @@ namespace mscorlib
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
 
+		void Environment::set_UserInteractive(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
+
 
 		//	Get:UserName
 		mscorlib::System::String  Environment::get_UserName()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_UserName", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
+		}
+
+		void Environment::set_UserName(mscorlib::System::String  value)
+		{
+			throw;
 		}
 
 
@@ -303,12 +383,22 @@ namespace mscorlib
 			return mscorlib::System::Version(__result__);
 		}
 
+		void Environment::set_Version(mscorlib::System::Version  value)
+		{
+			throw;
+		}
+
 
 		//	Get:WorkingSet
 		mscorlib::System::Int64  Environment::get_WorkingSet()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_WorkingSet", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
+		}
+
+		void Environment::set_WorkingSet(mscorlib::System::Int64  value)
+		{
+			throw;
 		}
 
 
@@ -319,12 +409,22 @@ namespace mscorlib
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
 
+		void Environment::set_Is64BitOperatingSystem(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
+
 
 		//	Get:SystemPageSize
 		mscorlib::System::Int32  Environment::get_SystemPageSize()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_SystemPageSize", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		void Environment::set_SystemPageSize(mscorlib::System::Int32  value)
+		{
+			throw;
 		}
 
 
@@ -335,12 +435,22 @@ namespace mscorlib
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
 
+		void Environment::set_Is64BitProcess(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
+
 
 		//	Get:ProcessorCount
 		mscorlib::System::Int32  Environment::get_ProcessorCount()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Environment", 0, NULL, "get_ProcessorCount", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		void Environment::set_ProcessorCount(mscorlib::System::Int32  value)
+		{
+			throw;
 		}
 
 

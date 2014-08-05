@@ -90,7 +90,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsSet
-			mscorlib::System::Boolean  ManualResetEventSlim::get_IsSet()
+			mscorlib::System::Boolean  ManualResetEventSlim::get_IsSet() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "ManualResetEventSlim", 0, NULL, "get_IsSet", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -98,7 +98,7 @@ namespace mscorlib
 
 
 			//	Get:SpinCount
-			mscorlib::System::Int32  ManualResetEventSlim::get_SpinCount()
+			mscorlib::System::Int32  ManualResetEventSlim::get_SpinCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "ManualResetEventSlim", 0, NULL, "get_SpinCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -106,7 +106,7 @@ namespace mscorlib
 
 
 			//	Get:WaitHandle
-			mscorlib::System::Threading::WaitHandle  ManualResetEventSlim::get_WaitHandle()
+			mscorlib::System::Threading::WaitHandle  ManualResetEventSlim::get_WaitHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "ManualResetEventSlim", 0, NULL, "get_WaitHandle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::WaitHandle(__result__);

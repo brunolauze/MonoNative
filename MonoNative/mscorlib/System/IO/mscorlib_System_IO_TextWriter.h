@@ -155,21 +155,22 @@ namespace mscorlib
 				__declspec(property(get=get_NewLine, put=set_NewLine)) mscorlib::System::String  NewLine;
 
 				//Public Static Fields
-				static Property<mscorlib::System::IO::TextWriter> Null;
+				static Property<mscorlib::System::IO::TextWriter , mscorlib::System::IO::TextWriter> Null;
 
 				//Get Set Properties Methods
 				//	Get:Encoding
-				mscorlib::System::Text::Encoding  get_Encoding();
+				mscorlib::System::Text::Encoding  get_Encoding() const;
 
 				//	Get:FormatProvider
-				mscorlib::System::IFormatProvider  get_FormatProvider();
+				mscorlib::System::IFormatProvider  get_FormatProvider() const;
 
 				//	Get/Set:NewLine
-				mscorlib::System::String  get_NewLine();
+				mscorlib::System::String  get_NewLine() const;
 				void set_NewLine(mscorlib::System::String  value);
 
 				//	Get/Set:Null
 				static mscorlib::System::IO::TextWriter  get_Null();
+				static void set_Null(mscorlib::System::IO::TextWriter  value);
 
 			
 			protected:

@@ -73,14 +73,14 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:AssemblyName
-					mscorlib::System::String  get_AssemblyName();
+					mscorlib::System::String  get_AssemblyName() const;
 
 					//	Get/Set:AllInternalsVisible
-					mscorlib::System::Boolean  get_AllInternalsVisible();
+					mscorlib::System::Boolean  get_AllInternalsVisible() const;
 					void set_AllInternalsVisible(mscorlib::System::Boolean  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

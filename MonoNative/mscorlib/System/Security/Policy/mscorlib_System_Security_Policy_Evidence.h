@@ -112,20 +112,20 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Count
-					mscorlib::System::Int32  get_Count();
+					mscorlib::System::Int32  get_Count() const;
 
 					//	Get:IsReadOnly
-					mscorlib::System::Boolean  get_IsReadOnly();
+					mscorlib::System::Boolean  get_IsReadOnly() const;
 
 					//	Get:IsSynchronized
-					mscorlib::System::Boolean  get_IsSynchronized();
+					mscorlib::System::Boolean  get_IsSynchronized() const;
 
 					//	Get/Set:Locked
-					mscorlib::System::Boolean  get_Locked();
+					mscorlib::System::Boolean  get_Locked() const;
 					void set_Locked(mscorlib::System::Boolean  value);
 
 					//	Get:SyncRoot
-					mscorlib::System::Object  get_SyncRoot();
+					mscorlib::System::Object  get_SyncRoot() const;
 
 				
 				protected:

@@ -81,19 +81,19 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:MajorVersion
-					mscorlib::System::Int32  get_MajorVersion();
+					mscorlib::System::Int32  get_MajorVersion() const;
 
 					//	Get:MinorVersion
-					mscorlib::System::Int32  get_MinorVersion();
+					mscorlib::System::Int32  get_MinorVersion() const;
 
 					//	Get:BuildNumber
-					mscorlib::System::Int32  get_BuildNumber();
+					mscorlib::System::Int32  get_BuildNumber() const;
 
 					//	Get:RevisionNumber
-					mscorlib::System::Int32  get_RevisionNumber();
+					mscorlib::System::Int32  get_RevisionNumber() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

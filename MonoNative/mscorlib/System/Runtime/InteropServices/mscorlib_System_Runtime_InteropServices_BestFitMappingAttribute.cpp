@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:BestFitMapping
-				mscorlib::System::Boolean  BestFitMappingAttribute::get_BestFitMapping()
+				mscorlib::System::Boolean  BestFitMappingAttribute::get_BestFitMapping() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "BestFitMappingAttribute", 0, NULL, "get_BestFitMapping", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  BestFitMappingAttribute::get_TypeId()
+				mscorlib::System::Object  BestFitMappingAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ThrowOnUnmappableChar
-				mscorlib::System::Boolean BestFitMappingAttribute::get_ThrowOnUnmappableChar()
+				mscorlib::System::Boolean BestFitMappingAttribute::get_ThrowOnUnmappableChar() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "ThrowOnUnmappableChar");
 				}

@@ -84,28 +84,28 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:InheritedObjectType
-					mscorlib::System::Guid  get_InheritedObjectType();
+					mscorlib::System::Guid  get_InheritedObjectType() const;
 
 					//	Get:ObjectFlags
-					mscorlib::System::Security::AccessControl::ObjectAceFlags::__ENUM__  get_ObjectFlags();
+					mscorlib::System::Security::AccessControl::ObjectAceFlags::__ENUM__  get_ObjectFlags() const;
 
 					//	Get:ObjectType
-					mscorlib::System::Guid  get_ObjectType();
+					mscorlib::System::Guid  get_ObjectType() const;
 
 					//	Get:AuditFlags
-					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags();
+					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags() const;
 
 					//	Get:IdentityReference
-					mscorlib::System::Security::Principal::IdentityReference  get_IdentityReference();
+					mscorlib::System::Security::Principal::IdentityReference  get_IdentityReference() const;
 
 					//	Get:InheritanceFlags
-					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags();
+					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags() const;
 
 					//	Get:IsInherited
-					mscorlib::System::Boolean  get_IsInherited();
+					mscorlib::System::Boolean  get_IsInherited() const;
 
 					//	Get:PropagationFlags
-					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags();
+					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags() const;
 
 				
 				protected:

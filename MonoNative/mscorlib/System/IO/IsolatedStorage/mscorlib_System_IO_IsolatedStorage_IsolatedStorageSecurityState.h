@@ -60,14 +60,14 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Options
-					mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__  get_Options();
+					mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__  get_Options() const;
 
 					//	Get/Set:Quota
-					mscorlib::System::Int64  get_Quota();
+					mscorlib::System::Int64  get_Quota() const;
 					void set_Quota(mscorlib::System::Int64  value);
 
 					//	Get:UsedSize
-					mscorlib::System::Int64  get_UsedSize();
+					mscorlib::System::Int64  get_UsedSize() const;
 
 				
 				protected:

@@ -2,10 +2,10 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_TIMESPAN_H
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
+#include <mscorlib/System/mscorlib_System_IEquatable_1.h>
 #include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
-#include <mscorlib/System/mscorlib_System_IEquatable_1.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/Globalization/mscorlib_System_Globalization_TimeSpanStyles.h>
@@ -28,18 +28,18 @@ namespace mscorlib
 
 		class TimeSpan
 			: public mscorlib::System::ValueType
+			, public virtual mscorlib::System::IEquatable<mscorlib::System::TimeSpan>
 			, public virtual mscorlib::System::IFormattable
 			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IComparable<mscorlib::System::TimeSpan>
-			, public virtual mscorlib::System::IEquatable<mscorlib::System::TimeSpan>
 		{
 		public:
 			TimeSpan(mscorlib::System::Int64 ticks)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.TimeSpan"))
+			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -50,10 +50,10 @@ namespace mscorlib
 		
 			TimeSpan(mscorlib::System::Int32 hours, mscorlib::System::Int32 minutes, mscorlib::System::Int32 seconds)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.TimeSpan"))
+			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			{
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
@@ -68,10 +68,10 @@ namespace mscorlib
 		
 			TimeSpan(mscorlib::System::Int32 days, mscorlib::System::Int32 hours, mscorlib::System::Int32 minutes, mscorlib::System::Int32 seconds)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.TimeSpan"))
+			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			{
 				MonoType *__parameter_types__[4];
 				void *__parameters__[4];
@@ -88,10 +88,10 @@ namespace mscorlib
 		
 			TimeSpan(mscorlib::System::Int32 days, mscorlib::System::Int32 hours, mscorlib::System::Int32 minutes, mscorlib::System::Int32 seconds, mscorlib::System::Int32 milliseconds)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.TimeSpan"))
+			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			{
 				MonoType *__parameter_types__[5];
 				void *__parameters__[5];
@@ -110,19 +110,19 @@ namespace mscorlib
 		
 			TimeSpan(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
+			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
 			{
 			};
 		
 			TimeSpan(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
+			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(nativeObject)
 			, mscorlib::System::IFormattable(nativeObject)
 			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(nativeObject)
-			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(nativeObject)
 			{
 			};
 		
@@ -185,57 +185,60 @@ namespace mscorlib
 			__declspec(property(get=get_TotalSeconds)) mscorlib::System::Double  TotalSeconds;
 
 			//Public Static Fields
-			static Property<mscorlib::System::TimeSpan> MaxValue;
-			static Property<mscorlib::System::TimeSpan> MinValue;
-			static Property<mscorlib::System::TimeSpan> Zero;
-			static Property<mscorlib::System::Int64> TicksPerDay;
-			static Property<mscorlib::System::Int64> TicksPerHour;
-			static Property<mscorlib::System::Int64> TicksPerMillisecond;
-			static Property<mscorlib::System::Int64> TicksPerMinute;
-			static Property<mscorlib::System::Int64> TicksPerSecond;
+			static Property<mscorlib::System::TimeSpan , mscorlib::System::TimeSpan> MaxValue;
+			static Property<mscorlib::System::TimeSpan , mscorlib::System::TimeSpan> MinValue;
+			static Property<mscorlib::System::TimeSpan , mscorlib::System::TimeSpan> Zero;
+			static Property<mscorlib::System::Int64 , mscorlib::System::TimeSpan> TicksPerDay;
+			static Property<mscorlib::System::Int64 , mscorlib::System::TimeSpan> TicksPerHour;
+			static Property<mscorlib::System::Int64 , mscorlib::System::TimeSpan> TicksPerMillisecond;
+			static Property<mscorlib::System::Int64 , mscorlib::System::TimeSpan> TicksPerMinute;
+			static Property<mscorlib::System::Int64 , mscorlib::System::TimeSpan> TicksPerSecond;
 
 			//Get Set Properties Methods
 			//	Get:Days
-			mscorlib::System::Int32  get_Days();
+			mscorlib::System::Int32  get_Days() const;
 
 			//	Get:Hours
-			mscorlib::System::Int32  get_Hours();
+			mscorlib::System::Int32  get_Hours() const;
 
 			//	Get:Milliseconds
-			mscorlib::System::Int32  get_Milliseconds();
+			mscorlib::System::Int32  get_Milliseconds() const;
 
 			//	Get:Minutes
-			mscorlib::System::Int32  get_Minutes();
+			mscorlib::System::Int32  get_Minutes() const;
 
 			//	Get:Seconds
-			mscorlib::System::Int32  get_Seconds();
+			mscorlib::System::Int32  get_Seconds() const;
 
 			//	Get:Ticks
-			mscorlib::System::Int64  get_Ticks();
+			mscorlib::System::Int64  get_Ticks() const;
 
 			//	Get:TotalDays
-			mscorlib::System::Double  get_TotalDays();
+			mscorlib::System::Double  get_TotalDays() const;
 
 			//	Get:TotalHours
-			mscorlib::System::Double  get_TotalHours();
+			mscorlib::System::Double  get_TotalHours() const;
 
 			//	Get:TotalMilliseconds
-			mscorlib::System::Double  get_TotalMilliseconds();
+			mscorlib::System::Double  get_TotalMilliseconds() const;
 
 			//	Get:TotalMinutes
-			mscorlib::System::Double  get_TotalMinutes();
+			mscorlib::System::Double  get_TotalMinutes() const;
 
 			//	Get:TotalSeconds
-			mscorlib::System::Double  get_TotalSeconds();
+			mscorlib::System::Double  get_TotalSeconds() const;
 
 			//	Get/Set:MaxValue
 			static mscorlib::System::TimeSpan  get_MaxValue();
+			static void set_MaxValue(mscorlib::System::TimeSpan  value);
 
 			//	Get/Set:MinValue
 			static mscorlib::System::TimeSpan  get_MinValue();
+			static void set_MinValue(mscorlib::System::TimeSpan  value);
 
 			//	Get/Set:Zero
 			static mscorlib::System::TimeSpan  get_Zero();
+			static void set_Zero(mscorlib::System::TimeSpan  value);
 
 			//	Get/Set:TicksPerDay
 			static mscorlib::System::Int64  get_TicksPerDay();

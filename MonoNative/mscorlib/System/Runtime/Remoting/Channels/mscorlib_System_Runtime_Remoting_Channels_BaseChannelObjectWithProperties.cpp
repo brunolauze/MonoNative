@@ -71,7 +71,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Count
-					mscorlib::System::Int32  BaseChannelObjectWithProperties::get_Count()
+					mscorlib::System::Int32  BaseChannelObjectWithProperties::get_Count() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "BaseChannelObjectWithProperties", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -79,7 +79,7 @@ namespace mscorlib
 
 
 					//	Get:IsFixedSize
-					mscorlib::System::Boolean  BaseChannelObjectWithProperties::get_IsFixedSize()
+					mscorlib::System::Boolean  BaseChannelObjectWithProperties::get_IsFixedSize() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "BaseChannelObjectWithProperties", 0, NULL, "get_IsFixedSize", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -87,7 +87,7 @@ namespace mscorlib
 
 
 					//	Get:IsReadOnly
-					mscorlib::System::Boolean  BaseChannelObjectWithProperties::get_IsReadOnly()
+					mscorlib::System::Boolean  BaseChannelObjectWithProperties::get_IsReadOnly() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "BaseChannelObjectWithProperties", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -95,7 +95,7 @@ namespace mscorlib
 
 
 					//	Get:IsSynchronized
-					mscorlib::System::Boolean  BaseChannelObjectWithProperties::get_IsSynchronized()
+					mscorlib::System::Boolean  BaseChannelObjectWithProperties::get_IsSynchronized() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "BaseChannelObjectWithProperties", 0, NULL, "get_IsSynchronized", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -103,7 +103,7 @@ namespace mscorlib
 
 
 					//	Get/Set:Item
-					mscorlib::System::Object  BaseChannelObjectWithProperties::get_Item(mscorlib::System::Object key)
+					mscorlib::System::Object  BaseChannelObjectWithProperties::get_Item(mscorlib::System::Object key) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -126,7 +126,7 @@ namespace mscorlib
 
 
 					//	Get:Keys
-					mscorlib::System::Collections::ICollection  BaseChannelObjectWithProperties::get_Keys()
+					mscorlib::System::Collections::ICollection  BaseChannelObjectWithProperties::get_Keys() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "BaseChannelObjectWithProperties", 0, NULL, "get_Keys", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::ICollection(__result__);
@@ -134,7 +134,7 @@ namespace mscorlib
 
 
 					//	Get:Properties
-					mscorlib::System::Collections::IDictionary  BaseChannelObjectWithProperties::get_Properties()
+					mscorlib::System::Collections::IDictionary  BaseChannelObjectWithProperties::get_Properties() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "BaseChannelObjectWithProperties", 0, NULL, "get_Properties", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::IDictionary(__result__);
@@ -142,7 +142,7 @@ namespace mscorlib
 
 
 					//	Get:SyncRoot
-					mscorlib::System::Object  BaseChannelObjectWithProperties::get_SyncRoot()
+					mscorlib::System::Object  BaseChannelObjectWithProperties::get_SyncRoot() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "BaseChannelObjectWithProperties", 0, NULL, "get_SyncRoot", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);
@@ -150,7 +150,7 @@ namespace mscorlib
 
 
 					//	Get:Values
-					mscorlib::System::Collections::ICollection  BaseChannelObjectWithProperties::get_Values()
+					mscorlib::System::Collections::ICollection  BaseChannelObjectWithProperties::get_Values() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "BaseChannelObjectWithProperties", 0, NULL, "get_Values", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::ICollection(__result__);

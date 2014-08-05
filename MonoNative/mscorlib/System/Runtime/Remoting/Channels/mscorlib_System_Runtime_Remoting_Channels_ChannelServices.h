@@ -74,11 +74,12 @@ namespace mscorlib
 
 
 						//Public Static Properties
-						static Property<mscorlib::System::Runtime::Remoting::Channels::IChannel*> RegisteredChannels;
+						static Property<std::vector<mscorlib::System::Runtime::Remoting::Channels::IChannel*> , mscorlib::System::Runtime::Remoting::Channels::ChannelServices> RegisteredChannels;
 
 						//Get Set Static Properties Methods
 						//	Get:RegisteredChannels
 						static std::vector<mscorlib::System::Runtime::Remoting::Channels::IChannel*>  get_RegisteredChannels();
+						static void set_RegisteredChannels(std::vector<mscorlib::System::Runtime::Remoting::Channels::IChannel*>  value);
 
 
 					

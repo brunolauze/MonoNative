@@ -79,21 +79,21 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ApplicationUrl
-					mscorlib::System::String  get_ApplicationUrl();
+					mscorlib::System::String  get_ApplicationUrl() const;
 
 					//	Get/Set:ContextAttributes
-					std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>  get_ContextAttributes();
+					std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>  get_ContextAttributes() const;
 					void set_ContextAttributes(std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>  value);
 
 					//	Get:ObjectType
-					mscorlib::System::Type  get_ObjectType();
+					mscorlib::System::Type  get_ObjectType() const;
 
 					//	Get/Set:AssemblyName
-					mscorlib::System::String  get_AssemblyName();
+					mscorlib::System::String  get_AssemblyName() const;
 					void set_AssemblyName(mscorlib::System::String  value);
 
 					//	Get/Set:TypeName
-					mscorlib::System::String  get_TypeName();
+					mscorlib::System::String  get_TypeName() const;
 					void set_TypeName(mscorlib::System::String  value);
 
 				

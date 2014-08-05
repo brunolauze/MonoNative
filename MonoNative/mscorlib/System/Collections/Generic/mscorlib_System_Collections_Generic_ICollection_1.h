@@ -1,8 +1,8 @@
 #ifndef __MONO_NATIVE_MSCORLIB_SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_1_H
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_1_H
 
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 
 namespace mscorlib
 {
@@ -15,13 +15,13 @@ namespace mscorlib
 
 				template<typename T>
 				class ICollection
-					: public virtual mscorlib::System::Collections::IEnumerable
-					, public virtual mscorlib::System::Collections::Generic::IEnumerable<T>
+					: public virtual mscorlib::System::Collections::Generic::IEnumerable<T>
+					, public virtual mscorlib::System::Collections::IEnumerable
 				{
 				public:
 					ICollection(MonoObject *nativeObject)
-					: mscorlib::System::Collections::IEnumerable(nativeObject)
-					, mscorlib::System::Collections::Generic::IEnumerable<T>(nativeObject)
+					: mscorlib::System::Collections::Generic::IEnumerable<T>(nativeObject)
+					, mscorlib::System::Collections::IEnumerable(nativeObject)
 					{
 					};
 				
@@ -31,7 +31,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Collections_Generic_ICollection_1, put=set___mscorlib_System_Collections_Generic_ICollection_1)) MonoObject *__mscorlib_System_Collections_Generic_ICollection_1;
-					MonoObject* get___mscorlib_System_Collections_Generic_ICollection_1()
+					MonoObject* get___mscorlib_System_Collections_Generic_ICollection_1() const
 					{
 						return ICollection::__mscorlib_System_Collections_Generic_IEnumerable_1;
 					}
@@ -107,7 +107,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Count
-					mscorlib::System::Int32  get_Count()
+					mscorlib::System::Int32  get_Count() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -116,7 +116,7 @@ namespace mscorlib
 					}
 
 					//	Get:IsReadOnly
-					mscorlib::System::Boolean  get_IsReadOnly()
+					mscorlib::System::Boolean  get_IsReadOnly() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());

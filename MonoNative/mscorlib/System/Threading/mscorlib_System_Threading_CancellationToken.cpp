@@ -13,6 +13,7 @@ namespace mscorlib
 		namespace Threading
 		{
 
+			Property<mscorlib::System::Threading::CancellationToken , mscorlib::System::Threading::CancellationToken> mscorlib::System::Threading::CancellationToken::None(&mscorlib::System::Threading::CancellationToken::get_None, &mscorlib::System::Threading::CancellationToken::set_None);
 			//Public Methods
 			mscorlib::System::Threading::CancellationTokenRegistration CancellationToken::Register(mscorlib::Callback<void  ()> callback)
 			{
@@ -95,7 +96,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:CanBeCanceled
-			mscorlib::System::Boolean  CancellationToken::get_CanBeCanceled()
+			mscorlib::System::Boolean  CancellationToken::get_CanBeCanceled() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CancellationToken", 0, NULL, "get_CanBeCanceled", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -103,7 +104,7 @@ namespace mscorlib
 
 
 			//	Get:IsCancellationRequested
-			mscorlib::System::Boolean  CancellationToken::get_IsCancellationRequested()
+			mscorlib::System::Boolean  CancellationToken::get_IsCancellationRequested() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CancellationToken", 0, NULL, "get_IsCancellationRequested", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -111,7 +112,7 @@ namespace mscorlib
 
 
 			//	Get:WaitHandle
-			mscorlib::System::Threading::WaitHandle  CancellationToken::get_WaitHandle()
+			mscorlib::System::Threading::WaitHandle  CancellationToken::get_WaitHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CancellationToken", 0, NULL, "get_WaitHandle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::WaitHandle(__result__);
@@ -124,6 +125,11 @@ namespace mscorlib
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CancellationToken", 0, NULL, "get_None", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::CancellationToken(__result__);
+			}
+
+			void CancellationToken::set_None(mscorlib::System::Threading::CancellationToken  value)
+			{
+				throw;
 			}
 
 

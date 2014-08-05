@@ -79,29 +79,29 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Category
-					mscorlib::System::String  get_Category();
+					mscorlib::System::String  get_Category() const;
 
 					//	Get:CheckId
-					mscorlib::System::String  get_CheckId();
+					mscorlib::System::String  get_CheckId() const;
 
 					//	Get/Set:Justification
-					mscorlib::System::String  get_Justification();
+					mscorlib::System::String  get_Justification() const;
 					void set_Justification(mscorlib::System::String  value);
 
 					//	Get/Set:MessageId
-					mscorlib::System::String  get_MessageId();
+					mscorlib::System::String  get_MessageId() const;
 					void set_MessageId(mscorlib::System::String  value);
 
 					//	Get/Set:Scope
-					mscorlib::System::String  get_Scope();
+					mscorlib::System::String  get_Scope() const;
 					void set_Scope(mscorlib::System::String  value);
 
 					//	Get/Set:Target
-					mscorlib::System::String  get_Target();
+					mscorlib::System::String  get_Target() const;
 					void set_Target(mscorlib::System::String  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

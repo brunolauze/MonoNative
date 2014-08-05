@@ -3,13 +3,13 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IList_1.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyList_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_ICollection_1.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IList.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IList.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerator_1.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
@@ -26,26 +26,26 @@ namespace mscorlib
 				template<typename T>
 				class Collection
 					: public mscorlib::System::Object
-					, public virtual mscorlib::System::Collections::ICollection
-					, public virtual mscorlib::System::Collections::Generic::IList<T>
 					, public virtual mscorlib::System::Collections::Generic::IReadOnlyList<T>
 					, public virtual mscorlib::System::Collections::Generic::ICollection<T>
-					, public virtual mscorlib::System::Collections::IList
-					, public virtual mscorlib::System::Collections::IEnumerable
 					, public virtual mscorlib::System::Collections::Generic::IEnumerable<T>
 					, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<T>
+					, public virtual mscorlib::System::Collections::ICollection
+					, public virtual mscorlib::System::Collections::IList
+					, public virtual mscorlib::System::Collections::IEnumerable
+					, public virtual mscorlib::System::Collections::Generic::IList<T>
 				{
 				public:
 					Collection()
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.ObjectModel.Collection`1"))
-					, mscorlib::System::Collections::ICollection(NULL)
-					, mscorlib::System::Collections::Generic::IList<T>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyList<T>(NULL)
 					, mscorlib::System::Collections::Generic::ICollection<T>(NULL)
-					, mscorlib::System::Collections::IList(NULL)
-					, mscorlib::System::Collections::IEnumerable(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
+					, mscorlib::System::Collections::ICollection(NULL)
+					, mscorlib::System::Collections::IList(NULL)
+					, mscorlib::System::Collections::IEnumerable(NULL)
+					, mscorlib::System::Collections::Generic::IList<T>(NULL)
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -54,14 +54,14 @@ namespace mscorlib
 				
 					Collection(mscorlib::System::Collections::Generic::IList<T> list)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.ObjectModel.Collection`1"))
-					, mscorlib::System::Collections::ICollection(NULL)
-					, mscorlib::System::Collections::Generic::IList<T>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyList<T>(NULL)
 					, mscorlib::System::Collections::Generic::ICollection<T>(NULL)
-					, mscorlib::System::Collections::IList(NULL)
-					, mscorlib::System::Collections::IEnumerable(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
+					, mscorlib::System::Collections::ICollection(NULL)
+					, mscorlib::System::Collections::IList(NULL)
+					, mscorlib::System::Collections::IEnumerable(NULL)
+					, mscorlib::System::Collections::Generic::IList<T>(NULL)
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -74,27 +74,27 @@ namespace mscorlib
 				
 					Collection(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
-					, mscorlib::System::Collections::ICollection(NULL)
-					, mscorlib::System::Collections::Generic::IList<T>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyList<T>(NULL)
 					, mscorlib::System::Collections::Generic::ICollection<T>(NULL)
-					, mscorlib::System::Collections::IList(NULL)
-					, mscorlib::System::Collections::IEnumerable(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
 					, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
+					, mscorlib::System::Collections::ICollection(NULL)
+					, mscorlib::System::Collections::IList(NULL)
+					, mscorlib::System::Collections::IEnumerable(NULL)
+					, mscorlib::System::Collections::Generic::IList<T>(NULL)
 					{
 					};
 				
 					Collection(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
-					, mscorlib::System::Collections::ICollection(nativeObject)
-					, mscorlib::System::Collections::Generic::IList<T>(nativeObject)
 					, mscorlib::System::Collections::Generic::IReadOnlyList<T>(nativeObject)
 					, mscorlib::System::Collections::Generic::ICollection<T>(nativeObject)
-					, mscorlib::System::Collections::IList(nativeObject)
-					, mscorlib::System::Collections::IEnumerable(nativeObject)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(nativeObject)
 					, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(nativeObject)
+					, mscorlib::System::Collections::ICollection(nativeObject)
+					, mscorlib::System::Collections::IList(nativeObject)
+					, mscorlib::System::Collections::IEnumerable(nativeObject)
+					, mscorlib::System::Collections::Generic::IList<T>(nativeObject)
 					{
 					};
 				
@@ -216,7 +216,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Count
-					mscorlib::System::Int32  get_Count()
+					mscorlib::System::Int32  get_Count() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -225,7 +225,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:Item
-					T  get_Item(mscorlib::System::Int32 index)
+					T  get_Item(mscorlib::System::Int32 index) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];

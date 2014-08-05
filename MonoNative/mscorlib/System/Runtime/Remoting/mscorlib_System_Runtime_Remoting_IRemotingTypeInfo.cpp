@@ -28,7 +28,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:TypeName
-				mscorlib::System::String  IRemotingTypeInfo::get_TypeName()
+				mscorlib::System::String  IRemotingTypeInfo::get_TypeName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "IRemotingTypeInfo", 0, NULL, "get_TypeName", __mscorlib_System_Runtime_Remoting_IRemotingTypeInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

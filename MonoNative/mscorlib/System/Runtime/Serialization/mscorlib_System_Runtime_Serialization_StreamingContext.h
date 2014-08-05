@@ -82,10 +82,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Context
-					mscorlib::System::Object  get_Context();
+					mscorlib::System::Object  get_Context() const;
 
 					//	Get:State
-					mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__  get_State();
+					mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__  get_State() const;
 
 				
 				protected:

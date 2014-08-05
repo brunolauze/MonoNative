@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_APPDOMAIN_H
 
 #include <mscorlib/System/mscorlib_System_MarshalByRefObject.h>
-#include <mscorlib/System/Security/mscorlib_System_Security_IEvidenceFactory.h>
 #include <mscorlib/System/mscorlib_System__AppDomain.h>
+#include <mscorlib/System/Security/mscorlib_System_Security_IEvidenceFactory.h>
 #include <mscorlib/System/Configuration/Assemblies/mscorlib_System_Configuration_Assemblies_AssemblyHashAlgorithm.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_BindingFlags.h>
@@ -137,21 +137,21 @@ namespace mscorlib
 
 		class AppDomain
 			: public mscorlib::System::MarshalByRefObject
-			, public virtual mscorlib::System::Security::IEvidenceFactory
 			, public virtual mscorlib::System::_AppDomain
+			, public virtual mscorlib::System::Security::IEvidenceFactory
 		{
 		public:
 			AppDomain(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::MarshalByRefObject(nativeTypeInfo)
-			, mscorlib::System::Security::IEvidenceFactory(NULL)
 			, mscorlib::System::_AppDomain(NULL)
+			, mscorlib::System::Security::IEvidenceFactory(NULL)
 			{
 			};
 		
 			AppDomain(MonoObject *nativeObject)
 			: mscorlib::System::MarshalByRefObject(nativeObject)
-			, mscorlib::System::Security::IEvidenceFactory(nativeObject)
 			, mscorlib::System::_AppDomain(nativeObject)
+			, mscorlib::System::Security::IEvidenceFactory(nativeObject)
 			{
 			};
 		
@@ -270,68 +270,69 @@ namespace mscorlib
 			__declspec(property(get=get_MonitoringTotalProcessorTime)) mscorlib::System::TimeSpan  MonitoringTotalProcessorTime;
 
 			//Public Static Properties
-			static Property<mscorlib::System::AppDomain> CurrentDomain;
-			static Property<mscorlib::System::Boolean> MonitoringIsEnabled;
-			static Property<mscorlib::System::Int64> MonitoringSurvivedProcessMemorySize;
+			static Property<mscorlib::System::AppDomain , mscorlib::System::AppDomain> CurrentDomain;
+			static Property<mscorlib::System::Boolean , mscorlib::System::AppDomain> MonitoringIsEnabled;
+			static Property<mscorlib::System::Int64 , mscorlib::System::AppDomain> MonitoringSurvivedProcessMemorySize;
 
 			//Get Set Properties Methods
 			//	Get:SetupInformation
-			mscorlib::System::AppDomainSetup  get_SetupInformation();
+			mscorlib::System::AppDomainSetup  get_SetupInformation() const;
 
 			//	Get:ApplicationTrust
-			mscorlib::System::Security::Policy::ApplicationTrust  get_ApplicationTrust();
+			mscorlib::System::Security::Policy::ApplicationTrust  get_ApplicationTrust() const;
 
 			//	Get:BaseDirectory
-			mscorlib::System::String  get_BaseDirectory();
+			mscorlib::System::String  get_BaseDirectory() const;
 
 			//	Get:RelativeSearchPath
-			mscorlib::System::String  get_RelativeSearchPath();
+			mscorlib::System::String  get_RelativeSearchPath() const;
 
 			//	Get:DynamicDirectory
-			mscorlib::System::String  get_DynamicDirectory();
+			mscorlib::System::String  get_DynamicDirectory() const;
 
 			//	Get:ShadowCopyFiles
-			mscorlib::System::Boolean  get_ShadowCopyFiles();
+			mscorlib::System::Boolean  get_ShadowCopyFiles() const;
 
 			//	Get:FriendlyName
-			mscorlib::System::String  get_FriendlyName();
+			mscorlib::System::String  get_FriendlyName() const;
 
 			//	Get:Evidence
-			mscorlib::System::Security::Policy::Evidence  get_Evidence();
+			mscorlib::System::Security::Policy::Evidence  get_Evidence() const;
 
 			//	Get:PermissionSet
-			mscorlib::System::Security::PermissionSet  get_PermissionSet();
+			mscorlib::System::Security::PermissionSet  get_PermissionSet() const;
 
 			//	Get:IsHomogenous
-			mscorlib::System::Boolean  get_IsHomogenous();
+			mscorlib::System::Boolean  get_IsHomogenous() const;
 
 			//	Get:IsFullyTrusted
-			mscorlib::System::Boolean  get_IsFullyTrusted();
+			mscorlib::System::Boolean  get_IsFullyTrusted() const;
 
 			//	Get:DomainManager
-			mscorlib::System::AppDomainManager  get_DomainManager();
+			mscorlib::System::AppDomainManager  get_DomainManager() const;
 
 			//	Get:ActivationContext
-			mscorlib::System::ActivationContext  get_ActivationContext();
+			mscorlib::System::ActivationContext  get_ActivationContext() const;
 
 			//	Get:ApplicationIdentity
-			mscorlib::System::ApplicationIdentity  get_ApplicationIdentity();
+			mscorlib::System::ApplicationIdentity  get_ApplicationIdentity() const;
 
 			//	Get:Id
-			mscorlib::System::Int32  get_Id();
+			mscorlib::System::Int32  get_Id() const;
 
 			//	Get:MonitoringSurvivedMemorySize
-			mscorlib::System::Int64  get_MonitoringSurvivedMemorySize();
+			mscorlib::System::Int64  get_MonitoringSurvivedMemorySize() const;
 
 			//	Get:MonitoringTotalAllocatedMemorySize
-			mscorlib::System::Int64  get_MonitoringTotalAllocatedMemorySize();
+			mscorlib::System::Int64  get_MonitoringTotalAllocatedMemorySize() const;
 
 			//	Get:MonitoringTotalProcessorTime
-			mscorlib::System::TimeSpan  get_MonitoringTotalProcessorTime();
+			mscorlib::System::TimeSpan  get_MonitoringTotalProcessorTime() const;
 
 			//Get Set Static Properties Methods
 			//	Get:CurrentDomain
 			static mscorlib::System::AppDomain  get_CurrentDomain();
+			static void set_CurrentDomain(mscorlib::System::AppDomain  value);
 
 			//	Get/Set:MonitoringIsEnabled
 			static mscorlib::System::Boolean  get_MonitoringIsEnabled();
@@ -339,6 +340,7 @@ namespace mscorlib
 
 			//	Get:MonitoringSurvivedProcessMemorySize
 			static mscorlib::System::Int64  get_MonitoringSurvivedProcessMemorySize();
+			static void set_MonitoringSurvivedProcessMemorySize(mscorlib::System::Int64  value);
 
 
 		

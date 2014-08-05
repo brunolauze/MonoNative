@@ -86,7 +86,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ErrorCode
-					mscorlib::System::Int32  get_ErrorCode();
+					mscorlib::System::Int32  get_ErrorCode() const;
 
 				
 				protected:

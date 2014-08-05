@@ -12,7 +12,7 @@ namespace mscorlib
 		//Public Methods
 		//Get Set Properties Methods
 		//	Get/Set:Cancel
-		mscorlib::System::Boolean  ConsoleCancelEventArgs::get_Cancel()
+		mscorlib::System::Boolean  ConsoleCancelEventArgs::get_Cancel() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ConsoleCancelEventArgs", 0, NULL, "get_Cancel", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -29,7 +29,7 @@ namespace mscorlib
 
 
 		//	Get:SpecialKey
-		mscorlib::System::ConsoleSpecialKey::__ENUM__  ConsoleCancelEventArgs::get_SpecialKey()
+		mscorlib::System::ConsoleSpecialKey::__ENUM__  ConsoleCancelEventArgs::get_SpecialKey() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ConsoleCancelEventArgs", 0, NULL, "get_SpecialKey", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::ConsoleSpecialKey::__ENUM__*)mono_object_unbox(__result__);

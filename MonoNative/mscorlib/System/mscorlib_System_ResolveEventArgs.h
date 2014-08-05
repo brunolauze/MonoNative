@@ -76,10 +76,10 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Name
-			mscorlib::System::String  get_Name();
+			mscorlib::System::String  get_Name() const;
 
 			//	Get:RequestingAssembly
-			mscorlib::System::Reflection::Assembly  get_RequestingAssembly();
+			mscorlib::System::Reflection::Assembly  get_RequestingAssembly() const;
 
 		
 		protected:

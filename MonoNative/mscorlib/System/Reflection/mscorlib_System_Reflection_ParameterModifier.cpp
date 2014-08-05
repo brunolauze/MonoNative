@@ -14,7 +14,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get/Set:Item
-			mscorlib::System::Boolean  ParameterModifier::get_Item(mscorlib::System::Int32 index)
+			mscorlib::System::Boolean  ParameterModifier::get_Item(mscorlib::System::Int32 index) const
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];

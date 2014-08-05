@@ -37,7 +37,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:InArgCount
-					mscorlib::System::Int32  IMethodCallMessage::get_InArgCount()
+					mscorlib::System::Int32  IMethodCallMessage::get_InArgCount() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodCallMessage", 0, NULL, "get_InArgCount", __mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -45,7 +45,7 @@ namespace mscorlib
 
 
 					//	Get:InArgs
-					std::vector<mscorlib::System::Object*>  IMethodCallMessage::get_InArgs()
+					std::vector<mscorlib::System::Object*>  IMethodCallMessage::get_InArgs() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodCallMessage", 0, NULL, "get_InArgs", __mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;

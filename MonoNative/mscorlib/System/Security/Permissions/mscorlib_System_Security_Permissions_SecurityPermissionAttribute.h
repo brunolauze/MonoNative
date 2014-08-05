@@ -92,75 +92,75 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Assertion
-					mscorlib::System::Boolean  get_Assertion();
+					mscorlib::System::Boolean  get_Assertion() const;
 					void set_Assertion(mscorlib::System::Boolean  value);
 
 					//	Get/Set:BindingRedirects
-					mscorlib::System::Boolean  get_BindingRedirects();
+					mscorlib::System::Boolean  get_BindingRedirects() const;
 					void set_BindingRedirects(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ControlAppDomain
-					mscorlib::System::Boolean  get_ControlAppDomain();
+					mscorlib::System::Boolean  get_ControlAppDomain() const;
 					void set_ControlAppDomain(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ControlDomainPolicy
-					mscorlib::System::Boolean  get_ControlDomainPolicy();
+					mscorlib::System::Boolean  get_ControlDomainPolicy() const;
 					void set_ControlDomainPolicy(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ControlEvidence
-					mscorlib::System::Boolean  get_ControlEvidence();
+					mscorlib::System::Boolean  get_ControlEvidence() const;
 					void set_ControlEvidence(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ControlPolicy
-					mscorlib::System::Boolean  get_ControlPolicy();
+					mscorlib::System::Boolean  get_ControlPolicy() const;
 					void set_ControlPolicy(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ControlPrincipal
-					mscorlib::System::Boolean  get_ControlPrincipal();
+					mscorlib::System::Boolean  get_ControlPrincipal() const;
 					void set_ControlPrincipal(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ControlThread
-					mscorlib::System::Boolean  get_ControlThread();
+					mscorlib::System::Boolean  get_ControlThread() const;
 					void set_ControlThread(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Execution
-					mscorlib::System::Boolean  get_Execution();
+					mscorlib::System::Boolean  get_Execution() const;
 					void set_Execution(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Infrastructure
-					mscorlib::System::Boolean  get_Infrastructure();
+					mscorlib::System::Boolean  get_Infrastructure() const;
 					void set_Infrastructure(mscorlib::System::Boolean  value);
 
 					//	Get/Set:RemotingConfiguration
-					mscorlib::System::Boolean  get_RemotingConfiguration();
+					mscorlib::System::Boolean  get_RemotingConfiguration() const;
 					void set_RemotingConfiguration(mscorlib::System::Boolean  value);
 
 					//	Get/Set:SerializationFormatter
-					mscorlib::System::Boolean  get_SerializationFormatter();
+					mscorlib::System::Boolean  get_SerializationFormatter() const;
 					void set_SerializationFormatter(mscorlib::System::Boolean  value);
 
 					//	Get/Set:SkipVerification
-					mscorlib::System::Boolean  get_SkipVerification();
+					mscorlib::System::Boolean  get_SkipVerification() const;
 					void set_SkipVerification(mscorlib::System::Boolean  value);
 
 					//	Get/Set:UnmanagedCode
-					mscorlib::System::Boolean  get_UnmanagedCode();
+					mscorlib::System::Boolean  get_UnmanagedCode() const;
 					void set_UnmanagedCode(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Flags
-					mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__  get_Flags();
+					mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__  get_Flags() const;
 					void set_Flags(mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__  value);
 
 					//	Get/Set:Unrestricted
-					mscorlib::System::Boolean  get_Unrestricted();
+					mscorlib::System::Boolean  get_Unrestricted() const;
 					void set_Unrestricted(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Action
-					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action();
+					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action() const;
 					void set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

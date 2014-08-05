@@ -94,11 +94,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Rng
-					mscorlib::System::Security::Cryptography::RandomNumberGenerator  get_Rng();
+					mscorlib::System::Security::Cryptography::RandomNumberGenerator  get_Rng() const;
 					void set_Rng(mscorlib::System::Security::Cryptography::RandomNumberGenerator  value);
 
 					//	Get:Parameters
-					mscorlib::System::String  get_Parameters();
+					mscorlib::System::String  get_Parameters() const;
 
 				
 				protected:

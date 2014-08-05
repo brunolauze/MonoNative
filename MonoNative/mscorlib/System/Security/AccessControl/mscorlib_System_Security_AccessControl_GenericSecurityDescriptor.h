@@ -79,26 +79,27 @@ namespace mscorlib
 					__declspec(property(get=get_Owner, put=set_Owner)) mscorlib::System::Security::Principal::SecurityIdentifier  Owner;
 
 					//Public Static Properties
-					static Property<mscorlib::System::Byte> Revision;
+					static Property<mscorlib::System::Byte , mscorlib::System::Security::AccessControl::GenericSecurityDescriptor> Revision;
 
 					//Get Set Properties Methods
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 					//	Get:ControlFlags
-					mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  get_ControlFlags();
+					mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  get_ControlFlags() const;
 
 					//	Get/Set:Group
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_Group();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_Group() const;
 					void set_Group(mscorlib::System::Security::Principal::SecurityIdentifier  value);
 
 					//	Get/Set:Owner
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_Owner();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_Owner() const;
 					void set_Owner(mscorlib::System::Security::Principal::SecurityIdentifier  value);
 
 					//Get Set Static Properties Methods
 					//	Get:Revision
 					static mscorlib::System::Byte  get_Revision();
+					static void set_Revision(mscorlib::System::Byte  value);
 
 
 				

@@ -78,19 +78,19 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Zone
-					mscorlib::System::Security::SecurityZone::__ENUM__  get_Zone();
+					mscorlib::System::Security::SecurityZone::__ENUM__  get_Zone() const;
 					void set_Zone(mscorlib::System::Security::SecurityZone::__ENUM__  value);
 
 					//	Get/Set:Unrestricted
-					mscorlib::System::Boolean  get_Unrestricted();
+					mscorlib::System::Boolean  get_Unrestricted() const;
 					void set_Unrestricted(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Action
-					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action();
+					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action() const;
 					void set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

@@ -4,8 +4,8 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISurrogateSelector.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
-#include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IRemotingFormatter.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IFormatter.h>
+#include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IRemotingFormatter.h>
 #include <mscorlib/System/Runtime/Serialization/Formatters/mscorlib_System_Runtime_Serialization_Formatters_FormatterAssemblyStyle.h>
 #include <mscorlib/System/Runtime/Serialization/Formatters/mscorlib_System_Runtime_Serialization_Formatters_FormatterTypeStyle.h>
 #include <mscorlib/System/Runtime/Serialization/Formatters/mscorlib_System_Runtime_Serialization_Formatters_TypeFilterLevel.h>
@@ -85,22 +85,22 @@ namespace mscorlib
 
 						class BinaryFormatter
 							: public mscorlib::System::Object
-							, public virtual mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter
 							, public virtual mscorlib::System::Runtime::Serialization::IFormatter
+							, public virtual mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter
 						{
 						public:
 							BinaryFormatter()
 							: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Serialization.Formatters.Binary.BinaryFormatter"))
-							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
 							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
+							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
 							{
 								__native_object__ = Global::New("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter");
 							};
 						
 							BinaryFormatter(mscorlib::System::Runtime::Serialization::ISurrogateSelector selector, mscorlib::System::Runtime::Serialization::StreamingContext context)
 							: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Serialization.Formatters.Binary.BinaryFormatter"))
-							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
 							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
+							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
 							{
 								MonoType *__parameter_types__[2];
 								void *__parameters__[2];
@@ -113,15 +113,15 @@ namespace mscorlib
 						
 							BinaryFormatter(mscorlib::NativeTypeInfo *nativeTypeInfo)
 							: mscorlib::System::Object(nativeTypeInfo)
-							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
 							, mscorlib::System::Runtime::Serialization::IFormatter(NULL)
+							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(NULL)
 							{
 							};
 						
 							BinaryFormatter(MonoObject *nativeObject)
 							: mscorlib::System::Object(nativeObject)
-							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(nativeObject)
 							, mscorlib::System::Runtime::Serialization::IFormatter(nativeObject)
+							, mscorlib::System::Runtime::Remoting::Messaging::IRemotingFormatter(nativeObject)
 							{
 							};
 						
@@ -155,27 +155,27 @@ namespace mscorlib
 
 							//Get Set Properties Methods
 							//	Get/Set:AssemblyFormat
-							mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__  get_AssemblyFormat();
+							mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__  get_AssemblyFormat() const;
 							void set_AssemblyFormat(mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__  value);
 
 							//	Get/Set:Binder
-							mscorlib::System::Runtime::Serialization::SerializationBinder  get_Binder();
+							mscorlib::System::Runtime::Serialization::SerializationBinder  get_Binder() const;
 							void set_Binder(mscorlib::System::Runtime::Serialization::SerializationBinder  value);
 
 							//	Get/Set:Context
-							mscorlib::System::Runtime::Serialization::StreamingContext  get_Context();
+							mscorlib::System::Runtime::Serialization::StreamingContext  get_Context() const;
 							void set_Context(mscorlib::System::Runtime::Serialization::StreamingContext  value);
 
 							//	Get/Set:SurrogateSelector
-							mscorlib::System::Runtime::Serialization::ISurrogateSelector  get_SurrogateSelector();
+							mscorlib::System::Runtime::Serialization::ISurrogateSelector  get_SurrogateSelector() const;
 							void set_SurrogateSelector(mscorlib::System::Runtime::Serialization::ISurrogateSelector  value);
 
 							//	Get/Set:TypeFormat
-							mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__  get_TypeFormat();
+							mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__  get_TypeFormat() const;
 							void set_TypeFormat(mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__  value);
 
 							//	Get/Set:FilterLevel
-							mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__  get_FilterLevel();
+							mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__  get_FilterLevel() const;
 							void set_FilterLevel(mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__  value);
 
 						

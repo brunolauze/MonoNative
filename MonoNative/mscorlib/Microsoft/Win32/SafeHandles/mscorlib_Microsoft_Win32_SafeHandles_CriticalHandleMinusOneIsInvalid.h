@@ -61,10 +61,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:IsInvalid
-					mscorlib::System::Boolean  get_IsInvalid();
+					mscorlib::System::Boolean  get_IsInvalid() const;
 
 					//	Get:IsClosed
-					mscorlib::System::Boolean  get_IsClosed();
+					mscorlib::System::Boolean  get_IsClosed() const;
 
 				
 				protected:

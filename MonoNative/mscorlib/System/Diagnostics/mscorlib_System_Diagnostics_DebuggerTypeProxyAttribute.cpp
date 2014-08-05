@@ -12,7 +12,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get:ProxyTypeName
-			mscorlib::System::String  DebuggerTypeProxyAttribute::get_ProxyTypeName()
+			mscorlib::System::String  DebuggerTypeProxyAttribute::get_ProxyTypeName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerTypeProxyAttribute", 0, NULL, "get_ProxyTypeName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -20,7 +20,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Target
-			mscorlib::System::Type  DebuggerTypeProxyAttribute::get_Target()
+			mscorlib::System::Type  DebuggerTypeProxyAttribute::get_Target() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerTypeProxyAttribute", 0, NULL, "get_Target", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -37,7 +37,7 @@ namespace mscorlib
 
 
 			//	Get/Set:TargetTypeName
-			mscorlib::System::String  DebuggerTypeProxyAttribute::get_TargetTypeName()
+			mscorlib::System::String  DebuggerTypeProxyAttribute::get_TargetTypeName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerTypeProxyAttribute", 0, NULL, "get_TargetTypeName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -54,7 +54,7 @@ namespace mscorlib
 
 
 			//	Get:TypeId
-			mscorlib::System::Object  DebuggerTypeProxyAttribute::get_TypeId()
+			mscorlib::System::Object  DebuggerTypeProxyAttribute::get_TypeId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

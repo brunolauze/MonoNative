@@ -146,7 +146,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Count
-					mscorlib::System::Int32  get_Count()
+					mscorlib::System::Int32  get_Count() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -155,7 +155,7 @@ namespace mscorlib
 					}
 
 					//	Get:Item
-					T  get_Item(mscorlib::System::Int32 index)
+					T  get_Item(mscorlib::System::Int32 index) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];

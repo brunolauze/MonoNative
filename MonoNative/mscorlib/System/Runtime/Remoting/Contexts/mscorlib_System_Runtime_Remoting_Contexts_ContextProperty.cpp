@@ -18,7 +18,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get:Name
-					mscorlib::System::String  ContextProperty::get_Name()
+					mscorlib::System::String  ContextProperty::get_Name() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "ContextProperty", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -26,7 +26,7 @@ namespace mscorlib
 
 
 					//	Get:Property
-					mscorlib::System::Object  ContextProperty::get_Property()
+					mscorlib::System::Object  ContextProperty::get_Property() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "ContextProperty", 0, NULL, "get_Property", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);

@@ -69,10 +69,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Exception
-					mscorlib::System::AggregateException  get_Exception();
+					mscorlib::System::AggregateException  get_Exception() const;
 
 					//	Get:Observed
-					mscorlib::System::Boolean  get_Observed();
+					mscorlib::System::Boolean  get_Observed() const;
 
 				
 				protected:

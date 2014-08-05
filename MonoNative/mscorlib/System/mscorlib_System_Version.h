@@ -3,10 +3,10 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
+#include <mscorlib/System/mscorlib_System_IComparable.h>
 
 namespace mscorlib
 {
@@ -25,28 +25,28 @@ namespace mscorlib
 
 		class Version
 			: public mscorlib::System::Object
-			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IComparable<mscorlib::System::Version>
 			, public virtual mscorlib::System::ICloneable
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::Version>
+			, public virtual mscorlib::System::IObjectComparable
 		{
 		public:
 			Version()
 			: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Version"))
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Version>(NULL)
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Version>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			{
 				__native_object__ = Global::New("mscorlib", "System", "Version");
 			};
 		
 			Version(mscorlib::System::String version)
 			: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Version"))
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Version>(NULL)
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Version>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -57,10 +57,10 @@ namespace mscorlib
 		
 			Version(mscorlib::System::Int32 major, mscorlib::System::Int32 minor)
 			: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Version"))
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Version>(NULL)
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Version>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
@@ -73,10 +73,10 @@ namespace mscorlib
 		
 			Version(mscorlib::System::Int32 major, mscorlib::System::Int32 minor, mscorlib::System::Int32 build)
 			: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Version"))
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Version>(NULL)
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Version>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
@@ -91,10 +91,10 @@ namespace mscorlib
 		
 			Version(mscorlib::System::Int32 major, mscorlib::System::Int32 minor, mscorlib::System::Int32 build, mscorlib::System::Int32 revision)
 			: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Version"))
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Version>(NULL)
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Version>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[4];
 				void *__parameters__[4];
@@ -111,19 +111,19 @@ namespace mscorlib
 		
 			Version(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::Object(nativeTypeInfo)
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Version>(NULL)
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Version>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			{
 			};
 		
 			Version(MonoObject *nativeObject)
 			: mscorlib::System::Object(nativeObject)
-			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::Version>(nativeObject)
 			, mscorlib::System::ICloneable(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::Version>(nativeObject)
+			, mscorlib::System::IObjectComparable(nativeObject)
 			{
 			};
 		
@@ -160,22 +160,22 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Build
-			mscorlib::System::Int32  get_Build();
+			mscorlib::System::Int32  get_Build() const;
 
 			//	Get:Major
-			mscorlib::System::Int32  get_Major();
+			mscorlib::System::Int32  get_Major() const;
 
 			//	Get:Minor
-			mscorlib::System::Int32  get_Minor();
+			mscorlib::System::Int32  get_Minor() const;
 
 			//	Get:Revision
-			mscorlib::System::Int32  get_Revision();
+			mscorlib::System::Int32  get_Revision() const;
 
 			//	Get:MajorRevision
-			mscorlib::System::Int16  get_MajorRevision();
+			mscorlib::System::Int16  get_MajorRevision() const;
 
 			//	Get:MinorRevision
-			mscorlib::System::Int16  get_MinorRevision();
+			mscorlib::System::Int16  get_MinorRevision() const;
 
 		
 		protected:

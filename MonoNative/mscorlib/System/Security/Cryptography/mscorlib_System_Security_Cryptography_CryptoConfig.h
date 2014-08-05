@@ -64,11 +64,12 @@ namespace mscorlib
 
 
 					//Public Static Properties
-					static Property<mscorlib::System::Boolean> AllowOnlyFipsAlgorithms;
+					static Property<mscorlib::System::Boolean , mscorlib::System::Security::Cryptography::CryptoConfig> AllowOnlyFipsAlgorithms;
 
 					//Get Set Static Properties Methods
 					//	Get:AllowOnlyFipsAlgorithms
 					static mscorlib::System::Boolean  get_AllowOnlyFipsAlgorithms();
+					static void set_AllowOnlyFipsAlgorithms(mscorlib::System::Boolean  value);
 
 
 				

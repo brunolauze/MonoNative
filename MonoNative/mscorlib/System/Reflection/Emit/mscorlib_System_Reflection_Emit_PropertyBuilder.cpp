@@ -247,7 +247,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Attributes
-				mscorlib::System::Reflection::PropertyAttributes::__ENUM__  PropertyBuilder::get_Attributes()
+				mscorlib::System::Reflection::PropertyAttributes::__ENUM__  PropertyBuilder::get_Attributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::PropertyAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -255,7 +255,7 @@ namespace mscorlib
 
 
 				//	Get:CanRead
-				mscorlib::System::Boolean  PropertyBuilder::get_CanRead()
+				mscorlib::System::Boolean  PropertyBuilder::get_CanRead() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_CanRead", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -263,7 +263,7 @@ namespace mscorlib
 
 
 				//	Get:CanWrite
-				mscorlib::System::Boolean  PropertyBuilder::get_CanWrite()
+				mscorlib::System::Boolean  PropertyBuilder::get_CanWrite() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_CanWrite", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -271,7 +271,7 @@ namespace mscorlib
 
 
 				//	Get:DeclaringType
-				mscorlib::System::Type  PropertyBuilder::get_DeclaringType()
+				mscorlib::System::Type  PropertyBuilder::get_DeclaringType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_DeclaringType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -279,7 +279,7 @@ namespace mscorlib
 
 
 				//	Get:Name
-				mscorlib::System::String  PropertyBuilder::get_Name()
+				mscorlib::System::String  PropertyBuilder::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -287,7 +287,7 @@ namespace mscorlib
 
 
 				//	Get:PropertyToken
-				mscorlib::System::Reflection::Emit::PropertyToken  PropertyBuilder::get_PropertyToken()
+				mscorlib::System::Reflection::Emit::PropertyToken  PropertyBuilder::get_PropertyToken() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_PropertyToken", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::Emit::PropertyToken(__result__);
@@ -295,7 +295,7 @@ namespace mscorlib
 
 
 				//	Get:PropertyType
-				mscorlib::System::Type  PropertyBuilder::get_PropertyType()
+				mscorlib::System::Type  PropertyBuilder::get_PropertyType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_PropertyType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -303,7 +303,7 @@ namespace mscorlib
 
 
 				//	Get:ReflectedType
-				mscorlib::System::Type  PropertyBuilder::get_ReflectedType()
+				mscorlib::System::Type  PropertyBuilder::get_ReflectedType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_ReflectedType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -311,7 +311,7 @@ namespace mscorlib
 
 
 				//	Get:Module
-				mscorlib::System::Reflection::Module  PropertyBuilder::get_Module()
+				mscorlib::System::Reflection::Module  PropertyBuilder::get_Module() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "PropertyBuilder", 0, NULL, "get_Module", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::Module(__result__);
@@ -319,7 +319,7 @@ namespace mscorlib
 
 
 				//	Get:GetMethod
-				mscorlib::System::Reflection::MethodInfo  PropertyBuilder::get_GetMethod()
+				mscorlib::System::Reflection::MethodInfo  PropertyBuilder::get_GetMethod() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "PropertyInfo", 0, NULL, "get_GetMethod", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -327,7 +327,7 @@ namespace mscorlib
 
 
 				//	Get:SetMethod
-				mscorlib::System::Reflection::MethodInfo  PropertyBuilder::get_SetMethod()
+				mscorlib::System::Reflection::MethodInfo  PropertyBuilder::get_SetMethod() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "PropertyInfo", 0, NULL, "get_SetMethod", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -335,7 +335,7 @@ namespace mscorlib
 
 
 				//	Get:IsSpecialName
-				mscorlib::System::Boolean  PropertyBuilder::get_IsSpecialName()
+				mscorlib::System::Boolean  PropertyBuilder::get_IsSpecialName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "PropertyInfo", 0, NULL, "get_IsSpecialName", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -343,7 +343,7 @@ namespace mscorlib
 
 
 				//	Get:MemberType
-				mscorlib::System::Reflection::MemberTypes::__ENUM__  PropertyBuilder::get_MemberType()
+				mscorlib::System::Reflection::MemberTypes::__ENUM__  PropertyBuilder::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "PropertyInfo", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -351,7 +351,7 @@ namespace mscorlib
 
 
 				//	Get:MetadataToken
-				mscorlib::System::Int32  PropertyBuilder::get_MetadataToken()
+				mscorlib::System::Int32  PropertyBuilder::get_MetadataToken() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_MetadataToken", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -359,7 +359,7 @@ namespace mscorlib
 
 
 				//	Get:CustomAttributes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  PropertyBuilder::get_CustomAttributes()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  PropertyBuilder::get_CustomAttributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_CustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>(__result__);

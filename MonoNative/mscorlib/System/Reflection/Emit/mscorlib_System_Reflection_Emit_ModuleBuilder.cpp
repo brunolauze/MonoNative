@@ -801,7 +801,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:FullyQualifiedName
-				mscorlib::System::String  ModuleBuilder::get_FullyQualifiedName()
+				mscorlib::System::String  ModuleBuilder::get_FullyQualifiedName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ModuleBuilder", 0, NULL, "get_FullyQualifiedName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -809,7 +809,7 @@ namespace mscorlib
 
 
 				//	Get:Assembly
-				mscorlib::System::Reflection::Assembly  ModuleBuilder::get_Assembly()
+				mscorlib::System::Reflection::Assembly  ModuleBuilder::get_Assembly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ModuleBuilder", 0, NULL, "get_Assembly", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::Assembly(__result__);
@@ -817,7 +817,7 @@ namespace mscorlib
 
 
 				//	Get:Name
-				mscorlib::System::String  ModuleBuilder::get_Name()
+				mscorlib::System::String  ModuleBuilder::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ModuleBuilder", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -825,7 +825,7 @@ namespace mscorlib
 
 
 				//	Get:ScopeName
-				mscorlib::System::String  ModuleBuilder::get_ScopeName()
+				mscorlib::System::String  ModuleBuilder::get_ScopeName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ModuleBuilder", 0, NULL, "get_ScopeName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -833,7 +833,7 @@ namespace mscorlib
 
 
 				//	Get:ModuleVersionId
-				mscorlib::System::Guid  ModuleBuilder::get_ModuleVersionId()
+				mscorlib::System::Guid  ModuleBuilder::get_ModuleVersionId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ModuleBuilder", 0, NULL, "get_ModuleVersionId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Guid(__result__);
@@ -841,7 +841,7 @@ namespace mscorlib
 
 
 				//	Get:MetadataToken
-				mscorlib::System::Int32  ModuleBuilder::get_MetadataToken()
+				mscorlib::System::Int32  ModuleBuilder::get_MetadataToken() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ModuleBuilder", 0, NULL, "get_MetadataToken", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -849,7 +849,7 @@ namespace mscorlib
 
 
 				//	Get:ModuleHandle
-				mscorlib::System::ModuleHandle  ModuleBuilder::get_ModuleHandle()
+				mscorlib::System::ModuleHandle  ModuleBuilder::get_ModuleHandle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Module", 0, NULL, "get_ModuleHandle", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::ModuleHandle(__result__);
@@ -857,7 +857,7 @@ namespace mscorlib
 
 
 				//	Get:MDStreamVersion
-				mscorlib::System::Int32  ModuleBuilder::get_MDStreamVersion()
+				mscorlib::System::Int32  ModuleBuilder::get_MDStreamVersion() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Module", 0, NULL, "get_MDStreamVersion", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -865,7 +865,7 @@ namespace mscorlib
 
 
 				//	Get:CustomAttributes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  ModuleBuilder::get_CustomAttributes()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  ModuleBuilder::get_CustomAttributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Module", 0, NULL, "get_CustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>(__result__);

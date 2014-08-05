@@ -86,23 +86,23 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:TwoDigitYearMax
-				mscorlib::System::Int32  get_TwoDigitYearMax();
+				mscorlib::System::Int32  get_TwoDigitYearMax() const;
 				void set_TwoDigitYearMax(mscorlib::System::Int32  value);
 
 				//	Get:AlgorithmType
-				mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  get_AlgorithmType();
+				mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  get_AlgorithmType() const;
 
 				//	Get:Eras
-				std::vector<mscorlib::System::Int32*>  get_Eras();
+				std::vector<mscorlib::System::Int32*>  get_Eras() const;
 
 				//	Get:MaxSupportedDateTime
-				mscorlib::System::DateTime  get_MaxSupportedDateTime();
+				mscorlib::System::DateTime  get_MaxSupportedDateTime() const;
 
 				//	Get:MinSupportedDateTime
-				mscorlib::System::DateTime  get_MinSupportedDateTime();
+				mscorlib::System::DateTime  get_MinSupportedDateTime() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 			
 			protected:

@@ -81,27 +81,27 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Condition
-					mscorlib::System::String  get_Condition();
+					mscorlib::System::String  get_Condition() const;
 					void set_Condition(mscorlib::System::String  value);
 
 					//	Get/Set:FailureKind
-					mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__  get_FailureKind();
+					mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__  get_FailureKind() const;
 					void set_FailureKind(mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__  value);
 
 					//	Get/Set:Handled
-					mscorlib::System::Boolean  get_Handled();
+					mscorlib::System::Boolean  get_Handled() const;
 					void set_Handled(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Unwind
-					mscorlib::System::Boolean  get_Unwind();
+					mscorlib::System::Boolean  get_Unwind() const;
 					void set_Unwind(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Message
-					mscorlib::System::String  get_Message();
+					mscorlib::System::String  get_Message() const;
 					void set_Message(mscorlib::System::String  value);
 
 					//	Get/Set:OriginalException
-					mscorlib::System::Exception  get_OriginalException();
+					mscorlib::System::Exception  get_OriginalException() const;
 					void set_OriginalException(mscorlib::System::Exception  value);
 
 				

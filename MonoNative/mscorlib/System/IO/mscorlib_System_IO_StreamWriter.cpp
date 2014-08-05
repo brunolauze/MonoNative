@@ -146,7 +146,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:AutoFlush
-			mscorlib::System::Boolean  StreamWriter::get_AutoFlush()
+			mscorlib::System::Boolean  StreamWriter::get_AutoFlush() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "get_AutoFlush", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -163,7 +163,7 @@ namespace mscorlib
 
 
 			//	Get:BaseStream
-			mscorlib::System::IO::Stream  StreamWriter::get_BaseStream()
+			mscorlib::System::IO::Stream  StreamWriter::get_BaseStream() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "get_BaseStream", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IO::Stream(__result__);
@@ -171,7 +171,7 @@ namespace mscorlib
 
 
 			//	Get:Encoding
-			mscorlib::System::Text::Encoding  StreamWriter::get_Encoding()
+			mscorlib::System::Text::Encoding  StreamWriter::get_Encoding() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "get_Encoding", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Text::Encoding(__result__);
@@ -179,7 +179,7 @@ namespace mscorlib
 
 
 			//	Get:FormatProvider
-			mscorlib::System::IFormatProvider  StreamWriter::get_FormatProvider()
+			mscorlib::System::IFormatProvider  StreamWriter::get_FormatProvider() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "TextWriter", 0, NULL, "get_FormatProvider", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IFormatProvider(__result__);
@@ -187,7 +187,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NewLine
-			mscorlib::System::String  StreamWriter::get_NewLine()
+			mscorlib::System::String  StreamWriter::get_NewLine() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "TextWriter", 0, NULL, "get_NewLine", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -209,6 +209,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "System.IO", "StreamWriter", 0, NULL, "Null");
 			}
 
+			void StreamWriter::set_Null(mscorlib::System::IO::StreamWriter  value)
+			{
+				throw;
+			}
 
 
 		}

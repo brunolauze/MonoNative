@@ -76,32 +76,32 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Count
-						mscorlib::System::Int32  get_Count();
+						mscorlib::System::Int32  get_Count() const;
 
 						//	Get:IsFixedSize
-						mscorlib::System::Boolean  get_IsFixedSize();
+						mscorlib::System::Boolean  get_IsFixedSize() const;
 
 						//	Get:IsReadOnly
-						mscorlib::System::Boolean  get_IsReadOnly();
+						mscorlib::System::Boolean  get_IsReadOnly() const;
 
 						//	Get:IsSynchronized
-						mscorlib::System::Boolean  get_IsSynchronized();
+						mscorlib::System::Boolean  get_IsSynchronized() const;
 
 						//	Get/Set:Item
-						mscorlib::System::Object  get_Item(mscorlib::System::Object key);
+						mscorlib::System::Object  get_Item(mscorlib::System::Object key) const;
 						void set_Item(mscorlib::System::Object key, mscorlib::System::Object  value);
 
 						//	Get:Keys
-						mscorlib::System::Collections::ICollection  get_Keys();
+						mscorlib::System::Collections::ICollection  get_Keys() const;
 
 						//	Get:Properties
-						mscorlib::System::Collections::IDictionary  get_Properties();
+						mscorlib::System::Collections::IDictionary  get_Properties() const;
 
 						//	Get:SyncRoot
-						mscorlib::System::Object  get_SyncRoot();
+						mscorlib::System::Object  get_SyncRoot() const;
 
 						//	Get:Values
-						mscorlib::System::Collections::ICollection  get_Values();
+						mscorlib::System::Collections::ICollection  get_Values() const;
 
 					
 					protected:

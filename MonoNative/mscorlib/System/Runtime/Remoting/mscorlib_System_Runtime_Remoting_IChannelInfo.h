@@ -37,7 +37,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:ChannelData
-					std::vector<mscorlib::System::Object*>  get_ChannelData();
+					std::vector<mscorlib::System::Object*>  get_ChannelData() const;
 					void set_ChannelData(std::vector<mscorlib::System::Object*>  value);
 
 				

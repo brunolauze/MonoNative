@@ -103,7 +103,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Count
-			mscorlib::System::Int32  Queue::get_Count()
+			mscorlib::System::Int32  Queue::get_Count() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "Queue", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -111,7 +111,7 @@ namespace mscorlib
 
 
 			//	Get:IsSynchronized
-			mscorlib::System::Boolean  Queue::get_IsSynchronized()
+			mscorlib::System::Boolean  Queue::get_IsSynchronized() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "Queue", 0, NULL, "get_IsSynchronized", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -119,7 +119,7 @@ namespace mscorlib
 
 
 			//	Get:SyncRoot
-			mscorlib::System::Object  Queue::get_SyncRoot()
+			mscorlib::System::Object  Queue::get_SyncRoot() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "Queue", 0, NULL, "get_SyncRoot", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

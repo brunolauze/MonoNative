@@ -34,7 +34,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:ApplicationIdentity
-				mscorlib::System::ApplicationIdentity  ApplicationTrust::get_ApplicationIdentity()
+				mscorlib::System::ApplicationIdentity  ApplicationTrust::get_ApplicationIdentity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrust", 0, NULL, "get_ApplicationIdentity", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::ApplicationIdentity(__result__);
@@ -51,7 +51,7 @@ namespace mscorlib
 
 
 				//	Get/Set:DefaultGrantSet
-				mscorlib::System::Security::Policy::PolicyStatement  ApplicationTrust::get_DefaultGrantSet()
+				mscorlib::System::Security::Policy::PolicyStatement  ApplicationTrust::get_DefaultGrantSet() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrust", 0, NULL, "get_DefaultGrantSet", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Policy::PolicyStatement(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ExtraInfo
-				mscorlib::System::Object  ApplicationTrust::get_ExtraInfo()
+				mscorlib::System::Object  ApplicationTrust::get_ExtraInfo() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrust", 0, NULL, "get_ExtraInfo", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 				//	Get/Set:IsApplicationTrustedToRun
-				mscorlib::System::Boolean  ApplicationTrust::get_IsApplicationTrustedToRun()
+				mscorlib::System::Boolean  ApplicationTrust::get_IsApplicationTrustedToRun() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrust", 0, NULL, "get_IsApplicationTrustedToRun", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -102,7 +102,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Persist
-				mscorlib::System::Boolean  ApplicationTrust::get_Persist()
+				mscorlib::System::Boolean  ApplicationTrust::get_Persist() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrust", 0, NULL, "get_Persist", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -119,7 +119,7 @@ namespace mscorlib
 
 
 				//	Get:FullTrustAssemblies
-				mscorlib::System::Collections::Generic::IList<mscorlib::System::Security::Policy::StrongName>  ApplicationTrust::get_FullTrustAssemblies()
+				mscorlib::System::Collections::Generic::IList<mscorlib::System::Security::Policy::StrongName>  ApplicationTrust::get_FullTrustAssemblies() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrust", 0, NULL, "get_FullTrustAssemblies", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IList<mscorlib::System::Security::Policy::StrongName>(__result__);

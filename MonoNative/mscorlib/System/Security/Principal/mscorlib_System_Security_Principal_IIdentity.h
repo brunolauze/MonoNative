@@ -49,13 +49,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:AuthenticationType
-					mscorlib::System::String  get_AuthenticationType();
+					mscorlib::System::String  get_AuthenticationType() const;
 
 					//	Get:IsAuthenticated
-					mscorlib::System::Boolean  get_IsAuthenticated();
+					mscorlib::System::Boolean  get_IsAuthenticated() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 				
 				protected:

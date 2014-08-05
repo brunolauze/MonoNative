@@ -157,7 +157,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:CurrentCount
-			mscorlib::System::Int32  SemaphoreSlim::get_CurrentCount()
+			mscorlib::System::Int32  SemaphoreSlim::get_CurrentCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SemaphoreSlim", 0, NULL, "get_CurrentCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -165,7 +165,7 @@ namespace mscorlib
 
 
 			//	Get:AvailableWaitHandle
-			mscorlib::System::Threading::WaitHandle  SemaphoreSlim::get_AvailableWaitHandle()
+			mscorlib::System::Threading::WaitHandle  SemaphoreSlim::get_AvailableWaitHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SemaphoreSlim", 0, NULL, "get_AvailableWaitHandle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::WaitHandle(__result__);

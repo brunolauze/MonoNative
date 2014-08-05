@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_CLAIMS_CLAIMSIDENTITY_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
+#include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_IIdentity.h>
 
 namespace mscorlib
@@ -51,6 +51,19 @@ namespace mscorlib
 					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Claims", "ClaimsIdentity");
+					};
+				
+					ClaimsIdentity(mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim> claims)
+					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Claims.ClaimsIdentity"))
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
+					{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						MonoType *__generic_types__claims__[1];
+						__generic_types__claims__[0] = Global::GetType("mscorlib", "System.Collections.Generic", "IEnumerable`1");
+						__parameter_types__[0] = Global::GetType("mscorlib", "System.Collections.Generic", "IEnumerable`1", 1,__generic_types__claims__);
+						__parameters__[0] = (MonoObject*)claims;
+						__native_object__ = Global::New("mscorlib", "System.Security.Claims", "ClaimsIdentity", 1, __parameter_types__, __parameters__);
 					};
 				
 					ClaimsIdentity(mscorlib::System::String authenticationType)
@@ -208,42 +221,42 @@ namespace mscorlib
 					__declspec(property(get=get_IsAuthenticated)) mscorlib::System::Boolean  IsAuthenticated;
 
 					//Public Static Fields
-					static Property<mscorlib::System::String> DefaultNameClaimType;
-					static Property<mscorlib::System::String> DefaultRoleClaimType;
-					static Property<mscorlib::System::String> DefaultIssuer;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimsIdentity> DefaultNameClaimType;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimsIdentity> DefaultRoleClaimType;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Claims::ClaimsIdentity> DefaultIssuer;
 
 					//Get Set Properties Methods
 					//	Get/Set:Actor
-					mscorlib::System::Security::Claims::ClaimsIdentity  get_Actor();
+					mscorlib::System::Security::Claims::ClaimsIdentity  get_Actor() const;
 					void set_Actor(mscorlib::System::Security::Claims::ClaimsIdentity  value);
 
 					//	Get:AuthenticationType
-					mscorlib::System::String  get_AuthenticationType();
+					mscorlib::System::String  get_AuthenticationType() const;
 
 					//	Get/Set:BootstrapContext
-					mscorlib::System::Object  get_BootstrapContext();
+					mscorlib::System::Object  get_BootstrapContext() const;
 					void set_BootstrapContext(mscorlib::System::Object  value);
 
 					//	Get/Set:Label
-					mscorlib::System::String  get_Label();
+					mscorlib::System::String  get_Label() const;
 					void set_Label(mscorlib::System::String  value);
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get/Set:NameClaimType
-					mscorlib::System::String  get_NameClaimType();
+					mscorlib::System::String  get_NameClaimType() const;
 					void set_NameClaimType(mscorlib::System::String  value);
 
 					//	Get/Set:RoleClaimType
-					mscorlib::System::String  get_RoleClaimType();
+					mscorlib::System::String  get_RoleClaimType() const;
 					void set_RoleClaimType(mscorlib::System::String  value);
 
 					//	Get:Claims
-					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  get_Claims();
+					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  get_Claims() const;
 
 					//	Get:IsAuthenticated
-					mscorlib::System::Boolean  get_IsAuthenticated();
+					mscorlib::System::Boolean  get_IsAuthenticated() const;
 
 					//	Get/Set:DefaultNameClaimType
 					static mscorlib::System::String  get_DefaultNameClaimType();

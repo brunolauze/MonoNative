@@ -16,6 +16,7 @@ namespace mscorlib
 					namespace W3cXsd2001
 					{
 
+						Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapQName> mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapQName::XsdType(&mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapQName::get_XsdType, &mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapQName::set_XsdType);
 						//Public Methods
 						mscorlib::System::String SoapQName::GetXsdType()
 						{
@@ -41,7 +42,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Key
-						mscorlib::System::String  SoapQName::get_Key()
+						mscorlib::System::String  SoapQName::get_Key() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapQName", 0, NULL, "get_Key", __native_object__, 0, NULL, NULL, NULL);
 							return mscorlib::System::String(__result__);
@@ -58,7 +59,7 @@ namespace mscorlib
 
 
 						//	Get/Set:Name
-						mscorlib::System::String  SoapQName::get_Name()
+						mscorlib::System::String  SoapQName::get_Name() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapQName", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 							return mscorlib::System::String(__result__);
@@ -75,7 +76,7 @@ namespace mscorlib
 
 
 						//	Get/Set:Namespace
-						mscorlib::System::String  SoapQName::get_Namespace()
+						mscorlib::System::String  SoapQName::get_Namespace() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapQName", 0, NULL, "get_Namespace", __native_object__, 0, NULL, NULL, NULL);
 							return mscorlib::System::String(__result__);
@@ -97,6 +98,11 @@ namespace mscorlib
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapQName", 0, NULL, "get_XsdType", NullMonoObject, 0, NULL, NULL, NULL);
 							return mscorlib::System::String(__result__);
+						}
+
+						void SoapQName::set_XsdType(mscorlib::System::String  value)
+						{
+							throw;
 						}
 
 

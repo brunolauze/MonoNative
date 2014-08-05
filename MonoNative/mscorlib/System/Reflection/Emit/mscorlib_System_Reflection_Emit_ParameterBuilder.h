@@ -101,22 +101,22 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Attributes
-					mscorlib::System::Int32  get_Attributes();
+					mscorlib::System::Int32  get_Attributes() const;
 
 					//	Get:IsIn
-					mscorlib::System::Boolean  get_IsIn();
+					mscorlib::System::Boolean  get_IsIn() const;
 
 					//	Get:IsOut
-					mscorlib::System::Boolean  get_IsOut();
+					mscorlib::System::Boolean  get_IsOut() const;
 
 					//	Get:IsOptional
-					mscorlib::System::Boolean  get_IsOptional();
+					mscorlib::System::Boolean  get_IsOptional() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:Position
-					mscorlib::System::Int32  get_Position();
+					mscorlib::System::Int32  get_Position() const;
 
 				
 				protected:

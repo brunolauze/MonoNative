@@ -86,38 +86,41 @@ namespace mscorlib
 					__declspec(property(get=get_Item, put=set_Item)) mscorlib::System::Security::AccessControl::GenericAce  Item[];
 
 					//Public Static Fields
-					static Property<mscorlib::System::Byte> AclRevision;
-					static Property<mscorlib::System::Byte> AclRevisionDS;
-					static Property<mscorlib::System::Int32> MaxBinaryLength;
+					static Property<mscorlib::System::Byte , mscorlib::System::Security::AccessControl::GenericAcl> AclRevision;
+					static Property<mscorlib::System::Byte , mscorlib::System::Security::AccessControl::GenericAcl> AclRevisionDS;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Security::AccessControl::GenericAcl> MaxBinaryLength;
 
 					//Get Set Properties Methods
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 					//	Get:Count
-					mscorlib::System::Int32  get_Count();
+					mscorlib::System::Int32  get_Count() const;
 
 					//	Get:IsSynchronized
-					mscorlib::System::Boolean  get_IsSynchronized();
+					mscorlib::System::Boolean  get_IsSynchronized() const;
 
 					//	Get/Set:Item
-					mscorlib::System::Security::AccessControl::GenericAce  get_Item(mscorlib::System::Int32 index);
+					mscorlib::System::Security::AccessControl::GenericAce  get_Item(mscorlib::System::Int32 index) const;
 					void set_Item(mscorlib::System::Int32 index, mscorlib::System::Security::AccessControl::GenericAce  value);
 
 					//	Get:Revision
-					mscorlib::System::Byte  get_Revision();
+					mscorlib::System::Byte  get_Revision() const;
 
 					//	Get:SyncRoot
-					mscorlib::System::Object  get_SyncRoot();
+					mscorlib::System::Object  get_SyncRoot() const;
 
 					//	Get/Set:AclRevision
 					static mscorlib::System::Byte  get_AclRevision();
+					static void set_AclRevision(mscorlib::System::Byte  value);
 
 					//	Get/Set:AclRevisionDS
 					static mscorlib::System::Byte  get_AclRevisionDS();
+					static void set_AclRevisionDS(mscorlib::System::Byte  value);
 
 					//	Get/Set:MaxBinaryLength
 					static mscorlib::System::Int32  get_MaxBinaryLength();
+					static void set_MaxBinaryLength(mscorlib::System::Int32  value);
 
 				
 				protected:

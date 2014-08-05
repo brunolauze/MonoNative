@@ -14,7 +14,7 @@ namespace mscorlib
 
 			//Public Methods
 			//	Get/Set:InterfaceMethods
-			std::vector<mscorlib::System::Reflection::MethodInfo*> InterfaceMapping::get_InterfaceMethods()
+			std::vector<mscorlib::System::Reflection::MethodInfo*> InterfaceMapping::get_InterfaceMethods() const
 			{
 				MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Reflection", "InterfaceMapping", 0, NULL, "InterfaceMethods");
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -33,7 +33,7 @@ namespace mscorlib
 			}
 
 			//	Get/Set:InterfaceType
-			mscorlib::System::Type InterfaceMapping::get_InterfaceType()
+			mscorlib::System::Type InterfaceMapping::get_InterfaceType() const
 			{
 				return Global::GetFieldValue(__native_object__, "InterfaceType");
 			}
@@ -43,7 +43,7 @@ namespace mscorlib
 			}
 
 			//	Get/Set:TargetMethods
-			std::vector<mscorlib::System::Reflection::MethodInfo*> InterfaceMapping::get_TargetMethods()
+			std::vector<mscorlib::System::Reflection::MethodInfo*> InterfaceMapping::get_TargetMethods() const
 			{
 				MonoObject *__result__ = Global::GetFieldValue("mscorlib", "System.Reflection", "InterfaceMapping", 0, NULL, "TargetMethods");
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -62,7 +62,7 @@ namespace mscorlib
 			}
 
 			//	Get/Set:TargetType
-			mscorlib::System::Type InterfaceMapping::get_TargetType()
+			mscorlib::System::Type InterfaceMapping::get_TargetType() const
 			{
 				return Global::GetFieldValue(__native_object__, "TargetType");
 			}

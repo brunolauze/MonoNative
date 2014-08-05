@@ -395,7 +395,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Name
-			mscorlib::System::String  RegistryKey::get_Name()
+			mscorlib::System::String  RegistryKey::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -403,7 +403,7 @@ namespace mscorlib
 
 
 			//	Get:SubKeyCount
-			mscorlib::System::Int32  RegistryKey::get_SubKeyCount()
+			mscorlib::System::Int32  RegistryKey::get_SubKeyCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "get_SubKeyCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -411,7 +411,7 @@ namespace mscorlib
 
 
 			//	Get:ValueCount
-			mscorlib::System::Int32  RegistryKey::get_ValueCount()
+			mscorlib::System::Int32  RegistryKey::get_ValueCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "get_ValueCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -419,7 +419,7 @@ namespace mscorlib
 
 
 			//	Get:Handle
-			mscorlib::Microsoft::Win32::SafeHandles::SafeRegistryHandle  RegistryKey::get_Handle()
+			mscorlib::Microsoft::Win32::SafeHandles::SafeRegistryHandle  RegistryKey::get_Handle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::Microsoft::Win32::SafeHandles::SafeRegistryHandle(__result__);
@@ -427,7 +427,7 @@ namespace mscorlib
 
 
 			//	Get:View
-			mscorlib::Microsoft::Win32::RegistryView::__ENUM__  RegistryKey::get_View()
+			mscorlib::Microsoft::Win32::RegistryView::__ENUM__  RegistryKey::get_View() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "get_View", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::Microsoft::Win32::RegistryView::__ENUM__*)mono_object_unbox(__result__);

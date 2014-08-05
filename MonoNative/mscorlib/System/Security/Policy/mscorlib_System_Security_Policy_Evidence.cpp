@@ -87,7 +87,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  Evidence::get_Count()
+				mscorlib::System::Int32  Evidence::get_Count() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Evidence", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -95,7 +95,7 @@ namespace mscorlib
 
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  Evidence::get_IsReadOnly()
+				mscorlib::System::Boolean  Evidence::get_IsReadOnly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Evidence", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -103,7 +103,7 @@ namespace mscorlib
 
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  Evidence::get_IsSynchronized()
+				mscorlib::System::Boolean  Evidence::get_IsSynchronized() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Evidence", 0, NULL, "get_IsSynchronized", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -111,7 +111,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Locked
-				mscorlib::System::Boolean  Evidence::get_Locked()
+				mscorlib::System::Boolean  Evidence::get_Locked() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Evidence", 0, NULL, "get_Locked", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -128,7 +128,7 @@ namespace mscorlib
 
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  Evidence::get_SyncRoot()
+				mscorlib::System::Object  Evidence::get_SyncRoot() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Evidence", 0, NULL, "get_SyncRoot", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

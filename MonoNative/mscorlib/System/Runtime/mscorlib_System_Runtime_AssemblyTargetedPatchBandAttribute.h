@@ -70,11 +70,11 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:TargetedPatchBand
-				mscorlib::System::String  get_TargetedPatchBand();
+				mscorlib::System::String  get_TargetedPatchBand() const;
 				void set_TargetedPatchBand(mscorlib::System::String  value);
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

@@ -2,12 +2,12 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_ARRAYSEGMENT_1_H
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
+#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IList_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyList_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_ICollection_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
-#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
@@ -20,22 +20,22 @@ namespace mscorlib
 		template<typename T>
 		class ArraySegment
 			: public mscorlib::System::ValueType
+			, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<T>
 			, public virtual mscorlib::System::Collections::Generic::IList<T>
 			, public virtual mscorlib::System::Collections::Generic::IReadOnlyList<T>
 			, public virtual mscorlib::System::Collections::IEnumerable
 			, public virtual mscorlib::System::Collections::Generic::ICollection<T>
 			, public virtual mscorlib::System::Collections::Generic::IEnumerable<T>
-			, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<T>
 		{
 		public:
 			ArraySegment(std::vector<T*> array, mscorlib::System::Int32 offset, mscorlib::System::Int32 count)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.ArraySegment`1"))
+			, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
 			, mscorlib::System::Collections::Generic::IList<T>(NULL)
 			, mscorlib::System::Collections::Generic::IReadOnlyList<T>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			, mscorlib::System::Collections::Generic::ICollection<T>(NULL)
 			, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
-			, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
 			{
 				MonoType *__generic_types__[1];
 				__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -52,12 +52,12 @@ namespace mscorlib
 		
 			ArraySegment(std::vector<T*> array)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.ArraySegment`1"))
+			, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
 			, mscorlib::System::Collections::Generic::IList<T>(NULL)
 			, mscorlib::System::Collections::Generic::IReadOnlyList<T>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			, mscorlib::System::Collections::Generic::ICollection<T>(NULL)
 			, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
-			, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
 			{
 				MonoType *__generic_types__[1];
 				__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -70,23 +70,23 @@ namespace mscorlib
 		
 			ArraySegment(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
+			, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
 			, mscorlib::System::Collections::Generic::IList<T>(NULL)
 			, mscorlib::System::Collections::Generic::IReadOnlyList<T>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			, mscorlib::System::Collections::Generic::ICollection<T>(NULL)
 			, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
-			, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(NULL)
 			{
 			};
 		
 			ArraySegment(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
+			, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(nativeObject)
 			, mscorlib::System::Collections::Generic::IList<T>(nativeObject)
 			, mscorlib::System::Collections::Generic::IReadOnlyList<T>(nativeObject)
 			, mscorlib::System::Collections::IEnumerable(nativeObject)
 			, mscorlib::System::Collections::Generic::ICollection<T>(nativeObject)
 			, mscorlib::System::Collections::Generic::IEnumerable<T>(nativeObject)
-			, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(nativeObject)
 			{
 			};
 		
@@ -142,7 +142,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Array
-			std::vector<T*>  get_Array()
+			std::vector<T*>  get_Array() const
 			{
 				MonoType *__generic_types__[1];
 				__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -159,7 +159,7 @@ namespace mscorlib
 			}
 
 			//	Get:Offset
-			mscorlib::System::Int32  get_Offset()
+			mscorlib::System::Int32  get_Offset() const
 			{
 				MonoType *__generic_types__[1];
 				__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -168,7 +168,7 @@ namespace mscorlib
 			}
 
 			//	Get:Count
-			mscorlib::System::Int32  get_Count()
+			mscorlib::System::Int32  get_Count() const
 			{
 				MonoType *__generic_types__[1];
 				__generic_types__[0] = Global::GetType(typeid(T).name());

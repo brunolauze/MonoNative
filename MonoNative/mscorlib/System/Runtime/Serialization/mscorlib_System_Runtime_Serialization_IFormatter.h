@@ -72,15 +72,15 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Binder
-					mscorlib::System::Runtime::Serialization::SerializationBinder  get_Binder();
+					mscorlib::System::Runtime::Serialization::SerializationBinder  get_Binder() const;
 					void set_Binder(mscorlib::System::Runtime::Serialization::SerializationBinder  value);
 
 					//	Get/Set:Context
-					mscorlib::System::Runtime::Serialization::StreamingContext  get_Context();
+					mscorlib::System::Runtime::Serialization::StreamingContext  get_Context() const;
 					void set_Context(mscorlib::System::Runtime::Serialization::StreamingContext  value);
 
 					//	Get/Set:SurrogateSelector
-					mscorlib::System::Runtime::Serialization::ISurrogateSelector  get_SurrogateSelector();
+					mscorlib::System::Runtime::Serialization::ISurrogateSelector  get_SurrogateSelector() const;
 					void set_SurrogateSelector(mscorlib::System::Runtime::Serialization::ISurrogateSelector  value);
 
 				

@@ -77,13 +77,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Cer
-					mscorlib::System::Runtime::ConstrainedExecution::Cer::__ENUM__  get_Cer();
+					mscorlib::System::Runtime::ConstrainedExecution::Cer::__ENUM__  get_Cer() const;
 
 					//	Get:ConsistencyGuarantee
-					mscorlib::System::Runtime::ConstrainedExecution::Consistency::__ENUM__  get_ConsistencyGuarantee();
+					mscorlib::System::Runtime::ConstrainedExecution::Consistency::__ENUM__  get_ConsistencyGuarantee() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_REFLECTION_PARAMETERINFO_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__ParameterInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__ParameterInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ParameterAttributes.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IList_1.h>
@@ -42,21 +42,21 @@ namespace mscorlib
 
 			class ParameterInfo
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::Runtime::InteropServices::_ParameterInfo
 				, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
+				, public virtual mscorlib::System::Runtime::InteropServices::_ParameterInfo
 			{
 			public:
 				ParameterInfo(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::Runtime::InteropServices::_ParameterInfo(NULL)
 				, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
+				, mscorlib::System::Runtime::InteropServices::_ParameterInfo(NULL)
 				{
 				};
 			
 				ParameterInfo(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::Runtime::InteropServices::_ParameterInfo(nativeObject)
 				, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
+				, mscorlib::System::Runtime::InteropServices::_ParameterInfo(nativeObject)
 				{
 				};
 			
@@ -99,49 +99,49 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ParameterType
-				mscorlib::System::Type  get_ParameterType();
+				mscorlib::System::Type  get_ParameterType() const;
 
 				//	Get:Attributes
-				mscorlib::System::Reflection::ParameterAttributes::__ENUM__  get_Attributes();
+				mscorlib::System::Reflection::ParameterAttributes::__ENUM__  get_Attributes() const;
 
 				//	Get:IsIn
-				mscorlib::System::Boolean  get_IsIn();
+				mscorlib::System::Boolean  get_IsIn() const;
 
 				//	Get:IsLcid
-				mscorlib::System::Boolean  get_IsLcid();
+				mscorlib::System::Boolean  get_IsLcid() const;
 
 				//	Get:IsOptional
-				mscorlib::System::Boolean  get_IsOptional();
+				mscorlib::System::Boolean  get_IsOptional() const;
 
 				//	Get:IsOut
-				mscorlib::System::Boolean  get_IsOut();
+				mscorlib::System::Boolean  get_IsOut() const;
 
 				//	Get:IsRetval
-				mscorlib::System::Boolean  get_IsRetval();
+				mscorlib::System::Boolean  get_IsRetval() const;
 
 				//	Get:Member
-				mscorlib::System::Reflection::MemberInfo  get_Member();
+				mscorlib::System::Reflection::MemberInfo  get_Member() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get:Position
-				mscorlib::System::Int32  get_Position();
+				mscorlib::System::Int32  get_Position() const;
 
 				//	Get:CustomAttributes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes();
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes() const;
 
 				//	Get:HasDefaultValue
-				mscorlib::System::Boolean  get_HasDefaultValue();
+				mscorlib::System::Boolean  get_HasDefaultValue() const;
 
 				//	Get:DefaultValue
-				mscorlib::System::Object  get_DefaultValue();
+				mscorlib::System::Object  get_DefaultValue() const;
 
 				//	Get:RawDefaultValue
-				mscorlib::System::Object  get_RawDefaultValue();
+				mscorlib::System::Object  get_RawDefaultValue() const;
 
 				//	Get:MetadataToken
-				mscorlib::System::Int32  get_MetadataToken();
+				mscorlib::System::Int32  get_MetadataToken() const;
 
 			
 			protected:

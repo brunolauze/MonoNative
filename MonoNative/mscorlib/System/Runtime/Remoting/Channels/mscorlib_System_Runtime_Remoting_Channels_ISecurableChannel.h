@@ -39,7 +39,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:IsSecured
-						mscorlib::System::Boolean  get_IsSecured();
+						mscorlib::System::Boolean  get_IsSecured() const;
 						void set_IsSecured(mscorlib::System::Boolean  value);
 
 					

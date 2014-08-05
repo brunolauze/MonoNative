@@ -98,20 +98,21 @@ namespace mscorlib
 							__declspec(property(get=get_Value, put=set_Value)) mscorlib::System::DateTime  Value;
 
 							//Public Static Properties
-							static Property<mscorlib::System::String> XsdType;
+							static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapYear> XsdType;
 
 							//Get Set Properties Methods
 							//	Get/Set:Sign
-							mscorlib::System::Int32  get_Sign();
+							mscorlib::System::Int32  get_Sign() const;
 							void set_Sign(mscorlib::System::Int32  value);
 
 							//	Get/Set:Value
-							mscorlib::System::DateTime  get_Value();
+							mscorlib::System::DateTime  get_Value() const;
 							void set_Value(mscorlib::System::DateTime  value);
 
 							//Get Set Static Properties Methods
 							//	Get:XsdType
 							static mscorlib::System::String  get_XsdType();
+							static void set_XsdType(mscorlib::System::String  value);
 
 
 						

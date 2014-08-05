@@ -86,7 +86,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsAllocated
-				mscorlib::System::Boolean  GCHandle::get_IsAllocated()
+				mscorlib::System::Boolean  GCHandle::get_IsAllocated() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "GCHandle", 0, NULL, "get_IsAllocated", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -94,7 +94,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Target
-				mscorlib::System::Object  GCHandle::get_Target()
+				mscorlib::System::Object  GCHandle::get_Target() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "GCHandle", 0, NULL, "get_Target", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

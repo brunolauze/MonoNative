@@ -74,19 +74,19 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CanReuseTransform
-					mscorlib::System::Boolean  get_CanReuseTransform();
+					mscorlib::System::Boolean  get_CanReuseTransform() const;
 
 					//	Get:CanTransformMultipleBlocks
-					mscorlib::System::Boolean  get_CanTransformMultipleBlocks();
+					mscorlib::System::Boolean  get_CanTransformMultipleBlocks() const;
 
 					//	Get:InputBlockSize
-					mscorlib::System::Int32  get_InputBlockSize();
+					mscorlib::System::Int32  get_InputBlockSize() const;
 
 					//	Get:KeyHandle
-					mscorlib::System::IntPtr  get_KeyHandle();
+					mscorlib::System::IntPtr  get_KeyHandle() const;
 
 					//	Get:OutputBlockSize
-					mscorlib::System::Int32  get_OutputBlockSize();
+					mscorlib::System::Int32  get_OutputBlockSize() const;
 
 				
 				protected:

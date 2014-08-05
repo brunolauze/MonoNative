@@ -76,7 +76,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:PermissionSet
-				mscorlib::System::Security::PermissionSet  PolicyStatement::get_PermissionSet()
+				mscorlib::System::Security::PermissionSet  PolicyStatement::get_PermissionSet() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyStatement", 0, NULL, "get_PermissionSet", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::PermissionSet(__result__);
@@ -93,7 +93,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Attributes
-				mscorlib::System::Security::Policy::PolicyStatementAttribute::__ENUM__  PolicyStatement::get_Attributes()
+				mscorlib::System::Security::Policy::PolicyStatementAttribute::__ENUM__  PolicyStatement::get_Attributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyStatement", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Policy::PolicyStatementAttribute::__ENUM__*)mono_object_unbox(__result__);
@@ -110,7 +110,7 @@ namespace mscorlib
 
 
 				//	Get:AttributeString
-				mscorlib::System::String  PolicyStatement::get_AttributeString()
+				mscorlib::System::String  PolicyStatement::get_AttributeString() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyStatement", 0, NULL, "get_AttributeString", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

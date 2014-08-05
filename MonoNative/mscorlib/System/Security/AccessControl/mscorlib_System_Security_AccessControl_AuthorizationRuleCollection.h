@@ -82,10 +82,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Item
-					mscorlib::System::Security::AccessControl::AuthorizationRule  get_Item(mscorlib::System::Int32 index);
+					mscorlib::System::Security::AccessControl::AuthorizationRule  get_Item(mscorlib::System::Int32 index) const;
 
 					//	Get:Count
-					mscorlib::System::Int32  get_Count();
+					mscorlib::System::Int32  get_Count() const;
 
 				
 				protected:

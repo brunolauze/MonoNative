@@ -82,35 +82,35 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Flags
-					mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__  get_Flags();
+					mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__  get_Flags() const;
 					void set_Flags(mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__  value);
 
 					//	Get/Set:MemberAccess
-					mscorlib::System::Boolean  get_MemberAccess();
+					mscorlib::System::Boolean  get_MemberAccess() const;
 					void set_MemberAccess(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ReflectionEmit
-					mscorlib::System::Boolean  get_ReflectionEmit();
+					mscorlib::System::Boolean  get_ReflectionEmit() const;
 					void set_ReflectionEmit(mscorlib::System::Boolean  value);
 
 					//	Get/Set:RestrictedMemberAccess
-					mscorlib::System::Boolean  get_RestrictedMemberAccess();
+					mscorlib::System::Boolean  get_RestrictedMemberAccess() const;
 					void set_RestrictedMemberAccess(mscorlib::System::Boolean  value);
 
 					//	Get/Set:TypeInformation
-					mscorlib::System::Boolean  get_TypeInformation();
+					mscorlib::System::Boolean  get_TypeInformation() const;
 					void set_TypeInformation(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Unrestricted
-					mscorlib::System::Boolean  get_Unrestricted();
+					mscorlib::System::Boolean  get_Unrestricted() const;
 					void set_Unrestricted(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Action
-					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action();
+					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action() const;
 					void set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

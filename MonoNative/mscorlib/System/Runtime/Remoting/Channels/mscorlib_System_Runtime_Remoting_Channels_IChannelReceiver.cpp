@@ -53,7 +53,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ChannelData
-					mscorlib::System::Object  IChannelReceiver::get_ChannelData()
+					mscorlib::System::Object  IChannelReceiver::get_ChannelData() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelReceiver", 0, NULL, "get_ChannelData", __mscorlib_System_Runtime_Remoting_Channels_IChannelReceiver, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);

@@ -156,19 +156,19 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:ApplicationActivator
-			mscorlib::System::Runtime::Hosting::ApplicationActivator  get_ApplicationActivator();
+			mscorlib::System::Runtime::Hosting::ApplicationActivator  get_ApplicationActivator() const;
 
 			//	Get:EntryAssembly
-			mscorlib::System::Reflection::Assembly  get_EntryAssembly();
+			mscorlib::System::Reflection::Assembly  get_EntryAssembly() const;
 
 			//	Get:HostExecutionContextManager
-			mscorlib::System::Threading::HostExecutionContextManager  get_HostExecutionContextManager();
+			mscorlib::System::Threading::HostExecutionContextManager  get_HostExecutionContextManager() const;
 
 			//	Get:HostSecurityManager
-			mscorlib::System::Security::HostSecurityManager  get_HostSecurityManager();
+			mscorlib::System::Security::HostSecurityManager  get_HostSecurityManager() const;
 
 			//	Get/Set:InitializationFlags
-			mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__  get_InitializationFlags();
+			mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__  get_InitializationFlags() const;
 			void set_InitializationFlags(mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__  value);
 
 		

@@ -68,7 +68,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:SecurityZone
-				mscorlib::System::Security::SecurityZone::__ENUM__  ZoneIdentityPermission::get_SecurityZone()
+				mscorlib::System::Security::SecurityZone::__ENUM__  ZoneIdentityPermission::get_SecurityZone() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ZoneIdentityPermission", 0, NULL, "get_SecurityZone", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::SecurityZone::__ENUM__*)mono_object_unbox(__result__);

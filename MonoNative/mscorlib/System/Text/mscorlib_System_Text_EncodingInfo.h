@@ -71,13 +71,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CodePage
-				mscorlib::System::Int32  get_CodePage();
+				mscorlib::System::Int32  get_CodePage() const;
 
 				//	Get:DisplayName
-				mscorlib::System::String  get_DisplayName();
+				mscorlib::System::String  get_DisplayName() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 			
 			protected:

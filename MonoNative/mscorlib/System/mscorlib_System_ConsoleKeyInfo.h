@@ -77,13 +77,13 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Key
-			mscorlib::System::ConsoleKey::__ENUM__  get_Key();
+			mscorlib::System::ConsoleKey::__ENUM__  get_Key() const;
 
 			//	Get:KeyChar
-			mscorlib::System::Char  get_KeyChar();
+			mscorlib::System::Char  get_KeyChar() const;
 
 			//	Get:Modifiers
-			mscorlib::System::ConsoleModifiers::__ENUM__  get_Modifiers();
+			mscorlib::System::ConsoleModifiers::__ENUM__  get_Modifiers() const;
 
 		
 		protected:

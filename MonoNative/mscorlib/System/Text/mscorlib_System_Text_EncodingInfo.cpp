@@ -37,7 +37,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:CodePage
-			mscorlib::System::Int32  EncodingInfo::get_CodePage()
+			mscorlib::System::Int32  EncodingInfo::get_CodePage() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "EncodingInfo", 0, NULL, "get_CodePage", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -45,7 +45,7 @@ namespace mscorlib
 
 
 			//	Get:DisplayName
-			mscorlib::System::String  EncodingInfo::get_DisplayName()
+			mscorlib::System::String  EncodingInfo::get_DisplayName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "EncodingInfo", 0, NULL, "get_DisplayName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -53,7 +53,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  EncodingInfo::get_Name()
+			mscorlib::System::String  EncodingInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "EncodingInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);

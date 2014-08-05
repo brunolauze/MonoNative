@@ -59,7 +59,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:RenewalTime
-					mscorlib::System::TimeSpan  ClientSponsor::get_RenewalTime()
+					mscorlib::System::TimeSpan  ClientSponsor::get_RenewalTime() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Lifetime", "ClientSponsor", 0, NULL, "get_RenewalTime", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::TimeSpan(__result__);

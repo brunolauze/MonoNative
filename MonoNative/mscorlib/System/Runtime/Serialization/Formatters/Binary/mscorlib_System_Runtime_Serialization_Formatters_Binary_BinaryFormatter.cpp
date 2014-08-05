@@ -109,7 +109,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:AssemblyFormat
-						mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__  BinaryFormatter::get_AssemblyFormat()
+						mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__  BinaryFormatter::get_AssemblyFormat() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_AssemblyFormat", __native_object__, 0, NULL, NULL, NULL);
 							return *(mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__*)mono_object_unbox(__result__);
@@ -126,7 +126,7 @@ namespace mscorlib
 
 
 						//	Get/Set:Binder
-						mscorlib::System::Runtime::Serialization::SerializationBinder  BinaryFormatter::get_Binder()
+						mscorlib::System::Runtime::Serialization::SerializationBinder  BinaryFormatter::get_Binder() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_Binder", __native_object__, 0, NULL, NULL, NULL);
 							return mscorlib::System::Runtime::Serialization::SerializationBinder(__result__);
@@ -143,7 +143,7 @@ namespace mscorlib
 
 
 						//	Get/Set:Context
-						mscorlib::System::Runtime::Serialization::StreamingContext  BinaryFormatter::get_Context()
+						mscorlib::System::Runtime::Serialization::StreamingContext  BinaryFormatter::get_Context() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_Context", __native_object__, 0, NULL, NULL, NULL);
 							return mscorlib::System::Runtime::Serialization::StreamingContext(__result__);
@@ -160,7 +160,7 @@ namespace mscorlib
 
 
 						//	Get/Set:SurrogateSelector
-						mscorlib::System::Runtime::Serialization::ISurrogateSelector  BinaryFormatter::get_SurrogateSelector()
+						mscorlib::System::Runtime::Serialization::ISurrogateSelector  BinaryFormatter::get_SurrogateSelector() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_SurrogateSelector", __native_object__, 0, NULL, NULL, NULL);
 							return mscorlib::System::Runtime::Serialization::ISurrogateSelector(__result__);
@@ -177,7 +177,7 @@ namespace mscorlib
 
 
 						//	Get/Set:TypeFormat
-						mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__  BinaryFormatter::get_TypeFormat()
+						mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__  BinaryFormatter::get_TypeFormat() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_TypeFormat", __native_object__, 0, NULL, NULL, NULL);
 							return *(mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__*)mono_object_unbox(__result__);
@@ -194,7 +194,7 @@ namespace mscorlib
 
 
 						//	Get/Set:FilterLevel
-						mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__  BinaryFormatter::get_FilterLevel()
+						mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__  BinaryFormatter::get_FilterLevel() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_FilterLevel", __native_object__, 0, NULL, NULL, NULL);
 							return *(mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__*)mono_object_unbox(__result__);

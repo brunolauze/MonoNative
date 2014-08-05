@@ -94,13 +94,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Flags
-				mscorlib::System::UInt32  get_Flags();
+				mscorlib::System::UInt32  get_Flags() const;
 
 				//	Get:AssemblyFlags
-				mscorlib::System::Int32  get_AssemblyFlags();
+				mscorlib::System::Int32  get_AssemblyFlags() const;
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

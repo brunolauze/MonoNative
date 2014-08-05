@@ -57,8 +57,8 @@ namespace mscorlib
 
 
 					//Public Static Fields
-					static Property<mscorlib::System::Int32> JitImmediate;
-					static Property<mscorlib::System::Int32> JitOnDemand;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Reflection::Emit::MethodRental> JitImmediate;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Reflection::Emit::MethodRental> JitOnDemand;
 
 					//	Get/Set:JitImmediate
 					static mscorlib::System::Int32  get_JitImmediate();

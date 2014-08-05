@@ -66,34 +66,41 @@ namespace mscorlib
 
 
 				//Public Static Fields
-				static Property<mscorlib::Microsoft::Win32::RegistryKey> ClassesRoot;
-				static Property<mscorlib::Microsoft::Win32::RegistryKey> CurrentConfig;
-				static Property<mscorlib::Microsoft::Win32::RegistryKey> CurrentUser;
-				static Property<mscorlib::Microsoft::Win32::RegistryKey> DynData;
-				static Property<mscorlib::Microsoft::Win32::RegistryKey> LocalMachine;
-				static Property<mscorlib::Microsoft::Win32::RegistryKey> PerformanceData;
-				static Property<mscorlib::Microsoft::Win32::RegistryKey> Users;
+				static Property<mscorlib::Microsoft::Win32::RegistryKey , mscorlib::Microsoft::Win32::Registry> ClassesRoot;
+				static Property<mscorlib::Microsoft::Win32::RegistryKey , mscorlib::Microsoft::Win32::Registry> CurrentConfig;
+				static Property<mscorlib::Microsoft::Win32::RegistryKey , mscorlib::Microsoft::Win32::Registry> CurrentUser;
+				static Property<mscorlib::Microsoft::Win32::RegistryKey , mscorlib::Microsoft::Win32::Registry> DynData;
+				static Property<mscorlib::Microsoft::Win32::RegistryKey , mscorlib::Microsoft::Win32::Registry> LocalMachine;
+				static Property<mscorlib::Microsoft::Win32::RegistryKey , mscorlib::Microsoft::Win32::Registry> PerformanceData;
+				static Property<mscorlib::Microsoft::Win32::RegistryKey , mscorlib::Microsoft::Win32::Registry> Users;
 
 				//	Get/Set:ClassesRoot
 				static mscorlib::Microsoft::Win32::RegistryKey  get_ClassesRoot();
+				static void set_ClassesRoot(mscorlib::Microsoft::Win32::RegistryKey  value);
 
 				//	Get/Set:CurrentConfig
 				static mscorlib::Microsoft::Win32::RegistryKey  get_CurrentConfig();
+				static void set_CurrentConfig(mscorlib::Microsoft::Win32::RegistryKey  value);
 
 				//	Get/Set:CurrentUser
 				static mscorlib::Microsoft::Win32::RegistryKey  get_CurrentUser();
+				static void set_CurrentUser(mscorlib::Microsoft::Win32::RegistryKey  value);
 
 				//	Get/Set:DynData
 				static mscorlib::Microsoft::Win32::RegistryKey  get_DynData();
+				static void set_DynData(mscorlib::Microsoft::Win32::RegistryKey  value);
 
 				//	Get/Set:LocalMachine
 				static mscorlib::Microsoft::Win32::RegistryKey  get_LocalMachine();
+				static void set_LocalMachine(mscorlib::Microsoft::Win32::RegistryKey  value);
 
 				//	Get/Set:PerformanceData
 				static mscorlib::Microsoft::Win32::RegistryKey  get_PerformanceData();
+				static void set_PerformanceData(mscorlib::Microsoft::Win32::RegistryKey  value);
 
 				//	Get/Set:Users
 				static mscorlib::Microsoft::Win32::RegistryKey  get_Users();
+				static void set_Users(mscorlib::Microsoft::Win32::RegistryKey  value);
 
 			
 			protected:

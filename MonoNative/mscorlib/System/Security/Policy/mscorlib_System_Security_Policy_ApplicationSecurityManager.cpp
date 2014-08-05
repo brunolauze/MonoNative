@@ -16,6 +16,8 @@ namespace mscorlib
 			namespace Policy
 			{
 
+				Property<mscorlib::System::Security::Policy::IApplicationTrustManager , mscorlib::System::Security::Policy::ApplicationSecurityManager> mscorlib::System::Security::Policy::ApplicationSecurityManager::ApplicationTrustManager(&mscorlib::System::Security::Policy::ApplicationSecurityManager::get_ApplicationTrustManager, &mscorlib::System::Security::Policy::ApplicationSecurityManager::set_ApplicationTrustManager);
+				Property<mscorlib::System::Security::Policy::ApplicationTrustCollection , mscorlib::System::Security::Policy::ApplicationSecurityManager> mscorlib::System::Security::Policy::ApplicationSecurityManager::UserApplicationTrusts(&mscorlib::System::Security::Policy::ApplicationSecurityManager::get_UserApplicationTrusts, &mscorlib::System::Security::Policy::ApplicationSecurityManager::set_UserApplicationTrusts);
 				//Public Methods
 				mscorlib::System::Boolean ApplicationSecurityManager::DetermineApplicationTrust(mscorlib::System::ActivationContext activationContext, mscorlib::System::Security::Policy::TrustManagerContext context)
 				{
@@ -37,12 +39,22 @@ namespace mscorlib
 					return mscorlib::System::Security::Policy::IApplicationTrustManager(__result__);
 				}
 
+				void ApplicationSecurityManager::set_ApplicationTrustManager(mscorlib::System::Security::Policy::IApplicationTrustManager  value)
+				{
+					throw;
+				}
+
 
 				//	Get:UserApplicationTrusts
 				mscorlib::System::Security::Policy::ApplicationTrustCollection  ApplicationSecurityManager::get_UserApplicationTrusts()
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationSecurityManager", 0, NULL, "get_UserApplicationTrusts", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Policy::ApplicationTrustCollection(__result__);
+				}
+
+				void ApplicationSecurityManager::set_UserApplicationTrusts(mscorlib::System::Security::Policy::ApplicationTrustCollection  value)
+				{
+					throw;
 				}
 
 

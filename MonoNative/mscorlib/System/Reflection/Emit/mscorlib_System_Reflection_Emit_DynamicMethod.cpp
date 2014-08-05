@@ -182,7 +182,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Attributes
-				mscorlib::System::Reflection::MethodAttributes::__ENUM__  DynamicMethod::get_Attributes()
+				mscorlib::System::Reflection::MethodAttributes::__ENUM__  DynamicMethod::get_Attributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::MethodAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -190,7 +190,7 @@ namespace mscorlib
 
 
 				//	Get:CallingConvention
-				mscorlib::System::Reflection::CallingConventions::__ENUM__  DynamicMethod::get_CallingConvention()
+				mscorlib::System::Reflection::CallingConventions::__ENUM__  DynamicMethod::get_CallingConvention() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_CallingConvention", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::CallingConventions::__ENUM__*)mono_object_unbox(__result__);
@@ -198,7 +198,7 @@ namespace mscorlib
 
 
 				//	Get:DeclaringType
-				mscorlib::System::Type  DynamicMethod::get_DeclaringType()
+				mscorlib::System::Type  DynamicMethod::get_DeclaringType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_DeclaringType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -206,7 +206,7 @@ namespace mscorlib
 
 
 				//	Get/Set:InitLocals
-				mscorlib::System::Boolean  DynamicMethod::get_InitLocals()
+				mscorlib::System::Boolean  DynamicMethod::get_InitLocals() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_InitLocals", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -223,7 +223,7 @@ namespace mscorlib
 
 
 				//	Get:MethodHandle
-				mscorlib::System::RuntimeMethodHandle  DynamicMethod::get_MethodHandle()
+				mscorlib::System::RuntimeMethodHandle  DynamicMethod::get_MethodHandle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_MethodHandle", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::RuntimeMethodHandle(__result__);
@@ -231,7 +231,7 @@ namespace mscorlib
 
 
 				//	Get:Module
-				mscorlib::System::Reflection::Module  DynamicMethod::get_Module()
+				mscorlib::System::Reflection::Module  DynamicMethod::get_Module() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_Module", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::Module(__result__);
@@ -239,7 +239,7 @@ namespace mscorlib
 
 
 				//	Get:Name
-				mscorlib::System::String  DynamicMethod::get_Name()
+				mscorlib::System::String  DynamicMethod::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -247,7 +247,7 @@ namespace mscorlib
 
 
 				//	Get:ReflectedType
-				mscorlib::System::Type  DynamicMethod::get_ReflectedType()
+				mscorlib::System::Type  DynamicMethod::get_ReflectedType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_ReflectedType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -255,7 +255,7 @@ namespace mscorlib
 
 
 				//	Get:ReturnParameter
-				mscorlib::System::Reflection::ParameterInfo  DynamicMethod::get_ReturnParameter()
+				mscorlib::System::Reflection::ParameterInfo  DynamicMethod::get_ReturnParameter() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_ReturnParameter", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::ParameterInfo(__result__);
@@ -263,7 +263,7 @@ namespace mscorlib
 
 
 				//	Get:ReturnType
-				mscorlib::System::Type  DynamicMethod::get_ReturnType()
+				mscorlib::System::Type  DynamicMethod::get_ReturnType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_ReturnType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -271,7 +271,7 @@ namespace mscorlib
 
 
 				//	Get:ReturnTypeCustomAttributes
-				mscorlib::System::Reflection::ICustomAttributeProvider  DynamicMethod::get_ReturnTypeCustomAttributes()
+				mscorlib::System::Reflection::ICustomAttributeProvider  DynamicMethod::get_ReturnTypeCustomAttributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_ReturnTypeCustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::ICustomAttributeProvider(__result__);
@@ -279,7 +279,7 @@ namespace mscorlib
 
 
 				//	Get:MemberType
-				mscorlib::System::Reflection::MemberTypes::__ENUM__  DynamicMethod::get_MemberType()
+				mscorlib::System::Reflection::MemberTypes::__ENUM__  DynamicMethod::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodInfo", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -287,7 +287,7 @@ namespace mscorlib
 
 
 				//	Get:IsPublic
-				mscorlib::System::Boolean  DynamicMethod::get_IsPublic()
+				mscorlib::System::Boolean  DynamicMethod::get_IsPublic() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsPublic", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -295,7 +295,7 @@ namespace mscorlib
 
 
 				//	Get:IsPrivate
-				mscorlib::System::Boolean  DynamicMethod::get_IsPrivate()
+				mscorlib::System::Boolean  DynamicMethod::get_IsPrivate() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsPrivate", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -303,7 +303,7 @@ namespace mscorlib
 
 
 				//	Get:IsFamily
-				mscorlib::System::Boolean  DynamicMethod::get_IsFamily()
+				mscorlib::System::Boolean  DynamicMethod::get_IsFamily() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsFamily", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -311,7 +311,7 @@ namespace mscorlib
 
 
 				//	Get:IsAssembly
-				mscorlib::System::Boolean  DynamicMethod::get_IsAssembly()
+				mscorlib::System::Boolean  DynamicMethod::get_IsAssembly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsAssembly", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -319,7 +319,7 @@ namespace mscorlib
 
 
 				//	Get:IsFamilyAndAssembly
-				mscorlib::System::Boolean  DynamicMethod::get_IsFamilyAndAssembly()
+				mscorlib::System::Boolean  DynamicMethod::get_IsFamilyAndAssembly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsFamilyAndAssembly", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -327,7 +327,7 @@ namespace mscorlib
 
 
 				//	Get:IsFamilyOrAssembly
-				mscorlib::System::Boolean  DynamicMethod::get_IsFamilyOrAssembly()
+				mscorlib::System::Boolean  DynamicMethod::get_IsFamilyOrAssembly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsFamilyOrAssembly", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -335,7 +335,7 @@ namespace mscorlib
 
 
 				//	Get:IsStatic
-				mscorlib::System::Boolean  DynamicMethod::get_IsStatic()
+				mscorlib::System::Boolean  DynamicMethod::get_IsStatic() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsStatic", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -343,7 +343,7 @@ namespace mscorlib
 
 
 				//	Get:IsFinal
-				mscorlib::System::Boolean  DynamicMethod::get_IsFinal()
+				mscorlib::System::Boolean  DynamicMethod::get_IsFinal() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsFinal", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -351,7 +351,7 @@ namespace mscorlib
 
 
 				//	Get:IsVirtual
-				mscorlib::System::Boolean  DynamicMethod::get_IsVirtual()
+				mscorlib::System::Boolean  DynamicMethod::get_IsVirtual() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsVirtual", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -359,7 +359,7 @@ namespace mscorlib
 
 
 				//	Get:IsHideBySig
-				mscorlib::System::Boolean  DynamicMethod::get_IsHideBySig()
+				mscorlib::System::Boolean  DynamicMethod::get_IsHideBySig() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsHideBySig", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -367,7 +367,7 @@ namespace mscorlib
 
 
 				//	Get:IsAbstract
-				mscorlib::System::Boolean  DynamicMethod::get_IsAbstract()
+				mscorlib::System::Boolean  DynamicMethod::get_IsAbstract() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsAbstract", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -375,7 +375,7 @@ namespace mscorlib
 
 
 				//	Get:IsSpecialName
-				mscorlib::System::Boolean  DynamicMethod::get_IsSpecialName()
+				mscorlib::System::Boolean  DynamicMethod::get_IsSpecialName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsSpecialName", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -383,7 +383,7 @@ namespace mscorlib
 
 
 				//	Get:IsConstructor
-				mscorlib::System::Boolean  DynamicMethod::get_IsConstructor()
+				mscorlib::System::Boolean  DynamicMethod::get_IsConstructor() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsConstructor", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -391,7 +391,7 @@ namespace mscorlib
 
 
 				//	Get:ContainsGenericParameters
-				mscorlib::System::Boolean  DynamicMethod::get_ContainsGenericParameters()
+				mscorlib::System::Boolean  DynamicMethod::get_ContainsGenericParameters() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_ContainsGenericParameters", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -399,7 +399,7 @@ namespace mscorlib
 
 
 				//	Get:IsGenericMethodDefinition
-				mscorlib::System::Boolean  DynamicMethod::get_IsGenericMethodDefinition()
+				mscorlib::System::Boolean  DynamicMethod::get_IsGenericMethodDefinition() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsGenericMethodDefinition", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -407,7 +407,7 @@ namespace mscorlib
 
 
 				//	Get:IsGenericMethod
-				mscorlib::System::Boolean  DynamicMethod::get_IsGenericMethod()
+				mscorlib::System::Boolean  DynamicMethod::get_IsGenericMethod() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsGenericMethod", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -415,7 +415,7 @@ namespace mscorlib
 
 
 				//	Get:IsSecurityCritical
-				mscorlib::System::Boolean  DynamicMethod::get_IsSecurityCritical()
+				mscorlib::System::Boolean  DynamicMethod::get_IsSecurityCritical() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsSecurityCritical", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -423,7 +423,7 @@ namespace mscorlib
 
 
 				//	Get:IsSecuritySafeCritical
-				mscorlib::System::Boolean  DynamicMethod::get_IsSecuritySafeCritical()
+				mscorlib::System::Boolean  DynamicMethod::get_IsSecuritySafeCritical() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsSecuritySafeCritical", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -431,7 +431,7 @@ namespace mscorlib
 
 
 				//	Get:IsSecurityTransparent
-				mscorlib::System::Boolean  DynamicMethod::get_IsSecurityTransparent()
+				mscorlib::System::Boolean  DynamicMethod::get_IsSecurityTransparent() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_IsSecurityTransparent", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -439,7 +439,7 @@ namespace mscorlib
 
 
 				//	Get:MethodImplementationFlags
-				mscorlib::System::Reflection::MethodImplAttributes::__ENUM__  DynamicMethod::get_MethodImplementationFlags()
+				mscorlib::System::Reflection::MethodImplAttributes::__ENUM__  DynamicMethod::get_MethodImplementationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_MethodImplementationFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::MethodImplAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -447,7 +447,7 @@ namespace mscorlib
 
 
 				//	Get:MetadataToken
-				mscorlib::System::Int32  DynamicMethod::get_MetadataToken()
+				mscorlib::System::Int32  DynamicMethod::get_MetadataToken() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_MetadataToken", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -455,7 +455,7 @@ namespace mscorlib
 
 
 				//	Get:CustomAttributes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  DynamicMethod::get_CustomAttributes()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  DynamicMethod::get_CustomAttributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_CustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>(__result__);

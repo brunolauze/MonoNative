@@ -64,7 +64,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Item
-				mscorlib::System::Boolean  get_Item(mscorlib::System::Int32 index);
+				mscorlib::System::Boolean  get_Item(mscorlib::System::Int32 index) const;
 				void set_Item(mscorlib::System::Int32 index, mscorlib::System::Boolean  value);
 
 			

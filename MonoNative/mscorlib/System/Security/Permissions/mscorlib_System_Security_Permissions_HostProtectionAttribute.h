@@ -94,55 +94,55 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:ExternalProcessMgmt
-					mscorlib::System::Boolean  get_ExternalProcessMgmt();
+					mscorlib::System::Boolean  get_ExternalProcessMgmt() const;
 					void set_ExternalProcessMgmt(mscorlib::System::Boolean  value);
 
 					//	Get/Set:ExternalThreading
-					mscorlib::System::Boolean  get_ExternalThreading();
+					mscorlib::System::Boolean  get_ExternalThreading() const;
 					void set_ExternalThreading(mscorlib::System::Boolean  value);
 
 					//	Get/Set:MayLeakOnAbort
-					mscorlib::System::Boolean  get_MayLeakOnAbort();
+					mscorlib::System::Boolean  get_MayLeakOnAbort() const;
 					void set_MayLeakOnAbort(mscorlib::System::Boolean  value);
 
 					//	Get/Set:SecurityInfrastructure
-					mscorlib::System::Boolean  get_SecurityInfrastructure();
+					mscorlib::System::Boolean  get_SecurityInfrastructure() const;
 					void set_SecurityInfrastructure(mscorlib::System::Boolean  value);
 
 					//	Get/Set:SelfAffectingProcessMgmt
-					mscorlib::System::Boolean  get_SelfAffectingProcessMgmt();
+					mscorlib::System::Boolean  get_SelfAffectingProcessMgmt() const;
 					void set_SelfAffectingProcessMgmt(mscorlib::System::Boolean  value);
 
 					//	Get/Set:SelfAffectingThreading
-					mscorlib::System::Boolean  get_SelfAffectingThreading();
+					mscorlib::System::Boolean  get_SelfAffectingThreading() const;
 					void set_SelfAffectingThreading(mscorlib::System::Boolean  value);
 
 					//	Get/Set:SharedState
-					mscorlib::System::Boolean  get_SharedState();
+					mscorlib::System::Boolean  get_SharedState() const;
 					void set_SharedState(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Synchronization
-					mscorlib::System::Boolean  get_Synchronization();
+					mscorlib::System::Boolean  get_Synchronization() const;
 					void set_Synchronization(mscorlib::System::Boolean  value);
 
 					//	Get/Set:UI
-					mscorlib::System::Boolean  get_UI();
+					mscorlib::System::Boolean  get_UI() const;
 					void set_UI(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Resources
-					mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  get_Resources();
+					mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  get_Resources() const;
 					void set_Resources(mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  value);
 
 					//	Get/Set:Unrestricted
-					mscorlib::System::Boolean  get_Unrestricted();
+					mscorlib::System::Boolean  get_Unrestricted() const;
 					void set_Unrestricted(mscorlib::System::Boolean  value);
 
 					//	Get/Set:Action
-					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action();
+					mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  get_Action() const;
 					void set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

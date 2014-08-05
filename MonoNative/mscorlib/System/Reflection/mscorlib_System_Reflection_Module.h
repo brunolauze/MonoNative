@@ -2,9 +2,9 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_REFLECTION_MODULE_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Module.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_BindingFlags.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_CallingConventions.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IList_1.h>
@@ -91,24 +91,24 @@ namespace mscorlib
 
 			class Module
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
 				, public virtual mscorlib::System::Runtime::InteropServices::_Module
+				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			{
 			public:
 				Module(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
 				, mscorlib::System::Runtime::InteropServices::_Module(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 				};
 			
 				Module(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
 				, mscorlib::System::Runtime::InteropServices::_Module(nativeObject)
+				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				{
 				};
 			
@@ -172,42 +172,44 @@ namespace mscorlib
 				__declspec(property(get=get_CustomAttributes)) mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  CustomAttributes;
 
 				//Public Static Fields
-				static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Type , mscorlib::System::Object )> > FilterTypeName;
-				static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Type , mscorlib::System::Object )> > FilterTypeNameIgnoreCase;
+				static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Type , mscorlib::System::Object )> , mscorlib::System::Reflection::Module> FilterTypeName;
+				static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Type , mscorlib::System::Object )> , mscorlib::System::Reflection::Module> FilterTypeNameIgnoreCase;
 
 				//Get Set Properties Methods
 				//	Get:ModuleHandle
-				mscorlib::System::ModuleHandle  get_ModuleHandle();
+				mscorlib::System::ModuleHandle  get_ModuleHandle() const;
 
 				//	Get:Assembly
-				mscorlib::System::Reflection::Assembly  get_Assembly();
+				mscorlib::System::Reflection::Assembly  get_Assembly() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get:ScopeName
-				mscorlib::System::String  get_ScopeName();
+				mscorlib::System::String  get_ScopeName() const;
 
 				//	Get:MDStreamVersion
-				mscorlib::System::Int32  get_MDStreamVersion();
+				mscorlib::System::Int32  get_MDStreamVersion() const;
 
 				//	Get:ModuleVersionId
-				mscorlib::System::Guid  get_ModuleVersionId();
+				mscorlib::System::Guid  get_ModuleVersionId() const;
 
 				//	Get:FullyQualifiedName
-				mscorlib::System::String  get_FullyQualifiedName();
+				mscorlib::System::String  get_FullyQualifiedName() const;
 
 				//	Get:MetadataToken
-				mscorlib::System::Int32  get_MetadataToken();
+				mscorlib::System::Int32  get_MetadataToken() const;
 
 				//	Get:CustomAttributes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes();
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes() const;
 
 				//	Get/Set:FilterTypeName
 				static mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Type , mscorlib::System::Object )>  get_FilterTypeName();
+				static void set_FilterTypeName(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Type , mscorlib::System::Object )>  value);
 
 				//	Get/Set:FilterTypeNameIgnoreCase
 				static mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Type , mscorlib::System::Object )>  get_FilterTypeNameIgnoreCase();
+				static void set_FilterTypeNameIgnoreCase(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Type , mscorlib::System::Object )>  value);
 
 			
 			protected:

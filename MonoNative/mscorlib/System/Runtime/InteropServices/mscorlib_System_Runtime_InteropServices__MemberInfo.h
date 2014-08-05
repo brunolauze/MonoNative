@@ -75,16 +75,16 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:DeclaringType
-					mscorlib::System::Type  get_DeclaringType();
+					mscorlib::System::Type  get_DeclaringType() const;
 
 					//	Get:MemberType
-					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:ReflectedType
-					mscorlib::System::Type  get_ReflectedType();
+					mscorlib::System::Type  get_ReflectedType() const;
 
 				
 				protected:

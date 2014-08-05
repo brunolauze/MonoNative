@@ -84,16 +84,17 @@ namespace mscorlib
 							__declspec(property(get=get_Value, put=set_Value)) std::vector<mscorlib::System::Byte*>  Value;
 
 							//Public Static Properties
-							static Property<mscorlib::System::String> XsdType;
+							static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapHexBinary> XsdType;
 
 							//Get Set Properties Methods
 							//	Get/Set:Value
-							std::vector<mscorlib::System::Byte*>  get_Value();
+							std::vector<mscorlib::System::Byte*>  get_Value() const;
 							void set_Value(std::vector<mscorlib::System::Byte*>  value);
 
 							//Get Set Static Properties Methods
 							//	Get:XsdType
 							static mscorlib::System::String  get_XsdType();
+							static void set_XsdType(mscorlib::System::String  value);
 
 
 						

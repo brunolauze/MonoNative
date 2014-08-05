@@ -8,8 +8,8 @@
 #include <mscorlib/System/Security/Cryptography/X509Certificates/mscorlib_System_Security_Cryptography_X509Certificates_X509KeyStorageFlags.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_SerializationInfo.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Security/Cryptography/X509Certificates/mscorlib_System_Security_Cryptography_X509Certificates_X509ContentType.h>
 
 namespace mscorlib
@@ -36,14 +36,14 @@ namespace mscorlib
 
 					class X509Certificate
 						: public mscorlib::System::Object
-						, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 						, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
+						, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 					{
 					public:
 						X509Certificate(std::vector<mscorlib::System::Byte*> data)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
@@ -54,8 +54,8 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::System::IntPtr handle)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
@@ -66,8 +66,8 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate &cert)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
@@ -78,16 +78,16 @@ namespace mscorlib
 					
 						X509Certificate()
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate");
 						};
 					
 						X509Certificate(std::vector<mscorlib::System::Byte*> rawData, mscorlib::System::String password)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
@@ -100,8 +100,8 @@ namespace mscorlib
 					
 						X509Certificate(std::vector<mscorlib::System::Byte*> rawData, mscorlib::System::Security::SecureString password)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
@@ -114,8 +114,8 @@ namespace mscorlib
 					
 						X509Certificate(std::vector<mscorlib::System::Byte*> rawData, mscorlib::System::String password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
@@ -130,8 +130,8 @@ namespace mscorlib
 					
 						X509Certificate(std::vector<mscorlib::System::Byte*> rawData, mscorlib::System::Security::SecureString password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
@@ -146,8 +146,8 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::System::String fileName)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
@@ -158,8 +158,8 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::System::String fileName, mscorlib::System::String password)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
@@ -172,8 +172,8 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::System::String fileName, mscorlib::System::Security::SecureString password)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
@@ -186,8 +186,8 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::System::String fileName, mscorlib::System::String password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
@@ -202,8 +202,8 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::System::String fileName, mscorlib::System::Security::SecureString password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
@@ -218,8 +218,8 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::System::Runtime::Serialization::SerializationInfo info, mscorlib::System::Runtime::Serialization::StreamingContext context)
 						: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.X509Certificates.X509Certificate"))
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
@@ -232,15 +232,15 @@ namespace mscorlib
 					
 						X509Certificate(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Object(nativeTypeInfo)
-						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+						, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 						{
 						};
 					
 						X509Certificate(MonoObject *nativeObject)
 						: mscorlib::System::Object(nativeObject)
-						, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 						, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
+						, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 						{
 						};
 					
@@ -297,13 +297,13 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Issuer
-						mscorlib::System::String  get_Issuer();
+						mscorlib::System::String  get_Issuer() const;
 
 						//	Get:Subject
-						mscorlib::System::String  get_Subject();
+						mscorlib::System::String  get_Subject() const;
 
 						//	Get:Handle
-						mscorlib::System::IntPtr  get_Handle();
+						mscorlib::System::IntPtr  get_Handle() const;
 
 					
 					protected:

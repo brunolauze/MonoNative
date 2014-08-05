@@ -85,13 +85,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CultureName
-				mscorlib::System::String  get_CultureName();
+				mscorlib::System::String  get_CultureName() const;
 
 				//	Get:Location
-				mscorlib::System::Resources::UltimateResourceFallbackLocation::__ENUM__  get_Location();
+				mscorlib::System::Resources::UltimateResourceFallbackLocation::__ENUM__  get_Location() const;
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

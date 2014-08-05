@@ -56,7 +56,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ControlFlags
-				mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  CommonSecurityDescriptor::get_ControlFlags()
+				mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  CommonSecurityDescriptor::get_ControlFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_ControlFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 				//	Get/Set:DiscretionaryAcl
-				mscorlib::System::Security::AccessControl::DiscretionaryAcl  CommonSecurityDescriptor::get_DiscretionaryAcl()
+				mscorlib::System::Security::AccessControl::DiscretionaryAcl  CommonSecurityDescriptor::get_DiscretionaryAcl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_DiscretionaryAcl", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::AccessControl::DiscretionaryAcl(__result__);
@@ -81,7 +81,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Group
-				mscorlib::System::Security::Principal::SecurityIdentifier  CommonSecurityDescriptor::get_Group()
+				mscorlib::System::Security::Principal::SecurityIdentifier  CommonSecurityDescriptor::get_Group() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_Group", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::SecurityIdentifier(__result__);
@@ -98,7 +98,7 @@ namespace mscorlib
 
 
 				//	Get:IsContainer
-				mscorlib::System::Boolean  CommonSecurityDescriptor::get_IsContainer()
+				mscorlib::System::Boolean  CommonSecurityDescriptor::get_IsContainer() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_IsContainer", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -106,7 +106,7 @@ namespace mscorlib
 
 
 				//	Get:IsDiscretionaryAclCanonical
-				mscorlib::System::Boolean  CommonSecurityDescriptor::get_IsDiscretionaryAclCanonical()
+				mscorlib::System::Boolean  CommonSecurityDescriptor::get_IsDiscretionaryAclCanonical() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_IsDiscretionaryAclCanonical", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -114,7 +114,7 @@ namespace mscorlib
 
 
 				//	Get:IsDS
-				mscorlib::System::Boolean  CommonSecurityDescriptor::get_IsDS()
+				mscorlib::System::Boolean  CommonSecurityDescriptor::get_IsDS() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_IsDS", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -122,7 +122,7 @@ namespace mscorlib
 
 
 				//	Get:IsSystemAclCanonical
-				mscorlib::System::Boolean  CommonSecurityDescriptor::get_IsSystemAclCanonical()
+				mscorlib::System::Boolean  CommonSecurityDescriptor::get_IsSystemAclCanonical() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_IsSystemAclCanonical", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -130,7 +130,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Owner
-				mscorlib::System::Security::Principal::SecurityIdentifier  CommonSecurityDescriptor::get_Owner()
+				mscorlib::System::Security::Principal::SecurityIdentifier  CommonSecurityDescriptor::get_Owner() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_Owner", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::SecurityIdentifier(__result__);
@@ -147,7 +147,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SystemAcl
-				mscorlib::System::Security::AccessControl::SystemAcl  CommonSecurityDescriptor::get_SystemAcl()
+				mscorlib::System::Security::AccessControl::SystemAcl  CommonSecurityDescriptor::get_SystemAcl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_SystemAcl", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::AccessControl::SystemAcl(__result__);
@@ -164,7 +164,7 @@ namespace mscorlib
 
 
 				//	Get:BinaryLength
-				mscorlib::System::Int32  CommonSecurityDescriptor::get_BinaryLength()
+				mscorlib::System::Int32  CommonSecurityDescriptor::get_BinaryLength() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericSecurityDescriptor", 0, NULL, "get_BinaryLength", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

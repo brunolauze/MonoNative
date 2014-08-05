@@ -14,6 +14,7 @@ namespace mscorlib
 			namespace InteropServices
 			{
 
+				Property<mscorlib::System::String , mscorlib::System::Runtime::InteropServices::RuntimeEnvironment> mscorlib::System::Runtime::InteropServices::RuntimeEnvironment::SystemConfigurationFile(&mscorlib::System::Runtime::InteropServices::RuntimeEnvironment::get_SystemConfigurationFile, &mscorlib::System::Runtime::InteropServices::RuntimeEnvironment::set_SystemConfigurationFile);
 				//Public Methods
 				mscorlib::System::Boolean RuntimeEnvironment::FromGlobalAccessCache(mscorlib::System::Reflection::Assembly a)
 				{
@@ -43,6 +44,11 @@ namespace mscorlib
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "RuntimeEnvironment", 0, NULL, "get_SystemConfigurationFile", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
+				}
+
+				void RuntimeEnvironment::set_SystemConfigurationFile(mscorlib::System::String  value)
+				{
+					throw;
 				}
 
 

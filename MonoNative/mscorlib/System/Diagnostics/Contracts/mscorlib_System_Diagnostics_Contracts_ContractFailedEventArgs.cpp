@@ -25,7 +25,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Condition
-				mscorlib::System::String  ContractFailedEventArgs::get_Condition()
+				mscorlib::System::String  ContractFailedEventArgs::get_Condition() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractFailedEventArgs", 0, NULL, "get_Condition", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -42,7 +42,7 @@ namespace mscorlib
 
 
 				//	Get/Set:FailureKind
-				mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__  ContractFailedEventArgs::get_FailureKind()
+				mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__  ContractFailedEventArgs::get_FailureKind() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractFailedEventArgs", 0, NULL, "get_FailureKind", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__*)mono_object_unbox(__result__);
@@ -59,7 +59,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Handled
-				mscorlib::System::Boolean  ContractFailedEventArgs::get_Handled()
+				mscorlib::System::Boolean  ContractFailedEventArgs::get_Handled() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractFailedEventArgs", 0, NULL, "get_Handled", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -76,7 +76,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unwind
-				mscorlib::System::Boolean  ContractFailedEventArgs::get_Unwind()
+				mscorlib::System::Boolean  ContractFailedEventArgs::get_Unwind() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractFailedEventArgs", 0, NULL, "get_Unwind", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -93,7 +93,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Message
-				mscorlib::System::String  ContractFailedEventArgs::get_Message()
+				mscorlib::System::String  ContractFailedEventArgs::get_Message() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractFailedEventArgs", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -110,7 +110,7 @@ namespace mscorlib
 
 
 				//	Get/Set:OriginalException
-				mscorlib::System::Exception  ContractFailedEventArgs::get_OriginalException()
+				mscorlib::System::Exception  ContractFailedEventArgs::get_OriginalException() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractFailedEventArgs", 0, NULL, "get_OriginalException", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Exception(__result__);

@@ -44,7 +44,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Parameters
-				mscorlib::System::String  RSAOAEPKeyExchangeDeformatter::get_Parameters()
+				mscorlib::System::String  RSAOAEPKeyExchangeDeformatter::get_Parameters() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSAOAEPKeyExchangeDeformatter", 0, NULL, "get_Parameters", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

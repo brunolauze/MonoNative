@@ -34,7 +34,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Current
-		mscorlib::System::Char  CharEnumerator::get_Current()
+		mscorlib::System::Char  CharEnumerator::get_Current() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "CharEnumerator", 0, NULL, "get_Current", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Char*)mono_object_unbox(__result__);

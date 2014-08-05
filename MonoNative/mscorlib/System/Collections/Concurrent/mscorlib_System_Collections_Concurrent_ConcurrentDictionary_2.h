@@ -388,7 +388,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Item
-					TValue  get_Item(TKey key)
+					TValue  get_Item(TKey key) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -416,7 +416,7 @@ namespace mscorlib
 				
 
 					//	Get:Count
-					mscorlib::System::Int32  get_Count()
+					mscorlib::System::Int32  get_Count() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -426,7 +426,7 @@ namespace mscorlib
 					}
 
 					//	Get:IsEmpty
-					mscorlib::System::Boolean  get_IsEmpty()
+					mscorlib::System::Boolean  get_IsEmpty() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -436,7 +436,7 @@ namespace mscorlib
 					}
 
 					//	Get:Keys
-					mscorlib::System::Collections::Generic::ICollection<TKey>  get_Keys()
+					mscorlib::System::Collections::Generic::ICollection<TKey>  get_Keys() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -446,7 +446,7 @@ namespace mscorlib
 					}
 
 					//	Get:Values
-					mscorlib::System::Collections::Generic::ICollection<TValue>  get_Values()
+					mscorlib::System::Collections::Generic::ICollection<TValue>  get_Values() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());

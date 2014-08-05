@@ -17,7 +17,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get:Children
-					mscorlib::System::Collections::IList  SinkProviderData::get_Children()
+					mscorlib::System::Collections::IList  SinkProviderData::get_Children() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "SinkProviderData", 0, NULL, "get_Children", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::IList(__result__);
@@ -25,7 +25,7 @@ namespace mscorlib
 
 
 					//	Get:Name
-					mscorlib::System::String  SinkProviderData::get_Name()
+					mscorlib::System::String  SinkProviderData::get_Name() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "SinkProviderData", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -33,7 +33,7 @@ namespace mscorlib
 
 
 					//	Get:Properties
-					mscorlib::System::Collections::IDictionary  SinkProviderData::get_Properties()
+					mscorlib::System::Collections::IDictionary  SinkProviderData::get_Properties() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "SinkProviderData", 0, NULL, "get_Properties", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::IDictionary(__result__);

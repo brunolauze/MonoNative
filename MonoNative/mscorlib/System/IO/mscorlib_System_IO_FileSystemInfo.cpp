@@ -39,7 +39,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Exists
-			mscorlib::System::Boolean  FileSystemInfo::get_Exists()
+			mscorlib::System::Boolean  FileSystemInfo::get_Exists() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_Exists", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -47,7 +47,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  FileSystemInfo::get_Name()
+			mscorlib::System::String  FileSystemInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -55,7 +55,7 @@ namespace mscorlib
 
 
 			//	Get:FullName
-			mscorlib::System::String  FileSystemInfo::get_FullName()
+			mscorlib::System::String  FileSystemInfo::get_FullName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_FullName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -63,7 +63,7 @@ namespace mscorlib
 
 
 			//	Get:Extension
-			mscorlib::System::String  FileSystemInfo::get_Extension()
+			mscorlib::System::String  FileSystemInfo::get_Extension() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_Extension", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -71,7 +71,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Attributes
-			mscorlib::System::IO::FileAttributes::__ENUM__  FileSystemInfo::get_Attributes()
+			mscorlib::System::IO::FileAttributes::__ENUM__  FileSystemInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::IO::FileAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -88,7 +88,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CreationTime
-			mscorlib::System::DateTime  FileSystemInfo::get_CreationTime()
+			mscorlib::System::DateTime  FileSystemInfo::get_CreationTime() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_CreationTime", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -105,7 +105,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CreationTimeUtc
-			mscorlib::System::DateTime  FileSystemInfo::get_CreationTimeUtc()
+			mscorlib::System::DateTime  FileSystemInfo::get_CreationTimeUtc() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_CreationTimeUtc", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -122,7 +122,7 @@ namespace mscorlib
 
 
 			//	Get/Set:LastAccessTime
-			mscorlib::System::DateTime  FileSystemInfo::get_LastAccessTime()
+			mscorlib::System::DateTime  FileSystemInfo::get_LastAccessTime() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_LastAccessTime", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -139,7 +139,7 @@ namespace mscorlib
 
 
 			//	Get/Set:LastAccessTimeUtc
-			mscorlib::System::DateTime  FileSystemInfo::get_LastAccessTimeUtc()
+			mscorlib::System::DateTime  FileSystemInfo::get_LastAccessTimeUtc() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_LastAccessTimeUtc", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -156,7 +156,7 @@ namespace mscorlib
 
 
 			//	Get/Set:LastWriteTime
-			mscorlib::System::DateTime  FileSystemInfo::get_LastWriteTime()
+			mscorlib::System::DateTime  FileSystemInfo::get_LastWriteTime() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_LastWriteTime", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -173,7 +173,7 @@ namespace mscorlib
 
 
 			//	Get/Set:LastWriteTimeUtc
-			mscorlib::System::DateTime  FileSystemInfo::get_LastWriteTimeUtc()
+			mscorlib::System::DateTime  FileSystemInfo::get_LastWriteTimeUtc() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_LastWriteTimeUtc", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);

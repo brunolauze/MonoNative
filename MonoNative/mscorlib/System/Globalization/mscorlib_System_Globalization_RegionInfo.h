@@ -87,51 +87,52 @@ namespace mscorlib
 				__declspec(property(get=get_TwoLetterISORegionName)) mscorlib::System::String  TwoLetterISORegionName;
 
 				//Public Static Properties
-				static Property<mscorlib::System::Globalization::RegionInfo> CurrentRegion;
+				static Property<mscorlib::System::Globalization::RegionInfo , mscorlib::System::Globalization::RegionInfo> CurrentRegion;
 
 				//Get Set Properties Methods
 				//	Get:CurrencyEnglishName
-				mscorlib::System::String  get_CurrencyEnglishName();
+				mscorlib::System::String  get_CurrencyEnglishName() const;
 
 				//	Get:CurrencySymbol
-				mscorlib::System::String  get_CurrencySymbol();
+				mscorlib::System::String  get_CurrencySymbol() const;
 
 				//	Get:DisplayName
-				mscorlib::System::String  get_DisplayName();
+				mscorlib::System::String  get_DisplayName() const;
 
 				//	Get:EnglishName
-				mscorlib::System::String  get_EnglishName();
+				mscorlib::System::String  get_EnglishName() const;
 
 				//	Get:GeoId
-				mscorlib::System::Int32  get_GeoId();
+				mscorlib::System::Int32  get_GeoId() const;
 
 				//	Get:IsMetric
-				mscorlib::System::Boolean  get_IsMetric();
+				mscorlib::System::Boolean  get_IsMetric() const;
 
 				//	Get:ISOCurrencySymbol
-				mscorlib::System::String  get_ISOCurrencySymbol();
+				mscorlib::System::String  get_ISOCurrencySymbol() const;
 
 				//	Get:NativeName
-				mscorlib::System::String  get_NativeName();
+				mscorlib::System::String  get_NativeName() const;
 
 				//	Get:CurrencyNativeName
-				mscorlib::System::String  get_CurrencyNativeName();
+				mscorlib::System::String  get_CurrencyNativeName() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get:ThreeLetterISORegionName
-				mscorlib::System::String  get_ThreeLetterISORegionName();
+				mscorlib::System::String  get_ThreeLetterISORegionName() const;
 
 				//	Get:ThreeLetterWindowsRegionName
-				mscorlib::System::String  get_ThreeLetterWindowsRegionName();
+				mscorlib::System::String  get_ThreeLetterWindowsRegionName() const;
 
 				//	Get:TwoLetterISORegionName
-				mscorlib::System::String  get_TwoLetterISORegionName();
+				mscorlib::System::String  get_TwoLetterISORegionName() const;
 
 				//Get Set Static Properties Methods
 				//	Get:CurrentRegion
 				static mscorlib::System::Globalization::RegionInfo  get_CurrentRegion();
+				static void set_CurrentRegion(mscorlib::System::Globalization::RegionInfo  value);
 
 
 			

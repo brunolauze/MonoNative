@@ -88,15 +88,16 @@ namespace mscorlib
 					__declspec(property(get=get_Algorithm, put=set_Algorithm)) mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  Algorithm;
 
 					//Public Static Fields
-					static Property<mscorlib::System::Configuration::Assemblies::AssemblyHash> Empty;
+					static Property<mscorlib::System::Configuration::Assemblies::AssemblyHash , mscorlib::System::Configuration::Assemblies::AssemblyHash> Empty;
 
 					//Get Set Properties Methods
 					//	Get/Set:Algorithm
-					mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  get_Algorithm();
+					mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  get_Algorithm() const;
 					void set_Algorithm(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  value);
 
 					//	Get/Set:Empty
 					static mscorlib::System::Configuration::Assemblies::AssemblyHash  get_Empty();
+					static void set_Empty(mscorlib::System::Configuration::Assemblies::AssemblyHash  value);
 
 				
 				protected:

@@ -92,28 +92,28 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Attributes
-					mscorlib::System::Reflection::EventAttributes::__ENUM__  get_Attributes();
+					mscorlib::System::Reflection::EventAttributes::__ENUM__  get_Attributes() const;
 
 					//	Get:DeclaringType
-					mscorlib::System::Type  get_DeclaringType();
+					mscorlib::System::Type  get_DeclaringType() const;
 
 					//	Get:EventHandlerType
-					mscorlib::System::Type  get_EventHandlerType();
+					mscorlib::System::Type  get_EventHandlerType() const;
 
 					//	Get:IsMulticast
-					mscorlib::System::Boolean  get_IsMulticast();
+					mscorlib::System::Boolean  get_IsMulticast() const;
 
 					//	Get:IsSpecialName
-					mscorlib::System::Boolean  get_IsSpecialName();
+					mscorlib::System::Boolean  get_IsSpecialName() const;
 
 					//	Get:MemberType
-					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:ReflectedType
-					mscorlib::System::Type  get_ReflectedType();
+					mscorlib::System::Type  get_ReflectedType() const;
 
 				
 				protected:

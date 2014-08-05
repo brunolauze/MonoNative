@@ -54,11 +54,11 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:Cancel
-			mscorlib::System::Boolean  get_Cancel();
+			mscorlib::System::Boolean  get_Cancel() const;
 			void set_Cancel(mscorlib::System::Boolean  value);
 
 			//	Get:SpecialKey
-			mscorlib::System::ConsoleSpecialKey::__ENUM__  get_SpecialKey();
+			mscorlib::System::ConsoleSpecialKey::__ENUM__  get_SpecialKey() const;
 
 		
 		protected:

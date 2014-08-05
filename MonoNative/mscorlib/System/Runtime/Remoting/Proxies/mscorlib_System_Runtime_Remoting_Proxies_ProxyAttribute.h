@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_PROXIES_PROXYATTRIBUTE_H
 
 #include <mscorlib/System/mscorlib_System_Attribute.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Attribute.h>
 #include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContextAttribute.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Attribute.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Runtime/Remoting/Activation/mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage.h>
 
@@ -86,29 +86,29 @@ namespace mscorlib
 
 					class ProxyAttribute
 						: public mscorlib::System::Attribute
-						, public virtual mscorlib::System::Runtime::InteropServices::_Attribute
 						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute
+						, public virtual mscorlib::System::Runtime::InteropServices::_Attribute
 					{
 					public:
 						ProxyAttribute()
 						: mscorlib::System::Attribute(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Proxies.ProxyAttribute"))
-						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
+						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						{
 							__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting.Proxies", "ProxyAttribute");
 						};
 					
 						ProxyAttribute(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Attribute(nativeTypeInfo)
-						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
+						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						{
 						};
 					
 						ProxyAttribute(MonoObject *nativeObject)
 						: mscorlib::System::Attribute(nativeObject)
-						, mscorlib::System::Runtime::InteropServices::_Attribute(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(nativeObject)
+						, mscorlib::System::Runtime::InteropServices::_Attribute(nativeObject)
 						{
 						};
 					
@@ -134,7 +134,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:TypeId
-						mscorlib::System::Object  get_TypeId();
+						mscorlib::System::Object  get_TypeId() const;
 
 					
 					protected:

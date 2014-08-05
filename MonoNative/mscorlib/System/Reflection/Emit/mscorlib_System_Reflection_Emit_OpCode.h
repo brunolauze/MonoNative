@@ -71,28 +71,28 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:Size
-					mscorlib::System::Int32  get_Size();
+					mscorlib::System::Int32  get_Size() const;
 
 					//	Get:OpCodeType
-					mscorlib::System::Reflection::Emit::OpCodeType::__ENUM__  get_OpCodeType();
+					mscorlib::System::Reflection::Emit::OpCodeType::__ENUM__  get_OpCodeType() const;
 
 					//	Get:OperandType
-					mscorlib::System::Reflection::Emit::OperandType::__ENUM__  get_OperandType();
+					mscorlib::System::Reflection::Emit::OperandType::__ENUM__  get_OperandType() const;
 
 					//	Get:FlowControl
-					mscorlib::System::Reflection::Emit::FlowControl::__ENUM__  get_FlowControl();
+					mscorlib::System::Reflection::Emit::FlowControl::__ENUM__  get_FlowControl() const;
 
 					//	Get:StackBehaviourPop
-					mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__  get_StackBehaviourPop();
+					mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__  get_StackBehaviourPop() const;
 
 					//	Get:StackBehaviourPush
-					mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__  get_StackBehaviourPush();
+					mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__  get_StackBehaviourPush() const;
 
 					//	Get:Value
-					mscorlib::System::Int16  get_Value();
+					mscorlib::System::Int16  get_Value() const;
 
 				
 				protected:

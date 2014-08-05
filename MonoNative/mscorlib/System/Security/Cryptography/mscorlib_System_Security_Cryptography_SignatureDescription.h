@@ -97,19 +97,19 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:DeformatterAlgorithm
-					mscorlib::System::String  get_DeformatterAlgorithm();
+					mscorlib::System::String  get_DeformatterAlgorithm() const;
 					void set_DeformatterAlgorithm(mscorlib::System::String  value);
 
 					//	Get/Set:DigestAlgorithm
-					mscorlib::System::String  get_DigestAlgorithm();
+					mscorlib::System::String  get_DigestAlgorithm() const;
 					void set_DigestAlgorithm(mscorlib::System::String  value);
 
 					//	Get/Set:FormatterAlgorithm
-					mscorlib::System::String  get_FormatterAlgorithm();
+					mscorlib::System::String  get_FormatterAlgorithm() const;
 					void set_FormatterAlgorithm(mscorlib::System::String  value);
 
 					//	Get/Set:KeyAlgorithm
-					mscorlib::System::String  get_KeyAlgorithm();
+					mscorlib::System::String  get_KeyAlgorithm() const;
 					void set_KeyAlgorithm(mscorlib::System::String  value);
 
 				

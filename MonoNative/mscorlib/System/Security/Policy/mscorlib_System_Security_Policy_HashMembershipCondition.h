@@ -3,11 +3,11 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_HashAlgorithm.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
-#include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
-#include <mscorlib/System/Security/mscorlib_System_Security_ISecurityPolicyEncodable.h>
-#include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_IMembershipCondition.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
+#include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_IMembershipCondition.h>
+#include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
+#include <mscorlib/System/Security/mscorlib_System_Security_ISecurityPolicyEncodable.h>
 
 namespace mscorlib
 {
@@ -62,20 +62,20 @@ namespace mscorlib
 
 				class HashMembershipCondition
 					: public mscorlib::System::Object
-					, public virtual mscorlib::System::Runtime::Serialization::ISerializable
-					, public virtual mscorlib::System::Security::ISecurityEncodable
-					, public virtual mscorlib::System::Security::ISecurityPolicyEncodable
-					, public virtual mscorlib::System::Security::Policy::IMembershipCondition
 					, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
+					, public virtual mscorlib::System::Security::Policy::IMembershipCondition
+					, public virtual mscorlib::System::Security::ISecurityEncodable
+					, public virtual mscorlib::System::Runtime::Serialization::ISerializable
+					, public virtual mscorlib::System::Security::ISecurityPolicyEncodable
 				{
 				public:
 					HashMembershipCondition(mscorlib::System::Security::Cryptography::HashAlgorithm hashAlg, std::vector<mscorlib::System::Byte*> value)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Policy.HashMembershipCondition"))
-					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
-					, mscorlib::System::Security::ISecurityEncodable(NULL)
-					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
-					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
+					, mscorlib::System::Security::ISecurityEncodable(NULL)
+					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
+					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -88,21 +88,21 @@ namespace mscorlib
 				
 					HashMembershipCondition(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
-					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
-					, mscorlib::System::Security::ISecurityEncodable(NULL)
-					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
-					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
+					, mscorlib::System::Security::ISecurityEncodable(NULL)
+					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
+					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
 					{
 					};
 				
 					HashMembershipCondition(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
-					, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
-					, mscorlib::System::Security::ISecurityEncodable(nativeObject)
-					, mscorlib::System::Security::ISecurityPolicyEncodable(nativeObject)
-					, mscorlib::System::Security::Policy::IMembershipCondition(nativeObject)
 					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
+					, mscorlib::System::Security::Policy::IMembershipCondition(nativeObject)
+					, mscorlib::System::Security::ISecurityEncodable(nativeObject)
+					, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
+					, mscorlib::System::Security::ISecurityPolicyEncodable(nativeObject)
 					{
 					};
 				
@@ -134,11 +134,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:HashAlgorithm
-					mscorlib::System::Security::Cryptography::HashAlgorithm  get_HashAlgorithm();
+					mscorlib::System::Security::Cryptography::HashAlgorithm  get_HashAlgorithm() const;
 					void set_HashAlgorithm(mscorlib::System::Security::Cryptography::HashAlgorithm  value);
 
 					//	Get/Set:HashValue
-					std::vector<mscorlib::System::Byte*>  get_HashValue();
+					std::vector<mscorlib::System::Byte*>  get_HashValue() const;
 					void set_HashValue(std::vector<mscorlib::System::Byte*>  value);
 
 				

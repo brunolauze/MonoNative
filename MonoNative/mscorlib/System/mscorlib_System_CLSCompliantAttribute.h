@@ -68,10 +68,10 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsCompliant
-			mscorlib::System::Boolean  get_IsCompliant();
+			mscorlib::System::Boolean  get_IsCompliant() const;
 
 			//	Get:TypeId
-			mscorlib::System::Object  get_TypeId();
+			mscorlib::System::Object  get_TypeId() const;
 
 		
 		protected:

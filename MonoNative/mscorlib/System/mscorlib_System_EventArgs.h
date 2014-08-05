@@ -53,10 +53,11 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::EventArgs> Empty;
+			static Property<mscorlib::System::EventArgs , mscorlib::System::EventArgs> Empty;
 
 			//	Get/Set:Empty
 			static mscorlib::System::EventArgs  get_Empty();
+			static void set_Empty(mscorlib::System::EventArgs  value);
 
 		
 		protected:

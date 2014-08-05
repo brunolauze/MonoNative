@@ -70,10 +70,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Version
-				mscorlib::System::String  get_Version();
+				mscorlib::System::String  get_Version() const;
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

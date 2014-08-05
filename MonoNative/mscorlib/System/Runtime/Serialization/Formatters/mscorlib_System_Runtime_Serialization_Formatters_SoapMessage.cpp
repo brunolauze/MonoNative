@@ -19,7 +19,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get/Set:Headers
-					std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*>  SoapMessage::get_Headers()
+					std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*>  SoapMessage::get_Headers() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapMessage", 0, NULL, "get_Headers", __native_object__, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -44,7 +44,7 @@ namespace mscorlib
 
 
 					//	Get/Set:MethodName
-					mscorlib::System::String  SoapMessage::get_MethodName()
+					mscorlib::System::String  SoapMessage::get_MethodName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapMessage", 0, NULL, "get_MethodName", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -61,7 +61,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ParamNames
-					std::vector<mscorlib::System::String*>  SoapMessage::get_ParamNames()
+					std::vector<mscorlib::System::String*>  SoapMessage::get_ParamNames() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapMessage", 0, NULL, "get_ParamNames", __native_object__, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -86,7 +86,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ParamTypes
-					std::vector<mscorlib::System::Type*>  SoapMessage::get_ParamTypes()
+					std::vector<mscorlib::System::Type*>  SoapMessage::get_ParamTypes() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapMessage", 0, NULL, "get_ParamTypes", __native_object__, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -111,7 +111,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ParamValues
-					std::vector<mscorlib::System::Object*>  SoapMessage::get_ParamValues()
+					std::vector<mscorlib::System::Object*>  SoapMessage::get_ParamValues() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapMessage", 0, NULL, "get_ParamValues", __native_object__, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -136,7 +136,7 @@ namespace mscorlib
 
 
 					//	Get/Set:XmlNameSpace
-					mscorlib::System::String  SoapMessage::get_XmlNameSpace()
+					mscorlib::System::String  SoapMessage::get_XmlNameSpace() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "SoapMessage", 0, NULL, "get_XmlNameSpace", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);

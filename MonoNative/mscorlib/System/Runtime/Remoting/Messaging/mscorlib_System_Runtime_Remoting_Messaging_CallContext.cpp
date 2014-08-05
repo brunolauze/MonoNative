@@ -16,6 +16,7 @@ namespace mscorlib
 				namespace Messaging
 				{
 
+					Property<mscorlib::System::Object , mscorlib::System::Runtime::Remoting::Messaging::CallContext> mscorlib::System::Runtime::Remoting::Messaging::CallContext::HostContext(&mscorlib::System::Runtime::Remoting::Messaging::CallContext::get_HostContext, &mscorlib::System::Runtime::Remoting::Messaging::CallContext::set_HostContext);
 					//Public Methods
 					void CallContext::FreeNamedDataSlot(mscorlib::System::String name)
 					{

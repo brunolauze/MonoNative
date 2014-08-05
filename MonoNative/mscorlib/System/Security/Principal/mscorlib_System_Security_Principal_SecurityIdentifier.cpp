@@ -115,7 +115,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:AccountDomainSid
-				mscorlib::System::Security::Principal::SecurityIdentifier  SecurityIdentifier::get_AccountDomainSid()
+				mscorlib::System::Security::Principal::SecurityIdentifier  SecurityIdentifier::get_AccountDomainSid() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "SecurityIdentifier", 0, NULL, "get_AccountDomainSid", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::SecurityIdentifier(__result__);
@@ -123,7 +123,7 @@ namespace mscorlib
 
 
 				//	Get:BinaryLength
-				mscorlib::System::Int32  SecurityIdentifier::get_BinaryLength()
+				mscorlib::System::Int32  SecurityIdentifier::get_BinaryLength() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "SecurityIdentifier", 0, NULL, "get_BinaryLength", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -131,7 +131,7 @@ namespace mscorlib
 
 
 				//	Get:Value
-				mscorlib::System::String  SecurityIdentifier::get_Value()
+				mscorlib::System::String  SecurityIdentifier::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "SecurityIdentifier", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -144,6 +144,10 @@ namespace mscorlib
 					return Global::GetFieldInt32Value("mscorlib", "System.Security.Principal", "SecurityIdentifier", 0, NULL, "MaxBinaryLength");
 				}
 
+				void SecurityIdentifier::set_MaxBinaryLength(mscorlib::System::Int32  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:MinBinaryLength
 				mscorlib::System::Int32 SecurityIdentifier::get_MinBinaryLength()
@@ -151,6 +155,10 @@ namespace mscorlib
 					return Global::GetFieldInt32Value("mscorlib", "System.Security.Principal", "SecurityIdentifier", 0, NULL, "MinBinaryLength");
 				}
 
+				void SecurityIdentifier::set_MinBinaryLength(mscorlib::System::Int32  value)
+				{
+					throw;
+				}
 
 
 			}

@@ -18,7 +18,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:CancellationToken
-				mscorlib::System::Threading::CancellationToken  ParallelOptions::get_CancellationToken()
+				mscorlib::System::Threading::CancellationToken  ParallelOptions::get_CancellationToken() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "ParallelOptions", 0, NULL, "get_CancellationToken", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::CancellationToken(__result__);
@@ -35,7 +35,7 @@ namespace mscorlib
 
 
 				//	Get/Set:MaxDegreeOfParallelism
-				mscorlib::System::Int32  ParallelOptions::get_MaxDegreeOfParallelism()
+				mscorlib::System::Int32  ParallelOptions::get_MaxDegreeOfParallelism() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "ParallelOptions", 0, NULL, "get_MaxDegreeOfParallelism", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -52,7 +52,7 @@ namespace mscorlib
 
 
 				//	Get/Set:TaskScheduler
-				mscorlib::System::Threading::Tasks::TaskScheduler  ParallelOptions::get_TaskScheduler()
+				mscorlib::System::Threading::Tasks::TaskScheduler  ParallelOptions::get_TaskScheduler() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "ParallelOptions", 0, NULL, "get_TaskScheduler", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::Tasks::TaskScheduler(__result__);

@@ -44,7 +44,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage, put=set___mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage)) MonoObject *__mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage() const
 						{
 							return IMethodReturnMessage::__mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage;
 						}
@@ -69,16 +69,16 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Exception
-						mscorlib::System::Exception  get_Exception();
+						mscorlib::System::Exception  get_Exception() const;
 
 						//	Get:OutArgCount
-						mscorlib::System::Int32  get_OutArgCount();
+						mscorlib::System::Int32  get_OutArgCount() const;
 
 						//	Get:OutArgs
-						std::vector<mscorlib::System::Object*>  get_OutArgs();
+						std::vector<mscorlib::System::Object*>  get_OutArgs() const;
 
 						//	Get:ReturnValue
-						mscorlib::System::Object  get_ReturnValue();
+						mscorlib::System::Object  get_ReturnValue() const;
 
 					
 					protected:

@@ -121,8 +121,8 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::Double> E;
-			static Property<mscorlib::System::Double> PI;
+			static Property<mscorlib::System::Double , mscorlib::System::Math> E;
+			static Property<mscorlib::System::Double , mscorlib::System::Math> PI;
 
 			//	Get/Set:E
 			static mscorlib::System::Double  get_E();

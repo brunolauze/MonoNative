@@ -2,10 +2,10 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_TYPE_H
 
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MemberInfo.h>
+#include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Type.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_IReflect.h>
-#include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_TypeAttributes.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MemberTypes.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -90,27 +90,27 @@ namespace mscorlib
 
 		class Type
 			: public mscorlib::System::Reflection::MemberInfo
+			, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
 			, public virtual mscorlib::System::Runtime::InteropServices::_Type
 			, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 			, public virtual mscorlib::System::Reflection::IReflect
-			, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
 		{
 		public:
 			Type(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::Reflection::MemberInfo(nativeTypeInfo)
+			, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
 			, mscorlib::System::Runtime::InteropServices::_Type(NULL)
 			, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 			, mscorlib::System::Reflection::IReflect(NULL)
-			, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
 			{
 			};
 		
 			Type(MonoObject *nativeObject)
 			: mscorlib::System::Reflection::MemberInfo(nativeObject)
+			, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
 			, mscorlib::System::Runtime::InteropServices::_Type(nativeObject)
 			, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 			, mscorlib::System::Reflection::IReflect(nativeObject)
-			, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
 			{
 			};
 		
@@ -285,228 +285,235 @@ namespace mscorlib
 			__declspec(property(get=get_CustomAttributes)) mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  CustomAttributes;
 
 			//Public Static Properties
-			static Property<mscorlib::System::Reflection::Binder> DefaultBinder;
+			static Property<mscorlib::System::Reflection::Binder , mscorlib::System::Type> DefaultBinder;
 
 			//Public Static Fields
-			static Property<mscorlib::System::Char> Delimiter;
-			static Property<mscorlib::System::Type*> EmptyTypes;
-			static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )> > FilterAttribute;
-			static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )> > FilterName;
-			static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )> > FilterNameIgnoreCase;
-			static Property<mscorlib::System::Object> Missing;
+			static Property<mscorlib::System::Char , mscorlib::System::Type> Delimiter;
+			static Property<std::vector<mscorlib::System::Type*> , mscorlib::System::Type> EmptyTypes;
+			static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )> , mscorlib::System::Type> FilterAttribute;
+			static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )> , mscorlib::System::Type> FilterName;
+			static Property<mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )> , mscorlib::System::Type> FilterNameIgnoreCase;
+			static Property<mscorlib::System::Object , mscorlib::System::Type> Missing;
 
 			//Get Set Properties Methods
 			//	Get:Assembly
-			mscorlib::System::Reflection::Assembly  get_Assembly();
+			mscorlib::System::Reflection::Assembly  get_Assembly() const;
 
 			//	Get:AssemblyQualifiedName
-			mscorlib::System::String  get_AssemblyQualifiedName();
+			mscorlib::System::String  get_AssemblyQualifiedName() const;
 
 			//	Get:Attributes
-			mscorlib::System::Reflection::TypeAttributes::__ENUM__  get_Attributes();
+			mscorlib::System::Reflection::TypeAttributes::__ENUM__  get_Attributes() const;
 
 			//	Get:BaseType
-			mscorlib::System::Type  get_BaseType();
+			mscorlib::System::Type  get_BaseType() const;
 
 			//	Get:DeclaringType
-			mscorlib::System::Type  get_DeclaringType();
+			mscorlib::System::Type  get_DeclaringType() const;
 
 			//	Get:FullName
-			mscorlib::System::String  get_FullName();
+			mscorlib::System::String  get_FullName() const;
 
 			//	Get:GUID
-			mscorlib::System::Guid  get_GUID();
+			mscorlib::System::Guid  get_GUID() const;
 
 			//	Get:HasElementType
-			mscorlib::System::Boolean  get_HasElementType();
+			mscorlib::System::Boolean  get_HasElementType() const;
 
 			//	Get:IsAbstract
-			mscorlib::System::Boolean  get_IsAbstract();
+			mscorlib::System::Boolean  get_IsAbstract() const;
 
 			//	Get:IsAnsiClass
-			mscorlib::System::Boolean  get_IsAnsiClass();
+			mscorlib::System::Boolean  get_IsAnsiClass() const;
 
 			//	Get:IsArray
-			mscorlib::System::Boolean  get_IsArray();
+			mscorlib::System::Boolean  get_IsArray() const;
 
 			//	Get:IsAutoClass
-			mscorlib::System::Boolean  get_IsAutoClass();
+			mscorlib::System::Boolean  get_IsAutoClass() const;
 
 			//	Get:IsAutoLayout
-			mscorlib::System::Boolean  get_IsAutoLayout();
+			mscorlib::System::Boolean  get_IsAutoLayout() const;
 
 			//	Get:IsByRef
-			mscorlib::System::Boolean  get_IsByRef();
+			mscorlib::System::Boolean  get_IsByRef() const;
 
 			//	Get:IsClass
-			mscorlib::System::Boolean  get_IsClass();
+			mscorlib::System::Boolean  get_IsClass() const;
 
 			//	Get:IsCOMObject
-			mscorlib::System::Boolean  get_IsCOMObject();
+			mscorlib::System::Boolean  get_IsCOMObject() const;
 
 			//	Get:IsConstructedGenericType
-			mscorlib::System::Boolean  get_IsConstructedGenericType();
+			mscorlib::System::Boolean  get_IsConstructedGenericType() const;
 
 			//	Get:IsContextful
-			mscorlib::System::Boolean  get_IsContextful();
+			mscorlib::System::Boolean  get_IsContextful() const;
 
 			//	Get:IsEnum
-			mscorlib::System::Boolean  get_IsEnum();
+			mscorlib::System::Boolean  get_IsEnum() const;
 
 			//	Get:IsExplicitLayout
-			mscorlib::System::Boolean  get_IsExplicitLayout();
+			mscorlib::System::Boolean  get_IsExplicitLayout() const;
 
 			//	Get:IsImport
-			mscorlib::System::Boolean  get_IsImport();
+			mscorlib::System::Boolean  get_IsImport() const;
 
 			//	Get:IsInterface
-			mscorlib::System::Boolean  get_IsInterface();
+			mscorlib::System::Boolean  get_IsInterface() const;
 
 			//	Get:IsLayoutSequential
-			mscorlib::System::Boolean  get_IsLayoutSequential();
+			mscorlib::System::Boolean  get_IsLayoutSequential() const;
 
 			//	Get:IsMarshalByRef
-			mscorlib::System::Boolean  get_IsMarshalByRef();
+			mscorlib::System::Boolean  get_IsMarshalByRef() const;
 
 			//	Get:IsNestedAssembly
-			mscorlib::System::Boolean  get_IsNestedAssembly();
+			mscorlib::System::Boolean  get_IsNestedAssembly() const;
 
 			//	Get:IsNestedFamANDAssem
-			mscorlib::System::Boolean  get_IsNestedFamANDAssem();
+			mscorlib::System::Boolean  get_IsNestedFamANDAssem() const;
 
 			//	Get:IsNestedFamily
-			mscorlib::System::Boolean  get_IsNestedFamily();
+			mscorlib::System::Boolean  get_IsNestedFamily() const;
 
 			//	Get:IsNestedFamORAssem
-			mscorlib::System::Boolean  get_IsNestedFamORAssem();
+			mscorlib::System::Boolean  get_IsNestedFamORAssem() const;
 
 			//	Get:IsNestedPrivate
-			mscorlib::System::Boolean  get_IsNestedPrivate();
+			mscorlib::System::Boolean  get_IsNestedPrivate() const;
 
 			//	Get:IsNestedPublic
-			mscorlib::System::Boolean  get_IsNestedPublic();
+			mscorlib::System::Boolean  get_IsNestedPublic() const;
 
 			//	Get:IsNotPublic
-			mscorlib::System::Boolean  get_IsNotPublic();
+			mscorlib::System::Boolean  get_IsNotPublic() const;
 
 			//	Get:IsPointer
-			mscorlib::System::Boolean  get_IsPointer();
+			mscorlib::System::Boolean  get_IsPointer() const;
 
 			//	Get:IsPrimitive
-			mscorlib::System::Boolean  get_IsPrimitive();
+			mscorlib::System::Boolean  get_IsPrimitive() const;
 
 			//	Get:IsPublic
-			mscorlib::System::Boolean  get_IsPublic();
+			mscorlib::System::Boolean  get_IsPublic() const;
 
 			//	Get:IsSealed
-			mscorlib::System::Boolean  get_IsSealed();
+			mscorlib::System::Boolean  get_IsSealed() const;
 
 			//	Get:IsSerializable
-			mscorlib::System::Boolean  get_IsSerializable();
+			mscorlib::System::Boolean  get_IsSerializable() const;
 
 			//	Get:IsSpecialName
-			mscorlib::System::Boolean  get_IsSpecialName();
+			mscorlib::System::Boolean  get_IsSpecialName() const;
 
 			//	Get:IsUnicodeClass
-			mscorlib::System::Boolean  get_IsUnicodeClass();
+			mscorlib::System::Boolean  get_IsUnicodeClass() const;
 
 			//	Get:IsValueType
-			mscorlib::System::Boolean  get_IsValueType();
+			mscorlib::System::Boolean  get_IsValueType() const;
 
 			//	Get:MemberType
-			mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+			mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 			//	Get:Module
-			mscorlib::System::Reflection::Module  get_Module();
+			mscorlib::System::Reflection::Module  get_Module() const;
 
 			//	Get:Namespace
-			mscorlib::System::String  get_Namespace();
+			mscorlib::System::String  get_Namespace() const;
 
 			//	Get:ReflectedType
-			mscorlib::System::Type  get_ReflectedType();
+			mscorlib::System::Type  get_ReflectedType() const;
 
 			//	Get:TypeHandle
-			mscorlib::System::RuntimeTypeHandle  get_TypeHandle();
+			mscorlib::System::RuntimeTypeHandle  get_TypeHandle() const;
 
 			//	Get:TypeInitializer
-			mscorlib::System::Reflection::ConstructorInfo  get_TypeInitializer();
+			mscorlib::System::Reflection::ConstructorInfo  get_TypeInitializer() const;
 
 			//	Get:UnderlyingSystemType
-			mscorlib::System::Type  get_UnderlyingSystemType();
+			mscorlib::System::Type  get_UnderlyingSystemType() const;
 
 			//	Get:IsSecurityTransparent
-			mscorlib::System::Boolean  get_IsSecurityTransparent();
+			mscorlib::System::Boolean  get_IsSecurityTransparent() const;
 
 			//	Get:IsSecurityCritical
-			mscorlib::System::Boolean  get_IsSecurityCritical();
+			mscorlib::System::Boolean  get_IsSecurityCritical() const;
 
 			//	Get:IsSecuritySafeCritical
-			mscorlib::System::Boolean  get_IsSecuritySafeCritical();
+			mscorlib::System::Boolean  get_IsSecuritySafeCritical() const;
 
 			//	Get:GenericTypeArguments
-			std::vector<mscorlib::System::Type*>  get_GenericTypeArguments();
+			std::vector<mscorlib::System::Type*>  get_GenericTypeArguments() const;
 
 			//	Get:ContainsGenericParameters
-			mscorlib::System::Boolean  get_ContainsGenericParameters();
+			mscorlib::System::Boolean  get_ContainsGenericParameters() const;
 
 			//	Get:IsGenericTypeDefinition
-			mscorlib::System::Boolean  get_IsGenericTypeDefinition();
+			mscorlib::System::Boolean  get_IsGenericTypeDefinition() const;
 
 			//	Get:IsGenericType
-			mscorlib::System::Boolean  get_IsGenericType();
+			mscorlib::System::Boolean  get_IsGenericType() const;
 
 			//	Get:IsGenericParameter
-			mscorlib::System::Boolean  get_IsGenericParameter();
+			mscorlib::System::Boolean  get_IsGenericParameter() const;
 
 			//	Get:IsNested
-			mscorlib::System::Boolean  get_IsNested();
+			mscorlib::System::Boolean  get_IsNested() const;
 
 			//	Get:IsVisible
-			mscorlib::System::Boolean  get_IsVisible();
+			mscorlib::System::Boolean  get_IsVisible() const;
 
 			//	Get:GenericParameterPosition
-			mscorlib::System::Int32  get_GenericParameterPosition();
+			mscorlib::System::Int32  get_GenericParameterPosition() const;
 
 			//	Get:GenericParameterAttributes
-			mscorlib::System::Reflection::GenericParameterAttributes::__ENUM__  get_GenericParameterAttributes();
+			mscorlib::System::Reflection::GenericParameterAttributes::__ENUM__  get_GenericParameterAttributes() const;
 
 			//	Get:DeclaringMethod
-			mscorlib::System::Reflection::MethodBase  get_DeclaringMethod();
+			mscorlib::System::Reflection::MethodBase  get_DeclaringMethod() const;
 
 			//	Get:StructLayoutAttribute
-			mscorlib::System::Runtime::InteropServices::StructLayoutAttribute  get_StructLayoutAttribute();
+			mscorlib::System::Runtime::InteropServices::StructLayoutAttribute  get_StructLayoutAttribute() const;
 
 			//	Get:Name
-			mscorlib::System::String  get_Name();
+			mscorlib::System::String  get_Name() const;
 
 			//	Get:MetadataToken
-			mscorlib::System::Int32  get_MetadataToken();
+			mscorlib::System::Int32  get_MetadataToken() const;
 
 			//	Get:CustomAttributes
-			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes();
+			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes() const;
 
 			//Get Set Static Properties Methods
 			//	Get:DefaultBinder
 			static mscorlib::System::Reflection::Binder  get_DefaultBinder();
+			static void set_DefaultBinder(mscorlib::System::Reflection::Binder  value);
 
 
 			//	Get/Set:Delimiter
 			static mscorlib::System::Char  get_Delimiter();
+			static void set_Delimiter(mscorlib::System::Char  value);
 
 			//	Get/Set:EmptyTypes
 			static std::vector<mscorlib::System::Type*>  get_EmptyTypes();
+			static void set_EmptyTypes(std::vector<mscorlib::System::Type*>  value);
 
 			//	Get/Set:FilterAttribute
 			static mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )>  get_FilterAttribute();
+			static void set_FilterAttribute(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )>  value);
 
 			//	Get/Set:FilterName
 			static mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )>  get_FilterName();
+			static void set_FilterName(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )>  value);
 
 			//	Get/Set:FilterNameIgnoreCase
 			static mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )>  get_FilterNameIgnoreCase();
+			static void set_FilterNameIgnoreCase(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Reflection::MemberInfo , mscorlib::System::Object )>  value);
 
 			//	Get/Set:Missing
 			static mscorlib::System::Object  get_Missing();
+			static void set_Missing(mscorlib::System::Object  value);
 
 		
 		protected:

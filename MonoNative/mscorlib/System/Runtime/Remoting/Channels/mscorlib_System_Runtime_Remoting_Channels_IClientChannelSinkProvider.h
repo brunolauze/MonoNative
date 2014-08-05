@@ -52,7 +52,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Next
-						mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkProvider  get_Next();
+						mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkProvider  get_Next() const;
 						void set_Next(mscorlib::System::Runtime::Remoting::Channels::IClientChannelSinkProvider  value);
 
 					

@@ -15,6 +15,7 @@ namespace mscorlib
 			namespace AccessControl
 			{
 
+				Property<mscorlib::System::Byte , mscorlib::System::Security::AccessControl::GenericSecurityDescriptor> mscorlib::System::Security::AccessControl::GenericSecurityDescriptor::Revision(&mscorlib::System::Security::AccessControl::GenericSecurityDescriptor::get_Revision, &mscorlib::System::Security::AccessControl::GenericSecurityDescriptor::set_Revision);
 				//Public Methods
 				void GenericSecurityDescriptor::GetBinaryForm(std::vector<mscorlib::System::Byte*> binaryForm, mscorlib::System::Int32 offset)
 				{
@@ -45,7 +46,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:BinaryLength
-				mscorlib::System::Int32  GenericSecurityDescriptor::get_BinaryLength()
+				mscorlib::System::Int32  GenericSecurityDescriptor::get_BinaryLength() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericSecurityDescriptor", 0, NULL, "get_BinaryLength", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -53,7 +54,7 @@ namespace mscorlib
 
 
 				//	Get:ControlFlags
-				mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  GenericSecurityDescriptor::get_ControlFlags()
+				mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  GenericSecurityDescriptor::get_ControlFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericSecurityDescriptor", 0, NULL, "get_ControlFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -61,7 +62,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Group
-				mscorlib::System::Security::Principal::SecurityIdentifier  GenericSecurityDescriptor::get_Group()
+				mscorlib::System::Security::Principal::SecurityIdentifier  GenericSecurityDescriptor::get_Group() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericSecurityDescriptor", 0, NULL, "get_Group", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::SecurityIdentifier(__result__);
@@ -78,7 +79,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Owner
-				mscorlib::System::Security::Principal::SecurityIdentifier  GenericSecurityDescriptor::get_Owner()
+				mscorlib::System::Security::Principal::SecurityIdentifier  GenericSecurityDescriptor::get_Owner() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericSecurityDescriptor", 0, NULL, "get_Owner", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::SecurityIdentifier(__result__);
@@ -100,6 +101,11 @@ namespace mscorlib
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericSecurityDescriptor", 0, NULL, "get_Revision", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::Byte(__result__);
+				}
+
+				void GenericSecurityDescriptor::set_Revision(mscorlib::System::Byte  value)
+				{
+					throw;
 				}
 
 

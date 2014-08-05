@@ -4,12 +4,12 @@
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/Globalization/mscorlib_System_Globalization_Calendar.h>
 #include <mscorlib/System/mscorlib_System_DateTimeKind.h>
+#include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_IConvertible.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IFormattable.h>
-#include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_DayOfWeek.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
@@ -35,22 +35,22 @@ namespace mscorlib
 
 		class DateTime
 			: public mscorlib::System::ValueType
+			, public virtual mscorlib::System::IComparable<mscorlib::System::DateTime>
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::DateTime>
 			, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			, public virtual mscorlib::System::IConvertible
 			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IFormattable
-			, public virtual mscorlib::System::IComparable<mscorlib::System::DateTime>
 		{
 		public:
 			DateTime(mscorlib::System::Int64 ticks)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -61,12 +61,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
@@ -81,12 +81,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[6];
 				void *__parameters__[6];
@@ -107,12 +107,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::Int32 millisecond)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[7];
 				void *__parameters__[7];
@@ -135,12 +135,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Globalization::Calendar calendar)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[4];
 				void *__parameters__[4];
@@ -157,12 +157,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::Globalization::Calendar calendar)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[7];
 				void *__parameters__[7];
@@ -185,12 +185,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::Int32 millisecond, mscorlib::System::Globalization::Calendar calendar)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[8];
 				void *__parameters__[8];
@@ -215,12 +215,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int64 ticks, mscorlib::System::DateTimeKind::__ENUM__ kind)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
@@ -233,12 +233,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::DateTimeKind::__ENUM__ kind)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[7];
 				void *__parameters__[7];
@@ -261,12 +261,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::Int32 millisecond, mscorlib::System::DateTimeKind::__ENUM__ kind)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[8];
 				void *__parameters__[8];
@@ -291,12 +291,12 @@ namespace mscorlib
 		
 			DateTime(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::Int32 millisecond, mscorlib::System::Globalization::Calendar calendar, mscorlib::System::DateTimeKind::__ENUM__ kind)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTime"))
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 				MonoType *__parameter_types__[9];
 				void *__parameters__[9];
@@ -323,23 +323,23 @@ namespace mscorlib
 		
 			DateTime(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(NULL)
 			{
 			};
 		
 			DateTime(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
+			, mscorlib::System::IComparable<mscorlib::System::DateTime>(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTime>(nativeObject)
 			, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 			, mscorlib::System::IConvertible(nativeObject)
 			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IFormattable(nativeObject)
-			, mscorlib::System::IComparable<mscorlib::System::DateTime>(nativeObject)
 			{
 			};
 		
@@ -427,70 +427,75 @@ namespace mscorlib
 			__declspec(property(get=get_Kind)) mscorlib::System::DateTimeKind::__ENUM__  Kind;
 
 			//Public Static Properties
-			static Property<mscorlib::System::DateTime> Now;
-			static Property<mscorlib::System::DateTime> Today;
-			static Property<mscorlib::System::DateTime> UtcNow;
+			static Property<mscorlib::System::DateTime , mscorlib::System::DateTime> Now;
+			static Property<mscorlib::System::DateTime , mscorlib::System::DateTime> Today;
+			static Property<mscorlib::System::DateTime , mscorlib::System::DateTime> UtcNow;
 
 			//Public Static Fields
-			static Property<mscorlib::System::DateTime> MaxValue;
-			static Property<mscorlib::System::DateTime> MinValue;
+			static Property<mscorlib::System::DateTime , mscorlib::System::DateTime> MaxValue;
+			static Property<mscorlib::System::DateTime , mscorlib::System::DateTime> MinValue;
 
 			//Get Set Properties Methods
 			//	Get:Date
-			mscorlib::System::DateTime  get_Date();
+			mscorlib::System::DateTime  get_Date() const;
 
 			//	Get:Month
-			mscorlib::System::Int32  get_Month();
+			mscorlib::System::Int32  get_Month() const;
 
 			//	Get:Day
-			mscorlib::System::Int32  get_Day();
+			mscorlib::System::Int32  get_Day() const;
 
 			//	Get:DayOfWeek
-			mscorlib::System::DayOfWeek::__ENUM__  get_DayOfWeek();
+			mscorlib::System::DayOfWeek::__ENUM__  get_DayOfWeek() const;
 
 			//	Get:DayOfYear
-			mscorlib::System::Int32  get_DayOfYear();
+			mscorlib::System::Int32  get_DayOfYear() const;
 
 			//	Get:TimeOfDay
-			mscorlib::System::TimeSpan  get_TimeOfDay();
+			mscorlib::System::TimeSpan  get_TimeOfDay() const;
 
 			//	Get:Hour
-			mscorlib::System::Int32  get_Hour();
+			mscorlib::System::Int32  get_Hour() const;
 
 			//	Get:Minute
-			mscorlib::System::Int32  get_Minute();
+			mscorlib::System::Int32  get_Minute() const;
 
 			//	Get:Second
-			mscorlib::System::Int32  get_Second();
+			mscorlib::System::Int32  get_Second() const;
 
 			//	Get:Millisecond
-			mscorlib::System::Int32  get_Millisecond();
+			mscorlib::System::Int32  get_Millisecond() const;
 
 			//	Get:Ticks
-			mscorlib::System::Int64  get_Ticks();
+			mscorlib::System::Int64  get_Ticks() const;
 
 			//	Get:Year
-			mscorlib::System::Int32  get_Year();
+			mscorlib::System::Int32  get_Year() const;
 
 			//	Get:Kind
-			mscorlib::System::DateTimeKind::__ENUM__  get_Kind();
+			mscorlib::System::DateTimeKind::__ENUM__  get_Kind() const;
 
 			//Get Set Static Properties Methods
 			//	Get:Now
 			static mscorlib::System::DateTime  get_Now();
+			static void set_Now(mscorlib::System::DateTime  value);
 
 			//	Get:Today
 			static mscorlib::System::DateTime  get_Today();
+			static void set_Today(mscorlib::System::DateTime  value);
 
 			//	Get:UtcNow
 			static mscorlib::System::DateTime  get_UtcNow();
+			static void set_UtcNow(mscorlib::System::DateTime  value);
 
 
 			//	Get/Set:MaxValue
 			static mscorlib::System::DateTime  get_MaxValue();
+			static void set_MaxValue(mscorlib::System::DateTime  value);
 
 			//	Get/Set:MinValue
 			static mscorlib::System::DateTime  get_MinValue();
+			static void set_MinValue(mscorlib::System::DateTime  value);
 
 		
 		protected:

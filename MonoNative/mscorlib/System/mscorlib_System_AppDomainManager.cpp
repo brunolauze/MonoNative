@@ -54,7 +54,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:ApplicationActivator
-		mscorlib::System::Runtime::Hosting::ApplicationActivator  AppDomainManager::get_ApplicationActivator()
+		mscorlib::System::Runtime::Hosting::ApplicationActivator  AppDomainManager::get_ApplicationActivator() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainManager", 0, NULL, "get_ApplicationActivator", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Runtime::Hosting::ApplicationActivator(__result__);
@@ -62,7 +62,7 @@ namespace mscorlib
 
 
 		//	Get:EntryAssembly
-		mscorlib::System::Reflection::Assembly  AppDomainManager::get_EntryAssembly()
+		mscorlib::System::Reflection::Assembly  AppDomainManager::get_EntryAssembly() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainManager", 0, NULL, "get_EntryAssembly", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Reflection::Assembly(__result__);
@@ -70,7 +70,7 @@ namespace mscorlib
 
 
 		//	Get:HostExecutionContextManager
-		mscorlib::System::Threading::HostExecutionContextManager  AppDomainManager::get_HostExecutionContextManager()
+		mscorlib::System::Threading::HostExecutionContextManager  AppDomainManager::get_HostExecutionContextManager() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainManager", 0, NULL, "get_HostExecutionContextManager", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Threading::HostExecutionContextManager(__result__);
@@ -78,7 +78,7 @@ namespace mscorlib
 
 
 		//	Get:HostSecurityManager
-		mscorlib::System::Security::HostSecurityManager  AppDomainManager::get_HostSecurityManager()
+		mscorlib::System::Security::HostSecurityManager  AppDomainManager::get_HostSecurityManager() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainManager", 0, NULL, "get_HostSecurityManager", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Security::HostSecurityManager(__result__);
@@ -86,7 +86,7 @@ namespace mscorlib
 
 
 		//	Get/Set:InitializationFlags
-		mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__  AppDomainManager::get_InitializationFlags()
+		mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__  AppDomainManager::get_InitializationFlags() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainManager", 0, NULL, "get_InitializationFlags", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__*)mono_object_unbox(__result__);

@@ -31,7 +31,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsClosed
-				mscorlib::System::Boolean  CriticalHandle::get_IsClosed()
+				mscorlib::System::Boolean  CriticalHandle::get_IsClosed() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "CriticalHandle", 0, NULL, "get_IsClosed", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get:IsInvalid
-				mscorlib::System::Boolean  CriticalHandle::get_IsInvalid()
+				mscorlib::System::Boolean  CriticalHandle::get_IsInvalid() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "CriticalHandle", 0, NULL, "get_IsInvalid", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

@@ -2,11 +2,11 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_REFLECTION_EMIT_METHODBUILDER_H
 
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MethodInfo.h>
+#include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MethodInfo.h>
+#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MethodBuilder.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MemberInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MethodBase.h>
-#include <mscorlib/System/Reflection/mscorlib_System_Reflection_ICustomAttributeProvider.h>
-#include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__MethodBuilder.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MethodAttributes.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_CallingConventions.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MethodImplAttributes.h>
@@ -108,30 +108,30 @@ namespace mscorlib
 
 				class MethodBuilder
 					: public mscorlib::System::Reflection::MethodInfo
+					, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
 					, public virtual mscorlib::System::Runtime::InteropServices::_MethodInfo
+					, public virtual mscorlib::System::Runtime::InteropServices::_MethodBuilder
 					, public virtual mscorlib::System::Runtime::InteropServices::_MemberInfo
 					, public virtual mscorlib::System::Runtime::InteropServices::_MethodBase
-					, public virtual mscorlib::System::Reflection::ICustomAttributeProvider
-					, public virtual mscorlib::System::Runtime::InteropServices::_MethodBuilder
 				{
 				public:
 					MethodBuilder(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Reflection::MethodInfo(nativeTypeInfo)
+					, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
 					, mscorlib::System::Runtime::InteropServices::_MethodInfo(NULL)
+					, mscorlib::System::Runtime::InteropServices::_MethodBuilder(NULL)
 					, mscorlib::System::Runtime::InteropServices::_MemberInfo(NULL)
 					, mscorlib::System::Runtime::InteropServices::_MethodBase(NULL)
-					, mscorlib::System::Reflection::ICustomAttributeProvider(NULL)
-					, mscorlib::System::Runtime::InteropServices::_MethodBuilder(NULL)
 					{
 					};
 				
 					MethodBuilder(MonoObject *nativeObject)
 					: mscorlib::System::Reflection::MethodInfo(nativeObject)
+					, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_MethodInfo(nativeObject)
+					, mscorlib::System::Runtime::InteropServices::_MethodBuilder(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_MemberInfo(nativeObject)
 					, mscorlib::System::Runtime::InteropServices::_MethodBase(nativeObject)
-					, mscorlib::System::Reflection::ICustomAttributeProvider(nativeObject)
-					, mscorlib::System::Runtime::InteropServices::_MethodBuilder(nativeObject)
 					{
 					};
 				
@@ -216,110 +216,110 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ContainsGenericParameters
-					mscorlib::System::Boolean  get_ContainsGenericParameters();
+					mscorlib::System::Boolean  get_ContainsGenericParameters() const;
 
 					//	Get/Set:InitLocals
-					mscorlib::System::Boolean  get_InitLocals();
+					mscorlib::System::Boolean  get_InitLocals() const;
 					void set_InitLocals(mscorlib::System::Boolean  value);
 
 					//	Get:MethodHandle
-					mscorlib::System::RuntimeMethodHandle  get_MethodHandle();
+					mscorlib::System::RuntimeMethodHandle  get_MethodHandle() const;
 
 					//	Get:ReturnType
-					mscorlib::System::Type  get_ReturnType();
+					mscorlib::System::Type  get_ReturnType() const;
 
 					//	Get:ReflectedType
-					mscorlib::System::Type  get_ReflectedType();
+					mscorlib::System::Type  get_ReflectedType() const;
 
 					//	Get:DeclaringType
-					mscorlib::System::Type  get_DeclaringType();
+					mscorlib::System::Type  get_DeclaringType() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:Attributes
-					mscorlib::System::Reflection::MethodAttributes::__ENUM__  get_Attributes();
+					mscorlib::System::Reflection::MethodAttributes::__ENUM__  get_Attributes() const;
 
 					//	Get:ReturnTypeCustomAttributes
-					mscorlib::System::Reflection::ICustomAttributeProvider  get_ReturnTypeCustomAttributes();
+					mscorlib::System::Reflection::ICustomAttributeProvider  get_ReturnTypeCustomAttributes() const;
 
 					//	Get:CallingConvention
-					mscorlib::System::Reflection::CallingConventions::__ENUM__  get_CallingConvention();
+					mscorlib::System::Reflection::CallingConventions::__ENUM__  get_CallingConvention() const;
 
 					//	Get:Signature
-					mscorlib::System::String  get_Signature();
+					mscorlib::System::String  get_Signature() const;
 
 					//	Get:IsGenericMethodDefinition
-					mscorlib::System::Boolean  get_IsGenericMethodDefinition();
+					mscorlib::System::Boolean  get_IsGenericMethodDefinition() const;
 
 					//	Get:IsGenericMethod
-					mscorlib::System::Boolean  get_IsGenericMethod();
+					mscorlib::System::Boolean  get_IsGenericMethod() const;
 
 					//	Get:Module
-					mscorlib::System::Reflection::Module  get_Module();
+					mscorlib::System::Reflection::Module  get_Module() const;
 
 					//	Get:ReturnParameter
-					mscorlib::System::Reflection::ParameterInfo  get_ReturnParameter();
+					mscorlib::System::Reflection::ParameterInfo  get_ReturnParameter() const;
 
 					//	Get:MemberType
-					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 					//	Get:IsPublic
-					mscorlib::System::Boolean  get_IsPublic();
+					mscorlib::System::Boolean  get_IsPublic() const;
 
 					//	Get:IsPrivate
-					mscorlib::System::Boolean  get_IsPrivate();
+					mscorlib::System::Boolean  get_IsPrivate() const;
 
 					//	Get:IsFamily
-					mscorlib::System::Boolean  get_IsFamily();
+					mscorlib::System::Boolean  get_IsFamily() const;
 
 					//	Get:IsAssembly
-					mscorlib::System::Boolean  get_IsAssembly();
+					mscorlib::System::Boolean  get_IsAssembly() const;
 
 					//	Get:IsFamilyAndAssembly
-					mscorlib::System::Boolean  get_IsFamilyAndAssembly();
+					mscorlib::System::Boolean  get_IsFamilyAndAssembly() const;
 
 					//	Get:IsFamilyOrAssembly
-					mscorlib::System::Boolean  get_IsFamilyOrAssembly();
+					mscorlib::System::Boolean  get_IsFamilyOrAssembly() const;
 
 					//	Get:IsStatic
-					mscorlib::System::Boolean  get_IsStatic();
+					mscorlib::System::Boolean  get_IsStatic() const;
 
 					//	Get:IsFinal
-					mscorlib::System::Boolean  get_IsFinal();
+					mscorlib::System::Boolean  get_IsFinal() const;
 
 					//	Get:IsVirtual
-					mscorlib::System::Boolean  get_IsVirtual();
+					mscorlib::System::Boolean  get_IsVirtual() const;
 
 					//	Get:IsHideBySig
-					mscorlib::System::Boolean  get_IsHideBySig();
+					mscorlib::System::Boolean  get_IsHideBySig() const;
 
 					//	Get:IsAbstract
-					mscorlib::System::Boolean  get_IsAbstract();
+					mscorlib::System::Boolean  get_IsAbstract() const;
 
 					//	Get:IsSpecialName
-					mscorlib::System::Boolean  get_IsSpecialName();
+					mscorlib::System::Boolean  get_IsSpecialName() const;
 
 					//	Get:IsConstructor
-					mscorlib::System::Boolean  get_IsConstructor();
+					mscorlib::System::Boolean  get_IsConstructor() const;
 
 					//	Get:IsSecurityCritical
-					mscorlib::System::Boolean  get_IsSecurityCritical();
+					mscorlib::System::Boolean  get_IsSecurityCritical() const;
 
 					//	Get:IsSecuritySafeCritical
-					mscorlib::System::Boolean  get_IsSecuritySafeCritical();
+					mscorlib::System::Boolean  get_IsSecuritySafeCritical() const;
 
 					//	Get:IsSecurityTransparent
-					mscorlib::System::Boolean  get_IsSecurityTransparent();
+					mscorlib::System::Boolean  get_IsSecurityTransparent() const;
 
 					//	Get:MethodImplementationFlags
-					mscorlib::System::Reflection::MethodImplAttributes::__ENUM__  get_MethodImplementationFlags();
+					mscorlib::System::Reflection::MethodImplAttributes::__ENUM__  get_MethodImplementationFlags() const;
 
 					//	Get:MetadataToken
-					mscorlib::System::Int32  get_MetadataToken();
+					mscorlib::System::Int32  get_MetadataToken() const;
 
 					//	Get:CustomAttributes
-					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes();
+					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  get_CustomAttributes() const;
 
 				
 				protected:

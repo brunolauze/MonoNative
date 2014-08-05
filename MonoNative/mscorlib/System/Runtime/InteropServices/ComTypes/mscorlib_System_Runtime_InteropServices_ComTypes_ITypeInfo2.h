@@ -66,7 +66,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2, put=set___mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2)) MonoObject *__mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2;
-						MonoObject* get___mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2()
+						MonoObject* get___mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2() const
 						{
 							return ITypeInfo2::__mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo;
 						}

@@ -66,19 +66,21 @@ namespace mscorlib
 				__declspec(property(get=get_MaxCharCount)) mscorlib::System::Int32  MaxCharCount;
 
 				//Public Static Properties
-				static Property<mscorlib::System::Text::DecoderFallback> ExceptionFallback;
-				static Property<mscorlib::System::Text::DecoderFallback> ReplacementFallback;
+				static Property<mscorlib::System::Text::DecoderFallback , mscorlib::System::Text::DecoderFallback> ExceptionFallback;
+				static Property<mscorlib::System::Text::DecoderFallback , mscorlib::System::Text::DecoderFallback> ReplacementFallback;
 
 				//Get Set Properties Methods
 				//	Get:MaxCharCount
-				mscorlib::System::Int32  get_MaxCharCount();
+				mscorlib::System::Int32  get_MaxCharCount() const;
 
 				//Get Set Static Properties Methods
 				//	Get:ExceptionFallback
 				static mscorlib::System::Text::DecoderFallback  get_ExceptionFallback();
+				static void set_ExceptionFallback(mscorlib::System::Text::DecoderFallback  value);
 
 				//	Get:ReplacementFallback
 				static mscorlib::System::Text::DecoderFallback  get_ReplacementFallback();
+				static void set_ReplacementFallback(mscorlib::System::Text::DecoderFallback  value);
 
 
 			

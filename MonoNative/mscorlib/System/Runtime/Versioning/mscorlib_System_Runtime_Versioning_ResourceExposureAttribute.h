@@ -73,10 +73,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ResourceExposureLevel
-					mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  get_ResourceExposureLevel();
+					mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  get_ResourceExposureLevel() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

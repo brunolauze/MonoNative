@@ -163,13 +163,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Encoding
-				mscorlib::System::Text::Encoding  get_Encoding();
+				mscorlib::System::Text::Encoding  get_Encoding() const;
 
 				//	Get:FormatProvider
-				mscorlib::System::IFormatProvider  get_FormatProvider();
+				mscorlib::System::IFormatProvider  get_FormatProvider() const;
 
 				//	Get/Set:NewLine
-				mscorlib::System::String  get_NewLine();
+				mscorlib::System::String  get_NewLine() const;
 				void set_NewLine(mscorlib::System::String  value);
 
 			

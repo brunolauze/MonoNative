@@ -130,10 +130,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:LCID
-				mscorlib::System::Int32  get_LCID();
+				mscorlib::System::Int32  get_LCID() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 			
 			protected:

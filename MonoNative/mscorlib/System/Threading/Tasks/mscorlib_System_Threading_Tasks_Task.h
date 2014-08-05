@@ -283,41 +283,43 @@ namespace mscorlib
 					__declspec(property(get=get_Id)) mscorlib::System::Int32  Id;
 
 					//Public Static Properties
-					static Property<mscorlib::System::Threading::Tasks::TaskFactoryBase> Factory;
-					static Property<mscorlib::System::Nullable<mscorlib::System::Int32>> CurrentId;
+					static Property<mscorlib::System::Threading::Tasks::TaskFactoryBase , mscorlib::System::Threading::Tasks::TaskBase> Factory;
+					static Property<mscorlib::System::Nullable<mscorlib::System::Int32> , mscorlib::System::Threading::Tasks::TaskBase> CurrentId;
 
 					//Get Set Properties Methods
 					//	Get:Exception
-					mscorlib::System::AggregateException  get_Exception();
+					mscorlib::System::AggregateException  get_Exception() const;
 
 					//	Get:IsCanceled
-					mscorlib::System::Boolean  get_IsCanceled();
+					mscorlib::System::Boolean  get_IsCanceled() const;
 
 					//	Get:IsCompleted
-					mscorlib::System::Boolean  get_IsCompleted();
+					mscorlib::System::Boolean  get_IsCompleted() const;
 
 					//	Get:IsFaulted
-					mscorlib::System::Boolean  get_IsFaulted();
+					mscorlib::System::Boolean  get_IsFaulted() const;
 
 					//	Get:CreationOptions
-					mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  get_CreationOptions();
+					mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  get_CreationOptions() const;
 
 					//	Get/Set:Status
-					mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  get_Status();
+					mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  get_Status() const;
 					void set_Status(mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  value);
 
 					//	Get:AsyncState
-					mscorlib::System::Object  get_AsyncState();
+					mscorlib::System::Object  get_AsyncState() const;
 
 					//	Get:Id
-					mscorlib::System::Int32  get_Id();
+					mscorlib::System::Int32  get_Id() const;
 
 					//Get Set Static Properties Methods
 					//	Get:Factory
 					static mscorlib::System::Threading::Tasks::TaskFactoryBase  get_Factory();
+					static void set_Factory(mscorlib::System::Threading::Tasks::TaskFactoryBase  value);
 
 					//	Get:CurrentId
 					static mscorlib::System::Nullable<mscorlib::System::Int32>  get_CurrentId();
+					static void set_CurrentId(mscorlib::System::Nullable<mscorlib::System::Int32>  value);
 
 
 				

@@ -78,7 +78,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Value
-			mscorlib::System::IntPtr  get_Value();
+			mscorlib::System::IntPtr  get_Value() const;
 
 		
 		protected:

@@ -140,7 +140,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:CurrentCount
-			mscorlib::System::Int32  CountdownEvent::get_CurrentCount()
+			mscorlib::System::Int32  CountdownEvent::get_CurrentCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CountdownEvent", 0, NULL, "get_CurrentCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -148,7 +148,7 @@ namespace mscorlib
 
 
 			//	Get:InitialCount
-			mscorlib::System::Int32  CountdownEvent::get_InitialCount()
+			mscorlib::System::Int32  CountdownEvent::get_InitialCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CountdownEvent", 0, NULL, "get_InitialCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -156,7 +156,7 @@ namespace mscorlib
 
 
 			//	Get:IsSet
-			mscorlib::System::Boolean  CountdownEvent::get_IsSet()
+			mscorlib::System::Boolean  CountdownEvent::get_IsSet() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CountdownEvent", 0, NULL, "get_IsSet", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -164,7 +164,7 @@ namespace mscorlib
 
 
 			//	Get:WaitHandle
-			mscorlib::System::Threading::WaitHandle  CountdownEvent::get_WaitHandle()
+			mscorlib::System::Threading::WaitHandle  CountdownEvent::get_WaitHandle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CountdownEvent", 0, NULL, "get_WaitHandle", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::WaitHandle(__result__);

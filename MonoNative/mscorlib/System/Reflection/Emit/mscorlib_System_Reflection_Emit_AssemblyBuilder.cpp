@@ -510,7 +510,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CodeBase
-				mscorlib::System::String  AssemblyBuilder::get_CodeBase()
+				mscorlib::System::String  AssemblyBuilder::get_CodeBase() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_CodeBase", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -518,7 +518,7 @@ namespace mscorlib
 
 
 				//	Get:EntryPoint
-				mscorlib::System::Reflection::MethodInfo  AssemblyBuilder::get_EntryPoint()
+				mscorlib::System::Reflection::MethodInfo  AssemblyBuilder::get_EntryPoint() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_EntryPoint", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -526,7 +526,7 @@ namespace mscorlib
 
 
 				//	Get:Location
-				mscorlib::System::String  AssemblyBuilder::get_Location()
+				mscorlib::System::String  AssemblyBuilder::get_Location() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_Location", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -534,7 +534,7 @@ namespace mscorlib
 
 
 				//	Get:ImageRuntimeVersion
-				mscorlib::System::String  AssemblyBuilder::get_ImageRuntimeVersion()
+				mscorlib::System::String  AssemblyBuilder::get_ImageRuntimeVersion() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_ImageRuntimeVersion", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -542,7 +542,7 @@ namespace mscorlib
 
 
 				//	Get:ReflectionOnly
-				mscorlib::System::Boolean  AssemblyBuilder::get_ReflectionOnly()
+				mscorlib::System::Boolean  AssemblyBuilder::get_ReflectionOnly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_ReflectionOnly", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -550,7 +550,7 @@ namespace mscorlib
 
 
 				//	Get:ManifestModule
-				mscorlib::System::Reflection::Module  AssemblyBuilder::get_ManifestModule()
+				mscorlib::System::Reflection::Module  AssemblyBuilder::get_ManifestModule() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_ManifestModule", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Reflection::Module(__result__);
@@ -558,7 +558,7 @@ namespace mscorlib
 
 
 				//	Get:GlobalAssemblyCache
-				mscorlib::System::Boolean  AssemblyBuilder::get_GlobalAssemblyCache()
+				mscorlib::System::Boolean  AssemblyBuilder::get_GlobalAssemblyCache() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_GlobalAssemblyCache", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -566,7 +566,7 @@ namespace mscorlib
 
 
 				//	Get:IsDynamic
-				mscorlib::System::Boolean  AssemblyBuilder::get_IsDynamic()
+				mscorlib::System::Boolean  AssemblyBuilder::get_IsDynamic() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_IsDynamic", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -574,7 +574,7 @@ namespace mscorlib
 
 
 				//	Get:FullName
-				mscorlib::System::String  AssemblyBuilder::get_FullName()
+				mscorlib::System::String  AssemblyBuilder::get_FullName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "AssemblyBuilder", 0, NULL, "get_FullName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -582,7 +582,7 @@ namespace mscorlib
 
 
 				//	Get:EscapedCodeBase
-				mscorlib::System::String  AssemblyBuilder::get_EscapedCodeBase()
+				mscorlib::System::String  AssemblyBuilder::get_EscapedCodeBase() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_EscapedCodeBase", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -590,7 +590,7 @@ namespace mscorlib
 
 
 				//	Get:Evidence
-				mscorlib::System::Security::Policy::Evidence  AssemblyBuilder::get_Evidence()
+				mscorlib::System::Security::Policy::Evidence  AssemblyBuilder::get_Evidence() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_Evidence", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Policy::Evidence(__result__);
@@ -598,7 +598,7 @@ namespace mscorlib
 
 
 				//	Get:HostContext
-				mscorlib::System::Int64  AssemblyBuilder::get_HostContext()
+				mscorlib::System::Int64  AssemblyBuilder::get_HostContext() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_HostContext", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -606,7 +606,7 @@ namespace mscorlib
 
 
 				//	Get:PermissionSet
-				mscorlib::System::Security::PermissionSet  AssemblyBuilder::get_PermissionSet()
+				mscorlib::System::Security::PermissionSet  AssemblyBuilder::get_PermissionSet() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_PermissionSet", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::PermissionSet(__result__);
@@ -614,7 +614,7 @@ namespace mscorlib
 
 
 				//	Get:SecurityRuleSet
-				mscorlib::System::Security::SecurityRuleSet::__ENUM__  AssemblyBuilder::get_SecurityRuleSet()
+				mscorlib::System::Security::SecurityRuleSet::__ENUM__  AssemblyBuilder::get_SecurityRuleSet() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_SecurityRuleSet", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::SecurityRuleSet::__ENUM__*)mono_object_unbox(__result__);
@@ -622,7 +622,7 @@ namespace mscorlib
 
 
 				//	Get:IsFullyTrusted
-				mscorlib::System::Boolean  AssemblyBuilder::get_IsFullyTrusted()
+				mscorlib::System::Boolean  AssemblyBuilder::get_IsFullyTrusted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_IsFullyTrusted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -630,7 +630,7 @@ namespace mscorlib
 
 
 				//	Get:DefinedTypes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::TypeInfo>  AssemblyBuilder::get_DefinedTypes()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::TypeInfo>  AssemblyBuilder::get_DefinedTypes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_DefinedTypes", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::TypeInfo>(__result__);
@@ -638,7 +638,7 @@ namespace mscorlib
 
 
 				//	Get:ExportedTypes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Type>  AssemblyBuilder::get_ExportedTypes()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Type>  AssemblyBuilder::get_ExportedTypes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_ExportedTypes", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Type>(__result__);
@@ -646,7 +646,7 @@ namespace mscorlib
 
 
 				//	Get:Modules
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::Module>  AssemblyBuilder::get_Modules()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::Module>  AssemblyBuilder::get_Modules() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_Modules", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::Module>(__result__);
@@ -654,7 +654,7 @@ namespace mscorlib
 
 
 				//	Get:CustomAttributes
-				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  AssemblyBuilder::get_CustomAttributes()
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  AssemblyBuilder::get_CustomAttributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "Assembly", 0, NULL, "get_CustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>(__result__);

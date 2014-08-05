@@ -58,7 +58,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Value
-				mscorlib::System::String  IdentityReference::get_Value()
+				mscorlib::System::String  IdentityReference::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "IdentityReference", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

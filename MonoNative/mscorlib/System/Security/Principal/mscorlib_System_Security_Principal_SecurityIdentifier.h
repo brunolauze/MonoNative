@@ -123,24 +123,26 @@ namespace mscorlib
 					__declspec(property(get=get_Value)) mscorlib::System::String  Value;
 
 					//Public Static Fields
-					static Property<mscorlib::System::Int32> MaxBinaryLength;
-					static Property<mscorlib::System::Int32> MinBinaryLength;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Security::Principal::SecurityIdentifier> MaxBinaryLength;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Security::Principal::SecurityIdentifier> MinBinaryLength;
 
 					//Get Set Properties Methods
 					//	Get:AccountDomainSid
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_AccountDomainSid();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_AccountDomainSid() const;
 
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 					//	Get:Value
-					mscorlib::System::String  get_Value();
+					mscorlib::System::String  get_Value() const;
 
 					//	Get/Set:MaxBinaryLength
 					static mscorlib::System::Int32  get_MaxBinaryLength();
+					static void set_MaxBinaryLength(mscorlib::System::Int32  value);
 
 					//	Get/Set:MinBinaryLength
 					static mscorlib::System::Int32  get_MinBinaryLength();
+					static void set_MinBinaryLength(mscorlib::System::Int32  value);
 
 				
 				protected:

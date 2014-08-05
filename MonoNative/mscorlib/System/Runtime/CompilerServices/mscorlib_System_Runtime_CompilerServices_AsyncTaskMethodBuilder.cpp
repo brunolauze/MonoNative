@@ -47,7 +47,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Task
-				mscorlib::System::Threading::Tasks::TaskBase  AsyncTaskMethodBuilderBase::get_Task()
+				mscorlib::System::Threading::Tasks::TaskBase  AsyncTaskMethodBuilderBase::get_Task() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "AsyncTaskMethodBuilder", 0, NULL, "get_Task", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::Tasks::TaskBase(__result__);

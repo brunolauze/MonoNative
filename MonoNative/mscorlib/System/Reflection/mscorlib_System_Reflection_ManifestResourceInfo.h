@@ -71,13 +71,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:FileName
-				mscorlib::System::String  get_FileName();
+				mscorlib::System::String  get_FileName() const;
 
 				//	Get:ReferencedAssembly
-				mscorlib::System::Reflection::Assembly  get_ReferencedAssembly();
+				mscorlib::System::Reflection::Assembly  get_ReferencedAssembly() const;
 
 				//	Get:ResourceLocation
-				mscorlib::System::Reflection::ResourceLocation::__ENUM__  get_ResourceLocation();
+				mscorlib::System::Reflection::ResourceLocation::__ENUM__  get_ResourceLocation() const;
 
 			
 			protected:

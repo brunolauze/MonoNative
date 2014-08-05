@@ -191,18 +191,18 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:MaxCapacity
-				mscorlib::System::Int32  get_MaxCapacity();
+				mscorlib::System::Int32  get_MaxCapacity() const;
 
 				//	Get/Set:Capacity
-				mscorlib::System::Int32  get_Capacity();
+				mscorlib::System::Int32  get_Capacity() const;
 				void set_Capacity(mscorlib::System::Int32  value);
 
 				//	Get/Set:Length
-				mscorlib::System::Int32  get_Length();
+				mscorlib::System::Int32  get_Length() const;
 				void set_Length(mscorlib::System::Int32  value);
 
 				//	Get/Set:Chars
-				mscorlib::System::Char  get_Chars(mscorlib::System::Int32 index);
+				mscorlib::System::Char  get_Chars(mscorlib::System::Int32 index) const;
 				void set_Chars(mscorlib::System::Int32 index, mscorlib::System::Char  value);
 
 			

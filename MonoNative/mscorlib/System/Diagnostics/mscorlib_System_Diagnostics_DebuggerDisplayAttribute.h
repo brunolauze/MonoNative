@@ -74,26 +74,26 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Value
-				mscorlib::System::String  get_Value();
+				mscorlib::System::String  get_Value() const;
 
 				//	Get/Set:Target
-				mscorlib::System::Type  get_Target();
+				mscorlib::System::Type  get_Target() const;
 				void set_Target(mscorlib::System::Type  value);
 
 				//	Get/Set:TargetTypeName
-				mscorlib::System::String  get_TargetTypeName();
+				mscorlib::System::String  get_TargetTypeName() const;
 				void set_TargetTypeName(mscorlib::System::String  value);
 
 				//	Get/Set:Type
-				mscorlib::System::String  get_Type();
+				mscorlib::System::String  get_Type() const;
 				void set_Type(mscorlib::System::String  value);
 
 				//	Get/Set:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 				void set_Name(mscorlib::System::String  value);
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

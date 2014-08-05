@@ -22,6 +22,9 @@ namespace mscorlib
 		namespace Threading
 		{
 
+			Property<mscorlib::System::Runtime::Remoting::Contexts::Context , mscorlib::System::Threading::Thread> mscorlib::System::Threading::Thread::CurrentContext(&mscorlib::System::Threading::Thread::get_CurrentContext, &mscorlib::System::Threading::Thread::set_CurrentContext);
+			Property<mscorlib::System::Security::Principal::IPrincipal , mscorlib::System::Threading::Thread> mscorlib::System::Threading::Thread::CurrentPrincipal(&mscorlib::System::Threading::Thread::get_CurrentPrincipal, &mscorlib::System::Threading::Thread::set_CurrentPrincipal);
+			Property<mscorlib::System::Threading::Thread , mscorlib::System::Threading::Thread> mscorlib::System::Threading::Thread::CurrentThread(&mscorlib::System::Threading::Thread::get_CurrentThread, &mscorlib::System::Threading::Thread::set_CurrentThread);
 			//Public Methods
 			mscorlib::System::LocalDataStoreSlot Thread::AllocateNamedDataSlot(mscorlib::System::String name)
 			{
@@ -543,7 +546,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:ApartmentState
-			mscorlib::System::Threading::ApartmentState::__ENUM__  Thread::get_ApartmentState()
+			mscorlib::System::Threading::ApartmentState::__ENUM__  Thread::get_ApartmentState() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_ApartmentState", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Threading::ApartmentState::__ENUM__*)mono_object_unbox(__result__);
@@ -560,7 +563,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CurrentCulture
-			mscorlib::System::Globalization::CultureInfo  Thread::get_CurrentCulture()
+			mscorlib::System::Globalization::CultureInfo  Thread::get_CurrentCulture() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_CurrentCulture", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::CultureInfo(__result__);
@@ -577,7 +580,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CurrentUICulture
-			mscorlib::System::Globalization::CultureInfo  Thread::get_CurrentUICulture()
+			mscorlib::System::Globalization::CultureInfo  Thread::get_CurrentUICulture() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_CurrentUICulture", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::CultureInfo(__result__);
@@ -594,7 +597,7 @@ namespace mscorlib
 
 
 			//	Get:IsThreadPoolThread
-			mscorlib::System::Boolean  Thread::get_IsThreadPoolThread()
+			mscorlib::System::Boolean  Thread::get_IsThreadPoolThread() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_IsThreadPoolThread", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -602,7 +605,7 @@ namespace mscorlib
 
 
 			//	Get:IsAlive
-			mscorlib::System::Boolean  Thread::get_IsAlive()
+			mscorlib::System::Boolean  Thread::get_IsAlive() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_IsAlive", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -610,7 +613,7 @@ namespace mscorlib
 
 
 			//	Get/Set:IsBackground
-			mscorlib::System::Boolean  Thread::get_IsBackground()
+			mscorlib::System::Boolean  Thread::get_IsBackground() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_IsBackground", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -627,7 +630,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Name
-			mscorlib::System::String  Thread::get_Name()
+			mscorlib::System::String  Thread::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -644,7 +647,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Priority
-			mscorlib::System::Threading::ThreadPriority::__ENUM__  Thread::get_Priority()
+			mscorlib::System::Threading::ThreadPriority::__ENUM__  Thread::get_Priority() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_Priority", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Threading::ThreadPriority::__ENUM__*)mono_object_unbox(__result__);
@@ -661,7 +664,7 @@ namespace mscorlib
 
 
 			//	Get:ThreadState
-			mscorlib::System::Threading::ThreadState::__ENUM__  Thread::get_ThreadState()
+			mscorlib::System::Threading::ThreadState::__ENUM__  Thread::get_ThreadState() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_ThreadState", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Threading::ThreadState::__ENUM__*)mono_object_unbox(__result__);
@@ -669,7 +672,7 @@ namespace mscorlib
 
 
 			//	Get/Set:ExecutionContext
-			mscorlib::System::Threading::ExecutionContext  Thread::get_ExecutionContext()
+			mscorlib::System::Threading::ExecutionContext  Thread::get_ExecutionContext() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_ExecutionContext", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::ExecutionContext(__result__);
@@ -686,7 +689,7 @@ namespace mscorlib
 
 
 			//	Get:ManagedThreadId
-			mscorlib::System::Int32  Thread::get_ManagedThreadId()
+			mscorlib::System::Int32  Thread::get_ManagedThreadId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_ManagedThreadId", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -699,6 +702,11 @@ namespace mscorlib
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_CurrentContext", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Runtime::Remoting::Contexts::Context(__result__);
+			}
+
+			void Thread::set_CurrentContext(mscorlib::System::Runtime::Remoting::Contexts::Context  value)
+			{
+				throw;
 			}
 
 
@@ -724,6 +732,11 @@ namespace mscorlib
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_CurrentThread", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::Thread(__result__);
+			}
+
+			void Thread::set_CurrentThread(mscorlib::System::Threading::Thread  value)
+			{
+				throw;
 			}
 
 

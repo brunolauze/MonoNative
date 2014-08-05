@@ -66,7 +66,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Channels_IServerChannelSink, put=set___mscorlib_System_Runtime_Remoting_Channels_IServerChannelSink)) MonoObject *__mscorlib_System_Runtime_Remoting_Channels_IServerChannelSink;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Channels_IServerChannelSink()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Channels_IServerChannelSink() const
 						{
 							return IServerChannelSink::__mscorlib_System_Runtime_Remoting_Channels_IChannelSinkBase;
 						}
@@ -89,7 +89,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:NextChannelSink
-						mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink  get_NextChannelSink();
+						mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink  get_NextChannelSink() const;
 
 					
 					protected:

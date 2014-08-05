@@ -19,7 +19,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:ApplicationEvidence
-				mscorlib::System::Security::Policy::Evidence  ApplicationSecurityInfo::get_ApplicationEvidence()
+				mscorlib::System::Security::Policy::Evidence  ApplicationSecurityInfo::get_ApplicationEvidence() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationSecurityInfo", 0, NULL, "get_ApplicationEvidence", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Policy::Evidence(__result__);
@@ -36,7 +36,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ApplicationId
-				mscorlib::System::ApplicationId  ApplicationSecurityInfo::get_ApplicationId()
+				mscorlib::System::ApplicationId  ApplicationSecurityInfo::get_ApplicationId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationSecurityInfo", 0, NULL, "get_ApplicationId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::ApplicationId(__result__);
@@ -53,7 +53,7 @@ namespace mscorlib
 
 
 				//	Get/Set:DefaultRequestSet
-				mscorlib::System::Security::PermissionSet  ApplicationSecurityInfo::get_DefaultRequestSet()
+				mscorlib::System::Security::PermissionSet  ApplicationSecurityInfo::get_DefaultRequestSet() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationSecurityInfo", 0, NULL, "get_DefaultRequestSet", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::PermissionSet(__result__);
@@ -70,7 +70,7 @@ namespace mscorlib
 
 
 				//	Get/Set:DeploymentId
-				mscorlib::System::ApplicationId  ApplicationSecurityInfo::get_DeploymentId()
+				mscorlib::System::ApplicationId  ApplicationSecurityInfo::get_DeploymentId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationSecurityInfo", 0, NULL, "get_DeploymentId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::ApplicationId(__result__);

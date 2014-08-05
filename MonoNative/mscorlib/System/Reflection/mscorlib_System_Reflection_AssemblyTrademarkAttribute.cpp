@@ -13,7 +13,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get:Trademark
-			mscorlib::System::String  AssemblyTrademarkAttribute::get_Trademark()
+			mscorlib::System::String  AssemblyTrademarkAttribute::get_Trademark() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyTrademarkAttribute", 0, NULL, "get_Trademark", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -21,7 +21,7 @@ namespace mscorlib
 
 
 			//	Get:TypeId
-			mscorlib::System::Object  AssemblyTrademarkAttribute::get_TypeId()
+			mscorlib::System::Object  AssemblyTrademarkAttribute::get_TypeId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

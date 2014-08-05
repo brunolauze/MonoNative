@@ -85,24 +85,24 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:ContextAttributes
-					std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>  get_ContextAttributes();
+					std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>  get_ContextAttributes() const;
 					void set_ContextAttributes(std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>  value);
 
 					//	Get:Mode
-					mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__  get_Mode();
+					mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__  get_Mode() const;
 
 					//	Get:ObjectType
-					mscorlib::System::Type  get_ObjectType();
+					mscorlib::System::Type  get_ObjectType() const;
 
 					//	Get:ObjectUri
-					mscorlib::System::String  get_ObjectUri();
+					mscorlib::System::String  get_ObjectUri() const;
 
 					//	Get/Set:AssemblyName
-					mscorlib::System::String  get_AssemblyName();
+					mscorlib::System::String  get_AssemblyName() const;
 					void set_AssemblyName(mscorlib::System::String  value);
 
 					//	Get/Set:TypeName
-					mscorlib::System::String  get_TypeName();
+					mscorlib::System::String  get_TypeName() const;
 					void set_TypeName(mscorlib::System::String  value);
 
 				

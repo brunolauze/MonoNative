@@ -44,7 +44,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:FrameCount
-			mscorlib::System::Int32  StackTrace::get_FrameCount()
+			mscorlib::System::Int32  StackTrace::get_FrameCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "StackTrace", 0, NULL, "get_FrameCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

@@ -18,7 +18,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:guid
-					mscorlib::System::Guid TYPELIBATTR::get_guid()
+					mscorlib::System::Guid TYPELIBATTR::get_guid() const
 					{
 						return Global::GetFieldValue(__native_object__, "guid");
 					}
@@ -28,7 +28,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:lcid
-					mscorlib::System::Int32 TYPELIBATTR::get_lcid()
+					mscorlib::System::Int32 TYPELIBATTR::get_lcid() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "lcid");
 					}
@@ -38,7 +38,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:syskind
-					mscorlib::System::Runtime::InteropServices::ComTypes::SYSKIND::__ENUM__ TYPELIBATTR::get_syskind()
+					mscorlib::System::Runtime::InteropServices::ComTypes::SYSKIND::__ENUM__ TYPELIBATTR::get_syskind() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::SYSKIND::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "syskind"));
 					}
@@ -48,7 +48,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wMajorVerNum
-					mscorlib::System::Int16 TYPELIBATTR::get_wMajorVerNum()
+					mscorlib::System::Int16 TYPELIBATTR::get_wMajorVerNum() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "wMajorVerNum");
 					}
@@ -58,7 +58,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wMinorVerNum
-					mscorlib::System::Int16 TYPELIBATTR::get_wMinorVerNum()
+					mscorlib::System::Int16 TYPELIBATTR::get_wMinorVerNum() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "wMinorVerNum");
 					}
@@ -68,7 +68,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wLibFlags
-					mscorlib::System::Runtime::InteropServices::ComTypes::LIBFLAGS::__ENUM__ TYPELIBATTR::get_wLibFlags()
+					mscorlib::System::Runtime::InteropServices::ComTypes::LIBFLAGS::__ENUM__ TYPELIBATTR::get_wLibFlags() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::LIBFLAGS::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "wLibFlags"));
 					}

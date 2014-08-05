@@ -374,7 +374,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:AssemblyName
-				mscorlib::System::String  SerializationInfo::get_AssemblyName()
+				mscorlib::System::String  SerializationInfo::get_AssemblyName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "get_AssemblyName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -391,7 +391,7 @@ namespace mscorlib
 
 
 				//	Get/Set:FullTypeName
-				mscorlib::System::String  SerializationInfo::get_FullTypeName()
+				mscorlib::System::String  SerializationInfo::get_FullTypeName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "get_FullTypeName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -408,7 +408,7 @@ namespace mscorlib
 
 
 				//	Get:MemberCount
-				mscorlib::System::Int32  SerializationInfo::get_MemberCount()
+				mscorlib::System::Int32  SerializationInfo::get_MemberCount() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "get_MemberCount", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -416,7 +416,7 @@ namespace mscorlib
 
 
 				//	Get:IsAssemblyNameSetExplicit
-				mscorlib::System::Boolean  SerializationInfo::get_IsAssemblyNameSetExplicit()
+				mscorlib::System::Boolean  SerializationInfo::get_IsAssemblyNameSetExplicit() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "get_IsAssemblyNameSetExplicit", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -424,7 +424,7 @@ namespace mscorlib
 
 
 				//	Get:IsFullTypeNameSetExplicit
-				mscorlib::System::Boolean  SerializationInfo::get_IsFullTypeNameSetExplicit()
+				mscorlib::System::Boolean  SerializationInfo::get_IsFullTypeNameSetExplicit() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "get_IsFullTypeNameSetExplicit", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -432,7 +432,7 @@ namespace mscorlib
 
 
 				//	Get:ObjectType
-				mscorlib::System::Type  SerializationInfo::get_ObjectType()
+				mscorlib::System::Type  SerializationInfo::get_ObjectType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "get_ObjectType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);

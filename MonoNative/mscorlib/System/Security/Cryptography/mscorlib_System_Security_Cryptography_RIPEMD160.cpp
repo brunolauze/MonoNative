@@ -34,7 +34,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CanTransformMultipleBlocks
-				mscorlib::System::Boolean  RIPEMD160::get_CanTransformMultipleBlocks()
+				mscorlib::System::Boolean  RIPEMD160::get_CanTransformMultipleBlocks() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_CanTransformMultipleBlocks", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -42,7 +42,7 @@ namespace mscorlib
 
 
 				//	Get:CanReuseTransform
-				mscorlib::System::Boolean  RIPEMD160::get_CanReuseTransform()
+				mscorlib::System::Boolean  RIPEMD160::get_CanReuseTransform() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_CanReuseTransform", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -50,7 +50,7 @@ namespace mscorlib
 
 
 				//	Get:Hash
-				std::vector<mscorlib::System::Byte*>  RIPEMD160::get_Hash()
+				std::vector<mscorlib::System::Byte*>  RIPEMD160::get_Hash() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_Hash", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -66,7 +66,7 @@ namespace mscorlib
 
 
 				//	Get:HashSize
-				mscorlib::System::Int32  RIPEMD160::get_HashSize()
+				mscorlib::System::Int32  RIPEMD160::get_HashSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_HashSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -74,7 +74,7 @@ namespace mscorlib
 
 
 				//	Get:InputBlockSize
-				mscorlib::System::Int32  RIPEMD160::get_InputBlockSize()
+				mscorlib::System::Int32  RIPEMD160::get_InputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_InputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -82,7 +82,7 @@ namespace mscorlib
 
 
 				//	Get:OutputBlockSize
-				mscorlib::System::Int32  RIPEMD160::get_OutputBlockSize()
+				mscorlib::System::Int32  RIPEMD160::get_OutputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_OutputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

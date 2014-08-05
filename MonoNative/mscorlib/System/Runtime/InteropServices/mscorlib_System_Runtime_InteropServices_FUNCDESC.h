@@ -86,51 +86,51 @@ namespace mscorlib
 					__declspec(property(get=get_wFuncFlags, put=set_wFuncFlags)) mscorlib::System::Int16  wFuncFlags;
 
 					//	Get/Set:memid
-					mscorlib::System::Int32  get_memid();
+					mscorlib::System::Int32  get_memid() const;
 					void set_memid(mscorlib::System::Int32  value);
 
 					//	Get/Set:lprgscode
-					mscorlib::System::IntPtr  get_lprgscode();
+					mscorlib::System::IntPtr  get_lprgscode() const;
 					void set_lprgscode(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:lprgelemdescParam
-					mscorlib::System::IntPtr  get_lprgelemdescParam();
+					mscorlib::System::IntPtr  get_lprgelemdescParam() const;
 					void set_lprgelemdescParam(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:funckind
-					mscorlib::System::Runtime::InteropServices::FUNCKIND::__ENUM__  get_funckind();
+					mscorlib::System::Runtime::InteropServices::FUNCKIND::__ENUM__  get_funckind() const;
 					void set_funckind(mscorlib::System::Runtime::InteropServices::FUNCKIND::__ENUM__  value);
 
 					//	Get/Set:invkind
-					mscorlib::System::Runtime::InteropServices::INVOKEKIND::__ENUM__  get_invkind();
+					mscorlib::System::Runtime::InteropServices::INVOKEKIND::__ENUM__  get_invkind() const;
 					void set_invkind(mscorlib::System::Runtime::InteropServices::INVOKEKIND::__ENUM__  value);
 
 					//	Get/Set:callconv
-					mscorlib::System::Runtime::InteropServices::CALLCONV::__ENUM__  get_callconv();
+					mscorlib::System::Runtime::InteropServices::CALLCONV::__ENUM__  get_callconv() const;
 					void set_callconv(mscorlib::System::Runtime::InteropServices::CALLCONV::__ENUM__  value);
 
 					//	Get/Set:cParams
-					mscorlib::System::Int16  get_cParams();
+					mscorlib::System::Int16  get_cParams() const;
 					void set_cParams(mscorlib::System::Int16  value);
 
 					//	Get/Set:cParamsOpt
-					mscorlib::System::Int16  get_cParamsOpt();
+					mscorlib::System::Int16  get_cParamsOpt() const;
 					void set_cParamsOpt(mscorlib::System::Int16  value);
 
 					//	Get/Set:oVft
-					mscorlib::System::Int16  get_oVft();
+					mscorlib::System::Int16  get_oVft() const;
 					void set_oVft(mscorlib::System::Int16  value);
 
 					//	Get/Set:cScodes
-					mscorlib::System::Int16  get_cScodes();
+					mscorlib::System::Int16  get_cScodes() const;
 					void set_cScodes(mscorlib::System::Int16  value);
 
 					//	Get/Set:elemdescFunc
-					mscorlib::System::Runtime::InteropServices::ELEMDESC  get_elemdescFunc();
+					mscorlib::System::Runtime::InteropServices::ELEMDESC  get_elemdescFunc() const;
 					void set_elemdescFunc(mscorlib::System::Runtime::InteropServices::ELEMDESC  value);
 
 					//	Get/Set:wFuncFlags
-					mscorlib::System::Int16  get_wFuncFlags();
+					mscorlib::System::Int16  get_wFuncFlags() const;
 					void set_wFuncFlags(mscorlib::System::Int16  value);
 
 				

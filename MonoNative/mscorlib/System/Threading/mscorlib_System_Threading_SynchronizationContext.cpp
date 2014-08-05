@@ -12,6 +12,7 @@ namespace mscorlib
 		namespace Threading
 		{
 
+			Property<mscorlib::System::Threading::SynchronizationContext , mscorlib::System::Threading::SynchronizationContext> mscorlib::System::Threading::SynchronizationContext::Current(&mscorlib::System::Threading::SynchronizationContext::get_Current, &mscorlib::System::Threading::SynchronizationContext::set_Current);
 			//Public Methods
 			mscorlib::System::Threading::SynchronizationContext SynchronizationContext::CreateCopy()
 			{
@@ -86,6 +87,11 @@ namespace mscorlib
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SynchronizationContext", 0, NULL, "get_Current", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Threading::SynchronizationContext(__result__);
+			}
+
+			void SynchronizationContext::set_Current(mscorlib::System::Threading::SynchronizationContext  value)
+			{
+				throw;
 			}
 
 

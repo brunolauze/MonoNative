@@ -17,7 +17,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:IsInvalid
-				mscorlib::System::Boolean  SafeHandleMinusOneIsInvalid::get_IsInvalid()
+				mscorlib::System::Boolean  SafeHandleMinusOneIsInvalid::get_IsInvalid() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32.SafeHandles", "SafeHandleMinusOneIsInvalid", 0, NULL, "get_IsInvalid", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -25,7 +25,7 @@ namespace mscorlib
 
 
 				//	Get:IsClosed
-				mscorlib::System::Boolean  SafeHandleMinusOneIsInvalid::get_IsClosed()
+				mscorlib::System::Boolean  SafeHandleMinusOneIsInvalid::get_IsClosed() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeHandle", 0, NULL, "get_IsClosed", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

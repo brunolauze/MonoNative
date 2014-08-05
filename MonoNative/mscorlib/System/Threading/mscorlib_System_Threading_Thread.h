@@ -232,54 +232,55 @@ namespace mscorlib
 				__declspec(property(get=get_ManagedThreadId)) mscorlib::System::Int32  ManagedThreadId;
 
 				//Public Static Properties
-				static Property<mscorlib::System::Runtime::Remoting::Contexts::Context> CurrentContext;
-				static Property<mscorlib::System::Security::Principal::IPrincipal> CurrentPrincipal;
-				static Property<mscorlib::System::Threading::Thread> CurrentThread;
+				static Property<mscorlib::System::Runtime::Remoting::Contexts::Context , mscorlib::System::Threading::Thread> CurrentContext;
+				static Property<mscorlib::System::Security::Principal::IPrincipal , mscorlib::System::Threading::Thread> CurrentPrincipal;
+				static Property<mscorlib::System::Threading::Thread , mscorlib::System::Threading::Thread> CurrentThread;
 
 				//Get Set Properties Methods
 				//	Get/Set:ApartmentState
-				mscorlib::System::Threading::ApartmentState::__ENUM__  get_ApartmentState();
+				mscorlib::System::Threading::ApartmentState::__ENUM__  get_ApartmentState() const;
 				void set_ApartmentState(mscorlib::System::Threading::ApartmentState::__ENUM__  value);
 
 				//	Get/Set:CurrentCulture
-				mscorlib::System::Globalization::CultureInfo  get_CurrentCulture();
+				mscorlib::System::Globalization::CultureInfo  get_CurrentCulture() const;
 				void set_CurrentCulture(mscorlib::System::Globalization::CultureInfo  value);
 
 				//	Get/Set:CurrentUICulture
-				mscorlib::System::Globalization::CultureInfo  get_CurrentUICulture();
+				mscorlib::System::Globalization::CultureInfo  get_CurrentUICulture() const;
 				void set_CurrentUICulture(mscorlib::System::Globalization::CultureInfo  value);
 
 				//	Get:IsThreadPoolThread
-				mscorlib::System::Boolean  get_IsThreadPoolThread();
+				mscorlib::System::Boolean  get_IsThreadPoolThread() const;
 
 				//	Get:IsAlive
-				mscorlib::System::Boolean  get_IsAlive();
+				mscorlib::System::Boolean  get_IsAlive() const;
 
 				//	Get/Set:IsBackground
-				mscorlib::System::Boolean  get_IsBackground();
+				mscorlib::System::Boolean  get_IsBackground() const;
 				void set_IsBackground(mscorlib::System::Boolean  value);
 
 				//	Get/Set:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 				void set_Name(mscorlib::System::String  value);
 
 				//	Get/Set:Priority
-				mscorlib::System::Threading::ThreadPriority::__ENUM__  get_Priority();
+				mscorlib::System::Threading::ThreadPriority::__ENUM__  get_Priority() const;
 				void set_Priority(mscorlib::System::Threading::ThreadPriority::__ENUM__  value);
 
 				//	Get:ThreadState
-				mscorlib::System::Threading::ThreadState::__ENUM__  get_ThreadState();
+				mscorlib::System::Threading::ThreadState::__ENUM__  get_ThreadState() const;
 
 				//	Get/Set:ExecutionContext
-				mscorlib::System::Threading::ExecutionContext  get_ExecutionContext();
+				mscorlib::System::Threading::ExecutionContext  get_ExecutionContext() const;
 				void set_ExecutionContext(mscorlib::System::Threading::ExecutionContext  value);
 
 				//	Get:ManagedThreadId
-				mscorlib::System::Int32  get_ManagedThreadId();
+				mscorlib::System::Int32  get_ManagedThreadId() const;
 
 				//Get Set Static Properties Methods
 				//	Get:CurrentContext
 				static mscorlib::System::Runtime::Remoting::Contexts::Context  get_CurrentContext();
+				static void set_CurrentContext(mscorlib::System::Runtime::Remoting::Contexts::Context  value);
 
 				//	Get/Set:CurrentPrincipal
 				static mscorlib::System::Security::Principal::IPrincipal  get_CurrentPrincipal();
@@ -287,6 +288,7 @@ namespace mscorlib
 
 				//	Get:CurrentThread
 				static mscorlib::System::Threading::Thread  get_CurrentThread();
+				static void set_CurrentThread(mscorlib::System::Threading::Thread  value);
 
 
 			

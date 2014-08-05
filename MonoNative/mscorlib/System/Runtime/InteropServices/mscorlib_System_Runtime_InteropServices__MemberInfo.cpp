@@ -155,7 +155,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:DeclaringType
-				mscorlib::System::Type  _MemberInfo::get_DeclaringType()
+				mscorlib::System::Type  _MemberInfo::get_DeclaringType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_MemberInfo", 0, NULL, "get_DeclaringType", __mscorlib_System_Runtime_InteropServices__MemberInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -163,7 +163,7 @@ namespace mscorlib
 
 
 				//	Get:MemberType
-				mscorlib::System::Reflection::MemberTypes::__ENUM__  _MemberInfo::get_MemberType()
+				mscorlib::System::Reflection::MemberTypes::__ENUM__  _MemberInfo::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_MemberInfo", 0, NULL, "get_MemberType", __mscorlib_System_Runtime_InteropServices__MemberInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -171,7 +171,7 @@ namespace mscorlib
 
 
 				//	Get:Name
-				mscorlib::System::String  _MemberInfo::get_Name()
+				mscorlib::System::String  _MemberInfo::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_MemberInfo", 0, NULL, "get_Name", __mscorlib_System_Runtime_InteropServices__MemberInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -179,7 +179,7 @@ namespace mscorlib
 
 
 				//	Get:ReflectedType
-				mscorlib::System::Type  _MemberInfo::get_ReflectedType()
+				mscorlib::System::Type  _MemberInfo::get_ReflectedType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_MemberInfo", 0, NULL, "get_ReflectedType", __mscorlib_System_Runtime_InteropServices__MemberInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);

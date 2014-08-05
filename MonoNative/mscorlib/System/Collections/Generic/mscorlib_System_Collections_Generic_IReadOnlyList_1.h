@@ -1,9 +1,9 @@
 #ifndef __MONO_NATIVE_MSCORLIB_SYSTEM_COLLECTIONS_GENERIC_IREADONLYLIST_1_H
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_COLLECTIONS_GENERIC_IREADONLYLIST_1_H
 
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IReadOnlyCollection_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 
 namespace mscorlib
 {
@@ -16,15 +16,15 @@ namespace mscorlib
 
 				template<typename T>
 				class IReadOnlyList
-					: public virtual mscorlib::System::Collections::IEnumerable
-					, public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<T>
+					: public virtual mscorlib::System::Collections::Generic::IReadOnlyCollection<T>
 					, public virtual mscorlib::System::Collections::Generic::IEnumerable<T>
+					, public virtual mscorlib::System::Collections::IEnumerable
 				{
 				public:
 					IReadOnlyList(MonoObject *nativeObject)
-					: mscorlib::System::Collections::IEnumerable(nativeObject)
-					, mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(nativeObject)
+					: mscorlib::System::Collections::Generic::IReadOnlyCollection<T>(nativeObject)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(nativeObject)
+					, mscorlib::System::Collections::IEnumerable(nativeObject)
 					{
 					};
 				
@@ -34,7 +34,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Collections_Generic_IReadOnlyList_1, put=set___mscorlib_System_Collections_Generic_IReadOnlyList_1)) MonoObject *__mscorlib_System_Collections_Generic_IReadOnlyList_1;
-					MonoObject* get___mscorlib_System_Collections_Generic_IReadOnlyList_1()
+					MonoObject* get___mscorlib_System_Collections_Generic_IReadOnlyList_1() const
 					{
 						return IReadOnlyList::__mscorlib_System_Collections_Generic_IReadOnlyCollection_1;
 					}
@@ -54,7 +54,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Item
-					T  get_Item(mscorlib::System::Int32 index)
+					T  get_Item(mscorlib::System::Int32 index) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];

@@ -65,7 +65,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CspKeyContainerInfo
-					mscorlib::System::Security::Cryptography::CspKeyContainerInfo  get_CspKeyContainerInfo();
+					mscorlib::System::Security::Cryptography::CspKeyContainerInfo  get_CspKeyContainerInfo() const;
 
 				
 				protected:

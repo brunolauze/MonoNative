@@ -68,11 +68,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:WrapNonExceptionThrows
-					mscorlib::System::Boolean  get_WrapNonExceptionThrows();
+					mscorlib::System::Boolean  get_WrapNonExceptionThrows() const;
 					void set_WrapNonExceptionThrows(mscorlib::System::Boolean  value);
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

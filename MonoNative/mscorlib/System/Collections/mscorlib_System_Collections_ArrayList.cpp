@@ -446,7 +446,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:Item
-			mscorlib::System::Object  ArrayList::get_Item(mscorlib::System::Int32 index)
+			mscorlib::System::Object  ArrayList::get_Item(mscorlib::System::Int32 index) const
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -469,7 +469,7 @@ namespace mscorlib
 
 
 			//	Get:Count
-			mscorlib::System::Int32  ArrayList::get_Count()
+			mscorlib::System::Int32  ArrayList::get_Count() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "ArrayList", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -477,7 +477,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Capacity
-			mscorlib::System::Int32  ArrayList::get_Capacity()
+			mscorlib::System::Int32  ArrayList::get_Capacity() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "ArrayList", 0, NULL, "get_Capacity", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -494,7 +494,7 @@ namespace mscorlib
 
 
 			//	Get:IsFixedSize
-			mscorlib::System::Boolean  ArrayList::get_IsFixedSize()
+			mscorlib::System::Boolean  ArrayList::get_IsFixedSize() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "ArrayList", 0, NULL, "get_IsFixedSize", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -502,7 +502,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  ArrayList::get_IsReadOnly()
+			mscorlib::System::Boolean  ArrayList::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "ArrayList", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -510,7 +510,7 @@ namespace mscorlib
 
 
 			//	Get:IsSynchronized
-			mscorlib::System::Boolean  ArrayList::get_IsSynchronized()
+			mscorlib::System::Boolean  ArrayList::get_IsSynchronized() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "ArrayList", 0, NULL, "get_IsSynchronized", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -518,7 +518,7 @@ namespace mscorlib
 
 
 			//	Get:SyncRoot
-			mscorlib::System::Object  ArrayList::get_SyncRoot()
+			mscorlib::System::Object  ArrayList::get_SyncRoot() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "ArrayList", 0, NULL, "get_SyncRoot", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

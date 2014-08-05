@@ -63,35 +63,35 @@ namespace mscorlib
 					__declspec(property(get=get_Exponent, put=set_Exponent)) std::vector<mscorlib::System::Byte*>  Exponent;
 
 					//	Get/Set:P
-					std::vector<mscorlib::System::Byte*>  get_P();
+					std::vector<mscorlib::System::Byte*>  get_P() const;
 					void set_P(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:Q
-					std::vector<mscorlib::System::Byte*>  get_Q();
+					std::vector<mscorlib::System::Byte*>  get_Q() const;
 					void set_Q(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:D
-					std::vector<mscorlib::System::Byte*>  get_D();
+					std::vector<mscorlib::System::Byte*>  get_D() const;
 					void set_D(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:DP
-					std::vector<mscorlib::System::Byte*>  get_DP();
+					std::vector<mscorlib::System::Byte*>  get_DP() const;
 					void set_DP(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:DQ
-					std::vector<mscorlib::System::Byte*>  get_DQ();
+					std::vector<mscorlib::System::Byte*>  get_DQ() const;
 					void set_DQ(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:InverseQ
-					std::vector<mscorlib::System::Byte*>  get_InverseQ();
+					std::vector<mscorlib::System::Byte*>  get_InverseQ() const;
 					void set_InverseQ(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:Modulus
-					std::vector<mscorlib::System::Byte*>  get_Modulus();
+					std::vector<mscorlib::System::Byte*>  get_Modulus() const;
 					void set_Modulus(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:Exponent
-					std::vector<mscorlib::System::Byte*>  get_Exponent();
+					std::vector<mscorlib::System::Byte*>  get_Exponent() const;
 					void set_Exponent(std::vector<mscorlib::System::Byte*>  value);
 
 				

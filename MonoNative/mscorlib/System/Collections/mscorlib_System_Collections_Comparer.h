@@ -89,14 +89,16 @@ namespace mscorlib
 
 
 				//Public Static Fields
-				static Property<mscorlib::System::Collections::Comparer> Default;
-				static Property<mscorlib::System::Collections::Comparer> DefaultInvariant;
+				static Property<mscorlib::System::Collections::Comparer , mscorlib::System::Collections::Comparer> Default;
+				static Property<mscorlib::System::Collections::Comparer , mscorlib::System::Collections::Comparer> DefaultInvariant;
 
 				//	Get/Set:Default
 				static mscorlib::System::Collections::Comparer  get_Default();
+				static void set_Default(mscorlib::System::Collections::Comparer  value);
 
 				//	Get/Set:DefaultInvariant
 				static mscorlib::System::Collections::Comparer  get_DefaultInvariant();
+				static void set_DefaultInvariant(mscorlib::System::Collections::Comparer  value);
 
 			
 			protected:

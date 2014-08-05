@@ -18,7 +18,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:HashName
-				mscorlib::System::String  HMACSHA256::get_HashName()
+				mscorlib::System::String  HMACSHA256::get_HashName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HMAC", 0, NULL, "get_HashName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -35,7 +35,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Key
-				std::vector<mscorlib::System::Byte*>  HMACSHA256::get_Key()
+				std::vector<mscorlib::System::Byte*>  HMACSHA256::get_Key() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HMAC", 0, NULL, "get_Key", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -60,7 +60,7 @@ namespace mscorlib
 
 
 				//	Get:CanTransformMultipleBlocks
-				mscorlib::System::Boolean  HMACSHA256::get_CanTransformMultipleBlocks()
+				mscorlib::System::Boolean  HMACSHA256::get_CanTransformMultipleBlocks() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_CanTransformMultipleBlocks", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 				//	Get:CanReuseTransform
-				mscorlib::System::Boolean  HMACSHA256::get_CanReuseTransform()
+				mscorlib::System::Boolean  HMACSHA256::get_CanReuseTransform() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_CanReuseTransform", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -76,7 +76,7 @@ namespace mscorlib
 
 
 				//	Get:Hash
-				std::vector<mscorlib::System::Byte*>  HMACSHA256::get_Hash()
+				std::vector<mscorlib::System::Byte*>  HMACSHA256::get_Hash() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_Hash", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -92,7 +92,7 @@ namespace mscorlib
 
 
 				//	Get:HashSize
-				mscorlib::System::Int32  HMACSHA256::get_HashSize()
+				mscorlib::System::Int32  HMACSHA256::get_HashSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_HashSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -100,7 +100,7 @@ namespace mscorlib
 
 
 				//	Get:InputBlockSize
-				mscorlib::System::Int32  HMACSHA256::get_InputBlockSize()
+				mscorlib::System::Int32  HMACSHA256::get_InputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_InputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -108,7 +108,7 @@ namespace mscorlib
 
 
 				//	Get:OutputBlockSize
-				mscorlib::System::Int32  HMACSHA256::get_OutputBlockSize()
+				mscorlib::System::Int32  HMACSHA256::get_OutputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_OutputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

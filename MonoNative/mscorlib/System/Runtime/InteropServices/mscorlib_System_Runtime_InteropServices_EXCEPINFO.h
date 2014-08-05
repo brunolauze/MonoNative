@@ -63,35 +63,35 @@ namespace mscorlib
 					__declspec(property(get=get_pfnDeferredFillIn, put=set_pfnDeferredFillIn)) mscorlib::System::IntPtr  pfnDeferredFillIn;
 
 					//	Get/Set:wCode
-					mscorlib::System::Int16  get_wCode();
+					mscorlib::System::Int16  get_wCode() const;
 					void set_wCode(mscorlib::System::Int16  value);
 
 					//	Get/Set:wReserved
-					mscorlib::System::Int16  get_wReserved();
+					mscorlib::System::Int16  get_wReserved() const;
 					void set_wReserved(mscorlib::System::Int16  value);
 
 					//	Get/Set:bstrSource
-					mscorlib::System::String  get_bstrSource();
+					mscorlib::System::String  get_bstrSource() const;
 					void set_bstrSource(mscorlib::System::String  value);
 
 					//	Get/Set:bstrDescription
-					mscorlib::System::String  get_bstrDescription();
+					mscorlib::System::String  get_bstrDescription() const;
 					void set_bstrDescription(mscorlib::System::String  value);
 
 					//	Get/Set:bstrHelpFile
-					mscorlib::System::String  get_bstrHelpFile();
+					mscorlib::System::String  get_bstrHelpFile() const;
 					void set_bstrHelpFile(mscorlib::System::String  value);
 
 					//	Get/Set:dwHelpContext
-					mscorlib::System::Int32  get_dwHelpContext();
+					mscorlib::System::Int32  get_dwHelpContext() const;
 					void set_dwHelpContext(mscorlib::System::Int32  value);
 
 					//	Get/Set:pvReserved
-					mscorlib::System::IntPtr  get_pvReserved();
+					mscorlib::System::IntPtr  get_pvReserved() const;
 					void set_pvReserved(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:pfnDeferredFillIn
-					mscorlib::System::IntPtr  get_pfnDeferredFillIn();
+					mscorlib::System::IntPtr  get_pfnDeferredFillIn() const;
 					void set_pfnDeferredFillIn(mscorlib::System::IntPtr  value);
 
 				

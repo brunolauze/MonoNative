@@ -63,35 +63,35 @@ namespace mscorlib
 					__declspec(property(get=get_Y, put=set_Y)) std::vector<mscorlib::System::Byte*>  Y;
 
 					//	Get/Set:Counter
-					mscorlib::System::Int32  get_Counter();
+					mscorlib::System::Int32  get_Counter() const;
 					void set_Counter(mscorlib::System::Int32  value);
 
 					//	Get/Set:G
-					std::vector<mscorlib::System::Byte*>  get_G();
+					std::vector<mscorlib::System::Byte*>  get_G() const;
 					void set_G(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:J
-					std::vector<mscorlib::System::Byte*>  get_J();
+					std::vector<mscorlib::System::Byte*>  get_J() const;
 					void set_J(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:P
-					std::vector<mscorlib::System::Byte*>  get_P();
+					std::vector<mscorlib::System::Byte*>  get_P() const;
 					void set_P(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:Q
-					std::vector<mscorlib::System::Byte*>  get_Q();
+					std::vector<mscorlib::System::Byte*>  get_Q() const;
 					void set_Q(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:Seed
-					std::vector<mscorlib::System::Byte*>  get_Seed();
+					std::vector<mscorlib::System::Byte*>  get_Seed() const;
 					void set_Seed(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:X
-					std::vector<mscorlib::System::Byte*>  get_X();
+					std::vector<mscorlib::System::Byte*>  get_X() const;
 					void set_X(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:Y
-					std::vector<mscorlib::System::Byte*>  get_Y();
+					std::vector<mscorlib::System::Byte*>  get_Y() const;
 					void set_Y(std::vector<mscorlib::System::Byte*>  value);
 
 				

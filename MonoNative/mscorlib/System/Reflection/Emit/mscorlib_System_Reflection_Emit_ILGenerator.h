@@ -151,7 +151,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ILOffset
-					mscorlib::System::Int32  get_ILOffset();
+					mscorlib::System::Int32  get_ILOffset() const;
 
 				
 				protected:

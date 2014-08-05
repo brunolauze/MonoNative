@@ -39,7 +39,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Properties
-						mscorlib::System::Collections::IDictionary  get_Properties();
+						mscorlib::System::Collections::IDictionary  get_Properties() const;
 
 					
 					protected:

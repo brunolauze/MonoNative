@@ -108,10 +108,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Token
-				mscorlib::System::Threading::CancellationToken  get_Token();
+				mscorlib::System::Threading::CancellationToken  get_Token() const;
 
 				//	Get:IsCancellationRequested
-				mscorlib::System::Boolean  get_IsCancellationRequested();
+				mscorlib::System::Boolean  get_IsCancellationRequested() const;
 
 			
 			protected:

@@ -113,24 +113,25 @@ namespace mscorlib
 							__declspec(property(get=get_Namespace, put=set_Namespace)) mscorlib::System::String  Namespace;
 
 							//Public Static Properties
-							static Property<mscorlib::System::String> XsdType;
+							static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapQName> XsdType;
 
 							//Get Set Properties Methods
 							//	Get/Set:Key
-							mscorlib::System::String  get_Key();
+							mscorlib::System::String  get_Key() const;
 							void set_Key(mscorlib::System::String  value);
 
 							//	Get/Set:Name
-							mscorlib::System::String  get_Name();
+							mscorlib::System::String  get_Name() const;
 							void set_Name(mscorlib::System::String  value);
 
 							//	Get/Set:Namespace
-							mscorlib::System::String  get_Namespace();
+							mscorlib::System::String  get_Namespace() const;
 							void set_Namespace(mscorlib::System::String  value);
 
 							//Get Set Static Properties Methods
 							//	Get:XsdType
 							static mscorlib::System::String  get_XsdType();
+							static void set_XsdType(mscorlib::System::String  value);
 
 
 						

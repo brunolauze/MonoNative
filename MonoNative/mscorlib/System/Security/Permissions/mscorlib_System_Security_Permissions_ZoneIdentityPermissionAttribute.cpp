@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Zone
-				mscorlib::System::Security::SecurityZone::__ENUM__  ZoneIdentityPermissionAttribute::get_Zone()
+				mscorlib::System::Security::SecurityZone::__ENUM__  ZoneIdentityPermissionAttribute::get_Zone() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ZoneIdentityPermissionAttribute", 0, NULL, "get_Zone", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::SecurityZone::__ENUM__*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  ZoneIdentityPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  ZoneIdentityPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  ZoneIdentityPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  ZoneIdentityPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  ZoneIdentityPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  ZoneIdentityPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

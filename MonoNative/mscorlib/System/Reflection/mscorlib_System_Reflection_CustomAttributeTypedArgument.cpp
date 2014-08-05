@@ -35,7 +35,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:ArgumentType
-			mscorlib::System::Type  CustomAttributeTypedArgument::get_ArgumentType()
+			mscorlib::System::Type  CustomAttributeTypedArgument::get_ArgumentType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeTypedArgument", 0, NULL, "get_ArgumentType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -43,7 +43,7 @@ namespace mscorlib
 
 
 			//	Get:Value
-			mscorlib::System::Object  CustomAttributeTypedArgument::get_Value()
+			mscorlib::System::Object  CustomAttributeTypedArgument::get_Value() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeTypedArgument", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

@@ -128,7 +128,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:MergeLogic
-				mscorlib::System::String  CodeGroup::get_MergeLogic()
+				mscorlib::System::String  CodeGroup::get_MergeLogic() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeGroup", 0, NULL, "get_MergeLogic", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -136,7 +136,7 @@ namespace mscorlib
 
 
 				//	Get/Set:PolicyStatement
-				mscorlib::System::Security::Policy::PolicyStatement  CodeGroup::get_PolicyStatement()
+				mscorlib::System::Security::Policy::PolicyStatement  CodeGroup::get_PolicyStatement() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeGroup", 0, NULL, "get_PolicyStatement", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Policy::PolicyStatement(__result__);
@@ -153,7 +153,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Description
-				mscorlib::System::String  CodeGroup::get_Description()
+				mscorlib::System::String  CodeGroup::get_Description() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeGroup", 0, NULL, "get_Description", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -170,7 +170,7 @@ namespace mscorlib
 
 
 				//	Get/Set:MembershipCondition
-				mscorlib::System::Security::Policy::IMembershipCondition  CodeGroup::get_MembershipCondition()
+				mscorlib::System::Security::Policy::IMembershipCondition  CodeGroup::get_MembershipCondition() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeGroup", 0, NULL, "get_MembershipCondition", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Policy::IMembershipCondition(__result__);
@@ -187,7 +187,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Name
-				mscorlib::System::String  CodeGroup::get_Name()
+				mscorlib::System::String  CodeGroup::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeGroup", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -204,7 +204,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Children
-				mscorlib::System::Collections::IList  CodeGroup::get_Children()
+				mscorlib::System::Collections::IList  CodeGroup::get_Children() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeGroup", 0, NULL, "get_Children", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::IList(__result__);
@@ -221,7 +221,7 @@ namespace mscorlib
 
 
 				//	Get:AttributeString
-				mscorlib::System::String  CodeGroup::get_AttributeString()
+				mscorlib::System::String  CodeGroup::get_AttributeString() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeGroup", 0, NULL, "get_AttributeString", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -229,7 +229,7 @@ namespace mscorlib
 
 
 				//	Get:PermissionSetName
-				mscorlib::System::String  CodeGroup::get_PermissionSetName()
+				mscorlib::System::String  CodeGroup::get_PermissionSetName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "CodeGroup", 0, NULL, "get_PermissionSetName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

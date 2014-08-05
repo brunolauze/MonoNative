@@ -187,7 +187,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:BaseStream
-			mscorlib::System::IO::Stream  BinaryReader::get_BaseStream()
+			mscorlib::System::IO::Stream  BinaryReader::get_BaseStream() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "BinaryReader", 0, NULL, "get_BaseStream", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IO::Stream(__result__);

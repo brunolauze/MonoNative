@@ -73,7 +73,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CanReuseTransform
-				mscorlib::System::Boolean  CryptoAPITransform::get_CanReuseTransform()
+				mscorlib::System::Boolean  CryptoAPITransform::get_CanReuseTransform() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoAPITransform", 0, NULL, "get_CanReuseTransform", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -81,7 +81,7 @@ namespace mscorlib
 
 
 				//	Get:CanTransformMultipleBlocks
-				mscorlib::System::Boolean  CryptoAPITransform::get_CanTransformMultipleBlocks()
+				mscorlib::System::Boolean  CryptoAPITransform::get_CanTransformMultipleBlocks() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoAPITransform", 0, NULL, "get_CanTransformMultipleBlocks", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -89,7 +89,7 @@ namespace mscorlib
 
 
 				//	Get:InputBlockSize
-				mscorlib::System::Int32  CryptoAPITransform::get_InputBlockSize()
+				mscorlib::System::Int32  CryptoAPITransform::get_InputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoAPITransform", 0, NULL, "get_InputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -97,7 +97,7 @@ namespace mscorlib
 
 
 				//	Get:KeyHandle
-				mscorlib::System::IntPtr  CryptoAPITransform::get_KeyHandle()
+				mscorlib::System::IntPtr  CryptoAPITransform::get_KeyHandle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoAPITransform", 0, NULL, "get_KeyHandle", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::IntPtr(__result__);
@@ -105,7 +105,7 @@ namespace mscorlib
 
 
 				//	Get:OutputBlockSize
-				mscorlib::System::Int32  CryptoAPITransform::get_OutputBlockSize()
+				mscorlib::System::Int32  CryptoAPITransform::get_OutputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoAPITransform", 0, NULL, "get_OutputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

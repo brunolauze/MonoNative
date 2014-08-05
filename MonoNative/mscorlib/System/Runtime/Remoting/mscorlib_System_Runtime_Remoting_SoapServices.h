@@ -85,23 +85,27 @@ namespace mscorlib
 
 
 					//Public Static Properties
-					static Property<mscorlib::System::String> XmlNsForClrType;
-					static Property<mscorlib::System::String> XmlNsForClrTypeWithAssembly;
-					static Property<mscorlib::System::String> XmlNsForClrTypeWithNs;
-					static Property<mscorlib::System::String> XmlNsForClrTypeWithNsAndAssembly;
+					static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::SoapServices> XmlNsForClrType;
+					static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::SoapServices> XmlNsForClrTypeWithAssembly;
+					static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::SoapServices> XmlNsForClrTypeWithNs;
+					static Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::SoapServices> XmlNsForClrTypeWithNsAndAssembly;
 
 					//Get Set Static Properties Methods
 					//	Get:XmlNsForClrType
 					static mscorlib::System::String  get_XmlNsForClrType();
+					static void set_XmlNsForClrType(mscorlib::System::String  value);
 
 					//	Get:XmlNsForClrTypeWithAssembly
 					static mscorlib::System::String  get_XmlNsForClrTypeWithAssembly();
+					static void set_XmlNsForClrTypeWithAssembly(mscorlib::System::String  value);
 
 					//	Get:XmlNsForClrTypeWithNs
 					static mscorlib::System::String  get_XmlNsForClrTypeWithNs();
+					static void set_XmlNsForClrTypeWithNs(mscorlib::System::String  value);
 
 					//	Get:XmlNsForClrTypeWithNsAndAssembly
 					static mscorlib::System::String  get_XmlNsForClrTypeWithNsAndAssembly();
+					static void set_XmlNsForClrTypeWithNsAndAssembly(mscorlib::System::String  value);
 
 
 				

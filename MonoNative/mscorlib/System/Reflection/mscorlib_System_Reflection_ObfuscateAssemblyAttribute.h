@@ -71,14 +71,14 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:AssemblyIsPrivate
-				mscorlib::System::Boolean  get_AssemblyIsPrivate();
+				mscorlib::System::Boolean  get_AssemblyIsPrivate() const;
 
 				//	Get/Set:StripAfterObfuscation
-				mscorlib::System::Boolean  get_StripAfterObfuscation();
+				mscorlib::System::Boolean  get_StripAfterObfuscation() const;
 				void set_StripAfterObfuscation(mscorlib::System::Boolean  value);
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

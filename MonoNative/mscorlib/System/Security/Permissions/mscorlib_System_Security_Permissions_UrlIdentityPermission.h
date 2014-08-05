@@ -114,7 +114,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Url
-					mscorlib::System::String  get_Url();
+					mscorlib::System::String  get_Url() const;
 					void set_Url(mscorlib::System::String  value);
 
 				

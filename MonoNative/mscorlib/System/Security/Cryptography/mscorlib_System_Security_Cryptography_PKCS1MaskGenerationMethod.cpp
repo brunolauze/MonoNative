@@ -37,7 +37,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:HashName
-				mscorlib::System::String  PKCS1MaskGenerationMethod::get_HashName()
+				mscorlib::System::String  PKCS1MaskGenerationMethod::get_HashName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "PKCS1MaskGenerationMethod", 0, NULL, "get_HashName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

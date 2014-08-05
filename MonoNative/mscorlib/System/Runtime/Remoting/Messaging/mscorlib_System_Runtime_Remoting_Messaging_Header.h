@@ -101,19 +101,19 @@ namespace mscorlib
 						__declspec(property(get=get_Value, put=set_Value)) mscorlib::System::Object  Value;
 
 						//	Get/Set:HeaderNamespace
-						mscorlib::System::String  get_HeaderNamespace();
+						mscorlib::System::String  get_HeaderNamespace() const;
 						void set_HeaderNamespace(mscorlib::System::String  value);
 
 						//	Get/Set:MustUnderstand
-						mscorlib::System::Boolean  get_MustUnderstand();
+						mscorlib::System::Boolean  get_MustUnderstand() const;
 						void set_MustUnderstand(mscorlib::System::Boolean  value);
 
 						//	Get/Set:Name
-						mscorlib::System::String  get_Name();
+						mscorlib::System::String  get_Name() const;
 						void set_Name(mscorlib::System::String  value);
 
 						//	Get/Set:Value
-						mscorlib::System::Object  get_Value();
+						mscorlib::System::Object  get_Value() const;
 						void set_Value(mscorlib::System::Object  value);
 
 					

@@ -27,7 +27,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Runtime_CompilerServices_ICriticalNotifyCompletion, put=set___mscorlib_System_Runtime_CompilerServices_ICriticalNotifyCompletion)) MonoObject *__mscorlib_System_Runtime_CompilerServices_ICriticalNotifyCompletion;
-					MonoObject* get___mscorlib_System_Runtime_CompilerServices_ICriticalNotifyCompletion()
+					MonoObject* get___mscorlib_System_Runtime_CompilerServices_ICriticalNotifyCompletion() const
 					{
 						return ICriticalNotifyCompletion::__mscorlib_System_Runtime_CompilerServices_INotifyCompletion;
 					}

@@ -18,7 +18,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:wCode
-					mscorlib::System::Int16 EXCEPINFO::get_wCode()
+					mscorlib::System::Int16 EXCEPINFO::get_wCode() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "wCode");
 					}
@@ -28,7 +28,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wReserved
-					mscorlib::System::Int16 EXCEPINFO::get_wReserved()
+					mscorlib::System::Int16 EXCEPINFO::get_wReserved() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "wReserved");
 					}
@@ -38,7 +38,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:bstrSource
-					mscorlib::System::String EXCEPINFO::get_bstrSource()
+					mscorlib::System::String EXCEPINFO::get_bstrSource() const
 					{
 						return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "bstrSource"));
 					}
@@ -48,7 +48,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:bstrDescription
-					mscorlib::System::String EXCEPINFO::get_bstrDescription()
+					mscorlib::System::String EXCEPINFO::get_bstrDescription() const
 					{
 						return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "bstrDescription"));
 					}
@@ -58,7 +58,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:bstrHelpFile
-					mscorlib::System::String EXCEPINFO::get_bstrHelpFile()
+					mscorlib::System::String EXCEPINFO::get_bstrHelpFile() const
 					{
 						return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "bstrHelpFile"));
 					}
@@ -68,7 +68,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:dwHelpContext
-					mscorlib::System::Int32 EXCEPINFO::get_dwHelpContext()
+					mscorlib::System::Int32 EXCEPINFO::get_dwHelpContext() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "dwHelpContext");
 					}
@@ -78,7 +78,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:pvReserved
-					mscorlib::System::IntPtr EXCEPINFO::get_pvReserved()
+					mscorlib::System::IntPtr EXCEPINFO::get_pvReserved() const
 					{
 						return Global::GetFieldValue(__native_object__, "pvReserved");
 					}
@@ -88,7 +88,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:pfnDeferredFillIn
-					mscorlib::System::IntPtr EXCEPINFO::get_pfnDeferredFillIn()
+					mscorlib::System::IntPtr EXCEPINFO::get_pfnDeferredFillIn() const
 					{
 						return Global::GetFieldValue(__native_object__, "pfnDeferredFillIn");
 					}
@@ -98,7 +98,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:scode
-					mscorlib::System::Int32 EXCEPINFO::get_scode()
+					mscorlib::System::Int32 EXCEPINFO::get_scode() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "scode");
 					}

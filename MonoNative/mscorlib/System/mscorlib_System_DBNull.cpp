@@ -51,6 +51,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "DBNull", 0, NULL, "Value");
 		}
 
+		void DBNull::set_Value(mscorlib::System::DBNull  value)
+		{
+			throw;
+		}
 
 
 	}

@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_RSA.h>
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_CspParameters.h>
-#include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICspAsymmetricAlgorithm.h>
+#include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
 namespace mscorlib
@@ -61,22 +61,22 @@ namespace mscorlib
 
 				class RSACryptoServiceProvider
 					: public mscorlib::System::Security::Cryptography::RSA
-					, public virtual mscorlib::System::IDisposable
 					, public virtual mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm
+					, public virtual mscorlib::System::IDisposable
 				{
 				public:
 					RSACryptoServiceProvider()
 					: mscorlib::System::Security::Cryptography::RSA(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.RSACryptoServiceProvider"))
-					, mscorlib::System::IDisposable(NULL)
 					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
+					, mscorlib::System::IDisposable(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "RSACryptoServiceProvider");
 					};
 				
 					RSACryptoServiceProvider(mscorlib::System::Security::Cryptography::CspParameters parameters)
 					: mscorlib::System::Security::Cryptography::RSA(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.RSACryptoServiceProvider"))
-					, mscorlib::System::IDisposable(NULL)
 					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
+					, mscorlib::System::IDisposable(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -87,8 +87,8 @@ namespace mscorlib
 				
 					RSACryptoServiceProvider(mscorlib::System::Int32 dwKeySize)
 					: mscorlib::System::Security::Cryptography::RSA(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.RSACryptoServiceProvider"))
-					, mscorlib::System::IDisposable(NULL)
 					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
+					, mscorlib::System::IDisposable(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -99,8 +99,8 @@ namespace mscorlib
 				
 					RSACryptoServiceProvider(mscorlib::System::Int32 dwKeySize, mscorlib::System::Security::Cryptography::CspParameters parameters)
 					: mscorlib::System::Security::Cryptography::RSA(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Cryptography.RSACryptoServiceProvider"))
-					, mscorlib::System::IDisposable(NULL)
 					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
+					, mscorlib::System::IDisposable(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -113,15 +113,15 @@ namespace mscorlib
 				
 					RSACryptoServiceProvider(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::Cryptography::RSA(nativeTypeInfo)
-					, mscorlib::System::IDisposable(NULL)
 					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(NULL)
+					, mscorlib::System::IDisposable(NULL)
 					{
 					};
 				
 					RSACryptoServiceProvider(MonoObject *nativeObject)
 					: mscorlib::System::Security::Cryptography::RSA(nativeObject)
-					, mscorlib::System::IDisposable(nativeObject)
 					, mscorlib::System::Security::Cryptography::ICspAsymmetricAlgorithm(nativeObject)
+					, mscorlib::System::IDisposable(nativeObject)
 					{
 					};
 				
@@ -162,30 +162,30 @@ namespace mscorlib
 					__declspec(property(get=get_LegalKeySizes)) std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  LegalKeySizes;
 
 					//Public Static Properties
-					static Property<mscorlib::System::Boolean> UseMachineKeyStore;
+					static Property<mscorlib::System::Boolean , mscorlib::System::Security::Cryptography::RSACryptoServiceProvider> UseMachineKeyStore;
 
 					//Get Set Properties Methods
 					//	Get:KeyExchangeAlgorithm
-					mscorlib::System::String  get_KeyExchangeAlgorithm();
+					mscorlib::System::String  get_KeyExchangeAlgorithm() const;
 
 					//	Get:KeySize
-					mscorlib::System::Int32  get_KeySize();
+					mscorlib::System::Int32  get_KeySize() const;
 
 					//	Get/Set:PersistKeyInCsp
-					mscorlib::System::Boolean  get_PersistKeyInCsp();
+					mscorlib::System::Boolean  get_PersistKeyInCsp() const;
 					void set_PersistKeyInCsp(mscorlib::System::Boolean  value);
 
 					//	Get:PublicOnly
-					mscorlib::System::Boolean  get_PublicOnly();
+					mscorlib::System::Boolean  get_PublicOnly() const;
 
 					//	Get:SignatureAlgorithm
-					mscorlib::System::String  get_SignatureAlgorithm();
+					mscorlib::System::String  get_SignatureAlgorithm() const;
 
 					//	Get:CspKeyContainerInfo
-					mscorlib::System::Security::Cryptography::CspKeyContainerInfo  get_CspKeyContainerInfo();
+					mscorlib::System::Security::Cryptography::CspKeyContainerInfo  get_CspKeyContainerInfo() const;
 
 					//	Get:LegalKeySizes
-					std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  get_LegalKeySizes();
+					std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  get_LegalKeySizes() const;
 
 					//Get Set Static Properties Methods
 					//	Get/Set:UseMachineKeyStore

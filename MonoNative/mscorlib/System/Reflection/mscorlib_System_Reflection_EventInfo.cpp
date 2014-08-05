@@ -136,7 +136,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Attributes
-			mscorlib::System::Reflection::EventAttributes::__ENUM__  EventInfo::get_Attributes()
+			mscorlib::System::Reflection::EventAttributes::__ENUM__  EventInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::EventAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -144,7 +144,7 @@ namespace mscorlib
 
 
 			//	Get:EventHandlerType
-			mscorlib::System::Type  EventInfo::get_EventHandlerType()
+			mscorlib::System::Type  EventInfo::get_EventHandlerType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_EventHandlerType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -152,7 +152,7 @@ namespace mscorlib
 
 
 			//	Get:IsMulticast
-			mscorlib::System::Boolean  EventInfo::get_IsMulticast()
+			mscorlib::System::Boolean  EventInfo::get_IsMulticast() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_IsMulticast", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -160,7 +160,7 @@ namespace mscorlib
 
 
 			//	Get:IsSpecialName
-			mscorlib::System::Boolean  EventInfo::get_IsSpecialName()
+			mscorlib::System::Boolean  EventInfo::get_IsSpecialName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_IsSpecialName", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -168,7 +168,7 @@ namespace mscorlib
 
 
 			//	Get:MemberType
-			mscorlib::System::Reflection::MemberTypes::__ENUM__  EventInfo::get_MemberType()
+			mscorlib::System::Reflection::MemberTypes::__ENUM__  EventInfo::get_MemberType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -176,7 +176,7 @@ namespace mscorlib
 
 
 			//	Get:AddMethod
-			mscorlib::System::Reflection::MethodInfo  EventInfo::get_AddMethod()
+			mscorlib::System::Reflection::MethodInfo  EventInfo::get_AddMethod() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_AddMethod", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -184,7 +184,7 @@ namespace mscorlib
 
 
 			//	Get:RaiseMethod
-			mscorlib::System::Reflection::MethodInfo  EventInfo::get_RaiseMethod()
+			mscorlib::System::Reflection::MethodInfo  EventInfo::get_RaiseMethod() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_RaiseMethod", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -192,7 +192,7 @@ namespace mscorlib
 
 
 			//	Get:RemoveMethod
-			mscorlib::System::Reflection::MethodInfo  EventInfo::get_RemoveMethod()
+			mscorlib::System::Reflection::MethodInfo  EventInfo::get_RemoveMethod() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_RemoveMethod", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -200,7 +200,7 @@ namespace mscorlib
 
 
 			//	Get:DeclaringType
-			mscorlib::System::Type  EventInfo::get_DeclaringType()
+			mscorlib::System::Type  EventInfo::get_DeclaringType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_DeclaringType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -208,7 +208,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  EventInfo::get_Name()
+			mscorlib::System::String  EventInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -216,7 +216,7 @@ namespace mscorlib
 
 
 			//	Get:ReflectedType
-			mscorlib::System::Type  EventInfo::get_ReflectedType()
+			mscorlib::System::Type  EventInfo::get_ReflectedType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_ReflectedType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -224,7 +224,7 @@ namespace mscorlib
 
 
 			//	Get:Module
-			mscorlib::System::Reflection::Module  EventInfo::get_Module()
+			mscorlib::System::Reflection::Module  EventInfo::get_Module() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_Module", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::Module(__result__);
@@ -232,7 +232,7 @@ namespace mscorlib
 
 
 			//	Get:MetadataToken
-			mscorlib::System::Int32  EventInfo::get_MetadataToken()
+			mscorlib::System::Int32  EventInfo::get_MetadataToken() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_MetadataToken", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -240,7 +240,7 @@ namespace mscorlib
 
 
 			//	Get:CustomAttributes
-			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  EventInfo::get_CustomAttributes()
+			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  EventInfo::get_CustomAttributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MemberInfo", 0, NULL, "get_CustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>(__result__);

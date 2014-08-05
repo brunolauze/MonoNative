@@ -52,7 +52,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:InnerExceptions
-		mscorlib::System::Collections::ObjectModel::ReadOnlyCollection<mscorlib::System::Exception>  AggregateException::get_InnerExceptions()
+		mscorlib::System::Collections::ObjectModel::ReadOnlyCollection<mscorlib::System::Exception>  AggregateException::get_InnerExceptions() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AggregateException", 0, NULL, "get_InnerExceptions", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Collections::ObjectModel::ReadOnlyCollection<mscorlib::System::Exception>(__result__);
@@ -60,7 +60,7 @@ namespace mscorlib
 
 
 		//	Get:InnerException
-		mscorlib::System::Exception  AggregateException::get_InnerException()
+		mscorlib::System::Exception  AggregateException::get_InnerException() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_InnerException", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Exception(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 		//	Get/Set:HelpLink
-		mscorlib::System::String  AggregateException::get_HelpLink()
+		mscorlib::System::String  AggregateException::get_HelpLink() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HelpLink", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 		//	Get/Set:HResult
-		mscorlib::System::Int32  AggregateException::get_HResult()
+		mscorlib::System::Int32  AggregateException::get_HResult() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HResult", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -102,7 +102,7 @@ namespace mscorlib
 
 
 		//	Get:Message
-		mscorlib::System::String  AggregateException::get_Message()
+		mscorlib::System::String  AggregateException::get_Message() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -110,7 +110,7 @@ namespace mscorlib
 
 
 		//	Get/Set:Source
-		mscorlib::System::String  AggregateException::get_Source()
+		mscorlib::System::String  AggregateException::get_Source() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Source", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -127,7 +127,7 @@ namespace mscorlib
 
 
 		//	Get:StackTrace
-		mscorlib::System::String  AggregateException::get_StackTrace()
+		mscorlib::System::String  AggregateException::get_StackTrace() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -135,7 +135,7 @@ namespace mscorlib
 
 
 		//	Get:TargetSite
-		mscorlib::System::Reflection::MethodBase  AggregateException::get_TargetSite()
+		mscorlib::System::Reflection::MethodBase  AggregateException::get_TargetSite() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_TargetSite", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Reflection::MethodBase(__result__);
@@ -143,7 +143,7 @@ namespace mscorlib
 
 
 		//	Get:Data
-		mscorlib::System::Collections::IDictionary  AggregateException::get_Data()
+		mscorlib::System::Collections::IDictionary  AggregateException::get_Data() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Data", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Collections::IDictionary(__result__);

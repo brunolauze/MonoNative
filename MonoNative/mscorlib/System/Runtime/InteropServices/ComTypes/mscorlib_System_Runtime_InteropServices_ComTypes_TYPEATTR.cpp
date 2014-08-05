@@ -21,7 +21,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:guid
-					mscorlib::System::Guid TYPEATTR::get_guid()
+					mscorlib::System::Guid TYPEATTR::get_guid() const
 					{
 						return Global::GetFieldValue(__native_object__, "guid");
 					}
@@ -31,7 +31,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:lcid
-					mscorlib::System::Int32 TYPEATTR::get_lcid()
+					mscorlib::System::Int32 TYPEATTR::get_lcid() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "lcid");
 					}
@@ -41,7 +41,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:dwReserved
-					mscorlib::System::Int32 TYPEATTR::get_dwReserved()
+					mscorlib::System::Int32 TYPEATTR::get_dwReserved() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "dwReserved");
 					}
@@ -51,7 +51,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:memidConstructor
-					mscorlib::System::Int32 TYPEATTR::get_memidConstructor()
+					mscorlib::System::Int32 TYPEATTR::get_memidConstructor() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "memidConstructor");
 					}
@@ -61,7 +61,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:memidDestructor
-					mscorlib::System::Int32 TYPEATTR::get_memidDestructor()
+					mscorlib::System::Int32 TYPEATTR::get_memidDestructor() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "memidDestructor");
 					}
@@ -71,7 +71,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:lpstrSchema
-					mscorlib::System::IntPtr TYPEATTR::get_lpstrSchema()
+					mscorlib::System::IntPtr TYPEATTR::get_lpstrSchema() const
 					{
 						return Global::GetFieldValue(__native_object__, "lpstrSchema");
 					}
@@ -81,7 +81,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cbSizeInstance
-					mscorlib::System::Int32 TYPEATTR::get_cbSizeInstance()
+					mscorlib::System::Int32 TYPEATTR::get_cbSizeInstance() const
 					{
 						return Global::GetFieldInt32Value(__native_object__, "cbSizeInstance");
 					}
@@ -91,7 +91,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:typekind
-					mscorlib::System::Runtime::InteropServices::ComTypes::TYPEKIND::__ENUM__ TYPEATTR::get_typekind()
+					mscorlib::System::Runtime::InteropServices::ComTypes::TYPEKIND::__ENUM__ TYPEATTR::get_typekind() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::TYPEKIND::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "typekind"));
 					}
@@ -101,7 +101,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cFuncs
-					mscorlib::System::Int16 TYPEATTR::get_cFuncs()
+					mscorlib::System::Int16 TYPEATTR::get_cFuncs() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "cFuncs");
 					}
@@ -111,7 +111,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cVars
-					mscorlib::System::Int16 TYPEATTR::get_cVars()
+					mscorlib::System::Int16 TYPEATTR::get_cVars() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "cVars");
 					}
@@ -121,7 +121,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cImplTypes
-					mscorlib::System::Int16 TYPEATTR::get_cImplTypes()
+					mscorlib::System::Int16 TYPEATTR::get_cImplTypes() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "cImplTypes");
 					}
@@ -131,7 +131,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cbSizeVft
-					mscorlib::System::Int16 TYPEATTR::get_cbSizeVft()
+					mscorlib::System::Int16 TYPEATTR::get_cbSizeVft() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "cbSizeVft");
 					}
@@ -141,7 +141,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:cbAlignment
-					mscorlib::System::Int16 TYPEATTR::get_cbAlignment()
+					mscorlib::System::Int16 TYPEATTR::get_cbAlignment() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "cbAlignment");
 					}
@@ -151,7 +151,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wTypeFlags
-					mscorlib::System::Runtime::InteropServices::ComTypes::TYPEFLAGS::__ENUM__ TYPEATTR::get_wTypeFlags()
+					mscorlib::System::Runtime::InteropServices::ComTypes::TYPEFLAGS::__ENUM__ TYPEATTR::get_wTypeFlags() const
 					{
 						return static_cast<mscorlib::System::Runtime::InteropServices::ComTypes::TYPEFLAGS::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "wTypeFlags"));
 					}
@@ -161,7 +161,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wMajorVerNum
-					mscorlib::System::Int16 TYPEATTR::get_wMajorVerNum()
+					mscorlib::System::Int16 TYPEATTR::get_wMajorVerNum() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "wMajorVerNum");
 					}
@@ -171,7 +171,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:wMinorVerNum
-					mscorlib::System::Int16 TYPEATTR::get_wMinorVerNum()
+					mscorlib::System::Int16 TYPEATTR::get_wMinorVerNum() const
 					{
 						return Global::GetFieldInt16Value(__native_object__, "wMinorVerNum");
 					}
@@ -181,7 +181,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:tdescAlias
-					mscorlib::System::Runtime::InteropServices::ComTypes::TYPEDESC TYPEATTR::get_tdescAlias()
+					mscorlib::System::Runtime::InteropServices::ComTypes::TYPEDESC TYPEATTR::get_tdescAlias() const
 					{
 						return Global::GetFieldValue(__native_object__, "tdescAlias");
 					}
@@ -191,7 +191,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:idldescType
-					mscorlib::System::Runtime::InteropServices::ComTypes::IDLDESC TYPEATTR::get_idldescType()
+					mscorlib::System::Runtime::InteropServices::ComTypes::IDLDESC TYPEATTR::get_idldescType() const
 					{
 						return Global::GetFieldValue(__native_object__, "idldescType");
 					}

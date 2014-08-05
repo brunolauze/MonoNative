@@ -43,7 +43,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CspKeyContainerInfo
-				mscorlib::System::Security::Cryptography::CspKeyContainerInfo  ICspAsymmetricAlgorithm::get_CspKeyContainerInfo()
+				mscorlib::System::Security::Cryptography::CspKeyContainerInfo  ICspAsymmetricAlgorithm::get_CspKeyContainerInfo() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "ICspAsymmetricAlgorithm", 0, NULL, "get_CspKeyContainerInfo", __mscorlib_System_Security_Cryptography_ICspAsymmetricAlgorithm, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Cryptography::CspKeyContainerInfo(__result__);

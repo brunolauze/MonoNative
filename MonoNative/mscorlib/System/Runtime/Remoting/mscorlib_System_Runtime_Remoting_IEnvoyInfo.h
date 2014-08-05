@@ -37,7 +37,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:EnvoySinks
-					mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  get_EnvoySinks();
+					mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  get_EnvoySinks() const;
 					void set_EnvoySinks(mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  value);
 
 				

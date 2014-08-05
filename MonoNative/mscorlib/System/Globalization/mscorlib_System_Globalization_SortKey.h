@@ -59,10 +59,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:OriginalString
-				mscorlib::System::String  get_OriginalString();
+				mscorlib::System::String  get_OriginalString() const;
 
 				//	Get:KeyData
-				std::vector<mscorlib::System::Byte*>  get_KeyData();
+				std::vector<mscorlib::System::Byte*>  get_KeyData() const;
 
 			
 			protected:

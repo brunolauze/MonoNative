@@ -9,6 +9,8 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::DateTimeOffset , mscorlib::System::DateTimeOffset> mscorlib::System::DateTimeOffset::Now(&mscorlib::System::DateTimeOffset::get_Now, &mscorlib::System::DateTimeOffset::set_Now);
+		Property<mscorlib::System::DateTimeOffset , mscorlib::System::DateTimeOffset> mscorlib::System::DateTimeOffset::UtcNow(&mscorlib::System::DateTimeOffset::get_UtcNow, &mscorlib::System::DateTimeOffset::set_UtcNow);
 		//Public Methods
 		mscorlib::System::DateTimeOffset DateTimeOffset::Add(mscorlib::System::TimeSpan timeSpan)
 		{
@@ -414,7 +416,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Date
-		mscorlib::System::DateTime  DateTimeOffset::get_Date()
+		mscorlib::System::DateTime  DateTimeOffset::get_Date() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Date", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::DateTime(__result__);
@@ -422,7 +424,7 @@ namespace mscorlib
 
 
 		//	Get:DateTime
-		mscorlib::System::DateTime  DateTimeOffset::get_DateTime()
+		mscorlib::System::DateTime  DateTimeOffset::get_DateTime() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_DateTime", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::DateTime(__result__);
@@ -430,7 +432,7 @@ namespace mscorlib
 
 
 		//	Get:Day
-		mscorlib::System::Int32  DateTimeOffset::get_Day()
+		mscorlib::System::Int32  DateTimeOffset::get_Day() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Day", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -438,7 +440,7 @@ namespace mscorlib
 
 
 		//	Get:DayOfWeek
-		mscorlib::System::DayOfWeek::__ENUM__  DateTimeOffset::get_DayOfWeek()
+		mscorlib::System::DayOfWeek::__ENUM__  DateTimeOffset::get_DayOfWeek() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_DayOfWeek", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__);
@@ -446,7 +448,7 @@ namespace mscorlib
 
 
 		//	Get:DayOfYear
-		mscorlib::System::Int32  DateTimeOffset::get_DayOfYear()
+		mscorlib::System::Int32  DateTimeOffset::get_DayOfYear() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_DayOfYear", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -454,7 +456,7 @@ namespace mscorlib
 
 
 		//	Get:Hour
-		mscorlib::System::Int32  DateTimeOffset::get_Hour()
+		mscorlib::System::Int32  DateTimeOffset::get_Hour() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Hour", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -462,7 +464,7 @@ namespace mscorlib
 
 
 		//	Get:LocalDateTime
-		mscorlib::System::DateTime  DateTimeOffset::get_LocalDateTime()
+		mscorlib::System::DateTime  DateTimeOffset::get_LocalDateTime() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_LocalDateTime", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::DateTime(__result__);
@@ -470,7 +472,7 @@ namespace mscorlib
 
 
 		//	Get:Millisecond
-		mscorlib::System::Int32  DateTimeOffset::get_Millisecond()
+		mscorlib::System::Int32  DateTimeOffset::get_Millisecond() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Millisecond", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -478,7 +480,7 @@ namespace mscorlib
 
 
 		//	Get:Minute
-		mscorlib::System::Int32  DateTimeOffset::get_Minute()
+		mscorlib::System::Int32  DateTimeOffset::get_Minute() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Minute", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -486,7 +488,7 @@ namespace mscorlib
 
 
 		//	Get:Month
-		mscorlib::System::Int32  DateTimeOffset::get_Month()
+		mscorlib::System::Int32  DateTimeOffset::get_Month() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Month", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -494,7 +496,7 @@ namespace mscorlib
 
 
 		//	Get:Offset
-		mscorlib::System::TimeSpan  DateTimeOffset::get_Offset()
+		mscorlib::System::TimeSpan  DateTimeOffset::get_Offset() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Offset", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeSpan(__result__);
@@ -502,7 +504,7 @@ namespace mscorlib
 
 
 		//	Get:Second
-		mscorlib::System::Int32  DateTimeOffset::get_Second()
+		mscorlib::System::Int32  DateTimeOffset::get_Second() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Second", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -510,7 +512,7 @@ namespace mscorlib
 
 
 		//	Get:Ticks
-		mscorlib::System::Int64  DateTimeOffset::get_Ticks()
+		mscorlib::System::Int64  DateTimeOffset::get_Ticks() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Ticks", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -518,7 +520,7 @@ namespace mscorlib
 
 
 		//	Get:TimeOfDay
-		mscorlib::System::TimeSpan  DateTimeOffset::get_TimeOfDay()
+		mscorlib::System::TimeSpan  DateTimeOffset::get_TimeOfDay() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_TimeOfDay", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeSpan(__result__);
@@ -526,7 +528,7 @@ namespace mscorlib
 
 
 		//	Get:UtcDateTime
-		mscorlib::System::DateTime  DateTimeOffset::get_UtcDateTime()
+		mscorlib::System::DateTime  DateTimeOffset::get_UtcDateTime() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_UtcDateTime", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::DateTime(__result__);
@@ -534,7 +536,7 @@ namespace mscorlib
 
 
 		//	Get:UtcTicks
-		mscorlib::System::Int64  DateTimeOffset::get_UtcTicks()
+		mscorlib::System::Int64  DateTimeOffset::get_UtcTicks() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_UtcTicks", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -542,7 +544,7 @@ namespace mscorlib
 
 
 		//	Get:Year
-		mscorlib::System::Int32  DateTimeOffset::get_Year()
+		mscorlib::System::Int32  DateTimeOffset::get_Year() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_Year", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -557,12 +559,22 @@ namespace mscorlib
 			return mscorlib::System::DateTimeOffset(__result__);
 		}
 
+		void DateTimeOffset::set_Now(mscorlib::System::DateTimeOffset  value)
+		{
+			throw;
+		}
+
 
 		//	Get:UtcNow
 		mscorlib::System::DateTimeOffset  DateTimeOffset::get_UtcNow()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "DateTimeOffset", 0, NULL, "get_UtcNow", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::DateTimeOffset(__result__);
+		}
+
+		void DateTimeOffset::set_UtcNow(mscorlib::System::DateTimeOffset  value)
+		{
+			throw;
 		}
 
 
@@ -573,6 +585,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "DateTimeOffset", 0, NULL, "MaxValue");
 		}
 
+		void DateTimeOffset::set_MaxValue(mscorlib::System::DateTimeOffset  value)
+		{
+			throw;
+		}
 
 			//	Get/Set:MinValue
 		mscorlib::System::DateTimeOffset DateTimeOffset::get_MinValue()
@@ -580,6 +596,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "DateTimeOffset", 0, NULL, "MinValue");
 		}
 
+		void DateTimeOffset::set_MinValue(mscorlib::System::DateTimeOffset  value)
+		{
+			throw;
+		}
 
 
 	}

@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Name
-				mscorlib::System::String  StrongNameIdentityPermissionAttribute::get_Name()
+				mscorlib::System::String  StrongNameIdentityPermissionAttribute::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "StrongNameIdentityPermissionAttribute", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:PublicKey
-				mscorlib::System::String  StrongNameIdentityPermissionAttribute::get_PublicKey()
+				mscorlib::System::String  StrongNameIdentityPermissionAttribute::get_PublicKey() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "StrongNameIdentityPermissionAttribute", 0, NULL, "get_PublicKey", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Version
-				mscorlib::System::String  StrongNameIdentityPermissionAttribute::get_Version()
+				mscorlib::System::String  StrongNameIdentityPermissionAttribute::get_Version() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "StrongNameIdentityPermissionAttribute", 0, NULL, "get_Version", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  StrongNameIdentityPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  StrongNameIdentityPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  StrongNameIdentityPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  StrongNameIdentityPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  StrongNameIdentityPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  StrongNameIdentityPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

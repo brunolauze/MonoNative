@@ -171,25 +171,25 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CodeBase
-					mscorlib::System::String  get_CodeBase();
+					mscorlib::System::String  get_CodeBase() const;
 
 					//	Get:EscapedCodeBase
-					mscorlib::System::String  get_EscapedCodeBase();
+					mscorlib::System::String  get_EscapedCodeBase() const;
 
 					//	Get:FullName
-					mscorlib::System::String  get_FullName();
+					mscorlib::System::String  get_FullName() const;
 
 					//	Get:EntryPoint
-					mscorlib::System::Reflection::MethodInfo  get_EntryPoint();
+					mscorlib::System::Reflection::MethodInfo  get_EntryPoint() const;
 
 					//	Get:Location
-					mscorlib::System::String  get_Location();
+					mscorlib::System::String  get_Location() const;
 
 					//	Get:Evidence
-					mscorlib::System::Security::Policy::Evidence  get_Evidence();
+					mscorlib::System::Security::Policy::Evidence  get_Evidence() const;
 
 					//	Get:GlobalAssemblyCache
-					mscorlib::System::Boolean  get_GlobalAssemblyCache();
+					mscorlib::System::Boolean  get_GlobalAssemblyCache() const;
 
 				
 				protected:

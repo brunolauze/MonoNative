@@ -37,7 +37,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Count
-			mscorlib::System::Int32  DictionaryBase::get_Count()
+			mscorlib::System::Int32  DictionaryBase::get_Count() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "DictionaryBase", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

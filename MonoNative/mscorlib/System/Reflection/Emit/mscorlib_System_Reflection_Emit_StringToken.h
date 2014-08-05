@@ -59,7 +59,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Token
-					mscorlib::System::Int32  get_Token();
+					mscorlib::System::Int32  get_Token() const;
 
 				
 				protected:

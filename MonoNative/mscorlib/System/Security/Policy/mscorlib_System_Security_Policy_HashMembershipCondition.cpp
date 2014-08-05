@@ -94,7 +94,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:HashAlgorithm
-				mscorlib::System::Security::Cryptography::HashAlgorithm  HashMembershipCondition::get_HashAlgorithm()
+				mscorlib::System::Security::Cryptography::HashAlgorithm  HashMembershipCondition::get_HashAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "HashMembershipCondition", 0, NULL, "get_HashAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Cryptography::HashAlgorithm(__result__);
@@ -111,7 +111,7 @@ namespace mscorlib
 
 
 				//	Get/Set:HashValue
-				std::vector<mscorlib::System::Byte*>  HashMembershipCondition::get_HashValue()
+				std::vector<mscorlib::System::Byte*>  HashMembershipCondition::get_HashValue() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "HashMembershipCondition", 0, NULL, "get_HashValue", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;

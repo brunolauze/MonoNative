@@ -69,19 +69,19 @@ namespace mscorlib
 				__declspec(property(get=get_TargetType, put=set_TargetType)) mscorlib::System::Type  TargetType;
 
 				//	Get/Set:InterfaceMethods
-				std::vector<mscorlib::System::Reflection::MethodInfo*>  get_InterfaceMethods();
+				std::vector<mscorlib::System::Reflection::MethodInfo*>  get_InterfaceMethods() const;
 				void set_InterfaceMethods(std::vector<mscorlib::System::Reflection::MethodInfo*>  value);
 
 				//	Get/Set:InterfaceType
-				mscorlib::System::Type  get_InterfaceType();
+				mscorlib::System::Type  get_InterfaceType() const;
 				void set_InterfaceType(mscorlib::System::Type  value);
 
 				//	Get/Set:TargetMethods
-				std::vector<mscorlib::System::Reflection::MethodInfo*>  get_TargetMethods();
+				std::vector<mscorlib::System::Reflection::MethodInfo*>  get_TargetMethods() const;
 				void set_TargetMethods(std::vector<mscorlib::System::Reflection::MethodInfo*>  value);
 
 				//	Get/Set:TargetType
-				mscorlib::System::Type  get_TargetType();
+				mscorlib::System::Type  get_TargetType() const;
 				void set_TargetType(mscorlib::System::Type  value);
 
 			

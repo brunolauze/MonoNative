@@ -28,7 +28,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Current
-				mscorlib::System::Runtime::Serialization::SerializationEntry  SerializationInfoEnumerator::get_Current()
+				mscorlib::System::Runtime::Serialization::SerializationEntry  SerializationInfoEnumerator::get_Current() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfoEnumerator", 0, NULL, "get_Current", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Runtime::Serialization::SerializationEntry(__result__);
@@ -36,7 +36,7 @@ namespace mscorlib
 
 
 				//	Get:Name
-				mscorlib::System::String  SerializationInfoEnumerator::get_Name()
+				mscorlib::System::String  SerializationInfoEnumerator::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfoEnumerator", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -44,7 +44,7 @@ namespace mscorlib
 
 
 				//	Get:ObjectType
-				mscorlib::System::Type  SerializationInfoEnumerator::get_ObjectType()
+				mscorlib::System::Type  SerializationInfoEnumerator::get_ObjectType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfoEnumerator", 0, NULL, "get_ObjectType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -52,7 +52,7 @@ namespace mscorlib
 
 
 				//	Get:Value
-				mscorlib::System::Object  SerializationInfoEnumerator::get_Value()
+				mscorlib::System::Object  SerializationInfoEnumerator::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfoEnumerator", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

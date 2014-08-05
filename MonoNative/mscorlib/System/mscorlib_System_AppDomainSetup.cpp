@@ -46,7 +46,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get/Set:ApplicationBase
-		mscorlib::System::String  AppDomainSetup::get_ApplicationBase()
+		mscorlib::System::String  AppDomainSetup::get_ApplicationBase() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_ApplicationBase", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -63,7 +63,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ApplicationName
-		mscorlib::System::String  AppDomainSetup::get_ApplicationName()
+		mscorlib::System::String  AppDomainSetup::get_ApplicationName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_ApplicationName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 		//	Get/Set:CachePath
-		mscorlib::System::String  AppDomainSetup::get_CachePath()
+		mscorlib::System::String  AppDomainSetup::get_CachePath() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_CachePath", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -97,7 +97,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ConfigurationFile
-		mscorlib::System::String  AppDomainSetup::get_ConfigurationFile()
+		mscorlib::System::String  AppDomainSetup::get_ConfigurationFile() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_ConfigurationFile", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -114,7 +114,7 @@ namespace mscorlib
 
 
 		//	Get/Set:DisallowPublisherPolicy
-		mscorlib::System::Boolean  AppDomainSetup::get_DisallowPublisherPolicy()
+		mscorlib::System::Boolean  AppDomainSetup::get_DisallowPublisherPolicy() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_DisallowPublisherPolicy", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -131,7 +131,7 @@ namespace mscorlib
 
 
 		//	Get/Set:DynamicBase
-		mscorlib::System::String  AppDomainSetup::get_DynamicBase()
+		mscorlib::System::String  AppDomainSetup::get_DynamicBase() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_DynamicBase", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -148,7 +148,7 @@ namespace mscorlib
 
 
 		//	Get/Set:LicenseFile
-		mscorlib::System::String  AppDomainSetup::get_LicenseFile()
+		mscorlib::System::String  AppDomainSetup::get_LicenseFile() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_LicenseFile", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -165,7 +165,7 @@ namespace mscorlib
 
 
 		//	Get/Set:LoaderOptimization
-		mscorlib::System::LoaderOptimization::__ENUM__  AppDomainSetup::get_LoaderOptimization()
+		mscorlib::System::LoaderOptimization::__ENUM__  AppDomainSetup::get_LoaderOptimization() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_LoaderOptimization", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::LoaderOptimization::__ENUM__*)mono_object_unbox(__result__);
@@ -182,7 +182,7 @@ namespace mscorlib
 
 
 		//	Get/Set:PrivateBinPath
-		mscorlib::System::String  AppDomainSetup::get_PrivateBinPath()
+		mscorlib::System::String  AppDomainSetup::get_PrivateBinPath() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_PrivateBinPath", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -199,7 +199,7 @@ namespace mscorlib
 
 
 		//	Get/Set:PrivateBinPathProbe
-		mscorlib::System::String  AppDomainSetup::get_PrivateBinPathProbe()
+		mscorlib::System::String  AppDomainSetup::get_PrivateBinPathProbe() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_PrivateBinPathProbe", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -216,7 +216,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ShadowCopyDirectories
-		mscorlib::System::String  AppDomainSetup::get_ShadowCopyDirectories()
+		mscorlib::System::String  AppDomainSetup::get_ShadowCopyDirectories() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_ShadowCopyDirectories", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -233,7 +233,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ShadowCopyFiles
-		mscorlib::System::String  AppDomainSetup::get_ShadowCopyFiles()
+		mscorlib::System::String  AppDomainSetup::get_ShadowCopyFiles() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_ShadowCopyFiles", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -250,7 +250,7 @@ namespace mscorlib
 
 
 		//	Get/Set:DisallowBindingRedirects
-		mscorlib::System::Boolean  AppDomainSetup::get_DisallowBindingRedirects()
+		mscorlib::System::Boolean  AppDomainSetup::get_DisallowBindingRedirects() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_DisallowBindingRedirects", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -267,7 +267,7 @@ namespace mscorlib
 
 
 		//	Get/Set:DisallowCodeDownload
-		mscorlib::System::Boolean  AppDomainSetup::get_DisallowCodeDownload()
+		mscorlib::System::Boolean  AppDomainSetup::get_DisallowCodeDownload() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_DisallowCodeDownload", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -284,7 +284,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ActivationArguments
-		mscorlib::System::Runtime::Hosting::ActivationArguments  AppDomainSetup::get_ActivationArguments()
+		mscorlib::System::Runtime::Hosting::ActivationArguments  AppDomainSetup::get_ActivationArguments() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_ActivationArguments", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Runtime::Hosting::ActivationArguments(__result__);
@@ -301,7 +301,7 @@ namespace mscorlib
 
 
 		//	Get/Set:AppDomainInitializer
-		mscorlib::Callback<void  (std::vector<mscorlib::System::String*> )>  AppDomainSetup::get_AppDomainInitializer()
+		mscorlib::Callback<void  (std::vector<mscorlib::System::String*> )>  AppDomainSetup::get_AppDomainInitializer() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_AppDomainInitializer", __native_object__, 0, NULL, NULL, NULL);
 			void* __delegate_result__ = mono_object_unbox(__result__);
@@ -319,7 +319,7 @@ namespace mscorlib
 
 
 		//	Get/Set:AppDomainInitializerArguments
-		std::vector<mscorlib::System::String*>  AppDomainSetup::get_AppDomainInitializerArguments()
+		std::vector<mscorlib::System::String*>  AppDomainSetup::get_AppDomainInitializerArguments() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_AppDomainInitializerArguments", __native_object__, 0, NULL, NULL, NULL);
 			MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -344,7 +344,7 @@ namespace mscorlib
 
 
 		//	Get/Set:ApplicationTrust
-		mscorlib::System::Security::Policy::ApplicationTrust  AppDomainSetup::get_ApplicationTrust()
+		mscorlib::System::Security::Policy::ApplicationTrust  AppDomainSetup::get_ApplicationTrust() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_ApplicationTrust", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Security::Policy::ApplicationTrust(__result__);
@@ -361,7 +361,7 @@ namespace mscorlib
 
 
 		//	Get/Set:DisallowApplicationBaseProbing
-		mscorlib::System::Boolean  AppDomainSetup::get_DisallowApplicationBaseProbing()
+		mscorlib::System::Boolean  AppDomainSetup::get_DisallowApplicationBaseProbing() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_DisallowApplicationBaseProbing", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

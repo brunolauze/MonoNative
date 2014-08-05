@@ -72,7 +72,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:BlockSizeValue
-				mscorlib::System::Int32  RijndaelManagedTransform::get_BlockSizeValue()
+				mscorlib::System::Int32  RijndaelManagedTransform::get_BlockSizeValue() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RijndaelManagedTransform", 0, NULL, "get_BlockSizeValue", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 				//	Get:CanTransformMultipleBlocks
-				mscorlib::System::Boolean  RijndaelManagedTransform::get_CanTransformMultipleBlocks()
+				mscorlib::System::Boolean  RijndaelManagedTransform::get_CanTransformMultipleBlocks() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RijndaelManagedTransform", 0, NULL, "get_CanTransformMultipleBlocks", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -88,7 +88,7 @@ namespace mscorlib
 
 
 				//	Get:CanReuseTransform
-				mscorlib::System::Boolean  RijndaelManagedTransform::get_CanReuseTransform()
+				mscorlib::System::Boolean  RijndaelManagedTransform::get_CanReuseTransform() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RijndaelManagedTransform", 0, NULL, "get_CanReuseTransform", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -96,7 +96,7 @@ namespace mscorlib
 
 
 				//	Get:InputBlockSize
-				mscorlib::System::Int32  RijndaelManagedTransform::get_InputBlockSize()
+				mscorlib::System::Int32  RijndaelManagedTransform::get_InputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RijndaelManagedTransform", 0, NULL, "get_InputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -104,7 +104,7 @@ namespace mscorlib
 
 
 				//	Get:OutputBlockSize
-				mscorlib::System::Int32  RijndaelManagedTransform::get_OutputBlockSize()
+				mscorlib::System::Int32  RijndaelManagedTransform::get_OutputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RijndaelManagedTransform", 0, NULL, "get_OutputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

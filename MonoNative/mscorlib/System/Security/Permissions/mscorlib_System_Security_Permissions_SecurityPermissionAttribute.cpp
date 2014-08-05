@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Assertion
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_Assertion()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_Assertion() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_Assertion", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:BindingRedirects
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_BindingRedirects()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_BindingRedirects() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_BindingRedirects", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ControlAppDomain
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlAppDomain()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlAppDomain() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_ControlAppDomain", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ControlDomainPolicy
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlDomainPolicy()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlDomainPolicy() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_ControlDomainPolicy", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ControlEvidence
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlEvidence()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlEvidence() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_ControlEvidence", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ControlPolicy
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlPolicy()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlPolicy() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_ControlPolicy", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ControlPrincipal
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlPrincipal()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlPrincipal() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_ControlPrincipal", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ControlThread
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlThread()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_ControlThread() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_ControlThread", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -158,7 +158,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Execution
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_Execution()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_Execution() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_Execution", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -175,7 +175,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Infrastructure
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_Infrastructure()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_Infrastructure() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_Infrastructure", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -192,7 +192,7 @@ namespace mscorlib
 
 
 				//	Get/Set:RemotingConfiguration
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_RemotingConfiguration()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_RemotingConfiguration() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_RemotingConfiguration", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -209,7 +209,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SerializationFormatter
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_SerializationFormatter()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_SerializationFormatter() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_SerializationFormatter", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -226,7 +226,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SkipVerification
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_SkipVerification()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_SkipVerification() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_SkipVerification", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -243,7 +243,7 @@ namespace mscorlib
 
 
 				//	Get/Set:UnmanagedCode
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_UnmanagedCode()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_UnmanagedCode() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_UnmanagedCode", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -260,7 +260,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Flags
-				mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__  SecurityPermissionAttribute::get_Flags()
+				mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__  SecurityPermissionAttribute::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermissionAttribute", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__*)mono_object_unbox(__result__);
@@ -277,7 +277,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  SecurityPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  SecurityPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -294,7 +294,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  SecurityPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  SecurityPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -311,7 +311,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  SecurityPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  SecurityPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

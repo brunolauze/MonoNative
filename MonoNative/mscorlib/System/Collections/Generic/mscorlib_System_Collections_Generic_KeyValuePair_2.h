@@ -73,7 +73,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Key
-					TKey  get_Key()
+					TKey  get_Key() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());
@@ -95,7 +95,7 @@ namespace mscorlib
 				
 
 					//	Get/Set:Value
-					TValue  get_Value()
+					TValue  get_Value() const
 					{
 						MonoType *__generic_types__[2];
 						__generic_types__[0] = Global::GetType(typeid(TKey).name());

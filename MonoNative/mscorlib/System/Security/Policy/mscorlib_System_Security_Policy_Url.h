@@ -93,7 +93,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Value
-					mscorlib::System::String  get_Value();
+					mscorlib::System::String  get_Value() const;
 
 				
 				protected:

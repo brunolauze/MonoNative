@@ -56,11 +56,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:AssemblyName
-					mscorlib::System::String  get_AssemblyName();
+					mscorlib::System::String  get_AssemblyName() const;
 					void set_AssemblyName(mscorlib::System::String  value);
 
 					//	Get/Set:TypeName
-					mscorlib::System::String  get_TypeName();
+					mscorlib::System::String  get_TypeName() const;
 					void set_TypeName(mscorlib::System::String  value);
 
 				

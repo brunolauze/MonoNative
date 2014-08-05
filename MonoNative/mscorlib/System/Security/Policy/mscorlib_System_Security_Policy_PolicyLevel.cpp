@@ -162,7 +162,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:FullTrustAssemblies
-				mscorlib::System::Collections::IList  PolicyLevel::get_FullTrustAssemblies()
+				mscorlib::System::Collections::IList  PolicyLevel::get_FullTrustAssemblies() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "get_FullTrustAssemblies", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::IList(__result__);
@@ -170,7 +170,7 @@ namespace mscorlib
 
 
 				//	Get:Label
-				mscorlib::System::String  PolicyLevel::get_Label()
+				mscorlib::System::String  PolicyLevel::get_Label() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "get_Label", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -178,7 +178,7 @@ namespace mscorlib
 
 
 				//	Get:NamedPermissionSets
-				mscorlib::System::Collections::IList  PolicyLevel::get_NamedPermissionSets()
+				mscorlib::System::Collections::IList  PolicyLevel::get_NamedPermissionSets() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "get_NamedPermissionSets", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::IList(__result__);
@@ -186,7 +186,7 @@ namespace mscorlib
 
 
 				//	Get/Set:RootCodeGroup
-				mscorlib::System::Security::Policy::CodeGroup  PolicyLevel::get_RootCodeGroup()
+				mscorlib::System::Security::Policy::CodeGroup  PolicyLevel::get_RootCodeGroup() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "get_RootCodeGroup", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Policy::CodeGroup(__result__);
@@ -203,7 +203,7 @@ namespace mscorlib
 
 
 				//	Get:StoreLocation
-				mscorlib::System::String  PolicyLevel::get_StoreLocation()
+				mscorlib::System::String  PolicyLevel::get_StoreLocation() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "get_StoreLocation", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -211,7 +211,7 @@ namespace mscorlib
 
 
 				//	Get:Type
-				mscorlib::System::Security::PolicyLevelType::__ENUM__  PolicyLevel::get_Type()
+				mscorlib::System::Security::PolicyLevelType::__ENUM__  PolicyLevel::get_Type() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "get_Type", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::PolicyLevelType::__ENUM__*)mono_object_unbox(__result__);

@@ -23,7 +23,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Current
-			mscorlib::System::Object  IEnumerator::get_Current()
+			mscorlib::System::Object  IEnumerator::get_Current() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "IEnumerator", 0, NULL, "get_Current", __mscorlib_System_Collections_IEnumerator, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

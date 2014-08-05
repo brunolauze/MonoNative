@@ -37,7 +37,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Type
-				mscorlib::System::String  Claim::get_Type()
+				mscorlib::System::String  Claim::get_Type() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "get_Type", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -54,7 +54,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Value
-				mscorlib::System::String  Claim::get_Value()
+				mscorlib::System::String  Claim::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -71,7 +71,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ValueType
-				mscorlib::System::String  Claim::get_ValueType()
+				mscorlib::System::String  Claim::get_ValueType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "get_ValueType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -88,7 +88,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Issuer
-				mscorlib::System::String  Claim::get_Issuer()
+				mscorlib::System::String  Claim::get_Issuer() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "get_Issuer", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -105,7 +105,7 @@ namespace mscorlib
 
 
 				//	Get/Set:OriginalIssuer
-				mscorlib::System::String  Claim::get_OriginalIssuer()
+				mscorlib::System::String  Claim::get_OriginalIssuer() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "get_OriginalIssuer", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -122,7 +122,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Subject
-				mscorlib::System::Security::Claims::ClaimsIdentity  Claim::get_Subject()
+				mscorlib::System::Security::Claims::ClaimsIdentity  Claim::get_Subject() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "get_Subject", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Claims::ClaimsIdentity(__result__);
@@ -139,7 +139,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Properties
-				mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  Claim::get_Properties()
+				mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  Claim::get_Properties() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "get_Properties", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>(__result__);

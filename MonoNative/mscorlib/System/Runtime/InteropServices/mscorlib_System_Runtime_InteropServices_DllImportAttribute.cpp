@@ -15,7 +15,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:Value
-				mscorlib::System::String  DllImportAttribute::get_Value()
+				mscorlib::System::String  DllImportAttribute::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "DllImportAttribute", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -23,7 +23,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  DllImportAttribute::get_TypeId()
+				mscorlib::System::Object  DllImportAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -31,7 +31,7 @@ namespace mscorlib
 
 
 				//	Get/Set:CallingConvention
-				mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__ DllImportAttribute::get_CallingConvention()
+				mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__ DllImportAttribute::get_CallingConvention() const
 				{
 					return static_cast<mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "CallingConvention"));
 				}
@@ -41,7 +41,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:CharSet
-				mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__ DllImportAttribute::get_CharSet()
+				mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__ DllImportAttribute::get_CharSet() const
 				{
 					return static_cast<mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "CharSet"));
 				}
@@ -51,7 +51,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:EntryPoint
-				mscorlib::System::String DllImportAttribute::get_EntryPoint()
+				mscorlib::System::String DllImportAttribute::get_EntryPoint() const
 				{
 					return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "EntryPoint"));
 				}
@@ -61,7 +61,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:ExactSpelling
-				mscorlib::System::Boolean DllImportAttribute::get_ExactSpelling()
+				mscorlib::System::Boolean DllImportAttribute::get_ExactSpelling() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "ExactSpelling");
 				}
@@ -71,7 +71,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:PreserveSig
-				mscorlib::System::Boolean DllImportAttribute::get_PreserveSig()
+				mscorlib::System::Boolean DllImportAttribute::get_PreserveSig() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "PreserveSig");
 				}
@@ -81,7 +81,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:SetLastError
-				mscorlib::System::Boolean DllImportAttribute::get_SetLastError()
+				mscorlib::System::Boolean DllImportAttribute::get_SetLastError() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "SetLastError");
 				}
@@ -91,7 +91,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:BestFitMapping
-				mscorlib::System::Boolean DllImportAttribute::get_BestFitMapping()
+				mscorlib::System::Boolean DllImportAttribute::get_BestFitMapping() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "BestFitMapping");
 				}
@@ -101,7 +101,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:ThrowOnUnmappableChar
-				mscorlib::System::Boolean DllImportAttribute::get_ThrowOnUnmappableChar()
+				mscorlib::System::Boolean DllImportAttribute::get_ThrowOnUnmappableChar() const
 				{
 					return Global::GetFieldBooleanValue(__native_object__, "ThrowOnUnmappableChar");
 				}

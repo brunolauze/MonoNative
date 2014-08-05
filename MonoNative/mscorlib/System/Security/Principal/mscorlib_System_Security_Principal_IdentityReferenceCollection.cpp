@@ -89,7 +89,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  IdentityReferenceCollection::get_Count()
+				mscorlib::System::Int32  IdentityReferenceCollection::get_Count() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "IdentityReferenceCollection", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -97,7 +97,7 @@ namespace mscorlib
 
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  IdentityReferenceCollection::get_IsReadOnly()
+				mscorlib::System::Boolean  IdentityReferenceCollection::get_IsReadOnly() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "IdentityReferenceCollection", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -105,7 +105,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Item
-				mscorlib::System::Security::Principal::IdentityReference  IdentityReferenceCollection::get_Item(mscorlib::System::Int32 index)
+				mscorlib::System::Security::Principal::IdentityReference  IdentityReferenceCollection::get_Item(mscorlib::System::Int32 index) const
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];

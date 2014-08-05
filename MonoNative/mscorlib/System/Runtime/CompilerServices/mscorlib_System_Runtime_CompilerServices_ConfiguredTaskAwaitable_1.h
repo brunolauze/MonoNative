@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_COMPILERSERVICES_CONFIGUREDTASKAWAITABLE_1_H
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
-#include <mscorlib/System/Runtime/CompilerServices/mscorlib_System_Runtime_CompilerServices_INotifyCompletion.h>
 #include <mscorlib/System/Runtime/CompilerServices/mscorlib_System_Runtime_CompilerServices_ICriticalNotifyCompletion.h>
+#include <mscorlib/System/Runtime/CompilerServices/mscorlib_System_Runtime_CompilerServices_INotifyCompletion.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
@@ -25,21 +25,21 @@ namespace mscorlib
 					template<typename TResult>
 					class ConfiguredTaskAwaiter
 						: public mscorlib::System::ValueType
-						, public virtual mscorlib::System::Runtime::CompilerServices::INotifyCompletion
 						, public virtual mscorlib::System::Runtime::CompilerServices::ICriticalNotifyCompletion
+						, public virtual mscorlib::System::Runtime::CompilerServices::INotifyCompletion
 					{
 					public:
 						ConfiguredTaskAwaiter(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::ValueType(nativeTypeInfo)
-						, mscorlib::System::Runtime::CompilerServices::INotifyCompletion(NULL)
 						, mscorlib::System::Runtime::CompilerServices::ICriticalNotifyCompletion(NULL)
+						, mscorlib::System::Runtime::CompilerServices::INotifyCompletion(NULL)
 						{
 						};
 					
 						ConfiguredTaskAwaiter(MonoObject *nativeObject)
 						: mscorlib::System::ValueType(nativeObject)
-						, mscorlib::System::Runtime::CompilerServices::INotifyCompletion(nativeObject)
 						, mscorlib::System::Runtime::CompilerServices::ICriticalNotifyCompletion(nativeObject)
+						, mscorlib::System::Runtime::CompilerServices::INotifyCompletion(nativeObject)
 						{
 						};
 					
@@ -91,7 +91,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:IsCompleted
-						mscorlib::System::Boolean  get_IsCompleted()
+						mscorlib::System::Boolean  get_IsCompleted() const
 						{
 							MonoType *__generic_types__[1];
 							__generic_types__[0] = Global::GetType(typeid(TResult).name());

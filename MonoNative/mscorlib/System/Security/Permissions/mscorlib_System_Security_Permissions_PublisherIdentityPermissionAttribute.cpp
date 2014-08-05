@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:CertFile
-				mscorlib::System::String  PublisherIdentityPermissionAttribute::get_CertFile()
+				mscorlib::System::String  PublisherIdentityPermissionAttribute::get_CertFile() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "PublisherIdentityPermissionAttribute", 0, NULL, "get_CertFile", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SignedFile
-				mscorlib::System::String  PublisherIdentityPermissionAttribute::get_SignedFile()
+				mscorlib::System::String  PublisherIdentityPermissionAttribute::get_SignedFile() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "PublisherIdentityPermissionAttribute", 0, NULL, "get_SignedFile", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:X509Certificate
-				mscorlib::System::String  PublisherIdentityPermissionAttribute::get_X509Certificate()
+				mscorlib::System::String  PublisherIdentityPermissionAttribute::get_X509Certificate() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "PublisherIdentityPermissionAttribute", 0, NULL, "get_X509Certificate", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  PublisherIdentityPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  PublisherIdentityPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  PublisherIdentityPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  PublisherIdentityPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  PublisherIdentityPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  PublisherIdentityPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

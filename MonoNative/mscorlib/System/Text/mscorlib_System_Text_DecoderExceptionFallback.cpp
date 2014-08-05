@@ -37,7 +37,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:MaxCharCount
-			mscorlib::System::Int32  DecoderExceptionFallback::get_MaxCharCount()
+			mscorlib::System::Int32  DecoderExceptionFallback::get_MaxCharCount() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "DecoderExceptionFallback", 0, NULL, "get_MaxCharCount", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

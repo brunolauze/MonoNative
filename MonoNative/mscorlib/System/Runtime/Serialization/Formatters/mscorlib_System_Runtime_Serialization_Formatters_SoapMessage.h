@@ -92,27 +92,27 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Headers
-						std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*>  get_Headers();
+						std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*>  get_Headers() const;
 						void set_Headers(std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*>  value);
 
 						//	Get/Set:MethodName
-						mscorlib::System::String  get_MethodName();
+						mscorlib::System::String  get_MethodName() const;
 						void set_MethodName(mscorlib::System::String  value);
 
 						//	Get/Set:ParamNames
-						std::vector<mscorlib::System::String*>  get_ParamNames();
+						std::vector<mscorlib::System::String*>  get_ParamNames() const;
 						void set_ParamNames(std::vector<mscorlib::System::String*>  value);
 
 						//	Get/Set:ParamTypes
-						std::vector<mscorlib::System::Type*>  get_ParamTypes();
+						std::vector<mscorlib::System::Type*>  get_ParamTypes() const;
 						void set_ParamTypes(std::vector<mscorlib::System::Type*>  value);
 
 						//	Get/Set:ParamValues
-						std::vector<mscorlib::System::Object*>  get_ParamValues();
+						std::vector<mscorlib::System::Object*>  get_ParamValues() const;
 						void set_ParamValues(std::vector<mscorlib::System::Object*>  value);
 
 						//	Get/Set:XmlNameSpace
-						mscorlib::System::String  get_XmlNameSpace();
+						mscorlib::System::String  get_XmlNameSpace() const;
 						void set_XmlNameSpace(mscorlib::System::String  value);
 
 					

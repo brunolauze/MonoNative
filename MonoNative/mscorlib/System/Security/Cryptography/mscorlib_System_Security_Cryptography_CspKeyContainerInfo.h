@@ -95,43 +95,43 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Accessible
-					mscorlib::System::Boolean  get_Accessible();
+					mscorlib::System::Boolean  get_Accessible() const;
 
 					//	Get:CryptoKeySecurity
-					mscorlib::System::Security::AccessControl::CryptoKeySecurity  get_CryptoKeySecurity();
+					mscorlib::System::Security::AccessControl::CryptoKeySecurity  get_CryptoKeySecurity() const;
 
 					//	Get:Exportable
-					mscorlib::System::Boolean  get_Exportable();
+					mscorlib::System::Boolean  get_Exportable() const;
 
 					//	Get:HardwareDevice
-					mscorlib::System::Boolean  get_HardwareDevice();
+					mscorlib::System::Boolean  get_HardwareDevice() const;
 
 					//	Get:KeyContainerName
-					mscorlib::System::String  get_KeyContainerName();
+					mscorlib::System::String  get_KeyContainerName() const;
 
 					//	Get:KeyNumber
-					mscorlib::System::Security::Cryptography::KeyNumber::__ENUM__  get_KeyNumber();
+					mscorlib::System::Security::Cryptography::KeyNumber::__ENUM__  get_KeyNumber() const;
 
 					//	Get:MachineKeyStore
-					mscorlib::System::Boolean  get_MachineKeyStore();
+					mscorlib::System::Boolean  get_MachineKeyStore() const;
 
 					//	Get:Protected
-					mscorlib::System::Boolean  get_Protected();
+					mscorlib::System::Boolean  get_Protected() const;
 
 					//	Get:ProviderName
-					mscorlib::System::String  get_ProviderName();
+					mscorlib::System::String  get_ProviderName() const;
 
 					//	Get:ProviderType
-					mscorlib::System::Int32  get_ProviderType();
+					mscorlib::System::Int32  get_ProviderType() const;
 
 					//	Get:RandomlyGenerated
-					mscorlib::System::Boolean  get_RandomlyGenerated();
+					mscorlib::System::Boolean  get_RandomlyGenerated() const;
 
 					//	Get:Removable
-					mscorlib::System::Boolean  get_Removable();
+					mscorlib::System::Boolean  get_Removable() const;
 
 					//	Get:UniqueKeyContainerName
-					mscorlib::System::String  get_UniqueKeyContainerName();
+					mscorlib::System::String  get_UniqueKeyContainerName() const;
 
 				
 				protected:

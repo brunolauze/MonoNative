@@ -15,7 +15,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:Flags
-				mscorlib::System::Security::Cryptography::CspProviderFlags::__ENUM__  CspParameters::get_Flags()
+				mscorlib::System::Security::Cryptography::CspProviderFlags::__ENUM__  CspParameters::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CspParameters", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Cryptography::CspProviderFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get/Set:CryptoKeySecurity
-				mscorlib::System::Security::AccessControl::CryptoKeySecurity  CspParameters::get_CryptoKeySecurity()
+				mscorlib::System::Security::AccessControl::CryptoKeySecurity  CspParameters::get_CryptoKeySecurity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CspParameters", 0, NULL, "get_CryptoKeySecurity", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::AccessControl::CryptoKeySecurity(__result__);
@@ -49,7 +49,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeyPassword
-				mscorlib::System::Security::SecureString  CspParameters::get_KeyPassword()
+				mscorlib::System::Security::SecureString  CspParameters::get_KeyPassword() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CspParameters", 0, NULL, "get_KeyPassword", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::SecureString(__result__);
@@ -66,7 +66,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ParentWindowHandle
-				mscorlib::System::IntPtr  CspParameters::get_ParentWindowHandle()
+				mscorlib::System::IntPtr  CspParameters::get_ParentWindowHandle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CspParameters", 0, NULL, "get_ParentWindowHandle", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::IntPtr(__result__);
@@ -83,7 +83,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeyContainerName
-				mscorlib::System::String CspParameters::get_KeyContainerName()
+				mscorlib::System::String CspParameters::get_KeyContainerName() const
 				{
 					return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "KeyContainerName"));
 				}
@@ -93,7 +93,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:KeyNumber
-				mscorlib::System::Int32 CspParameters::get_KeyNumber()
+				mscorlib::System::Int32 CspParameters::get_KeyNumber() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "KeyNumber");
 				}
@@ -103,7 +103,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:ProviderName
-				mscorlib::System::String CspParameters::get_ProviderName()
+				mscorlib::System::String CspParameters::get_ProviderName() const
 				{
 					return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "ProviderName"));
 				}
@@ -113,7 +113,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:ProviderType
-				mscorlib::System::Int32 CspParameters::get_ProviderType()
+				mscorlib::System::Int32 CspParameters::get_ProviderType() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "ProviderType");
 				}

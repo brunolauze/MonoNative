@@ -72,10 +72,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CoClass
-					mscorlib::System::Type  get_CoClass();
+					mscorlib::System::Type  get_CoClass() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

@@ -57,11 +57,11 @@ namespace mscorlib
 					__declspec(property(get=get_vt, put=set_vt)) mscorlib::System::Int16  vt;
 
 					//	Get/Set:lpValue
-					mscorlib::System::IntPtr  get_lpValue();
+					mscorlib::System::IntPtr  get_lpValue() const;
 					void set_lpValue(mscorlib::System::IntPtr  value);
 
 					//	Get/Set:vt
-					mscorlib::System::Int16  get_vt();
+					mscorlib::System::Int16  get_vt() const;
 					void set_vt(mscorlib::System::Int16  value);
 
 				

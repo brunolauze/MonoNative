@@ -76,7 +76,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsFixedSize
-			mscorlib::System::Boolean  IList::get_IsFixedSize()
+			mscorlib::System::Boolean  IList::get_IsFixedSize() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "IList", 0, NULL, "get_IsFixedSize", __mscorlib_System_Collections_IList, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -84,7 +84,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  IList::get_IsReadOnly()
+			mscorlib::System::Boolean  IList::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "IList", 0, NULL, "get_IsReadOnly", __mscorlib_System_Collections_IList, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -92,7 +92,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Item
-			mscorlib::System::Object  IList::get_Item(mscorlib::System::Int32 index)
+			mscorlib::System::Object  IList::get_Item(mscorlib::System::Int32 index) const
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];

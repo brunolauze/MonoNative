@@ -61,25 +61,25 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CatchType
-				mscorlib::System::Type  get_CatchType();
+				mscorlib::System::Type  get_CatchType() const;
 
 				//	Get:FilterOffset
-				mscorlib::System::Int32  get_FilterOffset();
+				mscorlib::System::Int32  get_FilterOffset() const;
 
 				//	Get:Flags
-				mscorlib::System::Reflection::ExceptionHandlingClauseOptions::__ENUM__  get_Flags();
+				mscorlib::System::Reflection::ExceptionHandlingClauseOptions::__ENUM__  get_Flags() const;
 
 				//	Get:HandlerLength
-				mscorlib::System::Int32  get_HandlerLength();
+				mscorlib::System::Int32  get_HandlerLength() const;
 
 				//	Get:HandlerOffset
-				mscorlib::System::Int32  get_HandlerOffset();
+				mscorlib::System::Int32  get_HandlerOffset() const;
 
 				//	Get:TryLength
-				mscorlib::System::Int32  get_TryLength();
+				mscorlib::System::Int32  get_TryLength() const;
 
 				//	Get:TryOffset
-				mscorlib::System::Int32  get_TryOffset();
+				mscorlib::System::Int32  get_TryOffset() const;
 
 			
 			protected:

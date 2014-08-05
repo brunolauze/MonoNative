@@ -47,7 +47,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsCompleted
-				mscorlib::System::Boolean  YieldAwaitable::YieldAwaiter::get_IsCompleted()
+				mscorlib::System::Boolean  YieldAwaitable::YieldAwaiter::get_IsCompleted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "YieldAwaitable+YieldAwaiter", 0, NULL, "get_IsCompleted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

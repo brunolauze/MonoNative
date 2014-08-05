@@ -89,7 +89,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:DynamicMethod
-					mscorlib::System::Reflection::Emit::DynamicMethod  get_DynamicMethod();
+					mscorlib::System::Reflection::Emit::DynamicMethod  get_DynamicMethod() const;
 
 				
 				protected:

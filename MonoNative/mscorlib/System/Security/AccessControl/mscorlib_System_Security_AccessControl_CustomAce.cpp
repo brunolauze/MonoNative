@@ -51,7 +51,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:BinaryLength
-				mscorlib::System::Int32  CustomAce::get_BinaryLength()
+				mscorlib::System::Int32  CustomAce::get_BinaryLength() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CustomAce", 0, NULL, "get_BinaryLength", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -59,7 +59,7 @@ namespace mscorlib
 
 
 				//	Get:OpaqueLength
-				mscorlib::System::Int32  CustomAce::get_OpaqueLength()
+				mscorlib::System::Int32  CustomAce::get_OpaqueLength() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CustomAce", 0, NULL, "get_OpaqueLength", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -67,7 +67,7 @@ namespace mscorlib
 
 
 				//	Get/Set:AceFlags
-				mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  CustomAce::get_AceFlags()
+				mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  CustomAce::get_AceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AceFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::AceFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -84,7 +84,7 @@ namespace mscorlib
 
 
 				//	Get:AceType
-				mscorlib::System::Security::AccessControl::AceType::__ENUM__  CustomAce::get_AceType()
+				mscorlib::System::Security::AccessControl::AceType::__ENUM__  CustomAce::get_AceType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AceType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::AceType::__ENUM__*)mono_object_unbox(__result__);
@@ -92,7 +92,7 @@ namespace mscorlib
 
 
 				//	Get:AuditFlags
-				mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  CustomAce::get_AuditFlags()
+				mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  CustomAce::get_AuditFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AuditFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -100,7 +100,7 @@ namespace mscorlib
 
 
 				//	Get:InheritanceFlags
-				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  CustomAce::get_InheritanceFlags()
+				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  CustomAce::get_InheritanceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -108,7 +108,7 @@ namespace mscorlib
 
 
 				//	Get:IsInherited
-				mscorlib::System::Boolean  CustomAce::get_IsInherited()
+				mscorlib::System::Boolean  CustomAce::get_IsInherited() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_IsInherited", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -116,7 +116,7 @@ namespace mscorlib
 
 
 				//	Get:PropagationFlags
-				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  CustomAce::get_PropagationFlags()
+				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  CustomAce::get_PropagationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -129,6 +129,10 @@ namespace mscorlib
 					return Global::GetFieldInt32Value("mscorlib", "System.Security.AccessControl", "CustomAce", 0, NULL, "MaxOpaqueLength");
 				}
 
+				void CustomAce::set_MaxOpaqueLength(mscorlib::System::Int32  value)
+				{
+					throw;
+				}
 
 
 			}

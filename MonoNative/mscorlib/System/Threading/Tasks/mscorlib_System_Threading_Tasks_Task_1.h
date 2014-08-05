@@ -548,7 +548,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Result
-					TResult  get_Result()
+					TResult  get_Result() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(TResult).name());
@@ -568,42 +568,42 @@ namespace mscorlib
 				
 
 					//	Get:Exception
-					mscorlib::System::AggregateException  get_Exception()
+					mscorlib::System::AggregateException  get_Exception() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_Exception", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::AggregateException(__result__);
 					}
 
 					//	Get:IsCanceled
-					mscorlib::System::Boolean  get_IsCanceled()
+					mscorlib::System::Boolean  get_IsCanceled() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_IsCanceled", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 					}
 
 					//	Get:IsCompleted
-					mscorlib::System::Boolean  get_IsCompleted()
+					mscorlib::System::Boolean  get_IsCompleted() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_IsCompleted", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 					}
 
 					//	Get:IsFaulted
-					mscorlib::System::Boolean  get_IsFaulted()
+					mscorlib::System::Boolean  get_IsFaulted() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_IsFaulted", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 					}
 
 					//	Get:CreationOptions
-					mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  get_CreationOptions()
+					mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  get_CreationOptions() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_CreationOptions", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__*)mono_object_unbox(__result__);
 					}
 
 					//	Get/Set:Status
-					mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  get_Status()
+					mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  get_Status() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_Status", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__*)mono_object_unbox(__result__);
@@ -619,14 +619,14 @@ namespace mscorlib
 				
 
 					//	Get:AsyncState
-					mscorlib::System::Object  get_AsyncState()
+					mscorlib::System::Object  get_AsyncState() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_AsyncState", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);
 					}
 
 					//	Get:Id
-					mscorlib::System::Int32  get_Id()
+					mscorlib::System::Int32  get_Id() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_Id", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

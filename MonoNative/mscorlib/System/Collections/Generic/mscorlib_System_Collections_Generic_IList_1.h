@@ -34,7 +34,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Collections_Generic_IList_1, put=set___mscorlib_System_Collections_Generic_IList_1)) MonoObject *__mscorlib_System_Collections_Generic_IList_1;
-					MonoObject* get___mscorlib_System_Collections_Generic_IList_1()
+					MonoObject* get___mscorlib_System_Collections_Generic_IList_1() const
 					{
 						return IList::__mscorlib_System_Collections_Generic_ICollection_1;
 					}
@@ -90,7 +90,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Item
-					T  get_Item(mscorlib::System::Int32 index)
+					T  get_Item(mscorlib::System::Int32 index) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];

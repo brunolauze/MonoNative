@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:Exception
-				mscorlib::System::Exception  FirstChanceExceptionEventArgs::get_Exception()
+				mscorlib::System::Exception  FirstChanceExceptionEventArgs::get_Exception() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.ExceptionServices", "FirstChanceExceptionEventArgs", 0, NULL, "get_Exception", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Exception(__result__);

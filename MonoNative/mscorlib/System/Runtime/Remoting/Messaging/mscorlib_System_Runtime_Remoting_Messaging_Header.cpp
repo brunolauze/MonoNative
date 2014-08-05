@@ -16,7 +16,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:HeaderNamespace
-					mscorlib::System::String Header::get_HeaderNamespace()
+					mscorlib::System::String Header::get_HeaderNamespace() const
 					{
 						return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "HeaderNamespace"));
 					}
@@ -26,7 +26,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:MustUnderstand
-					mscorlib::System::Boolean Header::get_MustUnderstand()
+					mscorlib::System::Boolean Header::get_MustUnderstand() const
 					{
 						return Global::GetFieldBooleanValue(__native_object__, "MustUnderstand");
 					}
@@ -36,7 +36,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:Name
-					mscorlib::System::String Header::get_Name()
+					mscorlib::System::String Header::get_Name() const
 					{
 						return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "Name"));
 					}
@@ -46,7 +46,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:Value
-					mscorlib::System::Object Header::get_Value()
+					mscorlib::System::Object Header::get_Value() const
 					{
 						return Global::GetFieldValue(__native_object__, "Value");
 					}

@@ -16,7 +16,7 @@ namespace mscorlib
 
 				//Public Methods
 				//	Get/Set:lpValue
-				mscorlib::System::IntPtr TYPEDESC::get_lpValue()
+				mscorlib::System::IntPtr TYPEDESC::get_lpValue() const
 				{
 					return Global::GetFieldValue(__native_object__, "lpValue");
 				}
@@ -26,7 +26,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:vt
-				mscorlib::System::Int16 TYPEDESC::get_vt()
+				mscorlib::System::Int16 TYPEDESC::get_vt() const
 				{
 					return Global::GetFieldInt16Value(__native_object__, "vt");
 				}

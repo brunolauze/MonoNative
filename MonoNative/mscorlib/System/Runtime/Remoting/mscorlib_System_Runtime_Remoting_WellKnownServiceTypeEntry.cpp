@@ -20,7 +20,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:ContextAttributes
-				std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>  WellKnownServiceTypeEntry::get_ContextAttributes()
+				std::vector<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>  WellKnownServiceTypeEntry::get_ContextAttributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownServiceTypeEntry", 0, NULL, "get_ContextAttributes", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -45,7 +45,7 @@ namespace mscorlib
 
 
 				//	Get:Mode
-				mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__  WellKnownServiceTypeEntry::get_Mode()
+				mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__  WellKnownServiceTypeEntry::get_Mode() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownServiceTypeEntry", 0, NULL, "get_Mode", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__*)mono_object_unbox(__result__);
@@ -53,7 +53,7 @@ namespace mscorlib
 
 
 				//	Get:ObjectType
-				mscorlib::System::Type  WellKnownServiceTypeEntry::get_ObjectType()
+				mscorlib::System::Type  WellKnownServiceTypeEntry::get_ObjectType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownServiceTypeEntry", 0, NULL, "get_ObjectType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -61,7 +61,7 @@ namespace mscorlib
 
 
 				//	Get:ObjectUri
-				mscorlib::System::String  WellKnownServiceTypeEntry::get_ObjectUri()
+				mscorlib::System::String  WellKnownServiceTypeEntry::get_ObjectUri() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownServiceTypeEntry", 0, NULL, "get_ObjectUri", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -69,7 +69,7 @@ namespace mscorlib
 
 
 				//	Get/Set:AssemblyName
-				mscorlib::System::String  WellKnownServiceTypeEntry::get_AssemblyName()
+				mscorlib::System::String  WellKnownServiceTypeEntry::get_AssemblyName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "TypeEntry", 0, NULL, "get_AssemblyName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -86,7 +86,7 @@ namespace mscorlib
 
 
 				//	Get/Set:TypeName
-				mscorlib::System::String  WellKnownServiceTypeEntry::get_TypeName()
+				mscorlib::System::String  WellKnownServiceTypeEntry::get_TypeName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "TypeEntry", 0, NULL, "get_TypeName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

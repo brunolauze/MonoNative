@@ -20,7 +20,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:ApplicationUrl
-				mscorlib::System::String  WellKnownClientTypeEntry::get_ApplicationUrl()
+				mscorlib::System::String  WellKnownClientTypeEntry::get_ApplicationUrl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownClientTypeEntry", 0, NULL, "get_ApplicationUrl", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -37,7 +37,7 @@ namespace mscorlib
 
 
 				//	Get:ObjectType
-				mscorlib::System::Type  WellKnownClientTypeEntry::get_ObjectType()
+				mscorlib::System::Type  WellKnownClientTypeEntry::get_ObjectType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownClientTypeEntry", 0, NULL, "get_ObjectType", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -45,7 +45,7 @@ namespace mscorlib
 
 
 				//	Get:ObjectUrl
-				mscorlib::System::String  WellKnownClientTypeEntry::get_ObjectUrl()
+				mscorlib::System::String  WellKnownClientTypeEntry::get_ObjectUrl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownClientTypeEntry", 0, NULL, "get_ObjectUrl", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -53,7 +53,7 @@ namespace mscorlib
 
 
 				//	Get/Set:AssemblyName
-				mscorlib::System::String  WellKnownClientTypeEntry::get_AssemblyName()
+				mscorlib::System::String  WellKnownClientTypeEntry::get_AssemblyName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "TypeEntry", 0, NULL, "get_AssemblyName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -70,7 +70,7 @@ namespace mscorlib
 
 
 				//	Get/Set:TypeName
-				mscorlib::System::String  WellKnownClientTypeEntry::get_TypeName()
+				mscorlib::System::String  WellKnownClientTypeEntry::get_TypeName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "TypeEntry", 0, NULL, "get_TypeName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

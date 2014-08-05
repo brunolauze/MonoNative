@@ -86,16 +86,16 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:MemberInfo
-				mscorlib::System::Reflection::MemberInfo  get_MemberInfo();
+				mscorlib::System::Reflection::MemberInfo  get_MemberInfo() const;
 
 				//	Get:TypedValue
-				mscorlib::System::Reflection::CustomAttributeTypedArgument  get_TypedValue();
+				mscorlib::System::Reflection::CustomAttributeTypedArgument  get_TypedValue() const;
 
 				//	Get:IsField
-				mscorlib::System::Boolean  get_IsField();
+				mscorlib::System::Boolean  get_IsField() const;
 
 				//	Get:MemberName
-				mscorlib::System::String  get_MemberName();
+				mscorlib::System::String  get_MemberName() const;
 
 			
 			protected:

@@ -23,8 +23,7 @@ namespace mscorlib
 				//List()
 				TEST(mscorlib_System_Collections_Generic_List_1_Fixture,DefaultConstructor)
 				{
-					List<String> *value = new List<String>();
-					EXPECT_NE(NULL, value);
+					
 					
 					
 				}
@@ -51,8 +50,7 @@ namespace mscorlib
 				//		Signature: T item
 				TEST(mscorlib_System_Collections_Generic_List_1_Fixture,Add_Test)
 				{
-					List<String> *value = new List<String>();
-					value->Add(String("TEST"));
+					
 					
 				}
 
@@ -100,12 +98,8 @@ namespace mscorlib
 				//		Signature: 
 				TEST(mscorlib_System_Collections_Generic_List_1_Fixture,Clear_Test)
 				{
-					List<String> *value = new List<String>();
-					EXPECT_EQ(0, value->Count);
-					value->Add(String("TEST"));
-					EXPECT_EQ(1, value->Count);
-					value->Clear();
-					EXPECT_EQ(0, value->Count);
+					
+					
 				}
 
 				// Method Contains

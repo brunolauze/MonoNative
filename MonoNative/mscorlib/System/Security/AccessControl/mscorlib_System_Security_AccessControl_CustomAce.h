@@ -85,36 +85,37 @@ namespace mscorlib
 					__declspec(property(get=get_PropagationFlags)) mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  PropagationFlags;
 
 					//Public Static Fields
-					static Property<mscorlib::System::Int32> MaxOpaqueLength;
+					static Property<mscorlib::System::Int32 , mscorlib::System::Security::AccessControl::CustomAce> MaxOpaqueLength;
 
 					//Get Set Properties Methods
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 					//	Get:OpaqueLength
-					mscorlib::System::Int32  get_OpaqueLength();
+					mscorlib::System::Int32  get_OpaqueLength() const;
 
 					//	Get/Set:AceFlags
-					mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  get_AceFlags();
+					mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  get_AceFlags() const;
 					void set_AceFlags(mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  value);
 
 					//	Get:AceType
-					mscorlib::System::Security::AccessControl::AceType::__ENUM__  get_AceType();
+					mscorlib::System::Security::AccessControl::AceType::__ENUM__  get_AceType() const;
 
 					//	Get:AuditFlags
-					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags();
+					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags() const;
 
 					//	Get:InheritanceFlags
-					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags();
+					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags() const;
 
 					//	Get:IsInherited
-					mscorlib::System::Boolean  get_IsInherited();
+					mscorlib::System::Boolean  get_IsInherited() const;
 
 					//	Get:PropagationFlags
-					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags();
+					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags() const;
 
 					//	Get/Set:MaxOpaqueLength
 					static mscorlib::System::Int32  get_MaxOpaqueLength();
+					static void set_MaxOpaqueLength(mscorlib::System::Int32  value);
 
 				
 				protected:

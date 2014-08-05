@@ -217,6 +217,10 @@ namespace mscorlib
 				return __array_result__;
 			}
 
+			void Path::set_InvalidPathChars(std::vector<mscorlib::System::Char*>  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:AltDirectorySeparatorChar
 			mscorlib::System::Char Path::get_AltDirectorySeparatorChar()
@@ -224,6 +228,10 @@ namespace mscorlib
 				return Global::GetFieldCharValue("mscorlib", "System.IO", "Path", 0, NULL, "AltDirectorySeparatorChar");
 			}
 
+			void Path::set_AltDirectorySeparatorChar(mscorlib::System::Char  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:DirectorySeparatorChar
 			mscorlib::System::Char Path::get_DirectorySeparatorChar()
@@ -231,6 +239,10 @@ namespace mscorlib
 				return Global::GetFieldCharValue("mscorlib", "System.IO", "Path", 0, NULL, "DirectorySeparatorChar");
 			}
 
+			void Path::set_DirectorySeparatorChar(mscorlib::System::Char  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:PathSeparator
 			mscorlib::System::Char Path::get_PathSeparator()
@@ -238,6 +250,10 @@ namespace mscorlib
 				return Global::GetFieldCharValue("mscorlib", "System.IO", "Path", 0, NULL, "PathSeparator");
 			}
 
+			void Path::set_PathSeparator(mscorlib::System::Char  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:VolumeSeparatorChar
 			mscorlib::System::Char Path::get_VolumeSeparatorChar()
@@ -245,6 +261,10 @@ namespace mscorlib
 				return Global::GetFieldCharValue("mscorlib", "System.IO", "Path", 0, NULL, "VolumeSeparatorChar");
 			}
 
+			void Path::set_VolumeSeparatorChar(mscorlib::System::Char  value)
+			{
+				throw;
+			}
 
 
 		}

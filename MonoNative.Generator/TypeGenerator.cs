@@ -197,7 +197,6 @@ namespace MonoNative.Generator
 			}
 
 			Dictionary<string, PropertyInfo> propertyContainer = new Dictionary<string, PropertyInfo>();
-			bool isItemAdded = false;
 			foreach (var property in properties) {
 				if (IsCircularProperty (property))
 					continue;
@@ -594,9 +593,9 @@ namespace MonoNative.Generator
 				if (interfaces.Any())
 				{
 					sb.AppendLine(indent + "\t__declspec(property(get=get_" + type.ToInterfaceVariableName() + ", put=set_" + type.ToInterfaceVariableName() + ")) MonoObject *" + type.ToInterfaceVariableName() + ";");
-					sb.AppendLine(indent + "\tMonoObject* get_" + type.ToInterfaceVariableName() + "()");
-		                    	sb.AppendLine(indent + "\t{");
-                    			sb.AppendLine(indent + "\t\treturn " + type.ClassName() + "::" + type.ToNativeObjectVariable(true) + ";");
+					sb.AppendLine(indent + "\tMonoObject* get_" + type.ToInterfaceVariableName() + "() const");
+                	sb.AppendLine(indent + "\t{");
+        			sb.AppendLine(indent + "\t\treturn " + type.ClassName() + "::" + type.ToNativeObjectVariable(true) + ";");
 					sb.AppendLine(indent + "\t}");
 					sb.AppendLine(indent + "\tvoid set_" + type.ToInterfaceVariableName() + "(MonoObject *value)");
 					sb.AppendLine(indent + "\t{");
@@ -620,10 +619,21 @@ namespace MonoNative.Generator
 					sb.AppendLine (indent + "\tMonoString* operator=(MonoString* value) { __native_object__ = (MonoObject*)value; return value; };");
 
 					sb.AppendLine (indent + "\toperator const char*() { return mono_string_to_utf8(mono_object_to_string(__native_object__, NULL)); };");
-					sb.AppendLine (indent + "\tconst char* operator=(const char* value) { __native_object__ = (MonoObject*)mono_string_new(Global::GetDomain(), value); return value; };");
-
+					sb.AppendLine (indent + "\tString & operator=(const char* value) { __native_object__ = (MonoObject*)mono_string_new(Global::GetDomain(), value); return *this; };");
+					sb.AppendLine (indent + "\tString & operator+=(const char* value)");
+					sb.AppendLine (indent + "\t{");
+					sb.AppendLine (indent + "\t\tstd::string original(mono_string_to_utf8(mono_object_to_string(__native_object__, NULL)));");
+					sb.AppendLine (indent + "\t\toriginal.append(value);");
+					sb.AppendLine (indent + "\t\t__native_object__ = (MonoObject*)mono_string_new(Global::GetDomain(), original.c_str()); return *this;");
+					sb.AppendLine (indent + "\t};");
 					sb.AppendLine (indent + "\toperator std::string() { return std::string(mono_string_to_utf8(mono_object_to_string(__native_object__, NULL))); };");
-					sb.AppendLine (indent + "\tstd::string operator=(std::string value) { __native_object__ = (MonoObject*)mono_string_new(Global::GetDomain(), value.c_str()); return value; };");
+					sb.AppendLine (indent + "\tString & operator=(std::string value) { __native_object__ = (MonoObject*)mono_string_new(Global::GetDomain(), value.c_str()); return *this; };");
+					sb.AppendLine (indent + "\tString & operator+=(std::string value)");
+					sb.AppendLine (indent + "\t{");
+					sb.AppendLine (indent + "\t\tstd::string original(mono_string_to_utf8(mono_object_to_string(__native_object__, NULL)));");
+					sb.AppendLine (indent + "\t\toriginal.append(value);");
+					sb.AppendLine (indent + "\t__native_object__ = (MonoObject*)mono_string_new(Global::GetDomain(), value.c_str()); return *this;");
+					sb.AppendLine (indent + "\t};");
 				} else {
 					/*
 					sb.AppendLine (indent + "\toperator MonoString*() { return ToString(); };");
@@ -834,7 +844,6 @@ namespace MonoNative.Generator
 				sb.AppendLine(indent + "\t__declspec(property(get=get_" + field.Name + (!field.IsInitOnly ? ", put=set_" + field.Name : "") + ")) " + field.FieldType.ToParameterTypeName() + " " + field.Name + ";");
 			}
 
-
 			//Static 
 
 			properties = type.GetProperties(BindingFlags.Public | BindingFlags.Static).Where(x => !x.IsSpecialName);
@@ -845,16 +854,9 @@ namespace MonoNative.Generator
 			}
 			foreach (var property in properties)
 			{
-				/*
-                if (property.PropertyType == typeof(string))
-                {
-                    sb.AppendLine(indent + "\tstatic StringProperty " + property.Name + ";");
-                }
-                else
-                */
 				if (!IsCircularProperty(property))
 				{
-					sb.AppendLine(indent + "\tstatic Property<" + property.PropertyType.SanitizedName() + "> " + property.Name + ";");
+					sb.AppendLine(indent + "\tstatic Property<" + property.PropertyType.ToParameterTypeName() + ", " + type.SanitizedName() + "> " + property.Name + ";");
 				}
 			}
 			fields = type.GetFields(BindingFlags.Public | BindingFlags.Static).Where(x => !x.IsSpecialName);
@@ -865,16 +867,7 @@ namespace MonoNative.Generator
 			}
 			foreach (var field in fields)
 			{
-				/*
-                if (field.FieldType == typeof(string))
-                {
-					sb.AppendLine(indent + "\tstatic StringProperty " + field.Name + ";");
-                }
-                else
-				*/
-				{
-					sb.AppendLine(indent + "\tstatic Property<" + field.FieldType.SanitizedName() + "> " + field.Name + ";");
-				}
+				sb.AppendLine(indent + "\tstatic Property<" + field.FieldType.ToParameterTypeName() + ", " + type.SanitizedName() + "> " + field.Name + ";");
 			}
 
 			sb.AppendLine ();
@@ -898,7 +891,7 @@ namespace MonoNative.Generator
 			foreach (var property in properties)
 			{
 				sb.AppendLine(indent + "\t//\tGet" + (property.CanWrite ? "/Set:" : ":") + property.Name);
-				sb.AppendLine(indent + "\t" + property.PropertyType.ToParameterTypeName() + " get_" + property.Name + "(" + property.GetSignature(false) + ");");
+				sb.AppendLine(indent + "\t" + property.PropertyType.ToParameterTypeName() + " get_" + property.Name + "(" + property.GetSignature(false) + ") const;");
 				if (property.CanWrite)
 					sb.AppendLine(indent + "\tvoid set_" + property.Name + "(" + property.GetSignature(true) + ");");
 				sb.AppendLine();
@@ -914,8 +907,7 @@ namespace MonoNative.Generator
 			{
 				sb.AppendLine(indent + "\t//\tGet" + (property.CanWrite ? "/Set:" : ":") + property.Name);
 				sb.AppendLine(indent + "\tstatic " + property.PropertyType.ToParameterTypeName() + " get_" + property.Name + "();");
-				if (property.CanWrite)
-					sb.AppendLine(indent + "\tstatic void set_" + property.Name + "(" + property.PropertyType.ToParameterTypeName() + " value);");
+				sb.AppendLine(indent + "\tstatic void set_" + property.Name + "(" + property.PropertyType.ToParameterTypeName() + " value);");
 				sb.AppendLine();
 			}
 			if (properties.Count() > 0)
@@ -927,7 +919,7 @@ namespace MonoNative.Generator
 			foreach (var field in fields)
 			{
 				sb.AppendLine(indent + "\t//\tGet/Set:" + field.Name);
-				sb.AppendLine(indent + "\t" + field.FieldType.ToParameterTypeName() + " get_" + field.Name + "();");
+				sb.AppendLine(indent + "\t" + field.FieldType.ToParameterTypeName() + " get_" + field.Name + "() const;");
 				if (!field.IsInitOnly)
 					sb.AppendLine(indent + "\tvoid set_" + field.Name + "(" + field.FieldType.ToParameterTypeName() + " value);");
 				sb.AppendLine();
@@ -937,8 +929,7 @@ namespace MonoNative.Generator
 			{
 				sb.AppendLine(indent + "\t//\tGet/Set:" + field.Name);
 				sb.AppendLine(indent + "\tstatic " + field.FieldType.ToParameterTypeName() + " get_" + field.Name + "();");
-				if (!field.IsInitOnly)
-					sb.AppendLine(indent + "\tstatic void set_" + field.Name + "(" + field.FieldType.ToParameterTypeName() + " value);");
+				sb.AppendLine(indent + "\tstatic void set_" + field.Name + "(" + field.FieldType.ToParameterTypeName() + " value);");
 				sb.AppendLine();
 			}
 		}
@@ -954,7 +945,7 @@ namespace MonoNative.Generator
 			{
 				if (!IsCircularProperty (property)) {
 					sb.AppendLine (indent + "\t//\tGet" + (property.CanWrite ? "/Set:" : ":") + property.Name);
-					sb.AppendLine (indent + "\t" + property.PropertyType.ToParameterTypeName () + " get_" + property.Name + "(" + property.GetSignature (false) + ")");
+					sb.AppendLine (indent + "\t" + property.PropertyType.ToParameterTypeName () + " get_" + property.Name + "(" + property.GetSignature (false) + ") const");
 					sb.AppendLine (indent + "\t{");
 					WriteInvoke (type, sb, indent, property.GetGetMethod (true));
 					sb.AppendLine (indent + "\t}");
@@ -979,7 +970,7 @@ namespace MonoNative.Generator
 			{
 				if (!IsCircularProperty (property)) {
 					sb.AppendLine (indent + "\t//\tGet" + (property.CanWrite ? "/Set:" : ":") + property.Name);
-					sb.AppendLine (indent + "\tstatic " + property.PropertyType.ToParameterTypeName () + " get_" + property.Name + "()");
+					sb.AppendLine (indent + "\tstatic " + property.PropertyType.ToParameterTypeName () + " get_" + property.Name + "() const");
 					sb.AppendLine (indent + "\t{");
 					WriteInvoke (type, sb, indent, property.GetGetMethod (true));
 					sb.AppendLine (indent + "\t}");
@@ -1038,6 +1029,7 @@ namespace MonoNative.Generator
 			}
 		}
 
+
 		static void AddProtectedMembers (Type type, StringBuilder sb, string indent)
 		{
 			if (type == typeof(object)) {
@@ -1061,6 +1053,10 @@ namespace MonoNative.Generator
 			if (property.DeclaringType == typeof(System.Threading.Tasks.Task<>)
 			    && property.Name == "Factory")
 				return true;
+
+			if (property.GetGetMethod (true).IsStatic && property.GetIndexParameters ().Any ())
+				return true;
+
 			return false;
 		}
 
@@ -1227,6 +1223,7 @@ namespace MonoNative.Generator
 			var sb = new StringBuilder ();
 			AddImplIncludes (type, sb);
 			NameSpaceWriter.Write (type, sb, (targetType, sbuilder, indent) => {
+				AddStaticMembersImpl(targetType, sbuilder, indent);
 				AddMethodImpl (targetType, sbuilder, indent);
 				AddPropertiesImpl(targetType, sbuilder, indent);
 				AddNestedImpl(targetType, sbuilder, indent);
@@ -1295,7 +1292,7 @@ namespace MonoNative.Generator
 				if (IsCircularProperty (property))
 					continue;
 				sb.AppendLine(indent + "//\tGet" + (property.CanWrite ? "/Set:" : ":") + property.Name);
-				sb.AppendLine(indent + property.PropertyType.ToParameterTypeName() + " " + classPrefix + type.ClassName() + "::get_" + property.Name + "(" + property.GetSignature(false) + ")");
+				sb.AppendLine(indent + property.PropertyType.ToParameterTypeName() + " " + classPrefix + type.ClassName() + "::get_" + property.Name + "(" + property.GetSignature(false) + ") const");
 				sb.AppendLine(indent + "{");
 				WriteInvoke(type, sb, indent.Substring(0, indent.Length - 1), property.GetGetMethod());
 				sb.AppendLine(indent + "}");
@@ -1327,14 +1324,15 @@ namespace MonoNative.Generator
 				WriteInvoke(type, sb, indent.Substring(0, indent.Length - 1), property.GetGetMethod());
 				sb.AppendLine(indent + "}");
 				sb.AppendLine();
-				if (property.CanWrite)
-				{
-					sb.AppendLine(indent + "void " + classPrefix + type.ClassName() + "::set_" + property.Name + "(" + property.GetSignature(true) + ")");
-					sb.AppendLine(indent + "{");
-					WriteInvoke(type, sb, indent.Substring(0, indent.Length - 1), GetSetMethod(property));
-					sb.AppendLine(indent + "}");
-					sb.AppendLine();
+				sb.AppendLine(indent + "void " + classPrefix + type.ClassName() + "::set_" + property.Name + "(" + property.GetSignature(true) + ")");
+				sb.AppendLine(indent + "{");
+				if (property.CanWrite) {
+					WriteInvoke (type, sb, indent.Substring (0, indent.Length - 1), GetSetMethod (property));
+				} else {
+					sb.AppendLine (indent + "\tthrow;");
 				}
+				sb.AppendLine(indent + "}");
+				sb.AppendLine();
 				sb.AppendLine();
 			}
 			if (properties.Count() > 0)
@@ -1345,7 +1343,7 @@ namespace MonoNative.Generator
 			foreach (var field in fields)
 			{
 				sb.AppendLine(indent + "//\tGet/Set:" + field.Name);
-				sb.AppendLine(indent + field.FieldType.ToParameterTypeName() + classPrefix + type.ClassName() + "::get_" + field.Name + "()");
+				sb.AppendLine(indent + field.FieldType.ToParameterTypeName() + classPrefix + type.ClassName() + "::get_" + field.Name + "() const");
 				sb.AppendLine(indent + "{");
 				WriteGetField(type, field, sb, indent);
 				sb.AppendLine(indent + "}");
@@ -1368,14 +1366,26 @@ namespace MonoNative.Generator
 				WriteGetField(type, field, sb, indent);
 				sb.AppendLine(indent + "}");
 				sb.AppendLine();
-				if (!field.IsInitOnly)
-				{
-					sb.AppendLine(indent + "void " + classPrefix + type.ClassName() + "::set_" + field.Name + "(" + field.FieldType.ToParameterTypeName() + " value)");
-					sb.AppendLine(indent + "{");
-					WriteSetField(type, field, sb, indent);
-					sb.AppendLine(indent + "}");
+				sb.AppendLine(indent + "void " + classPrefix + type.ClassName() + "::set_" + field.Name + "(" + field.FieldType.ToParameterTypeName() + " value)");
+				sb.AppendLine(indent + "{");
+				if (!field.IsInitOnly) {
+					WriteSetField (type, field, sb, indent);
 				}
+				else {
+					sb.AppendLine (indent + "\tthrow;");
+				}
+				sb.AppendLine(indent + "}");
 				sb.AppendLine();
+			}
+		}
+
+		private static void AddStaticMembersImpl (Type type, StringBuilder sb, string indent)
+		{
+			var properties = type.GetProperties (BindingFlags.Public | BindingFlags.Static);
+			foreach (var property in properties) {
+				if (IsCircularProperty (property))
+					continue;
+				sb.AppendLine (indent + "Property<" + property.PropertyType.ToParameterTypeName() + ", " + type.SanitizedName() + "> " + type.SanitizedName() + "::" + property.Name + "(&" + type.SanitizedName () + "::get_" + property.Name + ", &" + type.SanitizedName () + "::set_" + property.Name + ");");
 			}
 		}
 

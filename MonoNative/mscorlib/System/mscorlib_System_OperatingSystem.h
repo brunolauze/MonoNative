@@ -4,8 +4,8 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_PlatformID.h>
 #include <mscorlib/System/mscorlib_System_Version.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 
 namespace mscorlib
 {
@@ -42,14 +42,14 @@ namespace mscorlib
 
 		class OperatingSystem
 			: public mscorlib::System::Object
-			, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			, public virtual mscorlib::System::ICloneable
+			, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 		{
 		public:
 			OperatingSystem(mscorlib::System::PlatformID::__ENUM__ platform, mscorlib::System::Version version)
 			: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.OperatingSystem"))
-			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::ICloneable(NULL)
+			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
@@ -62,15 +62,15 @@ namespace mscorlib
 		
 			OperatingSystem(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::Object(nativeTypeInfo)
-			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::ICloneable(NULL)
+			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			{
 			};
 		
 			OperatingSystem(MonoObject *nativeObject)
 			: mscorlib::System::Object(nativeObject)
-			, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 			, mscorlib::System::ICloneable(nativeObject)
+			, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 			{
 			};
 		
@@ -98,16 +98,16 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Platform
-			mscorlib::System::PlatformID::__ENUM__  get_Platform();
+			mscorlib::System::PlatformID::__ENUM__  get_Platform() const;
 
 			//	Get:Version
-			mscorlib::System::Version  get_Version();
+			mscorlib::System::Version  get_Version() const;
 
 			//	Get:ServicePack
-			mscorlib::System::String  get_ServicePack();
+			mscorlib::System::String  get_ServicePack() const;
 
 			//	Get:VersionString
-			mscorlib::System::String  get_VersionString();
+			mscorlib::System::String  get_VersionString() const;
 
 		
 		protected:

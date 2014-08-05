@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
-#include <mscorlib/System/mscorlib_System_IConvertible.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
+#include <mscorlib/System/mscorlib_System_IConvertible.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -31,8 +31,8 @@ namespace mscorlib
 		class Byte
 			: public mscorlib::System::ValueType
 			, public virtual mscorlib::System::IComparable<mscorlib::System::Byte>
-			, public virtual mscorlib::System::IConvertible
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::Byte>
+			, public virtual mscorlib::System::IConvertible
 			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IFormattable
 		{
@@ -40,8 +40,8 @@ namespace mscorlib
 			Byte(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
 			, mscorlib::System::IComparable<mscorlib::System::Byte>(NULL)
-			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Byte>(NULL)
+			, mscorlib::System::IConvertible(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			{
@@ -50,8 +50,8 @@ namespace mscorlib
 			Byte(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::Byte>(nativeObject)
-			, mscorlib::System::IConvertible(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::Byte>(nativeObject)
+			, mscorlib::System::IConvertible(nativeObject)
 			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IFormattable(nativeObject)
 			{
@@ -87,8 +87,8 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::Byte> MinValue;
-			static Property<mscorlib::System::Byte> MaxValue;
+			static Property<mscorlib::System::Byte , mscorlib::System::Byte> MinValue;
+			static Property<mscorlib::System::Byte , mscorlib::System::Byte> MaxValue;
 
 			//	Get/Set:MinValue
 			static mscorlib::System::Byte  get_MinValue();

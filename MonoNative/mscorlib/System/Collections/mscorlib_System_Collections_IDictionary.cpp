@@ -53,7 +53,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsFixedSize
-			mscorlib::System::Boolean  IDictionary::get_IsFixedSize()
+			mscorlib::System::Boolean  IDictionary::get_IsFixedSize() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "IDictionary", 0, NULL, "get_IsFixedSize", __mscorlib_System_Collections_IDictionary, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -61,7 +61,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  IDictionary::get_IsReadOnly()
+			mscorlib::System::Boolean  IDictionary::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "IDictionary", 0, NULL, "get_IsReadOnly", __mscorlib_System_Collections_IDictionary, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -69,7 +69,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Item
-			mscorlib::System::Object  IDictionary::get_Item(mscorlib::System::Object key)
+			mscorlib::System::Object  IDictionary::get_Item(mscorlib::System::Object key) const
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -92,7 +92,7 @@ namespace mscorlib
 
 
 			//	Get:Keys
-			mscorlib::System::Collections::ICollection  IDictionary::get_Keys()
+			mscorlib::System::Collections::ICollection  IDictionary::get_Keys() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "IDictionary", 0, NULL, "get_Keys", __mscorlib_System_Collections_IDictionary, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::ICollection(__result__);
@@ -100,7 +100,7 @@ namespace mscorlib
 
 
 			//	Get:Values
-			mscorlib::System::Collections::ICollection  IDictionary::get_Values()
+			mscorlib::System::Collections::ICollection  IDictionary::get_Values() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "IDictionary", 0, NULL, "get_Values", __mscorlib_System_Collections_IDictionary, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::ICollection(__result__);

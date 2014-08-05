@@ -12,7 +12,7 @@ namespace mscorlib
 		//Public Methods
 		//Get Set Properties Methods
 		//	Get:LoadedAssembly
-		mscorlib::System::Reflection::Assembly  AssemblyLoadEventArgs::get_LoadedAssembly()
+		mscorlib::System::Reflection::Assembly  AssemblyLoadEventArgs::get_LoadedAssembly() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AssemblyLoadEventArgs", 0, NULL, "get_LoadedAssembly", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Reflection::Assembly(__result__);

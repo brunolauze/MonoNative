@@ -17,6 +17,10 @@ namespace mscorlib
 			namespace Remoting
 			{
 
+				Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::RemotingConfiguration> mscorlib::System::Runtime::Remoting::RemotingConfiguration::ApplicationId(&mscorlib::System::Runtime::Remoting::RemotingConfiguration::get_ApplicationId, &mscorlib::System::Runtime::Remoting::RemotingConfiguration::set_ApplicationId);
+				Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::RemotingConfiguration> mscorlib::System::Runtime::Remoting::RemotingConfiguration::ApplicationName(&mscorlib::System::Runtime::Remoting::RemotingConfiguration::get_ApplicationName, &mscorlib::System::Runtime::Remoting::RemotingConfiguration::set_ApplicationName);
+				Property<mscorlib::System::Runtime::Remoting::CustomErrorsModes::__ENUM__ , mscorlib::System::Runtime::Remoting::RemotingConfiguration> mscorlib::System::Runtime::Remoting::RemotingConfiguration::CustomErrorsMode(&mscorlib::System::Runtime::Remoting::RemotingConfiguration::get_CustomErrorsMode, &mscorlib::System::Runtime::Remoting::RemotingConfiguration::set_CustomErrorsMode);
+				Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::RemotingConfiguration> mscorlib::System::Runtime::Remoting::RemotingConfiguration::ProcessId(&mscorlib::System::Runtime::Remoting::RemotingConfiguration::get_ProcessId, &mscorlib::System::Runtime::Remoting::RemotingConfiguration::set_ProcessId);
 				//Public Methods
 				void RemotingConfiguration::Configure(mscorlib::System::String filename, mscorlib::System::Boolean ensureSecurity)
 				{
@@ -246,6 +250,11 @@ namespace mscorlib
 					return mscorlib::System::String(__result__);
 				}
 
+				void RemotingConfiguration::set_ApplicationId(mscorlib::System::String  value)
+				{
+					throw;
+				}
+
 
 				//	Get/Set:ApplicationName
 				mscorlib::System::String  RemotingConfiguration::get_ApplicationName()
@@ -286,6 +295,11 @@ namespace mscorlib
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingConfiguration", 0, NULL, "get_ProcessId", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
+				}
+
+				void RemotingConfiguration::set_ProcessId(mscorlib::System::String  value)
+				{
+					throw;
 				}
 
 

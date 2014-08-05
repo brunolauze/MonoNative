@@ -60,7 +60,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:IsReEntrant
-					mscorlib::System::Boolean  SynchronizationAttribute::get_IsReEntrant()
+					mscorlib::System::Boolean  SynchronizationAttribute::get_IsReEntrant() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "SynchronizationAttribute", 0, NULL, "get_IsReEntrant", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 					//	Get/Set:Locked
-					mscorlib::System::Boolean  SynchronizationAttribute::get_Locked()
+					mscorlib::System::Boolean  SynchronizationAttribute::get_Locked() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "SynchronizationAttribute", 0, NULL, "get_Locked", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 					//	Get:Name
-					mscorlib::System::String  SynchronizationAttribute::get_Name()
+					mscorlib::System::String  SynchronizationAttribute::get_Name() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "ContextAttribute", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -93,7 +93,7 @@ namespace mscorlib
 
 
 					//	Get:TypeId
-					mscorlib::System::Object  SynchronizationAttribute::get_TypeId()
+					mscorlib::System::Object  SynchronizationAttribute::get_TypeId() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);

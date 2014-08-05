@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_MESSAGING_ASYNCRESULT_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/mscorlib_System_IAsyncResult.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessageSink.h>
+#include <mscorlib/System/mscorlib_System_IAsyncResult.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessageCtrl.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessage.h>
 
@@ -44,21 +44,21 @@ namespace mscorlib
 
 					class AsyncResult
 						: public mscorlib::System::Object
-						, public virtual mscorlib::System::IAsyncResult
 						, public virtual mscorlib::System::Runtime::Remoting::Messaging::IMessageSink
+						, public virtual mscorlib::System::IAsyncResult
 					{
 					public:
 						AsyncResult(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Object(nativeTypeInfo)
-						, mscorlib::System::IAsyncResult(NULL)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMessageSink(NULL)
+						, mscorlib::System::IAsyncResult(NULL)
 						{
 						};
 					
 						AsyncResult(MonoObject *nativeObject)
 						: mscorlib::System::Object(nativeObject)
-						, mscorlib::System::IAsyncResult(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Messaging::IMessageSink(nativeObject)
+						, mscorlib::System::IAsyncResult(nativeObject)
 						{
 						};
 					
@@ -90,26 +90,26 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:AsyncState
-						mscorlib::System::Object  get_AsyncState();
+						mscorlib::System::Object  get_AsyncState() const;
 
 						//	Get:AsyncWaitHandle
-						mscorlib::System::Threading::WaitHandle  get_AsyncWaitHandle();
+						mscorlib::System::Threading::WaitHandle  get_AsyncWaitHandle() const;
 
 						//	Get:CompletedSynchronously
-						mscorlib::System::Boolean  get_CompletedSynchronously();
+						mscorlib::System::Boolean  get_CompletedSynchronously() const;
 
 						//	Get:IsCompleted
-						mscorlib::System::Boolean  get_IsCompleted();
+						mscorlib::System::Boolean  get_IsCompleted() const;
 
 						//	Get/Set:EndInvokeCalled
-						mscorlib::System::Boolean  get_EndInvokeCalled();
+						mscorlib::System::Boolean  get_EndInvokeCalled() const;
 						void set_EndInvokeCalled(mscorlib::System::Boolean  value);
 
 						//	Get:AsyncDelegate
-						mscorlib::System::Object  get_AsyncDelegate();
+						mscorlib::System::Object  get_AsyncDelegate() const;
 
 						//	Get:NextSink
-						mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  get_NextSink();
+						mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  get_NextSink() const;
 
 					
 					protected:

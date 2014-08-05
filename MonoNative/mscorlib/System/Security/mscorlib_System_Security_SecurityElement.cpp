@@ -147,7 +147,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:Attributes
-			mscorlib::System::Collections::Hashtable  SecurityElement::get_Attributes()
+			mscorlib::System::Collections::Hashtable  SecurityElement::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Hashtable(__result__);
@@ -164,7 +164,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Children
-			mscorlib::System::Collections::ArrayList  SecurityElement::get_Children()
+			mscorlib::System::Collections::ArrayList  SecurityElement::get_Children() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "get_Children", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::ArrayList(__result__);
@@ -181,7 +181,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Tag
-			mscorlib::System::String  SecurityElement::get_Tag()
+			mscorlib::System::String  SecurityElement::get_Tag() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "get_Tag", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -198,7 +198,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Text
-			mscorlib::System::String  SecurityElement::get_Text()
+			mscorlib::System::String  SecurityElement::get_Text() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "get_Text", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);

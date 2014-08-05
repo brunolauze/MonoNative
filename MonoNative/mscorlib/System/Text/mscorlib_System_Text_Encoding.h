@@ -124,80 +124,87 @@ namespace mscorlib
 				__declspec(property(get=get_WindowsCodePage)) mscorlib::System::Int32  WindowsCodePage;
 
 				//Public Static Properties
-				static Property<mscorlib::System::Text::Encoding> ASCII;
-				static Property<mscorlib::System::Text::Encoding> BigEndianUnicode;
-				static Property<mscorlib::System::Text::Encoding> Default;
-				static Property<mscorlib::System::Text::Encoding> UTF7;
-				static Property<mscorlib::System::Text::Encoding> UTF8;
-				static Property<mscorlib::System::Text::Encoding> Unicode;
-				static Property<mscorlib::System::Text::Encoding> UTF32;
+				static Property<mscorlib::System::Text::Encoding , mscorlib::System::Text::Encoding> ASCII;
+				static Property<mscorlib::System::Text::Encoding , mscorlib::System::Text::Encoding> BigEndianUnicode;
+				static Property<mscorlib::System::Text::Encoding , mscorlib::System::Text::Encoding> Default;
+				static Property<mscorlib::System::Text::Encoding , mscorlib::System::Text::Encoding> UTF7;
+				static Property<mscorlib::System::Text::Encoding , mscorlib::System::Text::Encoding> UTF8;
+				static Property<mscorlib::System::Text::Encoding , mscorlib::System::Text::Encoding> Unicode;
+				static Property<mscorlib::System::Text::Encoding , mscorlib::System::Text::Encoding> UTF32;
 
 				//Get Set Properties Methods
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get:IsSingleByte
-				mscorlib::System::Boolean  get_IsSingleByte();
+				mscorlib::System::Boolean  get_IsSingleByte() const;
 
 				//	Get/Set:DecoderFallback
-				mscorlib::System::Text::DecoderFallback  get_DecoderFallback();
+				mscorlib::System::Text::DecoderFallback  get_DecoderFallback() const;
 				void set_DecoderFallback(mscorlib::System::Text::DecoderFallback  value);
 
 				//	Get/Set:EncoderFallback
-				mscorlib::System::Text::EncoderFallback  get_EncoderFallback();
+				mscorlib::System::Text::EncoderFallback  get_EncoderFallback() const;
 				void set_EncoderFallback(mscorlib::System::Text::EncoderFallback  value);
 
 				//	Get:BodyName
-				mscorlib::System::String  get_BodyName();
+				mscorlib::System::String  get_BodyName() const;
 
 				//	Get:CodePage
-				mscorlib::System::Int32  get_CodePage();
+				mscorlib::System::Int32  get_CodePage() const;
 
 				//	Get:EncodingName
-				mscorlib::System::String  get_EncodingName();
+				mscorlib::System::String  get_EncodingName() const;
 
 				//	Get:HeaderName
-				mscorlib::System::String  get_HeaderName();
+				mscorlib::System::String  get_HeaderName() const;
 
 				//	Get:IsBrowserDisplay
-				mscorlib::System::Boolean  get_IsBrowserDisplay();
+				mscorlib::System::Boolean  get_IsBrowserDisplay() const;
 
 				//	Get:IsBrowserSave
-				mscorlib::System::Boolean  get_IsBrowserSave();
+				mscorlib::System::Boolean  get_IsBrowserSave() const;
 
 				//	Get:IsMailNewsDisplay
-				mscorlib::System::Boolean  get_IsMailNewsDisplay();
+				mscorlib::System::Boolean  get_IsMailNewsDisplay() const;
 
 				//	Get:IsMailNewsSave
-				mscorlib::System::Boolean  get_IsMailNewsSave();
+				mscorlib::System::Boolean  get_IsMailNewsSave() const;
 
 				//	Get:WebName
-				mscorlib::System::String  get_WebName();
+				mscorlib::System::String  get_WebName() const;
 
 				//	Get:WindowsCodePage
-				mscorlib::System::Int32  get_WindowsCodePage();
+				mscorlib::System::Int32  get_WindowsCodePage() const;
 
 				//Get Set Static Properties Methods
 				//	Get:ASCII
 				static mscorlib::System::Text::Encoding  get_ASCII();
+				static void set_ASCII(mscorlib::System::Text::Encoding  value);
 
 				//	Get:BigEndianUnicode
 				static mscorlib::System::Text::Encoding  get_BigEndianUnicode();
+				static void set_BigEndianUnicode(mscorlib::System::Text::Encoding  value);
 
 				//	Get:Default
 				static mscorlib::System::Text::Encoding  get_Default();
+				static void set_Default(mscorlib::System::Text::Encoding  value);
 
 				//	Get:UTF7
 				static mscorlib::System::Text::Encoding  get_UTF7();
+				static void set_UTF7(mscorlib::System::Text::Encoding  value);
 
 				//	Get:UTF8
 				static mscorlib::System::Text::Encoding  get_UTF8();
+				static void set_UTF8(mscorlib::System::Text::Encoding  value);
 
 				//	Get:Unicode
 				static mscorlib::System::Text::Encoding  get_Unicode();
+				static void set_Unicode(mscorlib::System::Text::Encoding  value);
 
 				//	Get:UTF32
 				static mscorlib::System::Text::Encoding  get_UTF32();
+				static void set_UTF32(mscorlib::System::Text::Encoding  value);
 
 
 			

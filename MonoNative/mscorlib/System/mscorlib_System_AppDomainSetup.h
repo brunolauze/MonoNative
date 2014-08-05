@@ -126,79 +126,79 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:ApplicationBase
-			mscorlib::System::String  get_ApplicationBase();
+			mscorlib::System::String  get_ApplicationBase() const;
 			void set_ApplicationBase(mscorlib::System::String  value);
 
 			//	Get/Set:ApplicationName
-			mscorlib::System::String  get_ApplicationName();
+			mscorlib::System::String  get_ApplicationName() const;
 			void set_ApplicationName(mscorlib::System::String  value);
 
 			//	Get/Set:CachePath
-			mscorlib::System::String  get_CachePath();
+			mscorlib::System::String  get_CachePath() const;
 			void set_CachePath(mscorlib::System::String  value);
 
 			//	Get/Set:ConfigurationFile
-			mscorlib::System::String  get_ConfigurationFile();
+			mscorlib::System::String  get_ConfigurationFile() const;
 			void set_ConfigurationFile(mscorlib::System::String  value);
 
 			//	Get/Set:DisallowPublisherPolicy
-			mscorlib::System::Boolean  get_DisallowPublisherPolicy();
+			mscorlib::System::Boolean  get_DisallowPublisherPolicy() const;
 			void set_DisallowPublisherPolicy(mscorlib::System::Boolean  value);
 
 			//	Get/Set:DynamicBase
-			mscorlib::System::String  get_DynamicBase();
+			mscorlib::System::String  get_DynamicBase() const;
 			void set_DynamicBase(mscorlib::System::String  value);
 
 			//	Get/Set:LicenseFile
-			mscorlib::System::String  get_LicenseFile();
+			mscorlib::System::String  get_LicenseFile() const;
 			void set_LicenseFile(mscorlib::System::String  value);
 
 			//	Get/Set:LoaderOptimization
-			mscorlib::System::LoaderOptimization::__ENUM__  get_LoaderOptimization();
+			mscorlib::System::LoaderOptimization::__ENUM__  get_LoaderOptimization() const;
 			void set_LoaderOptimization(mscorlib::System::LoaderOptimization::__ENUM__  value);
 
 			//	Get/Set:PrivateBinPath
-			mscorlib::System::String  get_PrivateBinPath();
+			mscorlib::System::String  get_PrivateBinPath() const;
 			void set_PrivateBinPath(mscorlib::System::String  value);
 
 			//	Get/Set:PrivateBinPathProbe
-			mscorlib::System::String  get_PrivateBinPathProbe();
+			mscorlib::System::String  get_PrivateBinPathProbe() const;
 			void set_PrivateBinPathProbe(mscorlib::System::String  value);
 
 			//	Get/Set:ShadowCopyDirectories
-			mscorlib::System::String  get_ShadowCopyDirectories();
+			mscorlib::System::String  get_ShadowCopyDirectories() const;
 			void set_ShadowCopyDirectories(mscorlib::System::String  value);
 
 			//	Get/Set:ShadowCopyFiles
-			mscorlib::System::String  get_ShadowCopyFiles();
+			mscorlib::System::String  get_ShadowCopyFiles() const;
 			void set_ShadowCopyFiles(mscorlib::System::String  value);
 
 			//	Get/Set:DisallowBindingRedirects
-			mscorlib::System::Boolean  get_DisallowBindingRedirects();
+			mscorlib::System::Boolean  get_DisallowBindingRedirects() const;
 			void set_DisallowBindingRedirects(mscorlib::System::Boolean  value);
 
 			//	Get/Set:DisallowCodeDownload
-			mscorlib::System::Boolean  get_DisallowCodeDownload();
+			mscorlib::System::Boolean  get_DisallowCodeDownload() const;
 			void set_DisallowCodeDownload(mscorlib::System::Boolean  value);
 
 			//	Get/Set:ActivationArguments
-			mscorlib::System::Runtime::Hosting::ActivationArguments  get_ActivationArguments();
+			mscorlib::System::Runtime::Hosting::ActivationArguments  get_ActivationArguments() const;
 			void set_ActivationArguments(mscorlib::System::Runtime::Hosting::ActivationArguments  value);
 
 			//	Get/Set:AppDomainInitializer
-			mscorlib::Callback<void  (std::vector<mscorlib::System::String*> )>  get_AppDomainInitializer();
+			mscorlib::Callback<void  (std::vector<mscorlib::System::String*> )>  get_AppDomainInitializer() const;
 			void set_AppDomainInitializer(mscorlib::Callback<void  (std::vector<mscorlib::System::String*> )>  value);
 
 			//	Get/Set:AppDomainInitializerArguments
-			std::vector<mscorlib::System::String*>  get_AppDomainInitializerArguments();
+			std::vector<mscorlib::System::String*>  get_AppDomainInitializerArguments() const;
 			void set_AppDomainInitializerArguments(std::vector<mscorlib::System::String*>  value);
 
 			//	Get/Set:ApplicationTrust
-			mscorlib::System::Security::Policy::ApplicationTrust  get_ApplicationTrust();
+			mscorlib::System::Security::Policy::ApplicationTrust  get_ApplicationTrust() const;
 			void set_ApplicationTrust(mscorlib::System::Security::Policy::ApplicationTrust  value);
 
 			//	Get/Set:DisallowApplicationBaseProbing
-			mscorlib::System::Boolean  get_DisallowApplicationBaseProbing();
+			mscorlib::System::Boolean  get_DisallowApplicationBaseProbing() const;
 			void set_DisallowApplicationBaseProbing(mscorlib::System::Boolean  value);
 
 		

@@ -3,10 +3,10 @@
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/mscorlib_System_IConvertible.h>
-#include <mscorlib/System/mscorlib_System_IComparable.h>
-#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
+#include <mscorlib/System/mscorlib_System_IComparable.h>
+#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/mscorlib_System_TypeCode.h>
@@ -31,29 +31,29 @@ namespace mscorlib
 		class SByte
 			: public mscorlib::System::ValueType
 			, public virtual mscorlib::System::IConvertible
-			, public virtual mscorlib::System::IObjectComparable
-			, public virtual mscorlib::System::IFormattable
 			, public virtual mscorlib::System::IComparable<mscorlib::System::SByte>
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::SByte>
+			, public virtual mscorlib::System::IObjectComparable
+			, public virtual mscorlib::System::IFormattable
 		{
 		public:
 			SByte(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::SByte>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::SByte>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 			};
 		
 			SByte(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
 			, mscorlib::System::IConvertible(nativeObject)
-			, mscorlib::System::IObjectComparable(nativeObject)
-			, mscorlib::System::IFormattable(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::SByte>(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::SByte>(nativeObject)
+			, mscorlib::System::IObjectComparable(nativeObject)
+			, mscorlib::System::IFormattable(nativeObject)
 			{
 			};
 		
@@ -87,8 +87,8 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::SByte> MinValue;
-			static Property<mscorlib::System::SByte> MaxValue;
+			static Property<mscorlib::System::SByte , mscorlib::System::SByte> MinValue;
+			static Property<mscorlib::System::SByte , mscorlib::System::SByte> MaxValue;
 
 			//	Get/Set:MinValue
 			static mscorlib::System::SByte  get_MinValue();

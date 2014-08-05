@@ -129,15 +129,15 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:PermissionSet
-					mscorlib::System::Security::PermissionSet  get_PermissionSet();
+					mscorlib::System::Security::PermissionSet  get_PermissionSet() const;
 					void set_PermissionSet(mscorlib::System::Security::PermissionSet  value);
 
 					//	Get/Set:Attributes
-					mscorlib::System::Security::Policy::PolicyStatementAttribute::__ENUM__  get_Attributes();
+					mscorlib::System::Security::Policy::PolicyStatementAttribute::__ENUM__  get_Attributes() const;
 					void set_Attributes(mscorlib::System::Security::Policy::PolicyStatementAttribute::__ENUM__  value);
 
 					//	Get:AttributeString
-					mscorlib::System::String  get_AttributeString();
+					mscorlib::System::String  get_AttributeString() const;
 
 				
 				protected:

@@ -72,7 +72,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage, put=set___mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage)) MonoObject *__mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage() const
 						{
 							return IMethodMessage::__mscorlib_System_Runtime_Remoting_Messaging_IMessage;
 						}
@@ -102,31 +102,31 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:ArgCount
-						mscorlib::System::Int32  get_ArgCount();
+						mscorlib::System::Int32  get_ArgCount() const;
 
 						//	Get:Args
-						std::vector<mscorlib::System::Object*>  get_Args();
+						std::vector<mscorlib::System::Object*>  get_Args() const;
 
 						//	Get:HasVarArgs
-						mscorlib::System::Boolean  get_HasVarArgs();
+						mscorlib::System::Boolean  get_HasVarArgs() const;
 
 						//	Get:LogicalCallContext
-						mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext  get_LogicalCallContext();
+						mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext  get_LogicalCallContext() const;
 
 						//	Get:MethodBase
-						mscorlib::System::Reflection::MethodBase  get_MethodBase();
+						mscorlib::System::Reflection::MethodBase  get_MethodBase() const;
 
 						//	Get:MethodName
-						mscorlib::System::String  get_MethodName();
+						mscorlib::System::String  get_MethodName() const;
 
 						//	Get:MethodSignature
-						mscorlib::System::Object  get_MethodSignature();
+						mscorlib::System::Object  get_MethodSignature() const;
 
 						//	Get:TypeName
-						mscorlib::System::String  get_TypeName();
+						mscorlib::System::String  get_TypeName() const;
 
 						//	Get:Uri
-						mscorlib::System::String  get_Uri();
+						mscorlib::System::String  get_Uri() const;
 
 					
 					protected:

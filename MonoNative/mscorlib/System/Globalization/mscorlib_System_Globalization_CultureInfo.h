@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
+#include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/Globalization/mscorlib_System_Globalization_CultureTypes.h>
 
 namespace mscorlib
@@ -43,14 +43,14 @@ namespace mscorlib
 
 			class CultureInfo
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::IFormatProvider
 				, public virtual mscorlib::System::ICloneable
+				, public virtual mscorlib::System::IFormatProvider
 			{
 			public:
 				CultureInfo(mscorlib::System::Int32 culture)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Globalization.CultureInfo"))
-				, mscorlib::System::IFormatProvider(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::IFormatProvider(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -61,8 +61,8 @@ namespace mscorlib
 			
 				CultureInfo(mscorlib::System::Int32 culture, mscorlib::System::Boolean useUserOverride)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Globalization.CultureInfo"))
-				, mscorlib::System::IFormatProvider(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::IFormatProvider(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -75,8 +75,8 @@ namespace mscorlib
 			
 				CultureInfo(mscorlib::System::String name)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Globalization.CultureInfo"))
-				, mscorlib::System::IFormatProvider(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::IFormatProvider(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -87,8 +87,8 @@ namespace mscorlib
 			
 				CultureInfo(mscorlib::System::String name, mscorlib::System::Boolean useUserOverride)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Globalization.CultureInfo"))
-				, mscorlib::System::IFormatProvider(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::IFormatProvider(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -101,15 +101,15 @@ namespace mscorlib
 			
 				CultureInfo(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::IFormatProvider(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::IFormatProvider(NULL)
 				{
 				};
 			
 				CultureInfo(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::IFormatProvider(nativeObject)
 				, mscorlib::System::ICloneable(nativeObject)
+				, mscorlib::System::IFormatProvider(nativeObject)
 				{
 				};
 			
@@ -164,91 +164,95 @@ namespace mscorlib
 				__declspec(property(get=get_IsReadOnly)) mscorlib::System::Boolean  IsReadOnly;
 
 				//Public Static Properties
-				static Property<mscorlib::System::Globalization::CultureInfo> InvariantCulture;
-				static Property<mscorlib::System::Globalization::CultureInfo> CurrentCulture;
-				static Property<mscorlib::System::Globalization::CultureInfo> CurrentUICulture;
-				static Property<mscorlib::System::Globalization::CultureInfo> InstalledUICulture;
-				static Property<mscorlib::System::Globalization::CultureInfo> DefaultThreadCurrentCulture;
-				static Property<mscorlib::System::Globalization::CultureInfo> DefaultThreadCurrentUICulture;
+				static Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> InvariantCulture;
+				static Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> CurrentCulture;
+				static Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> CurrentUICulture;
+				static Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> InstalledUICulture;
+				static Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> DefaultThreadCurrentCulture;
+				static Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> DefaultThreadCurrentUICulture;
 
 				//Get Set Properties Methods
 				//	Get:CultureTypes
-				mscorlib::System::Globalization::CultureTypes::__ENUM__  get_CultureTypes();
+				mscorlib::System::Globalization::CultureTypes::__ENUM__  get_CultureTypes() const;
 
 				//	Get:IetfLanguageTag
-				mscorlib::System::String  get_IetfLanguageTag();
+				mscorlib::System::String  get_IetfLanguageTag() const;
 
 				//	Get:KeyboardLayoutId
-				mscorlib::System::Int32  get_KeyboardLayoutId();
+				mscorlib::System::Int32  get_KeyboardLayoutId() const;
 
 				//	Get:LCID
-				mscorlib::System::Int32  get_LCID();
+				mscorlib::System::Int32  get_LCID() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get:NativeName
-				mscorlib::System::String  get_NativeName();
+				mscorlib::System::String  get_NativeName() const;
 
 				//	Get:Calendar
-				mscorlib::System::Globalization::Calendar  get_Calendar();
+				mscorlib::System::Globalization::Calendar  get_Calendar() const;
 
 				//	Get:OptionalCalendars
-				std::vector<mscorlib::System::Globalization::Calendar*>  get_OptionalCalendars();
+				std::vector<mscorlib::System::Globalization::Calendar*>  get_OptionalCalendars() const;
 
 				//	Get:Parent
-				mscorlib::System::Globalization::CultureInfo  get_Parent();
+				mscorlib::System::Globalization::CultureInfo  get_Parent() const;
 
 				//	Get:TextInfo
-				mscorlib::System::Globalization::TextInfo  get_TextInfo();
+				mscorlib::System::Globalization::TextInfo  get_TextInfo() const;
 
 				//	Get:ThreeLetterISOLanguageName
-				mscorlib::System::String  get_ThreeLetterISOLanguageName();
+				mscorlib::System::String  get_ThreeLetterISOLanguageName() const;
 
 				//	Get:ThreeLetterWindowsLanguageName
-				mscorlib::System::String  get_ThreeLetterWindowsLanguageName();
+				mscorlib::System::String  get_ThreeLetterWindowsLanguageName() const;
 
 				//	Get:TwoLetterISOLanguageName
-				mscorlib::System::String  get_TwoLetterISOLanguageName();
+				mscorlib::System::String  get_TwoLetterISOLanguageName() const;
 
 				//	Get:UseUserOverride
-				mscorlib::System::Boolean  get_UseUserOverride();
+				mscorlib::System::Boolean  get_UseUserOverride() const;
 
 				//	Get:CompareInfo
-				mscorlib::System::Globalization::CompareInfo  get_CompareInfo();
+				mscorlib::System::Globalization::CompareInfo  get_CompareInfo() const;
 
 				//	Get:IsNeutralCulture
-				mscorlib::System::Boolean  get_IsNeutralCulture();
+				mscorlib::System::Boolean  get_IsNeutralCulture() const;
 
 				//	Get/Set:NumberFormat
-				mscorlib::System::Globalization::NumberFormatInfo  get_NumberFormat();
+				mscorlib::System::Globalization::NumberFormatInfo  get_NumberFormat() const;
 				void set_NumberFormat(mscorlib::System::Globalization::NumberFormatInfo  value);
 
 				//	Get/Set:DateTimeFormat
-				mscorlib::System::Globalization::DateTimeFormatInfo  get_DateTimeFormat();
+				mscorlib::System::Globalization::DateTimeFormatInfo  get_DateTimeFormat() const;
 				void set_DateTimeFormat(mscorlib::System::Globalization::DateTimeFormatInfo  value);
 
 				//	Get:DisplayName
-				mscorlib::System::String  get_DisplayName();
+				mscorlib::System::String  get_DisplayName() const;
 
 				//	Get:EnglishName
-				mscorlib::System::String  get_EnglishName();
+				mscorlib::System::String  get_EnglishName() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//Get Set Static Properties Methods
 				//	Get:InvariantCulture
 				static mscorlib::System::Globalization::CultureInfo  get_InvariantCulture();
+				static void set_InvariantCulture(mscorlib::System::Globalization::CultureInfo  value);
 
 				//	Get:CurrentCulture
 				static mscorlib::System::Globalization::CultureInfo  get_CurrentCulture();
+				static void set_CurrentCulture(mscorlib::System::Globalization::CultureInfo  value);
 
 				//	Get:CurrentUICulture
 				static mscorlib::System::Globalization::CultureInfo  get_CurrentUICulture();
+				static void set_CurrentUICulture(mscorlib::System::Globalization::CultureInfo  value);
 
 				//	Get:InstalledUICulture
 				static mscorlib::System::Globalization::CultureInfo  get_InstalledUICulture();
+				static void set_InstalledUICulture(mscorlib::System::Globalization::CultureInfo  value);
 
 				//	Get/Set:DefaultThreadCurrentCulture
 				static mscorlib::System::Globalization::CultureInfo  get_DefaultThreadCurrentCulture();

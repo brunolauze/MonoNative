@@ -400,7 +400,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ILOffset
-				mscorlib::System::Int32  ILGenerator::get_ILOffset()
+				mscorlib::System::Int32  ILGenerator::get_ILOffset() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ILGenerator", 0, NULL, "get_ILOffset", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

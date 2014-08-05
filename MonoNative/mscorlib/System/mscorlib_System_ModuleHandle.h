@@ -66,14 +66,15 @@ namespace mscorlib
 			__declspec(property(get=get_MDStreamVersion)) mscorlib::System::Int32  MDStreamVersion;
 
 			//Public Static Fields
-			static Property<mscorlib::System::ModuleHandle> EmptyHandle;
+			static Property<mscorlib::System::ModuleHandle , mscorlib::System::ModuleHandle> EmptyHandle;
 
 			//Get Set Properties Methods
 			//	Get:MDStreamVersion
-			mscorlib::System::Int32  get_MDStreamVersion();
+			mscorlib::System::Int32  get_MDStreamVersion() const;
 
 			//	Get/Set:EmptyHandle
 			static mscorlib::System::ModuleHandle  get_EmptyHandle();
+			static void set_EmptyHandle(mscorlib::System::ModuleHandle  value);
 
 		
 		protected:

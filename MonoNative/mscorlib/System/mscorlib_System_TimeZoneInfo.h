@@ -3,9 +3,9 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_ValueType.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/mscorlib_System_DayOfWeek.h>
 #include <mscorlib/System/Collections/ObjectModel/mscorlib_System_Collections_ObjectModel_ReadOnlyCollection_1.h>
 
@@ -30,31 +30,31 @@ namespace mscorlib
 
 		class TimeZoneInfo
 			: public mscorlib::System::Object
+			, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 			, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo>
-			, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 		{
 		public:
 			class TransitionTime
 				: public mscorlib::System::ValueType
+				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				, public virtual mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo::TransitionTime>
-				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 			{
 			public:
 				TransitionTime(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::ValueType(nativeTypeInfo)
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo::TransitionTime>(NULL)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				{
 				};
 			
 				TransitionTime(MonoObject *nativeObject)
 				: mscorlib::System::ValueType(nativeObject)
+				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				, mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo::TransitionTime>(nativeObject)
-				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 				{
 				};
 			
@@ -86,22 +86,22 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:TimeOfDay
-				mscorlib::System::DateTime  get_TimeOfDay();
+				mscorlib::System::DateTime  get_TimeOfDay() const;
 
 				//	Get:Month
-				mscorlib::System::Int32  get_Month();
+				mscorlib::System::Int32  get_Month() const;
 
 				//	Get:Day
-				mscorlib::System::Int32  get_Day();
+				mscorlib::System::Int32  get_Day() const;
 
 				//	Get:Week
-				mscorlib::System::Int32  get_Week();
+				mscorlib::System::Int32  get_Week() const;
 
 				//	Get:DayOfWeek
-				mscorlib::System::DayOfWeek::__ENUM__  get_DayOfWeek();
+				mscorlib::System::DayOfWeek::__ENUM__  get_DayOfWeek() const;
 
 				//	Get:IsFixedDateRule
-				mscorlib::System::Boolean  get_IsFixedDateRule();
+				mscorlib::System::Boolean  get_IsFixedDateRule() const;
 
 			
 			protected:
@@ -112,24 +112,24 @@ namespace mscorlib
 			
 			class AdjustmentRule
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 				, public virtual mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo::AdjustmentRule>
+				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			{
 			public:
 				AdjustmentRule(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo::AdjustmentRule>(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 				};
 			
 				AdjustmentRule(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 				, mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo::AdjustmentRule>(nativeObject)
+				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				{
 				};
 			
@@ -158,19 +158,19 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:DateEnd
-				mscorlib::System::DateTime  get_DateEnd();
+				mscorlib::System::DateTime  get_DateEnd() const;
 
 				//	Get:DateStart
-				mscorlib::System::DateTime  get_DateStart();
+				mscorlib::System::DateTime  get_DateStart() const;
 
 				//	Get:DaylightDelta
-				mscorlib::System::TimeSpan  get_DaylightDelta();
+				mscorlib::System::TimeSpan  get_DaylightDelta() const;
 
 				//	Get:DaylightTransitionEnd
-				mscorlib::System::TimeZoneInfo::TransitionTime  get_DaylightTransitionEnd();
+				mscorlib::System::TimeZoneInfo::TransitionTime  get_DaylightTransitionEnd() const;
 
 				//	Get:DaylightTransitionStart
-				mscorlib::System::TimeZoneInfo::TransitionTime  get_DaylightTransitionStart();
+				mscorlib::System::TimeZoneInfo::TransitionTime  get_DaylightTransitionStart() const;
 
 			
 			protected:
@@ -181,17 +181,17 @@ namespace mscorlib
 			
 			TimeZoneInfo(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::Object(nativeTypeInfo)
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo>(NULL)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			{
 			};
 		
 			TimeZoneInfo(MonoObject *nativeObject)
 			: mscorlib::System::Object(nativeObject)
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 			, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::TimeZoneInfo>(nativeObject)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 			{
 			};
 		
@@ -249,34 +249,36 @@ namespace mscorlib
 			__declspec(property(get=get_SupportsDaylightSavingTime)) mscorlib::System::Boolean  SupportsDaylightSavingTime;
 
 			//Public Static Properties
-			static Property<mscorlib::System::TimeZoneInfo> Local;
-			static Property<mscorlib::System::TimeZoneInfo> Utc;
+			static Property<mscorlib::System::TimeZoneInfo , mscorlib::System::TimeZoneInfo> Local;
+			static Property<mscorlib::System::TimeZoneInfo , mscorlib::System::TimeZoneInfo> Utc;
 
 			//Get Set Properties Methods
 			//	Get:BaseUtcOffset
-			mscorlib::System::TimeSpan  get_BaseUtcOffset();
+			mscorlib::System::TimeSpan  get_BaseUtcOffset() const;
 
 			//	Get:DaylightName
-			mscorlib::System::String  get_DaylightName();
+			mscorlib::System::String  get_DaylightName() const;
 
 			//	Get:DisplayName
-			mscorlib::System::String  get_DisplayName();
+			mscorlib::System::String  get_DisplayName() const;
 
 			//	Get:Id
-			mscorlib::System::String  get_Id();
+			mscorlib::System::String  get_Id() const;
 
 			//	Get:StandardName
-			mscorlib::System::String  get_StandardName();
+			mscorlib::System::String  get_StandardName() const;
 
 			//	Get:SupportsDaylightSavingTime
-			mscorlib::System::Boolean  get_SupportsDaylightSavingTime();
+			mscorlib::System::Boolean  get_SupportsDaylightSavingTime() const;
 
 			//Get Set Static Properties Methods
 			//	Get:Local
 			static mscorlib::System::TimeZoneInfo  get_Local();
+			static void set_Local(mscorlib::System::TimeZoneInfo  value);
 
 			//	Get:Utc
 			static mscorlib::System::TimeZoneInfo  get_Utc();
+			static void set_Utc(mscorlib::System::TimeZoneInfo  value);
 
 
 		

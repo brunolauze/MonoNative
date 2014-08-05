@@ -72,19 +72,20 @@ namespace mscorlib
 					__declspec(property(get=get_MaximumConcurrencyLevel)) mscorlib::System::Int32  MaximumConcurrencyLevel;
 
 					//Public Static Properties
-					static Property<mscorlib::System::Threading::Tasks::TaskScheduler> Default;
-					static Property<mscorlib::System::Threading::Tasks::TaskScheduler> Current;
+					static Property<mscorlib::System::Threading::Tasks::TaskScheduler , mscorlib::System::Threading::Tasks::TaskScheduler> Default;
+					static Property<mscorlib::System::Threading::Tasks::TaskScheduler , mscorlib::System::Threading::Tasks::TaskScheduler> Current;
 
 					//Get Set Properties Methods
 					//	Get:Id
-					mscorlib::System::Int32  get_Id();
+					mscorlib::System::Int32  get_Id() const;
 
 					//	Get:MaximumConcurrencyLevel
-					mscorlib::System::Int32  get_MaximumConcurrencyLevel();
+					mscorlib::System::Int32  get_MaximumConcurrencyLevel() const;
 
 					//Get Set Static Properties Methods
 					//	Get:Default
 					static mscorlib::System::Threading::Tasks::TaskScheduler  get_Default();
+					static void set_Default(mscorlib::System::Threading::Tasks::TaskScheduler  value);
 
 					//	Get/Set:Current
 					static mscorlib::System::Threading::Tasks::TaskScheduler  get_Current();

@@ -32,7 +32,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ApplicationIdentity
-				mscorlib::System::Object  IsolatedStorage::get_ApplicationIdentity()
+				mscorlib::System::Object  IsolatedStorage::get_ApplicationIdentity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_ApplicationIdentity", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -40,7 +40,7 @@ namespace mscorlib
 
 
 				//	Get:AssemblyIdentity
-				mscorlib::System::Object  IsolatedStorage::get_AssemblyIdentity()
+				mscorlib::System::Object  IsolatedStorage::get_AssemblyIdentity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_AssemblyIdentity", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -48,7 +48,7 @@ namespace mscorlib
 
 
 				//	Get:CurrentSize
-				mscorlib::System::UInt64  IsolatedStorage::get_CurrentSize()
+				mscorlib::System::UInt64  IsolatedStorage::get_CurrentSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_CurrentSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get:DomainIdentity
-				mscorlib::System::Object  IsolatedStorage::get_DomainIdentity()
+				mscorlib::System::Object  IsolatedStorage::get_DomainIdentity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_DomainIdentity", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 				//	Get:MaximumSize
-				mscorlib::System::UInt64  IsolatedStorage::get_MaximumSize()
+				mscorlib::System::UInt64  IsolatedStorage::get_MaximumSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_MaximumSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
@@ -72,7 +72,7 @@ namespace mscorlib
 
 
 				//	Get:Scope
-				mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  IsolatedStorage::get_Scope()
+				mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  IsolatedStorage::get_Scope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_Scope", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__*)mono_object_unbox(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 				//	Get:AvailableFreeSpace
-				mscorlib::System::Int64  IsolatedStorage::get_AvailableFreeSpace()
+				mscorlib::System::Int64  IsolatedStorage::get_AvailableFreeSpace() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_AvailableFreeSpace", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -88,7 +88,7 @@ namespace mscorlib
 
 
 				//	Get:Quota
-				mscorlib::System::Int64  IsolatedStorage::get_Quota()
+				mscorlib::System::Int64  IsolatedStorage::get_Quota() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_Quota", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -96,7 +96,7 @@ namespace mscorlib
 
 
 				//	Get:UsedSize
-				mscorlib::System::Int64  IsolatedStorage::get_UsedSize()
+				mscorlib::System::Int64  IsolatedStorage::get_UsedSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_UsedSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);

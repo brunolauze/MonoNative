@@ -119,7 +119,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:ProcessorArchitecture
-			mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__  AssemblyName::get_ProcessorArchitecture()
+			mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__  AssemblyName::get_ProcessorArchitecture() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_ProcessorArchitecture", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__*)mono_object_unbox(__result__);
@@ -136,7 +136,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Name
-			mscorlib::System::String  AssemblyName::get_Name()
+			mscorlib::System::String  AssemblyName::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -153,7 +153,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CodeBase
-			mscorlib::System::String  AssemblyName::get_CodeBase()
+			mscorlib::System::String  AssemblyName::get_CodeBase() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_CodeBase", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -170,7 +170,7 @@ namespace mscorlib
 
 
 			//	Get:EscapedCodeBase
-			mscorlib::System::String  AssemblyName::get_EscapedCodeBase()
+			mscorlib::System::String  AssemblyName::get_EscapedCodeBase() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_EscapedCodeBase", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -178,7 +178,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CultureInfo
-			mscorlib::System::Globalization::CultureInfo  AssemblyName::get_CultureInfo()
+			mscorlib::System::Globalization::CultureInfo  AssemblyName::get_CultureInfo() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_CultureInfo", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::CultureInfo(__result__);
@@ -195,7 +195,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Flags
-			mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__  AssemblyName::get_Flags()
+			mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__  AssemblyName::get_Flags() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -212,7 +212,7 @@ namespace mscorlib
 
 
 			//	Get:FullName
-			mscorlib::System::String  AssemblyName::get_FullName()
+			mscorlib::System::String  AssemblyName::get_FullName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_FullName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -220,7 +220,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HashAlgorithm
-			mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  AssemblyName::get_HashAlgorithm()
+			mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  AssemblyName::get_HashAlgorithm() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_HashAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__*)mono_object_unbox(__result__);
@@ -237,7 +237,7 @@ namespace mscorlib
 
 
 			//	Get/Set:KeyPair
-			mscorlib::System::Reflection::StrongNameKeyPair  AssemblyName::get_KeyPair()
+			mscorlib::System::Reflection::StrongNameKeyPair  AssemblyName::get_KeyPair() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_KeyPair", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::StrongNameKeyPair(__result__);
@@ -254,7 +254,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Version
-			mscorlib::System::Version  AssemblyName::get_Version()
+			mscorlib::System::Version  AssemblyName::get_Version() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_Version", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Version(__result__);
@@ -271,7 +271,7 @@ namespace mscorlib
 
 
 			//	Get/Set:VersionCompatibility
-			mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__  AssemblyName::get_VersionCompatibility()
+			mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__  AssemblyName::get_VersionCompatibility() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_VersionCompatibility", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__*)mono_object_unbox(__result__);
@@ -288,7 +288,7 @@ namespace mscorlib
 
 
 			//	Get:CultureName
-			mscorlib::System::String  AssemblyName::get_CultureName()
+			mscorlib::System::String  AssemblyName::get_CultureName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_CultureName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -296,7 +296,7 @@ namespace mscorlib
 
 
 			//	Get/Set:ContentType
-			mscorlib::System::Reflection::AssemblyContentType::__ENUM__  AssemblyName::get_ContentType()
+			mscorlib::System::Reflection::AssemblyContentType::__ENUM__  AssemblyName::get_ContentType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_ContentType", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::AssemblyContentType::__ENUM__*)mono_object_unbox(__result__);

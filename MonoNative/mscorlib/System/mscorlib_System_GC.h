@@ -70,11 +70,12 @@ namespace mscorlib
 
 
 			//Public Static Properties
-			static Property<mscorlib::System::Int32> MaxGeneration;
+			static Property<mscorlib::System::Int32 , mscorlib::System::GC> MaxGeneration;
 
 			//Get Set Static Properties Methods
 			//	Get:MaxGeneration
 			static mscorlib::System::Int32  get_MaxGeneration();
+			static void set_MaxGeneration(mscorlib::System::Int32  value);
 
 
 		

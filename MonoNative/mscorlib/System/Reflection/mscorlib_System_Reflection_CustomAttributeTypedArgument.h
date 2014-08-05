@@ -80,10 +80,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ArgumentType
-				mscorlib::System::Type  get_ArgumentType();
+				mscorlib::System::Type  get_ArgumentType() const;
 
 				//	Get:Value
-				mscorlib::System::Object  get_Value();
+				mscorlib::System::Object  get_Value() const;
 
 			
 			protected:

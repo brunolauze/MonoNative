@@ -11,6 +11,7 @@ namespace mscorlib
 		namespace Diagnostics
 		{
 
+			Property<mscorlib::System::Boolean , mscorlib::System::Diagnostics::Debugger> mscorlib::System::Diagnostics::Debugger::IsAttached(&mscorlib::System::Diagnostics::Debugger::get_IsAttached, &mscorlib::System::Diagnostics::Debugger::set_IsAttached);
 			//Public Methods
 			void Debugger::Break()
 			{
@@ -55,6 +56,11 @@ namespace mscorlib
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}
 
+			void Debugger::set_IsAttached(mscorlib::System::Boolean  value)
+			{
+				throw;
+			}
+
 
 
 				//	Get/Set:DefaultCategory
@@ -63,6 +69,10 @@ namespace mscorlib
 				return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue("mscorlib", "System.Diagnostics", "Debugger", 0, NULL, "DefaultCategory"));
 			}
 
+			void Debugger::set_DefaultCategory(mscorlib::System::String  value)
+			{
+				throw;
+			}
 
 
 		}

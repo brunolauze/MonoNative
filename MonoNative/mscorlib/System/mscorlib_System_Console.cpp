@@ -16,6 +16,33 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::IO::TextWriter , mscorlib::System::Console> mscorlib::System::Console::Error(&mscorlib::System::Console::get_Error, &mscorlib::System::Console::set_Error);
+		Property<mscorlib::System::IO::TextWriter , mscorlib::System::Console> mscorlib::System::Console::Out(&mscorlib::System::Console::get_Out, &mscorlib::System::Console::set_Out);
+		Property<mscorlib::System::IO::TextReader , mscorlib::System::Console> mscorlib::System::Console::In(&mscorlib::System::Console::get_In, &mscorlib::System::Console::set_In);
+		Property<mscorlib::System::Text::Encoding , mscorlib::System::Console> mscorlib::System::Console::InputEncoding(&mscorlib::System::Console::get_InputEncoding, &mscorlib::System::Console::set_InputEncoding);
+		Property<mscorlib::System::Text::Encoding , mscorlib::System::Console> mscorlib::System::Console::OutputEncoding(&mscorlib::System::Console::get_OutputEncoding, &mscorlib::System::Console::set_OutputEncoding);
+		Property<mscorlib::System::ConsoleColor::__ENUM__ , mscorlib::System::Console> mscorlib::System::Console::BackgroundColor(&mscorlib::System::Console::get_BackgroundColor, &mscorlib::System::Console::set_BackgroundColor);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::BufferHeight(&mscorlib::System::Console::get_BufferHeight, &mscorlib::System::Console::set_BufferHeight);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::BufferWidth(&mscorlib::System::Console::get_BufferWidth, &mscorlib::System::Console::set_BufferWidth);
+		Property<mscorlib::System::Boolean , mscorlib::System::Console> mscorlib::System::Console::CapsLock(&mscorlib::System::Console::get_CapsLock, &mscorlib::System::Console::set_CapsLock);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::CursorLeft(&mscorlib::System::Console::get_CursorLeft, &mscorlib::System::Console::set_CursorLeft);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::CursorTop(&mscorlib::System::Console::get_CursorTop, &mscorlib::System::Console::set_CursorTop);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::CursorSize(&mscorlib::System::Console::get_CursorSize, &mscorlib::System::Console::set_CursorSize);
+		Property<mscorlib::System::Boolean , mscorlib::System::Console> mscorlib::System::Console::CursorVisible(&mscorlib::System::Console::get_CursorVisible, &mscorlib::System::Console::set_CursorVisible);
+		Property<mscorlib::System::ConsoleColor::__ENUM__ , mscorlib::System::Console> mscorlib::System::Console::ForegroundColor(&mscorlib::System::Console::get_ForegroundColor, &mscorlib::System::Console::set_ForegroundColor);
+		Property<mscorlib::System::Boolean , mscorlib::System::Console> mscorlib::System::Console::KeyAvailable(&mscorlib::System::Console::get_KeyAvailable, &mscorlib::System::Console::set_KeyAvailable);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::LargestWindowHeight(&mscorlib::System::Console::get_LargestWindowHeight, &mscorlib::System::Console::set_LargestWindowHeight);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::LargestWindowWidth(&mscorlib::System::Console::get_LargestWindowWidth, &mscorlib::System::Console::set_LargestWindowWidth);
+		Property<mscorlib::System::Boolean , mscorlib::System::Console> mscorlib::System::Console::NumberLock(&mscorlib::System::Console::get_NumberLock, &mscorlib::System::Console::set_NumberLock);
+		Property<mscorlib::System::String , mscorlib::System::Console> mscorlib::System::Console::Title(&mscorlib::System::Console::get_Title, &mscorlib::System::Console::set_Title);
+		Property<mscorlib::System::Boolean , mscorlib::System::Console> mscorlib::System::Console::TreatControlCAsInput(&mscorlib::System::Console::get_TreatControlCAsInput, &mscorlib::System::Console::set_TreatControlCAsInput);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::WindowHeight(&mscorlib::System::Console::get_WindowHeight, &mscorlib::System::Console::set_WindowHeight);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::WindowLeft(&mscorlib::System::Console::get_WindowLeft, &mscorlib::System::Console::set_WindowLeft);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::WindowTop(&mscorlib::System::Console::get_WindowTop, &mscorlib::System::Console::set_WindowTop);
+		Property<mscorlib::System::Int32 , mscorlib::System::Console> mscorlib::System::Console::WindowWidth(&mscorlib::System::Console::get_WindowWidth, &mscorlib::System::Console::set_WindowWidth);
+		Property<mscorlib::System::Boolean , mscorlib::System::Console> mscorlib::System::Console::IsErrorRedirected(&mscorlib::System::Console::get_IsErrorRedirected, &mscorlib::System::Console::set_IsErrorRedirected);
+		Property<mscorlib::System::Boolean , mscorlib::System::Console> mscorlib::System::Console::IsOutputRedirected(&mscorlib::System::Console::get_IsOutputRedirected, &mscorlib::System::Console::set_IsOutputRedirected);
+		Property<mscorlib::System::Boolean , mscorlib::System::Console> mscorlib::System::Console::IsInputRedirected(&mscorlib::System::Console::get_IsInputRedirected, &mscorlib::System::Console::set_IsInputRedirected);
 		//Public Methods
 		mscorlib::System::IO::Stream Console::OpenStandardError()
 		{
@@ -623,6 +650,11 @@ namespace mscorlib
 			return mscorlib::System::IO::TextWriter(__result__);
 		}
 
+		void Console::set_Error(mscorlib::System::IO::TextWriter  value)
+		{
+			throw;
+		}
+
 
 		//	Get:Out
 		mscorlib::System::IO::TextWriter  Console::get_Out()
@@ -631,12 +663,22 @@ namespace mscorlib
 			return mscorlib::System::IO::TextWriter(__result__);
 		}
 
+		void Console::set_Out(mscorlib::System::IO::TextWriter  value)
+		{
+			throw;
+		}
+
 
 		//	Get:In
 		mscorlib::System::IO::TextReader  Console::get_In()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Console", 0, NULL, "get_In", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::IO::TextReader(__result__);
+		}
+
+		void Console::set_In(mscorlib::System::IO::TextReader  value)
+		{
+			throw;
 		}
 
 
@@ -732,6 +774,11 @@ namespace mscorlib
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
 
+		void Console::set_CapsLock(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
+
 
 		//	Get/Set:CursorLeft
 		mscorlib::System::Int32  Console::get_CursorLeft()
@@ -825,12 +872,22 @@ namespace mscorlib
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
 
+		void Console::set_KeyAvailable(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
+
 
 		//	Get:LargestWindowHeight
 		mscorlib::System::Int32  Console::get_LargestWindowHeight()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Console", 0, NULL, "get_LargestWindowHeight", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		void Console::set_LargestWindowHeight(mscorlib::System::Int32  value)
+		{
+			throw;
 		}
 
 
@@ -841,12 +898,22 @@ namespace mscorlib
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 		}
 
+		void Console::set_LargestWindowWidth(mscorlib::System::Int32  value)
+		{
+			throw;
+		}
+
 
 		//	Get:NumberLock
 		mscorlib::System::Boolean  Console::get_NumberLock()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Console", 0, NULL, "get_NumberLock", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		void Console::set_NumberLock(mscorlib::System::Boolean  value)
+		{
+			throw;
 		}
 
 
@@ -959,6 +1026,11 @@ namespace mscorlib
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
 
+		void Console::set_IsErrorRedirected(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
+
 
 		//	Get:IsOutputRedirected
 		mscorlib::System::Boolean  Console::get_IsOutputRedirected()
@@ -967,12 +1039,22 @@ namespace mscorlib
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
 
+		void Console::set_IsOutputRedirected(mscorlib::System::Boolean  value)
+		{
+			throw;
+		}
+
 
 		//	Get:IsInputRedirected
 		mscorlib::System::Boolean  Console::get_IsInputRedirected()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Console", 0, NULL, "get_IsInputRedirected", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		void Console::set_IsInputRedirected(mscorlib::System::Boolean  value)
+		{
+			throw;
 		}
 
 

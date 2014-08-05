@@ -71,13 +71,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:MaxSize
-					mscorlib::System::Int32  get_MaxSize();
+					mscorlib::System::Int32  get_MaxSize() const;
 
 					//	Get:MinSize
-					mscorlib::System::Int32  get_MinSize();
+					mscorlib::System::Int32  get_MinSize() const;
 
 					//	Get:SkipSize
-					mscorlib::System::Int32  get_SkipSize();
+					mscorlib::System::Int32  get_SkipSize() const;
 
 				
 				protected:

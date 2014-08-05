@@ -638,7 +638,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:LCID
-			mscorlib::System::Int32  CompareInfo::get_LCID()
+			mscorlib::System::Int32  CompareInfo::get_LCID() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CompareInfo", 0, NULL, "get_LCID", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -646,7 +646,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  CompareInfo::get_Name()
+			mscorlib::System::String  CompareInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CompareInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);

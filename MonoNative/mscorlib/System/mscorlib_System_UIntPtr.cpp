@@ -9,6 +9,7 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::Int32 , mscorlib::System::UIntPtr> mscorlib::System::UIntPtr::Size(&mscorlib::System::UIntPtr::get_Size, &mscorlib::System::UIntPtr::set_Size);
 		//Public Methods
 		mscorlib::System::Boolean UIntPtr::Equals(mscorlib::System::Object obj)
 		{
@@ -82,6 +83,11 @@ namespace mscorlib
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 		}
 
+		void UIntPtr::set_Size(mscorlib::System::Int32  value)
+		{
+			throw;
+		}
+
 
 
 			//	Get/Set:Zero
@@ -90,6 +96,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "UIntPtr", 0, NULL, "Zero");
 		}
 
+		void UIntPtr::set_Zero(mscorlib::System::UIntPtr  value)
+		{
+			throw;
+		}
 
 
 	}

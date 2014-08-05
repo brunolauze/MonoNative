@@ -25,7 +25,7 @@ namespace mscorlib
 			
 
 				__declspec(property(get=get___mscorlib_System_Security_IPermission, put=set___mscorlib_System_Security_IPermission)) MonoObject *__mscorlib_System_Security_IPermission;
-				MonoObject* get___mscorlib_System_Security_IPermission()
+				MonoObject* get___mscorlib_System_Security_IPermission() const
 				{
 					return IPermission::__mscorlib_System_Security_ISecurityEncodable;
 				}

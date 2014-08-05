@@ -74,7 +74,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Flags
-				mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__  SecurityPermission::get_Flags()
+				mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__  SecurityPermission::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityPermission", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityPermissionFlag::__ENUM__*)mono_object_unbox(__result__);

@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:WrappedObject
-				mscorlib::System::Object  DispatchWrapper::get_WrappedObject()
+				mscorlib::System::Object  DispatchWrapper::get_WrappedObject() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "DispatchWrapper", 0, NULL, "get_WrappedObject", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

@@ -166,11 +166,11 @@ namespace mscorlib
 				__declspec(property(get=get_FrameCount)) mscorlib::System::Int32  FrameCount;
 
 				//Public Static Fields
-				static Property<mscorlib::System::Int32> METHODS_TO_SKIP;
+				static Property<mscorlib::System::Int32 , mscorlib::System::Diagnostics::StackTrace> METHODS_TO_SKIP;
 
 				//Get Set Properties Methods
 				//	Get:FrameCount
-				mscorlib::System::Int32  get_FrameCount();
+				mscorlib::System::Int32  get_FrameCount() const;
 
 				//	Get/Set:METHODS_TO_SKIP
 				static mscorlib::System::Int32  get_METHODS_TO_SKIP();

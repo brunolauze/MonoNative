@@ -58,7 +58,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:NextSpinWillYield
-			mscorlib::System::Boolean  SpinWait::get_NextSpinWillYield()
+			mscorlib::System::Boolean  SpinWait::get_NextSpinWillYield() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SpinWait", 0, NULL, "get_NextSpinWillYield", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -66,7 +66,7 @@ namespace mscorlib
 
 
 			//	Get:Count
-			mscorlib::System::Int32  SpinWait::get_Count()
+			mscorlib::System::Int32  SpinWait::get_Count() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SpinWait", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

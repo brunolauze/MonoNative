@@ -74,18 +74,18 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:ProxyTypeName
-				mscorlib::System::String  get_ProxyTypeName();
+				mscorlib::System::String  get_ProxyTypeName() const;
 
 				//	Get/Set:Target
-				mscorlib::System::Type  get_Target();
+				mscorlib::System::Type  get_Target() const;
 				void set_Target(mscorlib::System::Type  value);
 
 				//	Get/Set:TargetTypeName
-				mscorlib::System::String  get_TargetTypeName();
+				mscorlib::System::String  get_TargetTypeName() const;
 				void set_TargetTypeName(mscorlib::System::String  value);
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

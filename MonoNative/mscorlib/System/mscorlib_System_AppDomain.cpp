@@ -32,6 +32,9 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::AppDomain , mscorlib::System::AppDomain> mscorlib::System::AppDomain::CurrentDomain(&mscorlib::System::AppDomain::get_CurrentDomain, &mscorlib::System::AppDomain::set_CurrentDomain);
+		Property<mscorlib::System::Boolean , mscorlib::System::AppDomain> mscorlib::System::AppDomain::MonitoringIsEnabled(&mscorlib::System::AppDomain::get_MonitoringIsEnabled, &mscorlib::System::AppDomain::set_MonitoringIsEnabled);
+		Property<mscorlib::System::Int64 , mscorlib::System::AppDomain> mscorlib::System::AppDomain::MonitoringSurvivedProcessMemorySize(&mscorlib::System::AppDomain::get_MonitoringSurvivedProcessMemorySize, &mscorlib::System::AppDomain::set_MonitoringSurvivedProcessMemorySize);
 		//Public Methods
 		void AppDomain::AppendPrivatePath(mscorlib::System::String path)
 		{
@@ -1145,7 +1148,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:SetupInformation
-		mscorlib::System::AppDomainSetup  AppDomain::get_SetupInformation()
+		mscorlib::System::AppDomainSetup  AppDomain::get_SetupInformation() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_SetupInformation", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::AppDomainSetup(__result__);
@@ -1153,7 +1156,7 @@ namespace mscorlib
 
 
 		//	Get:ApplicationTrust
-		mscorlib::System::Security::Policy::ApplicationTrust  AppDomain::get_ApplicationTrust()
+		mscorlib::System::Security::Policy::ApplicationTrust  AppDomain::get_ApplicationTrust() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_ApplicationTrust", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Security::Policy::ApplicationTrust(__result__);
@@ -1161,7 +1164,7 @@ namespace mscorlib
 
 
 		//	Get:BaseDirectory
-		mscorlib::System::String  AppDomain::get_BaseDirectory()
+		mscorlib::System::String  AppDomain::get_BaseDirectory() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_BaseDirectory", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -1169,7 +1172,7 @@ namespace mscorlib
 
 
 		//	Get:RelativeSearchPath
-		mscorlib::System::String  AppDomain::get_RelativeSearchPath()
+		mscorlib::System::String  AppDomain::get_RelativeSearchPath() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_RelativeSearchPath", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -1177,7 +1180,7 @@ namespace mscorlib
 
 
 		//	Get:DynamicDirectory
-		mscorlib::System::String  AppDomain::get_DynamicDirectory()
+		mscorlib::System::String  AppDomain::get_DynamicDirectory() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_DynamicDirectory", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -1185,7 +1188,7 @@ namespace mscorlib
 
 
 		//	Get:ShadowCopyFiles
-		mscorlib::System::Boolean  AppDomain::get_ShadowCopyFiles()
+		mscorlib::System::Boolean  AppDomain::get_ShadowCopyFiles() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_ShadowCopyFiles", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -1193,7 +1196,7 @@ namespace mscorlib
 
 
 		//	Get:FriendlyName
-		mscorlib::System::String  AppDomain::get_FriendlyName()
+		mscorlib::System::String  AppDomain::get_FriendlyName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_FriendlyName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -1201,7 +1204,7 @@ namespace mscorlib
 
 
 		//	Get:Evidence
-		mscorlib::System::Security::Policy::Evidence  AppDomain::get_Evidence()
+		mscorlib::System::Security::Policy::Evidence  AppDomain::get_Evidence() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_Evidence", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Security::Policy::Evidence(__result__);
@@ -1209,7 +1212,7 @@ namespace mscorlib
 
 
 		//	Get:PermissionSet
-		mscorlib::System::Security::PermissionSet  AppDomain::get_PermissionSet()
+		mscorlib::System::Security::PermissionSet  AppDomain::get_PermissionSet() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_PermissionSet", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Security::PermissionSet(__result__);
@@ -1217,7 +1220,7 @@ namespace mscorlib
 
 
 		//	Get:IsHomogenous
-		mscorlib::System::Boolean  AppDomain::get_IsHomogenous()
+		mscorlib::System::Boolean  AppDomain::get_IsHomogenous() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_IsHomogenous", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -1225,7 +1228,7 @@ namespace mscorlib
 
 
 		//	Get:IsFullyTrusted
-		mscorlib::System::Boolean  AppDomain::get_IsFullyTrusted()
+		mscorlib::System::Boolean  AppDomain::get_IsFullyTrusted() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_IsFullyTrusted", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -1233,7 +1236,7 @@ namespace mscorlib
 
 
 		//	Get:DomainManager
-		mscorlib::System::AppDomainManager  AppDomain::get_DomainManager()
+		mscorlib::System::AppDomainManager  AppDomain::get_DomainManager() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_DomainManager", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::AppDomainManager(__result__);
@@ -1241,7 +1244,7 @@ namespace mscorlib
 
 
 		//	Get:ActivationContext
-		mscorlib::System::ActivationContext  AppDomain::get_ActivationContext()
+		mscorlib::System::ActivationContext  AppDomain::get_ActivationContext() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_ActivationContext", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::ActivationContext(__result__);
@@ -1249,7 +1252,7 @@ namespace mscorlib
 
 
 		//	Get:ApplicationIdentity
-		mscorlib::System::ApplicationIdentity  AppDomain::get_ApplicationIdentity()
+		mscorlib::System::ApplicationIdentity  AppDomain::get_ApplicationIdentity() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_ApplicationIdentity", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::ApplicationIdentity(__result__);
@@ -1257,7 +1260,7 @@ namespace mscorlib
 
 
 		//	Get:Id
-		mscorlib::System::Int32  AppDomain::get_Id()
+		mscorlib::System::Int32  AppDomain::get_Id() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_Id", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -1265,7 +1268,7 @@ namespace mscorlib
 
 
 		//	Get:MonitoringSurvivedMemorySize
-		mscorlib::System::Int64  AppDomain::get_MonitoringSurvivedMemorySize()
+		mscorlib::System::Int64  AppDomain::get_MonitoringSurvivedMemorySize() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_MonitoringSurvivedMemorySize", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -1273,7 +1276,7 @@ namespace mscorlib
 
 
 		//	Get:MonitoringTotalAllocatedMemorySize
-		mscorlib::System::Int64  AppDomain::get_MonitoringTotalAllocatedMemorySize()
+		mscorlib::System::Int64  AppDomain::get_MonitoringTotalAllocatedMemorySize() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_MonitoringTotalAllocatedMemorySize", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -1281,7 +1284,7 @@ namespace mscorlib
 
 
 		//	Get:MonitoringTotalProcessorTime
-		mscorlib::System::TimeSpan  AppDomain::get_MonitoringTotalProcessorTime()
+		mscorlib::System::TimeSpan  AppDomain::get_MonitoringTotalProcessorTime() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_MonitoringTotalProcessorTime", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeSpan(__result__);
@@ -1294,6 +1297,11 @@ namespace mscorlib
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_CurrentDomain", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::AppDomain(__result__);
+		}
+
+		void AppDomain::set_CurrentDomain(mscorlib::System::AppDomain  value)
+		{
+			throw;
 		}
 
 
@@ -1319,6 +1327,11 @@ namespace mscorlib
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomain", 0, NULL, "get_MonitoringSurvivedProcessMemorySize", NullMonoObject, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
+		}
+
+		void AppDomain::set_MonitoringSurvivedProcessMemorySize(mscorlib::System::Int64  value)
+		{
+			throw;
 		}
 
 

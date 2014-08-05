@@ -83,11 +83,11 @@ namespace mscorlib
 							__declspec(property(get=get_oInst, put=set_oInst)) mscorlib::System::Int32  oInst;
 
 							//	Get/Set:lpvarValue
-							mscorlib::System::IntPtr  get_lpvarValue();
+							mscorlib::System::IntPtr  get_lpvarValue() const;
 							void set_lpvarValue(mscorlib::System::IntPtr  value);
 
 							//	Get/Set:oInst
-							mscorlib::System::Int32  get_oInst();
+							mscorlib::System::Int32  get_oInst() const;
 							void set_oInst(mscorlib::System::Int32  value);
 
 						
@@ -129,27 +129,27 @@ namespace mscorlib
 						__declspec(property(get=get_varkind, put=set_varkind)) mscorlib::System::Runtime::InteropServices::ComTypes::VARKIND::__ENUM__  varkind;
 
 						//	Get/Set:memid
-						mscorlib::System::Int32  get_memid();
+						mscorlib::System::Int32  get_memid() const;
 						void set_memid(mscorlib::System::Int32  value);
 
 						//	Get/Set:lpstrSchema
-						mscorlib::System::String  get_lpstrSchema();
+						mscorlib::System::String  get_lpstrSchema() const;
 						void set_lpstrSchema(mscorlib::System::String  value);
 
 						//	Get/Set:desc
-						mscorlib::System::Runtime::InteropServices::ComTypes::VARDESC::DESCUNION  get_desc();
+						mscorlib::System::Runtime::InteropServices::ComTypes::VARDESC::DESCUNION  get_desc() const;
 						void set_desc(mscorlib::System::Runtime::InteropServices::ComTypes::VARDESC::DESCUNION  value);
 
 						//	Get/Set:elemdescVar
-						mscorlib::System::Runtime::InteropServices::ComTypes::ELEMDESC  get_elemdescVar();
+						mscorlib::System::Runtime::InteropServices::ComTypes::ELEMDESC  get_elemdescVar() const;
 						void set_elemdescVar(mscorlib::System::Runtime::InteropServices::ComTypes::ELEMDESC  value);
 
 						//	Get/Set:wVarFlags
-						mscorlib::System::Int16  get_wVarFlags();
+						mscorlib::System::Int16  get_wVarFlags() const;
 						void set_wVarFlags(mscorlib::System::Int16  value);
 
 						//	Get/Set:varkind
-						mscorlib::System::Runtime::InteropServices::ComTypes::VARKIND::__ENUM__  get_varkind();
+						mscorlib::System::Runtime::InteropServices::ComTypes::VARKIND::__ENUM__  get_varkind() const;
 						void set_varkind(mscorlib::System::Runtime::InteropServices::ComTypes::VARKIND::__ENUM__  value);
 
 					

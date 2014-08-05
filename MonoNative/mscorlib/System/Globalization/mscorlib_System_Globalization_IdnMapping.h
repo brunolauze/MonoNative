@@ -68,11 +68,11 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:AllowUnassigned
-				mscorlib::System::Boolean  get_AllowUnassigned();
+				mscorlib::System::Boolean  get_AllowUnassigned() const;
 				void set_AllowUnassigned(mscorlib::System::Boolean  value);
 
 				//	Get/Set:UseStd3AsciiRules
-				mscorlib::System::Boolean  get_UseStd3AsciiRules();
+				mscorlib::System::Boolean  get_UseStd3AsciiRules() const;
 				void set_UseStd3AsciiRules(mscorlib::System::Boolean  value);
 
 			

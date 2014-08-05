@@ -20,7 +20,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsPinned
-			mscorlib::System::Boolean  LocalVariableInfo::get_IsPinned()
+			mscorlib::System::Boolean  LocalVariableInfo::get_IsPinned() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "LocalVariableInfo", 0, NULL, "get_IsPinned", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -28,7 +28,7 @@ namespace mscorlib
 
 
 			//	Get:LocalIndex
-			mscorlib::System::Int32  LocalVariableInfo::get_LocalIndex()
+			mscorlib::System::Int32  LocalVariableInfo::get_LocalIndex() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "LocalVariableInfo", 0, NULL, "get_LocalIndex", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -36,7 +36,7 @@ namespace mscorlib
 
 
 			//	Get:LocalType
-			mscorlib::System::Type  LocalVariableInfo::get_LocalType()
+			mscorlib::System::Type  LocalVariableInfo::get_LocalType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "LocalVariableInfo", 0, NULL, "get_LocalType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);

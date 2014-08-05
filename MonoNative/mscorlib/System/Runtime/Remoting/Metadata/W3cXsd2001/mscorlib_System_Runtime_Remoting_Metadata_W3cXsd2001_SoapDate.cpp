@@ -17,6 +17,7 @@ namespace mscorlib
 					namespace W3cXsd2001
 					{
 
+						Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDate> mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDate::XsdType(&mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDate::get_XsdType, &mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDate::set_XsdType);
 						//Public Methods
 						mscorlib::System::String SoapDate::GetXsdType()
 						{
@@ -42,7 +43,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Sign
-						mscorlib::System::Int32  SoapDate::get_Sign()
+						mscorlib::System::Int32  SoapDate::get_Sign() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapDate", 0, NULL, "get_Sign", __native_object__, 0, NULL, NULL, NULL);
 							return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -59,7 +60,7 @@ namespace mscorlib
 
 
 						//	Get/Set:Value
-						mscorlib::System::DateTime  SoapDate::get_Value()
+						mscorlib::System::DateTime  SoapDate::get_Value() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapDate", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 							return mscorlib::System::DateTime(__result__);
@@ -81,6 +82,11 @@ namespace mscorlib
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapDate", 0, NULL, "get_XsdType", NullMonoObject, 0, NULL, NULL, NULL);
 							return mscorlib::System::String(__result__);
+						}
+
+						void SoapDate::set_XsdType(mscorlib::System::String  value)
+						{
+							throw;
 						}
 
 

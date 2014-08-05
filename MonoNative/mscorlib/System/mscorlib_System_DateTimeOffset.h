@@ -5,12 +5,12 @@
 #include <mscorlib/System/mscorlib_System_DateTime.h>
 #include <mscorlib/System/mscorlib_System_TimeSpan.h>
 #include <mscorlib/System/Globalization/mscorlib_System_Globalization_Calendar.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/mscorlib_System_DayOfWeek.h>
@@ -34,22 +34,22 @@ namespace mscorlib
 
 		class DateTimeOffset
 			: public mscorlib::System::ValueType
+			, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 			, public virtual mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>
 			, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			, public virtual mscorlib::System::IFormattable
 			, public virtual mscorlib::System::IObjectComparable
-			, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 		{
 		public:
 			DateTimeOffset(mscorlib::System::DateTime dateTime)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -60,12 +60,12 @@ namespace mscorlib
 		
 			DateTimeOffset(mscorlib::System::DateTime dateTime, mscorlib::System::TimeSpan offset)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
@@ -78,12 +78,12 @@ namespace mscorlib
 		
 			DateTimeOffset(mscorlib::System::Int64 ticks, mscorlib::System::TimeSpan offset)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
@@ -96,12 +96,12 @@ namespace mscorlib
 		
 			DateTimeOffset(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::TimeSpan offset)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			{
 				MonoType *__parameter_types__[7];
 				void *__parameters__[7];
@@ -124,12 +124,12 @@ namespace mscorlib
 		
 			DateTimeOffset(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::Int32 millisecond, mscorlib::System::TimeSpan offset)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			{
 				MonoType *__parameter_types__[8];
 				void *__parameters__[8];
@@ -154,12 +154,12 @@ namespace mscorlib
 		
 			DateTimeOffset(mscorlib::System::Int32 year, mscorlib::System::Int32 month, mscorlib::System::Int32 day, mscorlib::System::Int32 hour, mscorlib::System::Int32 minute, mscorlib::System::Int32 second, mscorlib::System::Int32 millisecond, mscorlib::System::Globalization::Calendar calendar, mscorlib::System::TimeSpan offset)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			{
 				MonoType *__parameter_types__[9];
 				void *__parameters__[9];
@@ -186,23 +186,23 @@ namespace mscorlib
 		
 			DateTimeOffset(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			{
 			};
 		
 			DateTimeOffset(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
+			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(nativeObject)
 			, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 			, mscorlib::System::IFormattable(nativeObject)
 			, mscorlib::System::IObjectComparable(nativeObject)
-			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 			{
 			};
 		
@@ -276,78 +276,82 @@ namespace mscorlib
 			__declspec(property(get=get_Year)) mscorlib::System::Int32  Year;
 
 			//Public Static Properties
-			static Property<mscorlib::System::DateTimeOffset> Now;
-			static Property<mscorlib::System::DateTimeOffset> UtcNow;
+			static Property<mscorlib::System::DateTimeOffset , mscorlib::System::DateTimeOffset> Now;
+			static Property<mscorlib::System::DateTimeOffset , mscorlib::System::DateTimeOffset> UtcNow;
 
 			//Public Static Fields
-			static Property<mscorlib::System::DateTimeOffset> MaxValue;
-			static Property<mscorlib::System::DateTimeOffset> MinValue;
+			static Property<mscorlib::System::DateTimeOffset , mscorlib::System::DateTimeOffset> MaxValue;
+			static Property<mscorlib::System::DateTimeOffset , mscorlib::System::DateTimeOffset> MinValue;
 
 			//Get Set Properties Methods
 			//	Get:Date
-			mscorlib::System::DateTime  get_Date();
+			mscorlib::System::DateTime  get_Date() const;
 
 			//	Get:DateTime
-			mscorlib::System::DateTime  get_DateTime();
+			mscorlib::System::DateTime  get_DateTime() const;
 
 			//	Get:Day
-			mscorlib::System::Int32  get_Day();
+			mscorlib::System::Int32  get_Day() const;
 
 			//	Get:DayOfWeek
-			mscorlib::System::DayOfWeek::__ENUM__  get_DayOfWeek();
+			mscorlib::System::DayOfWeek::__ENUM__  get_DayOfWeek() const;
 
 			//	Get:DayOfYear
-			mscorlib::System::Int32  get_DayOfYear();
+			mscorlib::System::Int32  get_DayOfYear() const;
 
 			//	Get:Hour
-			mscorlib::System::Int32  get_Hour();
+			mscorlib::System::Int32  get_Hour() const;
 
 			//	Get:LocalDateTime
-			mscorlib::System::DateTime  get_LocalDateTime();
+			mscorlib::System::DateTime  get_LocalDateTime() const;
 
 			//	Get:Millisecond
-			mscorlib::System::Int32  get_Millisecond();
+			mscorlib::System::Int32  get_Millisecond() const;
 
 			//	Get:Minute
-			mscorlib::System::Int32  get_Minute();
+			mscorlib::System::Int32  get_Minute() const;
 
 			//	Get:Month
-			mscorlib::System::Int32  get_Month();
+			mscorlib::System::Int32  get_Month() const;
 
 			//	Get:Offset
-			mscorlib::System::TimeSpan  get_Offset();
+			mscorlib::System::TimeSpan  get_Offset() const;
 
 			//	Get:Second
-			mscorlib::System::Int32  get_Second();
+			mscorlib::System::Int32  get_Second() const;
 
 			//	Get:Ticks
-			mscorlib::System::Int64  get_Ticks();
+			mscorlib::System::Int64  get_Ticks() const;
 
 			//	Get:TimeOfDay
-			mscorlib::System::TimeSpan  get_TimeOfDay();
+			mscorlib::System::TimeSpan  get_TimeOfDay() const;
 
 			//	Get:UtcDateTime
-			mscorlib::System::DateTime  get_UtcDateTime();
+			mscorlib::System::DateTime  get_UtcDateTime() const;
 
 			//	Get:UtcTicks
-			mscorlib::System::Int64  get_UtcTicks();
+			mscorlib::System::Int64  get_UtcTicks() const;
 
 			//	Get:Year
-			mscorlib::System::Int32  get_Year();
+			mscorlib::System::Int32  get_Year() const;
 
 			//Get Set Static Properties Methods
 			//	Get:Now
 			static mscorlib::System::DateTimeOffset  get_Now();
+			static void set_Now(mscorlib::System::DateTimeOffset  value);
 
 			//	Get:UtcNow
 			static mscorlib::System::DateTimeOffset  get_UtcNow();
+			static void set_UtcNow(mscorlib::System::DateTimeOffset  value);
 
 
 			//	Get/Set:MaxValue
 			static mscorlib::System::DateTimeOffset  get_MaxValue();
+			static void set_MaxValue(mscorlib::System::DateTimeOffset  value);
 
 			//	Get/Set:MinValue
 			static mscorlib::System::DateTimeOffset  get_MinValue();
+			static void set_MinValue(mscorlib::System::DateTimeOffset  value);
 
 		
 		protected:

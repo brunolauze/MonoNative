@@ -44,7 +44,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Remaining
-			mscorlib::System::Int32  DecoderReplacementFallbackBuffer::get_Remaining()
+			mscorlib::System::Int32  DecoderReplacementFallbackBuffer::get_Remaining() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "DecoderReplacementFallbackBuffer", 0, NULL, "get_Remaining", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

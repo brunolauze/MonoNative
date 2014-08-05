@@ -67,7 +67,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Url
-				mscorlib::System::String  UrlIdentityPermission::get_Url()
+				mscorlib::System::String  UrlIdentityPermission::get_Url() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "UrlIdentityPermission", 0, NULL, "get_Url", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

@@ -29,7 +29,7 @@ namespace mscorlib
 			
 
 				__declspec(property(get=get___mscorlib_System_Collections_IList, put=set___mscorlib_System_Collections_IList)) MonoObject *__mscorlib_System_Collections_IList;
-				MonoObject* get___mscorlib_System_Collections_IList()
+				MonoObject* get___mscorlib_System_Collections_IList() const
 				{
 					return IList::__mscorlib_System_Collections_ICollection;
 				}
@@ -58,13 +58,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsFixedSize
-				mscorlib::System::Boolean  get_IsFixedSize();
+				mscorlib::System::Boolean  get_IsFixedSize() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get/Set:Item
-				mscorlib::System::Object  get_Item(mscorlib::System::Int32 index);
+				mscorlib::System::Object  get_Item(mscorlib::System::Int32 index) const;
 				void set_Item(mscorlib::System::Int32 index, mscorlib::System::Object  value);
 
 			

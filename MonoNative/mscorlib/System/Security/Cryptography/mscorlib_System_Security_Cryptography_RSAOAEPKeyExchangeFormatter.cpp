@@ -65,7 +65,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Parameter
-				std::vector<mscorlib::System::Byte*>  RSAOAEPKeyExchangeFormatter::get_Parameter()
+				std::vector<mscorlib::System::Byte*>  RSAOAEPKeyExchangeFormatter::get_Parameter() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSAOAEPKeyExchangeFormatter", 0, NULL, "get_Parameter", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get:Parameters
-				mscorlib::System::String  RSAOAEPKeyExchangeFormatter::get_Parameters()
+				mscorlib::System::String  RSAOAEPKeyExchangeFormatter::get_Parameters() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSAOAEPKeyExchangeFormatter", 0, NULL, "get_Parameters", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -98,7 +98,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Rng
-				mscorlib::System::Security::Cryptography::RandomNumberGenerator  RSAOAEPKeyExchangeFormatter::get_Rng()
+				mscorlib::System::Security::Cryptography::RandomNumberGenerator  RSAOAEPKeyExchangeFormatter::get_Rng() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RSAOAEPKeyExchangeFormatter", 0, NULL, "get_Rng", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Cryptography::RandomNumberGenerator(__result__);

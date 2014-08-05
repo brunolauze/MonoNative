@@ -32,7 +32,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:Action
-			mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  SecurityException::get_Action()
+			mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  SecurityException::get_Action() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -49,7 +49,7 @@ namespace mscorlib
 
 
 			//	Get/Set:DenySetInstance
-			mscorlib::System::Object  SecurityException::get_DenySetInstance()
+			mscorlib::System::Object  SecurityException::get_DenySetInstance() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_DenySetInstance", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);
@@ -66,7 +66,7 @@ namespace mscorlib
 
 
 			//	Get/Set:FailedAssemblyInfo
-			mscorlib::System::Reflection::AssemblyName  SecurityException::get_FailedAssemblyInfo()
+			mscorlib::System::Reflection::AssemblyName  SecurityException::get_FailedAssemblyInfo() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_FailedAssemblyInfo", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::AssemblyName(__result__);
@@ -83,7 +83,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Method
-			mscorlib::System::Reflection::MethodInfo  SecurityException::get_Method()
+			mscorlib::System::Reflection::MethodInfo  SecurityException::get_Method() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_Method", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -100,7 +100,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PermitOnlySetInstance
-			mscorlib::System::Object  SecurityException::get_PermitOnlySetInstance()
+			mscorlib::System::Object  SecurityException::get_PermitOnlySetInstance() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_PermitOnlySetInstance", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);
@@ -117,7 +117,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Url
-			mscorlib::System::String  SecurityException::get_Url()
+			mscorlib::System::String  SecurityException::get_Url() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_Url", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -134,7 +134,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Zone
-			mscorlib::System::Security::SecurityZone::__ENUM__  SecurityException::get_Zone()
+			mscorlib::System::Security::SecurityZone::__ENUM__  SecurityException::get_Zone() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_Zone", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Security::SecurityZone::__ENUM__*)mono_object_unbox(__result__);
@@ -151,7 +151,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Demanded
-			mscorlib::System::Object  SecurityException::get_Demanded()
+			mscorlib::System::Object  SecurityException::get_Demanded() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_Demanded", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);
@@ -168,7 +168,7 @@ namespace mscorlib
 
 
 			//	Get/Set:FirstPermissionThatFailed
-			mscorlib::System::Security::IPermission  SecurityException::get_FirstPermissionThatFailed()
+			mscorlib::System::Security::IPermission  SecurityException::get_FirstPermissionThatFailed() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_FirstPermissionThatFailed", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Security::IPermission(__result__);
@@ -185,7 +185,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PermissionState
-			mscorlib::System::String  SecurityException::get_PermissionState()
+			mscorlib::System::String  SecurityException::get_PermissionState() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_PermissionState", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -202,7 +202,7 @@ namespace mscorlib
 
 
 			//	Get/Set:PermissionType
-			mscorlib::System::Type  SecurityException::get_PermissionType()
+			mscorlib::System::Type  SecurityException::get_PermissionType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_PermissionType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -219,7 +219,7 @@ namespace mscorlib
 
 
 			//	Get/Set:GrantedSet
-			mscorlib::System::String  SecurityException::get_GrantedSet()
+			mscorlib::System::String  SecurityException::get_GrantedSet() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_GrantedSet", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -236,7 +236,7 @@ namespace mscorlib
 
 
 			//	Get/Set:RefusedSet
-			mscorlib::System::String  SecurityException::get_RefusedSet()
+			mscorlib::System::String  SecurityException::get_RefusedSet() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityException", 0, NULL, "get_RefusedSet", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -253,7 +253,7 @@ namespace mscorlib
 
 
 			//	Get:InnerException
-			mscorlib::System::Exception  SecurityException::get_InnerException()
+			mscorlib::System::Exception  SecurityException::get_InnerException() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_InnerException", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Exception(__result__);
@@ -261,7 +261,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HelpLink
-			mscorlib::System::String  SecurityException::get_HelpLink()
+			mscorlib::System::String  SecurityException::get_HelpLink() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HelpLink", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -278,7 +278,7 @@ namespace mscorlib
 
 
 			//	Get/Set:HResult
-			mscorlib::System::Int32  SecurityException::get_HResult()
+			mscorlib::System::Int32  SecurityException::get_HResult() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_HResult", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -295,7 +295,7 @@ namespace mscorlib
 
 
 			//	Get:Message
-			mscorlib::System::String  SecurityException::get_Message()
+			mscorlib::System::String  SecurityException::get_Message() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Message", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -303,7 +303,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Source
-			mscorlib::System::String  SecurityException::get_Source()
+			mscorlib::System::String  SecurityException::get_Source() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Source", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -320,7 +320,7 @@ namespace mscorlib
 
 
 			//	Get:StackTrace
-			mscorlib::System::String  SecurityException::get_StackTrace()
+			mscorlib::System::String  SecurityException::get_StackTrace() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -328,7 +328,7 @@ namespace mscorlib
 
 
 			//	Get:TargetSite
-			mscorlib::System::Reflection::MethodBase  SecurityException::get_TargetSite()
+			mscorlib::System::Reflection::MethodBase  SecurityException::get_TargetSite() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_TargetSite", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MethodBase(__result__);
@@ -336,7 +336,7 @@ namespace mscorlib
 
 
 			//	Get:Data
-			mscorlib::System::Collections::IDictionary  SecurityException::get_Data()
+			mscorlib::System::Collections::IDictionary  SecurityException::get_Data() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Exception", 0, NULL, "get_Data", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::IDictionary(__result__);

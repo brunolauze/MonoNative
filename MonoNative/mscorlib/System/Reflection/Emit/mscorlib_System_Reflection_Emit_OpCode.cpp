@@ -48,7 +48,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Name
-				mscorlib::System::String  OpCode::get_Name()
+				mscorlib::System::String  OpCode::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "OpCode", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get:Size
-				mscorlib::System::Int32  OpCode::get_Size()
+				mscorlib::System::Int32  OpCode::get_Size() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "OpCode", 0, NULL, "get_Size", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 				//	Get:OpCodeType
-				mscorlib::System::Reflection::Emit::OpCodeType::__ENUM__  OpCode::get_OpCodeType()
+				mscorlib::System::Reflection::Emit::OpCodeType::__ENUM__  OpCode::get_OpCodeType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "OpCode", 0, NULL, "get_OpCodeType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::Emit::OpCodeType::__ENUM__*)mono_object_unbox(__result__);
@@ -72,7 +72,7 @@ namespace mscorlib
 
 
 				//	Get:OperandType
-				mscorlib::System::Reflection::Emit::OperandType::__ENUM__  OpCode::get_OperandType()
+				mscorlib::System::Reflection::Emit::OperandType::__ENUM__  OpCode::get_OperandType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "OpCode", 0, NULL, "get_OperandType", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::Emit::OperandType::__ENUM__*)mono_object_unbox(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 				//	Get:FlowControl
-				mscorlib::System::Reflection::Emit::FlowControl::__ENUM__  OpCode::get_FlowControl()
+				mscorlib::System::Reflection::Emit::FlowControl::__ENUM__  OpCode::get_FlowControl() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "OpCode", 0, NULL, "get_FlowControl", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::Emit::FlowControl::__ENUM__*)mono_object_unbox(__result__);
@@ -88,7 +88,7 @@ namespace mscorlib
 
 
 				//	Get:StackBehaviourPop
-				mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__  OpCode::get_StackBehaviourPop()
+				mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__  OpCode::get_StackBehaviourPop() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "OpCode", 0, NULL, "get_StackBehaviourPop", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__*)mono_object_unbox(__result__);
@@ -96,7 +96,7 @@ namespace mscorlib
 
 
 				//	Get:StackBehaviourPush
-				mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__  OpCode::get_StackBehaviourPush()
+				mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__  OpCode::get_StackBehaviourPush() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "OpCode", 0, NULL, "get_StackBehaviourPush", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::Emit::StackBehaviour::__ENUM__*)mono_object_unbox(__result__);
@@ -104,7 +104,7 @@ namespace mscorlib
 
 
 				//	Get:Value
-				mscorlib::System::Int16  OpCode::get_Value()
+				mscorlib::System::Int16  OpCode::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "OpCode", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int16*)mono_object_unbox(__result__);

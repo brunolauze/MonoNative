@@ -51,7 +51,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Evidence
-				mscorlib::System::Security::Policy::Evidence  get_Evidence();
+				mscorlib::System::Security::Policy::Evidence  get_Evidence() const;
 
 			
 			protected:

@@ -46,7 +46,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Algorithm
-				mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  AssemblyHash::get_Algorithm()
+				mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  AssemblyHash::get_Algorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Configuration.Assemblies", "AssemblyHash", 0, NULL, "get_Algorithm", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__*)mono_object_unbox(__result__);
@@ -68,6 +68,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Configuration.Assemblies", "AssemblyHash", 0, NULL, "Empty");
 				}
 
+				void AssemblyHash::set_Empty(mscorlib::System::Configuration::Assemblies::AssemblyHash  value)
+				{
+					throw;
+				}
 
 
 			}

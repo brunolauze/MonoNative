@@ -12,7 +12,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Evidence
-			mscorlib::System::Security::Policy::Evidence  IEvidenceFactory::get_Evidence()
+			mscorlib::System::Security::Policy::Evidence  IEvidenceFactory::get_Evidence() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "IEvidenceFactory", 0, NULL, "get_Evidence", __mscorlib_System_Security_IEvidenceFactory, 0, NULL, NULL, NULL);
 				return mscorlib::System::Security::Policy::Evidence(__result__);

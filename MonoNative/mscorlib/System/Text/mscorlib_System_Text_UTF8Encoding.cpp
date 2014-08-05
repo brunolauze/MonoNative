@@ -243,7 +243,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  UTF8Encoding::get_IsReadOnly()
+			mscorlib::System::Boolean  UTF8Encoding::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -251,7 +251,7 @@ namespace mscorlib
 
 
 			//	Get:IsSingleByte
-			mscorlib::System::Boolean  UTF8Encoding::get_IsSingleByte()
+			mscorlib::System::Boolean  UTF8Encoding::get_IsSingleByte() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_IsSingleByte", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -259,7 +259,7 @@ namespace mscorlib
 
 
 			//	Get/Set:DecoderFallback
-			mscorlib::System::Text::DecoderFallback  UTF8Encoding::get_DecoderFallback()
+			mscorlib::System::Text::DecoderFallback  UTF8Encoding::get_DecoderFallback() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_DecoderFallback", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Text::DecoderFallback(__result__);
@@ -276,7 +276,7 @@ namespace mscorlib
 
 
 			//	Get/Set:EncoderFallback
-			mscorlib::System::Text::EncoderFallback  UTF8Encoding::get_EncoderFallback()
+			mscorlib::System::Text::EncoderFallback  UTF8Encoding::get_EncoderFallback() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_EncoderFallback", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Text::EncoderFallback(__result__);
@@ -293,7 +293,7 @@ namespace mscorlib
 
 
 			//	Get:BodyName
-			mscorlib::System::String  UTF8Encoding::get_BodyName()
+			mscorlib::System::String  UTF8Encoding::get_BodyName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_BodyName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -301,7 +301,7 @@ namespace mscorlib
 
 
 			//	Get:CodePage
-			mscorlib::System::Int32  UTF8Encoding::get_CodePage()
+			mscorlib::System::Int32  UTF8Encoding::get_CodePage() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_CodePage", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -309,7 +309,7 @@ namespace mscorlib
 
 
 			//	Get:EncodingName
-			mscorlib::System::String  UTF8Encoding::get_EncodingName()
+			mscorlib::System::String  UTF8Encoding::get_EncodingName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_EncodingName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -317,7 +317,7 @@ namespace mscorlib
 
 
 			//	Get:HeaderName
-			mscorlib::System::String  UTF8Encoding::get_HeaderName()
+			mscorlib::System::String  UTF8Encoding::get_HeaderName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_HeaderName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -325,7 +325,7 @@ namespace mscorlib
 
 
 			//	Get:IsBrowserDisplay
-			mscorlib::System::Boolean  UTF8Encoding::get_IsBrowserDisplay()
+			mscorlib::System::Boolean  UTF8Encoding::get_IsBrowserDisplay() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_IsBrowserDisplay", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -333,7 +333,7 @@ namespace mscorlib
 
 
 			//	Get:IsBrowserSave
-			mscorlib::System::Boolean  UTF8Encoding::get_IsBrowserSave()
+			mscorlib::System::Boolean  UTF8Encoding::get_IsBrowserSave() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_IsBrowserSave", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -341,7 +341,7 @@ namespace mscorlib
 
 
 			//	Get:IsMailNewsDisplay
-			mscorlib::System::Boolean  UTF8Encoding::get_IsMailNewsDisplay()
+			mscorlib::System::Boolean  UTF8Encoding::get_IsMailNewsDisplay() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_IsMailNewsDisplay", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -349,7 +349,7 @@ namespace mscorlib
 
 
 			//	Get:IsMailNewsSave
-			mscorlib::System::Boolean  UTF8Encoding::get_IsMailNewsSave()
+			mscorlib::System::Boolean  UTF8Encoding::get_IsMailNewsSave() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_IsMailNewsSave", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -357,7 +357,7 @@ namespace mscorlib
 
 
 			//	Get:WebName
-			mscorlib::System::String  UTF8Encoding::get_WebName()
+			mscorlib::System::String  UTF8Encoding::get_WebName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_WebName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -365,7 +365,7 @@ namespace mscorlib
 
 
 			//	Get:WindowsCodePage
-			mscorlib::System::Int32  UTF8Encoding::get_WindowsCodePage()
+			mscorlib::System::Int32  UTF8Encoding::get_WindowsCodePage() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "get_WindowsCodePage", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

@@ -106,38 +106,38 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 					//	Get/Set:CompoundAceType
-					mscorlib::System::Security::AccessControl::CompoundAceType::__ENUM__  get_CompoundAceType();
+					mscorlib::System::Security::AccessControl::CompoundAceType::__ENUM__  get_CompoundAceType() const;
 					void set_CompoundAceType(mscorlib::System::Security::AccessControl::CompoundAceType::__ENUM__  value);
 
 					//	Get/Set:AccessMask
-					mscorlib::System::Int32  get_AccessMask();
+					mscorlib::System::Int32  get_AccessMask() const;
 					void set_AccessMask(mscorlib::System::Int32  value);
 
 					//	Get/Set:SecurityIdentifier
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_SecurityIdentifier();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_SecurityIdentifier() const;
 					void set_SecurityIdentifier(mscorlib::System::Security::Principal::SecurityIdentifier  value);
 
 					//	Get/Set:AceFlags
-					mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  get_AceFlags();
+					mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  get_AceFlags() const;
 					void set_AceFlags(mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  value);
 
 					//	Get:AceType
-					mscorlib::System::Security::AccessControl::AceType::__ENUM__  get_AceType();
+					mscorlib::System::Security::AccessControl::AceType::__ENUM__  get_AceType() const;
 
 					//	Get:AuditFlags
-					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags();
+					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags() const;
 
 					//	Get:InheritanceFlags
-					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags();
+					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags() const;
 
 					//	Get:IsInherited
-					mscorlib::System::Boolean  get_IsInherited();
+					mscorlib::System::Boolean  get_IsInherited() const;
 
 					//	Get:PropagationFlags
-					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags();
+					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags() const;
 
 				
 				protected:

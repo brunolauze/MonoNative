@@ -2,8 +2,8 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_DELEGATE_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 
 namespace mscorlib
 {
@@ -53,21 +53,21 @@ namespace mscorlib
 
 		class Delegate
 			: public mscorlib::System::Object
-			, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			, public virtual mscorlib::System::ICloneable
+			, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 		{
 		public:
 			Delegate(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::Object(nativeTypeInfo)
-			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::ICloneable(NULL)
+			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			{
 			};
 		
 			Delegate(MonoObject *nativeObject)
 			: mscorlib::System::Object(nativeObject)
-			, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 			, mscorlib::System::ICloneable(nativeObject)
+			, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 			{
 			};
 		
@@ -110,10 +110,10 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Method
-			mscorlib::System::Reflection::MethodInfo  get_Method();
+			mscorlib::System::Reflection::MethodInfo  get_Method() const;
 
 			//	Get:Target
-			mscorlib::System::Object  get_Target();
+			mscorlib::System::Object  get_Target() const;
 
 		
 		protected:

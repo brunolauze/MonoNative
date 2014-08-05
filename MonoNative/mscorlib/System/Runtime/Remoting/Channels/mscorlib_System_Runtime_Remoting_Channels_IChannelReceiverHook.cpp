@@ -26,7 +26,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ChannelScheme
-					mscorlib::System::String  IChannelReceiverHook::get_ChannelScheme()
+					mscorlib::System::String  IChannelReceiverHook::get_ChannelScheme() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelReceiverHook", 0, NULL, "get_ChannelScheme", __mscorlib_System_Runtime_Remoting_Channels_IChannelReceiverHook, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 					//	Get:ChannelSinkChain
-					mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink  IChannelReceiverHook::get_ChannelSinkChain()
+					mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink  IChannelReceiverHook::get_ChannelSinkChain() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelReceiverHook", 0, NULL, "get_ChannelSinkChain", __mscorlib_System_Runtime_Remoting_Channels_IChannelReceiverHook, 0, NULL, NULL, NULL);
 						return mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink(__result__);
@@ -42,7 +42,7 @@ namespace mscorlib
 
 
 					//	Get:WantsToListen
-					mscorlib::System::Boolean  IChannelReceiverHook::get_WantsToListen()
+					mscorlib::System::Boolean  IChannelReceiverHook::get_WantsToListen() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelReceiverHook", 0, NULL, "get_WantsToListen", __mscorlib_System_Runtime_Remoting_Channels_IChannelReceiverHook, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

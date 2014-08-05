@@ -87,10 +87,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:DefaultString
-				mscorlib::System::String  get_DefaultString();
+				mscorlib::System::String  get_DefaultString() const;
 
 				//	Get:MaxCharCount
-				mscorlib::System::Int32  get_MaxCharCount();
+				mscorlib::System::Int32  get_MaxCharCount() const;
 
 			
 			protected:

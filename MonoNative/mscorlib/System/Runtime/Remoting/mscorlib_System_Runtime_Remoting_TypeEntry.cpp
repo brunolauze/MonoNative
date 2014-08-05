@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:AssemblyName
-				mscorlib::System::String  TypeEntry::get_AssemblyName()
+				mscorlib::System::String  TypeEntry::get_AssemblyName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "TypeEntry", 0, NULL, "get_AssemblyName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -33,7 +33,7 @@ namespace mscorlib
 
 
 				//	Get/Set:TypeName
-				mscorlib::System::String  TypeEntry::get_TypeName()
+				mscorlib::System::String  TypeEntry::get_TypeName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "TypeEntry", 0, NULL, "get_TypeName", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

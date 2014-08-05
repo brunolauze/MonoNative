@@ -96,7 +96,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:TypeNameConverter
-				mscorlib::Callback<mscorlib::System::String  (mscorlib::System::Type )>  get_TypeNameConverter();
+				mscorlib::Callback<mscorlib::System::String  (mscorlib::System::Type )>  get_TypeNameConverter() const;
 				void set_TypeNameConverter(mscorlib::Callback<mscorlib::System::String  (mscorlib::System::Type )>  value);
 
 			

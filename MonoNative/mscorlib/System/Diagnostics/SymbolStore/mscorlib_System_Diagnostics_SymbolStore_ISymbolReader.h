@@ -78,7 +78,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:UserEntryPoint
-					mscorlib::System::Diagnostics::SymbolStore::SymbolToken  get_UserEntryPoint();
+					mscorlib::System::Diagnostics::SymbolStore::SymbolToken  get_UserEntryPoint() const;
 
 				
 				protected:

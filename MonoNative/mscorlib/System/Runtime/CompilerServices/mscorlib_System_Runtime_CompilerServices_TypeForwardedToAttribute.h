@@ -72,10 +72,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Destination
-					mscorlib::System::Type  get_Destination();
+					mscorlib::System::Type  get_Destination() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

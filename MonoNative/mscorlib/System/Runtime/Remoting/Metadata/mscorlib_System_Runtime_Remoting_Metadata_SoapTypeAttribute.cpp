@@ -18,7 +18,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get/Set:SoapOptions
-					mscorlib::System::Runtime::Remoting::Metadata::SoapOption::__ENUM__  SoapTypeAttribute::get_SoapOptions()
+					mscorlib::System::Runtime::Remoting::Metadata::SoapOption::__ENUM__  SoapTypeAttribute::get_SoapOptions() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapTypeAttribute", 0, NULL, "get_SoapOptions", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Runtime::Remoting::Metadata::SoapOption::__ENUM__*)mono_object_unbox(__result__);
@@ -35,7 +35,7 @@ namespace mscorlib
 
 
 					//	Get/Set:UseAttribute
-					mscorlib::System::Boolean  SoapTypeAttribute::get_UseAttribute()
+					mscorlib::System::Boolean  SoapTypeAttribute::get_UseAttribute() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapTypeAttribute", 0, NULL, "get_UseAttribute", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -52,7 +52,7 @@ namespace mscorlib
 
 
 					//	Get/Set:XmlElementName
-					mscorlib::System::String  SoapTypeAttribute::get_XmlElementName()
+					mscorlib::System::String  SoapTypeAttribute::get_XmlElementName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapTypeAttribute", 0, NULL, "get_XmlElementName", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -69,7 +69,7 @@ namespace mscorlib
 
 
 					//	Get/Set:XmlFieldOrder
-					mscorlib::System::Runtime::Remoting::Metadata::XmlFieldOrderOption::__ENUM__  SoapTypeAttribute::get_XmlFieldOrder()
+					mscorlib::System::Runtime::Remoting::Metadata::XmlFieldOrderOption::__ENUM__  SoapTypeAttribute::get_XmlFieldOrder() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapTypeAttribute", 0, NULL, "get_XmlFieldOrder", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Runtime::Remoting::Metadata::XmlFieldOrderOption::__ENUM__*)mono_object_unbox(__result__);
@@ -86,7 +86,7 @@ namespace mscorlib
 
 
 					//	Get/Set:XmlNamespace
-					mscorlib::System::String  SoapTypeAttribute::get_XmlNamespace()
+					mscorlib::System::String  SoapTypeAttribute::get_XmlNamespace() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapTypeAttribute", 0, NULL, "get_XmlNamespace", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -103,7 +103,7 @@ namespace mscorlib
 
 
 					//	Get/Set:XmlTypeName
-					mscorlib::System::String  SoapTypeAttribute::get_XmlTypeName()
+					mscorlib::System::String  SoapTypeAttribute::get_XmlTypeName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapTypeAttribute", 0, NULL, "get_XmlTypeName", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -120,7 +120,7 @@ namespace mscorlib
 
 
 					//	Get/Set:XmlTypeNamespace
-					mscorlib::System::String  SoapTypeAttribute::get_XmlTypeNamespace()
+					mscorlib::System::String  SoapTypeAttribute::get_XmlTypeNamespace() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapTypeAttribute", 0, NULL, "get_XmlTypeNamespace", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -137,7 +137,7 @@ namespace mscorlib
 
 
 					//	Get/Set:Embedded
-					mscorlib::System::Boolean  SoapTypeAttribute::get_Embedded()
+					mscorlib::System::Boolean  SoapTypeAttribute::get_Embedded() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapAttribute", 0, NULL, "get_Embedded", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -154,7 +154,7 @@ namespace mscorlib
 
 
 					//	Get:TypeId
-					mscorlib::System::Object  SoapTypeAttribute::get_TypeId()
+					mscorlib::System::Object  SoapTypeAttribute::get_TypeId() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);

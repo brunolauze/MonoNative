@@ -56,7 +56,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_InteropServices_Expando_IExpando, put=set___mscorlib_System_Runtime_InteropServices_Expando_IExpando)) MonoObject *__mscorlib_System_Runtime_InteropServices_Expando_IExpando;
-						MonoObject* get___mscorlib_System_Runtime_InteropServices_Expando_IExpando()
+						MonoObject* get___mscorlib_System_Runtime_InteropServices_Expando_IExpando() const
 						{
 							return IExpando::__mscorlib_System_Reflection_IReflect;
 						}

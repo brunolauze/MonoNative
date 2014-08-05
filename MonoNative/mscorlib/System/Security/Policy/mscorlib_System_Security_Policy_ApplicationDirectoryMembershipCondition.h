@@ -2,9 +2,9 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_POLICY_APPLICATIONDIRECTORYMEMBERSHIPCONDITION_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_IMembershipCondition.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityPolicyEncodable.h>
-#include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_IMembershipCondition.h>
 
 namespace mscorlib
 {
@@ -58,33 +58,33 @@ namespace mscorlib
 
 				class ApplicationDirectoryMembershipCondition
 					: public mscorlib::System::Object
+					, public virtual mscorlib::System::Security::Policy::IMembershipCondition
 					, public virtual mscorlib::System::Security::ISecurityEncodable
 					, public virtual mscorlib::System::Security::ISecurityPolicyEncodable
-					, public virtual mscorlib::System::Security::Policy::IMembershipCondition
 				{
 				public:
 					ApplicationDirectoryMembershipCondition()
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Policy.ApplicationDirectoryMembershipCondition"))
+					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
-					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Policy", "ApplicationDirectoryMembershipCondition");
 					};
 				
 					ApplicationDirectoryMembershipCondition(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
+					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(NULL)
-					, mscorlib::System::Security::Policy::IMembershipCondition(NULL)
 					{
 					};
 				
 					ApplicationDirectoryMembershipCondition(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
+					, mscorlib::System::Security::Policy::IMembershipCondition(nativeObject)
 					, mscorlib::System::Security::ISecurityEncodable(nativeObject)
 					, mscorlib::System::Security::ISecurityPolicyEncodable(nativeObject)
-					, mscorlib::System::Security::Policy::IMembershipCondition(nativeObject)
 					{
 					};
 				

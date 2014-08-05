@@ -94,7 +94,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Certificate
-					mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  get_Certificate();
+					mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  get_Certificate() const;
 
 				
 				protected:

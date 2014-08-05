@@ -89,7 +89,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:UnderlyingSystemType
-				mscorlib::System::Type  get_UnderlyingSystemType();
+				mscorlib::System::Type  get_UnderlyingSystemType() const;
 
 			
 			protected:

@@ -106,7 +106,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:ParameterType
-			mscorlib::System::Type  ParameterInfo::get_ParameterType()
+			mscorlib::System::Type  ParameterInfo::get_ParameterType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_ParameterType", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Type(__result__);
@@ -114,7 +114,7 @@ namespace mscorlib
 
 
 			//	Get:Attributes
-			mscorlib::System::Reflection::ParameterAttributes::__ENUM__  ParameterInfo::get_Attributes()
+			mscorlib::System::Reflection::ParameterAttributes::__ENUM__  ParameterInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Reflection::ParameterAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -122,7 +122,7 @@ namespace mscorlib
 
 
 			//	Get:IsIn
-			mscorlib::System::Boolean  ParameterInfo::get_IsIn()
+			mscorlib::System::Boolean  ParameterInfo::get_IsIn() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_IsIn", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -130,7 +130,7 @@ namespace mscorlib
 
 
 			//	Get:IsLcid
-			mscorlib::System::Boolean  ParameterInfo::get_IsLcid()
+			mscorlib::System::Boolean  ParameterInfo::get_IsLcid() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_IsLcid", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -138,7 +138,7 @@ namespace mscorlib
 
 
 			//	Get:IsOptional
-			mscorlib::System::Boolean  ParameterInfo::get_IsOptional()
+			mscorlib::System::Boolean  ParameterInfo::get_IsOptional() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_IsOptional", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -146,7 +146,7 @@ namespace mscorlib
 
 
 			//	Get:IsOut
-			mscorlib::System::Boolean  ParameterInfo::get_IsOut()
+			mscorlib::System::Boolean  ParameterInfo::get_IsOut() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_IsOut", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -154,7 +154,7 @@ namespace mscorlib
 
 
 			//	Get:IsRetval
-			mscorlib::System::Boolean  ParameterInfo::get_IsRetval()
+			mscorlib::System::Boolean  ParameterInfo::get_IsRetval() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_IsRetval", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -162,7 +162,7 @@ namespace mscorlib
 
 
 			//	Get:Member
-			mscorlib::System::Reflection::MemberInfo  ParameterInfo::get_Member()
+			mscorlib::System::Reflection::MemberInfo  ParameterInfo::get_Member() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_Member", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Reflection::MemberInfo(__result__);
@@ -170,7 +170,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  ParameterInfo::get_Name()
+			mscorlib::System::String  ParameterInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -178,7 +178,7 @@ namespace mscorlib
 
 
 			//	Get:Position
-			mscorlib::System::Int32  ParameterInfo::get_Position()
+			mscorlib::System::Int32  ParameterInfo::get_Position() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_Position", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -186,7 +186,7 @@ namespace mscorlib
 
 
 			//	Get:CustomAttributes
-			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  ParameterInfo::get_CustomAttributes()
+			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>  ParameterInfo::get_CustomAttributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_CustomAttributes", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::CustomAttributeData>(__result__);
@@ -194,7 +194,7 @@ namespace mscorlib
 
 
 			//	Get:HasDefaultValue
-			mscorlib::System::Boolean  ParameterInfo::get_HasDefaultValue()
+			mscorlib::System::Boolean  ParameterInfo::get_HasDefaultValue() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_HasDefaultValue", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -202,7 +202,7 @@ namespace mscorlib
 
 
 			//	Get:DefaultValue
-			mscorlib::System::Object  ParameterInfo::get_DefaultValue()
+			mscorlib::System::Object  ParameterInfo::get_DefaultValue() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_DefaultValue", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);
@@ -210,7 +210,7 @@ namespace mscorlib
 
 
 			//	Get:RawDefaultValue
-			mscorlib::System::Object  ParameterInfo::get_RawDefaultValue()
+			mscorlib::System::Object  ParameterInfo::get_RawDefaultValue() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_RawDefaultValue", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);
@@ -218,7 +218,7 @@ namespace mscorlib
 
 
 			//	Get:MetadataToken
-			mscorlib::System::Int32  ParameterInfo::get_MetadataToken()
+			mscorlib::System::Int32  ParameterInfo::get_MetadataToken() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ParameterInfo", 0, NULL, "get_MetadataToken", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

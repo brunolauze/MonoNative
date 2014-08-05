@@ -37,7 +37,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Security_Cryptography_ICryptoTransform, put=set___mscorlib_System_Security_Cryptography_ICryptoTransform)) MonoObject *__mscorlib_System_Security_Cryptography_ICryptoTransform;
-					MonoObject* get___mscorlib_System_Security_Cryptography_ICryptoTransform()
+					MonoObject* get___mscorlib_System_Security_Cryptography_ICryptoTransform() const
 					{
 						return ICryptoTransform::__mscorlib_System_IDisposable;
 					}
@@ -62,16 +62,16 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CanReuseTransform
-					mscorlib::System::Boolean  get_CanReuseTransform();
+					mscorlib::System::Boolean  get_CanReuseTransform() const;
 
 					//	Get:CanTransformMultipleBlocks
-					mscorlib::System::Boolean  get_CanTransformMultipleBlocks();
+					mscorlib::System::Boolean  get_CanTransformMultipleBlocks() const;
 
 					//	Get:InputBlockSize
-					mscorlib::System::Int32  get_InputBlockSize();
+					mscorlib::System::Int32  get_InputBlockSize() const;
 
 					//	Get:OutputBlockSize
-					mscorlib::System::Int32  get_OutputBlockSize();
+					mscorlib::System::Int32  get_OutputBlockSize() const;
 
 				
 				protected:

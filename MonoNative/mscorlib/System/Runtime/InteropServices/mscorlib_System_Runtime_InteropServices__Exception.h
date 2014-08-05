@@ -90,24 +90,24 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:HelpLink
-					mscorlib::System::String  get_HelpLink();
+					mscorlib::System::String  get_HelpLink() const;
 					void set_HelpLink(mscorlib::System::String  value);
 
 					//	Get:InnerException
-					mscorlib::System::Exception  get_InnerException();
+					mscorlib::System::Exception  get_InnerException() const;
 
 					//	Get:Message
-					mscorlib::System::String  get_Message();
+					mscorlib::System::String  get_Message() const;
 
 					//	Get/Set:Source
-					mscorlib::System::String  get_Source();
+					mscorlib::System::String  get_Source() const;
 					void set_Source(mscorlib::System::String  value);
 
 					//	Get:StackTrace
-					mscorlib::System::String  get_StackTrace();
+					mscorlib::System::String  get_StackTrace() const;
 
 					//	Get:TargetSite
-					mscorlib::System::Reflection::MethodBase  get_TargetSite();
+					mscorlib::System::Reflection::MethodBase  get_TargetSite() const;
 
 				
 				protected:

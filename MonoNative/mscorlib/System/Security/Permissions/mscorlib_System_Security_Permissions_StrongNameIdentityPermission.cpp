@@ -67,7 +67,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Name
-				mscorlib::System::String  StrongNameIdentityPermission::get_Name()
+				mscorlib::System::String  StrongNameIdentityPermission::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "StrongNameIdentityPermission", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -84,7 +84,7 @@ namespace mscorlib
 
 
 				//	Get/Set:PublicKey
-				mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  StrongNameIdentityPermission::get_PublicKey()
+				mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  StrongNameIdentityPermission::get_PublicKey() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "StrongNameIdentityPermission", 0, NULL, "get_PublicKey", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob(__result__);
@@ -101,7 +101,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Version
-				mscorlib::System::Version  StrongNameIdentityPermission::get_Version()
+				mscorlib::System::Version  StrongNameIdentityPermission::get_Version() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "StrongNameIdentityPermission", 0, NULL, "get_Version", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Version(__result__);

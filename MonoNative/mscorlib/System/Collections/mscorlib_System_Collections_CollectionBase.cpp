@@ -34,7 +34,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Count
-			mscorlib::System::Int32  CollectionBase::get_Count()
+			mscorlib::System::Int32  CollectionBase::get_Count() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "CollectionBase", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -42,7 +42,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Capacity
-			mscorlib::System::Int32  CollectionBase::get_Capacity()
+			mscorlib::System::Int32  CollectionBase::get_Capacity() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "CollectionBase", 0, NULL, "get_Capacity", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

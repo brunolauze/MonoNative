@@ -3,9 +3,9 @@
 
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IsolatedStoragePermission.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_PermissionState.h>
+#include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IUnrestrictedPermission.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_IPermission.h>
-#include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IUnrestrictedPermission.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_IStackWalk.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IsolatedStorageContainment.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -45,17 +45,17 @@ namespace mscorlib
 
 				class IsolatedStorageFilePermission
 					: public mscorlib::System::Security::Permissions::IsolatedStoragePermission
+					, public virtual mscorlib::System::Security::Permissions::IUnrestrictedPermission
 					, public virtual mscorlib::System::Security::ISecurityEncodable
 					, public virtual mscorlib::System::Security::IPermission
-					, public virtual mscorlib::System::Security::Permissions::IUnrestrictedPermission
 					, public virtual mscorlib::System::Security::IStackWalk
 				{
 				public:
 					IsolatedStorageFilePermission(mscorlib::System::Security::Permissions::PermissionState::__ENUM__ state)
 					: mscorlib::System::Security::Permissions::IsolatedStoragePermission(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Permissions.IsolatedStorageFilePermission"))
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::IStackWalk(NULL)
 					{
 						MonoType *__parameter_types__[1];
@@ -67,18 +67,18 @@ namespace mscorlib
 				
 					IsolatedStorageFilePermission(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::Permissions::IsolatedStoragePermission(nativeTypeInfo)
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::IStackWalk(NULL)
 					{
 					};
 				
 					IsolatedStorageFilePermission(MonoObject *nativeObject)
 					: mscorlib::System::Security::Permissions::IsolatedStoragePermission(nativeObject)
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(nativeObject)
 					, mscorlib::System::Security::ISecurityEncodable(nativeObject)
 					, mscorlib::System::Security::IPermission(nativeObject)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(nativeObject)
 					, mscorlib::System::Security::IStackWalk(nativeObject)
 					{
 					};
@@ -107,11 +107,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:UserQuota
-					mscorlib::System::Int64  get_UserQuota();
+					mscorlib::System::Int64  get_UserQuota() const;
 					void set_UserQuota(mscorlib::System::Int64  value);
 
 					//	Get/Set:UsageAllowed
-					mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  get_UsageAllowed();
+					mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  get_UsageAllowed() const;
 					void set_UsageAllowed(mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  value);
 
 				

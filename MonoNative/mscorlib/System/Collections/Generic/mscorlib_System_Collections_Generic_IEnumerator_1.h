@@ -1,8 +1,8 @@
 #ifndef __MONO_NATIVE_MSCORLIB_SYSTEM_COLLECTIONS_GENERIC_IENUMERATOR_1_H
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_COLLECTIONS_GENERIC_IENUMERATOR_1_H
 
-#include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerator.h>
+#include <mscorlib/System/mscorlib_System_IDisposable.h>
 
 namespace mscorlib
 {
@@ -15,13 +15,13 @@ namespace mscorlib
 
 				template<typename T>
 				class IEnumerator
-					: public virtual mscorlib::System::IDisposable
-					, public virtual mscorlib::System::Collections::IEnumerator
+					: public virtual mscorlib::System::Collections::IEnumerator
+					, public virtual mscorlib::System::IDisposable
 				{
 				public:
 					IEnumerator(MonoObject *nativeObject)
-					: mscorlib::System::IDisposable(nativeObject)
-					, mscorlib::System::Collections::IEnumerator(nativeObject)
+					: mscorlib::System::Collections::IEnumerator(nativeObject)
+					, mscorlib::System::IDisposable(nativeObject)
 					{
 					};
 				
@@ -31,13 +31,13 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Collections_Generic_IEnumerator_1, put=set___mscorlib_System_Collections_Generic_IEnumerator_1)) MonoObject *__mscorlib_System_Collections_Generic_IEnumerator_1;
-					MonoObject* get___mscorlib_System_Collections_Generic_IEnumerator_1()
+					MonoObject* get___mscorlib_System_Collections_Generic_IEnumerator_1() const
 					{
-						return IEnumerator::__mscorlib_System_IDisposable;
+						return IEnumerator::__mscorlib_System_Collections_IEnumerator;
 					}
 					void set___mscorlib_System_Collections_Generic_IEnumerator_1(MonoObject *value)
 					{
-						IEnumerator::__mscorlib_System_IDisposable = value;
+						IEnumerator::__mscorlib_System_Collections_IEnumerator = value;
 					}
 					IEnumerator & operator=(IEnumerator &value) { __mscorlib_System_Collections_Generic_IEnumerator_1 = value.__mscorlib_System_Collections_Generic_IEnumerator_1; return value; };
 					operator MonoObject*() { return __mscorlib_System_Collections_Generic_IEnumerator_1; };
@@ -51,7 +51,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Current
-					T  get_Current()
+					T  get_Current() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());

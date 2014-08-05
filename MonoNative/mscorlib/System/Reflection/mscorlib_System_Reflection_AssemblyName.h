@@ -3,9 +3,9 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__AssemblyName.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ProcessorArchitecture.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_AssemblyNameFlags.h>
@@ -77,17 +77,17 @@ namespace mscorlib
 
 			class AssemblyName
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 				, public virtual mscorlib::System::ICloneable
+				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				, public virtual mscorlib::System::Runtime::InteropServices::_AssemblyName
 			{
 			public:
 				AssemblyName()
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Reflection.AssemblyName"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_AssemblyName(NULL)
 				{
 					__native_object__ = Global::New("mscorlib", "System.Reflection", "AssemblyName");
@@ -95,9 +95,9 @@ namespace mscorlib
 			
 				AssemblyName(mscorlib::System::String assemblyName)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Reflection.AssemblyName"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_AssemblyName(NULL)
 				{
 					MonoType *__parameter_types__[1];
@@ -109,18 +109,18 @@ namespace mscorlib
 			
 				AssemblyName(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 				, mscorlib::System::ICloneable(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::InteropServices::_AssemblyName(NULL)
 				{
 				};
 			
 				AssemblyName(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 				, mscorlib::System::ICloneable(nativeObject)
+				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				, mscorlib::System::Runtime::InteropServices::_AssemblyName(nativeObject)
 				{
 				};
@@ -165,52 +165,52 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:ProcessorArchitecture
-				mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__  get_ProcessorArchitecture();
+				mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__  get_ProcessorArchitecture() const;
 				void set_ProcessorArchitecture(mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__  value);
 
 				//	Get/Set:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 				void set_Name(mscorlib::System::String  value);
 
 				//	Get/Set:CodeBase
-				mscorlib::System::String  get_CodeBase();
+				mscorlib::System::String  get_CodeBase() const;
 				void set_CodeBase(mscorlib::System::String  value);
 
 				//	Get:EscapedCodeBase
-				mscorlib::System::String  get_EscapedCodeBase();
+				mscorlib::System::String  get_EscapedCodeBase() const;
 
 				//	Get/Set:CultureInfo
-				mscorlib::System::Globalization::CultureInfo  get_CultureInfo();
+				mscorlib::System::Globalization::CultureInfo  get_CultureInfo() const;
 				void set_CultureInfo(mscorlib::System::Globalization::CultureInfo  value);
 
 				//	Get/Set:Flags
-				mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__  get_Flags();
+				mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__  get_Flags() const;
 				void set_Flags(mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__  value);
 
 				//	Get:FullName
-				mscorlib::System::String  get_FullName();
+				mscorlib::System::String  get_FullName() const;
 
 				//	Get/Set:HashAlgorithm
-				mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  get_HashAlgorithm();
+				mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  get_HashAlgorithm() const;
 				void set_HashAlgorithm(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  value);
 
 				//	Get/Set:KeyPair
-				mscorlib::System::Reflection::StrongNameKeyPair  get_KeyPair();
+				mscorlib::System::Reflection::StrongNameKeyPair  get_KeyPair() const;
 				void set_KeyPair(mscorlib::System::Reflection::StrongNameKeyPair  value);
 
 				//	Get/Set:Version
-				mscorlib::System::Version  get_Version();
+				mscorlib::System::Version  get_Version() const;
 				void set_Version(mscorlib::System::Version  value);
 
 				//	Get/Set:VersionCompatibility
-				mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__  get_VersionCompatibility();
+				mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__  get_VersionCompatibility() const;
 				void set_VersionCompatibility(mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__  value);
 
 				//	Get:CultureName
-				mscorlib::System::String  get_CultureName();
+				mscorlib::System::String  get_CultureName() const;
 
 				//	Get/Set:ContentType
-				mscorlib::System::Reflection::AssemblyContentType::__ENUM__  get_ContentType();
+				mscorlib::System::Reflection::AssemblyContentType::__ENUM__  get_ContentType() const;
 				void set_ContentType(mscorlib::System::Reflection::AssemblyContentType::__ENUM__  value);
 
 			

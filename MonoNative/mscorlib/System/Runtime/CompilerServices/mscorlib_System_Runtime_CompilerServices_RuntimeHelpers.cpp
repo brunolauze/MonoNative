@@ -24,6 +24,7 @@ namespace mscorlib
 			namespace CompilerServices
 			{
 
+				Property<mscorlib::System::Int32 , mscorlib::System::Runtime::CompilerServices::RuntimeHelpers> mscorlib::System::Runtime::CompilerServices::RuntimeHelpers::OffsetToStringData(&mscorlib::System::Runtime::CompilerServices::RuntimeHelpers::get_OffsetToStringData, &mscorlib::System::Runtime::CompilerServices::RuntimeHelpers::set_OffsetToStringData);
 				//Public Methods
 				void RuntimeHelpers::InitializeArray(mscorlib::System::Array array, mscorlib::System::RuntimeFieldHandle fldHandle)
 				{
@@ -154,6 +155,11 @@ namespace mscorlib
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "RuntimeHelpers", 0, NULL, "get_OffsetToStringData", NullMonoObject, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+				}
+
+				void RuntimeHelpers::set_OffsetToStringData(mscorlib::System::Int32  value)
+				{
+					throw;
 				}
 
 

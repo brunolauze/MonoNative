@@ -69,7 +69,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:IsThreadOwnerTrackingEnabled
-			mscorlib::System::Boolean  SpinLock::get_IsThreadOwnerTrackingEnabled()
+			mscorlib::System::Boolean  SpinLock::get_IsThreadOwnerTrackingEnabled() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SpinLock", 0, NULL, "get_IsThreadOwnerTrackingEnabled", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -77,7 +77,7 @@ namespace mscorlib
 
 
 			//	Get:IsHeld
-			mscorlib::System::Boolean  SpinLock::get_IsHeld()
+			mscorlib::System::Boolean  SpinLock::get_IsHeld() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SpinLock", 0, NULL, "get_IsHeld", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 			//	Get:IsHeldByCurrentThread
-			mscorlib::System::Boolean  SpinLock::get_IsHeldByCurrentThread()
+			mscorlib::System::Boolean  SpinLock::get_IsHeldByCurrentThread() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SpinLock", 0, NULL, "get_IsHeldByCurrentThread", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

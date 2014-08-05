@@ -79,7 +79,7 @@ namespace mscorlib
 
 
 						//Public Static Properties
-						static Property<mscorlib::System::Object> HostContext;
+						static Property<mscorlib::System::Object , mscorlib::System::Runtime::Remoting::Messaging::CallContext> HostContext;
 
 						//Get Set Static Properties Methods
 						//	Get/Set:HostContext

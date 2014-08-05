@@ -72,19 +72,19 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Embedded
-						mscorlib::System::Boolean  get_Embedded();
+						mscorlib::System::Boolean  get_Embedded() const;
 						void set_Embedded(mscorlib::System::Boolean  value);
 
 						//	Get/Set:UseAttribute
-						mscorlib::System::Boolean  get_UseAttribute();
+						mscorlib::System::Boolean  get_UseAttribute() const;
 						void set_UseAttribute(mscorlib::System::Boolean  value);
 
 						//	Get/Set:XmlNamespace
-						mscorlib::System::String  get_XmlNamespace();
+						mscorlib::System::String  get_XmlNamespace() const;
 						void set_XmlNamespace(mscorlib::System::String  value);
 
 						//	Get:TypeId
-						mscorlib::System::Object  get_TypeId();
+						mscorlib::System::Object  get_TypeId() const;
 
 					
 					protected:

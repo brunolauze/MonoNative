@@ -14,6 +14,8 @@ namespace mscorlib
 			namespace Tasks
 			{
 
+				Property<mscorlib::System::Threading::Tasks::TaskScheduler , mscorlib::System::Threading::Tasks::TaskScheduler> mscorlib::System::Threading::Tasks::TaskScheduler::Default(&mscorlib::System::Threading::Tasks::TaskScheduler::get_Default, &mscorlib::System::Threading::Tasks::TaskScheduler::set_Default);
+				Property<mscorlib::System::Threading::Tasks::TaskScheduler , mscorlib::System::Threading::Tasks::TaskScheduler> mscorlib::System::Threading::Tasks::TaskScheduler::Current(&mscorlib::System::Threading::Tasks::TaskScheduler::get_Current, &mscorlib::System::Threading::Tasks::TaskScheduler::set_Current);
 				//Public Methods
 				mscorlib::System::Threading::Tasks::TaskScheduler TaskScheduler::FromCurrentSynchronizationContext()
 				{
@@ -23,7 +25,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Id
-				mscorlib::System::Int32  TaskScheduler::get_Id()
+				mscorlib::System::Int32  TaskScheduler::get_Id() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "TaskScheduler", 0, NULL, "get_Id", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -31,7 +33,7 @@ namespace mscorlib
 
 
 				//	Get:MaximumConcurrencyLevel
-				mscorlib::System::Int32  TaskScheduler::get_MaximumConcurrencyLevel()
+				mscorlib::System::Int32  TaskScheduler::get_MaximumConcurrencyLevel() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "TaskScheduler", 0, NULL, "get_MaximumConcurrencyLevel", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -44,6 +46,11 @@ namespace mscorlib
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "TaskScheduler", 0, NULL, "get_Default", NullMonoObject, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::Tasks::TaskScheduler(__result__);
+				}
+
+				void TaskScheduler::set_Default(mscorlib::System::Threading::Tasks::TaskScheduler  value)
+				{
+					throw;
 				}
 
 

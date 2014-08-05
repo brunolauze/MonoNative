@@ -15,6 +15,7 @@ namespace mscorlib
 				namespace Services
 				{
 
+					Property<std::vector<mscorlib::System::Runtime::Remoting::Services::ITrackingHandler*> , mscorlib::System::Runtime::Remoting::Services::TrackingServices> mscorlib::System::Runtime::Remoting::Services::TrackingServices::RegisteredHandlers(&mscorlib::System::Runtime::Remoting::Services::TrackingServices::get_RegisteredHandlers, &mscorlib::System::Runtime::Remoting::Services::TrackingServices::set_RegisteredHandlers);
 					//Public Methods
 					void TrackingServices::RegisterTrackingHandler(mscorlib::System::Runtime::Remoting::Services::ITrackingHandler handler)
 					{
@@ -48,6 +49,11 @@ namespace mscorlib
 							__array_result__.push_back(new mscorlib::System::Runtime::Remoting::Services::ITrackingHandler (__array_item__));
 						}
 						return __array_result__;
+					}
+
+					void TrackingServices::set_RegisteredHandlers(std::vector<mscorlib::System::Runtime::Remoting::Services::ITrackingHandler*>  value)
+					{
+						throw;
 					}
 
 

@@ -7,10 +7,10 @@
 #include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_WindowsAccountType.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_SerializationInfo.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
+#include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_IIdentity.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
-#include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_IIdentity.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_TokenImpersonationLevel.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
@@ -71,18 +71,18 @@ namespace mscorlib
 
 				class WindowsIdentity
 					: public mscorlib::System::Security::Claims::ClaimsIdentity
+					, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
+					, public virtual mscorlib::System::Security::Principal::IIdentity
 					, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 					, public virtual mscorlib::System::IDisposable
-					, public virtual mscorlib::System::Security::Principal::IIdentity
-					, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 				{
 				public:
 					WindowsIdentity(mscorlib::System::IntPtr userToken)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.WindowsIdentity"))
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::IDisposable(NULL)
-					, mscorlib::System::Security::Principal::IIdentity(NULL)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -93,10 +93,10 @@ namespace mscorlib
 				
 					WindowsIdentity(mscorlib::System::IntPtr userToken, mscorlib::System::String type)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.WindowsIdentity"))
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::IDisposable(NULL)
-					, mscorlib::System::Security::Principal::IIdentity(NULL)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -109,10 +109,10 @@ namespace mscorlib
 				
 					WindowsIdentity(mscorlib::System::IntPtr userToken, mscorlib::System::String type, mscorlib::System::Security::Principal::WindowsAccountType::__ENUM__ acctType)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.WindowsIdentity"))
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::IDisposable(NULL)
-					, mscorlib::System::Security::Principal::IIdentity(NULL)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 					{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
@@ -127,10 +127,10 @@ namespace mscorlib
 				
 					WindowsIdentity(mscorlib::System::IntPtr userToken, mscorlib::System::String type, mscorlib::System::Security::Principal::WindowsAccountType::__ENUM__ acctType, mscorlib::System::Boolean isAuthenticated)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.WindowsIdentity"))
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::IDisposable(NULL)
-					, mscorlib::System::Security::Principal::IIdentity(NULL)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 					{
 						MonoType *__parameter_types__[4];
 						void *__parameters__[4];
@@ -147,10 +147,10 @@ namespace mscorlib
 				
 					WindowsIdentity(mscorlib::System::String sUserPrincipalName)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.WindowsIdentity"))
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::IDisposable(NULL)
-					, mscorlib::System::Security::Principal::IIdentity(NULL)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -161,10 +161,10 @@ namespace mscorlib
 				
 					WindowsIdentity(mscorlib::System::String sUserPrincipalName, mscorlib::System::String type)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.WindowsIdentity"))
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::IDisposable(NULL)
-					, mscorlib::System::Security::Principal::IIdentity(NULL)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -177,10 +177,10 @@ namespace mscorlib
 				
 					WindowsIdentity(mscorlib::System::Runtime::Serialization::SerializationInfo info, mscorlib::System::Runtime::Serialization::StreamingContext context)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.WindowsIdentity"))
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::IDisposable(NULL)
-					, mscorlib::System::Security::Principal::IIdentity(NULL)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -193,19 +193,19 @@ namespace mscorlib
 				
 					WindowsIdentity(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(nativeTypeInfo)
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+					, mscorlib::System::Security::Principal::IIdentity(NULL)
 					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::IDisposable(NULL)
-					, mscorlib::System::Security::Principal::IIdentity(NULL)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 					{
 					};
 				
 					WindowsIdentity(MonoObject *nativeObject)
 					: mscorlib::System::Security::Claims::ClaimsIdentity(nativeObject)
+					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
+					, mscorlib::System::Security::Principal::IIdentity(nativeObject)
 					, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 					, mscorlib::System::IDisposable(nativeObject)
-					, mscorlib::System::Security::Principal::IIdentity(nativeObject)
-					, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 					{
 					};
 				
@@ -250,60 +250,60 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:AuthenticationType
-					mscorlib::System::String  get_AuthenticationType();
+					mscorlib::System::String  get_AuthenticationType() const;
 
 					//	Get:IsAnonymous
-					mscorlib::System::Boolean  get_IsAnonymous();
+					mscorlib::System::Boolean  get_IsAnonymous() const;
 
 					//	Get:IsAuthenticated
-					mscorlib::System::Boolean  get_IsAuthenticated();
+					mscorlib::System::Boolean  get_IsAuthenticated() const;
 
 					//	Get:IsGuest
-					mscorlib::System::Boolean  get_IsGuest();
+					mscorlib::System::Boolean  get_IsGuest() const;
 
 					//	Get:IsSystem
-					mscorlib::System::Boolean  get_IsSystem();
+					mscorlib::System::Boolean  get_IsSystem() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:Token
-					mscorlib::System::IntPtr  get_Token();
+					mscorlib::System::IntPtr  get_Token() const;
 
 					//	Get:Groups
-					mscorlib::System::Security::Principal::IdentityReferenceCollection  get_Groups();
+					mscorlib::System::Security::Principal::IdentityReferenceCollection  get_Groups() const;
 
 					//	Get:ImpersonationLevel
-					mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__  get_ImpersonationLevel();
+					mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__  get_ImpersonationLevel() const;
 
 					//	Get:Owner
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_Owner();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_Owner() const;
 
 					//	Get:User
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_User();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_User() const;
 
 					//	Get/Set:Actor
-					mscorlib::System::Security::Claims::ClaimsIdentity  get_Actor();
+					mscorlib::System::Security::Claims::ClaimsIdentity  get_Actor() const;
 					void set_Actor(mscorlib::System::Security::Claims::ClaimsIdentity  value);
 
 					//	Get/Set:BootstrapContext
-					mscorlib::System::Object  get_BootstrapContext();
+					mscorlib::System::Object  get_BootstrapContext() const;
 					void set_BootstrapContext(mscorlib::System::Object  value);
 
 					//	Get/Set:Label
-					mscorlib::System::String  get_Label();
+					mscorlib::System::String  get_Label() const;
 					void set_Label(mscorlib::System::String  value);
 
 					//	Get/Set:NameClaimType
-					mscorlib::System::String  get_NameClaimType();
+					mscorlib::System::String  get_NameClaimType() const;
 					void set_NameClaimType(mscorlib::System::String  value);
 
 					//	Get/Set:RoleClaimType
-					mscorlib::System::String  get_RoleClaimType();
+					mscorlib::System::String  get_RoleClaimType() const;
 					void set_RoleClaimType(mscorlib::System::String  value);
 
 					//	Get:Claims
-					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  get_Claims();
+					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  get_Claims() const;
 
 				
 				protected:

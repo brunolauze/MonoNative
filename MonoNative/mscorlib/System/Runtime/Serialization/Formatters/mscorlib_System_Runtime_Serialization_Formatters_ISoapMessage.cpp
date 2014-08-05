@@ -18,7 +18,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Headers
-					std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*>  ISoapMessage::get_Headers()
+					std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*>  ISoapMessage::get_Headers() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ISoapMessage", 0, NULL, "get_Headers", __mscorlib_System_Runtime_Serialization_Formatters_ISoapMessage, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -43,7 +43,7 @@ namespace mscorlib
 
 
 					//	Get/Set:MethodName
-					mscorlib::System::String  ISoapMessage::get_MethodName()
+					mscorlib::System::String  ISoapMessage::get_MethodName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ISoapMessage", 0, NULL, "get_MethodName", __mscorlib_System_Runtime_Serialization_Formatters_ISoapMessage, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -60,7 +60,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ParamNames
-					std::vector<mscorlib::System::String*>  ISoapMessage::get_ParamNames()
+					std::vector<mscorlib::System::String*>  ISoapMessage::get_ParamNames() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ISoapMessage", 0, NULL, "get_ParamNames", __mscorlib_System_Runtime_Serialization_Formatters_ISoapMessage, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ParamTypes
-					std::vector<mscorlib::System::Type*>  ISoapMessage::get_ParamTypes()
+					std::vector<mscorlib::System::Type*>  ISoapMessage::get_ParamTypes() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ISoapMessage", 0, NULL, "get_ParamTypes", __mscorlib_System_Runtime_Serialization_Formatters_ISoapMessage, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -110,7 +110,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ParamValues
-					std::vector<mscorlib::System::Object*>  ISoapMessage::get_ParamValues()
+					std::vector<mscorlib::System::Object*>  ISoapMessage::get_ParamValues() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ISoapMessage", 0, NULL, "get_ParamValues", __mscorlib_System_Runtime_Serialization_Formatters_ISoapMessage, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -135,7 +135,7 @@ namespace mscorlib
 
 
 					//	Get/Set:XmlNameSpace
-					mscorlib::System::String  ISoapMessage::get_XmlNameSpace()
+					mscorlib::System::String  ISoapMessage::get_XmlNameSpace() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ISoapMessage", 0, NULL, "get_XmlNameSpace", __mscorlib_System_Runtime_Serialization_Formatters_ISoapMessage, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);

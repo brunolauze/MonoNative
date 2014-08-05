@@ -108,27 +108,27 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Flags
-					mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  get_Flags();
+					mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  get_Flags() const;
 					void set_Flags(mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  value);
 
 					//	Get/Set:KeyContainerName
-					mscorlib::System::String  get_KeyContainerName();
+					mscorlib::System::String  get_KeyContainerName() const;
 					void set_KeyContainerName(mscorlib::System::String  value);
 
 					//	Get/Set:KeySpec
-					mscorlib::System::Int32  get_KeySpec();
+					mscorlib::System::Int32  get_KeySpec() const;
 					void set_KeySpec(mscorlib::System::Int32  value);
 
 					//	Get/Set:KeyStore
-					mscorlib::System::String  get_KeyStore();
+					mscorlib::System::String  get_KeyStore() const;
 					void set_KeyStore(mscorlib::System::String  value);
 
 					//	Get/Set:ProviderName
-					mscorlib::System::String  get_ProviderName();
+					mscorlib::System::String  get_ProviderName() const;
 					void set_ProviderName(mscorlib::System::String  value);
 
 					//	Get/Set:ProviderType
-					mscorlib::System::Int32  get_ProviderType();
+					mscorlib::System::Int32  get_ProviderType() const;
 					void set_ProviderType(mscorlib::System::Int32  value);
 
 				

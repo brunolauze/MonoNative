@@ -17,7 +17,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get/Set:BuildVersion
-					mscorlib::System::Byte  InterfaceImplementedInVersionAttribute::get_BuildVersion()
+					mscorlib::System::Byte  InterfaceImplementedInVersionAttribute::get_BuildVersion() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "InterfaceImplementedInVersionAttribute", 0, NULL, "get_BuildVersion", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Byte(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 					//	Get/Set:InterfaceType
-					mscorlib::System::Type  InterfaceImplementedInVersionAttribute::get_InterfaceType()
+					mscorlib::System::Type  InterfaceImplementedInVersionAttribute::get_InterfaceType() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "InterfaceImplementedInVersionAttribute", 0, NULL, "get_InterfaceType", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Type(__result__);
@@ -51,7 +51,7 @@ namespace mscorlib
 
 
 					//	Get/Set:MajorVersion
-					mscorlib::System::Byte  InterfaceImplementedInVersionAttribute::get_MajorVersion()
+					mscorlib::System::Byte  InterfaceImplementedInVersionAttribute::get_MajorVersion() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "InterfaceImplementedInVersionAttribute", 0, NULL, "get_MajorVersion", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Byte(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 
 
 					//	Get/Set:MinorVersion
-					mscorlib::System::Byte  InterfaceImplementedInVersionAttribute::get_MinorVersion()
+					mscorlib::System::Byte  InterfaceImplementedInVersionAttribute::get_MinorVersion() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "InterfaceImplementedInVersionAttribute", 0, NULL, "get_MinorVersion", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Byte(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 
 
 					//	Get/Set:RevisionVersion
-					mscorlib::System::Byte  InterfaceImplementedInVersionAttribute::get_RevisionVersion()
+					mscorlib::System::Byte  InterfaceImplementedInVersionAttribute::get_RevisionVersion() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "InterfaceImplementedInVersionAttribute", 0, NULL, "get_RevisionVersion", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Byte(__result__);
@@ -102,7 +102,7 @@ namespace mscorlib
 
 
 					//	Get:TypeId
-					mscorlib::System::Object  InterfaceImplementedInVersionAttribute::get_TypeId()
+					mscorlib::System::Object  InterfaceImplementedInVersionAttribute::get_TypeId() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);

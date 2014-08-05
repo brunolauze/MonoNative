@@ -12,6 +12,8 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::TimeZoneInfo , mscorlib::System::TimeZoneInfo> mscorlib::System::TimeZoneInfo::Local(&mscorlib::System::TimeZoneInfo::get_Local, &mscorlib::System::TimeZoneInfo::set_Local);
+		Property<mscorlib::System::TimeZoneInfo , mscorlib::System::TimeZoneInfo> mscorlib::System::TimeZoneInfo::Utc(&mscorlib::System::TimeZoneInfo::get_Utc, &mscorlib::System::TimeZoneInfo::set_Utc);
 		//Public Methods
 		void TimeZoneInfo::ClearCachedData()
 		{
@@ -382,7 +384,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:BaseUtcOffset
-		mscorlib::System::TimeSpan  TimeZoneInfo::get_BaseUtcOffset()
+		mscorlib::System::TimeSpan  TimeZoneInfo::get_BaseUtcOffset() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "get_BaseUtcOffset", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeSpan(__result__);
@@ -390,7 +392,7 @@ namespace mscorlib
 
 
 		//	Get:DaylightName
-		mscorlib::System::String  TimeZoneInfo::get_DaylightName()
+		mscorlib::System::String  TimeZoneInfo::get_DaylightName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "get_DaylightName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -398,7 +400,7 @@ namespace mscorlib
 
 
 		//	Get:DisplayName
-		mscorlib::System::String  TimeZoneInfo::get_DisplayName()
+		mscorlib::System::String  TimeZoneInfo::get_DisplayName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "get_DisplayName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -406,7 +408,7 @@ namespace mscorlib
 
 
 		//	Get:Id
-		mscorlib::System::String  TimeZoneInfo::get_Id()
+		mscorlib::System::String  TimeZoneInfo::get_Id() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "get_Id", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -414,7 +416,7 @@ namespace mscorlib
 
 
 		//	Get:StandardName
-		mscorlib::System::String  TimeZoneInfo::get_StandardName()
+		mscorlib::System::String  TimeZoneInfo::get_StandardName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "get_StandardName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -422,7 +424,7 @@ namespace mscorlib
 
 
 		//	Get:SupportsDaylightSavingTime
-		mscorlib::System::Boolean  TimeZoneInfo::get_SupportsDaylightSavingTime()
+		mscorlib::System::Boolean  TimeZoneInfo::get_SupportsDaylightSavingTime() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "get_SupportsDaylightSavingTime", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -437,12 +439,22 @@ namespace mscorlib
 			return mscorlib::System::TimeZoneInfo(__result__);
 		}
 
+		void TimeZoneInfo::set_Local(mscorlib::System::TimeZoneInfo  value)
+		{
+			throw;
+		}
+
 
 		//	Get:Utc
 		mscorlib::System::TimeZoneInfo  TimeZoneInfo::get_Utc()
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "get_Utc", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeZoneInfo(__result__);
+		}
+
+		void TimeZoneInfo::set_Utc(mscorlib::System::TimeZoneInfo  value)
+		{
+			throw;
 		}
 
 
@@ -507,7 +519,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:TimeOfDay
-		mscorlib::System::DateTime  TimeZoneInfo::TransitionTime::get_TimeOfDay()
+		mscorlib::System::DateTime  TimeZoneInfo::TransitionTime::get_TimeOfDay() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+TransitionTime", 0, NULL, "get_TimeOfDay", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::DateTime(__result__);
@@ -515,7 +527,7 @@ namespace mscorlib
 
 
 		//	Get:Month
-		mscorlib::System::Int32  TimeZoneInfo::TransitionTime::get_Month()
+		mscorlib::System::Int32  TimeZoneInfo::TransitionTime::get_Month() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+TransitionTime", 0, NULL, "get_Month", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -523,7 +535,7 @@ namespace mscorlib
 
 
 		//	Get:Day
-		mscorlib::System::Int32  TimeZoneInfo::TransitionTime::get_Day()
+		mscorlib::System::Int32  TimeZoneInfo::TransitionTime::get_Day() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+TransitionTime", 0, NULL, "get_Day", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -531,7 +543,7 @@ namespace mscorlib
 
 
 		//	Get:Week
-		mscorlib::System::Int32  TimeZoneInfo::TransitionTime::get_Week()
+		mscorlib::System::Int32  TimeZoneInfo::TransitionTime::get_Week() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+TransitionTime", 0, NULL, "get_Week", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -539,7 +551,7 @@ namespace mscorlib
 
 
 		//	Get:DayOfWeek
-		mscorlib::System::DayOfWeek::__ENUM__  TimeZoneInfo::TransitionTime::get_DayOfWeek()
+		mscorlib::System::DayOfWeek::__ENUM__  TimeZoneInfo::TransitionTime::get_DayOfWeek() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+TransitionTime", 0, NULL, "get_DayOfWeek", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__);
@@ -547,7 +559,7 @@ namespace mscorlib
 
 
 		//	Get:IsFixedDateRule
-		mscorlib::System::Boolean  TimeZoneInfo::TransitionTime::get_IsFixedDateRule()
+		mscorlib::System::Boolean  TimeZoneInfo::TransitionTime::get_IsFixedDateRule() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+TransitionTime", 0, NULL, "get_IsFixedDateRule", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -592,7 +604,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:DateEnd
-		mscorlib::System::DateTime  TimeZoneInfo::AdjustmentRule::get_DateEnd()
+		mscorlib::System::DateTime  TimeZoneInfo::AdjustmentRule::get_DateEnd() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+AdjustmentRule", 0, NULL, "get_DateEnd", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::DateTime(__result__);
@@ -600,7 +612,7 @@ namespace mscorlib
 
 
 		//	Get:DateStart
-		mscorlib::System::DateTime  TimeZoneInfo::AdjustmentRule::get_DateStart()
+		mscorlib::System::DateTime  TimeZoneInfo::AdjustmentRule::get_DateStart() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+AdjustmentRule", 0, NULL, "get_DateStart", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::DateTime(__result__);
@@ -608,7 +620,7 @@ namespace mscorlib
 
 
 		//	Get:DaylightDelta
-		mscorlib::System::TimeSpan  TimeZoneInfo::AdjustmentRule::get_DaylightDelta()
+		mscorlib::System::TimeSpan  TimeZoneInfo::AdjustmentRule::get_DaylightDelta() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+AdjustmentRule", 0, NULL, "get_DaylightDelta", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeSpan(__result__);
@@ -616,7 +628,7 @@ namespace mscorlib
 
 
 		//	Get:DaylightTransitionEnd
-		mscorlib::System::TimeZoneInfo::TransitionTime  TimeZoneInfo::AdjustmentRule::get_DaylightTransitionEnd()
+		mscorlib::System::TimeZoneInfo::TransitionTime  TimeZoneInfo::AdjustmentRule::get_DaylightTransitionEnd() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+AdjustmentRule", 0, NULL, "get_DaylightTransitionEnd", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeZoneInfo::TransitionTime(__result__);
@@ -624,7 +636,7 @@ namespace mscorlib
 
 
 		//	Get:DaylightTransitionStart
-		mscorlib::System::TimeZoneInfo::TransitionTime  TimeZoneInfo::AdjustmentRule::get_DaylightTransitionStart()
+		mscorlib::System::TimeZoneInfo::TransitionTime  TimeZoneInfo::AdjustmentRule::get_DaylightTransitionStart() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+AdjustmentRule", 0, NULL, "get_DaylightTransitionStart", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeZoneInfo::TransitionTime(__result__);

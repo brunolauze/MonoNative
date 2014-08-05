@@ -70,11 +70,11 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:NamespaceName
-						mscorlib::System::String  get_NamespaceName();
+						mscorlib::System::String  get_NamespaceName() const;
 						void set_NamespaceName(mscorlib::System::String  value);
 
 						//	Get/Set:ResolvedAssemblyFiles
-						mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::String>  get_ResolvedAssemblyFiles();
+						mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::String>  get_ResolvedAssemblyFiles() const;
 						void set_ResolvedAssemblyFiles(mscorlib::System::Collections::ObjectModel::Collection<mscorlib::System::String>  value);
 
 					

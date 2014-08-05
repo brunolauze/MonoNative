@@ -114,7 +114,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Site
-					mscorlib::System::String  get_Site();
+					mscorlib::System::String  get_Site() const;
 					void set_Site(mscorlib::System::String  value);
 
 				

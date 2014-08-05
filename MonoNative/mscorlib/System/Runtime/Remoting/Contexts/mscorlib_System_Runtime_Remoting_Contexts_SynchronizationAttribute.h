@@ -2,11 +2,11 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_CONTEXTS_SYNCHRONIZATIONATTRIBUTE_H
 
 #include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_ContextAttribute.h>
+#include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContextAttribute.h>
 #include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContributeServerContextSink.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Attribute.h>
 #include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContributeClientContextSink.h>
 #include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContextProperty.h>
-#include <mscorlib/System/Runtime/Remoting/Contexts/mscorlib_System_Runtime_Remoting_Contexts_IContextAttribute.h>
 #include <mscorlib/System/Runtime/Remoting/Activation/mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessageSink.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -54,31 +54,31 @@ namespace mscorlib
 
 					class SynchronizationAttribute
 						: public mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute
+						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute
 						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContributeServerContextSink
 						, public virtual mscorlib::System::Runtime::InteropServices::_Attribute
 						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContributeClientContextSink
 						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContextProperty
-						, public virtual mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute
 					{
 					public:
 						SynchronizationAttribute()
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Contexts.SynchronizationAttribute"))
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeServerContextSink(NULL)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeClientContextSink(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(NULL)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						{
 							__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting.Contexts", "SynchronizationAttribute");
 						};
 					
 						SynchronizationAttribute(mscorlib::System::Boolean reEntrant)
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Contexts.SynchronizationAttribute"))
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeServerContextSink(NULL)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeClientContextSink(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(NULL)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
@@ -89,11 +89,11 @@ namespace mscorlib
 					
 						SynchronizationAttribute(mscorlib::System::Int32 flag)
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Contexts.SynchronizationAttribute"))
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeServerContextSink(NULL)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeClientContextSink(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(NULL)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
@@ -104,11 +104,11 @@ namespace mscorlib
 					
 						SynchronizationAttribute(mscorlib::System::Int32 flag, mscorlib::System::Boolean reEntrant)
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.Contexts.SynchronizationAttribute"))
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeServerContextSink(NULL)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeClientContextSink(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(NULL)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
@@ -121,21 +121,21 @@ namespace mscorlib
 					
 						SynchronizationAttribute(mscorlib::NativeTypeInfo *nativeTypeInfo)
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(nativeTypeInfo)
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeServerContextSink(NULL)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeClientContextSink(NULL)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(NULL)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(NULL)
 						{
 						};
 					
 						SynchronizationAttribute(MonoObject *nativeObject)
 						: mscorlib::System::Runtime::Remoting::Contexts::ContextAttribute(nativeObject)
+						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeServerContextSink(nativeObject)
 						, mscorlib::System::Runtime::InteropServices::_Attribute(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContributeClientContextSink(nativeObject)
 						, mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(nativeObject)
-						, mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute(nativeObject)
 						{
 						};
 					
@@ -163,24 +163,24 @@ namespace mscorlib
 						__declspec(property(get=get_TypeId)) mscorlib::System::Object  TypeId;
 
 						//Public Static Fields
-						static Property<mscorlib::System::Int32> NOT_SUPPORTED;
-						static Property<mscorlib::System::Int32> SUPPORTED;
-						static Property<mscorlib::System::Int32> REQUIRED;
-						static Property<mscorlib::System::Int32> REQUIRES_NEW;
+						static Property<mscorlib::System::Int32 , mscorlib::System::Runtime::Remoting::Contexts::SynchronizationAttribute> NOT_SUPPORTED;
+						static Property<mscorlib::System::Int32 , mscorlib::System::Runtime::Remoting::Contexts::SynchronizationAttribute> SUPPORTED;
+						static Property<mscorlib::System::Int32 , mscorlib::System::Runtime::Remoting::Contexts::SynchronizationAttribute> REQUIRED;
+						static Property<mscorlib::System::Int32 , mscorlib::System::Runtime::Remoting::Contexts::SynchronizationAttribute> REQUIRES_NEW;
 
 						//Get Set Properties Methods
 						//	Get:IsReEntrant
-						mscorlib::System::Boolean  get_IsReEntrant();
+						mscorlib::System::Boolean  get_IsReEntrant() const;
 
 						//	Get/Set:Locked
-						mscorlib::System::Boolean  get_Locked();
+						mscorlib::System::Boolean  get_Locked() const;
 						void set_Locked(mscorlib::System::Boolean  value);
 
 						//	Get:Name
-						mscorlib::System::String  get_Name();
+						mscorlib::System::String  get_Name() const;
 
 						//	Get:TypeId
-						mscorlib::System::Object  get_TypeId();
+						mscorlib::System::Object  get_TypeId() const;
 
 						//	Get/Set:NOT_SUPPORTED
 						static mscorlib::System::Int32  get_NOT_SUPPORTED();

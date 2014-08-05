@@ -12,7 +12,6 @@
     <Packages>
       <Packages>
         <Package file="/usr/local/libdata/pkgconfig/mono-2.pc" name="Mono" IsProject="False" />
-        <Package file="/usr/local/libdata/pkgconfig/llvm.pc" name="LLVM" IsProject="False" />
         <Package file="/usr/local/libdata/pkgconfig/glib-2.0.pc" name="GLib" IsProject="False" />
         <Package file="/usr/home/bruno/Projects/MonoNative/MonoNative/MonoNative.md.pc" name="MonoNative" IsProject="True" />
       </Packages>
@@ -26,14 +25,14 @@
     <CompileTarget>Bin</CompileTarget>
     <DefineSymbols>DEBUG MONODEVELOP</DefineSymbols>
     <SourceDirectory>.</SourceDirectory>
-    <ExtraCompilerArguments>-std=c++11 -stdlib=libc++ -fms-extensions</ExtraCompilerArguments>
+    <ExtraCompilerArguments>`llvm-config --cflags` -std=c++11 -stdlib=libc++ -fms-extensions</ExtraCompilerArguments>
     <Includes>
       <Includes>
         <Include>${ProjectDir}</Include>
         <Include>/usr/local/include</Include>
       </Includes>
     </Includes>
-    <ExtraLinkerArguments>-L/usr/local/lib -lgtest -lexecinfo</ExtraLinkerArguments>
+    <ExtraLinkerArguments>`llvm-config --ldflags` `llvm-config --libs` -L/usr/local/lib -lgtest -lz -pthread -lffi -lexecinfo -ltinfo -lm</ExtraLinkerArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release</OutputPath>

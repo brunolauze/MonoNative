@@ -61,6 +61,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "Microsoft.Win32", "Registry", 0, NULL, "ClassesRoot");
 			}
 
+			void Registry::set_ClassesRoot(mscorlib::Microsoft::Win32::RegistryKey  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:CurrentConfig
 			mscorlib::Microsoft::Win32::RegistryKey Registry::get_CurrentConfig()
@@ -68,6 +72,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "Microsoft.Win32", "Registry", 0, NULL, "CurrentConfig");
 			}
 
+			void Registry::set_CurrentConfig(mscorlib::Microsoft::Win32::RegistryKey  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:CurrentUser
 			mscorlib::Microsoft::Win32::RegistryKey Registry::get_CurrentUser()
@@ -75,6 +83,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "Microsoft.Win32", "Registry", 0, NULL, "CurrentUser");
 			}
 
+			void Registry::set_CurrentUser(mscorlib::Microsoft::Win32::RegistryKey  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:DynData
 			mscorlib::Microsoft::Win32::RegistryKey Registry::get_DynData()
@@ -82,6 +94,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "Microsoft.Win32", "Registry", 0, NULL, "DynData");
 			}
 
+			void Registry::set_DynData(mscorlib::Microsoft::Win32::RegistryKey  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:LocalMachine
 			mscorlib::Microsoft::Win32::RegistryKey Registry::get_LocalMachine()
@@ -89,6 +105,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "Microsoft.Win32", "Registry", 0, NULL, "LocalMachine");
 			}
 
+			void Registry::set_LocalMachine(mscorlib::Microsoft::Win32::RegistryKey  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:PerformanceData
 			mscorlib::Microsoft::Win32::RegistryKey Registry::get_PerformanceData()
@@ -96,6 +116,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "Microsoft.Win32", "Registry", 0, NULL, "PerformanceData");
 			}
 
+			void Registry::set_PerformanceData(mscorlib::Microsoft::Win32::RegistryKey  value)
+			{
+				throw;
+			}
 
 				//	Get/Set:Users
 			mscorlib::Microsoft::Win32::RegistryKey Registry::get_Users()
@@ -103,6 +127,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "Microsoft.Win32", "Registry", 0, NULL, "Users");
 			}
 
+			void Registry::set_Users(mscorlib::Microsoft::Win32::RegistryKey  value)
+			{
+				throw;
+			}
 
 
 		}

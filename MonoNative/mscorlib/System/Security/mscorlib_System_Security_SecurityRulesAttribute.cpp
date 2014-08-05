@@ -14,7 +14,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get/Set:RuleSet
-			mscorlib::System::Security::SecurityRuleSet::__ENUM__  SecurityRulesAttribute::get_RuleSet()
+			mscorlib::System::Security::SecurityRuleSet::__ENUM__  SecurityRulesAttribute::get_RuleSet() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityRulesAttribute", 0, NULL, "get_RuleSet", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Security::SecurityRuleSet::__ENUM__*)mono_object_unbox(__result__);
@@ -31,7 +31,7 @@ namespace mscorlib
 
 
 			//	Get/Set:SkipVerificationInFullTrust
-			mscorlib::System::Boolean  SecurityRulesAttribute::get_SkipVerificationInFullTrust()
+			mscorlib::System::Boolean  SecurityRulesAttribute::get_SkipVerificationInFullTrust() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityRulesAttribute", 0, NULL, "get_SkipVerificationInFullTrust", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -48,7 +48,7 @@ namespace mscorlib
 
 
 			//	Get:TypeId
-			mscorlib::System::Object  SecurityRulesAttribute::get_TypeId()
+			mscorlib::System::Object  SecurityRulesAttribute::get_TypeId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:Value
-				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  MarshalAsAttribute::get_Value()
+				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  MarshalAsAttribute::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "MarshalAsAttribute", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__*)mono_object_unbox(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  MarshalAsAttribute::get_TypeId()
+				mscorlib::System::Object  MarshalAsAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get/Set:MarshalCookie
-				mscorlib::System::String MarshalAsAttribute::get_MarshalCookie()
+				mscorlib::System::String MarshalAsAttribute::get_MarshalCookie() const
 				{
 					return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "MarshalCookie"));
 				}
@@ -42,7 +42,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:MarshalType
-				mscorlib::System::String MarshalAsAttribute::get_MarshalType()
+				mscorlib::System::String MarshalAsAttribute::get_MarshalType() const
 				{
 					return mscorlib::System::String((MonoObject*)Global::GetFieldStringValue(__native_object__, "MarshalType"));
 				}
@@ -52,7 +52,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:MarshalTypeRef
-				mscorlib::System::Type MarshalAsAttribute::get_MarshalTypeRef()
+				mscorlib::System::Type MarshalAsAttribute::get_MarshalTypeRef() const
 				{
 					return Global::GetFieldValue(__native_object__, "MarshalTypeRef");
 				}
@@ -62,7 +62,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:SafeArrayUserDefinedSubType
-				mscorlib::System::Type MarshalAsAttribute::get_SafeArrayUserDefinedSubType()
+				mscorlib::System::Type MarshalAsAttribute::get_SafeArrayUserDefinedSubType() const
 				{
 					return Global::GetFieldValue(__native_object__, "SafeArrayUserDefinedSubType");
 				}
@@ -72,7 +72,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:ArraySubType
-				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__ MarshalAsAttribute::get_ArraySubType()
+				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__ MarshalAsAttribute::get_ArraySubType() const
 				{
 					return static_cast<mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "ArraySubType"));
 				}
@@ -82,7 +82,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:SafeArraySubType
-				mscorlib::System::Runtime::InteropServices::VarEnum::__ENUM__ MarshalAsAttribute::get_SafeArraySubType()
+				mscorlib::System::Runtime::InteropServices::VarEnum::__ENUM__ MarshalAsAttribute::get_SafeArraySubType() const
 				{
 					return static_cast<mscorlib::System::Runtime::InteropServices::VarEnum::__ENUM__>(Global::GetFieldInt32Value(__native_object__, "SafeArraySubType"));
 				}
@@ -92,7 +92,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:SizeConst
-				mscorlib::System::Int32 MarshalAsAttribute::get_SizeConst()
+				mscorlib::System::Int32 MarshalAsAttribute::get_SizeConst() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "SizeConst");
 				}
@@ -102,7 +102,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:IidParameterIndex
-				mscorlib::System::Int32 MarshalAsAttribute::get_IidParameterIndex()
+				mscorlib::System::Int32 MarshalAsAttribute::get_IidParameterIndex() const
 				{
 					return Global::GetFieldInt32Value(__native_object__, "IidParameterIndex");
 				}
@@ -112,7 +112,7 @@ namespace mscorlib
 				}
 
 				//	Get/Set:SizeParamIndex
-				mscorlib::System::Int16 MarshalAsAttribute::get_SizeParamIndex()
+				mscorlib::System::Int16 MarshalAsAttribute::get_SizeParamIndex() const
 				{
 					return Global::GetFieldInt16Value(__native_object__, "SizeParamIndex");
 				}

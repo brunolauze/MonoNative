@@ -110,10 +110,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:DomainPolicy
-				mscorlib::System::Security::Policy::PolicyLevel  get_DomainPolicy();
+				mscorlib::System::Security::Policy::PolicyLevel  get_DomainPolicy() const;
 
 				//	Get:Flags
-				mscorlib::System::Security::HostSecurityManagerOptions::__ENUM__  get_Flags();
+				mscorlib::System::Security::HostSecurityManagerOptions::__ENUM__  get_Flags() const;
 
 			
 			protected:

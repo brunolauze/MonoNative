@@ -52,13 +52,13 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:ChannelScheme
-						mscorlib::System::String  get_ChannelScheme();
+						mscorlib::System::String  get_ChannelScheme() const;
 
 						//	Get:ChannelSinkChain
-						mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink  get_ChannelSinkChain();
+						mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink  get_ChannelSinkChain() const;
 
 						//	Get:WantsToListen
-						mscorlib::System::Boolean  get_WantsToListen();
+						mscorlib::System::Boolean  get_WantsToListen() const;
 
 					
 					protected:

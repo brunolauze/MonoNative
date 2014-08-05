@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:ActivationContext
-				mscorlib::System::ActivationContext  ActivationArguments::get_ActivationContext()
+				mscorlib::System::ActivationContext  ActivationArguments::get_ActivationContext() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Hosting", "ActivationArguments", 0, NULL, "get_ActivationContext", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::ActivationContext(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:ActivationData
-				std::vector<mscorlib::System::String*>  ActivationArguments::get_ActivationData()
+				std::vector<mscorlib::System::String*>  ActivationArguments::get_ActivationData() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Hosting", "ActivationArguments", 0, NULL, "get_ActivationData", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -40,7 +40,7 @@ namespace mscorlib
 
 
 				//	Get:ApplicationIdentity
-				mscorlib::System::ApplicationIdentity  ActivationArguments::get_ApplicationIdentity()
+				mscorlib::System::ApplicationIdentity  ActivationArguments::get_ApplicationIdentity() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Hosting", "ActivationArguments", 0, NULL, "get_ApplicationIdentity", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::ApplicationIdentity(__result__);

@@ -31,7 +31,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Current
-			mscorlib::System::Object  TextElementEnumerator::get_Current()
+			mscorlib::System::Object  TextElementEnumerator::get_Current() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextElementEnumerator", 0, NULL, "get_Current", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 			//	Get:ElementIndex
-			mscorlib::System::Int32  TextElementEnumerator::get_ElementIndex()
+			mscorlib::System::Int32  TextElementEnumerator::get_ElementIndex() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextElementEnumerator", 0, NULL, "get_ElementIndex", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

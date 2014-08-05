@@ -127,44 +127,46 @@ namespace mscorlib
 					__declspec(property(get=get_Children, put=set_Children)) mscorlib::System::Collections::IList  Children;
 
 					//Public Static Fields
-					static Property<mscorlib::System::String> AbsentOriginScheme;
-					static Property<mscorlib::System::String> AnyOtherOriginScheme;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Policy::NetCodeGroup> AbsentOriginScheme;
+					static Property<mscorlib::System::String , mscorlib::System::Security::Policy::NetCodeGroup> AnyOtherOriginScheme;
 
 					//Get Set Properties Methods
 					//	Get:AttributeString
-					mscorlib::System::String  get_AttributeString();
+					mscorlib::System::String  get_AttributeString() const;
 
 					//	Get:MergeLogic
-					mscorlib::System::String  get_MergeLogic();
+					mscorlib::System::String  get_MergeLogic() const;
 
 					//	Get:PermissionSetName
-					mscorlib::System::String  get_PermissionSetName();
+					mscorlib::System::String  get_PermissionSetName() const;
 
 					//	Get/Set:PolicyStatement
-					mscorlib::System::Security::Policy::PolicyStatement  get_PolicyStatement();
+					mscorlib::System::Security::Policy::PolicyStatement  get_PolicyStatement() const;
 					void set_PolicyStatement(mscorlib::System::Security::Policy::PolicyStatement  value);
 
 					//	Get/Set:Description
-					mscorlib::System::String  get_Description();
+					mscorlib::System::String  get_Description() const;
 					void set_Description(mscorlib::System::String  value);
 
 					//	Get/Set:MembershipCondition
-					mscorlib::System::Security::Policy::IMembershipCondition  get_MembershipCondition();
+					mscorlib::System::Security::Policy::IMembershipCondition  get_MembershipCondition() const;
 					void set_MembershipCondition(mscorlib::System::Security::Policy::IMembershipCondition  value);
 
 					//	Get/Set:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 					void set_Name(mscorlib::System::String  value);
 
 					//	Get/Set:Children
-					mscorlib::System::Collections::IList  get_Children();
+					mscorlib::System::Collections::IList  get_Children() const;
 					void set_Children(mscorlib::System::Collections::IList  value);
 
 					//	Get/Set:AbsentOriginScheme
 					static mscorlib::System::String  get_AbsentOriginScheme();
+					static void set_AbsentOriginScheme(mscorlib::System::String  value);
 
 					//	Get/Set:AnyOtherOriginScheme
 					static mscorlib::System::String  get_AnyOtherOriginScheme();
+					static void set_AnyOtherOriginScheme(mscorlib::System::String  value);
 
 				
 				protected:

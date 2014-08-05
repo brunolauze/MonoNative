@@ -175,56 +175,56 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Exists
-				mscorlib::System::Boolean  get_Exists();
+				mscorlib::System::Boolean  get_Exists() const;
 
 				//	Get:Name
-				mscorlib::System::String  get_Name();
+				mscorlib::System::String  get_Name() const;
 
 				//	Get/Set:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 				void set_IsReadOnly(mscorlib::System::Boolean  value);
 
 				//	Get:Length
-				mscorlib::System::Int64  get_Length();
+				mscorlib::System::Int64  get_Length() const;
 
 				//	Get:DirectoryName
-				mscorlib::System::String  get_DirectoryName();
+				mscorlib::System::String  get_DirectoryName() const;
 
 				//	Get:Directory
-				mscorlib::System::IO::DirectoryInfo  get_Directory();
+				mscorlib::System::IO::DirectoryInfo  get_Directory() const;
 
 				//	Get:FullName
-				mscorlib::System::String  get_FullName();
+				mscorlib::System::String  get_FullName() const;
 
 				//	Get:Extension
-				mscorlib::System::String  get_Extension();
+				mscorlib::System::String  get_Extension() const;
 
 				//	Get/Set:Attributes
-				mscorlib::System::IO::FileAttributes::__ENUM__  get_Attributes();
+				mscorlib::System::IO::FileAttributes::__ENUM__  get_Attributes() const;
 				void set_Attributes(mscorlib::System::IO::FileAttributes::__ENUM__  value);
 
 				//	Get/Set:CreationTime
-				mscorlib::System::DateTime  get_CreationTime();
+				mscorlib::System::DateTime  get_CreationTime() const;
 				void set_CreationTime(mscorlib::System::DateTime  value);
 
 				//	Get/Set:CreationTimeUtc
-				mscorlib::System::DateTime  get_CreationTimeUtc();
+				mscorlib::System::DateTime  get_CreationTimeUtc() const;
 				void set_CreationTimeUtc(mscorlib::System::DateTime  value);
 
 				//	Get/Set:LastAccessTime
-				mscorlib::System::DateTime  get_LastAccessTime();
+				mscorlib::System::DateTime  get_LastAccessTime() const;
 				void set_LastAccessTime(mscorlib::System::DateTime  value);
 
 				//	Get/Set:LastAccessTimeUtc
-				mscorlib::System::DateTime  get_LastAccessTimeUtc();
+				mscorlib::System::DateTime  get_LastAccessTimeUtc() const;
 				void set_LastAccessTimeUtc(mscorlib::System::DateTime  value);
 
 				//	Get/Set:LastWriteTime
-				mscorlib::System::DateTime  get_LastWriteTime();
+				mscorlib::System::DateTime  get_LastWriteTime() const;
 				void set_LastWriteTime(mscorlib::System::DateTime  value);
 
 				//	Get/Set:LastWriteTimeUtc
-				mscorlib::System::DateTime  get_LastWriteTimeUtc();
+				mscorlib::System::DateTime  get_LastWriteTimeUtc() const;
 				void set_LastWriteTimeUtc(mscorlib::System::DateTime  value);
 
 			

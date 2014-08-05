@@ -18,7 +18,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ActivationType
-					mscorlib::System::Type  IConstructionCallMessage::get_ActivationType()
+					mscorlib::System::Type  IConstructionCallMessage::get_ActivationType() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Activation", "IConstructionCallMessage", 0, NULL, "get_ActivationType", __mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage, 0, NULL, NULL, NULL);
 						return mscorlib::System::Type(__result__);
@@ -26,7 +26,7 @@ namespace mscorlib
 
 
 					//	Get:ActivationTypeName
-					mscorlib::System::String  IConstructionCallMessage::get_ActivationTypeName()
+					mscorlib::System::String  IConstructionCallMessage::get_ActivationTypeName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Activation", "IConstructionCallMessage", 0, NULL, "get_ActivationTypeName", __mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 					//	Get/Set:Activator
-					mscorlib::System::Runtime::Remoting::Activation::IActivator  IConstructionCallMessage::get_Activator()
+					mscorlib::System::Runtime::Remoting::Activation::IActivator  IConstructionCallMessage::get_Activator() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Activation", "IConstructionCallMessage", 0, NULL, "get_Activator", __mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage, 0, NULL, NULL, NULL);
 						return mscorlib::System::Runtime::Remoting::Activation::IActivator(__result__);
@@ -51,7 +51,7 @@ namespace mscorlib
 
 
 					//	Get:CallSiteActivationAttributes
-					std::vector<mscorlib::System::Object*>  IConstructionCallMessage::get_CallSiteActivationAttributes()
+					std::vector<mscorlib::System::Object*>  IConstructionCallMessage::get_CallSiteActivationAttributes() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Activation", "IConstructionCallMessage", 0, NULL, "get_CallSiteActivationAttributes", __mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -67,7 +67,7 @@ namespace mscorlib
 
 
 					//	Get:ContextProperties
-					mscorlib::System::Collections::IList  IConstructionCallMessage::get_ContextProperties()
+					mscorlib::System::Collections::IList  IConstructionCallMessage::get_ContextProperties() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Activation", "IConstructionCallMessage", 0, NULL, "get_ContextProperties", __mscorlib_System_Runtime_Remoting_Activation_IConstructionCallMessage, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::IList(__result__);

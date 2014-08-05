@@ -40,7 +40,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Channels_IChannelReceiver, put=set___mscorlib_System_Runtime_Remoting_Channels_IChannelReceiver)) MonoObject *__mscorlib_System_Runtime_Remoting_Channels_IChannelReceiver;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Channels_IChannelReceiver()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Channels_IChannelReceiver() const
 						{
 							return IChannelReceiver::__mscorlib_System_Runtime_Remoting_Channels_IChannel;
 						}
@@ -63,7 +63,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:ChannelData
-						mscorlib::System::Object  get_ChannelData();
+						mscorlib::System::Object  get_ChannelData() const;
 
 					
 					protected:

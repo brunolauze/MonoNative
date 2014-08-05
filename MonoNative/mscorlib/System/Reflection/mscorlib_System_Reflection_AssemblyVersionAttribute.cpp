@@ -13,7 +13,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get:Version
-			mscorlib::System::String  AssemblyVersionAttribute::get_Version()
+			mscorlib::System::String  AssemblyVersionAttribute::get_Version() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyVersionAttribute", 0, NULL, "get_Version", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -21,7 +21,7 @@ namespace mscorlib
 
 
 			//	Get:TypeId
-			mscorlib::System::Object  AssemblyVersionAttribute::get_TypeId()
+			mscorlib::System::Object  AssemblyVersionAttribute::get_TypeId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

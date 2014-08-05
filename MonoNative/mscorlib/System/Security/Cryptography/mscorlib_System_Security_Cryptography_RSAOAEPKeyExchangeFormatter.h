@@ -95,14 +95,14 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Parameter
-					std::vector<mscorlib::System::Byte*>  get_Parameter();
+					std::vector<mscorlib::System::Byte*>  get_Parameter() const;
 					void set_Parameter(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get:Parameters
-					mscorlib::System::String  get_Parameters();
+					mscorlib::System::String  get_Parameters() const;
 
 					//	Get/Set:Rng
-					mscorlib::System::Security::Cryptography::RandomNumberGenerator  get_Rng();
+					mscorlib::System::Security::Cryptography::RandomNumberGenerator  get_Rng() const;
 					void set_Rng(mscorlib::System::Security::Cryptography::RandomNumberGenerator  value);
 
 				

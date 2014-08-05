@@ -50,12 +50,13 @@ namespace mscorlib
 
 
 				//Public Static Properties
-				static Property<mscorlib::System::Boolean> IsServerGC;
-				static Property<mscorlib::System::Runtime::GCLatencyMode::__ENUM__> LatencyMode;
+				static Property<mscorlib::System::Boolean , mscorlib::System::Runtime::GCSettings> IsServerGC;
+				static Property<mscorlib::System::Runtime::GCLatencyMode::__ENUM__ , mscorlib::System::Runtime::GCSettings> LatencyMode;
 
 				//Get Set Static Properties Methods
 				//	Get:IsServerGC
 				static mscorlib::System::Boolean  get_IsServerGC();
+				static void set_IsServerGC(mscorlib::System::Boolean  value);
 
 				//	Get/Set:LatencyMode
 				static mscorlib::System::Runtime::GCLatencyMode::__ENUM__  get_LatencyMode();

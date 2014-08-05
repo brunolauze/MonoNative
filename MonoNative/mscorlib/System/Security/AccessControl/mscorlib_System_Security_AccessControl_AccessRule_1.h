@@ -129,7 +129,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Rights
-					T  get_Rights()
+					T  get_Rights() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -138,35 +138,35 @@ namespace mscorlib
 					}
 
 					//	Get:AccessControlType
-					mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__  get_AccessControlType()
+					mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__  get_AccessControlType() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AccessRule", 0, NULL, "get_AccessControlType", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__*)mono_object_unbox(__result__);
 					}
 
 					//	Get:IdentityReference
-					mscorlib::System::Security::Principal::IdentityReference  get_IdentityReference()
+					mscorlib::System::Security::Principal::IdentityReference  get_IdentityReference() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_IdentityReference", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Security::Principal::IdentityReference(__result__);
 					}
 
 					//	Get:InheritanceFlags
-					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags()
+					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
 					}
 
 					//	Get:IsInherited
-					mscorlib::System::Boolean  get_IsInherited()
+					mscorlib::System::Boolean  get_IsInherited() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_IsInherited", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 					}
 
 					//	Get:PropagationFlags
-					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags()
+					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);

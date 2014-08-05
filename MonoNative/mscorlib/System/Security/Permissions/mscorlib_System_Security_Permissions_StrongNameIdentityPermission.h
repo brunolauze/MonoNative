@@ -122,15 +122,15 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 					void set_Name(mscorlib::System::String  value);
 
 					//	Get/Set:PublicKey
-					mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  get_PublicKey();
+					mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  get_PublicKey() const;
 					void set_PublicKey(mscorlib::System::Security::Permissions::StrongNamePublicKeyBlob  value);
 
 					//	Get/Set:Version
-					mscorlib::System::Version  get_Version();
+					mscorlib::System::Version  get_Version() const;
 					void set_Version(mscorlib::System::Version  value);
 
 				

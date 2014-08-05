@@ -66,13 +66,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:RootScope
-					mscorlib::System::Diagnostics::SymbolStore::ISymbolScope  get_RootScope();
+					mscorlib::System::Diagnostics::SymbolStore::ISymbolScope  get_RootScope() const;
 
 					//	Get:SequencePointCount
-					mscorlib::System::Int32  get_SequencePointCount();
+					mscorlib::System::Int32  get_SequencePointCount() const;
 
 					//	Get:Token
-					mscorlib::System::Diagnostics::SymbolStore::SymbolToken  get_Token();
+					mscorlib::System::Diagnostics::SymbolStore::SymbolToken  get_Token() const;
 
 				
 				protected:

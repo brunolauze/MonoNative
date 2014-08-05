@@ -225,7 +225,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Eras
-			std::vector<mscorlib::System::Int32*>  GregorianCalendar::get_Eras()
+			std::vector<mscorlib::System::Int32*>  GregorianCalendar::get_Eras() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "GregorianCalendar", 0, NULL, "get_Eras", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -241,7 +241,7 @@ namespace mscorlib
 
 
 			//	Get/Set:TwoDigitYearMax
-			mscorlib::System::Int32  GregorianCalendar::get_TwoDigitYearMax()
+			mscorlib::System::Int32  GregorianCalendar::get_TwoDigitYearMax() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "GregorianCalendar", 0, NULL, "get_TwoDigitYearMax", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -258,7 +258,7 @@ namespace mscorlib
 
 
 			//	Get/Set:CalendarType
-			mscorlib::System::Globalization::GregorianCalendarTypes::__ENUM__  GregorianCalendar::get_CalendarType()
+			mscorlib::System::Globalization::GregorianCalendarTypes::__ENUM__  GregorianCalendar::get_CalendarType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "GregorianCalendar", 0, NULL, "get_CalendarType", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Globalization::GregorianCalendarTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -275,7 +275,7 @@ namespace mscorlib
 
 
 			//	Get:AlgorithmType
-			mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  GregorianCalendar::get_AlgorithmType()
+			mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  GregorianCalendar::get_AlgorithmType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "GregorianCalendar", 0, NULL, "get_AlgorithmType", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__*)mono_object_unbox(__result__);
@@ -283,7 +283,7 @@ namespace mscorlib
 
 
 			//	Get:MinSupportedDateTime
-			mscorlib::System::DateTime  GregorianCalendar::get_MinSupportedDateTime()
+			mscorlib::System::DateTime  GregorianCalendar::get_MinSupportedDateTime() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "GregorianCalendar", 0, NULL, "get_MinSupportedDateTime", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -291,7 +291,7 @@ namespace mscorlib
 
 
 			//	Get:MaxSupportedDateTime
-			mscorlib::System::DateTime  GregorianCalendar::get_MaxSupportedDateTime()
+			mscorlib::System::DateTime  GregorianCalendar::get_MaxSupportedDateTime() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "GregorianCalendar", 0, NULL, "get_MaxSupportedDateTime", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -299,7 +299,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  GregorianCalendar::get_IsReadOnly()
+			mscorlib::System::Boolean  GregorianCalendar::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "Calendar", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

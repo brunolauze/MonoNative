@@ -54,7 +54,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Security_Policy_IApplicationTrustManager, put=set___mscorlib_System_Security_Policy_IApplicationTrustManager)) MonoObject *__mscorlib_System_Security_Policy_IApplicationTrustManager;
-					MonoObject* get___mscorlib_System_Security_Policy_IApplicationTrustManager()
+					MonoObject* get___mscorlib_System_Security_Policy_IApplicationTrustManager() const
 					{
 						return IApplicationTrustManager::__mscorlib_System_Security_ISecurityEncodable;
 					}

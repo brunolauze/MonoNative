@@ -14,7 +14,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get:PublicKey
-			std::vector<mscorlib::System::Byte*>  StrongNameKeyPair::get_PublicKey()
+			std::vector<mscorlib::System::Byte*>  StrongNameKeyPair::get_PublicKey() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "StrongNameKeyPair", 0, NULL, "get_PublicKey", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;

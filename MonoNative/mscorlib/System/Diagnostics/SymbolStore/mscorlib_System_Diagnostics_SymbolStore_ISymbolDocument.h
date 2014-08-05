@@ -58,25 +58,25 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CheckSumAlgorithmId
-					mscorlib::System::Guid  get_CheckSumAlgorithmId();
+					mscorlib::System::Guid  get_CheckSumAlgorithmId() const;
 
 					//	Get:DocumentType
-					mscorlib::System::Guid  get_DocumentType();
+					mscorlib::System::Guid  get_DocumentType() const;
 
 					//	Get:HasEmbeddedSource
-					mscorlib::System::Boolean  get_HasEmbeddedSource();
+					mscorlib::System::Boolean  get_HasEmbeddedSource() const;
 
 					//	Get:Language
-					mscorlib::System::Guid  get_Language();
+					mscorlib::System::Guid  get_Language() const;
 
 					//	Get:LanguageVendor
-					mscorlib::System::Guid  get_LanguageVendor();
+					mscorlib::System::Guid  get_LanguageVendor() const;
 
 					//	Get:SourceLength
-					mscorlib::System::Int32  get_SourceLength();
+					mscorlib::System::Int32  get_SourceLength() const;
 
 					//	Get:URL
-					mscorlib::System::String  get_URL();
+					mscorlib::System::String  get_URL() const;
 
 				
 				protected:

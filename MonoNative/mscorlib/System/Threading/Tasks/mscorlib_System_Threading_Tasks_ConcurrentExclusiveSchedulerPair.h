@@ -117,13 +117,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ConcurrentScheduler
-					mscorlib::System::Threading::Tasks::TaskScheduler  get_ConcurrentScheduler();
+					mscorlib::System::Threading::Tasks::TaskScheduler  get_ConcurrentScheduler() const;
 
 					//	Get:ExclusiveScheduler
-					mscorlib::System::Threading::Tasks::TaskScheduler  get_ExclusiveScheduler();
+					mscorlib::System::Threading::Tasks::TaskScheduler  get_ExclusiveScheduler() const;
 
 					//	Get:Completion
-					mscorlib::System::Threading::Tasks::TaskBase  get_Completion();
+					mscorlib::System::Threading::Tasks::TaskBase  get_Completion() const;
 
 				
 				protected:

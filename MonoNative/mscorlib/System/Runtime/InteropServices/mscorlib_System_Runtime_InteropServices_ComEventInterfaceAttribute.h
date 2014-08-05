@@ -75,13 +75,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:EventProvider
-					mscorlib::System::Type  get_EventProvider();
+					mscorlib::System::Type  get_EventProvider() const;
 
 					//	Get:SourceInterface
-					mscorlib::System::Type  get_SourceInterface();
+					mscorlib::System::Type  get_SourceInterface() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
-#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
+#include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerator.h>
 
 namespace mscorlib
@@ -28,25 +28,25 @@ namespace mscorlib
 
 			class Queue
 				: public mscorlib::System::Object
+				, public virtual mscorlib::System::ICloneable
 				, public virtual mscorlib::System::Collections::ICollection
 				, public virtual mscorlib::System::Collections::IEnumerable
-				, public virtual mscorlib::System::ICloneable
 			{
 			public:
 				Queue()
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Queue"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					__native_object__ = Global::New("mscorlib", "System.Collections", "Queue");
 				};
 			
 				Queue(mscorlib::System::Int32 capacity)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Queue"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -57,9 +57,9 @@ namespace mscorlib
 			
 				Queue(mscorlib::System::Collections::ICollection col)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Queue"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -70,9 +70,9 @@ namespace mscorlib
 			
 				Queue(mscorlib::System::Int32 capacity, mscorlib::System::Single growFactor)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Queue"))
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
@@ -85,17 +85,17 @@ namespace mscorlib
 			
 				Queue(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
+				, mscorlib::System::ICloneable(NULL)
 				, mscorlib::System::Collections::ICollection(NULL)
 				, mscorlib::System::Collections::IEnumerable(NULL)
-				, mscorlib::System::ICloneable(NULL)
 				{
 				};
 			
 				Queue(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
+				, mscorlib::System::ICloneable(nativeObject)
 				, mscorlib::System::Collections::ICollection(nativeObject)
 				, mscorlib::System::Collections::IEnumerable(nativeObject)
-				, mscorlib::System::ICloneable(nativeObject)
 				{
 				};
 			
@@ -130,13 +130,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  get_Count();
+				mscorlib::System::Int32  get_Count() const;
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  get_IsSynchronized();
+				mscorlib::System::Boolean  get_IsSynchronized() const;
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  get_SyncRoot();
+				mscorlib::System::Object  get_SyncRoot() const;
 
 			
 			protected:

@@ -72,18 +72,19 @@ namespace mscorlib
 			__declspec(property(get=get_StandardName)) mscorlib::System::String  StandardName;
 
 			//Public Static Properties
-			static Property<mscorlib::System::TimeZone> CurrentTimeZone;
+			static Property<mscorlib::System::TimeZone , mscorlib::System::TimeZone> CurrentTimeZone;
 
 			//Get Set Properties Methods
 			//	Get:DaylightName
-			mscorlib::System::String  get_DaylightName();
+			mscorlib::System::String  get_DaylightName() const;
 
 			//	Get:StandardName
-			mscorlib::System::String  get_StandardName();
+			mscorlib::System::String  get_StandardName() const;
 
 			//Get Set Static Properties Methods
 			//	Get:CurrentTimeZone
 			static mscorlib::System::TimeZone  get_CurrentTimeZone();
+			static void set_CurrentTimeZone(mscorlib::System::TimeZone  value);
 
 
 		

@@ -87,27 +87,27 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:BuildVersion
-						mscorlib::System::Byte  get_BuildVersion();
+						mscorlib::System::Byte  get_BuildVersion() const;
 						void set_BuildVersion(mscorlib::System::Byte  value);
 
 						//	Get/Set:InterfaceType
-						mscorlib::System::Type  get_InterfaceType();
+						mscorlib::System::Type  get_InterfaceType() const;
 						void set_InterfaceType(mscorlib::System::Type  value);
 
 						//	Get/Set:MajorVersion
-						mscorlib::System::Byte  get_MajorVersion();
+						mscorlib::System::Byte  get_MajorVersion() const;
 						void set_MajorVersion(mscorlib::System::Byte  value);
 
 						//	Get/Set:MinorVersion
-						mscorlib::System::Byte  get_MinorVersion();
+						mscorlib::System::Byte  get_MinorVersion() const;
 						void set_MinorVersion(mscorlib::System::Byte  value);
 
 						//	Get/Set:RevisionVersion
-						mscorlib::System::Byte  get_RevisionVersion();
+						mscorlib::System::Byte  get_RevisionVersion() const;
 						void set_RevisionVersion(mscorlib::System::Byte  value);
 
 						//	Get:TypeId
-						mscorlib::System::Object  get_TypeId();
+						mscorlib::System::Object  get_TypeId() const;
 
 					
 					protected:

@@ -109,8 +109,8 @@ namespace mscorlib
 
 
 				//Public Static Properties
-				static Property<mscorlib::System::Boolean> CheckExecutionRights;
-				static Property<mscorlib::System::Boolean> SecurityEnabled;
+				static Property<mscorlib::System::Boolean , mscorlib::System::Security::SecurityManager> CheckExecutionRights;
+				static Property<mscorlib::System::Boolean , mscorlib::System::Security::SecurityManager> SecurityEnabled;
 
 				//Get Set Static Properties Methods
 				//	Get/Set:CheckExecutionRights

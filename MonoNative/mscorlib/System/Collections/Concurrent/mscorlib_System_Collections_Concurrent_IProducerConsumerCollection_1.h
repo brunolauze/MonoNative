@@ -34,7 +34,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Collections_Concurrent_IProducerConsumerCollection_1, put=set___mscorlib_System_Collections_Concurrent_IProducerConsumerCollection_1)) MonoObject *__mscorlib_System_Collections_Concurrent_IProducerConsumerCollection_1;
-					MonoObject* get___mscorlib_System_Collections_Concurrent_IProducerConsumerCollection_1()
+					MonoObject* get___mscorlib_System_Collections_Concurrent_IProducerConsumerCollection_1() const
 					{
 						return IProducerConsumerCollection::__mscorlib_System_Collections_Generic_IEnumerable_1;
 					}

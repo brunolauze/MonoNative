@@ -490,7 +490,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Encoding
-			mscorlib::System::Text::Encoding  TextWriter::get_Encoding()
+			mscorlib::System::Text::Encoding  TextWriter::get_Encoding() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "TextWriter", 0, NULL, "get_Encoding", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Text::Encoding(__result__);
@@ -498,7 +498,7 @@ namespace mscorlib
 
 
 			//	Get:FormatProvider
-			mscorlib::System::IFormatProvider  TextWriter::get_FormatProvider()
+			mscorlib::System::IFormatProvider  TextWriter::get_FormatProvider() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "TextWriter", 0, NULL, "get_FormatProvider", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::IFormatProvider(__result__);
@@ -506,7 +506,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NewLine
-			mscorlib::System::String  TextWriter::get_NewLine()
+			mscorlib::System::String  TextWriter::get_NewLine() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "TextWriter", 0, NULL, "get_NewLine", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -528,6 +528,10 @@ namespace mscorlib
 				return Global::GetFieldValue("mscorlib", "System.IO", "TextWriter", 0, NULL, "Null");
 			}
 
+			void TextWriter::set_Null(mscorlib::System::IO::TextWriter  value)
+			{
+				throw;
+			}
 
 
 		}

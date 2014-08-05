@@ -49,16 +49,16 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:AsyncState
-			mscorlib::System::Object  get_AsyncState();
+			mscorlib::System::Object  get_AsyncState() const;
 
 			//	Get:AsyncWaitHandle
-			mscorlib::System::Threading::WaitHandle  get_AsyncWaitHandle();
+			mscorlib::System::Threading::WaitHandle  get_AsyncWaitHandle() const;
 
 			//	Get:CompletedSynchronously
-			mscorlib::System::Boolean  get_CompletedSynchronously();
+			mscorlib::System::Boolean  get_CompletedSynchronously() const;
 
 			//	Get:IsCompleted
-			mscorlib::System::Boolean  get_IsCompleted();
+			mscorlib::System::Boolean  get_IsCompleted() const;
 
 		
 		protected:

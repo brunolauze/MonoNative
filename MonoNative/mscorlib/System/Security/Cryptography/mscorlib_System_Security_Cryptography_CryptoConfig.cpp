@@ -14,6 +14,7 @@ namespace mscorlib
 			namespace Cryptography
 			{
 
+				Property<mscorlib::System::Boolean , mscorlib::System::Security::Cryptography::CryptoConfig> mscorlib::System::Security::Cryptography::CryptoConfig::AllowOnlyFipsAlgorithms(&mscorlib::System::Security::Cryptography::CryptoConfig::get_AllowOnlyFipsAlgorithms, &mscorlib::System::Security::Cryptography::CryptoConfig::set_AllowOnlyFipsAlgorithms);
 				//Public Methods
 				mscorlib::System::Object CryptoConfig::CreateFromName(mscorlib::System::String name)
 				{
@@ -93,6 +94,11 @@ namespace mscorlib
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "get_AllowOnlyFipsAlgorithms", NullMonoObject, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+				}
+
+				void CryptoConfig::set_AllowOnlyFipsAlgorithms(mscorlib::System::Boolean  value)
+				{
+					throw;
 				}
 
 

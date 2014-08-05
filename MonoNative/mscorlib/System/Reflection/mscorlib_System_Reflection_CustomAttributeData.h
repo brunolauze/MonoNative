@@ -83,16 +83,16 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Constructor
-				mscorlib::System::Reflection::ConstructorInfo  get_Constructor();
+				mscorlib::System::Reflection::ConstructorInfo  get_Constructor() const;
 
 				//	Get:ConstructorArguments
-				mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeTypedArgument>  get_ConstructorArguments();
+				mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeTypedArgument>  get_ConstructorArguments() const;
 
 				//	Get:NamedArguments
-				mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeNamedArgument>  get_NamedArguments();
+				mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeNamedArgument>  get_NamedArguments() const;
 
 				//	Get:AttributeType
-				mscorlib::System::Type  get_AttributeType();
+				mscorlib::System::Type  get_AttributeType() const;
 
 			
 			protected:

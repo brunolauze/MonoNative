@@ -230,7 +230,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Attributes
-				mscorlib::System::Reflection::EventAttributes::__ENUM__  _EventInfo::get_Attributes()
+				mscorlib::System::Reflection::EventAttributes::__ENUM__  _EventInfo::get_Attributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_Attributes", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::EventAttributes::__ENUM__*)mono_object_unbox(__result__);
@@ -238,7 +238,7 @@ namespace mscorlib
 
 
 				//	Get:DeclaringType
-				mscorlib::System::Type  _EventInfo::get_DeclaringType()
+				mscorlib::System::Type  _EventInfo::get_DeclaringType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_DeclaringType", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -246,7 +246,7 @@ namespace mscorlib
 
 
 				//	Get:EventHandlerType
-				mscorlib::System::Type  _EventInfo::get_EventHandlerType()
+				mscorlib::System::Type  _EventInfo::get_EventHandlerType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_EventHandlerType", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -254,7 +254,7 @@ namespace mscorlib
 
 
 				//	Get:IsMulticast
-				mscorlib::System::Boolean  _EventInfo::get_IsMulticast()
+				mscorlib::System::Boolean  _EventInfo::get_IsMulticast() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_IsMulticast", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -262,7 +262,7 @@ namespace mscorlib
 
 
 				//	Get:IsSpecialName
-				mscorlib::System::Boolean  _EventInfo::get_IsSpecialName()
+				mscorlib::System::Boolean  _EventInfo::get_IsSpecialName() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_IsSpecialName", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -270,7 +270,7 @@ namespace mscorlib
 
 
 				//	Get:MemberType
-				mscorlib::System::Reflection::MemberTypes::__ENUM__  _EventInfo::get_MemberType()
+				mscorlib::System::Reflection::MemberTypes::__ENUM__  _EventInfo::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_MemberType", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -278,7 +278,7 @@ namespace mscorlib
 
 
 				//	Get:Name
-				mscorlib::System::String  _EventInfo::get_Name()
+				mscorlib::System::String  _EventInfo::get_Name() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_Name", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -286,7 +286,7 @@ namespace mscorlib
 
 
 				//	Get:ReflectedType
-				mscorlib::System::Type  _EventInfo::get_ReflectedType()
+				mscorlib::System::Type  _EventInfo::get_ReflectedType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_ReflectedType", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);

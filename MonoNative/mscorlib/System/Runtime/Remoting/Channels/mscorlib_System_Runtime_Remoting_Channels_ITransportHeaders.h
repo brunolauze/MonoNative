@@ -41,7 +41,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Item
-						mscorlib::System::Object  get_Item(mscorlib::System::Object key);
+						mscorlib::System::Object  get_Item(mscorlib::System::Object key) const;
 						void set_Item(mscorlib::System::Object key, mscorlib::System::Object  value);
 
 					

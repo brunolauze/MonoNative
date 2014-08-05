@@ -46,7 +46,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:DeformatterAlgorithm
-				mscorlib::System::String  SignatureDescription::get_DeformatterAlgorithm()
+				mscorlib::System::String  SignatureDescription::get_DeformatterAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SignatureDescription", 0, NULL, "get_DeformatterAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -63,7 +63,7 @@ namespace mscorlib
 
 
 				//	Get/Set:DigestAlgorithm
-				mscorlib::System::String  SignatureDescription::get_DigestAlgorithm()
+				mscorlib::System::String  SignatureDescription::get_DigestAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SignatureDescription", 0, NULL, "get_DigestAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 				//	Get/Set:FormatterAlgorithm
-				mscorlib::System::String  SignatureDescription::get_FormatterAlgorithm()
+				mscorlib::System::String  SignatureDescription::get_FormatterAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SignatureDescription", 0, NULL, "get_FormatterAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -97,7 +97,7 @@ namespace mscorlib
 
 
 				//	Get/Set:KeyAlgorithm
-				mscorlib::System::String  SignatureDescription::get_KeyAlgorithm()
+				mscorlib::System::String  SignatureDescription::get_KeyAlgorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SignatureDescription", 0, NULL, "get_KeyAlgorithm", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

@@ -202,142 +202,142 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Assembly
-					mscorlib::System::Reflection::Assembly  get_Assembly();
+					mscorlib::System::Reflection::Assembly  get_Assembly() const;
 
 					//	Get:AssemblyQualifiedName
-					mscorlib::System::String  get_AssemblyQualifiedName();
+					mscorlib::System::String  get_AssemblyQualifiedName() const;
 
 					//	Get:Attributes
-					mscorlib::System::Reflection::TypeAttributes::__ENUM__  get_Attributes();
+					mscorlib::System::Reflection::TypeAttributes::__ENUM__  get_Attributes() const;
 
 					//	Get:BaseType
-					mscorlib::System::Type  get_BaseType();
+					mscorlib::System::Type  get_BaseType() const;
 
 					//	Get:DeclaringType
-					mscorlib::System::Type  get_DeclaringType();
+					mscorlib::System::Type  get_DeclaringType() const;
 
 					//	Get:FullName
-					mscorlib::System::String  get_FullName();
+					mscorlib::System::String  get_FullName() const;
 
 					//	Get:GUID
-					mscorlib::System::Guid  get_GUID();
+					mscorlib::System::Guid  get_GUID() const;
 
 					//	Get:HasElementType
-					mscorlib::System::Boolean  get_HasElementType();
+					mscorlib::System::Boolean  get_HasElementType() const;
 
 					//	Get:IsAbstract
-					mscorlib::System::Boolean  get_IsAbstract();
+					mscorlib::System::Boolean  get_IsAbstract() const;
 
 					//	Get:IsAnsiClass
-					mscorlib::System::Boolean  get_IsAnsiClass();
+					mscorlib::System::Boolean  get_IsAnsiClass() const;
 
 					//	Get:IsArray
-					mscorlib::System::Boolean  get_IsArray();
+					mscorlib::System::Boolean  get_IsArray() const;
 
 					//	Get:IsAutoClass
-					mscorlib::System::Boolean  get_IsAutoClass();
+					mscorlib::System::Boolean  get_IsAutoClass() const;
 
 					//	Get:IsAutoLayout
-					mscorlib::System::Boolean  get_IsAutoLayout();
+					mscorlib::System::Boolean  get_IsAutoLayout() const;
 
 					//	Get:IsByRef
-					mscorlib::System::Boolean  get_IsByRef();
+					mscorlib::System::Boolean  get_IsByRef() const;
 
 					//	Get:IsClass
-					mscorlib::System::Boolean  get_IsClass();
+					mscorlib::System::Boolean  get_IsClass() const;
 
 					//	Get:IsCOMObject
-					mscorlib::System::Boolean  get_IsCOMObject();
+					mscorlib::System::Boolean  get_IsCOMObject() const;
 
 					//	Get:IsContextful
-					mscorlib::System::Boolean  get_IsContextful();
+					mscorlib::System::Boolean  get_IsContextful() const;
 
 					//	Get:IsEnum
-					mscorlib::System::Boolean  get_IsEnum();
+					mscorlib::System::Boolean  get_IsEnum() const;
 
 					//	Get:IsExplicitLayout
-					mscorlib::System::Boolean  get_IsExplicitLayout();
+					mscorlib::System::Boolean  get_IsExplicitLayout() const;
 
 					//	Get:IsImport
-					mscorlib::System::Boolean  get_IsImport();
+					mscorlib::System::Boolean  get_IsImport() const;
 
 					//	Get:IsInterface
-					mscorlib::System::Boolean  get_IsInterface();
+					mscorlib::System::Boolean  get_IsInterface() const;
 
 					//	Get:IsLayoutSequential
-					mscorlib::System::Boolean  get_IsLayoutSequential();
+					mscorlib::System::Boolean  get_IsLayoutSequential() const;
 
 					//	Get:IsMarshalByRef
-					mscorlib::System::Boolean  get_IsMarshalByRef();
+					mscorlib::System::Boolean  get_IsMarshalByRef() const;
 
 					//	Get:IsNestedAssembly
-					mscorlib::System::Boolean  get_IsNestedAssembly();
+					mscorlib::System::Boolean  get_IsNestedAssembly() const;
 
 					//	Get:IsNestedFamANDAssem
-					mscorlib::System::Boolean  get_IsNestedFamANDAssem();
+					mscorlib::System::Boolean  get_IsNestedFamANDAssem() const;
 
 					//	Get:IsNestedFamily
-					mscorlib::System::Boolean  get_IsNestedFamily();
+					mscorlib::System::Boolean  get_IsNestedFamily() const;
 
 					//	Get:IsNestedFamORAssem
-					mscorlib::System::Boolean  get_IsNestedFamORAssem();
+					mscorlib::System::Boolean  get_IsNestedFamORAssem() const;
 
 					//	Get:IsNestedPrivate
-					mscorlib::System::Boolean  get_IsNestedPrivate();
+					mscorlib::System::Boolean  get_IsNestedPrivate() const;
 
 					//	Get:IsNestedPublic
-					mscorlib::System::Boolean  get_IsNestedPublic();
+					mscorlib::System::Boolean  get_IsNestedPublic() const;
 
 					//	Get:IsNotPublic
-					mscorlib::System::Boolean  get_IsNotPublic();
+					mscorlib::System::Boolean  get_IsNotPublic() const;
 
 					//	Get:IsPointer
-					mscorlib::System::Boolean  get_IsPointer();
+					mscorlib::System::Boolean  get_IsPointer() const;
 
 					//	Get:IsPrimitive
-					mscorlib::System::Boolean  get_IsPrimitive();
+					mscorlib::System::Boolean  get_IsPrimitive() const;
 
 					//	Get:IsPublic
-					mscorlib::System::Boolean  get_IsPublic();
+					mscorlib::System::Boolean  get_IsPublic() const;
 
 					//	Get:IsSealed
-					mscorlib::System::Boolean  get_IsSealed();
+					mscorlib::System::Boolean  get_IsSealed() const;
 
 					//	Get:IsSerializable
-					mscorlib::System::Boolean  get_IsSerializable();
+					mscorlib::System::Boolean  get_IsSerializable() const;
 
 					//	Get:IsSpecialName
-					mscorlib::System::Boolean  get_IsSpecialName();
+					mscorlib::System::Boolean  get_IsSpecialName() const;
 
 					//	Get:IsUnicodeClass
-					mscorlib::System::Boolean  get_IsUnicodeClass();
+					mscorlib::System::Boolean  get_IsUnicodeClass() const;
 
 					//	Get:IsValueType
-					mscorlib::System::Boolean  get_IsValueType();
+					mscorlib::System::Boolean  get_IsValueType() const;
 
 					//	Get:MemberType
-					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 					//	Get:Module
-					mscorlib::System::Reflection::Module  get_Module();
+					mscorlib::System::Reflection::Module  get_Module() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:Namespace
-					mscorlib::System::String  get_Namespace();
+					mscorlib::System::String  get_Namespace() const;
 
 					//	Get:ReflectedType
-					mscorlib::System::Type  get_ReflectedType();
+					mscorlib::System::Type  get_ReflectedType() const;
 
 					//	Get:TypeHandle
-					mscorlib::System::RuntimeTypeHandle  get_TypeHandle();
+					mscorlib::System::RuntimeTypeHandle  get_TypeHandle() const;
 
 					//	Get:TypeInitializer
-					mscorlib::System::Reflection::ConstructorInfo  get_TypeInitializer();
+					mscorlib::System::Reflection::ConstructorInfo  get_TypeInitializer() const;
 
 					//	Get:UnderlyingSystemType
-					mscorlib::System::Type  get_UnderlyingSystemType();
+					mscorlib::System::Type  get_UnderlyingSystemType() const;
 
 				
 				protected:

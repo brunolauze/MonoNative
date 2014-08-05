@@ -15,7 +15,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:Category
-				mscorlib::System::String  ContractOptionAttribute::get_Category()
+				mscorlib::System::String  ContractOptionAttribute::get_Category() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractOptionAttribute", 0, NULL, "get_Category", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Enabled
-				mscorlib::System::Boolean  ContractOptionAttribute::get_Enabled()
+				mscorlib::System::Boolean  ContractOptionAttribute::get_Enabled() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractOptionAttribute", 0, NULL, "get_Enabled", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -49,7 +49,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Setting
-				mscorlib::System::String  ContractOptionAttribute::get_Setting()
+				mscorlib::System::String  ContractOptionAttribute::get_Setting() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractOptionAttribute", 0, NULL, "get_Setting", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -66,7 +66,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Value
-				mscorlib::System::String  ContractOptionAttribute::get_Value()
+				mscorlib::System::String  ContractOptionAttribute::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "ContractOptionAttribute", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -83,7 +83,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  ContractOptionAttribute::get_TypeId()
+				mscorlib::System::Object  ContractOptionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

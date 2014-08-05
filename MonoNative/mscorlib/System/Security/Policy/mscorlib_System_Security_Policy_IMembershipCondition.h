@@ -57,7 +57,7 @@ namespace mscorlib
 				
 
 					__declspec(property(get=get___mscorlib_System_Security_Policy_IMembershipCondition, put=set___mscorlib_System_Security_Policy_IMembershipCondition)) MonoObject *__mscorlib_System_Security_Policy_IMembershipCondition;
-					MonoObject* get___mscorlib_System_Security_Policy_IMembershipCondition()
+					MonoObject* get___mscorlib_System_Security_Policy_IMembershipCondition() const
 					{
 						return IMembershipCondition::__mscorlib_System_Security_ISecurityEncodable;
 					}

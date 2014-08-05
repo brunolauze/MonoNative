@@ -14,7 +14,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get/Set:Exclude
-			mscorlib::System::Boolean  ObfuscationAttribute::get_Exclude()
+			mscorlib::System::Boolean  ObfuscationAttribute::get_Exclude() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ObfuscationAttribute", 0, NULL, "get_Exclude", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -31,7 +31,7 @@ namespace mscorlib
 
 
 			//	Get/Set:StripAfterObfuscation
-			mscorlib::System::Boolean  ObfuscationAttribute::get_StripAfterObfuscation()
+			mscorlib::System::Boolean  ObfuscationAttribute::get_StripAfterObfuscation() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ObfuscationAttribute", 0, NULL, "get_StripAfterObfuscation", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -48,7 +48,7 @@ namespace mscorlib
 
 
 			//	Get/Set:ApplyToMembers
-			mscorlib::System::Boolean  ObfuscationAttribute::get_ApplyToMembers()
+			mscorlib::System::Boolean  ObfuscationAttribute::get_ApplyToMembers() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ObfuscationAttribute", 0, NULL, "get_ApplyToMembers", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -65,7 +65,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Feature
-			mscorlib::System::String  ObfuscationAttribute::get_Feature()
+			mscorlib::System::String  ObfuscationAttribute::get_Feature() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ObfuscationAttribute", 0, NULL, "get_Feature", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -82,7 +82,7 @@ namespace mscorlib
 
 
 			//	Get:TypeId
-			mscorlib::System::Object  ObfuscationAttribute::get_TypeId()
+			mscorlib::System::Object  ObfuscationAttribute::get_TypeId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

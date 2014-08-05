@@ -49,7 +49,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Channels_IClientChannelSinkStack, put=set___mscorlib_System_Runtime_Remoting_Channels_IClientChannelSinkStack)) MonoObject *__mscorlib_System_Runtime_Remoting_Channels_IClientChannelSinkStack;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Channels_IClientChannelSinkStack()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Channels_IClientChannelSinkStack() const
 						{
 							return IClientChannelSinkStack::__mscorlib_System_Runtime_Remoting_Channels_IClientResponseChannelSinkStack;
 						}

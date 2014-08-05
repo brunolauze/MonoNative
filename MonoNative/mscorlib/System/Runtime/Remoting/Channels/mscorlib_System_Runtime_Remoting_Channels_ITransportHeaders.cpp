@@ -22,7 +22,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Item
-					mscorlib::System::Object  ITransportHeaders::get_Item(mscorlib::System::Object key)
+					mscorlib::System::Object  ITransportHeaders::get_Item(mscorlib::System::Object key) const
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];

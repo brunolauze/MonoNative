@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Flags
-				mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__  ReflectionPermissionAttribute::get_Flags()
+				mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__  ReflectionPermissionAttribute::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ReflectionPermissionAttribute", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:MemberAccess
-				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_MemberAccess()
+				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_MemberAccess() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ReflectionPermissionAttribute", 0, NULL, "get_MemberAccess", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ReflectionEmit
-				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_ReflectionEmit()
+				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_ReflectionEmit() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ReflectionPermissionAttribute", 0, NULL, "get_ReflectionEmit", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:RestrictedMemberAccess
-				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_RestrictedMemberAccess()
+				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_RestrictedMemberAccess() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ReflectionPermissionAttribute", 0, NULL, "get_RestrictedMemberAccess", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:TypeInformation
-				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_TypeInformation()
+				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_TypeInformation() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ReflectionPermissionAttribute", 0, NULL, "get_TypeInformation", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  ReflectionPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  ReflectionPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  ReflectionPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  ReflectionPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  ReflectionPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

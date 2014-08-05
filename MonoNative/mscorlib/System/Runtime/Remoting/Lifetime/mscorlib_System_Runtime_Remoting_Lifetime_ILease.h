@@ -77,21 +77,21 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:CurrentLeaseTime
-						mscorlib::System::TimeSpan  get_CurrentLeaseTime();
+						mscorlib::System::TimeSpan  get_CurrentLeaseTime() const;
 
 						//	Get:CurrentState
-						mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__  get_CurrentState();
+						mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__  get_CurrentState() const;
 
 						//	Get/Set:InitialLeaseTime
-						mscorlib::System::TimeSpan  get_InitialLeaseTime();
+						mscorlib::System::TimeSpan  get_InitialLeaseTime() const;
 						void set_InitialLeaseTime(mscorlib::System::TimeSpan  value);
 
 						//	Get/Set:RenewOnCallTime
-						mscorlib::System::TimeSpan  get_RenewOnCallTime();
+						mscorlib::System::TimeSpan  get_RenewOnCallTime() const;
 						void set_RenewOnCallTime(mscorlib::System::TimeSpan  value);
 
 						//	Get/Set:SponsorshipTimeout
-						mscorlib::System::TimeSpan  get_SponsorshipTimeout();
+						mscorlib::System::TimeSpan  get_SponsorshipTimeout() const;
 						void set_SponsorshipTimeout(mscorlib::System::TimeSpan  value);
 
 					

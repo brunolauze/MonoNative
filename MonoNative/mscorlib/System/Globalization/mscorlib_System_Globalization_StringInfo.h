@@ -92,10 +92,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:LengthInTextElements
-				mscorlib::System::Int32  get_LengthInTextElements();
+				mscorlib::System::Int32  get_LengthInTextElements() const;
 
 				//	Get/Set:String
-				mscorlib::System::String  get_String();
+				mscorlib::System::String  get_String() const;
 				void set_String(mscorlib::System::String  value);
 
 			

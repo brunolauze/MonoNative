@@ -107,19 +107,19 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:Detail
-						mscorlib::System::Object  get_Detail();
+						mscorlib::System::Object  get_Detail() const;
 						void set_Detail(mscorlib::System::Object  value);
 
 						//	Get/Set:FaultActor
-						mscorlib::System::String  get_FaultActor();
+						mscorlib::System::String  get_FaultActor() const;
 						void set_FaultActor(mscorlib::System::String  value);
 
 						//	Get/Set:FaultCode
-						mscorlib::System::String  get_FaultCode();
+						mscorlib::System::String  get_FaultCode() const;
 						void set_FaultCode(mscorlib::System::String  value);
 
 						//	Get/Set:FaultString
-						mscorlib::System::String  get_FaultString();
+						mscorlib::System::String  get_FaultString() const;
 						void set_FaultString(mscorlib::System::String  value);
 
 					

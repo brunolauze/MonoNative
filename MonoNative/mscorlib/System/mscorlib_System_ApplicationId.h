@@ -79,19 +79,19 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Culture
-			mscorlib::System::String  get_Culture();
+			mscorlib::System::String  get_Culture() const;
 
 			//	Get:Name
-			mscorlib::System::String  get_Name();
+			mscorlib::System::String  get_Name() const;
 
 			//	Get:ProcessorArchitecture
-			mscorlib::System::String  get_ProcessorArchitecture();
+			mscorlib::System::String  get_ProcessorArchitecture() const;
 
 			//	Get:PublicKeyToken
-			std::vector<mscorlib::System::Byte*>  get_PublicKeyToken();
+			std::vector<mscorlib::System::Byte*>  get_PublicKeyToken() const;
 
 			//	Get:Version
-			mscorlib::System::Version  get_Version();
+			mscorlib::System::Version  get_Version() const;
 
 		
 		protected:

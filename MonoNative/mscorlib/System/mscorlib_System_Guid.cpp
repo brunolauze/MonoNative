@@ -157,6 +157,10 @@ namespace mscorlib
 			return Global::GetFieldValue("mscorlib", "System", "Guid", 0, NULL, "Empty");
 		}
 
+		void Guid::set_Empty(mscorlib::System::Guid  value)
+		{
+			throw;
+		}
 
 
 	}

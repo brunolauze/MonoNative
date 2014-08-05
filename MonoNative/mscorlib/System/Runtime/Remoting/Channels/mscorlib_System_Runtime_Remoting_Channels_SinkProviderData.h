@@ -71,13 +71,13 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:Children
-						mscorlib::System::Collections::IList  get_Children();
+						mscorlib::System::Collections::IList  get_Children() const;
 
 						//	Get:Name
-						mscorlib::System::String  get_Name();
+						mscorlib::System::String  get_Name() const;
 
 						//	Get:Properties
-						mscorlib::System::Collections::IDictionary  get_Properties();
+						mscorlib::System::Collections::IDictionary  get_Properties() const;
 
 					
 					protected:

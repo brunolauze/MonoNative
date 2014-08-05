@@ -312,7 +312,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Scheduler
-				mscorlib::System::Threading::Tasks::TaskScheduler  TaskFactoryBase::get_Scheduler()
+				mscorlib::System::Threading::Tasks::TaskScheduler  TaskFactoryBase::get_Scheduler() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "TaskFactory", 0, NULL, "get_Scheduler", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::Tasks::TaskScheduler(__result__);
@@ -320,7 +320,7 @@ namespace mscorlib
 
 
 				//	Get:ContinuationOptions
-				mscorlib::System::Threading::Tasks::TaskContinuationOptions::__ENUM__  TaskFactoryBase::get_ContinuationOptions()
+				mscorlib::System::Threading::Tasks::TaskContinuationOptions::__ENUM__  TaskFactoryBase::get_ContinuationOptions() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "TaskFactory", 0, NULL, "get_ContinuationOptions", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Threading::Tasks::TaskContinuationOptions::__ENUM__*)mono_object_unbox(__result__);
@@ -328,7 +328,7 @@ namespace mscorlib
 
 
 				//	Get:CreationOptions
-				mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  TaskFactoryBase::get_CreationOptions()
+				mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  TaskFactoryBase::get_CreationOptions() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "TaskFactory", 0, NULL, "get_CreationOptions", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__*)mono_object_unbox(__result__);
@@ -336,7 +336,7 @@ namespace mscorlib
 
 
 				//	Get:CancellationToken
-				mscorlib::System::Threading::CancellationToken  TaskFactoryBase::get_CancellationToken()
+				mscorlib::System::Threading::CancellationToken  TaskFactoryBase::get_CancellationToken() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "TaskFactory", 0, NULL, "get_CancellationToken", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Threading::CancellationToken(__result__);

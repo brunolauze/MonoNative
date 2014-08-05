@@ -104,7 +104,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:InvocationList
-						T  get_InvocationList()
+						T  get_InvocationList() const
 						{
 							MonoType *__generic_types__[1];
 							__generic_types__[0] = Global::GetType(typeid(T).name());

@@ -18,6 +18,7 @@ namespace mscorlib
 					namespace W3cXsd2001
 					{
 
+						Property<mscorlib::System::String , mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDuration> mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDuration::XsdType(&mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDuration::get_XsdType, &mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapDuration::set_XsdType);
 						//Public Methods
 						mscorlib::System::TimeSpan SoapDuration::Parse(mscorlib::System::String value)
 						{
@@ -45,6 +46,11 @@ namespace mscorlib
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapDuration", 0, NULL, "get_XsdType", NullMonoObject, 0, NULL, NULL, NULL);
 							return mscorlib::System::String(__result__);
+						}
+
+						void SoapDuration::set_XsdType(mscorlib::System::String  value)
+						{
+							throw;
 						}
 
 

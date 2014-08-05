@@ -30,7 +30,7 @@ namespace mscorlib
 			
 
 				__declspec(property(get=get___mscorlib_System_Collections_IDictionary, put=set___mscorlib_System_Collections_IDictionary)) MonoObject *__mscorlib_System_Collections_IDictionary;
-				MonoObject* get___mscorlib_System_Collections_IDictionary()
+				MonoObject* get___mscorlib_System_Collections_IDictionary() const
 				{
 					return IDictionary::__mscorlib_System_Collections_ICollection;
 				}
@@ -57,20 +57,20 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsFixedSize
-				mscorlib::System::Boolean  get_IsFixedSize();
+				mscorlib::System::Boolean  get_IsFixedSize() const;
 
 				//	Get:IsReadOnly
-				mscorlib::System::Boolean  get_IsReadOnly();
+				mscorlib::System::Boolean  get_IsReadOnly() const;
 
 				//	Get/Set:Item
-				mscorlib::System::Object  get_Item(mscorlib::System::Object key);
+				mscorlib::System::Object  get_Item(mscorlib::System::Object key) const;
 				void set_Item(mscorlib::System::Object key, mscorlib::System::Object  value);
 
 				//	Get:Keys
-				mscorlib::System::Collections::ICollection  get_Keys();
+				mscorlib::System::Collections::ICollection  get_Keys() const;
 
 				//	Get:Values
-				mscorlib::System::Collections::ICollection  get_Values();
+				mscorlib::System::Collections::ICollection  get_Values() const;
 
 			
 			protected:

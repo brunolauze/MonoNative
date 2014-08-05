@@ -75,7 +75,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:MD5
-				std::vector<mscorlib::System::Byte*>  Hash::get_MD5()
+				std::vector<mscorlib::System::Byte*>  Hash::get_MD5() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Hash", 0, NULL, "get_MD5", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -91,7 +91,7 @@ namespace mscorlib
 
 
 				//	Get:SHA1
-				std::vector<mscorlib::System::Byte*>  Hash::get_SHA1()
+				std::vector<mscorlib::System::Byte*>  Hash::get_SHA1() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Hash", 0, NULL, "get_SHA1", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;

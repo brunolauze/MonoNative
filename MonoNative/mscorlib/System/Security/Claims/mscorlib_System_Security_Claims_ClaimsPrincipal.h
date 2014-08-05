@@ -127,19 +127,19 @@ namespace mscorlib
 					__declspec(property(get=get_Identity)) mscorlib::System::Security::Principal::IIdentity  Identity;
 
 					//Public Static Properties
-					static Property<mscorlib::Callback<mscorlib::System::Security::Claims::ClaimsPrincipal  ()> > ClaimsPrincipalSelector;
-					static Property<mscorlib::System::Security::Claims::ClaimsPrincipal> Current;
-					static Property<mscorlib::Callback<mscorlib::System::Security::Claims::ClaimsIdentity  (mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity> )> > PrimaryIdentitySelector;
+					static Property<mscorlib::Callback<mscorlib::System::Security::Claims::ClaimsPrincipal  ()> , mscorlib::System::Security::Claims::ClaimsPrincipal> ClaimsPrincipalSelector;
+					static Property<mscorlib::System::Security::Claims::ClaimsPrincipal , mscorlib::System::Security::Claims::ClaimsPrincipal> Current;
+					static Property<mscorlib::Callback<mscorlib::System::Security::Claims::ClaimsIdentity  (mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity> )> , mscorlib::System::Security::Claims::ClaimsPrincipal> PrimaryIdentitySelector;
 
 					//Get Set Properties Methods
 					//	Get:Claims
-					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  get_Claims();
+					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  get_Claims() const;
 
 					//	Get:Identities
-					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity>  get_Identities();
+					mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity>  get_Identities() const;
 
 					//	Get:Identity
-					mscorlib::System::Security::Principal::IIdentity  get_Identity();
+					mscorlib::System::Security::Principal::IIdentity  get_Identity() const;
 
 					//Get Set Static Properties Methods
 					//	Get/Set:ClaimsPrincipalSelector
@@ -148,6 +148,7 @@ namespace mscorlib
 
 					//	Get:Current
 					static mscorlib::System::Security::Claims::ClaimsPrincipal  get_Current();
+					static void set_Current(mscorlib::System::Security::Claims::ClaimsPrincipal  value);
 
 					//	Get/Set:PrimaryIdentitySelector
 					static mscorlib::Callback<mscorlib::System::Security::Claims::ClaimsIdentity  (mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::ClaimsIdentity> )>  get_PrimaryIdentitySelector();

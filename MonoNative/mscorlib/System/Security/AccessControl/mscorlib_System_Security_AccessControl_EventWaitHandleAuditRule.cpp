@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:EventWaitHandleRights
-				mscorlib::System::Security::AccessControl::EventWaitHandleRights::__ENUM__  EventWaitHandleAuditRule::get_EventWaitHandleRights()
+				mscorlib::System::Security::AccessControl::EventWaitHandleRights::__ENUM__  EventWaitHandleAuditRule::get_EventWaitHandleRights() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "EventWaitHandleAuditRule", 0, NULL, "get_EventWaitHandleRights", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::EventWaitHandleRights::__ENUM__*)mono_object_unbox(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:AuditFlags
-				mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  EventWaitHandleAuditRule::get_AuditFlags()
+				mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  EventWaitHandleAuditRule::get_AuditFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuditRule", 0, NULL, "get_AuditFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get:IdentityReference
-				mscorlib::System::Security::Principal::IdentityReference  EventWaitHandleAuditRule::get_IdentityReference()
+				mscorlib::System::Security::Principal::IdentityReference  EventWaitHandleAuditRule::get_IdentityReference() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_IdentityReference", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Security::Principal::IdentityReference(__result__);
@@ -40,7 +40,7 @@ namespace mscorlib
 
 
 				//	Get:InheritanceFlags
-				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  EventWaitHandleAuditRule::get_InheritanceFlags()
+				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  EventWaitHandleAuditRule::get_InheritanceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
@@ -48,7 +48,7 @@ namespace mscorlib
 
 
 				//	Get:IsInherited
-				mscorlib::System::Boolean  EventWaitHandleAuditRule::get_IsInherited()
+				mscorlib::System::Boolean  EventWaitHandleAuditRule::get_IsInherited() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_IsInherited", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get:PropagationFlags
-				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  EventWaitHandleAuditRule::get_PropagationFlags()
+				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  EventWaitHandleAuditRule::get_PropagationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);

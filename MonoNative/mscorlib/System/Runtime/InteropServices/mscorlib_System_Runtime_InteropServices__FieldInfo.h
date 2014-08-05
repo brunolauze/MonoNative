@@ -115,61 +115,61 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Attributes
-					mscorlib::System::Reflection::FieldAttributes::__ENUM__  get_Attributes();
+					mscorlib::System::Reflection::FieldAttributes::__ENUM__  get_Attributes() const;
 
 					//	Get:DeclaringType
-					mscorlib::System::Type  get_DeclaringType();
+					mscorlib::System::Type  get_DeclaringType() const;
 
 					//	Get:FieldHandle
-					mscorlib::System::RuntimeFieldHandle  get_FieldHandle();
+					mscorlib::System::RuntimeFieldHandle  get_FieldHandle() const;
 
 					//	Get:FieldType
-					mscorlib::System::Type  get_FieldType();
+					mscorlib::System::Type  get_FieldType() const;
 
 					//	Get:IsAssembly
-					mscorlib::System::Boolean  get_IsAssembly();
+					mscorlib::System::Boolean  get_IsAssembly() const;
 
 					//	Get:IsFamily
-					mscorlib::System::Boolean  get_IsFamily();
+					mscorlib::System::Boolean  get_IsFamily() const;
 
 					//	Get:IsFamilyAndAssembly
-					mscorlib::System::Boolean  get_IsFamilyAndAssembly();
+					mscorlib::System::Boolean  get_IsFamilyAndAssembly() const;
 
 					//	Get:IsFamilyOrAssembly
-					mscorlib::System::Boolean  get_IsFamilyOrAssembly();
+					mscorlib::System::Boolean  get_IsFamilyOrAssembly() const;
 
 					//	Get:IsInitOnly
-					mscorlib::System::Boolean  get_IsInitOnly();
+					mscorlib::System::Boolean  get_IsInitOnly() const;
 
 					//	Get:IsLiteral
-					mscorlib::System::Boolean  get_IsLiteral();
+					mscorlib::System::Boolean  get_IsLiteral() const;
 
 					//	Get:IsNotSerialized
-					mscorlib::System::Boolean  get_IsNotSerialized();
+					mscorlib::System::Boolean  get_IsNotSerialized() const;
 
 					//	Get:IsPinvokeImpl
-					mscorlib::System::Boolean  get_IsPinvokeImpl();
+					mscorlib::System::Boolean  get_IsPinvokeImpl() const;
 
 					//	Get:IsPrivate
-					mscorlib::System::Boolean  get_IsPrivate();
+					mscorlib::System::Boolean  get_IsPrivate() const;
 
 					//	Get:IsPublic
-					mscorlib::System::Boolean  get_IsPublic();
+					mscorlib::System::Boolean  get_IsPublic() const;
 
 					//	Get:IsSpecialName
-					mscorlib::System::Boolean  get_IsSpecialName();
+					mscorlib::System::Boolean  get_IsSpecialName() const;
 
 					//	Get:IsStatic
-					mscorlib::System::Boolean  get_IsStatic();
+					mscorlib::System::Boolean  get_IsStatic() const;
 
 					//	Get:MemberType
-					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType();
+					mscorlib::System::Reflection::MemberTypes::__ENUM__  get_MemberType() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:ReflectedType
-					mscorlib::System::Type  get_ReflectedType();
+					mscorlib::System::Type  get_ReflectedType() const;
 
 				
 				protected:

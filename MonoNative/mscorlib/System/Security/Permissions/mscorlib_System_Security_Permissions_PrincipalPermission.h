@@ -4,9 +4,9 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_PermissionState.h>
 #include <mscorlib/System/mscorlib_System_String.h>
+#include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IUnrestrictedPermission.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_IPermission.h>
-#include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IUnrestrictedPermission.h>
 
 namespace mscorlib
 {
@@ -42,16 +42,16 @@ namespace mscorlib
 
 				class PrincipalPermission
 					: public mscorlib::System::Object
+					, public virtual mscorlib::System::Security::Permissions::IUnrestrictedPermission
 					, public virtual mscorlib::System::Security::ISecurityEncodable
 					, public virtual mscorlib::System::Security::IPermission
-					, public virtual mscorlib::System::Security::Permissions::IUnrestrictedPermission
 				{
 				public:
 					PrincipalPermission(mscorlib::System::Security::Permissions::PermissionState::__ENUM__ state)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Permissions.PrincipalPermission"))
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -62,9 +62,9 @@ namespace mscorlib
 				
 					PrincipalPermission(mscorlib::System::String name, mscorlib::System::String role)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Permissions.PrincipalPermission"))
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -77,9 +77,9 @@ namespace mscorlib
 				
 					PrincipalPermission(mscorlib::System::String name, mscorlib::System::String role, mscorlib::System::Boolean isAuthenticated)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Permissions.PrincipalPermission"))
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
@@ -94,17 +94,17 @@ namespace mscorlib
 				
 					PrincipalPermission(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					, mscorlib::System::Security::ISecurityEncodable(NULL)
 					, mscorlib::System::Security::IPermission(NULL)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(NULL)
 					{
 					};
 				
 					PrincipalPermission(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
+					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(nativeObject)
 					, mscorlib::System::Security::ISecurityEncodable(nativeObject)
 					, mscorlib::System::Security::IPermission(nativeObject)
-					, mscorlib::System::Security::Permissions::IUnrestrictedPermission(nativeObject)
 					{
 					};
 				

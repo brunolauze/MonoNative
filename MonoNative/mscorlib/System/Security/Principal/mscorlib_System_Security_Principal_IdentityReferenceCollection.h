@@ -4,8 +4,8 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_ICollection_1.h>
 #include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_IdentityReference.h>
-#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
+#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerator_1.h>
 
 namespace mscorlib
@@ -31,15 +31,15 @@ namespace mscorlib
 				class IdentityReferenceCollection
 					: public mscorlib::System::Object
 					, public virtual mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Security::Principal::IdentityReference>
-					, public virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>
 					, public virtual mscorlib::System::Collections::IEnumerable
+					, public virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>
 				{
 				public:
 					IdentityReferenceCollection()
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.IdentityReferenceCollection"))
 					, mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Security::Principal::IdentityReference>(NULL)
-					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>(NULL)
 					, mscorlib::System::Collections::IEnumerable(NULL)
+					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Security.Principal", "IdentityReferenceCollection");
 					};
@@ -47,8 +47,8 @@ namespace mscorlib
 					IdentityReferenceCollection(mscorlib::System::Int32 capacity)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Security.Principal.IdentityReferenceCollection"))
 					, mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Security::Principal::IdentityReference>(NULL)
-					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>(NULL)
 					, mscorlib::System::Collections::IEnumerable(NULL)
+					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>(NULL)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
@@ -60,16 +60,16 @@ namespace mscorlib
 					IdentityReferenceCollection(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
 					, mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Security::Principal::IdentityReference>(NULL)
-					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>(NULL)
 					, mscorlib::System::Collections::IEnumerable(NULL)
+					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>(NULL)
 					{
 					};
 				
 					IdentityReferenceCollection(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
 					, mscorlib::System::Collections::Generic::ICollection<mscorlib::System::Security::Principal::IdentityReference>(nativeObject)
-					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>(nativeObject)
 					, mscorlib::System::Collections::IEnumerable(nativeObject)
+					, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Principal::IdentityReference>(nativeObject)
 					{
 					};
 				
@@ -101,13 +101,13 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Count
-					mscorlib::System::Int32  get_Count();
+					mscorlib::System::Int32  get_Count() const;
 
 					//	Get:IsReadOnly
-					mscorlib::System::Boolean  get_IsReadOnly();
+					mscorlib::System::Boolean  get_IsReadOnly() const;
 
 					//	Get/Set:Item
-					mscorlib::System::Security::Principal::IdentityReference  get_Item(mscorlib::System::Int32 index);
+					mscorlib::System::Security::Principal::IdentityReference  get_Item(mscorlib::System::Int32 index) const;
 					void set_Item(mscorlib::System::Int32 index, mscorlib::System::Security::Principal::IdentityReference  value);
 
 				

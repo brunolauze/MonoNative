@@ -70,10 +70,10 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  get_Count();
+				mscorlib::System::Int32  get_Count() const;
 
 				//	Get/Set:Capacity
-				mscorlib::System::Int32  get_Capacity();
+				mscorlib::System::Int32  get_Capacity() const;
 				void set_Capacity(mscorlib::System::Int32  value);
 
 			

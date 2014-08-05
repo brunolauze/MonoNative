@@ -618,7 +618,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:BaseDirectory
-		mscorlib::System::String  _AppDomain::get_BaseDirectory()
+		mscorlib::System::String  _AppDomain::get_BaseDirectory() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "get_BaseDirectory", __mscorlib_System__AppDomain, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -626,7 +626,7 @@ namespace mscorlib
 
 
 		//	Get:DynamicDirectory
-		mscorlib::System::String  _AppDomain::get_DynamicDirectory()
+		mscorlib::System::String  _AppDomain::get_DynamicDirectory() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "get_DynamicDirectory", __mscorlib_System__AppDomain, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -634,7 +634,7 @@ namespace mscorlib
 
 
 		//	Get:Evidence
-		mscorlib::System::Security::Policy::Evidence  _AppDomain::get_Evidence()
+		mscorlib::System::Security::Policy::Evidence  _AppDomain::get_Evidence() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "get_Evidence", __mscorlib_System__AppDomain, 0, NULL, NULL, NULL);
 			return mscorlib::System::Security::Policy::Evidence(__result__);
@@ -642,7 +642,7 @@ namespace mscorlib
 
 
 		//	Get:FriendlyName
-		mscorlib::System::String  _AppDomain::get_FriendlyName()
+		mscorlib::System::String  _AppDomain::get_FriendlyName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "get_FriendlyName", __mscorlib_System__AppDomain, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -650,7 +650,7 @@ namespace mscorlib
 
 
 		//	Get:RelativeSearchPath
-		mscorlib::System::String  _AppDomain::get_RelativeSearchPath()
+		mscorlib::System::String  _AppDomain::get_RelativeSearchPath() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "get_RelativeSearchPath", __mscorlib_System__AppDomain, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -658,7 +658,7 @@ namespace mscorlib
 
 
 		//	Get:ShadowCopyFiles
-		mscorlib::System::Boolean  _AppDomain::get_ShadowCopyFiles()
+		mscorlib::System::Boolean  _AppDomain::get_ShadowCopyFiles() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "get_ShadowCopyFiles", __mscorlib_System__AppDomain, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

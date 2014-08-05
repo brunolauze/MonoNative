@@ -49,7 +49,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:OriginalString
-			mscorlib::System::String  SortKey::get_OriginalString()
+			mscorlib::System::String  SortKey::get_OriginalString() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "SortKey", 0, NULL, "get_OriginalString", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -57,7 +57,7 @@ namespace mscorlib
 
 
 			//	Get:KeyData
-			std::vector<mscorlib::System::Byte*>  SortKey::get_KeyData()
+			std::vector<mscorlib::System::Byte*>  SortKey::get_KeyData() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "SortKey", 0, NULL, "get_KeyData", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;

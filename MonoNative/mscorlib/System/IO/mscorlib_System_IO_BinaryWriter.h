@@ -123,14 +123,15 @@ namespace mscorlib
 				__declspec(property(get=get_BaseStream)) mscorlib::System::IO::Stream  BaseStream;
 
 				//Public Static Fields
-				static Property<mscorlib::System::IO::BinaryWriter> Null;
+				static Property<mscorlib::System::IO::BinaryWriter , mscorlib::System::IO::BinaryWriter> Null;
 
 				//Get Set Properties Methods
 				//	Get:BaseStream
-				mscorlib::System::IO::Stream  get_BaseStream();
+				mscorlib::System::IO::Stream  get_BaseStream() const;
 
 				//	Get/Set:Null
 				static mscorlib::System::IO::BinaryWriter  get_Null();
+				static void set_Null(mscorlib::System::IO::BinaryWriter  value);
 
 			
 			protected:

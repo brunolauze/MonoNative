@@ -83,31 +83,31 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:ApplicationIdentity
-					mscorlib::System::Object  get_ApplicationIdentity();
+					mscorlib::System::Object  get_ApplicationIdentity() const;
 
 					//	Get:AssemblyIdentity
-					mscorlib::System::Object  get_AssemblyIdentity();
+					mscorlib::System::Object  get_AssemblyIdentity() const;
 
 					//	Get:CurrentSize
-					mscorlib::System::UInt64  get_CurrentSize();
+					mscorlib::System::UInt64  get_CurrentSize() const;
 
 					//	Get:DomainIdentity
-					mscorlib::System::Object  get_DomainIdentity();
+					mscorlib::System::Object  get_DomainIdentity() const;
 
 					//	Get:MaximumSize
-					mscorlib::System::UInt64  get_MaximumSize();
+					mscorlib::System::UInt64  get_MaximumSize() const;
 
 					//	Get:Scope
-					mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  get_Scope();
+					mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  get_Scope() const;
 
 					//	Get:AvailableFreeSpace
-					mscorlib::System::Int64  get_AvailableFreeSpace();
+					mscorlib::System::Int64  get_AvailableFreeSpace() const;
 
 					//	Get:Quota
-					mscorlib::System::Int64  get_Quota();
+					mscorlib::System::Int64  get_Quota() const;
 
 					//	Get:UsedSize
-					mscorlib::System::Int64  get_UsedSize();
+					mscorlib::System::Int64  get_UsedSize() const;
 
 				
 				protected:

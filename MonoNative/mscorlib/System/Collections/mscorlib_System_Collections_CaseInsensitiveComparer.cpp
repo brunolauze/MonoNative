@@ -11,6 +11,8 @@ namespace mscorlib
 		namespace Collections
 		{
 
+			Property<mscorlib::System::Collections::CaseInsensitiveComparer , mscorlib::System::Collections::CaseInsensitiveComparer> mscorlib::System::Collections::CaseInsensitiveComparer::Default(&mscorlib::System::Collections::CaseInsensitiveComparer::get_Default, &mscorlib::System::Collections::CaseInsensitiveComparer::set_Default);
+			Property<mscorlib::System::Collections::CaseInsensitiveComparer , mscorlib::System::Collections::CaseInsensitiveComparer> mscorlib::System::Collections::CaseInsensitiveComparer::DefaultInvariant(&mscorlib::System::Collections::CaseInsensitiveComparer::get_DefaultInvariant, &mscorlib::System::Collections::CaseInsensitiveComparer::set_DefaultInvariant);
 			//Public Methods
 			mscorlib::System::Int32 CaseInsensitiveComparer::Compare(mscorlib::System::Object a, mscorlib::System::Object b)
 			{
@@ -32,12 +34,22 @@ namespace mscorlib
 				return mscorlib::System::Collections::CaseInsensitiveComparer(__result__);
 			}
 
+			void CaseInsensitiveComparer::set_Default(mscorlib::System::Collections::CaseInsensitiveComparer  value)
+			{
+				throw;
+			}
+
 
 			//	Get:DefaultInvariant
 			mscorlib::System::Collections::CaseInsensitiveComparer  CaseInsensitiveComparer::get_DefaultInvariant()
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections", "CaseInsensitiveComparer", 0, NULL, "get_DefaultInvariant", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::CaseInsensitiveComparer(__result__);
+			}
+
+			void CaseInsensitiveComparer::set_DefaultInvariant(mscorlib::System::Collections::CaseInsensitiveComparer  value)
+			{
+				throw;
 			}
 
 

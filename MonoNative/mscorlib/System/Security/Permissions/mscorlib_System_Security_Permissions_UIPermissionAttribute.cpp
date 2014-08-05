@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Clipboard
-				mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__  UIPermissionAttribute::get_Clipboard()
+				mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__  UIPermissionAttribute::get_Clipboard() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "UIPermissionAttribute", 0, NULL, "get_Clipboard", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::UIPermissionClipboard::__ENUM__*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Window
-				mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__  UIPermissionAttribute::get_Window()
+				mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__  UIPermissionAttribute::get_Window() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "UIPermissionAttribute", 0, NULL, "get_Window", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::UIPermissionWindow::__ENUM__*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  UIPermissionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  UIPermissionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  UIPermissionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  UIPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  UIPermissionAttribute::get_TypeId()
+				mscorlib::System::Object  UIPermissionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

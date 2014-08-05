@@ -37,7 +37,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Platform
-		mscorlib::System::PlatformID::__ENUM__  OperatingSystem::get_Platform()
+		mscorlib::System::PlatformID::__ENUM__  OperatingSystem::get_Platform() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "OperatingSystem", 0, NULL, "get_Platform", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::PlatformID::__ENUM__*)mono_object_unbox(__result__);
@@ -45,7 +45,7 @@ namespace mscorlib
 
 
 		//	Get:Version
-		mscorlib::System::Version  OperatingSystem::get_Version()
+		mscorlib::System::Version  OperatingSystem::get_Version() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "OperatingSystem", 0, NULL, "get_Version", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::Version(__result__);
@@ -53,7 +53,7 @@ namespace mscorlib
 
 
 		//	Get:ServicePack
-		mscorlib::System::String  OperatingSystem::get_ServicePack()
+		mscorlib::System::String  OperatingSystem::get_ServicePack() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "OperatingSystem", 0, NULL, "get_ServicePack", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -61,7 +61,7 @@ namespace mscorlib
 
 
 		//	Get:VersionString
-		mscorlib::System::String  OperatingSystem::get_VersionString()
+		mscorlib::System::String  OperatingSystem::get_VersionString() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "OperatingSystem", 0, NULL, "get_VersionString", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);

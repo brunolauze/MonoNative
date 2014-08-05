@@ -10,7 +10,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:AsyncState
-		mscorlib::System::Object  IAsyncResult::get_AsyncState()
+		mscorlib::System::Object  IAsyncResult::get_AsyncState() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAsyncResult", 0, NULL, "get_AsyncState", __mscorlib_System_IAsyncResult, 0, NULL, NULL, NULL);
 			return mscorlib::System::Object(__result__);
@@ -18,7 +18,7 @@ namespace mscorlib
 
 
 		//	Get:AsyncWaitHandle
-		mscorlib::System::Threading::WaitHandle  IAsyncResult::get_AsyncWaitHandle()
+		mscorlib::System::Threading::WaitHandle  IAsyncResult::get_AsyncWaitHandle() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAsyncResult", 0, NULL, "get_AsyncWaitHandle", __mscorlib_System_IAsyncResult, 0, NULL, NULL, NULL);
 			return mscorlib::System::Threading::WaitHandle(__result__);
@@ -26,7 +26,7 @@ namespace mscorlib
 
 
 		//	Get:CompletedSynchronously
-		mscorlib::System::Boolean  IAsyncResult::get_CompletedSynchronously()
+		mscorlib::System::Boolean  IAsyncResult::get_CompletedSynchronously() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAsyncResult", 0, NULL, "get_CompletedSynchronously", __mscorlib_System_IAsyncResult, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 		//	Get:IsCompleted
-		mscorlib::System::Boolean  IAsyncResult::get_IsCompleted()
+		mscorlib::System::Boolean  IAsyncResult::get_IsCompleted() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IAsyncResult", 0, NULL, "get_IsCompleted", __mscorlib_System_IAsyncResult, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

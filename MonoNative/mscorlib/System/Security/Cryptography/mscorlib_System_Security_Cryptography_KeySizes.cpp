@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:MaxSize
-				mscorlib::System::Int32  KeySizes::get_MaxSize()
+				mscorlib::System::Int32  KeySizes::get_MaxSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "KeySizes", 0, NULL, "get_MaxSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:MinSize
-				mscorlib::System::Int32  KeySizes::get_MinSize()
+				mscorlib::System::Int32  KeySizes::get_MinSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "KeySizes", 0, NULL, "get_MinSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get:SkipSize
-				mscorlib::System::Int32  KeySizes::get_SkipSize()
+				mscorlib::System::Int32  KeySizes::get_SkipSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "KeySizes", 0, NULL, "get_SkipSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

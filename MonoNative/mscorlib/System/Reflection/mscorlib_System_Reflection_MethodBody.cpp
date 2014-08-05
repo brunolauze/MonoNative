@@ -31,7 +31,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:ExceptionHandlingClauses
-			mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::ExceptionHandlingClause>  MethodBody::get_ExceptionHandlingClauses()
+			mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::ExceptionHandlingClause>  MethodBody::get_ExceptionHandlingClauses() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBody", 0, NULL, "get_ExceptionHandlingClauses", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::ExceptionHandlingClause>(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 			//	Get:LocalVariables
-			mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::LocalVariableInfo>  MethodBody::get_LocalVariables()
+			mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::LocalVariableInfo>  MethodBody::get_LocalVariables() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBody", 0, NULL, "get_LocalVariables", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::LocalVariableInfo>(__result__);
@@ -47,7 +47,7 @@ namespace mscorlib
 
 
 			//	Get:InitLocals
-			mscorlib::System::Boolean  MethodBody::get_InitLocals()
+			mscorlib::System::Boolean  MethodBody::get_InitLocals() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBody", 0, NULL, "get_InitLocals", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -55,7 +55,7 @@ namespace mscorlib
 
 
 			//	Get:LocalSignatureMetadataToken
-			mscorlib::System::Int32  MethodBody::get_LocalSignatureMetadataToken()
+			mscorlib::System::Int32  MethodBody::get_LocalSignatureMetadataToken() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBody", 0, NULL, "get_LocalSignatureMetadataToken", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -63,7 +63,7 @@ namespace mscorlib
 
 
 			//	Get:MaxStackSize
-			mscorlib::System::Int32  MethodBody::get_MaxStackSize()
+			mscorlib::System::Int32  MethodBody::get_MaxStackSize() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBody", 0, NULL, "get_MaxStackSize", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

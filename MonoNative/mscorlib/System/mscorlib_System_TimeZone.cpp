@@ -12,6 +12,7 @@ namespace mscorlib
 	namespace System
 	{
 
+		Property<mscorlib::System::TimeZone , mscorlib::System::TimeZone> mscorlib::System::TimeZone::CurrentTimeZone(&mscorlib::System::TimeZone::get_CurrentTimeZone, &mscorlib::System::TimeZone::set_CurrentTimeZone);
 		//Public Methods
 		mscorlib::System::Globalization::DaylightTime TimeZone::GetDaylightChanges(mscorlib::System::Int32 year)
 		{
@@ -77,7 +78,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:DaylightName
-		mscorlib::System::String  TimeZone::get_DaylightName()
+		mscorlib::System::String  TimeZone::get_DaylightName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZone", 0, NULL, "get_DaylightName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -85,7 +86,7 @@ namespace mscorlib
 
 
 		//	Get:StandardName
-		mscorlib::System::String  TimeZone::get_StandardName()
+		mscorlib::System::String  TimeZone::get_StandardName() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZone", 0, NULL, "get_StandardName", __native_object__, 0, NULL, NULL, NULL);
 			return mscorlib::System::String(__result__);
@@ -98,6 +99,11 @@ namespace mscorlib
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZone", 0, NULL, "get_CurrentTimeZone", NullMonoObject, 0, NULL, NULL, NULL);
 			return mscorlib::System::TimeZone(__result__);
+		}
+
+		void TimeZone::set_CurrentTimeZone(mscorlib::System::TimeZone  value)
+		{
+			throw;
 		}
 
 

@@ -128,25 +128,25 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Description
-				mscorlib::System::String  get_Description();
+				mscorlib::System::String  get_Description() const;
 				void set_Description(mscorlib::System::String  value);
 
 				//	Get/Set:Target
-				mscorlib::System::Type  get_Target();
+				mscorlib::System::Type  get_Target() const;
 				void set_Target(mscorlib::System::Type  value);
 
 				//	Get/Set:TargetTypeName
-				mscorlib::System::String  get_TargetTypeName();
+				mscorlib::System::String  get_TargetTypeName() const;
 				void set_TargetTypeName(mscorlib::System::String  value);
 
 				//	Get:VisualizerObjectSourceTypeName
-				mscorlib::System::String  get_VisualizerObjectSourceTypeName();
+				mscorlib::System::String  get_VisualizerObjectSourceTypeName() const;
 
 				//	Get:VisualizerTypeName
-				mscorlib::System::String  get_VisualizerTypeName();
+				mscorlib::System::String  get_VisualizerTypeName() const;
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

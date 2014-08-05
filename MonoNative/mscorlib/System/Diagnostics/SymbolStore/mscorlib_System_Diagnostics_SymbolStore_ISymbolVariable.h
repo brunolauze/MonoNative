@@ -57,28 +57,28 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:AddressField1
-					mscorlib::System::Int32  get_AddressField1();
+					mscorlib::System::Int32  get_AddressField1() const;
 
 					//	Get:AddressField2
-					mscorlib::System::Int32  get_AddressField2();
+					mscorlib::System::Int32  get_AddressField2() const;
 
 					//	Get:AddressField3
-					mscorlib::System::Int32  get_AddressField3();
+					mscorlib::System::Int32  get_AddressField3() const;
 
 					//	Get:AddressKind
-					mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__  get_AddressKind();
+					mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__  get_AddressKind() const;
 
 					//	Get:Attributes
-					mscorlib::System::Object  get_Attributes();
+					mscorlib::System::Object  get_Attributes() const;
 
 					//	Get:EndOffset
-					mscorlib::System::Int32  get_EndOffset();
+					mscorlib::System::Int32  get_EndOffset() const;
 
 					//	Get:Name
-					mscorlib::System::String  get_Name();
+					mscorlib::System::String  get_Name() const;
 
 					//	Get:StartOffset
-					mscorlib::System::Int32  get_StartOffset();
+					mscorlib::System::Int32  get_StartOffset() const;
 
 				
 				protected:

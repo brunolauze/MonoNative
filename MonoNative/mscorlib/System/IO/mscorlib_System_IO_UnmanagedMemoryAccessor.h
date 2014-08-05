@@ -180,13 +180,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CanRead
-				mscorlib::System::Boolean  get_CanRead();
+				mscorlib::System::Boolean  get_CanRead() const;
 
 				//	Get:CanWrite
-				mscorlib::System::Boolean  get_CanWrite();
+				mscorlib::System::Boolean  get_CanWrite() const;
 
 				//	Get:Capacity
-				mscorlib::System::Int64  get_Capacity();
+				mscorlib::System::Int64  get_Capacity() const;
 
 			
 			protected:

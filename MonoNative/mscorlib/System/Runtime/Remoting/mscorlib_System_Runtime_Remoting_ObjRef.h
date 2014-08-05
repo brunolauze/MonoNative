@@ -4,8 +4,8 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_MarshalByRefObject.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IObjectReference.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/Remoting/mscorlib_System_Runtime_Remoting_IChannelInfo.h>
 #include <mscorlib/System/Runtime/Remoting/mscorlib_System_Runtime_Remoting_IEnvoyInfo.h>
 #include <mscorlib/System/Runtime/Remoting/mscorlib_System_Runtime_Remoting_IRemotingTypeInfo.h>
@@ -48,22 +48,22 @@ namespace mscorlib
 
 				class ObjRef
 					: public mscorlib::System::Object
-					, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 					, public virtual mscorlib::System::Runtime::Serialization::IObjectReference
+					, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				{
 				public:
 					ObjRef()
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.ObjRef"))
-					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::Runtime::Serialization::IObjectReference(NULL)
+					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					{
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting", "ObjRef");
 					};
 				
 					ObjRef(mscorlib::System::MarshalByRefObject o, mscorlib::System::Type requestedType)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Runtime.Remoting.ObjRef"))
-					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::Runtime::Serialization::IObjectReference(NULL)
+					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
@@ -76,15 +76,15 @@ namespace mscorlib
 				
 					ObjRef(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
-					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					, mscorlib::System::Runtime::Serialization::IObjectReference(NULL)
+					, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 					{
 					};
 				
 					ObjRef(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
-					, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 					, mscorlib::System::Runtime::Serialization::IObjectReference(nativeObject)
+					, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 					{
 					};
 				
@@ -113,19 +113,19 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:ChannelInfo
-					mscorlib::System::Runtime::Remoting::IChannelInfo  get_ChannelInfo();
+					mscorlib::System::Runtime::Remoting::IChannelInfo  get_ChannelInfo() const;
 					void set_ChannelInfo(mscorlib::System::Runtime::Remoting::IChannelInfo  value);
 
 					//	Get/Set:EnvoyInfo
-					mscorlib::System::Runtime::Remoting::IEnvoyInfo  get_EnvoyInfo();
+					mscorlib::System::Runtime::Remoting::IEnvoyInfo  get_EnvoyInfo() const;
 					void set_EnvoyInfo(mscorlib::System::Runtime::Remoting::IEnvoyInfo  value);
 
 					//	Get/Set:TypeInfo
-					mscorlib::System::Runtime::Remoting::IRemotingTypeInfo  get_TypeInfo();
+					mscorlib::System::Runtime::Remoting::IRemotingTypeInfo  get_TypeInfo() const;
 					void set_TypeInfo(mscorlib::System::Runtime::Remoting::IRemotingTypeInfo  value);
 
 					//	Get/Set:URI
-					mscorlib::System::String  get_URI();
+					mscorlib::System::String  get_URI() const;
 					void set_URI(mscorlib::System::String  value);
 
 				

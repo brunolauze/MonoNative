@@ -130,25 +130,27 @@ namespace mscorlib
 				__declspec(property(get=get_ResourceSetType)) mscorlib::System::Type  ResourceSetType;
 
 				//Public Static Fields
-				static Property<mscorlib::System::Int32> HeaderVersionNumber;
-				static Property<mscorlib::System::Int32> MagicNumber;
+				static Property<mscorlib::System::Int32 , mscorlib::System::Resources::ResourceManager> HeaderVersionNumber;
+				static Property<mscorlib::System::Int32 , mscorlib::System::Resources::ResourceManager> MagicNumber;
 
 				//Get Set Properties Methods
 				//	Get:BaseName
-				mscorlib::System::String  get_BaseName();
+				mscorlib::System::String  get_BaseName() const;
 
 				//	Get/Set:IgnoreCase
-				mscorlib::System::Boolean  get_IgnoreCase();
+				mscorlib::System::Boolean  get_IgnoreCase() const;
 				void set_IgnoreCase(mscorlib::System::Boolean  value);
 
 				//	Get:ResourceSetType
-				mscorlib::System::Type  get_ResourceSetType();
+				mscorlib::System::Type  get_ResourceSetType() const;
 
 				//	Get/Set:HeaderVersionNumber
 				static mscorlib::System::Int32  get_HeaderVersionNumber();
+				static void set_HeaderVersionNumber(mscorlib::System::Int32  value);
 
 				//	Get/Set:MagicNumber
 				static mscorlib::System::Int32  get_MagicNumber();
+				static void set_MagicNumber(mscorlib::System::Int32  value);
 
 			
 			protected:

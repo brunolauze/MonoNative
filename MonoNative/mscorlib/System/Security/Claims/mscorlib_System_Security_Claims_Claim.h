@@ -146,31 +146,31 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Type
-					mscorlib::System::String  get_Type();
+					mscorlib::System::String  get_Type() const;
 					void set_Type(mscorlib::System::String  value);
 
 					//	Get/Set:Value
-					mscorlib::System::String  get_Value();
+					mscorlib::System::String  get_Value() const;
 					void set_Value(mscorlib::System::String  value);
 
 					//	Get/Set:ValueType
-					mscorlib::System::String  get_ValueType();
+					mscorlib::System::String  get_ValueType() const;
 					void set_ValueType(mscorlib::System::String  value);
 
 					//	Get/Set:Issuer
-					mscorlib::System::String  get_Issuer();
+					mscorlib::System::String  get_Issuer() const;
 					void set_Issuer(mscorlib::System::String  value);
 
 					//	Get/Set:OriginalIssuer
-					mscorlib::System::String  get_OriginalIssuer();
+					mscorlib::System::String  get_OriginalIssuer() const;
 					void set_OriginalIssuer(mscorlib::System::String  value);
 
 					//	Get/Set:Subject
-					mscorlib::System::Security::Claims::ClaimsIdentity  get_Subject();
+					mscorlib::System::Security::Claims::ClaimsIdentity  get_Subject() const;
 					void set_Subject(mscorlib::System::Security::Claims::ClaimsIdentity  value);
 
 					//	Get/Set:Properties
-					mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  get_Properties();
+					mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  get_Properties() const;
 					void set_Properties(mscorlib::System::Collections::Generic::IDictionary<mscorlib::System::String,mscorlib::System::String>  value);
 
 				

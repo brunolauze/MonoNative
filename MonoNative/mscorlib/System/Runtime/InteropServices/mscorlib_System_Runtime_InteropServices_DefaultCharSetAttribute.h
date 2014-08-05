@@ -73,10 +73,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:CharSet
-					mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__  get_CharSet();
+					mscorlib::System::Runtime::InteropServices::CharSet::__ENUM__  get_CharSet() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

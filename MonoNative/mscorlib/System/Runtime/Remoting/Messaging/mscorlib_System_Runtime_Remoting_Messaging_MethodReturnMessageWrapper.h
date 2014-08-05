@@ -134,49 +134,49 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:ArgCount
-						mscorlib::System::Int32  get_ArgCount();
+						mscorlib::System::Int32  get_ArgCount() const;
 
 						//	Get/Set:Args
-						std::vector<mscorlib::System::Object*>  get_Args();
+						std::vector<mscorlib::System::Object*>  get_Args() const;
 						void set_Args(std::vector<mscorlib::System::Object*>  value);
 
 						//	Get/Set:Exception
-						mscorlib::System::Exception  get_Exception();
+						mscorlib::System::Exception  get_Exception() const;
 						void set_Exception(mscorlib::System::Exception  value);
 
 						//	Get:HasVarArgs
-						mscorlib::System::Boolean  get_HasVarArgs();
+						mscorlib::System::Boolean  get_HasVarArgs() const;
 
 						//	Get:LogicalCallContext
-						mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext  get_LogicalCallContext();
+						mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext  get_LogicalCallContext() const;
 
 						//	Get:MethodBase
-						mscorlib::System::Reflection::MethodBase  get_MethodBase();
+						mscorlib::System::Reflection::MethodBase  get_MethodBase() const;
 
 						//	Get:MethodName
-						mscorlib::System::String  get_MethodName();
+						mscorlib::System::String  get_MethodName() const;
 
 						//	Get:MethodSignature
-						mscorlib::System::Object  get_MethodSignature();
+						mscorlib::System::Object  get_MethodSignature() const;
 
 						//	Get:OutArgCount
-						mscorlib::System::Int32  get_OutArgCount();
+						mscorlib::System::Int32  get_OutArgCount() const;
 
 						//	Get:OutArgs
-						std::vector<mscorlib::System::Object*>  get_OutArgs();
+						std::vector<mscorlib::System::Object*>  get_OutArgs() const;
 
 						//	Get:Properties
-						mscorlib::System::Collections::IDictionary  get_Properties();
+						mscorlib::System::Collections::IDictionary  get_Properties() const;
 
 						//	Get/Set:ReturnValue
-						mscorlib::System::Object  get_ReturnValue();
+						mscorlib::System::Object  get_ReturnValue() const;
 						void set_ReturnValue(mscorlib::System::Object  value);
 
 						//	Get:TypeName
-						mscorlib::System::String  get_TypeName();
+						mscorlib::System::String  get_TypeName() const;
 
 						//	Get/Set:Uri
-						mscorlib::System::String  get_Uri();
+						mscorlib::System::String  get_Uri() const;
 						void set_Uri(mscorlib::System::String  value);
 
 					

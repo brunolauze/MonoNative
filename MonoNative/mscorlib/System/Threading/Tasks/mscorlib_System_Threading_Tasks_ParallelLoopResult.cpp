@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get/Set:LowestBreakIteration
-				mscorlib::System::Nullable<mscorlib::System::Int64>  ParallelLoopResult::get_LowestBreakIteration()
+				mscorlib::System::Nullable<mscorlib::System::Int64>  ParallelLoopResult::get_LowestBreakIteration() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "ParallelLoopResult", 0, NULL, "get_LowestBreakIteration", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Nullable<mscorlib::System::Int64>(__result__);
@@ -33,7 +33,7 @@ namespace mscorlib
 
 
 				//	Get/Set:IsCompleted
-				mscorlib::System::Boolean  ParallelLoopResult::get_IsCompleted()
+				mscorlib::System::Boolean  ParallelLoopResult::get_IsCompleted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "ParallelLoopResult", 0, NULL, "get_IsCompleted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

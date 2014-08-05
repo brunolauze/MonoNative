@@ -77,7 +77,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Current
-					mscorlib::System::Security::AccessControl::GenericAce  get_Current();
+					mscorlib::System::Security::AccessControl::GenericAce  get_Current() const;
 
 				
 				protected:

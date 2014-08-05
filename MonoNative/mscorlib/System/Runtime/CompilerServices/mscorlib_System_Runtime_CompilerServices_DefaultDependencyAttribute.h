@@ -73,10 +73,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:LoadHint
-					mscorlib::System::Runtime::CompilerServices::LoadHint::__ENUM__  get_LoadHint();
+					mscorlib::System::Runtime::CompilerServices::LoadHint::__ENUM__  get_LoadHint() const;
 
 					//	Get:TypeId
-					mscorlib::System::Object  get_TypeId();
+					mscorlib::System::Object  get_TypeId() const;
 
 				
 				protected:

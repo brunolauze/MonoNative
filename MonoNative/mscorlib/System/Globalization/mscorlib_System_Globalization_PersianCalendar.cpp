@@ -225,7 +225,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:Eras
-			std::vector<mscorlib::System::Int32*>  PersianCalendar::get_Eras()
+			std::vector<mscorlib::System::Int32*>  PersianCalendar::get_Eras() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "PersianCalendar", 0, NULL, "get_Eras", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -241,7 +241,7 @@ namespace mscorlib
 
 
 			//	Get/Set:TwoDigitYearMax
-			mscorlib::System::Int32  PersianCalendar::get_TwoDigitYearMax()
+			mscorlib::System::Int32  PersianCalendar::get_TwoDigitYearMax() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "PersianCalendar", 0, NULL, "get_TwoDigitYearMax", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -258,7 +258,7 @@ namespace mscorlib
 
 
 			//	Get:AlgorithmType
-			mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  PersianCalendar::get_AlgorithmType()
+			mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  PersianCalendar::get_AlgorithmType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "PersianCalendar", 0, NULL, "get_AlgorithmType", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__*)mono_object_unbox(__result__);
@@ -266,7 +266,7 @@ namespace mscorlib
 
 
 			//	Get:MinSupportedDateTime
-			mscorlib::System::DateTime  PersianCalendar::get_MinSupportedDateTime()
+			mscorlib::System::DateTime  PersianCalendar::get_MinSupportedDateTime() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "PersianCalendar", 0, NULL, "get_MinSupportedDateTime", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -274,7 +274,7 @@ namespace mscorlib
 
 
 			//	Get:MaxSupportedDateTime
-			mscorlib::System::DateTime  PersianCalendar::get_MaxSupportedDateTime()
+			mscorlib::System::DateTime  PersianCalendar::get_MaxSupportedDateTime() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "PersianCalendar", 0, NULL, "get_MaxSupportedDateTime", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -282,7 +282,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  PersianCalendar::get_IsReadOnly()
+			mscorlib::System::Boolean  PersianCalendar::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "Calendar", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -295,6 +295,10 @@ namespace mscorlib
 				return Global::GetFieldInt32Value("mscorlib", "System.Globalization", "PersianCalendar", 0, NULL, "PersianEra");
 			}
 
+			void PersianCalendar::set_PersianEra(mscorlib::System::Int32  value)
+			{
+				throw;
+			}
 
 
 		}

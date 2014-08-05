@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Padding
-				mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  MACTripleDES::get_Padding()
+				mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  MACTripleDES::get_Padding() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "MACTripleDES", 0, NULL, "get_Padding", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Key
-				std::vector<mscorlib::System::Byte*>  MACTripleDES::get_Key()
+				std::vector<mscorlib::System::Byte*>  MACTripleDES::get_Key() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "KeyedHashAlgorithm", 0, NULL, "get_Key", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 				//	Get:CanTransformMultipleBlocks
-				mscorlib::System::Boolean  MACTripleDES::get_CanTransformMultipleBlocks()
+				mscorlib::System::Boolean  MACTripleDES::get_CanTransformMultipleBlocks() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_CanTransformMultipleBlocks", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -72,7 +72,7 @@ namespace mscorlib
 
 
 				//	Get:CanReuseTransform
-				mscorlib::System::Boolean  MACTripleDES::get_CanReuseTransform()
+				mscorlib::System::Boolean  MACTripleDES::get_CanReuseTransform() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_CanReuseTransform", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 				//	Get:Hash
-				std::vector<mscorlib::System::Byte*>  MACTripleDES::get_Hash()
+				std::vector<mscorlib::System::Byte*>  MACTripleDES::get_Hash() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_Hash", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -96,7 +96,7 @@ namespace mscorlib
 
 
 				//	Get:HashSize
-				mscorlib::System::Int32  MACTripleDES::get_HashSize()
+				mscorlib::System::Int32  MACTripleDES::get_HashSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_HashSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -104,7 +104,7 @@ namespace mscorlib
 
 
 				//	Get:InputBlockSize
-				mscorlib::System::Int32  MACTripleDES::get_InputBlockSize()
+				mscorlib::System::Int32  MACTripleDES::get_InputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_InputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -112,7 +112,7 @@ namespace mscorlib
 
 
 				//	Get:OutputBlockSize
-				mscorlib::System::Int32  MACTripleDES::get_OutputBlockSize()
+				mscorlib::System::Int32  MACTripleDES::get_OutputBlockSize() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "get_OutputBlockSize", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

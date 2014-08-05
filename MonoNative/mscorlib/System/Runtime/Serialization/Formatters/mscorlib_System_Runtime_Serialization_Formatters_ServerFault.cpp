@@ -17,7 +17,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get/Set:ExceptionType
-					mscorlib::System::String  ServerFault::get_ExceptionType()
+					mscorlib::System::String  ServerFault::get_ExceptionType() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ServerFault", 0, NULL, "get_ExceptionType", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 					//	Get/Set:ExceptionMessage
-					mscorlib::System::String  ServerFault::get_ExceptionMessage()
+					mscorlib::System::String  ServerFault::get_ExceptionMessage() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ServerFault", 0, NULL, "get_ExceptionMessage", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -51,7 +51,7 @@ namespace mscorlib
 
 
 					//	Get/Set:StackTrace
-					mscorlib::System::String  ServerFault::get_StackTrace()
+					mscorlib::System::String  ServerFault::get_StackTrace() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "ServerFault", 0, NULL, "get_StackTrace", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);

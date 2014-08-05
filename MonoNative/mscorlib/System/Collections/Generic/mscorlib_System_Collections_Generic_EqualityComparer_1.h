@@ -77,11 +77,11 @@ namespace mscorlib
 
 
 					//Public Static Properties
-					static Property<mscorlib::System::Collections::Generic::EqualityComparer<T>> Default;
+					static Property<mscorlib::System::Collections::Generic::EqualityComparer<T> , mscorlib::System::Collections::Generic::EqualityComparer<T>> Default;
 
 					//Get Set Static Properties Methods
 					//	Get:Default
-					static mscorlib::System::Collections::Generic::EqualityComparer<T>  get_Default()
+					static mscorlib::System::Collections::Generic::EqualityComparer<T>  get_Default() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());

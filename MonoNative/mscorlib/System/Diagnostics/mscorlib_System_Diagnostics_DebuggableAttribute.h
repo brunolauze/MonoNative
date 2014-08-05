@@ -104,16 +104,16 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:DebuggingFlags
-				mscorlib::System::Diagnostics::DebuggableAttribute::DebuggingModes::__ENUM__  get_DebuggingFlags();
+				mscorlib::System::Diagnostics::DebuggableAttribute::DebuggingModes::__ENUM__  get_DebuggingFlags() const;
 
 				//	Get:IsJITTrackingEnabled
-				mscorlib::System::Boolean  get_IsJITTrackingEnabled();
+				mscorlib::System::Boolean  get_IsJITTrackingEnabled() const;
 
 				//	Get:IsJITOptimizerDisabled
-				mscorlib::System::Boolean  get_IsJITOptimizerDisabled();
+				mscorlib::System::Boolean  get_IsJITOptimizerDisabled() const;
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

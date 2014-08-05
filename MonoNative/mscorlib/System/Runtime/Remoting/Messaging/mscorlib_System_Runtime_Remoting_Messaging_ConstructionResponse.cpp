@@ -24,7 +24,7 @@ namespace mscorlib
 					//Public Methods
 					//Get Set Properties Methods
 					//	Get:Properties
-					mscorlib::System::Collections::IDictionary  ConstructionResponse::get_Properties()
+					mscorlib::System::Collections::IDictionary  ConstructionResponse::get_Properties() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "ConstructionResponse", 0, NULL, "get_Properties", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Collections::IDictionary(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 					//	Get:ArgCount
-					mscorlib::System::Int32  ConstructionResponse::get_ArgCount()
+					mscorlib::System::Int32  ConstructionResponse::get_ArgCount() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_ArgCount", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -40,7 +40,7 @@ namespace mscorlib
 
 
 					//	Get:Args
-					std::vector<mscorlib::System::Object*>  ConstructionResponse::get_Args()
+					std::vector<mscorlib::System::Object*>  ConstructionResponse::get_Args() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_Args", __native_object__, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 					//	Get:Exception
-					mscorlib::System::Exception  ConstructionResponse::get_Exception()
+					mscorlib::System::Exception  ConstructionResponse::get_Exception() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_Exception", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Exception(__result__);
@@ -64,7 +64,7 @@ namespace mscorlib
 
 
 					//	Get:HasVarArgs
-					mscorlib::System::Boolean  ConstructionResponse::get_HasVarArgs()
+					mscorlib::System::Boolean  ConstructionResponse::get_HasVarArgs() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_HasVarArgs", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -72,7 +72,7 @@ namespace mscorlib
 
 
 					//	Get:LogicalCallContext
-					mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext  ConstructionResponse::get_LogicalCallContext()
+					mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext  ConstructionResponse::get_LogicalCallContext() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_LogicalCallContext", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Runtime::Remoting::Messaging::LogicalCallContext(__result__);
@@ -80,7 +80,7 @@ namespace mscorlib
 
 
 					//	Get:MethodBase
-					mscorlib::System::Reflection::MethodBase  ConstructionResponse::get_MethodBase()
+					mscorlib::System::Reflection::MethodBase  ConstructionResponse::get_MethodBase() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_MethodBase", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Reflection::MethodBase(__result__);
@@ -88,7 +88,7 @@ namespace mscorlib
 
 
 					//	Get:MethodName
-					mscorlib::System::String  ConstructionResponse::get_MethodName()
+					mscorlib::System::String  ConstructionResponse::get_MethodName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_MethodName", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -96,7 +96,7 @@ namespace mscorlib
 
 
 					//	Get:MethodSignature
-					mscorlib::System::Object  ConstructionResponse::get_MethodSignature()
+					mscorlib::System::Object  ConstructionResponse::get_MethodSignature() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_MethodSignature", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);
@@ -104,7 +104,7 @@ namespace mscorlib
 
 
 					//	Get:OutArgCount
-					mscorlib::System::Int32  ConstructionResponse::get_OutArgCount()
+					mscorlib::System::Int32  ConstructionResponse::get_OutArgCount() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_OutArgCount", __native_object__, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -112,7 +112,7 @@ namespace mscorlib
 
 
 					//	Get:OutArgs
-					std::vector<mscorlib::System::Object*>  ConstructionResponse::get_OutArgs()
+					std::vector<mscorlib::System::Object*>  ConstructionResponse::get_OutArgs() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_OutArgs", __native_object__, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -128,7 +128,7 @@ namespace mscorlib
 
 
 					//	Get:ReturnValue
-					mscorlib::System::Object  ConstructionResponse::get_ReturnValue()
+					mscorlib::System::Object  ConstructionResponse::get_ReturnValue() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_ReturnValue", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);
@@ -136,7 +136,7 @@ namespace mscorlib
 
 
 					//	Get:TypeName
-					mscorlib::System::String  ConstructionResponse::get_TypeName()
+					mscorlib::System::String  ConstructionResponse::get_TypeName() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_TypeName", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);
@@ -144,7 +144,7 @@ namespace mscorlib
 
 
 					//	Get/Set:Uri
-					mscorlib::System::String  ConstructionResponse::get_Uri()
+					mscorlib::System::String  ConstructionResponse::get_Uri() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 0, NULL, "get_Uri", __native_object__, 0, NULL, NULL, NULL);
 						return mscorlib::System::String(__result__);

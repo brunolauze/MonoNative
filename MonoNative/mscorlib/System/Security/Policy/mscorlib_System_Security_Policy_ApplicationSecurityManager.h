@@ -71,15 +71,17 @@ namespace mscorlib
 
 
 					//Public Static Properties
-					static Property<mscorlib::System::Security::Policy::IApplicationTrustManager> ApplicationTrustManager;
-					static Property<mscorlib::System::Security::Policy::ApplicationTrustCollection> UserApplicationTrusts;
+					static Property<mscorlib::System::Security::Policy::IApplicationTrustManager , mscorlib::System::Security::Policy::ApplicationSecurityManager> ApplicationTrustManager;
+					static Property<mscorlib::System::Security::Policy::ApplicationTrustCollection , mscorlib::System::Security::Policy::ApplicationSecurityManager> UserApplicationTrusts;
 
 					//Get Set Static Properties Methods
 					//	Get:ApplicationTrustManager
 					static mscorlib::System::Security::Policy::IApplicationTrustManager  get_ApplicationTrustManager();
+					static void set_ApplicationTrustManager(mscorlib::System::Security::Policy::IApplicationTrustManager  value);
 
 					//	Get:UserApplicationTrusts
 					static mscorlib::System::Security::Policy::ApplicationTrustCollection  get_UserApplicationTrusts();
+					static void set_UserApplicationTrusts(mscorlib::System::Security::Policy::ApplicationTrustCollection  value);
 
 
 				

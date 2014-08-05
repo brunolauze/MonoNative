@@ -4,8 +4,8 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/IO/mscorlib_System_IO_FileStream.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
+#include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 
 namespace mscorlib
 {
@@ -27,14 +27,14 @@ namespace mscorlib
 
 			class StrongNameKeyPair
 				: public mscorlib::System::Object
-				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 				, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
+				, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			{
 			public:
 				StrongNameKeyPair(std::vector<mscorlib::System::Byte*> keyPairArray)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Reflection.StrongNameKeyPair"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -45,8 +45,8 @@ namespace mscorlib
 			
 				StrongNameKeyPair(mscorlib::System::IO::FileStream keyPairFile)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Reflection.StrongNameKeyPair"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -57,8 +57,8 @@ namespace mscorlib
 			
 				StrongNameKeyPair(mscorlib::System::String keyPairContainer)
 				: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Reflection.StrongNameKeyPair"))
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -69,15 +69,15 @@ namespace mscorlib
 			
 				StrongNameKeyPair(mscorlib::NativeTypeInfo *nativeTypeInfo)
 				: mscorlib::System::Object(nativeTypeInfo)
-				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
+				, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 				{
 				};
 			
 				StrongNameKeyPair(MonoObject *nativeObject)
 				: mscorlib::System::Object(nativeObject)
-				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
+				, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 				{
 				};
 			
@@ -99,7 +99,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:PublicKey
-				std::vector<mscorlib::System::Byte*>  get_PublicKey();
+				std::vector<mscorlib::System::Byte*>  get_PublicKey() const;
 
 			
 			protected:

@@ -124,55 +124,55 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:BinaryLength
-					mscorlib::System::Int32  get_BinaryLength();
+					mscorlib::System::Int32  get_BinaryLength() const;
 
 					//	Get/Set:InheritedObjectAceType
-					mscorlib::System::Guid  get_InheritedObjectAceType();
+					mscorlib::System::Guid  get_InheritedObjectAceType() const;
 					void set_InheritedObjectAceType(mscorlib::System::Guid  value);
 
 					//	Get/Set:ObjectAceFlags
-					mscorlib::System::Security::AccessControl::ObjectAceFlags::__ENUM__  get_ObjectAceFlags();
+					mscorlib::System::Security::AccessControl::ObjectAceFlags::__ENUM__  get_ObjectAceFlags() const;
 					void set_ObjectAceFlags(mscorlib::System::Security::AccessControl::ObjectAceFlags::__ENUM__  value);
 
 					//	Get/Set:ObjectAceType
-					mscorlib::System::Guid  get_ObjectAceType();
+					mscorlib::System::Guid  get_ObjectAceType() const;
 					void set_ObjectAceType(mscorlib::System::Guid  value);
 
 					//	Get:AceQualifier
-					mscorlib::System::Security::AccessControl::AceQualifier::__ENUM__  get_AceQualifier();
+					mscorlib::System::Security::AccessControl::AceQualifier::__ENUM__  get_AceQualifier() const;
 
 					//	Get:IsCallback
-					mscorlib::System::Boolean  get_IsCallback();
+					mscorlib::System::Boolean  get_IsCallback() const;
 
 					//	Get:OpaqueLength
-					mscorlib::System::Int32  get_OpaqueLength();
+					mscorlib::System::Int32  get_OpaqueLength() const;
 
 					//	Get/Set:AccessMask
-					mscorlib::System::Int32  get_AccessMask();
+					mscorlib::System::Int32  get_AccessMask() const;
 					void set_AccessMask(mscorlib::System::Int32  value);
 
 					//	Get/Set:SecurityIdentifier
-					mscorlib::System::Security::Principal::SecurityIdentifier  get_SecurityIdentifier();
+					mscorlib::System::Security::Principal::SecurityIdentifier  get_SecurityIdentifier() const;
 					void set_SecurityIdentifier(mscorlib::System::Security::Principal::SecurityIdentifier  value);
 
 					//	Get/Set:AceFlags
-					mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  get_AceFlags();
+					mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  get_AceFlags() const;
 					void set_AceFlags(mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  value);
 
 					//	Get:AceType
-					mscorlib::System::Security::AccessControl::AceType::__ENUM__  get_AceType();
+					mscorlib::System::Security::AccessControl::AceType::__ENUM__  get_AceType() const;
 
 					//	Get:AuditFlags
-					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags();
+					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags() const;
 
 					//	Get:InheritanceFlags
-					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags();
+					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags() const;
 
 					//	Get:IsInherited
-					mscorlib::System::Boolean  get_IsInherited();
+					mscorlib::System::Boolean  get_IsInherited() const;
 
 					//	Get:PropagationFlags
-					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags();
+					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags() const;
 
 				
 				protected:

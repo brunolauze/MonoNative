@@ -51,11 +51,11 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get/Set:FieldNames
-						std::vector<mscorlib::System::String*>  get_FieldNames();
+						std::vector<mscorlib::System::String*>  get_FieldNames() const;
 						void set_FieldNames(std::vector<mscorlib::System::String*>  value);
 
 						//	Get/Set:FieldTypes
-						std::vector<mscorlib::System::Type*>  get_FieldTypes();
+						std::vector<mscorlib::System::Type*>  get_FieldTypes() const;
 						void set_FieldTypes(std::vector<mscorlib::System::Type*>  value);
 
 					

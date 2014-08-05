@@ -92,37 +92,37 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Key
-					std::vector<mscorlib::System::Byte*>  get_Key();
+					std::vector<mscorlib::System::Byte*>  get_Key() const;
 					void set_Key(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:BlockSize
-					mscorlib::System::Int32  get_BlockSize();
+					mscorlib::System::Int32  get_BlockSize() const;
 					void set_BlockSize(mscorlib::System::Int32  value);
 
 					//	Get/Set:FeedbackSize
-					mscorlib::System::Int32  get_FeedbackSize();
+					mscorlib::System::Int32  get_FeedbackSize() const;
 					void set_FeedbackSize(mscorlib::System::Int32  value);
 
 					//	Get/Set:IV
-					std::vector<mscorlib::System::Byte*>  get_IV();
+					std::vector<mscorlib::System::Byte*>  get_IV() const;
 					void set_IV(std::vector<mscorlib::System::Byte*>  value);
 
 					//	Get/Set:KeySize
-					mscorlib::System::Int32  get_KeySize();
+					mscorlib::System::Int32  get_KeySize() const;
 					void set_KeySize(mscorlib::System::Int32  value);
 
 					//	Get:LegalBlockSizes
-					std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  get_LegalBlockSizes();
+					std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  get_LegalBlockSizes() const;
 
 					//	Get:LegalKeySizes
-					std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  get_LegalKeySizes();
+					std::vector<mscorlib::System::Security::Cryptography::KeySizes*>  get_LegalKeySizes() const;
 
 					//	Get/Set:Mode
-					mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  get_Mode();
+					mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  get_Mode() const;
 					void set_Mode(mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  value);
 
 					//	Get/Set:Padding
-					mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  get_Padding();
+					mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  get_Padding() const;
 					void set_Padding(mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  value);
 
 				

@@ -58,11 +58,11 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:LowestBreakIteration
-					mscorlib::System::Nullable<mscorlib::System::Int64>  get_LowestBreakIteration();
+					mscorlib::System::Nullable<mscorlib::System::Int64>  get_LowestBreakIteration() const;
 					void set_LowestBreakIteration(mscorlib::System::Nullable<mscorlib::System::Int64>  value);
 
 					//	Get/Set:IsCompleted
-					mscorlib::System::Boolean  get_IsCompleted();
+					mscorlib::System::Boolean  get_IsCompleted() const;
 					void set_IsCompleted(mscorlib::System::Boolean  value);
 
 				

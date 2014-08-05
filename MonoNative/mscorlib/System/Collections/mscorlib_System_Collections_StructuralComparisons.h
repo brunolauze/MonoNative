@@ -51,15 +51,17 @@ namespace mscorlib
 
 
 				//Public Static Properties
-				static Property<mscorlib::System::Collections::IComparer> StructuralComparer;
-				static Property<mscorlib::System::Collections::IEqualityComparer> StructuralEqualityComparer;
+				static Property<mscorlib::System::Collections::IComparer , mscorlib::System::Collections::StructuralComparisons> StructuralComparer;
+				static Property<mscorlib::System::Collections::IEqualityComparer , mscorlib::System::Collections::StructuralComparisons> StructuralEqualityComparer;
 
 				//Get Set Static Properties Methods
 				//	Get:StructuralComparer
 				static mscorlib::System::Collections::IComparer  get_StructuralComparer();
+				static void set_StructuralComparer(mscorlib::System::Collections::IComparer  value);
 
 				//	Get:StructuralEqualityComparer
 				static mscorlib::System::Collections::IEqualityComparer  get_StructuralEqualityComparer();
+				static void set_StructuralEqualityComparer(mscorlib::System::Collections::IEqualityComparer  value);
 
 
 			

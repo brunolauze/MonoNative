@@ -38,7 +38,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Exception
-					mscorlib::System::Exception  IMethodReturnMessage::get_Exception()
+					mscorlib::System::Exception  IMethodReturnMessage::get_Exception() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodReturnMessage", 0, NULL, "get_Exception", __mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage, 0, NULL, NULL, NULL);
 						return mscorlib::System::Exception(__result__);
@@ -46,7 +46,7 @@ namespace mscorlib
 
 
 					//	Get:OutArgCount
-					mscorlib::System::Int32  IMethodReturnMessage::get_OutArgCount()
+					mscorlib::System::Int32  IMethodReturnMessage::get_OutArgCount() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodReturnMessage", 0, NULL, "get_OutArgCount", __mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage, 0, NULL, NULL, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -54,7 +54,7 @@ namespace mscorlib
 
 
 					//	Get:OutArgs
-					std::vector<mscorlib::System::Object*>  IMethodReturnMessage::get_OutArgs()
+					std::vector<mscorlib::System::Object*>  IMethodReturnMessage::get_OutArgs() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodReturnMessage", 0, NULL, "get_OutArgs", __mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -70,7 +70,7 @@ namespace mscorlib
 
 
 					//	Get:ReturnValue
-					mscorlib::System::Object  IMethodReturnMessage::get_ReturnValue()
+					mscorlib::System::Object  IMethodReturnMessage::get_ReturnValue() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodReturnMessage", 0, NULL, "get_ReturnValue", __mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage, 0, NULL, NULL, NULL);
 						return mscorlib::System::Object(__result__);

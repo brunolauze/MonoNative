@@ -295,7 +295,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:CanRead
-			mscorlib::System::Boolean  UnmanagedMemoryAccessor::get_CanRead()
+			mscorlib::System::Boolean  UnmanagedMemoryAccessor::get_CanRead() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "get_CanRead", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -303,7 +303,7 @@ namespace mscorlib
 
 
 			//	Get:CanWrite
-			mscorlib::System::Boolean  UnmanagedMemoryAccessor::get_CanWrite()
+			mscorlib::System::Boolean  UnmanagedMemoryAccessor::get_CanWrite() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "get_CanWrite", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -311,7 +311,7 @@ namespace mscorlib
 
 
 			//	Get:Capacity
-			mscorlib::System::Int64  UnmanagedMemoryAccessor::get_Capacity()
+			mscorlib::System::Int64  UnmanagedMemoryAccessor::get_Capacity() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "get_Capacity", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);

@@ -3,9 +3,9 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
+#include <mscorlib/System/Collections/Concurrent/mscorlib_System_Collections_Concurrent_IProducerConsumerCollection_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
-#include <mscorlib/System/Collections/Concurrent/mscorlib_System_Collections_Concurrent_IProducerConsumerCollection_1.h>
 #include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerator_1.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
@@ -22,18 +22,18 @@ namespace mscorlib
 				template<typename T>
 				class ConcurrentQueue
 					: public mscorlib::System::Object
+					, public virtual mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>
 					, public virtual mscorlib::System::Collections::ICollection
 					, public virtual mscorlib::System::Collections::Generic::IEnumerable<T>
 					, public virtual mscorlib::System::Collections::IEnumerable
-					, public virtual mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>
 				{
 				public:
 					ConcurrentQueue()
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Concurrent.ConcurrentQueue`1"))
+					, mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>(NULL)
 					, mscorlib::System::Collections::ICollection(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
 					, mscorlib::System::Collections::IEnumerable(NULL)
-					, mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>(NULL)
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -42,10 +42,10 @@ namespace mscorlib
 				
 					ConcurrentQueue(mscorlib::System::Collections::Generic::IEnumerable<T> collection)
 					: mscorlib::System::Object(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Collections.Concurrent.ConcurrentQueue`1"))
+					, mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>(NULL)
 					, mscorlib::System::Collections::ICollection(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
 					, mscorlib::System::Collections::IEnumerable(NULL)
-					, mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>(NULL)
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -58,19 +58,19 @@ namespace mscorlib
 				
 					ConcurrentQueue(mscorlib::NativeTypeInfo *nativeTypeInfo)
 					: mscorlib::System::Object(nativeTypeInfo)
+					, mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>(NULL)
 					, mscorlib::System::Collections::ICollection(NULL)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(NULL)
 					, mscorlib::System::Collections::IEnumerable(NULL)
-					, mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>(NULL)
 					{
 					};
 				
 					ConcurrentQueue(MonoObject *nativeObject)
 					: mscorlib::System::Object(nativeObject)
+					, mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>(nativeObject)
 					, mscorlib::System::Collections::ICollection(nativeObject)
 					, mscorlib::System::Collections::Generic::IEnumerable<T>(nativeObject)
 					, mscorlib::System::Collections::IEnumerable(nativeObject)
-					, mscorlib::System::Collections::Concurrent::IProducerConsumerCollection<T>(nativeObject)
 					{
 					};
 				
@@ -165,7 +165,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Count
-					mscorlib::System::Int32  get_Count()
+					mscorlib::System::Int32  get_Count() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());
@@ -174,7 +174,7 @@ namespace mscorlib
 					}
 
 					//	Get:IsEmpty
-					mscorlib::System::Boolean  get_IsEmpty()
+					mscorlib::System::Boolean  get_IsEmpty() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(T).name());

@@ -11,6 +11,8 @@ namespace mscorlib
 		namespace Runtime
 		{
 
+			Property<mscorlib::System::Boolean , mscorlib::System::Runtime::GCSettings> mscorlib::System::Runtime::GCSettings::IsServerGC(&mscorlib::System::Runtime::GCSettings::get_IsServerGC, &mscorlib::System::Runtime::GCSettings::set_IsServerGC);
+			Property<mscorlib::System::Runtime::GCLatencyMode::__ENUM__ , mscorlib::System::Runtime::GCSettings> mscorlib::System::Runtime::GCSettings::LatencyMode(&mscorlib::System::Runtime::GCSettings::get_LatencyMode, &mscorlib::System::Runtime::GCSettings::set_LatencyMode);
 			//Public Methods
 			//Get Set Static Properties Methods
 			//	Get:IsServerGC
@@ -18,6 +20,11 @@ namespace mscorlib
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime", "GCSettings", 0, NULL, "get_IsServerGC", NullMonoObject, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			void GCSettings::set_IsServerGC(mscorlib::System::Boolean  value)
+			{
+				throw;
 			}
 
 

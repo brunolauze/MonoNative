@@ -21,6 +21,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "Basic");
 				}
 
+				void SymLanguageType::set_Basic(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:C
 				mscorlib::System::Guid SymLanguageType::get_C()
@@ -28,6 +32,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "C");
 				}
 
+				void SymLanguageType::set_C(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:Cobol
 				mscorlib::System::Guid SymLanguageType::get_Cobol()
@@ -35,6 +43,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "Cobol");
 				}
 
+				void SymLanguageType::set_Cobol(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:CPlusPlus
 				mscorlib::System::Guid SymLanguageType::get_CPlusPlus()
@@ -42,6 +54,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "CPlusPlus");
 				}
 
+				void SymLanguageType::set_CPlusPlus(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:CSharp
 				mscorlib::System::Guid SymLanguageType::get_CSharp()
@@ -49,6 +65,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "CSharp");
 				}
 
+				void SymLanguageType::set_CSharp(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:ILAssembly
 				mscorlib::System::Guid SymLanguageType::get_ILAssembly()
@@ -56,6 +76,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "ILAssembly");
 				}
 
+				void SymLanguageType::set_ILAssembly(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:Java
 				mscorlib::System::Guid SymLanguageType::get_Java()
@@ -63,6 +87,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "Java");
 				}
 
+				void SymLanguageType::set_Java(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:JScript
 				mscorlib::System::Guid SymLanguageType::get_JScript()
@@ -70,6 +98,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "JScript");
 				}
 
+				void SymLanguageType::set_JScript(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:MCPlusPlus
 				mscorlib::System::Guid SymLanguageType::get_MCPlusPlus()
@@ -77,6 +109,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "MCPlusPlus");
 				}
 
+				void SymLanguageType::set_MCPlusPlus(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:Pascal
 				mscorlib::System::Guid SymLanguageType::get_Pascal()
@@ -84,6 +120,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "Pascal");
 				}
 
+				void SymLanguageType::set_Pascal(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 					//	Get/Set:SMC
 				mscorlib::System::Guid SymLanguageType::get_SMC()
@@ -91,6 +131,10 @@ namespace mscorlib
 					return Global::GetFieldValue("mscorlib", "System.Diagnostics.SymbolStore", "SymLanguageType", 0, NULL, "SMC");
 				}
 
+				void SymLanguageType::set_SMC(mscorlib::System::Guid  value)
+				{
+					throw;
+				}
 
 
 			}

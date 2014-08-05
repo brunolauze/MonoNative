@@ -15,6 +15,12 @@ namespace mscorlib
 		namespace Globalization
 		{
 
+			Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> mscorlib::System::Globalization::CultureInfo::InvariantCulture(&mscorlib::System::Globalization::CultureInfo::get_InvariantCulture, &mscorlib::System::Globalization::CultureInfo::set_InvariantCulture);
+			Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> mscorlib::System::Globalization::CultureInfo::CurrentCulture(&mscorlib::System::Globalization::CultureInfo::get_CurrentCulture, &mscorlib::System::Globalization::CultureInfo::set_CurrentCulture);
+			Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> mscorlib::System::Globalization::CultureInfo::CurrentUICulture(&mscorlib::System::Globalization::CultureInfo::get_CurrentUICulture, &mscorlib::System::Globalization::CultureInfo::set_CurrentUICulture);
+			Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> mscorlib::System::Globalization::CultureInfo::InstalledUICulture(&mscorlib::System::Globalization::CultureInfo::get_InstalledUICulture, &mscorlib::System::Globalization::CultureInfo::set_InstalledUICulture);
+			Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> mscorlib::System::Globalization::CultureInfo::DefaultThreadCurrentCulture(&mscorlib::System::Globalization::CultureInfo::get_DefaultThreadCurrentCulture, &mscorlib::System::Globalization::CultureInfo::set_DefaultThreadCurrentCulture);
+			Property<mscorlib::System::Globalization::CultureInfo , mscorlib::System::Globalization::CultureInfo> mscorlib::System::Globalization::CultureInfo::DefaultThreadCurrentUICulture(&mscorlib::System::Globalization::CultureInfo::get_DefaultThreadCurrentUICulture, &mscorlib::System::Globalization::CultureInfo::set_DefaultThreadCurrentUICulture);
 			//Public Methods
 			mscorlib::System::Globalization::CultureInfo CultureInfo::GetConsoleFallbackUICulture()
 			{
@@ -147,7 +153,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:CultureTypes
-			mscorlib::System::Globalization::CultureTypes::__ENUM__  CultureInfo::get_CultureTypes()
+			mscorlib::System::Globalization::CultureTypes::__ENUM__  CultureInfo::get_CultureTypes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_CultureTypes", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Globalization::CultureTypes::__ENUM__*)mono_object_unbox(__result__);
@@ -155,7 +161,7 @@ namespace mscorlib
 
 
 			//	Get:IetfLanguageTag
-			mscorlib::System::String  CultureInfo::get_IetfLanguageTag()
+			mscorlib::System::String  CultureInfo::get_IetfLanguageTag() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_IetfLanguageTag", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -163,7 +169,7 @@ namespace mscorlib
 
 
 			//	Get:KeyboardLayoutId
-			mscorlib::System::Int32  CultureInfo::get_KeyboardLayoutId()
+			mscorlib::System::Int32  CultureInfo::get_KeyboardLayoutId() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_KeyboardLayoutId", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -171,7 +177,7 @@ namespace mscorlib
 
 
 			//	Get:LCID
-			mscorlib::System::Int32  CultureInfo::get_LCID()
+			mscorlib::System::Int32  CultureInfo::get_LCID() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_LCID", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -179,7 +185,7 @@ namespace mscorlib
 
 
 			//	Get:Name
-			mscorlib::System::String  CultureInfo::get_Name()
+			mscorlib::System::String  CultureInfo::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -187,7 +193,7 @@ namespace mscorlib
 
 
 			//	Get:NativeName
-			mscorlib::System::String  CultureInfo::get_NativeName()
+			mscorlib::System::String  CultureInfo::get_NativeName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_NativeName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -195,7 +201,7 @@ namespace mscorlib
 
 
 			//	Get:Calendar
-			mscorlib::System::Globalization::Calendar  CultureInfo::get_Calendar()
+			mscorlib::System::Globalization::Calendar  CultureInfo::get_Calendar() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_Calendar", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::Calendar(__result__);
@@ -203,7 +209,7 @@ namespace mscorlib
 
 
 			//	Get:OptionalCalendars
-			std::vector<mscorlib::System::Globalization::Calendar*>  CultureInfo::get_OptionalCalendars()
+			std::vector<mscorlib::System::Globalization::Calendar*>  CultureInfo::get_OptionalCalendars() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_OptionalCalendars", __native_object__, 0, NULL, NULL, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -219,7 +225,7 @@ namespace mscorlib
 
 
 			//	Get:Parent
-			mscorlib::System::Globalization::CultureInfo  CultureInfo::get_Parent()
+			mscorlib::System::Globalization::CultureInfo  CultureInfo::get_Parent() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_Parent", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::CultureInfo(__result__);
@@ -227,7 +233,7 @@ namespace mscorlib
 
 
 			//	Get:TextInfo
-			mscorlib::System::Globalization::TextInfo  CultureInfo::get_TextInfo()
+			mscorlib::System::Globalization::TextInfo  CultureInfo::get_TextInfo() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_TextInfo", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::TextInfo(__result__);
@@ -235,7 +241,7 @@ namespace mscorlib
 
 
 			//	Get:ThreeLetterISOLanguageName
-			mscorlib::System::String  CultureInfo::get_ThreeLetterISOLanguageName()
+			mscorlib::System::String  CultureInfo::get_ThreeLetterISOLanguageName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_ThreeLetterISOLanguageName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -243,7 +249,7 @@ namespace mscorlib
 
 
 			//	Get:ThreeLetterWindowsLanguageName
-			mscorlib::System::String  CultureInfo::get_ThreeLetterWindowsLanguageName()
+			mscorlib::System::String  CultureInfo::get_ThreeLetterWindowsLanguageName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_ThreeLetterWindowsLanguageName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -251,7 +257,7 @@ namespace mscorlib
 
 
 			//	Get:TwoLetterISOLanguageName
-			mscorlib::System::String  CultureInfo::get_TwoLetterISOLanguageName()
+			mscorlib::System::String  CultureInfo::get_TwoLetterISOLanguageName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_TwoLetterISOLanguageName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -259,7 +265,7 @@ namespace mscorlib
 
 
 			//	Get:UseUserOverride
-			mscorlib::System::Boolean  CultureInfo::get_UseUserOverride()
+			mscorlib::System::Boolean  CultureInfo::get_UseUserOverride() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_UseUserOverride", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -267,7 +273,7 @@ namespace mscorlib
 
 
 			//	Get:CompareInfo
-			mscorlib::System::Globalization::CompareInfo  CultureInfo::get_CompareInfo()
+			mscorlib::System::Globalization::CompareInfo  CultureInfo::get_CompareInfo() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_CompareInfo", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::CompareInfo(__result__);
@@ -275,7 +281,7 @@ namespace mscorlib
 
 
 			//	Get:IsNeutralCulture
-			mscorlib::System::Boolean  CultureInfo::get_IsNeutralCulture()
+			mscorlib::System::Boolean  CultureInfo::get_IsNeutralCulture() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_IsNeutralCulture", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -283,7 +289,7 @@ namespace mscorlib
 
 
 			//	Get/Set:NumberFormat
-			mscorlib::System::Globalization::NumberFormatInfo  CultureInfo::get_NumberFormat()
+			mscorlib::System::Globalization::NumberFormatInfo  CultureInfo::get_NumberFormat() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_NumberFormat", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::NumberFormatInfo(__result__);
@@ -300,7 +306,7 @@ namespace mscorlib
 
 
 			//	Get/Set:DateTimeFormat
-			mscorlib::System::Globalization::DateTimeFormatInfo  CultureInfo::get_DateTimeFormat()
+			mscorlib::System::Globalization::DateTimeFormatInfo  CultureInfo::get_DateTimeFormat() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_DateTimeFormat", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::DateTimeFormatInfo(__result__);
@@ -317,7 +323,7 @@ namespace mscorlib
 
 
 			//	Get:DisplayName
-			mscorlib::System::String  CultureInfo::get_DisplayName()
+			mscorlib::System::String  CultureInfo::get_DisplayName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_DisplayName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -325,7 +331,7 @@ namespace mscorlib
 
 
 			//	Get:EnglishName
-			mscorlib::System::String  CultureInfo::get_EnglishName()
+			mscorlib::System::String  CultureInfo::get_EnglishName() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_EnglishName", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -333,7 +339,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  CultureInfo::get_IsReadOnly()
+			mscorlib::System::Boolean  CultureInfo::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -348,12 +354,22 @@ namespace mscorlib
 				return mscorlib::System::Globalization::CultureInfo(__result__);
 			}
 
+			void CultureInfo::set_InvariantCulture(mscorlib::System::Globalization::CultureInfo  value)
+			{
+				throw;
+			}
+
 
 			//	Get:CurrentCulture
 			mscorlib::System::Globalization::CultureInfo  CultureInfo::get_CurrentCulture()
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_CurrentCulture", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::CultureInfo(__result__);
+			}
+
+			void CultureInfo::set_CurrentCulture(mscorlib::System::Globalization::CultureInfo  value)
+			{
+				throw;
 			}
 
 
@@ -364,12 +380,22 @@ namespace mscorlib
 				return mscorlib::System::Globalization::CultureInfo(__result__);
 			}
 
+			void CultureInfo::set_CurrentUICulture(mscorlib::System::Globalization::CultureInfo  value)
+			{
+				throw;
+			}
+
 
 			//	Get:InstalledUICulture
 			mscorlib::System::Globalization::CultureInfo  CultureInfo::get_InstalledUICulture()
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_InstalledUICulture", NullMonoObject, 0, NULL, NULL, NULL);
 				return mscorlib::System::Globalization::CultureInfo(__result__);
+			}
+
+			void CultureInfo::set_InstalledUICulture(mscorlib::System::Globalization::CultureInfo  value)
+			{
+				throw;
 			}
 
 

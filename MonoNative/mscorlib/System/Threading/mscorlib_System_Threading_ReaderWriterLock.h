@@ -88,13 +88,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsReaderLockHeld
-				mscorlib::System::Boolean  get_IsReaderLockHeld();
+				mscorlib::System::Boolean  get_IsReaderLockHeld() const;
 
 				//	Get:IsWriterLockHeld
-				mscorlib::System::Boolean  get_IsWriterLockHeld();
+				mscorlib::System::Boolean  get_IsWriterLockHeld() const;
 
 				//	Get:WriterSeqNum
-				mscorlib::System::Int32  get_WriterSeqNum();
+				mscorlib::System::Int32  get_WriterSeqNum() const;
 
 			
 			protected:

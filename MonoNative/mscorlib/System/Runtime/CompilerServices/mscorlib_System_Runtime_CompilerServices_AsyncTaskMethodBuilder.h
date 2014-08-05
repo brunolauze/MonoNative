@@ -112,7 +112,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Task
-					mscorlib::System::Threading::Tasks::TaskBase  get_Task();
+					mscorlib::System::Threading::Tasks::TaskBase  get_Task() const;
 
 				
 				protected:

@@ -187,37 +187,37 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CanRead
-				mscorlib::System::Boolean  get_CanRead();
+				mscorlib::System::Boolean  get_CanRead() const;
 
 				//	Get:CanSeek
-				mscorlib::System::Boolean  get_CanSeek();
+				mscorlib::System::Boolean  get_CanSeek() const;
 
 				//	Get:CanWrite
-				mscorlib::System::Boolean  get_CanWrite();
+				mscorlib::System::Boolean  get_CanWrite() const;
 
 				//	Get:Capacity
-				mscorlib::System::Int64  get_Capacity();
+				mscorlib::System::Int64  get_Capacity() const;
 
 				//	Get:Length
-				mscorlib::System::Int64  get_Length();
+				mscorlib::System::Int64  get_Length() const;
 
 				//	Get/Set:Position
-				mscorlib::System::Int64  get_Position();
+				mscorlib::System::Int64  get_Position() const;
 				void set_Position(mscorlib::System::Int64  value);
 
 				//	Get/Set:PositionPointer
-				mscorlib::System::Byte*  get_PositionPointer();
+				mscorlib::System::Byte*  get_PositionPointer() const;
 				void set_PositionPointer(mscorlib::System::Byte*  value);
 
 				//	Get:CanTimeout
-				mscorlib::System::Boolean  get_CanTimeout();
+				mscorlib::System::Boolean  get_CanTimeout() const;
 
 				//	Get/Set:ReadTimeout
-				mscorlib::System::Int32  get_ReadTimeout();
+				mscorlib::System::Int32  get_ReadTimeout() const;
 				void set_ReadTimeout(mscorlib::System::Int32  value);
 
 				//	Get/Set:WriteTimeout
-				mscorlib::System::Int32  get_WriteTimeout();
+				mscorlib::System::Int32  get_WriteTimeout() const;
 				void set_WriteTimeout(mscorlib::System::Int32  value);
 
 			

@@ -124,25 +124,25 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:AccessRightType
-					mscorlib::System::Type  get_AccessRightType();
+					mscorlib::System::Type  get_AccessRightType() const;
 
 					//	Get:AccessRuleType
-					mscorlib::System::Type  get_AccessRuleType();
+					mscorlib::System::Type  get_AccessRuleType() const;
 
 					//	Get:AuditRuleType
-					mscorlib::System::Type  get_AuditRuleType();
+					mscorlib::System::Type  get_AuditRuleType() const;
 
 					//	Get:AreAccessRulesCanonical
-					mscorlib::System::Boolean  get_AreAccessRulesCanonical();
+					mscorlib::System::Boolean  get_AreAccessRulesCanonical() const;
 
 					//	Get:AreAccessRulesProtected
-					mscorlib::System::Boolean  get_AreAccessRulesProtected();
+					mscorlib::System::Boolean  get_AreAccessRulesProtected() const;
 
 					//	Get:AreAuditRulesCanonical
-					mscorlib::System::Boolean  get_AreAuditRulesCanonical();
+					mscorlib::System::Boolean  get_AreAuditRulesCanonical() const;
 
 					//	Get:AreAuditRulesProtected
-					mscorlib::System::Boolean  get_AreAuditRulesProtected();
+					mscorlib::System::Boolean  get_AreAuditRulesProtected() const;
 
 				
 				protected:

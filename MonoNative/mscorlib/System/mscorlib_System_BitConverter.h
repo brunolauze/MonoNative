@@ -73,10 +73,11 @@ namespace mscorlib
 
 
 			//Public Static Fields
-			static Property<mscorlib::System::Boolean> IsLittleEndian;
+			static Property<mscorlib::System::Boolean , mscorlib::System::BitConverter> IsLittleEndian;
 
 			//	Get/Set:IsLittleEndian
 			static mscorlib::System::Boolean  get_IsLittleEndian();
+			static void set_IsLittleEndian(mscorlib::System::Boolean  value);
 
 		
 		protected:

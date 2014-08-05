@@ -42,7 +42,7 @@ namespace mscorlib
 
 						//Get Set Properties Methods
 						//	Get:NextSink
-						mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  get_NextSink();
+						mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  get_NextSink() const;
 
 					
 					protected:

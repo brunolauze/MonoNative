@@ -62,7 +62,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get/Set:Description
-			mscorlib::System::String  NamedPermissionSet::get_Description()
+			mscorlib::System::String  NamedPermissionSet::get_Description() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "NamedPermissionSet", 0, NULL, "get_Description", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -79,7 +79,7 @@ namespace mscorlib
 
 
 			//	Get/Set:Name
-			mscorlib::System::String  NamedPermissionSet::get_Name()
+			mscorlib::System::String  NamedPermissionSet::get_Name() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "NamedPermissionSet", 0, NULL, "get_Name", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::String(__result__);
@@ -96,7 +96,7 @@ namespace mscorlib
 
 
 			//	Get:Count
-			mscorlib::System::Int32  NamedPermissionSet::get_Count()
+			mscorlib::System::Int32  NamedPermissionSet::get_Count() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "PermissionSet", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -104,7 +104,7 @@ namespace mscorlib
 
 
 			//	Get:IsSynchronized
-			mscorlib::System::Boolean  NamedPermissionSet::get_IsSynchronized()
+			mscorlib::System::Boolean  NamedPermissionSet::get_IsSynchronized() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "PermissionSet", 0, NULL, "get_IsSynchronized", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -112,7 +112,7 @@ namespace mscorlib
 
 
 			//	Get:IsReadOnly
-			mscorlib::System::Boolean  NamedPermissionSet::get_IsReadOnly()
+			mscorlib::System::Boolean  NamedPermissionSet::get_IsReadOnly() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "PermissionSet", 0, NULL, "get_IsReadOnly", __native_object__, 0, NULL, NULL, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -120,7 +120,7 @@ namespace mscorlib
 
 
 			//	Get:SyncRoot
-			mscorlib::System::Object  NamedPermissionSet::get_SyncRoot()
+			mscorlib::System::Object  NamedPermissionSet::get_SyncRoot() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "PermissionSet", 0, NULL, "get_SyncRoot", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::Object(__result__);

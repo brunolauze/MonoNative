@@ -76,7 +76,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:MaxCharCount
-				mscorlib::System::Int32  get_MaxCharCount();
+				mscorlib::System::Int32  get_MaxCharCount() const;
 
 			
 			protected:

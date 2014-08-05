@@ -38,7 +38,7 @@ namespace mscorlib
 
 		//Get Set Properties Methods
 		//	Get:Key
-		mscorlib::System::ConsoleKey::__ENUM__  ConsoleKeyInfo::get_Key()
+		mscorlib::System::ConsoleKey::__ENUM__  ConsoleKeyInfo::get_Key() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ConsoleKeyInfo", 0, NULL, "get_Key", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::ConsoleKey::__ENUM__*)mono_object_unbox(__result__);
@@ -46,7 +46,7 @@ namespace mscorlib
 
 
 		//	Get:KeyChar
-		mscorlib::System::Char  ConsoleKeyInfo::get_KeyChar()
+		mscorlib::System::Char  ConsoleKeyInfo::get_KeyChar() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ConsoleKeyInfo", 0, NULL, "get_KeyChar", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::Char*)mono_object_unbox(__result__);
@@ -54,7 +54,7 @@ namespace mscorlib
 
 
 		//	Get:Modifiers
-		mscorlib::System::ConsoleModifiers::__ENUM__  ConsoleKeyInfo::get_Modifiers()
+		mscorlib::System::ConsoleModifiers::__ENUM__  ConsoleKeyInfo::get_Modifiers() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ConsoleKeyInfo", 0, NULL, "get_Modifiers", __native_object__, 0, NULL, NULL, NULL);
 			return *(mscorlib::System::ConsoleModifiers::__ENUM__*)mono_object_unbox(__result__);

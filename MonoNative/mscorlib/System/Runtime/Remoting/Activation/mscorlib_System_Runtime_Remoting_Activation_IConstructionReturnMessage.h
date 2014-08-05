@@ -35,7 +35,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Activation_IConstructionReturnMessage, put=set___mscorlib_System_Runtime_Remoting_Activation_IConstructionReturnMessage)) MonoObject *__mscorlib_System_Runtime_Remoting_Activation_IConstructionReturnMessage;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Activation_IConstructionReturnMessage()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Activation_IConstructionReturnMessage() const
 						{
 							return IConstructionReturnMessage::__mscorlib_System_Runtime_Remoting_Messaging_IMethodReturnMessage;
 						}

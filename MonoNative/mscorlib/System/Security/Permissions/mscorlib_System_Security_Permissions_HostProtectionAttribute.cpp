@@ -22,7 +22,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:ExternalProcessMgmt
-				mscorlib::System::Boolean  HostProtectionAttribute::get_ExternalProcessMgmt()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_ExternalProcessMgmt() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_ExternalProcessMgmt", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -39,7 +39,7 @@ namespace mscorlib
 
 
 				//	Get/Set:ExternalThreading
-				mscorlib::System::Boolean  HostProtectionAttribute::get_ExternalThreading()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_ExternalThreading() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_ExternalThreading", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:MayLeakOnAbort
-				mscorlib::System::Boolean  HostProtectionAttribute::get_MayLeakOnAbort()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_MayLeakOnAbort() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_MayLeakOnAbort", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SecurityInfrastructure
-				mscorlib::System::Boolean  HostProtectionAttribute::get_SecurityInfrastructure()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_SecurityInfrastructure() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_SecurityInfrastructure", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SelfAffectingProcessMgmt
-				mscorlib::System::Boolean  HostProtectionAttribute::get_SelfAffectingProcessMgmt()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_SelfAffectingProcessMgmt() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_SelfAffectingProcessMgmt", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SelfAffectingThreading
-				mscorlib::System::Boolean  HostProtectionAttribute::get_SelfAffectingThreading()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_SelfAffectingThreading() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_SelfAffectingThreading", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -124,7 +124,7 @@ namespace mscorlib
 
 
 				//	Get/Set:SharedState
-				mscorlib::System::Boolean  HostProtectionAttribute::get_SharedState()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_SharedState() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_SharedState", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Synchronization
-				mscorlib::System::Boolean  HostProtectionAttribute::get_Synchronization()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_Synchronization() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_Synchronization", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -158,7 +158,7 @@ namespace mscorlib
 
 
 				//	Get/Set:UI
-				mscorlib::System::Boolean  HostProtectionAttribute::get_UI()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_UI() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_UI", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -175,7 +175,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Resources
-				mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  HostProtectionAttribute::get_Resources()
+				mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__  HostProtectionAttribute::get_Resources() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "HostProtectionAttribute", 0, NULL, "get_Resources", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::HostProtectionResource::__ENUM__*)mono_object_unbox(__result__);
@@ -192,7 +192,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Unrestricted
-				mscorlib::System::Boolean  HostProtectionAttribute::get_Unrestricted()
+				mscorlib::System::Boolean  HostProtectionAttribute::get_Unrestricted() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Unrestricted", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -209,7 +209,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Action
-				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  HostProtectionAttribute::get_Action()
+				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  HostProtectionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
@@ -226,7 +226,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  HostProtectionAttribute::get_TypeId()
+				mscorlib::System::Object  HostProtectionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

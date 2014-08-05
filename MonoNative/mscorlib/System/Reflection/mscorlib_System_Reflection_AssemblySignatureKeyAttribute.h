@@ -73,15 +73,15 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:PublicKey
-				mscorlib::System::String  get_PublicKey();
+				mscorlib::System::String  get_PublicKey() const;
 				void set_PublicKey(mscorlib::System::String  value);
 
 				//	Get/Set:Countersignature
-				mscorlib::System::String  get_Countersignature();
+				mscorlib::System::String  get_Countersignature() const;
 				void set_Countersignature(mscorlib::System::String  value);
 
 				//	Get:TypeId
-				mscorlib::System::Object  get_TypeId();
+				mscorlib::System::Object  get_TypeId() const;
 
 			
 			protected:

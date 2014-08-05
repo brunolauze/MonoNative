@@ -75,11 +75,11 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:SortId
-				mscorlib::System::Guid  get_SortId();
+				mscorlib::System::Guid  get_SortId() const;
 				void set_SortId(mscorlib::System::Guid  value);
 
 				//	Get/Set:FullVersion
-				mscorlib::System::Int32  get_FullVersion();
+				mscorlib::System::Int32  get_FullVersion() const;
 				void set_FullVersion(mscorlib::System::Int32  value);
 
 			

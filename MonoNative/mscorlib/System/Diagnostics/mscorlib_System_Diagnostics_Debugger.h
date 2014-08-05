@@ -60,18 +60,20 @@ namespace mscorlib
 
 
 				//Public Static Properties
-				static Property<mscorlib::System::Boolean> IsAttached;
+				static Property<mscorlib::System::Boolean , mscorlib::System::Diagnostics::Debugger> IsAttached;
 
 				//Public Static Fields
-				static Property<mscorlib::System::String> DefaultCategory;
+				static Property<mscorlib::System::String , mscorlib::System::Diagnostics::Debugger> DefaultCategory;
 
 				//Get Set Static Properties Methods
 				//	Get:IsAttached
 				static mscorlib::System::Boolean  get_IsAttached();
+				static void set_IsAttached(mscorlib::System::Boolean  value);
 
 
 				//	Get/Set:DefaultCategory
 				static mscorlib::System::String  get_DefaultCategory();
+				static void set_DefaultCategory(mscorlib::System::String  value);
 
 			
 			protected:

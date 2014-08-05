@@ -67,10 +67,10 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:IsAllocated
-					mscorlib::System::Boolean  get_IsAllocated();
+					mscorlib::System::Boolean  get_IsAllocated() const;
 
 					//	Get/Set:Target
-					mscorlib::System::Object  get_Target();
+					mscorlib::System::Object  get_Target() const;
 					void set_Target(mscorlib::System::Object  value);
 
 				

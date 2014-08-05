@@ -63,7 +63,7 @@ namespace mscorlib
 
 			//Get Set Properties Methods
 			//	Get:LoadedAssembly
-			mscorlib::System::Reflection::Assembly  get_LoadedAssembly();
+			mscorlib::System::Reflection::Assembly  get_LoadedAssembly() const;
 
 		
 		protected:

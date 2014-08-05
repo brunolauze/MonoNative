@@ -15,7 +15,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:Category
-				mscorlib::System::String  SuppressMessageAttribute::get_Category()
+				mscorlib::System::String  SuppressMessageAttribute::get_Category() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.CodeAnalysis", "SuppressMessageAttribute", 0, NULL, "get_Category", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -23,7 +23,7 @@ namespace mscorlib
 
 
 				//	Get:CheckId
-				mscorlib::System::String  SuppressMessageAttribute::get_CheckId()
+				mscorlib::System::String  SuppressMessageAttribute::get_CheckId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.CodeAnalysis", "SuppressMessageAttribute", 0, NULL, "get_CheckId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -31,7 +31,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Justification
-				mscorlib::System::String  SuppressMessageAttribute::get_Justification()
+				mscorlib::System::String  SuppressMessageAttribute::get_Justification() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.CodeAnalysis", "SuppressMessageAttribute", 0, NULL, "get_Justification", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -48,7 +48,7 @@ namespace mscorlib
 
 
 				//	Get/Set:MessageId
-				mscorlib::System::String  SuppressMessageAttribute::get_MessageId()
+				mscorlib::System::String  SuppressMessageAttribute::get_MessageId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.CodeAnalysis", "SuppressMessageAttribute", 0, NULL, "get_MessageId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -65,7 +65,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Scope
-				mscorlib::System::String  SuppressMessageAttribute::get_Scope()
+				mscorlib::System::String  SuppressMessageAttribute::get_Scope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.CodeAnalysis", "SuppressMessageAttribute", 0, NULL, "get_Scope", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -82,7 +82,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Target
-				mscorlib::System::String  SuppressMessageAttribute::get_Target()
+				mscorlib::System::String  SuppressMessageAttribute::get_Target() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.CodeAnalysis", "SuppressMessageAttribute", 0, NULL, "get_Target", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);
@@ -99,7 +99,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  SuppressMessageAttribute::get_TypeId()
+				mscorlib::System::Object  SuppressMessageAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

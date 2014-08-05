@@ -703,7 +703,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get:Scheduler
-					mscorlib::System::Threading::Tasks::TaskScheduler  get_Scheduler()
+					mscorlib::System::Threading::Tasks::TaskScheduler  get_Scheduler() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(TResult).name());
@@ -712,7 +712,7 @@ namespace mscorlib
 					}
 
 					//	Get:ContinuationOptions
-					mscorlib::System::Threading::Tasks::TaskContinuationOptions::__ENUM__  get_ContinuationOptions()
+					mscorlib::System::Threading::Tasks::TaskContinuationOptions::__ENUM__  get_ContinuationOptions() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(TResult).name());
@@ -721,7 +721,7 @@ namespace mscorlib
 					}
 
 					//	Get:CreationOptions
-					mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  get_CreationOptions()
+					mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  get_CreationOptions() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(TResult).name());
@@ -730,7 +730,7 @@ namespace mscorlib
 					}
 
 					//	Get:CancellationToken
-					mscorlib::System::Threading::CancellationToken  get_CancellationToken()
+					mscorlib::System::Threading::CancellationToken  get_CancellationToken() const
 					{
 						MonoType *__generic_types__[1];
 						__generic_types__[0] = Global::GetType(typeid(TResult).name());

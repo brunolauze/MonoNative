@@ -92,7 +92,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:Site
-				mscorlib::System::String  SiteMembershipCondition::get_Site()
+				mscorlib::System::String  SiteMembershipCondition::get_Site() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "SiteMembershipCondition", 0, NULL, "get_Site", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::String(__result__);

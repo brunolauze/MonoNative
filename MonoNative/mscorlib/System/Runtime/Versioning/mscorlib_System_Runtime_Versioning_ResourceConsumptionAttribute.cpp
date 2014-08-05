@@ -16,7 +16,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:ConsumptionScope
-				mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  ResourceConsumptionAttribute::get_ConsumptionScope()
+				mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  ResourceConsumptionAttribute::get_ConsumptionScope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Versioning", "ResourceConsumptionAttribute", 0, NULL, "get_ConsumptionScope", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__*)mono_object_unbox(__result__);
@@ -24,7 +24,7 @@ namespace mscorlib
 
 
 				//	Get:ResourceScope
-				mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  ResourceConsumptionAttribute::get_ResourceScope()
+				mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  ResourceConsumptionAttribute::get_ResourceScope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Versioning", "ResourceConsumptionAttribute", 0, NULL, "get_ResourceScope", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__*)mono_object_unbox(__result__);
@@ -32,7 +32,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  ResourceConsumptionAttribute::get_TypeId()
+				mscorlib::System::Object  ResourceConsumptionAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

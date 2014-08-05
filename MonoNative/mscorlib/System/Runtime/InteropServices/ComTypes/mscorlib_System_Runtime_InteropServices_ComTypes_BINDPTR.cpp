@@ -18,7 +18,7 @@ namespace mscorlib
 
 					//Public Methods
 					//	Get/Set:lpfuncdesc
-					mscorlib::System::IntPtr BINDPTR::get_lpfuncdesc()
+					mscorlib::System::IntPtr BINDPTR::get_lpfuncdesc() const
 					{
 						return Global::GetFieldValue(__native_object__, "lpfuncdesc");
 					}
@@ -28,7 +28,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:lptcomp
-					mscorlib::System::IntPtr BINDPTR::get_lptcomp()
+					mscorlib::System::IntPtr BINDPTR::get_lptcomp() const
 					{
 						return Global::GetFieldValue(__native_object__, "lptcomp");
 					}
@@ -38,7 +38,7 @@ namespace mscorlib
 					}
 
 					//	Get/Set:lpvardesc
-					mscorlib::System::IntPtr BINDPTR::get_lpvardesc()
+					mscorlib::System::IntPtr BINDPTR::get_lpvardesc() const
 					{
 						return Global::GetFieldValue(__native_object__, "lpvardesc");
 					}

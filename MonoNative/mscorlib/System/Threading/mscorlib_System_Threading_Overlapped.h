@@ -116,23 +116,23 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:AsyncResult
-				mscorlib::System::IAsyncResult  get_AsyncResult();
+				mscorlib::System::IAsyncResult  get_AsyncResult() const;
 				void set_AsyncResult(mscorlib::System::IAsyncResult  value);
 
 				//	Get/Set:EventHandle
-				mscorlib::System::Int32  get_EventHandle();
+				mscorlib::System::Int32  get_EventHandle() const;
 				void set_EventHandle(mscorlib::System::Int32  value);
 
 				//	Get/Set:EventHandleIntPtr
-				mscorlib::System::IntPtr  get_EventHandleIntPtr();
+				mscorlib::System::IntPtr  get_EventHandleIntPtr() const;
 				void set_EventHandleIntPtr(mscorlib::System::IntPtr  value);
 
 				//	Get/Set:OffsetHigh
-				mscorlib::System::Int32  get_OffsetHigh();
+				mscorlib::System::Int32  get_OffsetHigh() const;
 				void set_OffsetHigh(mscorlib::System::Int32  value);
 
 				//	Get/Set:OffsetLow
-				mscorlib::System::Int32  get_OffsetLow();
+				mscorlib::System::Int32  get_OffsetLow() const;
 				void set_OffsetLow(mscorlib::System::Int32  value);
 
 			

@@ -50,8 +50,8 @@ namespace mscorlib
 
 
 				//Public Static Fields
-				static Property<mscorlib::System::Int32> Infinite;
-				static Property<mscorlib::System::TimeSpan> InfiniteTimeSpan;
+				static Property<mscorlib::System::Int32 , mscorlib::System::Threading::Timeout> Infinite;
+				static Property<mscorlib::System::TimeSpan , mscorlib::System::Threading::Timeout> InfiniteTimeSpan;
 
 				//	Get/Set:Infinite
 				static mscorlib::System::Int32  get_Infinite();
@@ -59,6 +59,7 @@ namespace mscorlib
 
 				//	Get/Set:InfiniteTimeSpan
 				static mscorlib::System::TimeSpan  get_InfiniteTimeSpan();
+				static void set_InfiniteTimeSpan(mscorlib::System::TimeSpan  value);
 
 			
 			protected:

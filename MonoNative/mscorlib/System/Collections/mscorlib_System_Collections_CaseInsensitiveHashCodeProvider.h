@@ -73,15 +73,17 @@ namespace mscorlib
 
 
 				//Public Static Properties
-				static Property<mscorlib::System::Collections::CaseInsensitiveHashCodeProvider> Default;
-				static Property<mscorlib::System::Collections::CaseInsensitiveHashCodeProvider> DefaultInvariant;
+				static Property<mscorlib::System::Collections::CaseInsensitiveHashCodeProvider , mscorlib::System::Collections::CaseInsensitiveHashCodeProvider> Default;
+				static Property<mscorlib::System::Collections::CaseInsensitiveHashCodeProvider , mscorlib::System::Collections::CaseInsensitiveHashCodeProvider> DefaultInvariant;
 
 				//Get Set Static Properties Methods
 				//	Get:Default
 				static mscorlib::System::Collections::CaseInsensitiveHashCodeProvider  get_Default();
+				static void set_Default(mscorlib::System::Collections::CaseInsensitiveHashCodeProvider  value);
 
 				//	Get:DefaultInvariant
 				static mscorlib::System::Collections::CaseInsensitiveHashCodeProvider  get_DefaultInvariant();
+				static void set_DefaultInvariant(mscorlib::System::Collections::CaseInsensitiveHashCodeProvider  value);
 
 
 			

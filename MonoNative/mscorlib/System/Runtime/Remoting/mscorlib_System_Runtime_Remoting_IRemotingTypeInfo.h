@@ -49,7 +49,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:TypeName
-					mscorlib::System::String  get_TypeName();
+					mscorlib::System::String  get_TypeName() const;
 					void set_TypeName(mscorlib::System::String  value);
 
 				

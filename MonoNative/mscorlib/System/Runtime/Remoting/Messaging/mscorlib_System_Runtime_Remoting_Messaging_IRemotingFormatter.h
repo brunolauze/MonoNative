@@ -62,7 +62,7 @@ namespace mscorlib
 					
 
 						__declspec(property(get=get___mscorlib_System_Runtime_Remoting_Messaging_IRemotingFormatter, put=set___mscorlib_System_Runtime_Remoting_Messaging_IRemotingFormatter)) MonoObject *__mscorlib_System_Runtime_Remoting_Messaging_IRemotingFormatter;
-						MonoObject* get___mscorlib_System_Runtime_Remoting_Messaging_IRemotingFormatter()
+						MonoObject* get___mscorlib_System_Runtime_Remoting_Messaging_IRemotingFormatter() const
 						{
 							return IRemotingFormatter::__mscorlib_System_Runtime_Serialization_IFormatter;
 						}

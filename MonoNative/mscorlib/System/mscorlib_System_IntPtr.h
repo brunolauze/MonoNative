@@ -94,18 +94,20 @@ namespace mscorlib
 
 
 			//Public Static Properties
-			static Property<mscorlib::System::Int32> Size;
+			static Property<mscorlib::System::Int32 , mscorlib::System::IntPtr> Size;
 
 			//Public Static Fields
-			static Property<mscorlib::System::IntPtr> Zero;
+			static Property<mscorlib::System::IntPtr , mscorlib::System::IntPtr> Zero;
 
 			//Get Set Static Properties Methods
 			//	Get:Size
 			static mscorlib::System::Int32  get_Size();
+			static void set_Size(mscorlib::System::Int32  value);
 
 
 			//	Get/Set:Zero
 			static mscorlib::System::IntPtr  get_Zero();
+			static void set_Zero(mscorlib::System::IntPtr  value);
 
 		
 		protected:

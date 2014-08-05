@@ -17,7 +17,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:FieldNames
-					std::vector<mscorlib::System::String*>  IFieldInfo::get_FieldNames()
+					std::vector<mscorlib::System::String*>  IFieldInfo::get_FieldNames() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "IFieldInfo", 0, NULL, "get_FieldNames", __mscorlib_System_Runtime_Serialization_Formatters_IFieldInfo, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -42,7 +42,7 @@ namespace mscorlib
 
 
 					//	Get/Set:FieldTypes
-					std::vector<mscorlib::System::Type*>  IFieldInfo::get_FieldTypes()
+					std::vector<mscorlib::System::Type*>  IFieldInfo::get_FieldTypes() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "IFieldInfo", 0, NULL, "get_FieldTypes", __mscorlib_System_Runtime_Serialization_Formatters_IFieldInfo, 0, NULL, NULL, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;

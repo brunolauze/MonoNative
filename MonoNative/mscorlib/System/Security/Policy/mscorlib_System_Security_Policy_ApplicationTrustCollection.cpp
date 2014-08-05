@@ -118,7 +118,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Count
-				mscorlib::System::Int32  ApplicationTrustCollection::get_Count()
+				mscorlib::System::Int32  ApplicationTrustCollection::get_Count() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "get_Count", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -126,7 +126,7 @@ namespace mscorlib
 
 
 				//	Get:IsSynchronized
-				mscorlib::System::Boolean  ApplicationTrustCollection::get_IsSynchronized()
+				mscorlib::System::Boolean  ApplicationTrustCollection::get_IsSynchronized() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "get_IsSynchronized", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -134,7 +134,7 @@ namespace mscorlib
 
 
 				//	Get:SyncRoot
-				mscorlib::System::Object  ApplicationTrustCollection::get_SyncRoot()
+				mscorlib::System::Object  ApplicationTrustCollection::get_SyncRoot() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "get_SyncRoot", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
@@ -142,7 +142,7 @@ namespace mscorlib
 
 
 				//	Get:Item
-				mscorlib::System::Security::Policy::ApplicationTrust  ApplicationTrustCollection::get_Item(mscorlib::System::Int32 index)
+				mscorlib::System::Security::Policy::ApplicationTrust  ApplicationTrustCollection::get_Item(mscorlib::System::Int32 index) const
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
@@ -154,7 +154,7 @@ namespace mscorlib
 
 
 				//	Get:Item
-				mscorlib::System::Security::Policy::ApplicationTrust  ApplicationTrustCollection::get_Item(mscorlib::System::String appFullName)
+				mscorlib::System::Security::Policy::ApplicationTrust  ApplicationTrustCollection::get_Item(mscorlib::System::String appFullName) const
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];

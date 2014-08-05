@@ -68,7 +68,7 @@ namespace mscorlib
 
 					//Get Set Properties Methods
 					//	Get/Set:Filter
-					mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::String , mscorlib::System::Object )>  RemotingSurrogateSelector::get_Filter()
+					mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::String , mscorlib::System::Object )>  RemotingSurrogateSelector::get_Filter() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "RemotingSurrogateSelector", 0, NULL, "get_Filter", __native_object__, 0, NULL, NULL, NULL);
 						void* __delegate_result__ = mono_object_unbox(__result__);

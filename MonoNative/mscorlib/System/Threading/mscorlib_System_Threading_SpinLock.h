@@ -73,13 +73,13 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:IsThreadOwnerTrackingEnabled
-				mscorlib::System::Boolean  get_IsThreadOwnerTrackingEnabled();
+				mscorlib::System::Boolean  get_IsThreadOwnerTrackingEnabled() const;
 
 				//	Get:IsHeld
-				mscorlib::System::Boolean  get_IsHeld();
+				mscorlib::System::Boolean  get_IsHeld() const;
 
 				//	Get:IsHeldByCurrentThread
-				mscorlib::System::Boolean  get_IsHeldByCurrentThread();
+				mscorlib::System::Boolean  get_IsHeldByCurrentThread() const;
 
 			
 			protected:

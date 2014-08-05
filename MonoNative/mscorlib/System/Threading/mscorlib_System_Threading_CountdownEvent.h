@@ -101,16 +101,16 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:CurrentCount
-				mscorlib::System::Int32  get_CurrentCount();
+				mscorlib::System::Int32  get_CurrentCount() const;
 
 				//	Get:InitialCount
-				mscorlib::System::Int32  get_InitialCount();
+				mscorlib::System::Int32  get_InitialCount() const;
 
 				//	Get:IsSet
-				mscorlib::System::Boolean  get_IsSet();
+				mscorlib::System::Boolean  get_IsSet() const;
 
 				//	Get:WaitHandle
-				mscorlib::System::Threading::WaitHandle  get_WaitHandle();
+				mscorlib::System::Threading::WaitHandle  get_WaitHandle() const;
 
 			
 			protected:

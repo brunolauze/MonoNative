@@ -14,7 +14,7 @@ namespace mscorlib
 			//Public Methods
 			//Get Set Properties Methods
 			//	Get:Start
-			mscorlib::System::DateTime  DaylightTime::get_Start()
+			mscorlib::System::DateTime  DaylightTime::get_Start() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DaylightTime", 0, NULL, "get_Start", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -22,7 +22,7 @@ namespace mscorlib
 
 
 			//	Get:End
-			mscorlib::System::DateTime  DaylightTime::get_End()
+			mscorlib::System::DateTime  DaylightTime::get_End() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DaylightTime", 0, NULL, "get_End", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -30,7 +30,7 @@ namespace mscorlib
 
 
 			//	Get:Delta
-			mscorlib::System::TimeSpan  DaylightTime::get_Delta()
+			mscorlib::System::TimeSpan  DaylightTime::get_Delta() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DaylightTime", 0, NULL, "get_Delta", __native_object__, 0, NULL, NULL, NULL);
 				return mscorlib::System::TimeSpan(__result__);

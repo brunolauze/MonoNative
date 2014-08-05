@@ -223,28 +223,29 @@ namespace mscorlib
 				__declspec(property(get=get_NewLine, put=set_NewLine)) mscorlib::System::String  NewLine;
 
 				//Public Static Fields
-				static Property<mscorlib::System::IO::StreamWriter> Null;
+				static Property<mscorlib::System::IO::StreamWriter , mscorlib::System::IO::StreamWriter> Null;
 
 				//Get Set Properties Methods
 				//	Get/Set:AutoFlush
-				mscorlib::System::Boolean  get_AutoFlush();
+				mscorlib::System::Boolean  get_AutoFlush() const;
 				void set_AutoFlush(mscorlib::System::Boolean  value);
 
 				//	Get:BaseStream
-				mscorlib::System::IO::Stream  get_BaseStream();
+				mscorlib::System::IO::Stream  get_BaseStream() const;
 
 				//	Get:Encoding
-				mscorlib::System::Text::Encoding  get_Encoding();
+				mscorlib::System::Text::Encoding  get_Encoding() const;
 
 				//	Get:FormatProvider
-				mscorlib::System::IFormatProvider  get_FormatProvider();
+				mscorlib::System::IFormatProvider  get_FormatProvider() const;
 
 				//	Get/Set:NewLine
-				mscorlib::System::String  get_NewLine();
+				mscorlib::System::String  get_NewLine() const;
 				void set_NewLine(mscorlib::System::String  value);
 
 				//	Get/Set:Null
 				static mscorlib::System::IO::StreamWriter  get_Null();
+				static void set_Null(mscorlib::System::IO::StreamWriter  value);
 
 			
 			protected:

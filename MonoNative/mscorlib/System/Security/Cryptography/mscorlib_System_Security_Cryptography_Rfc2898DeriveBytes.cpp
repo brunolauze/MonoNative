@@ -39,7 +39,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get/Set:IterationCount
-				mscorlib::System::Int32  Rfc2898DeriveBytes::get_IterationCount()
+				mscorlib::System::Int32  Rfc2898DeriveBytes::get_IterationCount() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "Rfc2898DeriveBytes", 0, NULL, "get_IterationCount", __native_object__, 0, NULL, NULL, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -56,7 +56,7 @@ namespace mscorlib
 
 
 				//	Get/Set:Salt
-				std::vector<mscorlib::System::Byte*>  Rfc2898DeriveBytes::get_Salt()
+				std::vector<mscorlib::System::Byte*>  Rfc2898DeriveBytes::get_Salt() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "Rfc2898DeriveBytes", 0, NULL, "get_Salt", __native_object__, 0, NULL, NULL, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;

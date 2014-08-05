@@ -15,7 +15,7 @@ namespace mscorlib
 				//Public Methods
 				//Get Set Properties Methods
 				//	Get:CoClass
-				mscorlib::System::Type  CoClassAttribute::get_CoClass()
+				mscorlib::System::Type  CoClassAttribute::get_CoClass() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "CoClassAttribute", 0, NULL, "get_CoClass", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Type(__result__);
@@ -23,7 +23,7 @@ namespace mscorlib
 
 
 				//	Get:TypeId
-				mscorlib::System::Object  CoClassAttribute::get_TypeId()
+				mscorlib::System::Object  CoClassAttribute::get_TypeId() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Attribute", 0, NULL, "get_TypeId", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);

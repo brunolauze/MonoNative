@@ -26,7 +26,7 @@ namespace mscorlib
 
 				//Get Set Properties Methods
 				//	Get:Handle
-				mscorlib::System::IntPtr  HandleRef::get_Handle()
+				mscorlib::System::IntPtr  HandleRef::get_Handle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "HandleRef", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::IntPtr(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 
 
 				//	Get:Wrapper
-				mscorlib::System::Object  HandleRef::get_Wrapper()
+				mscorlib::System::Object  HandleRef::get_Wrapper() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "HandleRef", 0, NULL, "get_Wrapper", __native_object__, 0, NULL, NULL, NULL);
 					return mscorlib::System::Object(__result__);
