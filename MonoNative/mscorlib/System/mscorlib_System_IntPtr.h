@@ -88,6 +88,7 @@ namespace mscorlib
 			void* ToPointer();
 			virtual mscorlib::System::String  ToString() override;
 			mscorlib::System::String  ToString(mscorlib::System::String format);
+			mscorlib::System::String  ToString(const char *format);
 			static mscorlib::System::IntPtr  Add(mscorlib::System::IntPtr pointer, mscorlib::System::Int32 offset);
 			static mscorlib::System::IntPtr  Subtract(mscorlib::System::IntPtr pointer, mscorlib::System::Int32 offset);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

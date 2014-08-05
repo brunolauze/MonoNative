@@ -33,7 +33,8 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(generation).name());
 				__parameter_types__[1] = Global::GetType(typeid(mode).name());
 				__parameters__[0] = &generation;
-				__parameters__[1] = reinterpret_cast<void*>(mode);
+				int __param_mode__ = mode;
+				__parameters__[1] = &__param_mode__;
 				Global::InvokeMethod("mscorlib", "System", "GC", 0, NULL, "Collect", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -45,7 +46,8 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(mode).name());
 				__parameter_types__[2] = Global::GetType(typeid(blocking).name());
 				__parameters__[0] = &generation;
-				__parameters__[1] = reinterpret_cast<void*>(mode);
+				int __param_mode__ = mode;
+				__parameters__[1] = &__param_mode__;
 				__parameters__[2] = reinterpret_cast<void*>(blocking);
 				Global::InvokeMethod("mscorlib", "System", "GC", 0, NULL, "Collect", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 		}
@@ -143,7 +145,7 @@ namespace mscorlib
 		mscorlib::System::GCNotificationStatus::__ENUM__ GC::WaitForFullGCApproach()
 		{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "GC", 0, NULL, "WaitForFullGCApproach", NullMonoObject, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::GCNotificationStatus::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::GCNotificationStatus::__ENUM__>(*(mscorlib::System::GCNotificationStatus::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 		mscorlib::System::GCNotificationStatus::__ENUM__ GC::WaitForFullGCApproach(mscorlib::System::Int32 millisecondsTimeout)
@@ -153,13 +155,13 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(millisecondsTimeout).name());
 				__parameters__[0] = &millisecondsTimeout;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "GC", 0, NULL, "WaitForFullGCApproach", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-				return *(mscorlib::System::GCNotificationStatus::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::GCNotificationStatus::__ENUM__>(*(mscorlib::System::GCNotificationStatus::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 		mscorlib::System::GCNotificationStatus::__ENUM__ GC::WaitForFullGCComplete()
 		{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "GC", 0, NULL, "WaitForFullGCComplete", NullMonoObject, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::GCNotificationStatus::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::GCNotificationStatus::__ENUM__>(*(mscorlib::System::GCNotificationStatus::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 		mscorlib::System::GCNotificationStatus::__ENUM__ GC::WaitForFullGCComplete(mscorlib::System::Int32 millisecondsTimeout)
@@ -169,7 +171,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(millisecondsTimeout).name());
 				__parameters__[0] = &millisecondsTimeout;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "GC", 0, NULL, "WaitForFullGCComplete", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-				return *(mscorlib::System::GCNotificationStatus::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::GCNotificationStatus::__ENUM__>(*(mscorlib::System::GCNotificationStatus::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 		void GC::RegisterForFullGCNotification(mscorlib::System::Int32 maxGenerationThreshold, mscorlib::System::Int32 largeObjectHeapThreshold)

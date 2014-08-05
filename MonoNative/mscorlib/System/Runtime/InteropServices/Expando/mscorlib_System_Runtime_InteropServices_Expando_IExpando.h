@@ -70,8 +70,11 @@ namespace mscorlib
 
 
 						virtual mscorlib::System::Reflection::FieldInfo  AddField(mscorlib::System::String name);
+						virtual mscorlib::System::Reflection::FieldInfo  AddField(const char *name);
 						virtual mscorlib::System::Reflection::MethodInfo  AddMethod(mscorlib::System::String name, mscorlib::System::Delegate method);
+						virtual mscorlib::System::Reflection::MethodInfo  AddMethod(const char *name, mscorlib::System::Delegate method);
 						virtual mscorlib::System::Reflection::PropertyInfo  AddProperty(mscorlib::System::String name);
+						virtual mscorlib::System::Reflection::PropertyInfo  AddProperty(const char *name);
 						virtual void  RemoveMember(mscorlib::System::Reflection::MemberInfo m);
 
 

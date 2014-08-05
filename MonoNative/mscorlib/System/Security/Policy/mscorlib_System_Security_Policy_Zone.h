@@ -55,7 +55,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security", "SecurityZone");
-						__parameters__[0] = reinterpret_cast<void*>(zone);
+						int __param_zone__ = zone;
+						__parameters__[0] = &__param_zone__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Policy", "Zone", 1, __parameter_types__, __parameters__);
 					};
 				
@@ -84,6 +85,7 @@ namespace mscorlib
 					mscorlib::System::Object  Copy();
 					virtual mscorlib::System::Security::IPermission  CreateIdentityPermission(mscorlib::System::Security::Policy::Evidence evidence);
 					static mscorlib::System::Security::Policy::Zone  CreateFromUrl(mscorlib::System::String url);
+					static mscorlib::System::Security::Policy::Zone  CreateFromUrl(const char *url);
 					virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object o) override;
 					virtual mscorlib::System::Int32  GetHashCode() override;
 					virtual mscorlib::System::String  ToString() override;

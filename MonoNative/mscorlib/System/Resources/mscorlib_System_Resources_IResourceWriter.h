@@ -51,8 +51,11 @@ namespace mscorlib
 
 
 				virtual void  AddResource(mscorlib::System::String name, std::vector<mscorlib::System::Byte*> value);
+				virtual void  AddResource(const char *name, std::vector<mscorlib::System::Byte*> value);
 				virtual void  AddResource(mscorlib::System::String name, mscorlib::System::Object value);
+				virtual void  AddResource(const char *name, mscorlib::System::Object value);
 				virtual void  AddResource(mscorlib::System::String name, mscorlib::System::String value);
+				virtual void  AddResource(const char *name, const char *value);
 				virtual void  Close();
 				virtual void  Generate();
 

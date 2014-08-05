@@ -122,7 +122,27 @@ namespace mscorlib
 						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbHash).name()))->eklass);
 						__parameter_types__[1] = Global::GetType(typeid(str).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rgbHash, typeid(mscorlib::System::Byte).name());
-						__parameters__[1] = (MonoObject*)str;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), str);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "DSACryptoServiceProvider", 0, NULL, "SignHash", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+						MonoArray *__array_ptr__ = (MonoArray*)__result__;
+						uintptr_t __array_length__ = mono_array_length(__array_ptr__);
+						std::vector<mscorlib::System::Byte*>  __array_result__(__array_length__);
+						for(uintptr_t __array_index__ = 0; __array_index__ < __array_length__; __array_index__++)
+						{
+							MonoObject *__array_item__ = mono_array_get(__array_ptr__,MonoObject*,__array_index__);
+							__array_result__.push_back(new mscorlib::System::Byte (__array_item__));
+						}
+						return __array_result__;
+				}
+
+				std::vector<mscorlib::System::Byte*> DSACryptoServiceProvider::SignHash(std::vector<mscorlib::System::Byte*> rgbHash, const char *str)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbHash).name()))->eklass);
+						__parameter_types__[1] = Global::GetType(typeid(str).name());
+						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rgbHash, typeid(mscorlib::System::Byte).name());
+						__parameters__[1] = mono_string_new(Global::GetDomain(), str);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "DSACryptoServiceProvider", 0, NULL, "SignHash", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
 						uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -155,7 +175,21 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(str).name());
 						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbSignature).name()))->eklass);
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rgbHash, typeid(mscorlib::System::Byte).name());
-						__parameters__[1] = (MonoObject*)str;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), str);
+						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(rgbSignature, typeid(mscorlib::System::Byte).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "DSACryptoServiceProvider", 0, NULL, "VerifyHash", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Boolean DSACryptoServiceProvider::VerifyHash(std::vector<mscorlib::System::Byte*> rgbHash, const char *str, std::vector<mscorlib::System::Byte*> rgbSignature)
+				{
+						MonoType *__parameter_types__[3];
+						void *__parameters__[3];
+						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbHash).name()))->eklass);
+						__parameter_types__[1] = Global::GetType(typeid(str).name());
+						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbSignature).name()))->eklass);
+						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rgbHash, typeid(mscorlib::System::Byte).name());
+						__parameters__[1] = mono_string_new(Global::GetDomain(), str);
 						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(rgbSignature, typeid(mscorlib::System::Byte).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "DSACryptoServiceProvider", 0, NULL, "VerifyHash", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

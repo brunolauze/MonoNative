@@ -40,7 +40,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::CompoundAceType::__ENUM__  CompoundAce::get_CompoundAceType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CompoundAce", 0, NULL, "get_CompoundAceType", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::CompoundAceType::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::CompoundAceType::__ENUM__>(*(mscorlib::System::Security::AccessControl::CompoundAceType::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void CompoundAce::set_CompoundAceType(mscorlib::System::Security::AccessControl::CompoundAceType::__ENUM__  value)
@@ -48,7 +48,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CompoundAce", 0, NULL, "set_CompoundAceType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -91,7 +92,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  CompoundAce::get_AceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AceFlags", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::AceFlags::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::AceFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::AceFlags::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void CompoundAce::set_AceFlags(mscorlib::System::Security::AccessControl::AceFlags::__ENUM__  value)
@@ -99,7 +100,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "set_AceFlags", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -108,7 +110,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::AceType::__ENUM__  CompoundAce::get_AceType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AceType", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::AceType::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::AceType::__ENUM__>(*(mscorlib::System::Security::AccessControl::AceType::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -116,7 +118,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  CompoundAce::get_AuditFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_AuditFlags", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -124,7 +126,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  CompoundAce::get_InheritanceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -140,7 +142,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  CompoundAce::get_PropagationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericAce", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

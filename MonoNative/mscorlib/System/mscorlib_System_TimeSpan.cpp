@@ -167,7 +167,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(s).name());
-				__parameters__[0] = (MonoObject*)s;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "Parse", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::TimeSpan(__result__);
+		}
+
+		mscorlib::System::TimeSpan TimeSpan::Parse(const char *s)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(s).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "Parse", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeSpan(__result__);
 		}
@@ -178,7 +188,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(s).name());
 				__parameter_types__[1] = Global::GetType(typeid(result).name());
-				__parameters__[0] = (MonoObject*)s;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+				__parameters__[1] = (MonoObject*)result;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Boolean TimeSpan::TryParse(const char *s, mscorlib::System::TimeSpan result)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(s).name());
+				__parameter_types__[1] = Global::GetType(typeid(result).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 				__parameters__[1] = (MonoObject*)result;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -190,7 +212,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(input).name());
 				__parameter_types__[1] = Global::GetType(typeid(formatProvider).name());
-				__parameters__[0] = (MonoObject*)input;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = (MonoObject*)formatProvider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "Parse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::TimeSpan(__result__);
+		}
+
+		mscorlib::System::TimeSpan TimeSpan::Parse(const char *input, mscorlib::System::IFormatProvider formatProvider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = Global::GetType(typeid(formatProvider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
 				__parameters__[1] = (MonoObject*)formatProvider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "Parse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeSpan(__result__);
@@ -203,7 +237,21 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(input).name());
 				__parameter_types__[1] = Global::GetType(typeid(formatProvider).name());
 				__parameter_types__[2] = Global::GetType(typeid(result).name());
-				__parameters__[0] = (MonoObject*)input;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = (MonoObject*)formatProvider;
+				__parameters__[2] = (MonoObject*)result;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParse", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Boolean TimeSpan::TryParse(const char *input, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = Global::GetType(typeid(formatProvider).name());
+				__parameter_types__[2] = Global::GetType(typeid(result).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
 				__parameters__[1] = (MonoObject*)formatProvider;
 				__parameters__[2] = (MonoObject*)result;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParse", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -217,8 +265,22 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(input).name());
 				__parameter_types__[1] = Global::GetType(typeid(format).name());
 				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
-				__parameters__[0] = (MonoObject*)input;
-				__parameters__[1] = (MonoObject*)format;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), format);
+				__parameters__[2] = (MonoObject*)formatProvider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ParseExact", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::TimeSpan(__result__);
+		}
+
+		mscorlib::System::TimeSpan TimeSpan::ParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = Global::GetType(typeid(format).name());
+				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), format);
 				__parameters__[2] = (MonoObject*)formatProvider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ParseExact", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeSpan(__result__);
@@ -232,10 +294,28 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(format).name());
 				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
 				__parameter_types__[3] = Global::GetType(typeid(styles).name());
-				__parameters__[0] = (MonoObject*)input;
-				__parameters__[1] = (MonoObject*)format;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), format);
 				__parameters__[2] = (MonoObject*)formatProvider;
-				__parameters__[3] = reinterpret_cast<void*>(styles);
+				int __param_styles__ = styles;
+				__parameters__[3] = &__param_styles__;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ParseExact", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::TimeSpan(__result__);
+		}
+
+		mscorlib::System::TimeSpan TimeSpan::ParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles)
+		{
+				MonoType *__parameter_types__[4];
+				void *__parameters__[4];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = Global::GetType(typeid(format).name());
+				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
+				__parameter_types__[3] = Global::GetType(typeid(styles).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), format);
+				__parameters__[2] = (MonoObject*)formatProvider;
+				int __param_styles__ = styles;
+				__parameters__[3] = &__param_styles__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ParseExact", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeSpan(__result__);
 		}
@@ -247,7 +327,21 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(input).name());
 				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(formats).name()))->eklass);
 				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
-				__parameters__[0] = (MonoObject*)input;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(formats, typeid(mscorlib::System::String).name());
+				__parameters__[2] = (MonoObject*)formatProvider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ParseExact", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::TimeSpan(__result__);
+		}
+
+		mscorlib::System::TimeSpan TimeSpan::ParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(formats).name()))->eklass);
+				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
 				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(formats, typeid(mscorlib::System::String).name());
 				__parameters__[2] = (MonoObject*)formatProvider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ParseExact", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -262,10 +356,28 @@ namespace mscorlib
 				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(formats).name()))->eklass);
 				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
 				__parameter_types__[3] = Global::GetType(typeid(styles).name());
-				__parameters__[0] = (MonoObject*)input;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
 				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(formats, typeid(mscorlib::System::String).name());
 				__parameters__[2] = (MonoObject*)formatProvider;
-				__parameters__[3] = reinterpret_cast<void*>(styles);
+				int __param_styles__ = styles;
+				__parameters__[3] = &__param_styles__;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ParseExact", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::TimeSpan(__result__);
+		}
+
+		mscorlib::System::TimeSpan TimeSpan::ParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles)
+		{
+				MonoType *__parameter_types__[4];
+				void *__parameters__[4];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(formats).name()))->eklass);
+				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
+				__parameter_types__[3] = Global::GetType(typeid(styles).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(formats, typeid(mscorlib::System::String).name());
+				__parameters__[2] = (MonoObject*)formatProvider;
+				int __param_styles__ = styles;
+				__parameters__[3] = &__param_styles__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ParseExact", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeSpan(__result__);
 		}
@@ -278,8 +390,24 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(format).name());
 				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
 				__parameter_types__[3] = Global::GetType(typeid(result).name());
-				__parameters__[0] = (MonoObject*)input;
-				__parameters__[1] = (MonoObject*)format;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), format);
+				__parameters__[2] = (MonoObject*)formatProvider;
+				__parameters__[3] = (MonoObject*)result;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParseExact", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Boolean TimeSpan::TryParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result)
+		{
+				MonoType *__parameter_types__[4];
+				void *__parameters__[4];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = Global::GetType(typeid(format).name());
+				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
+				__parameter_types__[3] = Global::GetType(typeid(result).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), format);
 				__parameters__[2] = (MonoObject*)formatProvider;
 				__parameters__[3] = (MonoObject*)result;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParseExact", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
@@ -295,10 +423,30 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
 				__parameter_types__[3] = Global::GetType(typeid(styles).name());
 				__parameter_types__[4] = Global::GetType(typeid(result).name());
-				__parameters__[0] = (MonoObject*)input;
-				__parameters__[1] = (MonoObject*)format;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), format);
 				__parameters__[2] = (MonoObject*)formatProvider;
-				__parameters__[3] = reinterpret_cast<void*>(styles);
+				int __param_styles__ = styles;
+				__parameters__[3] = &__param_styles__;
+				__parameters__[4] = (MonoObject*)result;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParseExact", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Boolean TimeSpan::TryParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles, mscorlib::System::TimeSpan result)
+		{
+				MonoType *__parameter_types__[5];
+				void *__parameters__[5];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = Global::GetType(typeid(format).name());
+				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
+				__parameter_types__[3] = Global::GetType(typeid(styles).name());
+				__parameter_types__[4] = Global::GetType(typeid(result).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), format);
+				__parameters__[2] = (MonoObject*)formatProvider;
+				int __param_styles__ = styles;
+				__parameters__[3] = &__param_styles__;
 				__parameters__[4] = (MonoObject*)result;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParseExact", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -312,7 +460,23 @@ namespace mscorlib
 				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(formats).name()))->eklass);
 				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
 				__parameter_types__[3] = Global::GetType(typeid(result).name());
-				__parameters__[0] = (MonoObject*)input;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(formats, typeid(mscorlib::System::String).name());
+				__parameters__[2] = (MonoObject*)formatProvider;
+				__parameters__[3] = (MonoObject*)result;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParseExact", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Boolean TimeSpan::TryParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result)
+		{
+				MonoType *__parameter_types__[4];
+				void *__parameters__[4];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(formats).name()))->eklass);
+				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
+				__parameter_types__[3] = Global::GetType(typeid(result).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
 				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(formats, typeid(mscorlib::System::String).name());
 				__parameters__[2] = (MonoObject*)formatProvider;
 				__parameters__[3] = (MonoObject*)result;
@@ -329,10 +493,30 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
 				__parameter_types__[3] = Global::GetType(typeid(styles).name());
 				__parameter_types__[4] = Global::GetType(typeid(result).name());
-				__parameters__[0] = (MonoObject*)input;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
 				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(formats, typeid(mscorlib::System::String).name());
 				__parameters__[2] = (MonoObject*)formatProvider;
-				__parameters__[3] = reinterpret_cast<void*>(styles);
+				int __param_styles__ = styles;
+				__parameters__[3] = &__param_styles__;
+				__parameters__[4] = (MonoObject*)result;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParseExact", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Boolean TimeSpan::TryParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles, mscorlib::System::TimeSpan result)
+		{
+				MonoType *__parameter_types__[5];
+				void *__parameters__[5];
+				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(formats).name()))->eklass);
+				__parameter_types__[2] = Global::GetType(typeid(formatProvider).name());
+				__parameter_types__[3] = Global::GetType(typeid(styles).name());
+				__parameter_types__[4] = Global::GetType(typeid(result).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(formats, typeid(mscorlib::System::String).name());
+				__parameters__[2] = (MonoObject*)formatProvider;
+				int __param_styles__ = styles;
+				__parameters__[3] = &__param_styles__;
 				__parameters__[4] = (MonoObject*)result;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "TryParseExact", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -359,7 +543,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(format).name());
-				__parameters__[0] = (MonoObject*)format;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ToString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::String(__result__);
+		}
+
+		mscorlib::System::String TimeSpan::ToString(const char *format)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(format).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ToString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -370,7 +564,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(format).name());
 				__parameter_types__[1] = Global::GetType(typeid(formatProvider).name());
-				__parameters__[0] = (MonoObject*)format;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+				__parameters__[1] = (MonoObject*)formatProvider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ToString", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::String(__result__);
+		}
+
+		mscorlib::System::String TimeSpan::ToString(const char *format, mscorlib::System::IFormatProvider formatProvider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(format).name());
+				__parameter_types__[1] = Global::GetType(typeid(formatProvider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 				__parameters__[1] = (MonoObject*)formatProvider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeSpan", 0, NULL, "ToString", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);

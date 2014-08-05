@@ -43,6 +43,7 @@ namespace mscorlib
 
 
 						virtual mscorlib::System::String  Parse(mscorlib::System::String url, mscorlib::System::String objectURI);
+						virtual mscorlib::System::String  Parse(const char *url, const char *objectURI);
 
 
 						//Public Properties

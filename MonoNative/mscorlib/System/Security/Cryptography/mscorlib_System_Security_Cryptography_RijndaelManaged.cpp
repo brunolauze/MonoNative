@@ -188,7 +188,7 @@ namespace mscorlib
 				mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  RijndaelManaged::get_Mode() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_Mode", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Cryptography::CipherMode::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Cryptography::CipherMode::__ENUM__>(*(mscorlib::System::Security::Cryptography::CipherMode::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void RijndaelManaged::set_Mode(mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  value)
@@ -196,7 +196,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "set_Mode", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -205,7 +206,7 @@ namespace mscorlib
 				mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  RijndaelManaged::get_Padding() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_Padding", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__>(*(mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void RijndaelManaged::set_Padding(mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  value)
@@ -213,7 +214,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "set_Padding", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

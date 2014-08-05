@@ -40,8 +40,10 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.ConstrainedExecution", "Consistency");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Runtime.ConstrainedExecution", "Cer");
-						__parameters__[0] = reinterpret_cast<void*>(consistencyGuarantee);
-						__parameters__[1] = reinterpret_cast<void*>(cer);
+						int __param_consistencyGuarantee__ = consistencyGuarantee;
+						__parameters__[0] = &__param_consistencyGuarantee__;
+						int __param_cer__ = cer;
+						__parameters__[1] = &__param_cer__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.ConstrainedExecution", "ReliabilityContractAttribute", 2, __parameter_types__, __parameters__);
 					};
 				

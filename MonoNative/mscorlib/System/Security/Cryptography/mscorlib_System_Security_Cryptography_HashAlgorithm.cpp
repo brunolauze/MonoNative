@@ -90,7 +90,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(hashName).name());
-						__parameters__[0] = (MonoObject*)hashName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), hashName);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Security::Cryptography::HashAlgorithm(__result__);
+				}
+
+				mscorlib::System::Security::Cryptography::HashAlgorithm HashAlgorithm::Create(const char *hashName)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(hashName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), hashName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HashAlgorithm", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::HashAlgorithm(__result__);
 				}

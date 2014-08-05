@@ -108,8 +108,10 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Permissions", "HostProtectionResource");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Permissions", "HostProtectionResource");
 					__parameters__[0] = (MonoObject*)message;
-					__parameters__[1] = reinterpret_cast<void*>(protectedResources);
-					__parameters__[2] = reinterpret_cast<void*>(demandedResources);
+					int __param_protectedResources__ = protectedResources;
+					__parameters__[1] = &__param_protectedResources__;
+					int __param_demandedResources__ = demandedResources;
+					__parameters__[2] = &__param_demandedResources__;
 					__native_object__ = Global::New("mscorlib", "System.Security", "HostProtectionException", 3, __parameter_types__, __parameters__);
 				};
 			

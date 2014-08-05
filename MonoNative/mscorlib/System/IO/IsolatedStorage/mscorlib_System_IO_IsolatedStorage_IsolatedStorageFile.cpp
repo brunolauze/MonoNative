@@ -24,7 +24,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(scope).name());
-						__parameters__[0] = reinterpret_cast<void*>(scope);
+						int __param_scope__ = scope;
+						__parameters__[0] = &__param_scope__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetEnumerator", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return new mscorlib::System::Collections::IEnumerator(__result__);
 				}
@@ -38,7 +39,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(domainEvidenceType).name());
 						__parameter_types__[3] = Global::GetType(typeid(assemblyEvidence).name());
 						__parameter_types__[4] = Global::GetType(typeid(assemblyEvidenceType).name());
-						__parameters__[0] = reinterpret_cast<void*>(scope);
+						int __param_scope__ = scope;
+						__parameters__[0] = &__param_scope__;
 						__parameters__[1] = (MonoObject*)domainEvidence;
 						__parameters__[2] = (MonoObject*)domainEvidenceType;
 						__parameters__[3] = (MonoObject*)assemblyEvidence;
@@ -54,7 +56,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(scope).name());
 						__parameter_types__[1] = Global::GetType(typeid(domainIdentity).name());
 						__parameter_types__[2] = Global::GetType(typeid(assemblyIdentity).name());
-						__parameters__[0] = reinterpret_cast<void*>(scope);
+						int __param_scope__ = scope;
+						__parameters__[0] = &__param_scope__;
 						__parameters__[1] = (MonoObject*)domainIdentity;
 						__parameters__[2] = (MonoObject*)assemblyIdentity;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetStore", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -68,7 +71,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(scope).name());
 						__parameter_types__[1] = Global::GetType(typeid(domainEvidenceType).name());
 						__parameter_types__[2] = Global::GetType(typeid(assemblyEvidenceType).name());
-						__parameters__[0] = reinterpret_cast<void*>(scope);
+						int __param_scope__ = scope;
+						__parameters__[0] = &__param_scope__;
 						__parameters__[1] = (MonoObject*)domainEvidenceType;
 						__parameters__[2] = (MonoObject*)assemblyEvidenceType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetStore", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -81,7 +85,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(scope).name());
 						__parameter_types__[1] = Global::GetType(typeid(applicationIdentity).name());
-						__parameters__[0] = reinterpret_cast<void*>(scope);
+						int __param_scope__ = scope;
+						__parameters__[0] = &__param_scope__;
 						__parameters__[1] = (MonoObject*)applicationIdentity;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetStore", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFile(__result__);
@@ -93,7 +98,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(scope).name());
 						__parameter_types__[1] = Global::GetType(typeid(applicationEvidenceType).name());
-						__parameters__[0] = reinterpret_cast<void*>(scope);
+						int __param_scope__ = scope;
+						__parameters__[0] = &__param_scope__;
 						__parameters__[1] = (MonoObject*)applicationEvidenceType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetStore", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFile(__result__);
@@ -146,7 +152,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(scope).name());
-						__parameters__[0] = reinterpret_cast<void*>(scope);
+						int __param_scope__ = scope;
+						__parameters__[0] = &__param_scope__;
 						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "Remove", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -160,7 +167,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(dir).name());
-						__parameters__[0] = (MonoObject*)dir;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), dir);
+						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "CreateDirectory", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void IsolatedStorageFile::CreateDirectory(const char *dir)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(dir).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), dir);
 						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "CreateDirectory", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -170,8 +186,19 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(sourceFileName).name());
 						__parameter_types__[1] = Global::GetType(typeid(destinationFileName).name());
-						__parameters__[0] = (MonoObject*)sourceFileName;
-						__parameters__[1] = (MonoObject*)destinationFileName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sourceFileName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), destinationFileName);
+						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "CopyFile", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void IsolatedStorageFile::CopyFile(const char *sourceFileName, const char *destinationFileName)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(sourceFileName).name());
+						__parameter_types__[1] = Global::GetType(typeid(destinationFileName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sourceFileName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), destinationFileName);
 						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "CopyFile", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -182,8 +209,21 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(sourceFileName).name());
 						__parameter_types__[1] = Global::GetType(typeid(destinationFileName).name());
 						__parameter_types__[2] = Global::GetType(typeid(overwrite).name());
-						__parameters__[0] = (MonoObject*)sourceFileName;
-						__parameters__[1] = (MonoObject*)destinationFileName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sourceFileName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), destinationFileName);
+						__parameters__[2] = reinterpret_cast<void*>(overwrite);
+						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "CopyFile", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+				}
+
+				void IsolatedStorageFile::CopyFile(const char *sourceFileName, const char *destinationFileName, mscorlib::System::Boolean overwrite)
+				{
+						MonoType *__parameter_types__[3];
+						void *__parameters__[3];
+						__parameter_types__[0] = Global::GetType(typeid(sourceFileName).name());
+						__parameter_types__[1] = Global::GetType(typeid(destinationFileName).name());
+						__parameter_types__[2] = Global::GetType(typeid(overwrite).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sourceFileName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), destinationFileName);
 						__parameters__[2] = reinterpret_cast<void*>(overwrite);
 						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "CopyFile", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 				}
@@ -193,7 +233,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(path).name());
-						__parameters__[0] = (MonoObject*)path;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "CreateFile", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream(__result__);
+				}
+
+				mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream IsolatedStorageFile::CreateFile(const char *path)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "CreateFile", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream(__result__);
 				}
@@ -203,7 +253,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(dir).name());
-						__parameters__[0] = (MonoObject*)dir;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), dir);
+						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "DeleteDirectory", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void IsolatedStorageFile::DeleteDirectory(const char *dir)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(dir).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), dir);
 						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "DeleteDirectory", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -212,7 +271,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(file).name());
-						__parameters__[0] = (MonoObject*)file;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), file);
+						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "DeleteFile", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void IsolatedStorageFile::DeleteFile(const char *file)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(file).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), file);
 						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "DeleteFile", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -226,7 +294,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(path).name());
-						__parameters__[0] = (MonoObject*)path;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "DirectoryExists", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Boolean IsolatedStorageFile::DirectoryExists(const char *path)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "DirectoryExists", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}
@@ -236,7 +314,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(path).name());
-						__parameters__[0] = (MonoObject*)path;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "FileExists", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Boolean IsolatedStorageFile::FileExists(const char *path)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "FileExists", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}
@@ -246,7 +334,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(path).name());
-						__parameters__[0] = (MonoObject*)path;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetCreationTime", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::DateTimeOffset(__result__);
+				}
+
+				mscorlib::System::DateTimeOffset IsolatedStorageFile::GetCreationTime(const char *path)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetCreationTime", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::DateTimeOffset(__result__);
 				}
@@ -256,7 +354,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(path).name());
-						__parameters__[0] = (MonoObject*)path;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetLastAccessTime", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::DateTimeOffset(__result__);
+				}
+
+				mscorlib::System::DateTimeOffset IsolatedStorageFile::GetLastAccessTime(const char *path)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetLastAccessTime", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::DateTimeOffset(__result__);
 				}
@@ -266,7 +374,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(path).name());
-						__parameters__[0] = (MonoObject*)path;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetLastWriteTime", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::DateTimeOffset(__result__);
+				}
+
+				mscorlib::System::DateTimeOffset IsolatedStorageFile::GetLastWriteTime(const char *path)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetLastWriteTime", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::DateTimeOffset(__result__);
 				}
@@ -276,7 +394,25 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
-						__parameters__[0] = (MonoObject*)searchPattern;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetDirectoryNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						MonoArray *__array_ptr__ = (MonoArray*)__result__;
+						uintptr_t __array_length__ = mono_array_length(__array_ptr__);
+						std::vector<mscorlib::System::String*>  __array_result__(__array_length__);
+						for(uintptr_t __array_index__ = 0; __array_index__ < __array_length__; __array_index__++)
+						{
+							MonoObject *__array_item__ = mono_array_get(__array_ptr__,MonoObject*,__array_index__);
+							__array_result__.push_back(new mscorlib::System::String (__array_item__));
+						}
+						return __array_result__;
+				}
+
+				std::vector<mscorlib::System::String*> IsolatedStorageFile::GetDirectoryNames(const char *searchPattern)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetDirectoryNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
 						uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -308,7 +444,25 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
-						__parameters__[0] = (MonoObject*)searchPattern;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetFileNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						MonoArray *__array_ptr__ = (MonoArray*)__result__;
+						uintptr_t __array_length__ = mono_array_length(__array_ptr__);
+						std::vector<mscorlib::System::String*>  __array_result__(__array_length__);
+						for(uintptr_t __array_index__ = 0; __array_index__ < __array_length__; __array_index__++)
+						{
+							MonoObject *__array_item__ = mono_array_get(__array_ptr__,MonoObject*,__array_index__);
+							__array_result__.push_back(new mscorlib::System::String (__array_item__));
+						}
+						return __array_result__;
+				}
+
+				std::vector<mscorlib::System::String*> IsolatedStorageFile::GetFileNames(const char *searchPattern)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "GetFileNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
 						uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -351,8 +505,19 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(sourceDirectoryName).name());
 						__parameter_types__[1] = Global::GetType(typeid(destinationDirectoryName).name());
-						__parameters__[0] = (MonoObject*)sourceDirectoryName;
-						__parameters__[1] = (MonoObject*)destinationDirectoryName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sourceDirectoryName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), destinationDirectoryName);
+						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "MoveDirectory", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void IsolatedStorageFile::MoveDirectory(const char *sourceDirectoryName, const char *destinationDirectoryName)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(sourceDirectoryName).name());
+						__parameter_types__[1] = Global::GetType(typeid(destinationDirectoryName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sourceDirectoryName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), destinationDirectoryName);
 						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "MoveDirectory", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -362,8 +527,19 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(sourceFileName).name());
 						__parameter_types__[1] = Global::GetType(typeid(destinationFileName).name());
-						__parameters__[0] = (MonoObject*)sourceFileName;
-						__parameters__[1] = (MonoObject*)destinationFileName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sourceFileName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), destinationFileName);
+						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "MoveFile", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void IsolatedStorageFile::MoveFile(const char *sourceFileName, const char *destinationFileName)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(sourceFileName).name());
+						__parameter_types__[1] = Global::GetType(typeid(destinationFileName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sourceFileName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), destinationFileName);
 						Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "MoveFile", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -373,8 +549,22 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(path).name());
 						__parameter_types__[1] = Global::GetType(typeid(mode).name());
-						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "OpenFile", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream(__result__);
+				}
+
+				mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream IsolatedStorageFile::OpenFile(const char *path, mscorlib::System::IO::FileMode::__ENUM__ mode)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameter_types__[1] = Global::GetType(typeid(mode).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "OpenFile", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream(__result__);
 				}
@@ -386,9 +576,27 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(path).name());
 						__parameter_types__[1] = Global::GetType(typeid(mode).name());
 						__parameter_types__[2] = Global::GetType(typeid(access).name());
-						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
-						__parameters__[2] = reinterpret_cast<void*>(access);
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "OpenFile", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream(__result__);
+				}
+
+				mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream IsolatedStorageFile::OpenFile(const char *path, mscorlib::System::IO::FileMode::__ENUM__ mode, mscorlib::System::IO::FileAccess::__ENUM__ access)
+				{
+						MonoType *__parameter_types__[3];
+						void *__parameters__[3];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameter_types__[1] = Global::GetType(typeid(mode).name());
+						__parameter_types__[2] = Global::GetType(typeid(access).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "OpenFile", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream(__result__);
 				}
@@ -401,10 +609,32 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(mode).name());
 						__parameter_types__[2] = Global::GetType(typeid(access).name());
 						__parameter_types__[3] = Global::GetType(typeid(share).name());
-						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
-						__parameters__[2] = reinterpret_cast<void*>(access);
-						__parameters__[3] = reinterpret_cast<void*>(share);
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
+						int __param_share__ = share;
+						__parameters__[3] = &__param_share__;
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "OpenFile", __native_object__, 4, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream(__result__);
+				}
+
+				mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream IsolatedStorageFile::OpenFile(const char *path, mscorlib::System::IO::FileMode::__ENUM__ mode, mscorlib::System::IO::FileAccess::__ENUM__ access, mscorlib::System::IO::FileShare::__ENUM__ share)
+				{
+						MonoType *__parameter_types__[4];
+						void *__parameters__[4];
+						__parameter_types__[0] = Global::GetType(typeid(path).name());
+						__parameter_types__[1] = Global::GetType(typeid(mode).name());
+						__parameter_types__[2] = Global::GetType(typeid(access).name());
+						__parameter_types__[3] = Global::GetType(typeid(share).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
+						int __param_share__ = share;
+						__parameters__[3] = &__param_share__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile", 0, NULL, "OpenFile", __native_object__, 4, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::IO::IsolatedStorage::IsolatedStorageFileStream(__result__);
 				}
@@ -483,7 +713,7 @@ namespace mscorlib
 				mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  IsolatedStorageFile::get_Scope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_Scope", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__>(*(mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

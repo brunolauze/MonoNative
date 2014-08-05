@@ -69,7 +69,9 @@ namespace mscorlib
 
 
 					static void  Configure(mscorlib::System::String filename, mscorlib::System::Boolean ensureSecurity);
+					static void  Configure(const char *filename, mscorlib::System::Boolean ensureSecurity);
 					static void  Configure(mscorlib::System::String filename);
+					static void  Configure(const char *filename);
 					static std::vector<mscorlib::System::Runtime::Remoting::ActivatedClientTypeEntry*>  GetRegisteredActivatedClientTypes();
 					static std::vector<mscorlib::System::Runtime::Remoting::ActivatedServiceTypeEntry*>  GetRegisteredActivatedServiceTypes();
 					static std::vector<mscorlib::System::Runtime::Remoting::WellKnownClientTypeEntry*>  GetRegisteredWellKnownClientTypes();
@@ -77,15 +79,20 @@ namespace mscorlib
 					static mscorlib::System::Boolean  IsActivationAllowed(mscorlib::System::Type svrType);
 					static mscorlib::System::Runtime::Remoting::ActivatedClientTypeEntry  IsRemotelyActivatedClientType(mscorlib::System::Type svrType);
 					static mscorlib::System::Runtime::Remoting::ActivatedClientTypeEntry  IsRemotelyActivatedClientType(mscorlib::System::String typeName, mscorlib::System::String assemblyName);
+					static mscorlib::System::Runtime::Remoting::ActivatedClientTypeEntry  IsRemotelyActivatedClientType(const char *typeName, const char *assemblyName);
 					static mscorlib::System::Runtime::Remoting::WellKnownClientTypeEntry  IsWellKnownClientType(mscorlib::System::Type svrType);
 					static mscorlib::System::Runtime::Remoting::WellKnownClientTypeEntry  IsWellKnownClientType(mscorlib::System::String typeName, mscorlib::System::String assemblyName);
+					static mscorlib::System::Runtime::Remoting::WellKnownClientTypeEntry  IsWellKnownClientType(const char *typeName, const char *assemblyName);
 					static void  RegisterActivatedClientType(mscorlib::System::Runtime::Remoting::ActivatedClientTypeEntry entry);
 					static void  RegisterActivatedClientType(mscorlib::System::Type type, mscorlib::System::String appUrl);
+					static void  RegisterActivatedClientType(mscorlib::System::Type type, const char *appUrl);
 					static void  RegisterActivatedServiceType(mscorlib::System::Runtime::Remoting::ActivatedServiceTypeEntry entry);
 					static void  RegisterActivatedServiceType(mscorlib::System::Type type);
 					static void  RegisterWellKnownClientType(mscorlib::System::Type type, mscorlib::System::String objectUrl);
+					static void  RegisterWellKnownClientType(mscorlib::System::Type type, const char *objectUrl);
 					static void  RegisterWellKnownClientType(mscorlib::System::Runtime::Remoting::WellKnownClientTypeEntry entry);
 					static void  RegisterWellKnownServiceType(mscorlib::System::Type type, mscorlib::System::String objectUri, mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__ mode);
+					static void  RegisterWellKnownServiceType(mscorlib::System::Type type, const char *objectUri, mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__ mode);
 					static void  RegisterWellKnownServiceType(mscorlib::System::Runtime::Remoting::WellKnownServiceTypeEntry entry);
 					static mscorlib::System::Boolean  CustomErrorsEnabled(mscorlib::System::Boolean isLocalRequest);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

@@ -49,7 +49,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.Resources", "UltimateResourceFallbackLocation");
 					__parameters__[0] = (MonoObject*)cultureName;
-					__parameters__[1] = reinterpret_cast<void*>(location);
+					int __param_location__ = location;
+					__parameters__[1] = &__param_location__;
 					__native_object__ = Global::New("mscorlib", "System.Resources", "NeutralResourcesLanguageAttribute", 2, __parameter_types__, __parameters__);
 				};
 			

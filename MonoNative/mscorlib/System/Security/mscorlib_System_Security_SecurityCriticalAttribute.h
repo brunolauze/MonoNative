@@ -43,7 +43,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType("mscorlib", "System.Security", "SecurityCriticalScope");
-					__parameters__[0] = reinterpret_cast<void*>(scope);
+					int __param_scope__ = scope;
+					__parameters__[0] = &__param_scope__;
 					__native_object__ = Global::New("mscorlib", "System.Security", "SecurityCriticalAttribute", 1, __parameter_types__, __parameters__);
 				};
 			

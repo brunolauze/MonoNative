@@ -98,9 +98,13 @@ namespace mscorlib
 				virtual mscorlib::System::Type  GetDefaultWriter();
 				virtual mscorlib::System::Collections::IDictionaryEnumerator * GetEnumerator();
 				virtual mscorlib::System::Object  GetObject(mscorlib::System::String name);
+				virtual mscorlib::System::Object  GetObject(const char *name);
 				virtual mscorlib::System::Object  GetObject(mscorlib::System::String name, mscorlib::System::Boolean ignoreCase);
+				virtual mscorlib::System::Object  GetObject(const char *name, mscorlib::System::Boolean ignoreCase);
 				virtual mscorlib::System::String  GetString(mscorlib::System::String name);
+				virtual mscorlib::System::String  GetString(const char *name);
 				virtual mscorlib::System::String  GetString(mscorlib::System::String name, mscorlib::System::Boolean ignoreCase);
+				virtual mscorlib::System::String  GetString(const char *name, mscorlib::System::Boolean ignoreCase);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

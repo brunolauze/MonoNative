@@ -92,7 +92,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(type).name());
-						__parameters__[0] = reinterpret_cast<void*>(type);
+						int __param_type__ = type;
+						__parameters__[0] = &__param_type__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "SecurityIdentifier", 0, NULL, "IsWellKnown", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}

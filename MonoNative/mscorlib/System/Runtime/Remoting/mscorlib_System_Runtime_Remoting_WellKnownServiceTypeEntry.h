@@ -31,7 +31,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Runtime.Remoting", "WellKnownObjectMode");
 						__parameters__[0] = (MonoObject*)type;
 						__parameters__[1] = (MonoObject*)objectUri;
-						__parameters__[2] = reinterpret_cast<void*>(mode);
+						int __param_mode__ = mode;
+						__parameters__[2] = &__param_mode__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting", "WellKnownServiceTypeEntry", 3, __parameter_types__, __parameters__);
 					};
 				
@@ -47,7 +48,8 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)typeName;
 						__parameters__[1] = (MonoObject*)assemblyName;
 						__parameters__[2] = (MonoObject*)objectUri;
-						__parameters__[3] = reinterpret_cast<void*>(mode);
+						int __param_mode__ = mode;
+						__parameters__[3] = &__param_mode__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting", "WellKnownServiceTypeEntry", 4, __parameter_types__, __parameters__);
 					};
 				

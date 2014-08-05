@@ -141,8 +141,8 @@ public:
     Property(_pmGet_t pmGet, _pmSet_t pmSet)
     :  m_pmGet(pmGet), m_pmSet(pmSet)
     {}
-    operator _Prop_t() { return (_ObjClass_t::m_pmGet)(); }
-    void operator =(_Prop_t value) { (_ObjClass_t::m_pmSet)(value); }
+    operator _Prop_t() { return (m_pmGet)(); }
+    void operator =(_Prop_t value) { (m_pmSet)(value); }
 };
 
 namespace mscorlib

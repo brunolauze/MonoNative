@@ -105,6 +105,7 @@ namespace mscorlib
 					static mscorlib::System::IntPtr  AllocHGlobal(mscorlib::System::IntPtr cb);
 					static mscorlib::System::IntPtr  AllocHGlobal(mscorlib::System::Int32 cb);
 					static mscorlib::System::Object  BindToMoniker(mscorlib::System::String monikerName);
+					static mscorlib::System::Object  BindToMoniker(const char *monikerName);
 					static void  ChangeWrapperHandleStrength(mscorlib::System::Object otp, mscorlib::System::Boolean fIsWeak);
 					static void  Copy(std::vector<mscorlib::System::Byte*> source, mscorlib::System::Int32 startIndex, mscorlib::System::IntPtr destination, mscorlib::System::Int32 length);
 					static void  Copy(std::vector<mscorlib::System::Char*> source, mscorlib::System::Int32 startIndex, mscorlib::System::IntPtr destination, mscorlib::System::Int32 length);
@@ -170,6 +171,7 @@ namespace mscorlib
 					static mscorlib::System::Guid  GenerateGuidForType(mscorlib::System::Type type);
 					static mscorlib::System::String  GenerateProgIdForType(mscorlib::System::Type type);
 					static mscorlib::System::Object  GetActiveObject(mscorlib::System::String progID);
+					static mscorlib::System::Object  GetActiveObject(const char *progID);
 					static mscorlib::System::IntPtr  GetComInterfaceForObject(mscorlib::System::Object o, mscorlib::System::Type T);
 					template<typename T, typename TInterface>
 					static mscorlib::System::IntPtr  GetComInterfaceForObject(T o)
@@ -268,13 +270,25 @@ namespace mscorlib
 					static mscorlib::System::Int32  NumParamBytes(mscorlib::System::Reflection::MethodInfo m);
 					static mscorlib::System::Int32  GetLastWin32Error();
 					static mscorlib::System::IntPtr  OffsetOf(mscorlib::System::Type t, mscorlib::System::String fieldName);
+					static mscorlib::System::IntPtr  OffsetOf(mscorlib::System::Type t, const char *fieldName);
 					template<typename T>
 					static mscorlib::System::IntPtr  OffsetOf(mscorlib::System::String fieldName)
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(fieldName).name());
-						__parameters__[0] = (MonoObject*)fieldName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), fieldName);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "OffsetOf", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::IntPtr(__result__);
+					};
+					
+					template<typename T>
+					static mscorlib::System::IntPtr  OffsetOf(const char *fieldName)
+					{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(fieldName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), fieldName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "OffsetOf", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::IntPtr(__result__);
 					};
@@ -356,12 +370,19 @@ namespace mscorlib
 					};
 					
 					static mscorlib::System::IntPtr  StringToBSTR(mscorlib::System::String s);
+					static mscorlib::System::IntPtr  StringToBSTR(const char *s);
 					static mscorlib::System::IntPtr  StringToCoTaskMemAnsi(mscorlib::System::String s);
+					static mscorlib::System::IntPtr  StringToCoTaskMemAnsi(const char *s);
 					static mscorlib::System::IntPtr  StringToCoTaskMemAuto(mscorlib::System::String s);
+					static mscorlib::System::IntPtr  StringToCoTaskMemAuto(const char *s);
 					static mscorlib::System::IntPtr  StringToCoTaskMemUni(mscorlib::System::String s);
+					static mscorlib::System::IntPtr  StringToCoTaskMemUni(const char *s);
 					static mscorlib::System::IntPtr  StringToHGlobalAnsi(mscorlib::System::String s);
+					static mscorlib::System::IntPtr  StringToHGlobalAnsi(const char *s);
 					static mscorlib::System::IntPtr  StringToHGlobalAuto(mscorlib::System::String s);
+					static mscorlib::System::IntPtr  StringToHGlobalAuto(const char *s);
 					static mscorlib::System::IntPtr  StringToHGlobalUni(mscorlib::System::String s);
+					static mscorlib::System::IntPtr  StringToHGlobalUni(const char *s);
 					static mscorlib::System::IntPtr  SecureStringToBSTR(mscorlib::System::Security::SecureString s);
 					static mscorlib::System::IntPtr  SecureStringToCoTaskMemAnsi(mscorlib::System::Security::SecureString s);
 					static mscorlib::System::IntPtr  SecureStringToCoTaskMemUnicode(mscorlib::System::Security::SecureString s);

@@ -49,7 +49,7 @@ namespace mscorlib
 				mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  AssemblyHash::get_Algorithm() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Configuration.Assemblies", "AssemblyHash", 0, NULL, "get_Algorithm", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__>(*(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void AssemblyHash::set_Algorithm(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  value)
@@ -57,7 +57,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Configuration.Assemblies", "AssemblyHash", 0, NULL, "set_Algorithm", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

@@ -74,6 +74,7 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::DES  Create();
 					static mscorlib::System::Security::Cryptography::DES  Create(mscorlib::System::String algName);
+					static mscorlib::System::Security::Cryptography::DES  Create(const char *algName);
 					static mscorlib::System::Boolean  IsWeakKey(std::vector<mscorlib::System::Byte*> rgbKey);
 					static mscorlib::System::Boolean  IsSemiWeakKey(std::vector<mscorlib::System::Byte*> rgbKey);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

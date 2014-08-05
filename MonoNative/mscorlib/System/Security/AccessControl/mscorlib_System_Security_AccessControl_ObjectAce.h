@@ -68,11 +68,14 @@ namespace mscorlib
 						__parameter_types__[6] = Global::GetType("mscorlib", "System", "Guid");
 						__parameter_types__[7] = Global::GetType("mscorlib", "System", "Boolean");
 						__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
-						__parameters__[0] = reinterpret_cast<void*>(aceFlags);
-						__parameters__[1] = reinterpret_cast<void*>(qualifier);
+						int __param_aceFlags__ = aceFlags;
+						__parameters__[0] = &__param_aceFlags__;
+						int __param_qualifier__ = qualifier;
+						__parameters__[1] = &__param_qualifier__;
 						__parameters__[2] = &accessMask;
 						__parameters__[3] = (MonoObject*)sid;
-						__parameters__[4] = reinterpret_cast<void*>(flags);
+						int __param_flags__ = flags;
+						__parameters__[4] = &__param_flags__;
 						__parameters__[5] = (MonoObject*)type;
 						__parameters__[6] = (MonoObject*)inheritedType;
 						__parameters__[7] = reinterpret_cast<void*>(isCallback);

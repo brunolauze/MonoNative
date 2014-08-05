@@ -55,6 +55,7 @@ namespace mscorlib
 
 
 						virtual mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  CreateMessageSink(mscorlib::System::String url, mscorlib::System::Object remoteChannelData, mscorlib::System::String objectURI);
+						virtual mscorlib::System::Runtime::Remoting::Messaging::IMessageSink  CreateMessageSink(const char *url, mscorlib::System::Object remoteChannelData, const char *objectURI);
 
 
 					

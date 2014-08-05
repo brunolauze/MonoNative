@@ -82,6 +82,7 @@ namespace mscorlib
 					mscorlib::System::Boolean  ValidKeySize(mscorlib::System::Int32 bitLength);
 					static mscorlib::System::Security::Cryptography::SymmetricAlgorithm  Create();
 					static mscorlib::System::Security::Cryptography::SymmetricAlgorithm  Create(mscorlib::System::String algName);
+					static mscorlib::System::Security::Cryptography::SymmetricAlgorithm  Create(const char *algName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

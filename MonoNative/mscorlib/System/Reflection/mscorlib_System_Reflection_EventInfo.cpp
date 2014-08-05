@@ -139,7 +139,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::EventAttributes::__ENUM__  EventInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Reflection::EventAttributes::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Reflection::EventAttributes::__ENUM__>(*(mscorlib::System::Reflection::EventAttributes::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 
@@ -171,7 +171,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::MemberTypes::__ENUM__  EventInfo::get_MemberType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "EventInfo", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

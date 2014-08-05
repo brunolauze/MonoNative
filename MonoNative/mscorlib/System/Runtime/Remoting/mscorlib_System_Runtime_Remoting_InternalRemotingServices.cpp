@@ -21,7 +21,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
-						__parameters__[0] = (MonoObject*)s;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "InternalRemotingServices", 0, NULL, "DebugOutChnl", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void InternalRemotingServices::DebugOutChnl(const char *s)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(s).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "InternalRemotingServices", 0, NULL, "DebugOutChnl", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -42,7 +51,18 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameter_types__[1] = Global::GetType(typeid(message).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						__parameters__[1] = (MonoObject*)message;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), message);
+						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "InternalRemotingServices", 0, NULL, "RemotingAssert", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void InternalRemotingServices::RemotingAssert(mscorlib::System::Boolean condition, const char *message)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(condition).name());
+						__parameter_types__[1] = Global::GetType(typeid(message).name());
+						__parameters__[0] = reinterpret_cast<void*>(condition);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), message);
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "InternalRemotingServices", 0, NULL, "RemotingAssert", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 

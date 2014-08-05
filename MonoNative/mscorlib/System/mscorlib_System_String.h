@@ -304,8 +304,10 @@ namespace mscorlib
 
 
 			static mscorlib::System::Boolean  Equals(mscorlib::System::String a, mscorlib::System::String b);
+			static mscorlib::System::Boolean  Equals(const char *a, const char *b);
 			virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object obj) override;
 			virtual mscorlib::System::Boolean  Equals(mscorlib::System::String value);
+			virtual mscorlib::System::Boolean  Equals(const char *value);
 			virtual mscorlib::System::Object  Clone();
 			virtual mscorlib::System::TypeCode::__ENUM__  GetTypeCode();
 			void  CopyTo(mscorlib::System::Int32 sourceIndex, std::vector<mscorlib::System::Char*> destination, mscorlib::System::Int32 destinationIndex, mscorlib::System::Int32 count);
@@ -324,38 +326,64 @@ namespace mscorlib
 			mscorlib::System::String  TrimStart(std::vector<mscorlib::System::Char*> trimChars);
 			mscorlib::System::String  TrimEnd(std::vector<mscorlib::System::Char*> trimChars);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::String strB);
+			static mscorlib::System::Int32  Compare(const char *strA, const char *strB);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::String strB, mscorlib::System::Boolean ignoreCase);
+			static mscorlib::System::Int32  Compare(const char *strA, const char *strB, mscorlib::System::Boolean ignoreCase);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::String strB, mscorlib::System::Boolean ignoreCase, mscorlib::System::Globalization::CultureInfo culture);
+			static mscorlib::System::Int32  Compare(const char *strA, const char *strB, mscorlib::System::Boolean ignoreCase, mscorlib::System::Globalization::CultureInfo culture);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::Int32 indexA, mscorlib::System::String strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length);
+			static mscorlib::System::Int32  Compare(const char *strA, mscorlib::System::Int32 indexA, const char *strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::Int32 indexA, mscorlib::System::String strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length, mscorlib::System::Boolean ignoreCase);
+			static mscorlib::System::Int32  Compare(const char *strA, mscorlib::System::Int32 indexA, const char *strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length, mscorlib::System::Boolean ignoreCase);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::Int32 indexA, mscorlib::System::String strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length, mscorlib::System::Boolean ignoreCase, mscorlib::System::Globalization::CultureInfo culture);
+			static mscorlib::System::Int32  Compare(const char *strA, mscorlib::System::Int32 indexA, const char *strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length, mscorlib::System::Boolean ignoreCase, mscorlib::System::Globalization::CultureInfo culture);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::String strB, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			static mscorlib::System::Int32  Compare(const char *strA, const char *strB, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::Int32 indexA, mscorlib::System::String strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			static mscorlib::System::Int32  Compare(const char *strA, mscorlib::System::Int32 indexA, const char *strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			static mscorlib::System::Boolean  Equals(mscorlib::System::String a, mscorlib::System::String b, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			static mscorlib::System::Boolean  Equals(const char *a, const char *b, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Boolean  Equals(mscorlib::System::String value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Boolean  Equals(const char *value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::String strB, mscorlib::System::Globalization::CultureInfo culture, mscorlib::System::Globalization::CompareOptions::__ENUM__ options);
+			static mscorlib::System::Int32  Compare(const char *strA, const char *strB, mscorlib::System::Globalization::CultureInfo culture, mscorlib::System::Globalization::CompareOptions::__ENUM__ options);
 			static mscorlib::System::Int32  Compare(mscorlib::System::String strA, mscorlib::System::Int32 indexA, mscorlib::System::String strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length, mscorlib::System::Globalization::CultureInfo culture, mscorlib::System::Globalization::CompareOptions::__ENUM__ options);
+			static mscorlib::System::Int32  Compare(const char *strA, mscorlib::System::Int32 indexA, const char *strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length, mscorlib::System::Globalization::CultureInfo culture, mscorlib::System::Globalization::CompareOptions::__ENUM__ options);
 			virtual mscorlib::System::Int32  CompareTo(mscorlib::System::Object value);
 			virtual mscorlib::System::Int32  CompareTo(mscorlib::System::String strB);
+			virtual mscorlib::System::Int32  CompareTo(const char *strB);
 			static mscorlib::System::Int32  CompareOrdinal(mscorlib::System::String strA, mscorlib::System::String strB);
+			static mscorlib::System::Int32  CompareOrdinal(const char *strA, const char *strB);
 			static mscorlib::System::Int32  CompareOrdinal(mscorlib::System::String strA, mscorlib::System::Int32 indexA, mscorlib::System::String strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length);
+			static mscorlib::System::Int32  CompareOrdinal(const char *strA, mscorlib::System::Int32 indexA, const char *strB, mscorlib::System::Int32 indexB, mscorlib::System::Int32 length);
 			mscorlib::System::Boolean  EndsWith(mscorlib::System::String value);
+			mscorlib::System::Boolean  EndsWith(const char *value);
 			mscorlib::System::Boolean  EndsWith(mscorlib::System::String value, mscorlib::System::Boolean ignoreCase, mscorlib::System::Globalization::CultureInfo culture);
+			mscorlib::System::Boolean  EndsWith(const char *value, mscorlib::System::Boolean ignoreCase, mscorlib::System::Globalization::CultureInfo culture);
 			mscorlib::System::Int32  IndexOfAny(std::vector<mscorlib::System::Char*> anyOf);
 			mscorlib::System::Int32  IndexOfAny(std::vector<mscorlib::System::Char*> anyOf, mscorlib::System::Int32 startIndex);
 			mscorlib::System::Int32  IndexOfAny(std::vector<mscorlib::System::Char*> anyOf, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::String value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Int32  IndexOf(const char *value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::String value, mscorlib::System::Int32 startIndex, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Int32  IndexOf(const char *value, mscorlib::System::Int32 startIndex, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::String value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Int32  IndexOf(const char *value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Int32  LastIndexOf(mscorlib::System::String value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Int32  LastIndexOf(const char *value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Int32  LastIndexOf(mscorlib::System::String value, mscorlib::System::Int32 startIndex, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Int32  LastIndexOf(const char *value, mscorlib::System::Int32 startIndex, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Int32  LastIndexOf(mscorlib::System::String value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Int32  LastIndexOf(const char *value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::Char value);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::Char value, mscorlib::System::Int32 startIndex);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::Char value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::String value);
+			mscorlib::System::Int32  IndexOf(const char *value);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::String value, mscorlib::System::Int32 startIndex);
+			mscorlib::System::Int32  IndexOf(const char *value, mscorlib::System::Int32 startIndex);
 			mscorlib::System::Int32  IndexOf(mscorlib::System::String value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
+			mscorlib::System::Int32  IndexOf(const char *value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
 			mscorlib::System::Int32  LastIndexOfAny(std::vector<mscorlib::System::Char*> anyOf);
 			mscorlib::System::Int32  LastIndexOfAny(std::vector<mscorlib::System::Char*> anyOf, mscorlib::System::Int32 startIndex);
 			mscorlib::System::Int32  LastIndexOfAny(std::vector<mscorlib::System::Char*> anyOf, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
@@ -363,10 +391,15 @@ namespace mscorlib
 			mscorlib::System::Int32  LastIndexOf(mscorlib::System::Char value, mscorlib::System::Int32 startIndex);
 			mscorlib::System::Int32  LastIndexOf(mscorlib::System::Char value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
 			mscorlib::System::Int32  LastIndexOf(mscorlib::System::String value);
+			mscorlib::System::Int32  LastIndexOf(const char *value);
 			mscorlib::System::Int32  LastIndexOf(mscorlib::System::String value, mscorlib::System::Int32 startIndex);
+			mscorlib::System::Int32  LastIndexOf(const char *value, mscorlib::System::Int32 startIndex);
 			mscorlib::System::Int32  LastIndexOf(mscorlib::System::String value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
+			mscorlib::System::Int32  LastIndexOf(const char *value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
 			mscorlib::System::Boolean  Contains(mscorlib::System::String value);
+			mscorlib::System::Boolean  Contains(const char *value);
 			static mscorlib::System::Boolean  IsNullOrEmpty(mscorlib::System::String value);
+			static mscorlib::System::Boolean  IsNullOrEmpty(const char *value);
 			mscorlib::System::String  Normalize();
 			mscorlib::System::String  Normalize(mscorlib::System::Text::NormalizationForm::__ENUM__ normalizationForm);
 			mscorlib::System::Boolean  IsNormalized();
@@ -377,11 +410,16 @@ namespace mscorlib
 			mscorlib::System::String  PadRight(mscorlib::System::Int32 totalWidth);
 			mscorlib::System::String  PadRight(mscorlib::System::Int32 totalWidth, mscorlib::System::Char paddingChar);
 			mscorlib::System::Boolean  StartsWith(mscorlib::System::String value);
+			mscorlib::System::Boolean  StartsWith(const char *value);
 			mscorlib::System::Boolean  StartsWith(mscorlib::System::String value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Boolean  StartsWith(const char *value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Boolean  EndsWith(mscorlib::System::String value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
+			mscorlib::System::Boolean  EndsWith(const char *value, mscorlib::System::StringComparison::__ENUM__ comparisonType);
 			mscorlib::System::Boolean  StartsWith(mscorlib::System::String value, mscorlib::System::Boolean ignoreCase, mscorlib::System::Globalization::CultureInfo culture);
+			mscorlib::System::Boolean  StartsWith(const char *value, mscorlib::System::Boolean ignoreCase, mscorlib::System::Globalization::CultureInfo culture);
 			mscorlib::System::String  Replace(mscorlib::System::Char oldChar, mscorlib::System::Char newChar);
 			mscorlib::System::String  Replace(mscorlib::System::String oldValue, mscorlib::System::String newValue);
+			mscorlib::System::String  Replace(const char *oldValue, const char *newValue);
 			mscorlib::System::String  Remove(mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
 			mscorlib::System::String  ToLower();
 			mscorlib::System::String  ToLower(mscorlib::System::Globalization::CultureInfo culture);
@@ -392,25 +430,39 @@ namespace mscorlib
 			virtual mscorlib::System::String  ToString() override;
 			virtual mscorlib::System::String  ToString(mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::String  Format(mscorlib::System::String format, mscorlib::System::Object arg0);
+			static mscorlib::System::String  Format(const char *format, mscorlib::System::Object arg0);
 			static mscorlib::System::String  Format(mscorlib::System::String format, mscorlib::System::Object arg0, mscorlib::System::Object arg1);
+			static mscorlib::System::String  Format(const char *format, mscorlib::System::Object arg0, mscorlib::System::Object arg1);
 			static mscorlib::System::String  Format(mscorlib::System::String format, mscorlib::System::Object arg0, mscorlib::System::Object arg1, mscorlib::System::Object arg2);
+			static mscorlib::System::String  Format(const char *format, mscorlib::System::Object arg0, mscorlib::System::Object arg1, mscorlib::System::Object arg2);
 			static mscorlib::System::String  Format(mscorlib::System::String format, std::vector<mscorlib::System::Object*> args);
+			static mscorlib::System::String  Format(const char *format, std::vector<mscorlib::System::Object*> args);
 			static mscorlib::System::String  Format(mscorlib::System::IFormatProvider provider, mscorlib::System::String format, std::vector<mscorlib::System::Object*> args);
+			static mscorlib::System::String  Format(mscorlib::System::IFormatProvider provider, const char *format, std::vector<mscorlib::System::Object*> args);
 			static mscorlib::System::String  Copy(mscorlib::System::String str);
+			static mscorlib::System::String  Copy(const char *str);
 			static mscorlib::System::String  Concat(mscorlib::System::Object arg0);
 			static mscorlib::System::String  Concat(mscorlib::System::Object arg0, mscorlib::System::Object arg1);
 			static mscorlib::System::String  Concat(mscorlib::System::Object arg0, mscorlib::System::Object arg1, mscorlib::System::Object arg2);
 			static mscorlib::System::String  Concat(mscorlib::System::Object arg0, mscorlib::System::Object arg1, mscorlib::System::Object arg2, mscorlib::System::Object arg3);
 			static mscorlib::System::String  Concat(mscorlib::System::String str0, mscorlib::System::String str1);
+			static mscorlib::System::String  Concat(const char *str0, const char *str1);
 			static mscorlib::System::String  Concat(mscorlib::System::String str0, mscorlib::System::String str1, mscorlib::System::String str2);
+			static mscorlib::System::String  Concat(const char *str0, const char *str1, const char *str2);
 			static mscorlib::System::String  Concat(mscorlib::System::String str0, mscorlib::System::String str1, mscorlib::System::String str2, mscorlib::System::String str3);
+			static mscorlib::System::String  Concat(const char *str0, const char *str1, const char *str2, const char *str3);
 			static mscorlib::System::String  Concat(std::vector<mscorlib::System::Object*> args);
 			static mscorlib::System::String  Concat(std::vector<mscorlib::System::String*> values);
 			mscorlib::System::String  Insert(mscorlib::System::Int32 startIndex, mscorlib::System::String value);
+			mscorlib::System::String  Insert(mscorlib::System::Int32 startIndex, const char *value);
 			static mscorlib::System::String  Intern(mscorlib::System::String str);
+			static mscorlib::System::String  Intern(const char *str);
 			static mscorlib::System::String  IsInterned(mscorlib::System::String str);
+			static mscorlib::System::String  IsInterned(const char *str);
 			static mscorlib::System::String  Join(mscorlib::System::String separator, std::vector<mscorlib::System::String*> value);
+			static mscorlib::System::String  Join(const char *separator, std::vector<mscorlib::System::String*> value);
 			static mscorlib::System::String  Join(mscorlib::System::String separator, std::vector<mscorlib::System::String*> value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
+			static mscorlib::System::String  Join(const char *separator, std::vector<mscorlib::System::String*> value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count);
 			mscorlib::System::CharEnumerator * GetEnumerator();
 			virtual mscorlib::System::Int32  GetHashCode() override;
 			static mscorlib::System::String  Concat(mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String> values);
@@ -426,7 +478,9 @@ namespace mscorlib
 			};
 			
 			static mscorlib::System::String  Join(mscorlib::System::String separator, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String> values);
+			static mscorlib::System::String  Join(const char *separator, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String> values);
 			static mscorlib::System::String  Join(mscorlib::System::String separator, std::vector<mscorlib::System::Object*> values);
+			static mscorlib::System::String  Join(const char *separator, std::vector<mscorlib::System::Object*> values);
 			template<typename T>
 			static mscorlib::System::String  Join(mscorlib::System::String separator, mscorlib::System::Collections::Generic::IEnumerable<T> values)
 			{
@@ -434,13 +488,27 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(separator).name());
 				__parameter_types__[1] = Global::GetType(typeid(values).name());
-				__parameters__[0] = (MonoObject*)separator;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), separator);
+				__parameters__[1] = (MonoObject*)values;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Join", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::String(__result__);
+			};
+			
+			template<typename T>
+			static mscorlib::System::String  Join(const char *separator, mscorlib::System::Collections::Generic::IEnumerable<T> values)
+			{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(separator).name());
+				__parameter_types__[1] = Global::GetType(typeid(values).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), separator);
 				__parameters__[1] = (MonoObject*)values;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Join", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 			};
 			
 			static mscorlib::System::Boolean  IsNullOrWhiteSpace(mscorlib::System::String value);
+			static mscorlib::System::Boolean  IsNullOrWhiteSpace(const char *value);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

@@ -65,9 +65,12 @@ namespace mscorlib
 					virtual void  GetBindOptions(mscorlib::System::Runtime::InteropServices::BIND_OPTS pbindopts);
 					virtual void  GetRunningObjectTable(mscorlib::System::Runtime::InteropServices::UCOMIRunningObjectTable pprot);
 					virtual void  RegisterObjectParam(mscorlib::System::String pszKey, mscorlib::System::Object punk);
+					virtual void  RegisterObjectParam(const char *pszKey, mscorlib::System::Object punk);
 					virtual void  GetObjectParam(mscorlib::System::String pszKey, mscorlib::System::Object ppunk);
+					virtual void  GetObjectParam(const char *pszKey, mscorlib::System::Object ppunk);
 					virtual void  EnumObjectParam(mscorlib::System::Runtime::InteropServices::UCOMIEnumString ppenum);
 					virtual void  RevokeObjectParam(mscorlib::System::String pszKey);
+					virtual void  RevokeObjectParam(const char *pszKey);
 
 
 				

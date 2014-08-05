@@ -54,7 +54,7 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(time).name());
 					__parameters__[0] = (MonoObject*)time;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "PersianCalendar", 0, NULL, "GetDayOfWeek", __native_object__, 1, __parameter_types__, __parameters__, NULL);
-					return *(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::DayOfWeek::__ENUM__>(*(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 			mscorlib::System::Int32 PersianCalendar::GetDayOfYear(mscorlib::System::DateTime time)
@@ -261,7 +261,7 @@ namespace mscorlib
 			mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  PersianCalendar::get_AlgorithmType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "PersianCalendar", 0, NULL, "get_AlgorithmType", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__>(*(mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

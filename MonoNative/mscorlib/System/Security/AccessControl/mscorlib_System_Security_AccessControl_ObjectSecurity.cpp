@@ -31,9 +31,12 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)identityReference;
 						__parameters__[1] = &accessMask;
 						__parameters__[2] = reinterpret_cast<void*>(isInherited);
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[5] = reinterpret_cast<void*>(type);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
+						int __param_type__ = type;
+						__parameters__[5] = &__param_type__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "AccessRuleFactory", __native_object__, 6, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::AccessControl::AccessRuleBase(__result__);
 				}
@@ -51,9 +54,12 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)identityReference;
 						__parameters__[1] = &accessMask;
 						__parameters__[2] = reinterpret_cast<void*>(isInherited);
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[5] = reinterpret_cast<void*>(flags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
+						int __param_flags__ = flags;
+						__parameters__[5] = &__param_flags__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "AuditRuleFactory", __native_object__, 6, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::AccessControl::AuditRuleBase(__result__);
 				}
@@ -97,7 +103,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(includeSections).name());
-						__parameters__[0] = reinterpret_cast<void*>(includeSections);
+						int __param_includeSections__ = includeSections;
+						__parameters__[0] = &__param_includeSections__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "GetSecurityDescriptorSddlForm", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -115,7 +122,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(modification).name());
 						__parameter_types__[1] = Global::GetType(typeid(rule).name());
 						__parameter_types__[2] = Global::GetType(typeid(modified).name());
-						__parameters__[0] = reinterpret_cast<void*>(modification);
+						int __param_modification__ = modification;
+						__parameters__[0] = &__param_modification__;
 						__parameters__[1] = (MonoObject*)rule;
 						__parameters__[2] = &modified;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "ModifyAccessRule", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -129,7 +137,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(modification).name());
 						__parameter_types__[1] = Global::GetType(typeid(rule).name());
 						__parameter_types__[2] = Global::GetType(typeid(modified).name());
-						__parameters__[0] = reinterpret_cast<void*>(modification);
+						int __param_modification__ = modification;
+						__parameters__[0] = &__param_modification__;
 						__parameters__[1] = (MonoObject*)rule;
 						__parameters__[2] = &modified;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "ModifyAuditRule", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -210,7 +219,8 @@ namespace mscorlib
 						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(binaryForm).name()))->eklass);
 						__parameter_types__[1] = Global::GetType(typeid(includeSections).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(binaryForm, typeid(mscorlib::System::Byte).name());
-						__parameters__[1] = reinterpret_cast<void*>(includeSections);
+						int __param_includeSections__ = includeSections;
+						__parameters__[1] = &__param_includeSections__;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "SetSecurityDescriptorBinaryForm", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -219,7 +229,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(sddlForm).name());
-						__parameters__[0] = (MonoObject*)sddlForm;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sddlForm);
+						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "SetSecurityDescriptorSddlForm", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ObjectSecurityBase::SetSecurityDescriptorSddlForm(const char *sddlForm)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(sddlForm).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sddlForm);
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "SetSecurityDescriptorSddlForm", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -229,8 +248,21 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(sddlForm).name());
 						__parameter_types__[1] = Global::GetType(typeid(includeSections).name());
-						__parameters__[0] = (MonoObject*)sddlForm;
-						__parameters__[1] = reinterpret_cast<void*>(includeSections);
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sddlForm);
+						int __param_includeSections__ = includeSections;
+						__parameters__[1] = &__param_includeSections__;
+						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "SetSecurityDescriptorSddlForm", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ObjectSecurityBase::SetSecurityDescriptorSddlForm(const char *sddlForm, mscorlib::System::Security::AccessControl::AccessControlSections::__ENUM__ includeSections)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(sddlForm).name());
+						__parameter_types__[1] = Global::GetType(typeid(includeSections).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), sddlForm);
+						int __param_includeSections__ = includeSections;
+						__parameters__[1] = &__param_includeSections__;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "ObjectSecurity", 0, NULL, "SetSecurityDescriptorSddlForm", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 

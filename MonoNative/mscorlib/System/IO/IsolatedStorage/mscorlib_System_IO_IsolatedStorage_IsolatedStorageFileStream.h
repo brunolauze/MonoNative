@@ -138,7 +138,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileMode");
 						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
 						__native_object__ = Global::New("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 2, __parameter_types__, __parameters__);
 					};
 				
@@ -152,8 +153,10 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileMode");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
-						__parameters__[2] = reinterpret_cast<void*>(access);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
 						__native_object__ = Global::New("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 3, __parameter_types__, __parameters__);
 					};
 				
@@ -168,9 +171,12 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.IO", "FileShare");
 						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
-						__parameters__[2] = reinterpret_cast<void*>(access);
-						__parameters__[3] = reinterpret_cast<void*>(share);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
+						int __param_share__ = share;
+						__parameters__[3] = &__param_share__;
 						__native_object__ = Global::New("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 4, __parameter_types__, __parameters__);
 					};
 				
@@ -186,9 +192,12 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.IO", "FileShare");
 						__parameter_types__[4] = Global::GetType("mscorlib", "System", "Int32");
 						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
-						__parameters__[2] = reinterpret_cast<void*>(access);
-						__parameters__[3] = reinterpret_cast<void*>(share);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
+						int __param_share__ = share;
+						__parameters__[3] = &__param_share__;
 						__parameters__[4] = &bufferSize;
 						__native_object__ = Global::New("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 5, __parameter_types__, __parameters__);
 					};
@@ -206,9 +215,12 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType("mscorlib", "System", "Int32");
 						__parameter_types__[5] = Global::GetType("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile");
 						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
-						__parameters__[2] = reinterpret_cast<void*>(access);
-						__parameters__[3] = reinterpret_cast<void*>(share);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
+						int __param_share__ = share;
+						__parameters__[3] = &__param_share__;
 						__parameters__[4] = &bufferSize;
 						__parameters__[5] = (MonoObject*)isf;
 						__native_object__ = Global::New("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 6, __parameter_types__, __parameters__);
@@ -226,9 +238,12 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.IO", "FileShare");
 						__parameter_types__[4] = Global::GetType("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile");
 						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
-						__parameters__[2] = reinterpret_cast<void*>(access);
-						__parameters__[3] = reinterpret_cast<void*>(share);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
+						int __param_share__ = share;
+						__parameters__[3] = &__param_share__;
 						__parameters__[4] = (MonoObject*)isf;
 						__native_object__ = Global::New("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 5, __parameter_types__, __parameters__);
 					};
@@ -244,8 +259,10 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile");
 						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
-						__parameters__[2] = reinterpret_cast<void*>(access);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
+						int __param_access__ = access;
+						__parameters__[2] = &__param_access__;
 						__parameters__[3] = (MonoObject*)isf;
 						__native_object__ = Global::New("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 4, __parameter_types__, __parameters__);
 					};
@@ -260,7 +277,8 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileMode");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFile");
 						__parameters__[0] = (MonoObject*)path;
-						__parameters__[1] = reinterpret_cast<void*>(mode);
+						int __param_mode__ = mode;
+						__parameters__[1] = &__param_mode__;
 						__parameters__[2] = (MonoObject*)isf;
 						__native_object__ = Global::New("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 3, __parameter_types__, __parameters__);
 					};

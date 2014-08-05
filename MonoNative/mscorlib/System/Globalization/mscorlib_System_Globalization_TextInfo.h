@@ -57,10 +57,13 @@ namespace mscorlib
 				virtual mscorlib::System::Int32  GetHashCode() override;
 				virtual mscorlib::System::String  ToString() override;
 				mscorlib::System::String  ToTitleCase(mscorlib::System::String str);
+				mscorlib::System::String  ToTitleCase(const char *str);
 				virtual mscorlib::System::Char  ToLower(mscorlib::System::Char c);
 				virtual mscorlib::System::Char  ToUpper(mscorlib::System::Char c);
 				virtual mscorlib::System::String  ToLower(mscorlib::System::String str);
+				virtual mscorlib::System::String  ToLower(const char *str);
 				virtual mscorlib::System::String  ToUpper(mscorlib::System::String str);
+				virtual mscorlib::System::String  ToUpper(const char *str);
 				static mscorlib::System::Globalization::TextInfo  ReadOnly(mscorlib::System::Globalization::TextInfo textInfo);
 				virtual mscorlib::System::Object  Clone();
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

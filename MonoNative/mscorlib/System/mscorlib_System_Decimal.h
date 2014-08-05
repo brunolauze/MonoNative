@@ -233,11 +233,17 @@ namespace mscorlib
 			virtual mscorlib::System::Boolean  Equals(mscorlib::System::Decimal value);
 			static mscorlib::System::Decimal  Ceiling(mscorlib::System::Decimal d);
 			static mscorlib::System::Decimal  Parse(mscorlib::System::String s);
+			static mscorlib::System::Decimal  Parse(const char *s);
 			static mscorlib::System::Decimal  Parse(mscorlib::System::String s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style);
+			static mscorlib::System::Decimal  Parse(const char *s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style);
 			static mscorlib::System::Decimal  Parse(mscorlib::System::String s, mscorlib::System::IFormatProvider provider);
+			static mscorlib::System::Decimal  Parse(const char *s, mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::Decimal  Parse(mscorlib::System::String s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style, mscorlib::System::IFormatProvider provider);
+			static mscorlib::System::Decimal  Parse(const char *s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style, mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String s, mscorlib::System::Decimal result);
+			static mscorlib::System::Boolean  TryParse(const char *s, mscorlib::System::Decimal result);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style, mscorlib::System::IFormatProvider provider, mscorlib::System::Decimal result);
+			static mscorlib::System::Boolean  TryParse(const char *s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style, mscorlib::System::IFormatProvider provider, mscorlib::System::Decimal result);
 			virtual mscorlib::System::TypeCode::__ENUM__  GetTypeCode();
 			static mscorlib::System::Byte  ToByte(mscorlib::System::Decimal value);
 			static mscorlib::System::Double  ToDouble(mscorlib::System::Decimal d);
@@ -251,8 +257,10 @@ namespace mscorlib
 			static mscorlib::System::UInt32  ToUInt32(mscorlib::System::Decimal d);
 			static mscorlib::System::UInt64  ToUInt64(mscorlib::System::Decimal d);
 			virtual mscorlib::System::String  ToString(mscorlib::System::String format, mscorlib::System::IFormatProvider provider);
+			virtual mscorlib::System::String  ToString(const char *format, mscorlib::System::IFormatProvider provider);
 			virtual mscorlib::System::String  ToString() override;
 			mscorlib::System::String  ToString(mscorlib::System::String format);
+			mscorlib::System::String  ToString(const char *format);
 			virtual mscorlib::System::String  ToString(mscorlib::System::IFormatProvider provider);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

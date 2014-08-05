@@ -57,7 +57,7 @@ namespace mscorlib
 				mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__  ISymbolVariable::get_AddressKind() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolVariable", 0, NULL, "get_AddressKind", __mscorlib_System_Diagnostics_SymbolStore_ISymbolVariable, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__>(*(mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

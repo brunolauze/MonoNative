@@ -44,8 +44,11 @@ namespace mscorlib
 					virtual void  GetClassID(mscorlib::System::Guid pClassID);
 					virtual mscorlib::System::Int32  IsDirty();
 					virtual void  Load(mscorlib::System::String pszFileName, mscorlib::System::Int32 dwMode);
+					virtual void  Load(const char *pszFileName, mscorlib::System::Int32 dwMode);
 					virtual void  Save(mscorlib::System::String pszFileName, mscorlib::System::Boolean fRemember);
+					virtual void  Save(const char *pszFileName, mscorlib::System::Boolean fRemember);
 					virtual void  SaveCompleted(mscorlib::System::String pszFileName);
+					virtual void  SaveCompleted(const char *pszFileName);
 					virtual void  GetCurFile(mscorlib::System::String ppszFileName);
 
 

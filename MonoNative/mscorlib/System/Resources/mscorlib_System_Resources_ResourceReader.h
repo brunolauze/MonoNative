@@ -90,6 +90,7 @@ namespace mscorlib
 				virtual void  Dispose();
 				virtual mscorlib::System::Collections::IDictionaryEnumerator * GetEnumerator();
 				void  GetResourceData(mscorlib::System::String resourceName, mscorlib::System::String resourceType, mscorlib::System::Byte* resourceData);
+				void  GetResourceData(const char *resourceName, const char *resourceType, mscorlib::System::Byte* resourceData);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

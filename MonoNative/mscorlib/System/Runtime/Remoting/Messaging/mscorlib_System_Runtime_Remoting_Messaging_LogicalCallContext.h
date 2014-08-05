@@ -75,9 +75,12 @@ namespace mscorlib
 
 
 						void  FreeNamedDataSlot(mscorlib::System::String name);
+						void  FreeNamedDataSlot(const char *name);
 						mscorlib::System::Object  GetData(mscorlib::System::String name);
+						mscorlib::System::Object  GetData(const char *name);
 						virtual void  GetObjectData(mscorlib::System::Runtime::Serialization::SerializationInfo info, mscorlib::System::Runtime::Serialization::StreamingContext context);
 						void  SetData(mscorlib::System::String name, mscorlib::System::Object data);
+						void  SetData(const char *name, mscorlib::System::Object data);
 						virtual mscorlib::System::Object  Clone();
 						virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

@@ -118,6 +118,7 @@ namespace mscorlib
 					virtual mscorlib::System::Security::Claims::Claim  FindFirst(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Security::Claims::Claim )> match);
 					virtual mscorlib::System::Boolean  HasClaim(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Security::Claims::Claim )> match);
 					virtual mscorlib::System::Boolean  IsInRole(mscorlib::System::String role);
+					virtual mscorlib::System::Boolean  IsInRole(const char *role);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

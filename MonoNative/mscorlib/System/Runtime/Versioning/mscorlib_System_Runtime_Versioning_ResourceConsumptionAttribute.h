@@ -38,7 +38,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.Versioning", "ResourceScope");
-						__parameters__[0] = reinterpret_cast<void*>(resourceScope);
+						int __param_resourceScope__ = resourceScope;
+						__parameters__[0] = &__param_resourceScope__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Versioning", "ResourceConsumptionAttribute", 1, __parameter_types__, __parameters__);
 					};
 				
@@ -50,8 +51,10 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.Versioning", "ResourceScope");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Runtime.Versioning", "ResourceScope");
-						__parameters__[0] = reinterpret_cast<void*>(resourceScope);
-						__parameters__[1] = reinterpret_cast<void*>(consumptionScope);
+						int __param_resourceScope__ = resourceScope;
+						__parameters__[0] = &__param_resourceScope__;
+						int __param_consumptionScope__ = consumptionScope;
+						__parameters__[1] = &__param_consumptionScope__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Versioning", "ResourceConsumptionAttribute", 2, __parameter_types__, __parameters__);
 					};
 				

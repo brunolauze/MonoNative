@@ -32,7 +32,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(algorithmName).name());
-						__parameters__[0] = (MonoObject*)algorithmName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), algorithmName);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HMAC", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Security::Cryptography::HMAC(__result__);
+				}
+
+				mscorlib::System::Security::Cryptography::HMAC HMAC::Create(const char *algorithmName)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(algorithmName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), algorithmName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HMAC", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::HMAC(__result__);
 				}
@@ -50,7 +60,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "HMAC", 0, NULL, "set_HashName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

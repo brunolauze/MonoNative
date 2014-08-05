@@ -38,8 +38,21 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(category).name());
 					__parameter_types__[2] = Global::GetType(typeid(message).name());
 					__parameters__[0] = &level;
-					__parameters__[1] = (MonoObject*)category;
-					__parameters__[2] = (MonoObject*)message;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), category);
+					__parameters__[2] = mono_string_new(Global::GetDomain(), message);
+					Global::InvokeMethod("mscorlib", "System.Diagnostics", "Debugger", 0, NULL, "Log", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+			}
+
+			void Debugger::Log(mscorlib::System::Int32 level, const char *category, const char *message)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(level).name());
+					__parameter_types__[1] = Global::GetType(typeid(category).name());
+					__parameter_types__[2] = Global::GetType(typeid(message).name());
+					__parameters__[0] = &level;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), category);
+					__parameters__[2] = mono_string_new(Global::GetDomain(), message);
 					Global::InvokeMethod("mscorlib", "System.Diagnostics", "Debugger", 0, NULL, "Log", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 			}
 

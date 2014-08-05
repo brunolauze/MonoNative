@@ -57,7 +57,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.CompilerServices", "MethodImplOptions");
-						__parameters__[0] = reinterpret_cast<void*>(methodImplOptions);
+						int __param_methodImplOptions__ = methodImplOptions;
+						__parameters__[0] = &__param_methodImplOptions__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.CompilerServices", "MethodImplAttribute", 1, __parameter_types__, __parameters__);
 					};
 				

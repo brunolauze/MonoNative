@@ -72,11 +72,13 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::RSA  Create();
 					static mscorlib::System::Security::Cryptography::RSA  Create(mscorlib::System::String algName);
+					static mscorlib::System::Security::Cryptography::RSA  Create(const char *algName);
 					virtual std::vector<mscorlib::System::Byte*>  EncryptValue(std::vector<mscorlib::System::Byte*> rgb);
 					virtual std::vector<mscorlib::System::Byte*>  DecryptValue(std::vector<mscorlib::System::Byte*> rgb);
 					virtual mscorlib::System::Security::Cryptography::RSAParameters  ExportParameters(mscorlib::System::Boolean includePrivateParameters);
 					virtual void  ImportParameters(mscorlib::System::Security::Cryptography::RSAParameters parameters);
 					virtual void  FromXmlString(mscorlib::System::String xmlString) override;
+					virtual void  FromXmlString(const char *xmlString) override;
 					virtual mscorlib::System::String  ToXmlString(mscorlib::System::Boolean includePrivateParameters) override;
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

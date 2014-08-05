@@ -77,8 +77,10 @@ namespace mscorlib
 
 				virtual mscorlib::System::Int32  GetByteCount(std::vector<mscorlib::System::Char*> chars, mscorlib::System::Int32 index, mscorlib::System::Int32 count) override;
 				virtual mscorlib::System::Int32  GetByteCount(mscorlib::System::String chars) override;
+				virtual mscorlib::System::Int32  GetByteCount(const char *chars) override;
 				virtual mscorlib::System::Int32  GetBytes(std::vector<mscorlib::System::Char*> chars, mscorlib::System::Int32 charIndex, mscorlib::System::Int32 charCount, std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 byteIndex) override;
 				virtual mscorlib::System::Int32  GetBytes(mscorlib::System::String chars, mscorlib::System::Int32 charIndex, mscorlib::System::Int32 charCount, std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 byteIndex) override;
+				virtual mscorlib::System::Int32  GetBytes(const char *chars, mscorlib::System::Int32 charIndex, mscorlib::System::Int32 charCount, std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 byteIndex) override;
 				virtual mscorlib::System::Int32  GetCharCount(std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 index, mscorlib::System::Int32 count) override;
 				virtual mscorlib::System::Int32  GetChars(std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 byteIndex, mscorlib::System::Int32 byteCount, std::vector<mscorlib::System::Char*> chars, mscorlib::System::Int32 charIndex) override;
 				virtual mscorlib::System::Int32  GetMaxByteCount(mscorlib::System::Int32 charCount) override;

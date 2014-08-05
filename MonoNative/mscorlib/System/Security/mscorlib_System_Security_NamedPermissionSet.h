@@ -83,7 +83,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Permissions", "PermissionState");
 					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(state);
+					int __param_state__ = state;
+					__parameters__[1] = &__param_state__;
 					__native_object__ = Global::New("mscorlib", "System.Security", "NamedPermissionSet", 2, __parameter_types__, __parameters__);
 				};
 			
@@ -149,6 +150,7 @@ namespace mscorlib
 
 				virtual mscorlib::System::Security::PermissionSet  Copy() override;
 				mscorlib::System::Security::NamedPermissionSet  Copy(mscorlib::System::String name);
+				mscorlib::System::Security::NamedPermissionSet  Copy(const char *name);
 				virtual void  FromXml(mscorlib::System::Security::SecurityElement et) override;
 				virtual mscorlib::System::Security::SecurityElement  ToXml() override;
 				virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object obj) override;

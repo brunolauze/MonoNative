@@ -34,9 +34,12 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)identityReference;
 						__parameters__[1] = &accessMask;
 						__parameters__[2] = reinterpret_cast<void*>(isInherited);
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[5] = reinterpret_cast<void*>(type);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
+						int __param_type__ = type;
+						__parameters__[5] = &__param_type__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "EventWaitHandleSecurity", 0, NULL, "AccessRuleFactory", __native_object__, 6, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::AccessControl::AccessRuleBase(__result__);
 				}
@@ -109,9 +112,12 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)identityReference;
 						__parameters__[1] = &accessMask;
 						__parameters__[2] = reinterpret_cast<void*>(isInherited);
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[5] = reinterpret_cast<void*>(flags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
+						int __param_flags__ = flags;
+						__parameters__[5] = &__param_flags__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "EventWaitHandleSecurity", 0, NULL, "AuditRuleFactory", __native_object__, 6, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::AccessControl::AuditRuleBase(__result__);
 				}

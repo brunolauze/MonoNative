@@ -67,7 +67,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType("mscorlib", "System.Diagnostics", "DebuggingModes");
-					__parameters__[0] = reinterpret_cast<void*>(modes);
+					int __param_modes__ = modes;
+					__parameters__[0] = &__param_modes__;
 					__native_object__ = Global::New("mscorlib", "System.Diagnostics", "DebuggableAttribute", 1, __parameter_types__, __parameters__);
 				};
 			

@@ -48,7 +48,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(callingConvention).name());
 						__parameter_types__[1] = Global::GetType(typeid(returnType).name());
-						__parameters__[0] = reinterpret_cast<void*>(callingConvention);
+						int __param_callingConvention__ = callingConvention;
+						__parameters__[0] = &__param_callingConvention__;
 						__parameters__[1] = (MonoObject*)returnType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "SignatureHelper", 0, NULL, "GetMethodSigHelper", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Reflection::Emit::SignatureHelper(__result__);
@@ -60,7 +61,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(unmanagedCallingConvention).name());
 						__parameter_types__[1] = Global::GetType(typeid(returnType).name());
-						__parameters__[0] = reinterpret_cast<void*>(unmanagedCallingConvention);
+						int __param_unmanagedCallingConvention__ = unmanagedCallingConvention;
+						__parameters__[0] = &__param_unmanagedCallingConvention__;
 						__parameters__[1] = (MonoObject*)returnType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "SignatureHelper", 0, NULL, "GetMethodSigHelper", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Reflection::Emit::SignatureHelper(__result__);
@@ -74,7 +76,8 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(callingConvention).name());
 						__parameter_types__[2] = Global::GetType(typeid(returnType).name());
 						__parameters__[0] = (MonoObject*)mod;
-						__parameters__[1] = reinterpret_cast<void*>(callingConvention);
+						int __param_callingConvention__ = callingConvention;
+						__parameters__[1] = &__param_callingConvention__;
 						__parameters__[2] = (MonoObject*)returnType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "SignatureHelper", 0, NULL, "GetMethodSigHelper", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Reflection::Emit::SignatureHelper(__result__);
@@ -88,7 +91,8 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(unmanagedCallConv).name());
 						__parameter_types__[2] = Global::GetType(typeid(returnType).name());
 						__parameters__[0] = (MonoObject*)mod;
-						__parameters__[1] = reinterpret_cast<void*>(unmanagedCallConv);
+						int __param_unmanagedCallConv__ = unmanagedCallConv;
+						__parameters__[1] = &__param_unmanagedCallConv__;
 						__parameters__[2] = (MonoObject*)returnType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "SignatureHelper", 0, NULL, "GetMethodSigHelper", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Reflection::Emit::SignatureHelper(__result__);
@@ -157,7 +161,8 @@ namespace mscorlib
 						__parameter_types__[6] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(requiredParameterTypeCustomModifiers).name()))->eklass);
 						__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(optionalParameterTypeCustomModifiers).name()))->eklass);
 						__parameters__[0] = (MonoObject*)mod;
-						__parameters__[1] = reinterpret_cast<void*>(callingConvention);
+						int __param_callingConvention__ = callingConvention;
+						__parameters__[1] = &__param_callingConvention__;
 						__parameters__[2] = (MonoObject*)returnType;
 						__parameters__[3] = Global::FromArray<mscorlib::System::Type*>(requiredReturnTypeCustomModifiers, typeid(mscorlib::System::Type).name());
 						__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(optionalReturnTypeCustomModifiers, typeid(mscorlib::System::Type).name());

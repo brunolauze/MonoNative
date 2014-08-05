@@ -77,8 +77,11 @@ namespace mscorlib
 			virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object x, mscorlib::System::Object y);
 			virtual mscorlib::System::Int32  GetHashCode(mscorlib::System::Object obj);
 			virtual mscorlib::System::Int32  Compare(mscorlib::System::String x, mscorlib::System::String y);
+			virtual mscorlib::System::Int32  Compare(const char *x, const char *y);
 			virtual mscorlib::System::Boolean  Equals(mscorlib::System::String x, mscorlib::System::String y);
+			virtual mscorlib::System::Boolean  Equals(const char *x, const char *y);
 			virtual mscorlib::System::Int32  GetHashCode(mscorlib::System::String obj);
+			virtual mscorlib::System::Int32  GetHashCode(const char *obj);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

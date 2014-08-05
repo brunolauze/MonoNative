@@ -61,9 +61,11 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "Int32");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.AccessControl", "CompoundAceType");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.Security.Principal", "SecurityIdentifier");
-						__parameters__[0] = reinterpret_cast<void*>(flags);
+						int __param_flags__ = flags;
+						__parameters__[0] = &__param_flags__;
 						__parameters__[1] = &accessMask;
-						__parameters__[2] = reinterpret_cast<void*>(compoundAceType);
+						int __param_compoundAceType__ = compoundAceType;
+						__parameters__[2] = &__param_compoundAceType__;
 						__parameters__[3] = (MonoObject*)sid;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "CompoundAce", 4, __parameter_types__, __parameters__);
 					};

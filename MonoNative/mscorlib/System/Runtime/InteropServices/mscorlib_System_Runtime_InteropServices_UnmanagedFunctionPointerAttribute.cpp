@@ -19,7 +19,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__  UnmanagedFunctionPointerAttribute::get_CallingConvention() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UnmanagedFunctionPointerAttribute", 0, NULL, "get_CallingConvention", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__>(*(mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

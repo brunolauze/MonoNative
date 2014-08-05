@@ -25,7 +25,17 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = (MonoObject*)name;
+							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.Expando", "IExpando", 0, NULL, "AddField", __mscorlib_System_Runtime_InteropServices_Expando_IExpando, 1, __parameter_types__, __parameters__, NULL);
+							return mscorlib::System::Reflection::FieldInfo(__result__);
+					}
+
+					mscorlib::System::Reflection::FieldInfo IExpando::AddField(const char *name)
+					{
+							MonoType *__parameter_types__[1];
+							void *__parameters__[1];
+							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.Expando", "IExpando", 0, NULL, "AddField", __mscorlib_System_Runtime_InteropServices_Expando_IExpando, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Reflection::FieldInfo(__result__);
 					}
@@ -36,7 +46,19 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
 							__parameter_types__[1] = Global::GetType(typeid(method).name());
-							__parameters__[0] = (MonoObject*)name;
+							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[1] = (MonoObject*)method;
+							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.Expando", "IExpando", 0, NULL, "AddMethod", __mscorlib_System_Runtime_InteropServices_Expando_IExpando, 2, __parameter_types__, __parameters__, NULL);
+							return mscorlib::System::Reflection::MethodInfo(__result__);
+					}
+
+					mscorlib::System::Reflection::MethodInfo IExpando::AddMethod(const char *name, mscorlib::System::Delegate method)
+					{
+							MonoType *__parameter_types__[2];
+							void *__parameters__[2];
+							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[1] = Global::GetType(typeid(method).name());
+							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							__parameters__[1] = (MonoObject*)method;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.Expando", "IExpando", 0, NULL, "AddMethod", __mscorlib_System_Runtime_InteropServices_Expando_IExpando, 2, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Reflection::MethodInfo(__result__);
@@ -47,7 +69,17 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = (MonoObject*)name;
+							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.Expando", "IExpando", 0, NULL, "AddProperty", __mscorlib_System_Runtime_InteropServices_Expando_IExpando, 1, __parameter_types__, __parameters__, NULL);
+							return mscorlib::System::Reflection::PropertyInfo(__result__);
+					}
+
+					mscorlib::System::Reflection::PropertyInfo IExpando::AddProperty(const char *name)
+					{
+							MonoType *__parameter_types__[1];
+							void *__parameters__[1];
+							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.Expando", "IExpando", 0, NULL, "AddProperty", __mscorlib_System_Runtime_InteropServices_Expando_IExpando, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Reflection::PropertyInfo(__result__);
 					}

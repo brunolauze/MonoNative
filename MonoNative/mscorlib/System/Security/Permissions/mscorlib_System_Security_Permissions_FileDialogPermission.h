@@ -61,7 +61,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "PermissionState");
-						__parameters__[0] = reinterpret_cast<void*>(state);
+						int __param_state__ = state;
+						__parameters__[0] = &__param_state__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileDialogPermission", 1, __parameter_types__, __parameters__);
 					};
 				
@@ -75,7 +76,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "FileDialogPermissionAccess");
-						__parameters__[0] = reinterpret_cast<void*>(access);
+						int __param_access__ = access;
+						__parameters__[0] = &__param_access__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileDialogPermission", 1, __parameter_types__, __parameters__);
 					};
 				

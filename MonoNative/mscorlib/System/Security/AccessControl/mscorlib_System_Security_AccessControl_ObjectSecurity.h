@@ -105,7 +105,9 @@ namespace mscorlib
 					void  SetSecurityDescriptorBinaryForm(std::vector<mscorlib::System::Byte*> binaryForm);
 					void  SetSecurityDescriptorBinaryForm(std::vector<mscorlib::System::Byte*> binaryForm, mscorlib::System::Security::AccessControl::AccessControlSections::__ENUM__ includeSections);
 					void  SetSecurityDescriptorSddlForm(mscorlib::System::String sddlForm);
+					void  SetSecurityDescriptorSddlForm(const char *sddlForm);
 					void  SetSecurityDescriptorSddlForm(mscorlib::System::String sddlForm, mscorlib::System::Security::AccessControl::AccessControlSections::__ENUM__ includeSections);
+					void  SetSecurityDescriptorSddlForm(const char *sddlForm, mscorlib::System::Security::AccessControl::AccessControlSections::__ENUM__ includeSections);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

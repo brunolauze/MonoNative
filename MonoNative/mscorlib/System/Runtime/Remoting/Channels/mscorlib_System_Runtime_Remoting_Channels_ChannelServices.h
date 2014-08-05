@@ -63,6 +63,7 @@ namespace mscorlib
 						static mscorlib::System::Runtime::Remoting::Channels::IServerChannelSink  CreateServerChannelSinkChain(mscorlib::System::Runtime::Remoting::Channels::IServerChannelSinkProvider provider, mscorlib::System::Runtime::Remoting::Channels::IChannelReceiver channel);
 						static mscorlib::System::Runtime::Remoting::Channels::ServerProcessing::__ENUM__  DispatchMessage(mscorlib::System::Runtime::Remoting::Channels::IServerChannelSinkStack sinkStack, mscorlib::System::Runtime::Remoting::Messaging::IMessage msg, mscorlib::System::Runtime::Remoting::Messaging::IMessage replyMsg);
 						static mscorlib::System::Runtime::Remoting::Channels::IChannel  GetChannel(mscorlib::System::String name);
+						static mscorlib::System::Runtime::Remoting::Channels::IChannel  GetChannel(const char *name);
 						static mscorlib::System::Collections::IDictionary  GetChannelSinkProperties(mscorlib::System::Object obj);
 						static std::vector<mscorlib::System::String*>  GetUrlsForObject(mscorlib::System::MarshalByRefObject obj);
 						static void  RegisterChannel(mscorlib::System::Runtime::Remoting::Channels::IChannel chnl);

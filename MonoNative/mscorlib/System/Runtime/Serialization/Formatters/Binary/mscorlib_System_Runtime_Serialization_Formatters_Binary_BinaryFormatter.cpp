@@ -112,7 +112,7 @@ namespace mscorlib
 						mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__  BinaryFormatter::get_AssemblyFormat() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_AssemblyFormat", __native_object__, 0, NULL, NULL, NULL);
-							return *(mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__*)mono_object_unbox(__result__);
+							return static_cast<mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__>(*(mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__*)mono_object_unbox(__result__));
 						}
 
 						void BinaryFormatter::set_AssemblyFormat(mscorlib::System::Runtime::Serialization::Formatters::FormatterAssemblyStyle::__ENUM__  value)
@@ -120,7 +120,8 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(value).name());
-							__parameters__[0] = reinterpret_cast<void*>(value);
+							int __param_value__ = value;
+							__parameters__[0] = &__param_value__;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "set_AssemblyFormat", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						}
 
@@ -180,7 +181,7 @@ namespace mscorlib
 						mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__  BinaryFormatter::get_TypeFormat() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_TypeFormat", __native_object__, 0, NULL, NULL, NULL);
-							return *(mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__*)mono_object_unbox(__result__);
+							return static_cast<mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__>(*(mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__*)mono_object_unbox(__result__));
 						}
 
 						void BinaryFormatter::set_TypeFormat(mscorlib::System::Runtime::Serialization::Formatters::FormatterTypeStyle::__ENUM__  value)
@@ -188,7 +189,8 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(value).name());
-							__parameters__[0] = reinterpret_cast<void*>(value);
+							int __param_value__ = value;
+							__parameters__[0] = &__param_value__;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "set_TypeFormat", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						}
 
@@ -197,7 +199,7 @@ namespace mscorlib
 						mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__  BinaryFormatter::get_FilterLevel() const
 						{
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "get_FilterLevel", __native_object__, 0, NULL, NULL, NULL);
-							return *(mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__*)mono_object_unbox(__result__);
+							return static_cast<mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__>(*(mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__*)mono_object_unbox(__result__));
 						}
 
 						void BinaryFormatter::set_FilterLevel(mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__  value)
@@ -205,7 +207,8 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(value).name());
-							__parameters__[0] = reinterpret_cast<void*>(value);
+							int __param_value__ = value;
+							__parameters__[0] = &__param_value__;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters.Binary", "BinaryFormatter", 0, NULL, "set_FilterLevel", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						}
 

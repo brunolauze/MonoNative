@@ -83,6 +83,7 @@ namespace mscorlib
 
 
 					virtual void  SetHashAlgorithm(mscorlib::System::String strName) override;
+					virtual void  SetHashAlgorithm(const char *strName) override;
 					virtual void  SetKey(mscorlib::System::Security::Cryptography::AsymmetricAlgorithm key) override;
 					virtual mscorlib::System::Boolean  VerifySignature(std::vector<mscorlib::System::Byte*> rgbHash, std::vector<mscorlib::System::Byte*> rgbSignature) override;
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

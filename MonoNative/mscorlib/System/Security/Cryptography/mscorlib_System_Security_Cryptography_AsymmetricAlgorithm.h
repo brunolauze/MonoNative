@@ -70,9 +70,11 @@ namespace mscorlib
 					virtual void  Dispose();
 					void  Clear();
 					virtual void  FromXmlString(mscorlib::System::String xmlString);
+					virtual void  FromXmlString(const char *xmlString);
 					virtual mscorlib::System::String  ToXmlString(mscorlib::System::Boolean includePrivateParameters);
 					static mscorlib::System::Security::Cryptography::AsymmetricAlgorithm  Create();
 					static mscorlib::System::Security::Cryptography::AsymmetricAlgorithm  Create(mscorlib::System::String algName);
+					static mscorlib::System::Security::Cryptography::AsymmetricAlgorithm  Create(const char *algName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

@@ -59,6 +59,7 @@ namespace mscorlib
 
 
 							static mscorlib::System::TimeSpan  Parse(mscorlib::System::String value);
+							static mscorlib::System::TimeSpan  Parse(const char *value);
 							static mscorlib::System::String  ToString(mscorlib::System::TimeSpan timeSpan);
 							virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

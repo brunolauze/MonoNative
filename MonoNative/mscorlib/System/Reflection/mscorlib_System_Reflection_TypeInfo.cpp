@@ -40,7 +40,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredEvent", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::EventInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::EventInfo TypeInfo::GetDeclaredEvent(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredEvent", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::EventInfo(__result__);
 			}
@@ -50,7 +60,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredField", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::FieldInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::FieldInfo TypeInfo::GetDeclaredField(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredField", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::FieldInfo(__result__);
 			}
@@ -60,7 +80,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredMethod", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::MethodInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::MethodInfo TypeInfo::GetDeclaredMethod(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredMethod", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::MethodInfo(__result__);
 			}
@@ -70,7 +100,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredMethods", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::MethodInfo>(__result__);
+			}
+
+			mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::MethodInfo> TypeInfo::GetDeclaredMethods(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredMethods", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::MethodInfo>(__result__);
 			}
@@ -80,7 +120,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredNestedType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::TypeInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::TypeInfo TypeInfo::GetDeclaredNestedType(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredNestedType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::TypeInfo(__result__);
 			}
@@ -90,7 +140,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredProperty", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::PropertyInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::PropertyInfo TypeInfo::GetDeclaredProperty(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "TypeInfo", 0, NULL, "GetDeclaredProperty", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::PropertyInfo(__result__);
 			}
@@ -206,7 +266,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::TypeAttributes::__ENUM__  TypeInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Type", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Reflection::TypeAttributes::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Reflection::TypeAttributes::__ENUM__>(*(mscorlib::System::Reflection::TypeAttributes::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 
@@ -502,7 +562,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::MemberTypes::__ENUM__  TypeInfo::get_MemberType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Type", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 
@@ -654,7 +714,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::GenericParameterAttributes::__ENUM__  TypeInfo::get_GenericParameterAttributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Type", 0, NULL, "get_GenericParameterAttributes", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Reflection::GenericParameterAttributes::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Reflection::GenericParameterAttributes::__ENUM__>(*(mscorlib::System::Reflection::GenericParameterAttributes::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

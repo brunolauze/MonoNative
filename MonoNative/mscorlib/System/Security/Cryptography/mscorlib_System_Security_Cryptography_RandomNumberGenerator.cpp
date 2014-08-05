@@ -26,7 +26,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(rngName).name());
-						__parameters__[0] = (MonoObject*)rngName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), rngName);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RandomNumberGenerator", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Security::Cryptography::RandomNumberGenerator(__result__);
+				}
+
+				mscorlib::System::Security::Cryptography::RandomNumberGenerator RandomNumberGenerator::Create(const char *rngName)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(rngName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), rngName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RandomNumberGenerator", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::RandomNumberGenerator(__result__);
 				}

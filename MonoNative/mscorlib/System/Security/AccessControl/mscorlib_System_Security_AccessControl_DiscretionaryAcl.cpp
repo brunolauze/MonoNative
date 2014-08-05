@@ -26,11 +26,14 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(accessMask).name());
 						__parameter_types__[3] = Global::GetType(typeid(inheritanceFlags).name());
 						__parameter_types__[4] = Global::GetType(typeid(propagationFlags).name());
-						__parameters__[0] = reinterpret_cast<void*>(accessType);
+						int __param_accessType__ = accessType;
+						__parameters__[0] = &__param_accessType__;
 						__parameters__[1] = (MonoObject*)sid;
 						__parameters__[2] = &accessMask;
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl", 0, NULL, "AddAccess", __native_object__, 5, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -46,12 +49,16 @@ namespace mscorlib
 						__parameter_types__[5] = Global::GetType(typeid(objectFlags).name());
 						__parameter_types__[6] = Global::GetType(typeid(objectType).name());
 						__parameter_types__[7] = Global::GetType(typeid(inheritedObjectType).name());
-						__parameters__[0] = reinterpret_cast<void*>(accessType);
+						int __param_accessType__ = accessType;
+						__parameters__[0] = &__param_accessType__;
 						__parameters__[1] = (MonoObject*)sid;
 						__parameters__[2] = &accessMask;
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[5] = reinterpret_cast<void*>(objectFlags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
+						int __param_objectFlags__ = objectFlags;
+						__parameters__[5] = &__param_objectFlags__;
 						__parameters__[6] = (MonoObject*)objectType;
 						__parameters__[7] = (MonoObject*)inheritedObjectType;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl", 0, NULL, "AddAccess", __native_object__, 8, __parameter_types__, __parameters__, NULL);
@@ -66,11 +73,14 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(accessMask).name());
 						__parameter_types__[3] = Global::GetType(typeid(inheritanceFlags).name());
 						__parameter_types__[4] = Global::GetType(typeid(propagationFlags).name());
-						__parameters__[0] = reinterpret_cast<void*>(accessType);
+						int __param_accessType__ = accessType;
+						__parameters__[0] = &__param_accessType__;
 						__parameters__[1] = (MonoObject*)sid;
 						__parameters__[2] = &accessMask;
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl", 0, NULL, "RemoveAccess", __native_object__, 5, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}
@@ -87,12 +97,16 @@ namespace mscorlib
 						__parameter_types__[5] = Global::GetType(typeid(objectFlags).name());
 						__parameter_types__[6] = Global::GetType(typeid(objectType).name());
 						__parameter_types__[7] = Global::GetType(typeid(inheritedObjectType).name());
-						__parameters__[0] = reinterpret_cast<void*>(accessType);
+						int __param_accessType__ = accessType;
+						__parameters__[0] = &__param_accessType__;
 						__parameters__[1] = (MonoObject*)sid;
 						__parameters__[2] = &accessMask;
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[5] = reinterpret_cast<void*>(objectFlags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
+						int __param_objectFlags__ = objectFlags;
+						__parameters__[5] = &__param_objectFlags__;
 						__parameters__[6] = (MonoObject*)objectType;
 						__parameters__[7] = (MonoObject*)inheritedObjectType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl", 0, NULL, "RemoveAccess", __native_object__, 8, __parameter_types__, __parameters__, NULL);
@@ -108,11 +122,14 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(accessMask).name());
 						__parameter_types__[3] = Global::GetType(typeid(inheritanceFlags).name());
 						__parameter_types__[4] = Global::GetType(typeid(propagationFlags).name());
-						__parameters__[0] = reinterpret_cast<void*>(accessType);
+						int __param_accessType__ = accessType;
+						__parameters__[0] = &__param_accessType__;
 						__parameters__[1] = (MonoObject*)sid;
 						__parameters__[2] = &accessMask;
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl", 0, NULL, "RemoveAccessSpecific", __native_object__, 5, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -128,12 +145,16 @@ namespace mscorlib
 						__parameter_types__[5] = Global::GetType(typeid(objectFlags).name());
 						__parameter_types__[6] = Global::GetType(typeid(objectType).name());
 						__parameter_types__[7] = Global::GetType(typeid(inheritedObjectType).name());
-						__parameters__[0] = reinterpret_cast<void*>(accessType);
+						int __param_accessType__ = accessType;
+						__parameters__[0] = &__param_accessType__;
 						__parameters__[1] = (MonoObject*)sid;
 						__parameters__[2] = &accessMask;
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[5] = reinterpret_cast<void*>(objectFlags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
+						int __param_objectFlags__ = objectFlags;
+						__parameters__[5] = &__param_objectFlags__;
 						__parameters__[6] = (MonoObject*)objectType;
 						__parameters__[7] = (MonoObject*)inheritedObjectType;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl", 0, NULL, "RemoveAccessSpecific", __native_object__, 8, __parameter_types__, __parameters__, NULL);
@@ -148,11 +169,14 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(accessMask).name());
 						__parameter_types__[3] = Global::GetType(typeid(inheritanceFlags).name());
 						__parameter_types__[4] = Global::GetType(typeid(propagationFlags).name());
-						__parameters__[0] = reinterpret_cast<void*>(accessType);
+						int __param_accessType__ = accessType;
+						__parameters__[0] = &__param_accessType__;
 						__parameters__[1] = (MonoObject*)sid;
 						__parameters__[2] = &accessMask;
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl", 0, NULL, "SetAccess", __native_object__, 5, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -168,12 +192,16 @@ namespace mscorlib
 						__parameter_types__[5] = Global::GetType(typeid(objectFlags).name());
 						__parameter_types__[6] = Global::GetType(typeid(objectType).name());
 						__parameter_types__[7] = Global::GetType(typeid(inheritedObjectType).name());
-						__parameters__[0] = reinterpret_cast<void*>(accessType);
+						int __param_accessType__ = accessType;
+						__parameters__[0] = &__param_accessType__;
 						__parameters__[1] = (MonoObject*)sid;
 						__parameters__[2] = &accessMask;
-						__parameters__[3] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[4] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[5] = reinterpret_cast<void*>(objectFlags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[3] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[4] = &__param_propagationFlags__;
+						int __param_objectFlags__ = objectFlags;
+						__parameters__[5] = &__param_objectFlags__;
 						__parameters__[6] = (MonoObject*)objectType;
 						__parameters__[7] = (MonoObject*)inheritedObjectType;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl", 0, NULL, "SetAccess", __native_object__, 8, __parameter_types__, __parameters__, NULL);

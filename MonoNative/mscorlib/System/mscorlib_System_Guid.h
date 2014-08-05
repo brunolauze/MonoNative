@@ -187,11 +187,17 @@ namespace mscorlib
 			std::vector<mscorlib::System::Byte*>  ToByteArray();
 			virtual mscorlib::System::String  ToString() override;
 			mscorlib::System::String  ToString(mscorlib::System::String format);
+			mscorlib::System::String  ToString(const char *format);
 			virtual mscorlib::System::String  ToString(mscorlib::System::String format, mscorlib::System::IFormatProvider provider);
+			virtual mscorlib::System::String  ToString(const char *format, mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::Guid  Parse(mscorlib::System::String input);
+			static mscorlib::System::Guid  Parse(const char *input);
 			static mscorlib::System::Guid  ParseExact(mscorlib::System::String input, mscorlib::System::String format);
+			static mscorlib::System::Guid  ParseExact(const char *input, const char *format);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String input, mscorlib::System::Guid result);
+			static mscorlib::System::Boolean  TryParse(const char *input, mscorlib::System::Guid result);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String input, mscorlib::System::String format, mscorlib::System::Guid result);
+			static mscorlib::System::Boolean  TryParseExact(const char *input, const char *format, mscorlib::System::Guid result);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

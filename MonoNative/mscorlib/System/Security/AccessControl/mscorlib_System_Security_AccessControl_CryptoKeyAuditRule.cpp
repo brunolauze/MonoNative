@@ -18,7 +18,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::CryptoKeyRights::__ENUM__  CryptoKeyAuditRule::get_CryptoKeyRights() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CryptoKeyAuditRule", 0, NULL, "get_CryptoKeyRights", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::CryptoKeyRights::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::CryptoKeyRights::__ENUM__>(*(mscorlib::System::Security::AccessControl::CryptoKeyRights::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -26,7 +26,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  CryptoKeyAuditRule::get_AuditFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuditRule", 0, NULL, "get_AuditFlags", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -42,7 +42,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  CryptoKeyAuditRule::get_InheritanceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -58,7 +58,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  CryptoKeyAuditRule::get_PropagationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

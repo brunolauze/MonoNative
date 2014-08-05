@@ -94,7 +94,9 @@ namespace mscorlib
 				static void  GetZoneAndOrigin(mscorlib::System::Collections::ArrayList zone, mscorlib::System::Collections::ArrayList origin);
 				static mscorlib::System::Boolean  IsGranted(mscorlib::System::Security::IPermission perm);
 				static mscorlib::System::Security::Policy::PolicyLevel  LoadPolicyLevelFromFile(mscorlib::System::String path, mscorlib::System::Security::PolicyLevelType::__ENUM__ type);
+				static mscorlib::System::Security::Policy::PolicyLevel  LoadPolicyLevelFromFile(const char *path, mscorlib::System::Security::PolicyLevelType::__ENUM__ type);
 				static mscorlib::System::Security::Policy::PolicyLevel  LoadPolicyLevelFromString(mscorlib::System::String str, mscorlib::System::Security::PolicyLevelType::__ENUM__ type);
+				static mscorlib::System::Security::Policy::PolicyLevel  LoadPolicyLevelFromString(const char *str, mscorlib::System::Security::PolicyLevelType::__ENUM__ type);
 				static mscorlib::System::Collections::IEnumerator  PolicyHierarchy();
 				static mscorlib::System::Security::PermissionSet  ResolvePolicy(mscorlib::System::Security::Policy::Evidence evidence);
 				static mscorlib::System::Security::PermissionSet  ResolvePolicy(std::vector<mscorlib::System::Security::Policy::Evidence*> evidences);

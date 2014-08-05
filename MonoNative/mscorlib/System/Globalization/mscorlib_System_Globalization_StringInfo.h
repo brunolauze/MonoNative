@@ -79,10 +79,15 @@ namespace mscorlib
 				mscorlib::System::String  SubstringByTextElements(mscorlib::System::Int32 startingTextElement);
 				mscorlib::System::String  SubstringByTextElements(mscorlib::System::Int32 startingTextElement, mscorlib::System::Int32 lengthInTextElements);
 				static mscorlib::System::String  GetNextTextElement(mscorlib::System::String str);
+				static mscorlib::System::String  GetNextTextElement(const char *str);
 				static mscorlib::System::String  GetNextTextElement(mscorlib::System::String str, mscorlib::System::Int32 index);
+				static mscorlib::System::String  GetNextTextElement(const char *str, mscorlib::System::Int32 index);
 				static mscorlib::System::Globalization::TextElementEnumerator  GetTextElementEnumerator(mscorlib::System::String str);
+				static mscorlib::System::Globalization::TextElementEnumerator  GetTextElementEnumerator(const char *str);
 				static mscorlib::System::Globalization::TextElementEnumerator  GetTextElementEnumerator(mscorlib::System::String str, mscorlib::System::Int32 index);
+				static mscorlib::System::Globalization::TextElementEnumerator  GetTextElementEnumerator(const char *str, mscorlib::System::Int32 index);
 				static std::vector<mscorlib::System::Int32*>  ParseCombiningCharacters(mscorlib::System::String str);
+				static std::vector<mscorlib::System::Int32*>  ParseCombiningCharacters(const char *str);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

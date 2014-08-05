@@ -32,7 +32,17 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(assemblyString).name());
-							__parameters__[0] = (MonoObject*)assemblyString;
+							__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyString);
+							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "InternalST", 0, NULL, "LoadAssemblyFromString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+							return mscorlib::System::Reflection::Assembly(__result__);
+					}
+
+					mscorlib::System::Reflection::Assembly InternalST::LoadAssemblyFromString(const char *assemblyString)
+					{
+							MonoType *__parameter_types__[1];
+							void *__parameters__[1];
+							__parameter_types__[0] = Global::GetType(typeid(assemblyString).name());
+							__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyString);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "InternalST", 0, NULL, "LoadAssemblyFromString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Reflection::Assembly(__result__);
 					}
@@ -66,7 +76,18 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(condition).name());
 							__parameter_types__[1] = Global::GetType(typeid(message).name());
 							__parameters__[0] = reinterpret_cast<void*>(condition);
-							__parameters__[1] = (MonoObject*)message;
+							__parameters__[1] = mono_string_new(Global::GetDomain(), message);
+							Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "InternalST", 0, NULL, "SoapAssert", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					}
+
+					void InternalST::SoapAssert(mscorlib::System::Boolean condition, const char *message)
+					{
+							MonoType *__parameter_types__[2];
+							void *__parameters__[2];
+							__parameter_types__[0] = Global::GetType(typeid(condition).name());
+							__parameter_types__[1] = Global::GetType(typeid(message).name());
+							__parameters__[0] = reinterpret_cast<void*>(condition);
+							__parameters__[1] = mono_string_new(Global::GetDomain(), message);
 							Global::InvokeMethod("mscorlib", "System.Runtime.Serialization.Formatters", "InternalST", 0, NULL, "SoapAssert", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					}
 

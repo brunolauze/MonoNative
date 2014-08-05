@@ -74,6 +74,7 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::Rijndael  Create();
 					static mscorlib::System::Security::Cryptography::Rijndael  Create(mscorlib::System::String algName);
+					static mscorlib::System::Security::Cryptography::Rijndael  Create(const char *algName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

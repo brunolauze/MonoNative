@@ -66,6 +66,7 @@ namespace mscorlib
 
 
 					virtual void  SetHashAlgorithm(mscorlib::System::String strName);
+					virtual void  SetHashAlgorithm(const char *strName);
 					virtual void  SetKey(mscorlib::System::Security::Cryptography::AsymmetricAlgorithm key);
 					virtual mscorlib::System::Boolean  VerifySignature(std::vector<mscorlib::System::Byte*> rgbHash, std::vector<mscorlib::System::Byte*> rgbSignature);
 					virtual mscorlib::System::Boolean  VerifySignature(mscorlib::System::Security::Cryptography::HashAlgorithm hash, std::vector<mscorlib::System::Byte*> rgbSignature);

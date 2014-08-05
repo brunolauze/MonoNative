@@ -45,6 +45,7 @@ namespace mscorlib
 
 
 						virtual mscorlib::System::Runtime::Remoting::Channels::IClientChannelSink  CreateSink(mscorlib::System::Runtime::Remoting::Channels::IChannelSender channel, mscorlib::System::String url, mscorlib::System::Object remoteChannelData);
+						virtual mscorlib::System::Runtime::Remoting::Channels::IClientChannelSink  CreateSink(mscorlib::System::Runtime::Remoting::Channels::IChannelSender channel, const char *url, mscorlib::System::Object remoteChannelData);
 
 
 						//Public Properties

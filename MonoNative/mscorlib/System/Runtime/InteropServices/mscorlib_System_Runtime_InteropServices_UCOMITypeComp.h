@@ -59,7 +59,9 @@ namespace mscorlib
 
 
 					virtual void  Bind(mscorlib::System::String szName, mscorlib::System::Int32 lHashVal, mscorlib::System::Int16 wFlags, mscorlib::System::Runtime::InteropServices::UCOMITypeInfo ppTInfo, mscorlib::System::Runtime::InteropServices::DESCKIND::__ENUM__ pDescKind, mscorlib::System::Runtime::InteropServices::BINDPTR pBindPtr);
+					virtual void  Bind(const char *szName, mscorlib::System::Int32 lHashVal, mscorlib::System::Int16 wFlags, mscorlib::System::Runtime::InteropServices::UCOMITypeInfo ppTInfo, mscorlib::System::Runtime::InteropServices::DESCKIND::__ENUM__ pDescKind, mscorlib::System::Runtime::InteropServices::BINDPTR pBindPtr);
 					virtual void  BindType(mscorlib::System::String szName, mscorlib::System::Int32 lHashVal, mscorlib::System::Runtime::InteropServices::UCOMITypeInfo ppTInfo, mscorlib::System::Runtime::InteropServices::UCOMITypeComp ppTComp);
+					virtual void  BindType(const char *szName, mscorlib::System::Int32 lHashVal, mscorlib::System::Runtime::InteropServices::UCOMITypeInfo ppTInfo, mscorlib::System::Runtime::InteropServices::UCOMITypeComp ppTComp);
 
 
 				

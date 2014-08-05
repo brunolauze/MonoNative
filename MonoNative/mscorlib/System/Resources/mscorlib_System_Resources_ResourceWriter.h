@@ -80,13 +80,19 @@ namespace mscorlib
 
 
 				virtual void  AddResource(mscorlib::System::String name, std::vector<mscorlib::System::Byte*> value);
+				virtual void  AddResource(const char *name, std::vector<mscorlib::System::Byte*> value);
 				virtual void  AddResource(mscorlib::System::String name, mscorlib::System::Object value);
+				virtual void  AddResource(const char *name, mscorlib::System::Object value);
 				virtual void  AddResource(mscorlib::System::String name, mscorlib::System::String value);
+				virtual void  AddResource(const char *name, const char *value);
 				void  AddResource(mscorlib::System::String name, mscorlib::System::IO::Stream value);
+				void  AddResource(const char *name, mscorlib::System::IO::Stream value);
 				void  AddResource(mscorlib::System::String name, mscorlib::System::IO::Stream value, mscorlib::System::Boolean closeAfterWrite);
+				void  AddResource(const char *name, mscorlib::System::IO::Stream value, mscorlib::System::Boolean closeAfterWrite);
 				virtual void  Close();
 				virtual void  Dispose();
 				void  AddResourceData(mscorlib::System::String name, mscorlib::System::String typeName, std::vector<mscorlib::System::Byte*> serializedData);
+				void  AddResourceData(const char *name, const char *typeName, std::vector<mscorlib::System::Byte*> serializedData);
 				virtual void  Generate();
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

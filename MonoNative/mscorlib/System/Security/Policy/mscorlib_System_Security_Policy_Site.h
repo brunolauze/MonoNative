@@ -81,6 +81,7 @@ namespace mscorlib
 
 
 					static mscorlib::System::Security::Policy::Site  CreateFromUrl(mscorlib::System::String url);
+					static mscorlib::System::Security::Policy::Site  CreateFromUrl(const char *url);
 					mscorlib::System::Object  Copy();
 					virtual mscorlib::System::Security::IPermission  CreateIdentityPermission(mscorlib::System::Security::Policy::Evidence evidence);
 					virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object o) override;

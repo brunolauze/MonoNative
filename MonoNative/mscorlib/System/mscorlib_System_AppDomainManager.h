@@ -142,6 +142,7 @@ namespace mscorlib
 
 
 			virtual mscorlib::System::AppDomain  CreateDomain(mscorlib::System::String friendlyName, mscorlib::System::Security::Policy::Evidence securityInfo, mscorlib::System::AppDomainSetup appDomainInfo);
+			virtual mscorlib::System::AppDomain  CreateDomain(const char *friendlyName, mscorlib::System::Security::Policy::Evidence securityInfo, mscorlib::System::AppDomainSetup appDomainInfo);
 			virtual void  InitializeNewDomain(mscorlib::System::AppDomainSetup appDomainInfo);
 			virtual mscorlib::System::Boolean  CheckSecuritySettings(mscorlib::System::Security::SecurityState state);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

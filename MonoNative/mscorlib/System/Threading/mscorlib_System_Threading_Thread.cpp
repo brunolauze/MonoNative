@@ -31,7 +31,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "AllocateNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::LocalDataStoreSlot(__result__);
+			}
+
+			mscorlib::System::LocalDataStoreSlot Thread::AllocateNamedDataSlot(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "AllocateNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::LocalDataStoreSlot(__result__);
 			}
@@ -41,7 +51,16 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "FreeNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+			}
+
+			void Thread::FreeNamedDataSlot(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "FreeNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -77,7 +96,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "GetNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::LocalDataStoreSlot(__result__);
+			}
+
+			mscorlib::System::LocalDataStoreSlot Thread::GetNamedDataSlot(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "GetNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::LocalDataStoreSlot(__result__);
 			}
@@ -492,7 +521,7 @@ namespace mscorlib
 			mscorlib::System::Threading::ApartmentState::__ENUM__ Thread::GetApartmentState()
 			{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "GetApartmentState", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Threading::ApartmentState::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Threading::ApartmentState::__ENUM__>(*(mscorlib::System::Threading::ApartmentState::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 			void Thread::SetApartmentState(mscorlib::System::Threading::ApartmentState::__ENUM__ state)
@@ -500,7 +529,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(state).name());
-					__parameters__[0] = reinterpret_cast<void*>(state);
+					int __param_state__ = state;
+					__parameters__[0] = &__param_state__;
 					Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "SetApartmentState", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -509,7 +539,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(state).name());
-					__parameters__[0] = reinterpret_cast<void*>(state);
+					int __param_state__ = state;
+					__parameters__[0] = &__param_state__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "TrySetApartmentState", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}
@@ -549,7 +580,7 @@ namespace mscorlib
 			mscorlib::System::Threading::ApartmentState::__ENUM__  Thread::get_ApartmentState() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_ApartmentState", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Threading::ApartmentState::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Threading::ApartmentState::__ENUM__>(*(mscorlib::System::Threading::ApartmentState::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 			void Thread::set_ApartmentState(mscorlib::System::Threading::ApartmentState::__ENUM__  value)
@@ -557,7 +588,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = reinterpret_cast<void*>(value);
+				int __param_value__ = value;
+				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "set_ApartmentState", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -641,7 +673,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "set_Name", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -650,7 +682,7 @@ namespace mscorlib
 			mscorlib::System::Threading::ThreadPriority::__ENUM__  Thread::get_Priority() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_Priority", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Threading::ThreadPriority::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Threading::ThreadPriority::__ENUM__>(*(mscorlib::System::Threading::ThreadPriority::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 			void Thread::set_Priority(mscorlib::System::Threading::ThreadPriority::__ENUM__  value)
@@ -658,7 +690,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = reinterpret_cast<void*>(value);
+				int __param_value__ = value;
+				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "set_Priority", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -667,7 +700,7 @@ namespace mscorlib
 			mscorlib::System::Threading::ThreadState::__ENUM__  Thread::get_ThreadState() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Thread", 0, NULL, "get_ThreadState", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Threading::ThreadState::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Threading::ThreadState::__ENUM__>(*(mscorlib::System::Threading::ThreadState::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

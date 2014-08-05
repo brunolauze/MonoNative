@@ -234,11 +234,17 @@ namespace mscorlib
 			static mscorlib::System::DateTimeOffset  FromFileTime(mscorlib::System::Int64 fileTime);
 			virtual mscorlib::System::Int32  GetHashCode() override;
 			static mscorlib::System::DateTimeOffset  Parse(mscorlib::System::String input);
+			static mscorlib::System::DateTimeOffset  Parse(const char *input);
 			static mscorlib::System::DateTimeOffset  Parse(mscorlib::System::String input, mscorlib::System::IFormatProvider formatProvider);
+			static mscorlib::System::DateTimeOffset  Parse(const char *input, mscorlib::System::IFormatProvider formatProvider);
 			static mscorlib::System::DateTimeOffset  Parse(mscorlib::System::String input, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles);
+			static mscorlib::System::DateTimeOffset  Parse(const char *input, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles);
 			static mscorlib::System::DateTimeOffset  ParseExact(mscorlib::System::String input, mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider);
+			static mscorlib::System::DateTimeOffset  ParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider);
 			static mscorlib::System::DateTimeOffset  ParseExact(mscorlib::System::String input, mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles);
+			static mscorlib::System::DateTimeOffset  ParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles);
 			static mscorlib::System::DateTimeOffset  ParseExact(mscorlib::System::String input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles);
+			static mscorlib::System::DateTimeOffset  ParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles);
 			mscorlib::System::TimeSpan  Subtract(mscorlib::System::DateTimeOffset value);
 			mscorlib::System::DateTimeOffset  Subtract(mscorlib::System::TimeSpan value);
 			mscorlib::System::Int64  ToFileTime();
@@ -247,12 +253,18 @@ namespace mscorlib
 			virtual mscorlib::System::String  ToString() override;
 			mscorlib::System::String  ToString(mscorlib::System::IFormatProvider formatProvider);
 			mscorlib::System::String  ToString(mscorlib::System::String format);
+			mscorlib::System::String  ToString(const char *format);
 			virtual mscorlib::System::String  ToString(mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider);
+			virtual mscorlib::System::String  ToString(const char *format, mscorlib::System::IFormatProvider formatProvider);
 			mscorlib::System::DateTimeOffset  ToUniversalTime();
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String input, mscorlib::System::DateTimeOffset result);
+			static mscorlib::System::Boolean  TryParse(const char *input, mscorlib::System::DateTimeOffset result);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String input, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles, mscorlib::System::DateTimeOffset result);
+			static mscorlib::System::Boolean  TryParse(const char *input, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles, mscorlib::System::DateTimeOffset result);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String input, mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles, mscorlib::System::DateTimeOffset result);
+			static mscorlib::System::Boolean  TryParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles, mscorlib::System::DateTimeOffset result);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles, mscorlib::System::DateTimeOffset result);
+			static mscorlib::System::Boolean  TryParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles, mscorlib::System::DateTimeOffset result);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

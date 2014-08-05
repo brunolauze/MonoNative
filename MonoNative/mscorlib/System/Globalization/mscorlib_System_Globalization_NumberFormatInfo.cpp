@@ -80,7 +80,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_CurrencyDecimalSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -97,7 +97,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_CurrencyGroupSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -173,7 +173,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_CurrencySymbol", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -198,7 +198,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_NaNSymbol", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -232,7 +232,7 @@ namespace mscorlib
 			mscorlib::System::Globalization::DigitShapes::__ENUM__  NumberFormatInfo::get_DigitSubstitution() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "get_DigitSubstitution", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Globalization::DigitShapes::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Globalization::DigitShapes::__ENUM__>(*(mscorlib::System::Globalization::DigitShapes::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 			void NumberFormatInfo::set_DigitSubstitution(mscorlib::System::Globalization::DigitShapes::__ENUM__  value)
@@ -240,7 +240,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = reinterpret_cast<void*>(value);
+				int __param_value__ = value;
+				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_DigitSubstitution", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -257,7 +258,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_NegativeInfinitySymbol", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -274,7 +275,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_NegativeSign", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -308,7 +309,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_NumberDecimalSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -325,7 +326,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_NumberGroupSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -401,7 +402,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_PercentDecimalSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -418,7 +419,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_PercentGroupSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -494,7 +495,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_PercentSymbol", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -511,7 +512,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_PerMilleSymbol", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -528,7 +529,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_PositiveInfinitySymbol", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -545,7 +546,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_PositiveSign", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

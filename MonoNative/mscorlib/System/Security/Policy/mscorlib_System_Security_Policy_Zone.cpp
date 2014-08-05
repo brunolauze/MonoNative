@@ -36,7 +36,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(url).name());
-						__parameters__[0] = (MonoObject*)url;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), url);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Zone", 0, NULL, "CreateFromUrl", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Security::Policy::Zone(__result__);
+				}
+
+				mscorlib::System::Security::Policy::Zone Zone::CreateFromUrl(const char *url)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(url).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), url);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Zone", 0, NULL, "CreateFromUrl", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Policy::Zone(__result__);
 				}
@@ -68,7 +78,7 @@ namespace mscorlib
 				mscorlib::System::Security::SecurityZone::__ENUM__  Zone::get_SecurityZone() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Zone", 0, NULL, "get_SecurityZone", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::SecurityZone::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::SecurityZone::__ENUM__>(*(mscorlib::System::Security::SecurityZone::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

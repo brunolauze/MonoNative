@@ -55,7 +55,8 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType("mscorlib", "System", "PlatformID");
 				__parameter_types__[1] = Global::GetType("mscorlib", "System", "Version");
-				__parameters__[0] = reinterpret_cast<void*>(platform);
+				int __param_platform__ = platform;
+				__parameters__[0] = &__param_platform__;
 				__parameters__[1] = (MonoObject*)version;
 				__native_object__ = Global::New("mscorlib", "System", "OperatingSystem", 2, __parameter_types__, __parameters__);
 			};

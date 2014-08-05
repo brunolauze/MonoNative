@@ -106,6 +106,7 @@ namespace mscorlib
 
 
 					void  AddConnectAccess(mscorlib::System::String originScheme, mscorlib::System::Security::Policy::CodeConnectAccess connectAccess);
+					void  AddConnectAccess(const char *originScheme, mscorlib::System::Security::Policy::CodeConnectAccess connectAccess);
 					virtual mscorlib::System::Security::Policy::CodeGroup  Copy() override;
 					virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object o) override;
 					std::vector<mscorlib::System::Collections::DictionaryEntry*>  GetConnectAccessRules();

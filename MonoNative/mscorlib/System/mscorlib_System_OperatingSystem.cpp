@@ -40,7 +40,7 @@ namespace mscorlib
 		mscorlib::System::PlatformID::__ENUM__  OperatingSystem::get_Platform() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "OperatingSystem", 0, NULL, "get_Platform", __native_object__, 0, NULL, NULL, NULL);
-			return *(mscorlib::System::PlatformID::__ENUM__*)mono_object_unbox(__result__);
+			return static_cast<mscorlib::System::PlatformID::__ENUM__>(*(mscorlib::System::PlatformID::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 

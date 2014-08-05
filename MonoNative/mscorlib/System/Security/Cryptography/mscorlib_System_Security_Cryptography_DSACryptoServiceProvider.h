@@ -142,8 +142,10 @@ namespace mscorlib
 					std::vector<mscorlib::System::Byte*>  SignData(std::vector<mscorlib::System::Byte*> buffer, mscorlib::System::Int32 offset, mscorlib::System::Int32 count);
 					std::vector<mscorlib::System::Byte*>  SignData(mscorlib::System::IO::Stream inputStream);
 					std::vector<mscorlib::System::Byte*>  SignHash(std::vector<mscorlib::System::Byte*> rgbHash, mscorlib::System::String str);
+					std::vector<mscorlib::System::Byte*>  SignHash(std::vector<mscorlib::System::Byte*> rgbHash, const char *str);
 					mscorlib::System::Boolean  VerifyData(std::vector<mscorlib::System::Byte*> rgbData, std::vector<mscorlib::System::Byte*> rgbSignature);
 					mscorlib::System::Boolean  VerifyHash(std::vector<mscorlib::System::Byte*> rgbHash, mscorlib::System::String str, std::vector<mscorlib::System::Byte*> rgbSignature);
+					mscorlib::System::Boolean  VerifyHash(std::vector<mscorlib::System::Byte*> rgbHash, const char *str, std::vector<mscorlib::System::Byte*> rgbSignature);
 					virtual mscorlib::System::Boolean  VerifySignature(std::vector<mscorlib::System::Byte*> rgbHash, std::vector<mscorlib::System::Byte*> rgbSignature) override;
 					virtual std::vector<mscorlib::System::Byte*>  ExportCspBlob(mscorlib::System::Boolean includePrivateParameters);
 					virtual void  ImportCspBlob(std::vector<mscorlib::System::Byte*> keyBlob);

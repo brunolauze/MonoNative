@@ -49,7 +49,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.InteropServices", "TypeLibFuncFlags");
-						__parameters__[0] = reinterpret_cast<void*>(flags);
+						int __param_flags__ = flags;
+						__parameters__[0] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.InteropServices", "TypeLibFuncAttribute", 1, __parameter_types__, __parameters__);
 					};
 				

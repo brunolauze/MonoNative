@@ -82,6 +82,7 @@ namespace mscorlib
 
 
 				mscorlib::System::Reflection::AssemblyName  GetAssemblyName(mscorlib::System::String assemblyFile);
+				mscorlib::System::Reflection::AssemblyName  GetAssemblyName(const char *assemblyFile);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

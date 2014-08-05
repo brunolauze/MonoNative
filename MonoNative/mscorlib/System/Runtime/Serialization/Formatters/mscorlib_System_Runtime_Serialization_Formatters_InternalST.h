@@ -65,9 +65,11 @@ namespace mscorlib
 
 						static void  InfoSoap(std::vector<mscorlib::System::Object*> messages);
 						static mscorlib::System::Reflection::Assembly  LoadAssemblyFromString(mscorlib::System::String assemblyString);
+						static mscorlib::System::Reflection::Assembly  LoadAssemblyFromString(const char *assemblyString);
 						static void  SerializationSetValue(mscorlib::System::Reflection::FieldInfo fi, mscorlib::System::Object target, mscorlib::System::Object value);
 						static void  Soap(std::vector<mscorlib::System::Object*> messages);
 						static void  SoapAssert(mscorlib::System::Boolean condition, mscorlib::System::String message);
+						static void  SoapAssert(mscorlib::System::Boolean condition, const char *message);
 						static mscorlib::System::Boolean  SoapCheckEnabled();
 						virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

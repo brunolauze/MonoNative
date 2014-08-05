@@ -120,15 +120,20 @@ namespace mscorlib
 					static mscorlib::System::Boolean  IsTransparentProxy(mscorlib::System::Object proxy);
 					static mscorlib::System::Runtime::Remoting::Messaging::IMethodReturnMessage  ExecuteMessage(mscorlib::System::MarshalByRefObject target, mscorlib::System::Runtime::Remoting::Messaging::IMethodCallMessage reqMsg);
 					static mscorlib::System::Object  Connect(mscorlib::System::Type classToProxy, mscorlib::System::String url);
+					static mscorlib::System::Object  Connect(mscorlib::System::Type classToProxy, const char *url);
 					static mscorlib::System::Object  Connect(mscorlib::System::Type classToProxy, mscorlib::System::String url, mscorlib::System::Object data);
+					static mscorlib::System::Object  Connect(mscorlib::System::Type classToProxy, const char *url, mscorlib::System::Object data);
 					static mscorlib::System::Boolean  Disconnect(mscorlib::System::MarshalByRefObject obj);
 					static mscorlib::System::Type  GetServerTypeForUri(mscorlib::System::String URI);
+					static mscorlib::System::Type  GetServerTypeForUri(const char *URI);
 					static mscorlib::System::String  GetObjectUri(mscorlib::System::MarshalByRefObject obj);
 					static mscorlib::System::Object  Unmarshal(mscorlib::System::Runtime::Remoting::ObjRef objectRef);
 					static mscorlib::System::Object  Unmarshal(mscorlib::System::Runtime::Remoting::ObjRef objectRef, mscorlib::System::Boolean fRefine);
 					static mscorlib::System::Runtime::Remoting::ObjRef  Marshal(mscorlib::System::MarshalByRefObject Obj);
 					static mscorlib::System::Runtime::Remoting::ObjRef  Marshal(mscorlib::System::MarshalByRefObject Obj, mscorlib::System::String URI);
+					static mscorlib::System::Runtime::Remoting::ObjRef  Marshal(mscorlib::System::MarshalByRefObject Obj, const char *URI);
 					static mscorlib::System::Runtime::Remoting::ObjRef  Marshal(mscorlib::System::MarshalByRefObject Obj, mscorlib::System::String ObjURI, mscorlib::System::Type RequestedType);
+					static mscorlib::System::Runtime::Remoting::ObjRef  Marshal(mscorlib::System::MarshalByRefObject Obj, const char *ObjURI, mscorlib::System::Type RequestedType);
 					static mscorlib::System::Runtime::Remoting::Proxies::RealProxy  GetRealProxy(mscorlib::System::Object proxy);
 					static mscorlib::System::Reflection::MethodBase  GetMethodBaseFromMethodMessage(mscorlib::System::Runtime::Remoting::Messaging::IMethodMessage msg);
 					static void  GetObjectData(mscorlib::System::Object obj, mscorlib::System::Runtime::Serialization::SerializationInfo info, mscorlib::System::Runtime::Serialization::StreamingContext context);
@@ -142,6 +147,7 @@ namespace mscorlib
 					static mscorlib::System::Boolean  IsObjectOutOfContext(mscorlib::System::Object tp);
 					static mscorlib::System::Boolean  IsOneWay(mscorlib::System::Reflection::MethodBase method);
 					static void  SetObjectUriForMarshal(mscorlib::System::MarshalByRefObject obj, mscorlib::System::String uri);
+					static void  SetObjectUriForMarshal(mscorlib::System::MarshalByRefObject obj, const char *uri);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

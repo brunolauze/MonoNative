@@ -72,6 +72,7 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::MD5  Create();
 					static mscorlib::System::Security::Cryptography::MD5  Create(mscorlib::System::String algName);
+					static mscorlib::System::Security::Cryptography::MD5  Create(const char *algName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

@@ -55,6 +55,7 @@ namespace mscorlib
 
 
 					virtual void  ReportEvent(mscorlib::System::Runtime::InteropServices::ImporterEventKind::__ENUM__ eventKind, mscorlib::System::Int32 eventCode, mscorlib::System::String eventMsg);
+					virtual void  ReportEvent(mscorlib::System::Runtime::InteropServices::ImporterEventKind::__ENUM__ eventKind, mscorlib::System::Int32 eventCode, const char *eventMsg);
 					virtual mscorlib::System::Reflection::Assembly  ResolveRef(mscorlib::System::Object typeLib);
 
 

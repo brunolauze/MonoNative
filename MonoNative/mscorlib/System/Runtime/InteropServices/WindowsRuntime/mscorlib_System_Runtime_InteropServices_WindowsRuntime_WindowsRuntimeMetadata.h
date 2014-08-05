@@ -71,7 +71,9 @@ namespace mscorlib
 
 
 						static mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String>  ResolveNamespace(mscorlib::System::String namespaceName, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String> packageGraphFilePaths);
+						static mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String>  ResolveNamespace(const char *namespaceName, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String> packageGraphFilePaths);
 						static mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String>  ResolveNamespace(mscorlib::System::String namespaceName, mscorlib::System::String windowsSdkFilePath, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String> packageGraphFilePaths);
+						static mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String>  ResolveNamespace(const char *namespaceName, const char *windowsSdkFilePath, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String> packageGraphFilePaths);
 						virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

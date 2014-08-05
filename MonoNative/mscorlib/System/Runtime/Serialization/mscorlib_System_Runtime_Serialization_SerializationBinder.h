@@ -48,6 +48,7 @@ namespace mscorlib
 
 
 					virtual mscorlib::System::Type  BindToType(mscorlib::System::String assemblyName, mscorlib::System::String typeName);
+					virtual mscorlib::System::Type  BindToType(const char *assemblyName, const char *typeName);
 					virtual void  BindToName(mscorlib::System::Type serializedType, mscorlib::System::String assemblyName, mscorlib::System::String typeName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

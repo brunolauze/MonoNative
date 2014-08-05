@@ -54,6 +54,7 @@ namespace mscorlib
 
 
 						virtual std::vector<mscorlib::System::String*>  GetUrlsForUri(mscorlib::System::String objectURI);
+						virtual std::vector<mscorlib::System::String*>  GetUrlsForUri(const char *objectURI);
 						virtual void  StartListening(mscorlib::System::Object data);
 						virtual void  StopListening(mscorlib::System::Object data);
 

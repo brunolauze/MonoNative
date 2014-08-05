@@ -93,7 +93,8 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(index).name());
 							__parameter_types__[1] = Global::GetType(typeid(pImplTypeFlags).name());
 							__parameters__[0] = &index;
-							__parameters__[1] = reinterpret_cast<void*>(pImplTypeFlags);
+							int __param_pImplTypeFlags__ = pImplTypeFlags;
+							__parameters__[1] = &__param_pImplTypeFlags__;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeInfo", 0, NULL, "GetImplTypeFlags", __mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo, 2, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -158,7 +159,8 @@ namespace mscorlib
 							__parameter_types__[3] = Global::GetType(typeid(pBstrName).name());
 							__parameter_types__[4] = Global::GetType(typeid(pwOrdinal).name());
 							__parameters__[0] = &memid;
-							__parameters__[1] = reinterpret_cast<void*>(invKind);
+							int __param_invKind__ = invKind;
+							__parameters__[1] = &__param_invKind__;
 							__parameters__[2] = (MonoObject*)pBstrDllName;
 							__parameters__[3] = (MonoObject*)pBstrName;
 							__parameters__[4] = (MonoObject*)pwOrdinal;
@@ -184,7 +186,8 @@ namespace mscorlib
 							__parameter_types__[1] = Global::GetType(typeid(invKind).name());
 							__parameter_types__[2] = Global::GetType(typeid(ppv).name());
 							__parameters__[0] = &memid;
-							__parameters__[1] = reinterpret_cast<void*>(invKind);
+							int __param_invKind__ = invKind;
+							__parameters__[1] = &__param_invKind__;
 							__parameters__[2] = (MonoObject*)ppv;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeInfo", 0, NULL, "AddressOfMember", __mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo, 3, __parameter_types__, __parameters__, NULL);
 					}

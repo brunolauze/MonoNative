@@ -73,10 +73,13 @@ namespace mscorlib
 				virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object value) override;
 				virtual mscorlib::System::Int32  GetByteCount(std::vector<mscorlib::System::Char*> chars, mscorlib::System::Int32 index, mscorlib::System::Int32 count);
 				virtual mscorlib::System::Int32  GetByteCount(mscorlib::System::String s);
+				virtual mscorlib::System::Int32  GetByteCount(const char *s);
 				virtual mscorlib::System::Int32  GetByteCount(std::vector<mscorlib::System::Char*> chars);
 				virtual mscorlib::System::Int32  GetBytes(std::vector<mscorlib::System::Char*> chars, mscorlib::System::Int32 charIndex, mscorlib::System::Int32 charCount, std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 byteIndex);
 				virtual mscorlib::System::Int32  GetBytes(mscorlib::System::String s, mscorlib::System::Int32 charIndex, mscorlib::System::Int32 charCount, std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 byteIndex);
+				virtual mscorlib::System::Int32  GetBytes(const char *s, mscorlib::System::Int32 charIndex, mscorlib::System::Int32 charCount, std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 byteIndex);
 				virtual std::vector<mscorlib::System::Byte*>  GetBytes(mscorlib::System::String s);
+				virtual std::vector<mscorlib::System::Byte*>  GetBytes(const char *s);
 				virtual std::vector<mscorlib::System::Byte*>  GetBytes(std::vector<mscorlib::System::Char*> chars, mscorlib::System::Int32 index, mscorlib::System::Int32 count);
 				virtual std::vector<mscorlib::System::Byte*>  GetBytes(std::vector<mscorlib::System::Char*> chars);
 				virtual mscorlib::System::Int32  GetCharCount(std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 index, mscorlib::System::Int32 count);
@@ -90,10 +93,12 @@ namespace mscorlib
 				virtual mscorlib::System::Object  Clone();
 				static mscorlib::System::Text::Encoding  GetEncoding(mscorlib::System::Int32 codepage, mscorlib::System::Text::EncoderFallback encoderFallback, mscorlib::System::Text::DecoderFallback decoderFallback);
 				static mscorlib::System::Text::Encoding  GetEncoding(mscorlib::System::String name, mscorlib::System::Text::EncoderFallback encoderFallback, mscorlib::System::Text::DecoderFallback decoderFallback);
+				static mscorlib::System::Text::Encoding  GetEncoding(const char *name, mscorlib::System::Text::EncoderFallback encoderFallback, mscorlib::System::Text::DecoderFallback decoderFallback);
 				static std::vector<mscorlib::System::Text::EncodingInfo*>  GetEncodings();
 				mscorlib::System::Boolean  IsAlwaysNormalized();
 				virtual mscorlib::System::Boolean  IsAlwaysNormalized(mscorlib::System::Text::NormalizationForm::__ENUM__ form);
 				static mscorlib::System::Text::Encoding  GetEncoding(mscorlib::System::String name);
+				static mscorlib::System::Text::Encoding  GetEncoding(const char *name);
 				virtual mscorlib::System::Int32  GetHashCode() override;
 				virtual mscorlib::System::Int32  GetMaxByteCount(mscorlib::System::Int32 charCount);
 				virtual mscorlib::System::Int32  GetMaxCharCount(mscorlib::System::Int32 byteCount);

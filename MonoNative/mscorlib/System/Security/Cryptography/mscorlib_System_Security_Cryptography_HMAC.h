@@ -73,6 +73,7 @@ namespace mscorlib
 					virtual void  Initialize() override;
 					static mscorlib::System::Security::Cryptography::HMAC  Create();
 					static mscorlib::System::Security::Cryptography::HMAC  Create(mscorlib::System::String algorithmName);
+					static mscorlib::System::Security::Cryptography::HMAC  Create(const char *algorithmName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

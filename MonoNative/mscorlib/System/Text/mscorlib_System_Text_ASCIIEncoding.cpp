@@ -36,7 +36,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(chars).name());
-					__parameters__[0] = (MonoObject*)chars;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), chars);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "ASCIIEncoding", 0, NULL, "GetByteCount", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Int32 ASCIIEncoding::GetByteCount(const char *chars)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(chars).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), chars);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "ASCIIEncoding", 0, NULL, "GetByteCount", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			}
@@ -68,7 +78,25 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType(typeid(charCount).name());
 					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
 					__parameter_types__[4] = Global::GetType(typeid(byteIndex).name());
-					__parameters__[0] = (MonoObject*)chars;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), chars);
+					__parameters__[1] = &charIndex;
+					__parameters__[2] = &charCount;
+					__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
+					__parameters__[4] = &byteIndex;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "ASCIIEncoding", 0, NULL, "GetBytes", __native_object__, 5, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Int32 ASCIIEncoding::GetBytes(const char *chars, mscorlib::System::Int32 charIndex, mscorlib::System::Int32 charCount, std::vector<mscorlib::System::Byte*> bytes, mscorlib::System::Int32 byteIndex)
+			{
+					MonoType *__parameter_types__[5];
+					void *__parameters__[5];
+					__parameter_types__[0] = Global::GetType(typeid(chars).name());
+					__parameter_types__[1] = Global::GetType(typeid(charIndex).name());
+					__parameter_types__[2] = Global::GetType(typeid(charCount).name());
+					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[4] = Global::GetType(typeid(byteIndex).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), chars);
 					__parameters__[1] = &charIndex;
 					__parameters__[2] = &charCount;
 					__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());

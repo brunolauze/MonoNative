@@ -59,6 +59,7 @@ namespace mscorlib
 
 
 						virtual void  FindName(mscorlib::System::String szNameBuf, mscorlib::System::Int32 lHashVal, std::vector<mscorlib::System::Runtime::InteropServices::ComTypes::ITypeInfo*> ppTInfo, std::vector<mscorlib::System::Int32*> rgMemId, mscorlib::System::Int16 pcFound);
+						virtual void  FindName(const char *szNameBuf, mscorlib::System::Int32 lHashVal, std::vector<mscorlib::System::Runtime::InteropServices::ComTypes::ITypeInfo*> ppTInfo, std::vector<mscorlib::System::Int32*> rgMemId, mscorlib::System::Int16 pcFound);
 						virtual void  GetCustData(mscorlib::System::Guid guid, mscorlib::System::Object pVarVal);
 						virtual void  GetDocumentation(mscorlib::System::Int32 index, mscorlib::System::String strName, mscorlib::System::String strDocString, mscorlib::System::Int32 dwHelpContext, mscorlib::System::String strHelpFile);
 						virtual void  GetLibAttr(mscorlib::System::IntPtr ppTLibAttr);
@@ -70,6 +71,7 @@ namespace mscorlib
 						virtual void  GetTypeInfoOfGuid(mscorlib::System::Guid guid, mscorlib::System::Runtime::InteropServices::ComTypes::ITypeInfo ppTInfo);
 						virtual void  GetTypeInfoType(mscorlib::System::Int32 index, mscorlib::System::Runtime::InteropServices::ComTypes::TYPEKIND::__ENUM__ pTKind);
 						virtual mscorlib::System::Boolean  IsName(mscorlib::System::String szNameBuf, mscorlib::System::Int32 lHashVal);
+						virtual mscorlib::System::Boolean  IsName(const char *szNameBuf, mscorlib::System::Int32 lHashVal);
 						virtual void  ReleaseTLibAttr(mscorlib::System::IntPtr pTLibAttr);
 						virtual mscorlib::System::Int32  GetTypeInfoCount();
 

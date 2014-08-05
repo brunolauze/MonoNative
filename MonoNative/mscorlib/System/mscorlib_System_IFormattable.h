@@ -37,6 +37,7 @@ namespace mscorlib
 
 
 			virtual mscorlib::System::String  ToString(mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider);
+			virtual mscorlib::System::String  ToString(const char *format, mscorlib::System::IFormatProvider formatProvider);
 
 
 		

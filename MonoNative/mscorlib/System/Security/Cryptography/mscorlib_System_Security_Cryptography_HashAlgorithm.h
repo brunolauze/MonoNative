@@ -75,6 +75,7 @@ namespace mscorlib
 					std::vector<mscorlib::System::Byte*>  ComputeHash(mscorlib::System::IO::Stream inputStream);
 					static mscorlib::System::Security::Cryptography::HashAlgorithm  Create();
 					static mscorlib::System::Security::Cryptography::HashAlgorithm  Create(mscorlib::System::String hashName);
+					static mscorlib::System::Security::Cryptography::HashAlgorithm  Create(const char *hashName);
 					virtual void  Initialize();
 					virtual void  Dispose();
 					virtual mscorlib::System::Int32  TransformBlock(std::vector<mscorlib::System::Byte*> inputBuffer, mscorlib::System::Int32 inputOffset, mscorlib::System::Int32 inputCount, std::vector<mscorlib::System::Byte*> outputBuffer, mscorlib::System::Int32 outputOffset);

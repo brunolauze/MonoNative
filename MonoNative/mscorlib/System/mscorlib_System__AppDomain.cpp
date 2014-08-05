@@ -31,7 +31,16 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(path).name());
-				__parameters__[0] = (MonoObject*)path;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "AppendPrivatePath", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
+		}
+
+		void _AppDomain::AppendPrivatePath(const char *path)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(path).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "AppendPrivatePath", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -51,8 +60,20 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstance", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle _AppDomain::CreateInstance(const char *assemblyName, const char *typeName)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstance", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
 		}
@@ -64,8 +85,22 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
 				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstance", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle _AppDomain::CreateInstance(const char *assemblyName, const char *typeName, std::vector<mscorlib::System::Object*> activationAttributes)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstance", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
@@ -84,10 +119,38 @@ namespace mscorlib
 				__parameter_types__[6] = Global::GetType(typeid(culture).name());
 				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameter_types__[8] = Global::GetType(typeid(securityAttributes).name());
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[3] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
+				__parameters__[4] = (MonoObject*)binder;
+				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[6] = (MonoObject*)culture;
+				__parameters__[7] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				__parameters__[8] = (MonoObject*)securityAttributes;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstance", __mscorlib_System__AppDomain, 9, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle _AppDomain::CreateInstance(const char *assemblyName, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes, mscorlib::System::Security::Policy::Evidence securityAttributes)
+		{
+				MonoType *__parameter_types__[9];
+				void *__parameters__[9];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[3] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[4] = Global::GetType(typeid(binder).name());
+				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[6] = Global::GetType(typeid(culture).name());
+				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameter_types__[8] = Global::GetType(typeid(securityAttributes).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
 				__parameters__[4] = (MonoObject*)binder;
 				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[6] = (MonoObject*)culture;
@@ -103,8 +166,20 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
-				__parameters__[0] = (MonoObject*)assemblyFile;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstanceFrom", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle _AppDomain::CreateInstanceFrom(const char *assemblyFile, const char *typeName)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstanceFrom", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
 		}
@@ -116,8 +191,22 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
 				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
-				__parameters__[0] = (MonoObject*)assemblyFile;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstanceFrom", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle _AppDomain::CreateInstanceFrom(const char *assemblyFile, const char *typeName, std::vector<mscorlib::System::Object*> activationAttributes)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstanceFrom", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
@@ -136,10 +225,38 @@ namespace mscorlib
 				__parameter_types__[6] = Global::GetType(typeid(culture).name());
 				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameter_types__[8] = Global::GetType(typeid(securityAttributes).name());
-				__parameters__[0] = (MonoObject*)assemblyFile;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[3] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
+				__parameters__[4] = (MonoObject*)binder;
+				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[6] = (MonoObject*)culture;
+				__parameters__[7] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				__parameters__[8] = (MonoObject*)securityAttributes;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "CreateInstanceFrom", __mscorlib_System__AppDomain, 9, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle _AppDomain::CreateInstanceFrom(const char *assemblyFile, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes, mscorlib::System::Security::Policy::Evidence securityAttributes)
+		{
+				MonoType *__parameter_types__[9];
+				void *__parameters__[9];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[3] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[4] = Global::GetType(typeid(binder).name());
+				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[6] = Global::GetType(typeid(culture).name());
+				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameter_types__[8] = Global::GetType(typeid(securityAttributes).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
 				__parameters__[4] = (MonoObject*)binder;
 				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[6] = (MonoObject*)culture;
@@ -156,7 +273,8 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(name).name());
 				__parameter_types__[1] = Global::GetType(typeid(access).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
 		}
@@ -169,7 +287,8 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(access).name());
 				__parameter_types__[2] = Global::GetType(typeid(evidence).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
 				__parameters__[2] = (MonoObject*)evidence;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
@@ -183,8 +302,24 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(access).name());
 				__parameter_types__[2] = Global::GetType(typeid(dir).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
-				__parameters__[2] = (MonoObject*)dir;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
+		}
+
+		mscorlib::System::Reflection::Emit::AssemblyBuilder _AppDomain::DefineDynamicAssembly(mscorlib::System::Reflection::AssemblyName name, mscorlib::System::Reflection::Emit::AssemblyBuilderAccess::__ENUM__ access, const char *dir)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(name).name());
+				__parameter_types__[1] = Global::GetType(typeid(access).name());
+				__parameter_types__[2] = Global::GetType(typeid(dir).name());
+				__parameters__[0] = (MonoObject*)name;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
 		}
@@ -198,8 +333,26 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(dir).name());
 				__parameter_types__[3] = Global::GetType(typeid(evidence).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
-				__parameters__[2] = (MonoObject*)dir;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
+				__parameters__[3] = (MonoObject*)evidence;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 4, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
+		}
+
+		mscorlib::System::Reflection::Emit::AssemblyBuilder _AppDomain::DefineDynamicAssembly(mscorlib::System::Reflection::AssemblyName name, mscorlib::System::Reflection::Emit::AssemblyBuilderAccess::__ENUM__ access, const char *dir, mscorlib::System::Security::Policy::Evidence evidence)
+		{
+				MonoType *__parameter_types__[4];
+				void *__parameters__[4];
+				__parameter_types__[0] = Global::GetType(typeid(name).name());
+				__parameter_types__[1] = Global::GetType(typeid(access).name());
+				__parameter_types__[2] = Global::GetType(typeid(dir).name());
+				__parameter_types__[3] = Global::GetType(typeid(evidence).name());
+				__parameters__[0] = (MonoObject*)name;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
 				__parameters__[3] = (MonoObject*)evidence;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
@@ -215,7 +368,8 @@ namespace mscorlib
 				__parameter_types__[3] = Global::GetType(typeid(optionalPermissions).name());
 				__parameter_types__[4] = Global::GetType(typeid(refusedPermissions).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
 				__parameters__[2] = (MonoObject*)requiredPermissions;
 				__parameters__[3] = (MonoObject*)optionalPermissions;
 				__parameters__[4] = (MonoObject*)refusedPermissions;
@@ -234,7 +388,8 @@ namespace mscorlib
 				__parameter_types__[4] = Global::GetType(typeid(optionalPermissions).name());
 				__parameter_types__[5] = Global::GetType(typeid(refusedPermissions).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
 				__parameters__[2] = (MonoObject*)evidence;
 				__parameters__[3] = (MonoObject*)requiredPermissions;
 				__parameters__[4] = (MonoObject*)optionalPermissions;
@@ -254,8 +409,30 @@ namespace mscorlib
 				__parameter_types__[4] = Global::GetType(typeid(optionalPermissions).name());
 				__parameter_types__[5] = Global::GetType(typeid(refusedPermissions).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
-				__parameters__[2] = (MonoObject*)dir;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
+				__parameters__[3] = (MonoObject*)requiredPermissions;
+				__parameters__[4] = (MonoObject*)optionalPermissions;
+				__parameters__[5] = (MonoObject*)refusedPermissions;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 6, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
+		}
+
+		mscorlib::System::Reflection::Emit::AssemblyBuilder _AppDomain::DefineDynamicAssembly(mscorlib::System::Reflection::AssemblyName name, mscorlib::System::Reflection::Emit::AssemblyBuilderAccess::__ENUM__ access, const char *dir, mscorlib::System::Security::PermissionSet requiredPermissions, mscorlib::System::Security::PermissionSet optionalPermissions, mscorlib::System::Security::PermissionSet refusedPermissions)
+		{
+				MonoType *__parameter_types__[6];
+				void *__parameters__[6];
+				__parameter_types__[0] = Global::GetType(typeid(name).name());
+				__parameter_types__[1] = Global::GetType(typeid(access).name());
+				__parameter_types__[2] = Global::GetType(typeid(dir).name());
+				__parameter_types__[3] = Global::GetType(typeid(requiredPermissions).name());
+				__parameter_types__[4] = Global::GetType(typeid(optionalPermissions).name());
+				__parameter_types__[5] = Global::GetType(typeid(refusedPermissions).name());
+				__parameters__[0] = (MonoObject*)name;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
 				__parameters__[3] = (MonoObject*)requiredPermissions;
 				__parameters__[4] = (MonoObject*)optionalPermissions;
 				__parameters__[5] = (MonoObject*)refusedPermissions;
@@ -275,8 +452,32 @@ namespace mscorlib
 				__parameter_types__[5] = Global::GetType(typeid(optionalPermissions).name());
 				__parameter_types__[6] = Global::GetType(typeid(refusedPermissions).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
-				__parameters__[2] = (MonoObject*)dir;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
+				__parameters__[3] = (MonoObject*)evidence;
+				__parameters__[4] = (MonoObject*)requiredPermissions;
+				__parameters__[5] = (MonoObject*)optionalPermissions;
+				__parameters__[6] = (MonoObject*)refusedPermissions;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 7, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
+		}
+
+		mscorlib::System::Reflection::Emit::AssemblyBuilder _AppDomain::DefineDynamicAssembly(mscorlib::System::Reflection::AssemblyName name, mscorlib::System::Reflection::Emit::AssemblyBuilderAccess::__ENUM__ access, const char *dir, mscorlib::System::Security::Policy::Evidence evidence, mscorlib::System::Security::PermissionSet requiredPermissions, mscorlib::System::Security::PermissionSet optionalPermissions, mscorlib::System::Security::PermissionSet refusedPermissions)
+		{
+				MonoType *__parameter_types__[7];
+				void *__parameters__[7];
+				__parameter_types__[0] = Global::GetType(typeid(name).name());
+				__parameter_types__[1] = Global::GetType(typeid(access).name());
+				__parameter_types__[2] = Global::GetType(typeid(dir).name());
+				__parameter_types__[3] = Global::GetType(typeid(evidence).name());
+				__parameter_types__[4] = Global::GetType(typeid(requiredPermissions).name());
+				__parameter_types__[5] = Global::GetType(typeid(optionalPermissions).name());
+				__parameter_types__[6] = Global::GetType(typeid(refusedPermissions).name());
+				__parameters__[0] = (MonoObject*)name;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
 				__parameters__[3] = (MonoObject*)evidence;
 				__parameters__[4] = (MonoObject*)requiredPermissions;
 				__parameters__[5] = (MonoObject*)optionalPermissions;
@@ -298,8 +499,34 @@ namespace mscorlib
 				__parameter_types__[6] = Global::GetType(typeid(refusedPermissions).name());
 				__parameter_types__[7] = Global::GetType(typeid(isSynchronized).name());
 				__parameters__[0] = (MonoObject*)name;
-				__parameters__[1] = reinterpret_cast<void*>(access);
-				__parameters__[2] = (MonoObject*)dir;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
+				__parameters__[3] = (MonoObject*)evidence;
+				__parameters__[4] = (MonoObject*)requiredPermissions;
+				__parameters__[5] = (MonoObject*)optionalPermissions;
+				__parameters__[6] = (MonoObject*)refusedPermissions;
+				__parameters__[7] = reinterpret_cast<void*>(isSynchronized);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "DefineDynamicAssembly", __mscorlib_System__AppDomain, 8, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Reflection::Emit::AssemblyBuilder(__result__);
+		}
+
+		mscorlib::System::Reflection::Emit::AssemblyBuilder _AppDomain::DefineDynamicAssembly(mscorlib::System::Reflection::AssemblyName name, mscorlib::System::Reflection::Emit::AssemblyBuilderAccess::__ENUM__ access, const char *dir, mscorlib::System::Security::Policy::Evidence evidence, mscorlib::System::Security::PermissionSet requiredPermissions, mscorlib::System::Security::PermissionSet optionalPermissions, mscorlib::System::Security::PermissionSet refusedPermissions, mscorlib::System::Boolean isSynchronized)
+		{
+				MonoType *__parameter_types__[8];
+				void *__parameters__[8];
+				__parameter_types__[0] = Global::GetType(typeid(name).name());
+				__parameter_types__[1] = Global::GetType(typeid(access).name());
+				__parameter_types__[2] = Global::GetType(typeid(dir).name());
+				__parameter_types__[3] = Global::GetType(typeid(evidence).name());
+				__parameter_types__[4] = Global::GetType(typeid(requiredPermissions).name());
+				__parameter_types__[5] = Global::GetType(typeid(optionalPermissions).name());
+				__parameter_types__[6] = Global::GetType(typeid(refusedPermissions).name());
+				__parameter_types__[7] = Global::GetType(typeid(isSynchronized).name());
+				__parameters__[0] = (MonoObject*)name;
+				int __param_access__ = access;
+				__parameters__[1] = &__param_access__;
+				__parameters__[2] = mono_string_new(Global::GetDomain(), dir);
 				__parameters__[3] = (MonoObject*)evidence;
 				__parameters__[4] = (MonoObject*)requiredPermissions;
 				__parameters__[5] = (MonoObject*)optionalPermissions;
@@ -333,7 +560,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
-				__parameters__[0] = (MonoObject*)assemblyFile;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "ExecuteAssembly", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int32 _AppDomain::ExecuteAssembly(const char *assemblyFile)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "ExecuteAssembly", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 		}
@@ -344,7 +581,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
 				__parameter_types__[1] = Global::GetType(typeid(assemblySecurity).name());
-				__parameters__[0] = (MonoObject*)assemblyFile;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = (MonoObject*)assemblySecurity;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "ExecuteAssembly", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int32 _AppDomain::ExecuteAssembly(const char *assemblyFile, mscorlib::System::Security::Policy::Evidence assemblySecurity)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblySecurity).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
 				__parameters__[1] = (MonoObject*)assemblySecurity;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "ExecuteAssembly", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -357,7 +606,21 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
 				__parameter_types__[1] = Global::GetType(typeid(assemblySecurity).name());
 				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
-				__parameters__[0] = (MonoObject*)assemblyFile;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = (MonoObject*)assemblySecurity;
+				__parameters__[2] = Global::FromArray<mscorlib::System::String*>(args, typeid(mscorlib::System::String).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "ExecuteAssembly", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int32 _AppDomain::ExecuteAssembly(const char *assemblyFile, mscorlib::System::Security::Policy::Evidence assemblySecurity, std::vector<mscorlib::System::String*> args)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblySecurity).name());
+				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
 				__parameters__[1] = (MonoObject*)assemblySecurity;
 				__parameters__[2] = Global::FromArray<mscorlib::System::String*>(args, typeid(mscorlib::System::String).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "ExecuteAssembly", __mscorlib_System__AppDomain, 3, __parameter_types__, __parameters__, NULL);
@@ -383,7 +646,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(name).name());
-				__parameters__[0] = (MonoObject*)name;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "GetData", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Object(__result__);
+		}
+
+		mscorlib::System::Object _AppDomain::GetData(const char *name)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(name).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "GetData", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
 		}
@@ -437,7 +710,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyString).name());
-				__parameters__[0] = (MonoObject*)assemblyString;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyString);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "Load", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Reflection::Assembly(__result__);
+		}
+
+		mscorlib::System::Reflection::Assembly _AppDomain::Load(const char *assemblyString)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyString).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyString);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "Load", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Reflection::Assembly(__result__);
 		}
@@ -472,7 +755,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyString).name());
 				__parameter_types__[1] = Global::GetType(typeid(assemblySecurity).name());
-				__parameters__[0] = (MonoObject*)assemblyString;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyString);
+				__parameters__[1] = (MonoObject*)assemblySecurity;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "Load", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Reflection::Assembly(__result__);
+		}
+
+		mscorlib::System::Reflection::Assembly _AppDomain::Load(const char *assemblyString, mscorlib::System::Security::Policy::Evidence assemblySecurity)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyString).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblySecurity).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyString);
 				__parameters__[1] = (MonoObject*)assemblySecurity;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "Load", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Reflection::Assembly(__result__);
@@ -506,7 +801,16 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(s).name());
-				__parameters__[0] = (MonoObject*)s;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "SetCachePath", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
+		}
+
+		void _AppDomain::SetCachePath(const char *s)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(s).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "SetCachePath", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -516,7 +820,18 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(name).name());
 				__parameter_types__[1] = Global::GetType(typeid(data).name());
-				__parameters__[0] = (MonoObject*)name;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+				__parameters__[1] = (MonoObject*)data;
+				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "SetData", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
+		}
+
+		void _AppDomain::SetData(const char *name, mscorlib::System::Object data)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(name).name());
+				__parameter_types__[1] = Global::GetType(typeid(data).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 				__parameters__[1] = (MonoObject*)data;
 				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "SetData", __mscorlib_System__AppDomain, 2, __parameter_types__, __parameters__, NULL);
 		}
@@ -526,7 +841,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(policy).name());
-				__parameters__[0] = reinterpret_cast<void*>(policy);
+				int __param_policy__ = policy;
+				__parameters__[0] = &__param_policy__;
 				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "SetPrincipalPolicy", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -535,7 +851,16 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(s).name());
-				__parameters__[0] = (MonoObject*)s;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "SetShadowCopyPath", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
+		}
+
+		void _AppDomain::SetShadowCopyPath(const char *s)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(s).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 				Global::InvokeMethod("mscorlib", "System", "_AppDomain", 0, NULL, "SetShadowCopyPath", __mscorlib_System__AppDomain, 1, __parameter_types__, __parameters__, NULL);
 		}
 

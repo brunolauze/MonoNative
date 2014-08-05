@@ -257,7 +257,18 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(opcode).name());
 						__parameter_types__[1] = Global::GetType(typeid(str).name());
 						__parameters__[0] = (MonoObject*)opcode;
-						__parameters__[1] = (MonoObject*)str;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), str);
+						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ILGenerator", 0, NULL, "Emit", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ILGenerator::Emit(mscorlib::System::Reflection::Emit::OpCode opcode, const char *str)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(opcode).name());
+						__parameter_types__[1] = Global::GetType(typeid(str).name());
+						__parameters__[0] = (MonoObject*)opcode;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), str);
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ILGenerator", 0, NULL, "Emit", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -294,7 +305,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(returnType).name());
 						__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(parameterTypes).name()))->eklass);
 						__parameters__[0] = (MonoObject*)opcode;
-						__parameters__[1] = reinterpret_cast<void*>(unmanagedCallConv);
+						int __param_unmanagedCallConv__ = unmanagedCallConv;
+						__parameters__[1] = &__param_unmanagedCallConv__;
 						__parameters__[2] = (MonoObject*)returnType;
 						__parameters__[3] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, typeid(mscorlib::System::Type).name());
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ILGenerator", 0, NULL, "EmitCalli", __native_object__, 4, __parameter_types__, __parameters__, NULL);
@@ -310,7 +322,8 @@ namespace mscorlib
 						__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(parameterTypes).name()))->eklass);
 						__parameter_types__[4] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(optionalParameterTypes).name()))->eklass);
 						__parameters__[0] = (MonoObject*)opcode;
-						__parameters__[1] = reinterpret_cast<void*>(callingConvention);
+						int __param_callingConvention__ = callingConvention;
+						__parameters__[1] = &__param_callingConvention__;
 						__parameters__[2] = (MonoObject*)returnType;
 						__parameters__[3] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, typeid(mscorlib::System::Type).name());
 						__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(optionalParameterTypes, typeid(mscorlib::System::Type).name());
@@ -340,7 +353,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)value;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ILGenerator", 0, NULL, "EmitWriteLine", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ILGenerator::EmitWriteLine(const char *value)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ILGenerator", 0, NULL, "EmitWriteLine", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -394,7 +416,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(usingNamespace).name());
-						__parameters__[0] = (MonoObject*)usingNamespace;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), usingNamespace);
+						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ILGenerator", 0, NULL, "UsingNamespace", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ILGenerator::UsingNamespace(const char *usingNamespace)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(usingNamespace).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), usingNamespace);
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "ILGenerator", 0, NULL, "UsingNamespace", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

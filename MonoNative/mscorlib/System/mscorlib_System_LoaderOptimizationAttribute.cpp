@@ -15,7 +15,7 @@ namespace mscorlib
 		mscorlib::System::LoaderOptimization::__ENUM__  LoaderOptimizationAttribute::get_Value() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "LoaderOptimizationAttribute", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
-			return *(mscorlib::System::LoaderOptimization::__ENUM__*)mono_object_unbox(__result__);
+			return static_cast<mscorlib::System::LoaderOptimization::__ENUM__>(*(mscorlib::System::LoaderOptimization::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 

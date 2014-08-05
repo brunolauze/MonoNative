@@ -7,11 +7,14 @@ using namespace mscorlib::System;
 TEST(SampleFixture, BasicTest1)
 {
 	/* Just try Console a bit */
-	//ConsoleColor::__ENUM__ lastColor = Console::ForegroundColor;
+	ConsoleColor::__ENUM__ lastColor = Console::ForegroundColor;
+
+	std::cout << "Current Console Color: " << lastColor << std::endl;
+
 	Console::WriteLine(String("Hello World!"));
-	//Console::ForegroundColor = ConsoleColor::Magenta;
+	Console::ForegroundColor = ConsoleColor::Magenta;
 	Console::WriteLine(String("Writing here in Magenta foreground color."));
-	//Console::ForegroundColor = lastColor;
+	Console::ForegroundColor = lastColor;
 	Console::WriteLine(String("Writing back with default foreground color."));
 
 }

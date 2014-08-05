@@ -195,8 +195,10 @@ namespace mscorlib
 						__parameter_types__[5] = Global::GetType("mscorlib", "System", "Type");
 						__parameter_types__[6] = Global::GetType("mscorlib", "System", "Boolean");
 						__parameters__[0] = (MonoObject*)name;
-						__parameters__[1] = reinterpret_cast<void*>(attributes);
-						__parameters__[2] = reinterpret_cast<void*>(callingConvention);
+						int __param_attributes__ = attributes;
+						__parameters__[1] = &__param_attributes__;
+						int __param_callingConvention__ = callingConvention;
+						__parameters__[2] = &__param_callingConvention__;
 						__parameters__[3] = (MonoObject*)returnType;
 						__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
 						__parameters__[5] = (MonoObject*)owner;
@@ -221,8 +223,10 @@ namespace mscorlib
 						__parameter_types__[5] = Global::GetType("mscorlib", "System.Reflection", "Module");
 						__parameter_types__[6] = Global::GetType("mscorlib", "System", "Boolean");
 						__parameters__[0] = (MonoObject*)name;
-						__parameters__[1] = reinterpret_cast<void*>(attributes);
-						__parameters__[2] = reinterpret_cast<void*>(callingConvention);
+						int __param_attributes__ = attributes;
+						__parameters__[1] = &__param_attributes__;
+						int __param_callingConvention__ = callingConvention;
+						__parameters__[2] = &__param_callingConvention__;
 						__parameters__[3] = (MonoObject*)returnType;
 						__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
 						__parameters__[5] = (MonoObject*)m;
@@ -299,6 +303,7 @@ namespace mscorlib
 					virtual mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type delegateType) override;
 					virtual mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type delegateType, mscorlib::System::Object target) override;
 					mscorlib::System::Reflection::Emit::ParameterBuilder  DefineParameter(mscorlib::System::Int32 position, mscorlib::System::Reflection::ParameterAttributes::__ENUM__ attributes, mscorlib::System::String parameterName);
+					mscorlib::System::Reflection::Emit::ParameterBuilder  DefineParameter(mscorlib::System::Int32 position, mscorlib::System::Reflection::ParameterAttributes::__ENUM__ attributes, const char *parameterName);
 					virtual mscorlib::System::Reflection::MethodInfo  GetBaseDefinition() override;
 					virtual std::vector<mscorlib::System::Object*>  GetCustomAttributes(mscorlib::System::Boolean inherit) override;
 					virtual std::vector<mscorlib::System::Object*>  GetCustomAttributes(mscorlib::System::Type attributeType, mscorlib::System::Boolean inherit) override;

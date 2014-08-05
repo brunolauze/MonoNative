@@ -151,9 +151,13 @@ namespace mscorlib
 
 				mscorlib::System::Security::AccessControl::MutexSecurity  GetAccessControl();
 				static mscorlib::System::Threading::Mutex  OpenExisting(mscorlib::System::String name);
+				static mscorlib::System::Threading::Mutex  OpenExisting(const char *name);
 				static mscorlib::System::Threading::Mutex  OpenExisting(mscorlib::System::String name, mscorlib::System::Security::AccessControl::MutexRights::__ENUM__ rights);
+				static mscorlib::System::Threading::Mutex  OpenExisting(const char *name, mscorlib::System::Security::AccessControl::MutexRights::__ENUM__ rights);
 				static mscorlib::System::Boolean  TryOpenExisting(mscorlib::System::String name, mscorlib::System::Threading::Mutex result);
+				static mscorlib::System::Boolean  TryOpenExisting(const char *name, mscorlib::System::Threading::Mutex result);
 				static mscorlib::System::Boolean  TryOpenExisting(mscorlib::System::String name, mscorlib::System::Security::AccessControl::MutexRights::__ENUM__ rights, mscorlib::System::Threading::Mutex result);
+				static mscorlib::System::Boolean  TryOpenExisting(const char *name, mscorlib::System::Security::AccessControl::MutexRights::__ENUM__ rights, mscorlib::System::Threading::Mutex result);
 				void  ReleaseMutex();
 				void  SetAccessControl(mscorlib::System::Security::AccessControl::MutexSecurity mutexSecurity);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

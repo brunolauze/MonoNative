@@ -18,8 +18,20 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
 					__parameter_types__[1] = Global::GetType(typeid(extension).name());
-					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = (MonoObject*)extension;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), extension);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "ChangeExtension", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::ChangeExtension(const char *path, const char *extension)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameter_types__[1] = Global::GetType(typeid(extension).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), extension);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "ChangeExtension", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -30,8 +42,20 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(path1).name());
 					__parameter_types__[1] = Global::GetType(typeid(path2).name());
-					__parameters__[0] = (MonoObject*)path1;
-					__parameters__[1] = (MonoObject*)path2;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path1);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), path2);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "Combine", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::Combine(const char *path1, const char *path2)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(path1).name());
+					__parameter_types__[1] = Global::GetType(typeid(path2).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path1);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), path2);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "Combine", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -41,7 +65,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = (MonoObject*)path;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetDirectoryName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::GetDirectoryName(const char *path)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetDirectoryName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -51,7 +85,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = (MonoObject*)path;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetExtension", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::GetExtension(const char *path)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetExtension", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -61,7 +105,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = (MonoObject*)path;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetFileName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::GetFileName(const char *path)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetFileName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -71,7 +125,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = (MonoObject*)path;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetFileNameWithoutExtension", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::GetFileNameWithoutExtension(const char *path)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetFileNameWithoutExtension", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -81,7 +145,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = (MonoObject*)path;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetFullPath", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::GetFullPath(const char *path)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetFullPath", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -91,7 +165,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = (MonoObject*)path;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetPathRoot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::GetPathRoot(const char *path)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "GetPathRoot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -113,7 +197,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = (MonoObject*)path;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "HasExtension", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Boolean Path::HasExtension(const char *path)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "HasExtension", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}
@@ -123,7 +217,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = (MonoObject*)path;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "IsPathRooted", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Boolean Path::IsPathRooted(const char *path)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "IsPathRooted", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}
@@ -179,9 +283,23 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(path1).name());
 					__parameter_types__[1] = Global::GetType(typeid(path2).name());
 					__parameter_types__[2] = Global::GetType(typeid(path3).name());
-					__parameters__[0] = (MonoObject*)path1;
-					__parameters__[1] = (MonoObject*)path2;
-					__parameters__[2] = (MonoObject*)path3;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path1);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), path2);
+					__parameters__[2] = mono_string_new(Global::GetDomain(), path3);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "Combine", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::Combine(const char *path1, const char *path2, const char *path3)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(path1).name());
+					__parameter_types__[1] = Global::GetType(typeid(path2).name());
+					__parameter_types__[2] = Global::GetType(typeid(path3).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path1);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), path2);
+					__parameters__[2] = mono_string_new(Global::GetDomain(), path3);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "Combine", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -194,10 +312,26 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(path2).name());
 					__parameter_types__[2] = Global::GetType(typeid(path3).name());
 					__parameter_types__[3] = Global::GetType(typeid(path4).name());
-					__parameters__[0] = (MonoObject*)path1;
-					__parameters__[1] = (MonoObject*)path2;
-					__parameters__[2] = (MonoObject*)path3;
-					__parameters__[3] = (MonoObject*)path4;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path1);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), path2);
+					__parameters__[2] = mono_string_new(Global::GetDomain(), path3);
+					__parameters__[3] = mono_string_new(Global::GetDomain(), path4);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "Combine", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String Path::Combine(const char *path1, const char *path2, const char *path3, const char *path4)
+			{
+					MonoType *__parameter_types__[4];
+					void *__parameters__[4];
+					__parameter_types__[0] = Global::GetType(typeid(path1).name());
+					__parameter_types__[1] = Global::GetType(typeid(path2).name());
+					__parameter_types__[2] = Global::GetType(typeid(path3).name());
+					__parameter_types__[3] = Global::GetType(typeid(path4).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), path1);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), path2);
+					__parameters__[2] = mono_string_new(Global::GetDomain(), path3);
+					__parameters__[3] = mono_string_new(Global::GetDomain(), path4);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "Path", 0, NULL, "Combine", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}

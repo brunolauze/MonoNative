@@ -62,7 +62,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "PermissionState");
-						__parameters__[0] = reinterpret_cast<void*>(state);
+						int __param_state__ = state;
+						__parameters__[0] = &__param_state__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileIOPermission", 1, __parameter_types__, __parameters__);
 					};
 				
@@ -77,7 +78,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "FileIOPermissionAccess");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
-						__parameters__[0] = reinterpret_cast<void*>(access);
+						int __param_access__ = access;
+						__parameters__[0] = &__param_access__;
 						__parameters__[1] = (MonoObject*)path;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileIOPermission", 2, __parameter_types__, __parameters__);
 					};
@@ -93,7 +95,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "FileIOPermissionAccess");
 						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "String"))->eklass);
-						__parameters__[0] = reinterpret_cast<void*>(access);
+						int __param_access__ = access;
+						__parameters__[0] = &__param_access__;
 						__parameters__[1] = Global::FromArray<mscorlib::System::String*>(pathList, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "String");
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileIOPermission", 2, __parameter_types__, __parameters__);
 					};
@@ -110,8 +113,10 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "FileIOPermissionAccess");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.AccessControl", "AccessControlActions");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
-						__parameters__[0] = reinterpret_cast<void*>(access);
-						__parameters__[1] = reinterpret_cast<void*>(control);
+						int __param_access__ = access;
+						__parameters__[0] = &__param_access__;
+						int __param_control__ = control;
+						__parameters__[1] = &__param_control__;
 						__parameters__[2] = (MonoObject*)path;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileIOPermission", 3, __parameter_types__, __parameters__);
 					};
@@ -128,8 +133,10 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "FileIOPermissionAccess");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.AccessControl", "AccessControlActions");
 						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "String"))->eklass);
-						__parameters__[0] = reinterpret_cast<void*>(access);
-						__parameters__[1] = reinterpret_cast<void*>(control);
+						int __param_access__ = access;
+						__parameters__[0] = &__param_access__;
+						int __param_control__ = control;
+						__parameters__[1] = &__param_control__;
 						__parameters__[2] = Global::FromArray<mscorlib::System::String*>(pathList, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "String");
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileIOPermission", 3, __parameter_types__, __parameters__);
 					};
@@ -163,6 +170,7 @@ namespace mscorlib
 
 
 					void  AddPathList(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__ access, mscorlib::System::String path);
+					void  AddPathList(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__ access, const char *path);
 					void  AddPathList(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__ access, std::vector<mscorlib::System::String*> pathList);
 					virtual mscorlib::System::Security::IPermission  Copy() override;
 					virtual void  FromXml(mscorlib::System::Security::SecurityElement esd) override;
@@ -171,6 +179,7 @@ namespace mscorlib
 					virtual mscorlib::System::Boolean  IsSubsetOf(mscorlib::System::Security::IPermission target) override;
 					virtual mscorlib::System::Boolean  IsUnrestricted();
 					void  SetPathList(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__ access, mscorlib::System::String path);
+					void  SetPathList(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__ access, const char *path);
 					void  SetPathList(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__ access, std::vector<mscorlib::System::String*> pathList);
 					virtual mscorlib::System::Security::SecurityElement  ToXml() override;
 					virtual mscorlib::System::Security::IPermission  Union(mscorlib::System::Security::IPermission other) override;

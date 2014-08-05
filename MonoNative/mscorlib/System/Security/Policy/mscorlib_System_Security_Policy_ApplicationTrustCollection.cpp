@@ -67,7 +67,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(applicationIdentity).name());
 						__parameter_types__[1] = Global::GetType(typeid(versionMatch).name());
 						__parameters__[0] = (MonoObject*)applicationIdentity;
-						__parameters__[1] = reinterpret_cast<void*>(versionMatch);
+						int __param_versionMatch__ = versionMatch;
+						__parameters__[1] = &__param_versionMatch__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "Find", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Policy::ApplicationTrustCollection(__result__);
 				}
@@ -94,7 +95,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(applicationIdentity).name());
 						__parameter_types__[1] = Global::GetType(typeid(versionMatch).name());
 						__parameters__[0] = (MonoObject*)applicationIdentity;
-						__parameters__[1] = reinterpret_cast<void*>(versionMatch);
+						int __param_versionMatch__ = versionMatch;
+						__parameters__[1] = &__param_versionMatch__;
 						Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "Remove", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -159,7 +161,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(appFullName).name());
-					__parameters__[0] = (MonoObject*)appFullName;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), appFullName);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "get_Item", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::Policy::ApplicationTrust(__result__);
 				}

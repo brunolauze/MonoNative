@@ -19,8 +19,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), value);
+					Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "AddAttribute", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+			}
+
+			void SecurityElement::AddAttribute(const char *name, const char *value)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "AddAttribute", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -38,7 +49,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "Attribute", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String SecurityElement::Attribute(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "Attribute", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -64,7 +85,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
-					__parameters__[0] = (MonoObject*)str;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "Escape", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String SecurityElement::Escape(const char *str)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "Escape", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -74,7 +105,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(xml).name());
-					__parameters__[0] = (MonoObject*)xml;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), xml);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "FromString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Security::SecurityElement(__result__);
+			}
+
+			mscorlib::System::Security::SecurityElement SecurityElement::FromString(const char *xml)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(xml).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), xml);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "FromString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::SecurityElement(__result__);
 			}
@@ -84,7 +125,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "IsValidAttributeName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Boolean SecurityElement::IsValidAttributeName(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "IsValidAttributeName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}
@@ -94,7 +145,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "IsValidAttributeValue", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Boolean SecurityElement::IsValidAttributeValue(const char *value)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "IsValidAttributeValue", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}
@@ -104,7 +165,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(tag).name());
-					__parameters__[0] = (MonoObject*)tag;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), tag);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "IsValidTag", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Boolean SecurityElement::IsValidTag(const char *tag)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(tag).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), tag);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "IsValidTag", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}
@@ -114,7 +185,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(text).name());
-					__parameters__[0] = (MonoObject*)text;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), text);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "IsValidText", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Boolean SecurityElement::IsValidText(const char *text)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(text).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), text);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "IsValidText", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}
@@ -124,7 +205,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(tag).name());
-					__parameters__[0] = (MonoObject*)tag;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), tag);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "SearchForChildByTag", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Security::SecurityElement(__result__);
+			}
+
+			mscorlib::System::Security::SecurityElement SecurityElement::SearchForChildByTag(const char *tag)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(tag).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), tag);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "SearchForChildByTag", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::SecurityElement(__result__);
 			}
@@ -134,7 +225,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(tag).name());
-					__parameters__[0] = (MonoObject*)tag;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), tag);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "SearchForTextOfTag", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String SecurityElement::SearchForTextOfTag(const char *tag)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(tag).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), tag);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "SearchForTextOfTag", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -192,7 +293,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "set_Tag", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -209,7 +310,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Security", "SecurityElement", 0, NULL, "set_Text", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

@@ -39,7 +39,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(strName).name());
-						__parameters__[0] = (MonoObject*)strName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), strName);
+						Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "DSASignatureFormatter", 0, NULL, "SetHashAlgorithm", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void DSASignatureFormatter::SetHashAlgorithm(const char *strName)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(strName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), strName);
 						Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "DSASignatureFormatter", 0, NULL, "SetHashAlgorithm", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

@@ -28,7 +28,23 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(language).name());
 						__parameter_types__[2] = Global::GetType(typeid(languageVendor).name());
 						__parameter_types__[3] = Global::GetType(typeid(documentType).name());
-						__parameters__[0] = (MonoObject*)url;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), url);
+						__parameters__[1] = (MonoObject*)language;
+						__parameters__[2] = (MonoObject*)languageVendor;
+						__parameters__[3] = (MonoObject*)documentType;
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolReader", 0, NULL, "GetDocument", __mscorlib_System_Diagnostics_SymbolStore_ISymbolReader, 4, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument(__result__);
+				}
+
+				mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument ISymbolReader::GetDocument(const char *url, mscorlib::System::Guid language, mscorlib::System::Guid languageVendor, mscorlib::System::Guid documentType)
+				{
+						MonoType *__parameter_types__[4];
+						void *__parameters__[4];
+						__parameter_types__[0] = Global::GetType(typeid(url).name());
+						__parameter_types__[1] = Global::GetType(typeid(language).name());
+						__parameter_types__[2] = Global::GetType(typeid(languageVendor).name());
+						__parameter_types__[3] = Global::GetType(typeid(documentType).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), url);
 						__parameters__[1] = (MonoObject*)language;
 						__parameters__[2] = (MonoObject*)languageVendor;
 						__parameters__[3] = (MonoObject*)documentType;
@@ -121,7 +137,27 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(parent).name());
 						__parameter_types__[1] = Global::GetType(typeid(name).name());
 						__parameters__[0] = (MonoObject*)parent;
-						__parameters__[1] = (MonoObject*)name;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolReader", 0, NULL, "GetSymAttribute", __mscorlib_System_Diagnostics_SymbolStore_ISymbolReader, 2, __parameter_types__, __parameters__, NULL);
+						MonoArray *__array_ptr__ = (MonoArray*)__result__;
+						uintptr_t __array_length__ = mono_array_length(__array_ptr__);
+						std::vector<mscorlib::System::Byte*>  __array_result__(__array_length__);
+						for(uintptr_t __array_index__ = 0; __array_index__ < __array_length__; __array_index__++)
+						{
+							MonoObject *__array_item__ = mono_array_get(__array_ptr__,MonoObject*,__array_index__);
+							__array_result__.push_back(new mscorlib::System::Byte (__array_item__));
+						}
+						return __array_result__;
+				}
+
+				std::vector<mscorlib::System::Byte*> ISymbolReader::GetSymAttribute(mscorlib::System::Diagnostics::SymbolStore::SymbolToken parent, const char *name)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(parent).name());
+						__parameter_types__[1] = Global::GetType(typeid(name).name());
+						__parameters__[0] = (MonoObject*)parent;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolReader", 0, NULL, "GetSymAttribute", __mscorlib_System_Diagnostics_SymbolStore_ISymbolReader, 2, __parameter_types__, __parameters__, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
 						uintptr_t __array_length__ = mono_array_length(__array_ptr__);

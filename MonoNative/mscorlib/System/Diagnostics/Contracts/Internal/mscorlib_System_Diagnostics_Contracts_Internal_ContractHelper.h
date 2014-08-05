@@ -52,7 +52,9 @@ namespace mscorlib
 
 
 						static mscorlib::System::String  RaiseContractFailedEvent(mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__ failureKind, mscorlib::System::String userMessage, mscorlib::System::String conditionText, mscorlib::System::Exception innerException);
+						static mscorlib::System::String  RaiseContractFailedEvent(mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__ failureKind, const char *userMessage, const char *conditionText, mscorlib::System::Exception innerException);
 						static void  TriggerFailure(mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__ kind, mscorlib::System::String displayMessage, mscorlib::System::String userMessage, mscorlib::System::String conditionText, mscorlib::System::Exception innerException);
+						static void  TriggerFailure(mscorlib::System::Diagnostics::Contracts::ContractFailureKind::__ENUM__ kind, const char *displayMessage, const char *userMessage, const char *conditionText, mscorlib::System::Exception innerException);
 						virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

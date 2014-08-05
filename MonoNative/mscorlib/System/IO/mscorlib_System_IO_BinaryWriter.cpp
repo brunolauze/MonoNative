@@ -37,7 +37,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(offset).name());
 					__parameter_types__[1] = Global::GetType(typeid(origin).name());
 					__parameters__[0] = &offset;
-					__parameters__[1] = reinterpret_cast<void*>(origin);
+					int __param_origin__ = origin;
+					__parameters__[1] = &__param_origin__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "BinaryWriter", 0, NULL, "Seek", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
 			}
@@ -181,7 +182,16 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					Global::InvokeMethod("mscorlib", "System.IO", "BinaryWriter", 0, NULL, "Write", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+			}
+
+			void BinaryWriter::Write(const char *value)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.IO", "BinaryWriter", 0, NULL, "Write", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

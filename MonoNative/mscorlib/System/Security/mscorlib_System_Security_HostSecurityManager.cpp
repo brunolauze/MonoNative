@@ -77,7 +77,7 @@ namespace mscorlib
 			mscorlib::System::Security::HostSecurityManagerOptions::__ENUM__  HostSecurityManager::get_Flags() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "HostSecurityManager", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Security::HostSecurityManagerOptions::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Security::HostSecurityManagerOptions::__ENUM__>(*(mscorlib::System::Security::HostSecurityManagerOptions::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

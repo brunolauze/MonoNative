@@ -37,7 +37,8 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType("mscorlib", "System.Reflection", "ResourceLocation");
 					__parameters__[0] = (MonoObject*)containingAssembly;
 					__parameters__[1] = (MonoObject*)containingFileName;
-					__parameters__[2] = reinterpret_cast<void*>(resourceLocation);
+					int __param_resourceLocation__ = resourceLocation;
+					__parameters__[2] = &__param_resourceLocation__;
 					__native_object__ = Global::New("mscorlib", "System.Reflection", "ManifestResourceInfo", 3, __parameter_types__, __parameters__);
 				};
 			

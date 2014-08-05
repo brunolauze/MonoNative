@@ -49,7 +49,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(desiredAccess).name());
-						__parameters__[0] = reinterpret_cast<void*>(desiredAccess);
+						int __param_desiredAccess__ = desiredAccess;
+						__parameters__[0] = &__param_desiredAccess__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "GetCurrent", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Principal::WindowsIdentity(__result__);
 				}
@@ -139,7 +140,7 @@ namespace mscorlib
 				mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__  WindowsIdentity::get_ImpersonationLevel() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_ImpersonationLevel", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__>(*(mscorlib::System::Security::Principal::TokenImpersonationLevel::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -205,7 +206,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "set_Label", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -222,7 +223,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "set_NameClaimType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -239,7 +240,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "set_RoleClaimType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

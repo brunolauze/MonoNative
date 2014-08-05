@@ -94,7 +94,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "IntPtr");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 					__parameters__[0] = (MonoObject*)handle;
-					__parameters__[1] = reinterpret_cast<void*>(access);
+					int __param_access__ = access;
+					__parameters__[1] = &__param_access__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 2, __parameter_types__, __parameters__);
 				};
 			
@@ -108,7 +109,8 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameters__[0] = (MonoObject*)handle;
-					__parameters__[1] = reinterpret_cast<void*>(access);
+					int __param_access__ = access;
+					__parameters__[1] = &__param_access__;
 					__parameters__[2] = reinterpret_cast<void*>(ownsHandle);
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 3, __parameter_types__, __parameters__);
 				};
@@ -124,7 +126,8 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
 					__parameters__[0] = (MonoObject*)handle;
-					__parameters__[1] = reinterpret_cast<void*>(access);
+					int __param_access__ = access;
+					__parameters__[1] = &__param_access__;
 					__parameters__[2] = reinterpret_cast<void*>(ownsHandle);
 					__parameters__[3] = &bufferSize;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 4, __parameter_types__, __parameters__);
@@ -142,7 +145,8 @@ namespace mscorlib
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[4] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameters__[0] = (MonoObject*)handle;
-					__parameters__[1] = reinterpret_cast<void*>(access);
+					int __param_access__ = access;
+					__parameters__[1] = &__param_access__;
 					__parameters__[2] = reinterpret_cast<void*>(ownsHandle);
 					__parameters__[3] = &bufferSize;
 					__parameters__[4] = reinterpret_cast<void*>(isAsync);
@@ -158,7 +162,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileMode");
 					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = reinterpret_cast<void*>(mode);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 2, __parameter_types__, __parameters__);
 				};
 			
@@ -172,8 +177,10 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileMode");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = reinterpret_cast<void*>(mode);
-					__parameters__[2] = reinterpret_cast<void*>(access);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
+					int __param_access__ = access;
+					__parameters__[2] = &__param_access__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 3, __parameter_types__, __parameters__);
 				};
 			
@@ -188,9 +195,12 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System.IO", "FileShare");
 					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = reinterpret_cast<void*>(mode);
-					__parameters__[2] = reinterpret_cast<void*>(access);
-					__parameters__[3] = reinterpret_cast<void*>(share);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
+					int __param_access__ = access;
+					__parameters__[2] = &__param_access__;
+					int __param_share__ = share;
+					__parameters__[3] = &__param_share__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 4, __parameter_types__, __parameters__);
 				};
 			
@@ -206,9 +216,12 @@ namespace mscorlib
 					__parameter_types__[3] = Global::GetType("mscorlib", "System.IO", "FileShare");
 					__parameter_types__[4] = Global::GetType("mscorlib", "System", "Int32");
 					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = reinterpret_cast<void*>(mode);
-					__parameters__[2] = reinterpret_cast<void*>(access);
-					__parameters__[3] = reinterpret_cast<void*>(share);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
+					int __param_access__ = access;
+					__parameters__[2] = &__param_access__;
+					int __param_share__ = share;
+					__parameters__[3] = &__param_share__;
 					__parameters__[4] = &bufferSize;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 5, __parameter_types__, __parameters__);
 				};
@@ -226,9 +239,12 @@ namespace mscorlib
 					__parameter_types__[4] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[5] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = reinterpret_cast<void*>(mode);
-					__parameters__[2] = reinterpret_cast<void*>(access);
-					__parameters__[3] = reinterpret_cast<void*>(share);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
+					int __param_access__ = access;
+					__parameters__[2] = &__param_access__;
+					int __param_share__ = share;
+					__parameters__[3] = &__param_share__;
 					__parameters__[4] = &bufferSize;
 					__parameters__[5] = reinterpret_cast<void*>(useAsync);
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 6, __parameter_types__, __parameters__);
@@ -247,11 +263,15 @@ namespace mscorlib
 					__parameter_types__[4] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[5] = Global::GetType("mscorlib", "System.IO", "FileOptions");
 					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = reinterpret_cast<void*>(mode);
-					__parameters__[2] = reinterpret_cast<void*>(access);
-					__parameters__[3] = reinterpret_cast<void*>(share);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
+					int __param_access__ = access;
+					__parameters__[2] = &__param_access__;
+					int __param_share__ = share;
+					__parameters__[3] = &__param_share__;
 					__parameters__[4] = &bufferSize;
-					__parameters__[5] = reinterpret_cast<void*>(options);
+					int __param_options__ = options;
+					__parameters__[5] = &__param_options__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 6, __parameter_types__, __parameters__);
 				};
 			
@@ -264,7 +284,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "Microsoft.Win32.SafeHandles", "SafeFileHandle");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 					__parameters__[0] = (MonoObject*)handle;
-					__parameters__[1] = reinterpret_cast<void*>(access);
+					int __param_access__ = access;
+					__parameters__[1] = &__param_access__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 2, __parameter_types__, __parameters__);
 				};
 			
@@ -278,7 +299,8 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Int32");
 					__parameters__[0] = (MonoObject*)handle;
-					__parameters__[1] = reinterpret_cast<void*>(access);
+					int __param_access__ = access;
+					__parameters__[1] = &__param_access__;
 					__parameters__[2] = &bufferSize;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 3, __parameter_types__, __parameters__);
 				};
@@ -294,7 +316,8 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameters__[0] = (MonoObject*)handle;
-					__parameters__[1] = reinterpret_cast<void*>(access);
+					int __param_access__ = access;
+					__parameters__[1] = &__param_access__;
 					__parameters__[2] = &bufferSize;
 					__parameters__[3] = reinterpret_cast<void*>(isAsync);
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 4, __parameter_types__, __parameters__);
@@ -313,11 +336,15 @@ namespace mscorlib
 					__parameter_types__[4] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[5] = Global::GetType("mscorlib", "System.IO", "FileOptions");
 					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = reinterpret_cast<void*>(mode);
-					__parameters__[2] = reinterpret_cast<void*>(rights);
-					__parameters__[3] = reinterpret_cast<void*>(share);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
+					int __param_rights__ = rights;
+					__parameters__[2] = &__param_rights__;
+					int __param_share__ = share;
+					__parameters__[3] = &__param_share__;
 					__parameters__[4] = &bufferSize;
-					__parameters__[5] = reinterpret_cast<void*>(options);
+					int __param_options__ = options;
+					__parameters__[5] = &__param_options__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 6, __parameter_types__, __parameters__);
 				};
 			
@@ -335,11 +362,15 @@ namespace mscorlib
 					__parameter_types__[5] = Global::GetType("mscorlib", "System.IO", "FileOptions");
 					__parameter_types__[6] = Global::GetType("mscorlib", "System.Security.AccessControl", "FileSecurity");
 					__parameters__[0] = (MonoObject*)path;
-					__parameters__[1] = reinterpret_cast<void*>(mode);
-					__parameters__[2] = reinterpret_cast<void*>(rights);
-					__parameters__[3] = reinterpret_cast<void*>(share);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
+					int __param_rights__ = rights;
+					__parameters__[2] = &__param_rights__;
+					int __param_share__ = share;
+					__parameters__[3] = &__param_share__;
 					__parameters__[4] = &bufferSize;
-					__parameters__[5] = reinterpret_cast<void*>(options);
+					int __param_options__ = options;
+					__parameters__[5] = &__param_options__;
 					__parameters__[6] = (MonoObject*)fileSecurity;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 7, __parameter_types__, __parameters__);
 				};

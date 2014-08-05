@@ -25,8 +25,22 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(bindingAttr);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetField", __mscorlib_System_Reflection_IReflect, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::FieldInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::FieldInfo IReflect::GetField(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetField", __mscorlib_System_Reflection_IReflect, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::FieldInfo(__result__);
 			}
@@ -36,7 +50,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(bindingAttr).name());
-					__parameters__[0] = reinterpret_cast<void*>(bindingAttr);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[0] = &__param_bindingAttr__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetFields", __mscorlib_System_Reflection_IReflect, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -55,8 +70,30 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(bindingAttr);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetMember", __mscorlib_System_Reflection_IReflect, 2, __parameter_types__, __parameters__, NULL);
+					MonoArray *__array_ptr__ = (MonoArray*)__result__;
+					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
+					std::vector<mscorlib::System::Reflection::MemberInfo*>  __array_result__(__array_length__);
+					for(uintptr_t __array_index__ = 0; __array_index__ < __array_length__; __array_index__++)
+					{
+						MonoObject *__array_item__ = mono_array_get(__array_ptr__,MonoObject*,__array_index__);
+						__array_result__.push_back(new mscorlib::System::Reflection::MemberInfo (__array_item__));
+					}
+					return __array_result__;
+			}
+
+			std::vector<mscorlib::System::Reflection::MemberInfo*> IReflect::GetMember(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetMember", __mscorlib_System_Reflection_IReflect, 2, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -74,7 +111,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(bindingAttr).name());
-					__parameters__[0] = reinterpret_cast<void*>(bindingAttr);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[0] = &__param_bindingAttr__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetMembers", __mscorlib_System_Reflection_IReflect, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -93,8 +131,22 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(bindingAttr);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetMethod", __mscorlib_System_Reflection_IReflect, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::MethodInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::MethodInfo IReflect::GetMethod(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetMethod", __mscorlib_System_Reflection_IReflect, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::MethodInfo(__result__);
 			}
@@ -108,8 +160,28 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType(typeid(binder).name());
 					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(types).name()))->eklass);
 					__parameter_types__[4] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(modifiers).name()))->eklass);
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(bindingAttr);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
+					__parameters__[2] = (MonoObject*)binder;
+					__parameters__[3] = Global::FromArray<mscorlib::System::Type*>(types, typeid(mscorlib::System::Type).name());
+					__parameters__[4] = Global::FromArray<mscorlib::System::Reflection::ParameterModifier*>(modifiers, typeid(mscorlib::System::Reflection::ParameterModifier).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetMethod", __mscorlib_System_Reflection_IReflect, 5, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::MethodInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::MethodInfo IReflect::GetMethod(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Type*> types, std::vector<mscorlib::System::Reflection::ParameterModifier*> modifiers)
+			{
+					MonoType *__parameter_types__[5];
+					void *__parameters__[5];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
+					__parameter_types__[2] = Global::GetType(typeid(binder).name());
+					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(types).name()))->eklass);
+					__parameter_types__[4] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(modifiers).name()))->eklass);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
 					__parameters__[2] = (MonoObject*)binder;
 					__parameters__[3] = Global::FromArray<mscorlib::System::Type*>(types, typeid(mscorlib::System::Type).name());
 					__parameters__[4] = Global::FromArray<mscorlib::System::Reflection::ParameterModifier*>(modifiers, typeid(mscorlib::System::Reflection::ParameterModifier).name());
@@ -122,7 +194,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(bindingAttr).name());
-					__parameters__[0] = reinterpret_cast<void*>(bindingAttr);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[0] = &__param_bindingAttr__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetMethods", __mscorlib_System_Reflection_IReflect, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -140,7 +213,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(bindingAttr).name());
-					__parameters__[0] = reinterpret_cast<void*>(bindingAttr);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[0] = &__param_bindingAttr__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetProperties", __mscorlib_System_Reflection_IReflect, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -159,8 +233,22 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(bindingAttr);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetProperty", __mscorlib_System_Reflection_IReflect, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::PropertyInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::PropertyInfo IReflect::GetProperty(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetProperty", __mscorlib_System_Reflection_IReflect, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::PropertyInfo(__result__);
 			}
@@ -175,8 +263,30 @@ namespace mscorlib
 					__parameter_types__[3] = Global::GetType(typeid(returnType).name());
 					__parameter_types__[4] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(types).name()))->eklass);
 					__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(modifiers).name()))->eklass);
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(bindingAttr);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
+					__parameters__[2] = (MonoObject*)binder;
+					__parameters__[3] = (MonoObject*)returnType;
+					__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(types, typeid(mscorlib::System::Type).name());
+					__parameters__[5] = Global::FromArray<mscorlib::System::Reflection::ParameterModifier*>(modifiers, typeid(mscorlib::System::Reflection::ParameterModifier).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "GetProperty", __mscorlib_System_Reflection_IReflect, 6, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Reflection::PropertyInfo(__result__);
+			}
+
+			mscorlib::System::Reflection::PropertyInfo IReflect::GetProperty(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, mscorlib::System::Type returnType, std::vector<mscorlib::System::Type*> types, std::vector<mscorlib::System::Reflection::ParameterModifier*> modifiers)
+			{
+					MonoType *__parameter_types__[6];
+					void *__parameters__[6];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(bindingAttr).name());
+					__parameter_types__[2] = Global::GetType(typeid(binder).name());
+					__parameter_types__[3] = Global::GetType(typeid(returnType).name());
+					__parameter_types__[4] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(types).name()))->eklass);
+					__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(modifiers).name()))->eklass);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[1] = &__param_bindingAttr__;
 					__parameters__[2] = (MonoObject*)binder;
 					__parameters__[3] = (MonoObject*)returnType;
 					__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(types, typeid(mscorlib::System::Type).name());
@@ -197,8 +307,34 @@ namespace mscorlib
 					__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(modifiers).name()))->eklass);
 					__parameter_types__[6] = Global::GetType(typeid(culture).name());
 					__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(namedParameters).name()))->eklass);
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(invokeAttr);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_invokeAttr__ = invokeAttr;
+					__parameters__[1] = &__param_invokeAttr__;
+					__parameters__[2] = (MonoObject*)binder;
+					__parameters__[3] = (MonoObject*)target;
+					__parameters__[4] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+					__parameters__[5] = Global::FromArray<mscorlib::System::Reflection::ParameterModifier*>(modifiers, typeid(mscorlib::System::Reflection::ParameterModifier).name());
+					__parameters__[6] = (MonoObject*)culture;
+					__parameters__[7] = Global::FromArray<mscorlib::System::String*>(namedParameters, typeid(mscorlib::System::String).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "IReflect", 0, NULL, "InvokeMember", __mscorlib_System_Reflection_IReflect, 8, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Object(__result__);
+			}
+
+			mscorlib::System::Object IReflect::InvokeMember(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ invokeAttr, mscorlib::System::Reflection::Binder binder, mscorlib::System::Object target, std::vector<mscorlib::System::Object*> args, std::vector<mscorlib::System::Reflection::ParameterModifier*> modifiers, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::String*> namedParameters)
+			{
+					MonoType *__parameter_types__[8];
+					void *__parameters__[8];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(invokeAttr).name());
+					__parameter_types__[2] = Global::GetType(typeid(binder).name());
+					__parameter_types__[3] = Global::GetType(typeid(target).name());
+					__parameter_types__[4] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+					__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(modifiers).name()))->eklass);
+					__parameter_types__[6] = Global::GetType(typeid(culture).name());
+					__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(namedParameters).name()))->eklass);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_invokeAttr__ = invokeAttr;
+					__parameters__[1] = &__param_invokeAttr__;
 					__parameters__[2] = (MonoObject*)binder;
 					__parameters__[3] = (MonoObject*)target;
 					__parameters__[4] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());

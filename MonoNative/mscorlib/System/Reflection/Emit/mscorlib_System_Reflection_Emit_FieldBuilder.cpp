@@ -149,7 +149,8 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType(typeid(culture).name());
 						__parameters__[0] = (MonoObject*)obj;
 						__parameters__[1] = (MonoObject*)val;
-						__parameters__[2] = reinterpret_cast<void*>(invokeAttr);
+						int __param_invokeAttr__ = invokeAttr;
+						__parameters__[2] = &__param_invokeAttr__;
 						__parameters__[3] = (MonoObject*)binder;
 						__parameters__[4] = (MonoObject*)culture;
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "FieldBuilder", 0, NULL, "SetValue", __native_object__, 5, __parameter_types__, __parameters__, NULL);
@@ -160,7 +161,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::FieldAttributes::__ENUM__  FieldBuilder::get_Attributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "FieldBuilder", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Reflection::FieldAttributes::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Reflection::FieldAttributes::__ENUM__>(*(mscorlib::System::Reflection::FieldAttributes::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -216,7 +217,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::MemberTypes::__ENUM__  FieldBuilder::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "FieldInfo", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

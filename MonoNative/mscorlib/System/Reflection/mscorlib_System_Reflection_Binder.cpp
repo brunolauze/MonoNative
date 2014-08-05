@@ -25,7 +25,8 @@ namespace mscorlib
 					__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(match).name()))->eklass);
 					__parameter_types__[2] = Global::GetType(typeid(value).name());
 					__parameter_types__[3] = Global::GetType(typeid(culture).name());
-					__parameters__[0] = reinterpret_cast<void*>(bindingAttr);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[0] = &__param_bindingAttr__;
 					__parameters__[1] = Global::FromArray<mscorlib::System::Reflection::FieldInfo*>(match, typeid(mscorlib::System::Reflection::FieldInfo).name());
 					__parameters__[2] = (MonoObject*)value;
 					__parameters__[3] = (MonoObject*)culture;
@@ -44,7 +45,8 @@ namespace mscorlib
 					__parameter_types__[4] = Global::GetType(typeid(culture).name());
 					__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(names).name()))->eklass);
 					__parameter_types__[6] = Global::GetType(typeid(state).name());
-					__parameters__[0] = reinterpret_cast<void*>(bindingAttr);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[0] = &__param_bindingAttr__;
 					__parameters__[1] = Global::FromArray<mscorlib::System::Reflection::MethodBase*>(match, typeid(mscorlib::System::Reflection::MethodBase).name());
 					__parameters__[2] = (MonoObject*)args;
 					__parameters__[3] = Global::FromArray<mscorlib::System::Reflection::ParameterModifier*>(modifiers, typeid(mscorlib::System::Reflection::ParameterModifier).name());
@@ -88,7 +90,8 @@ namespace mscorlib
 					__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(match).name()))->eklass);
 					__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(types).name()))->eklass);
 					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(modifiers).name()))->eklass);
-					__parameters__[0] = reinterpret_cast<void*>(bindingAttr);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[0] = &__param_bindingAttr__;
 					__parameters__[1] = Global::FromArray<mscorlib::System::Reflection::MethodBase*>(match, typeid(mscorlib::System::Reflection::MethodBase).name());
 					__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(types, typeid(mscorlib::System::Type).name());
 					__parameters__[3] = Global::FromArray<mscorlib::System::Reflection::ParameterModifier*>(modifiers, typeid(mscorlib::System::Reflection::ParameterModifier).name());
@@ -105,7 +108,8 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType(typeid(returnType).name());
 					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(indexes).name()))->eklass);
 					__parameter_types__[4] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(modifiers).name()))->eklass);
-					__parameters__[0] = reinterpret_cast<void*>(bindingAttr);
+					int __param_bindingAttr__ = bindingAttr;
+					__parameters__[0] = &__param_bindingAttr__;
 					__parameters__[1] = Global::FromArray<mscorlib::System::Reflection::PropertyInfo*>(match, typeid(mscorlib::System::Reflection::PropertyInfo).name());
 					__parameters__[2] = (MonoObject*)returnType;
 					__parameters__[3] = Global::FromArray<mscorlib::System::Type*>(indexes, typeid(mscorlib::System::Type).name());

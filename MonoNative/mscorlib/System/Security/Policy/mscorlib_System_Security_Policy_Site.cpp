@@ -19,7 +19,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(url).name());
-						__parameters__[0] = (MonoObject*)url;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), url);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Site", 0, NULL, "CreateFromUrl", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Security::Policy::Site(__result__);
+				}
+
+				mscorlib::System::Security::Policy::Site Site::CreateFromUrl(const char *url)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(url).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), url);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "Site", 0, NULL, "CreateFromUrl", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Policy::Site(__result__);
 				}

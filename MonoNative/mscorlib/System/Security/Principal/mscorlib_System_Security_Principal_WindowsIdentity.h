@@ -121,7 +121,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Principal", "WindowsAccountType");
 						__parameters__[0] = (MonoObject*)userToken;
 						__parameters__[1] = (MonoObject*)type;
-						__parameters__[2] = reinterpret_cast<void*>(acctType);
+						int __param_acctType__ = acctType;
+						__parameters__[2] = &__param_acctType__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Principal", "WindowsIdentity", 3, __parameter_types__, __parameters__);
 					};
 				
@@ -140,7 +141,8 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean");
 						__parameters__[0] = (MonoObject*)userToken;
 						__parameters__[1] = (MonoObject*)type;
-						__parameters__[2] = reinterpret_cast<void*>(acctType);
+						int __param_acctType__ = acctType;
+						__parameters__[2] = &__param_acctType__;
 						__parameters__[3] = reinterpret_cast<void*>(isAuthenticated);
 						__native_object__ = Global::New("mscorlib", "System.Security.Principal", "WindowsIdentity", 4, __parameter_types__, __parameters__);
 					};

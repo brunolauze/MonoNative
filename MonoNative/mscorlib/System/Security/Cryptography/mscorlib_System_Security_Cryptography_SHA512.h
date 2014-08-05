@@ -72,6 +72,7 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::SHA512  Create();
 					static mscorlib::System::Security::Cryptography::SHA512  Create(mscorlib::System::String hashName);
+					static mscorlib::System::Security::Cryptography::SHA512  Create(const char *hashName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

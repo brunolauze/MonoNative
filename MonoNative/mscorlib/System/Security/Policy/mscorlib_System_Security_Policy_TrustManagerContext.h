@@ -41,7 +41,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Policy", "TrustManagerUIContext");
-						__parameters__[0] = reinterpret_cast<void*>(uiContext);
+						int __param_uiContext__ = uiContext;
+						__parameters__[0] = &__param_uiContext__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Policy", "TrustManagerContext", 1, __parameter_types__, __parameters__);
 					};
 				

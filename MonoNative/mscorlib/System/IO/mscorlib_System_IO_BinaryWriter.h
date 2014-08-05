@@ -113,6 +113,7 @@ namespace mscorlib
 				virtual void  Write(mscorlib::System::SByte value);
 				virtual void  Write(mscorlib::System::Single value);
 				virtual void  Write(mscorlib::System::String value);
+				virtual void  Write(const char *value);
 				virtual void  Write(mscorlib::System::UInt16 value);
 				virtual void  Write(mscorlib::System::UInt32 value);
 				virtual void  Write(mscorlib::System::UInt64 value);

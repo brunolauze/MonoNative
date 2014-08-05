@@ -97,6 +97,7 @@ namespace mscorlib
 					virtual void  RecordArrayElementFixup(mscorlib::System::Int64 arrayToBeFixed, mscorlib::System::Int32 index, mscorlib::System::Int64 objectRequired);
 					virtual void  RecordArrayElementFixup(mscorlib::System::Int64 arrayToBeFixed, std::vector<mscorlib::System::Int32*> indices, mscorlib::System::Int64 objectRequired);
 					virtual void  RecordDelayedFixup(mscorlib::System::Int64 objectToBeFixed, mscorlib::System::String memberName, mscorlib::System::Int64 objectRequired);
+					virtual void  RecordDelayedFixup(mscorlib::System::Int64 objectToBeFixed, const char *memberName, mscorlib::System::Int64 objectRequired);
 					virtual void  RecordFixup(mscorlib::System::Int64 objectToBeFixed, mscorlib::System::Reflection::MemberInfo member, mscorlib::System::Int64 objectRequired);
 					virtual void  RegisterObject(mscorlib::System::Object obj, mscorlib::System::Int64 objectID);
 					void  RegisterObject(mscorlib::System::Object obj, mscorlib::System::Int64 objectID, mscorlib::System::Runtime::Serialization::SerializationInfo info);

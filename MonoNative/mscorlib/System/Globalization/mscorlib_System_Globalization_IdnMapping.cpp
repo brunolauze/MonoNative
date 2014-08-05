@@ -33,7 +33,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(unicode).name());
-					__parameters__[0] = (MonoObject*)unicode;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), unicode);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetAscii", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String IdnMapping::GetAscii(const char *unicode)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(unicode).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), unicode);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetAscii", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -44,7 +54,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(unicode).name());
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
-					__parameters__[0] = (MonoObject*)unicode;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), unicode);
+					__parameters__[1] = &index;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetAscii", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String IdnMapping::GetAscii(const char *unicode, mscorlib::System::Int32 index)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(unicode).name());
+					__parameter_types__[1] = Global::GetType(typeid(index).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), unicode);
 					__parameters__[1] = &index;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetAscii", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -57,7 +79,21 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(unicode).name());
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
-					__parameters__[0] = (MonoObject*)unicode;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), unicode);
+					__parameters__[1] = &index;
+					__parameters__[2] = &count;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetAscii", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String IdnMapping::GetAscii(const char *unicode, mscorlib::System::Int32 index, mscorlib::System::Int32 count)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(unicode).name());
+					__parameter_types__[1] = Global::GetType(typeid(index).name());
+					__parameter_types__[2] = Global::GetType(typeid(count).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), unicode);
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetAscii", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -69,7 +105,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(ascii).name());
-					__parameters__[0] = (MonoObject*)ascii;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), ascii);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetUnicode", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String IdnMapping::GetUnicode(const char *ascii)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(ascii).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), ascii);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetUnicode", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -80,7 +126,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(ascii).name());
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
-					__parameters__[0] = (MonoObject*)ascii;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), ascii);
+					__parameters__[1] = &index;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetUnicode", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String IdnMapping::GetUnicode(const char *ascii, mscorlib::System::Int32 index)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(ascii).name());
+					__parameter_types__[1] = Global::GetType(typeid(index).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), ascii);
 					__parameters__[1] = &index;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetUnicode", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -93,7 +151,21 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(ascii).name());
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
-					__parameters__[0] = (MonoObject*)ascii;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), ascii);
+					__parameters__[1] = &index;
+					__parameters__[2] = &count;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetUnicode", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String IdnMapping::GetUnicode(const char *ascii, mscorlib::System::Int32 index, mscorlib::System::Int32 count)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(ascii).name());
+					__parameter_types__[1] = Global::GetType(typeid(index).name());
+					__parameter_types__[2] = Global::GetType(typeid(count).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), ascii);
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "IdnMapping", 0, NULL, "GetUnicode", __native_object__, 3, __parameter_types__, __parameters__, NULL);

@@ -84,6 +84,7 @@ namespace mscorlib
 						virtual void  RelativePathTo(mscorlib::System::Runtime::InteropServices::ComTypes::IMoniker pmkOther, mscorlib::System::Runtime::InteropServices::ComTypes::IMoniker ppmkRelPath);
 						virtual void  GetDisplayName(mscorlib::System::Runtime::InteropServices::ComTypes::IBindCtx pbc, mscorlib::System::Runtime::InteropServices::ComTypes::IMoniker pmkToLeft, mscorlib::System::String ppszDisplayName);
 						virtual void  ParseDisplayName(mscorlib::System::Runtime::InteropServices::ComTypes::IBindCtx pbc, mscorlib::System::Runtime::InteropServices::ComTypes::IMoniker pmkToLeft, mscorlib::System::String pszDisplayName, mscorlib::System::Int32 pchEaten, mscorlib::System::Runtime::InteropServices::ComTypes::IMoniker ppmkOut);
+						virtual void  ParseDisplayName(mscorlib::System::Runtime::InteropServices::ComTypes::IBindCtx pbc, mscorlib::System::Runtime::InteropServices::ComTypes::IMoniker pmkToLeft, const char *pszDisplayName, mscorlib::System::Int32 pchEaten, mscorlib::System::Runtime::InteropServices::ComTypes::IMoniker ppmkOut);
 						virtual mscorlib::System::Int32  IsSystemMoniker(mscorlib::System::Int32 pdwMksys);
 
 

@@ -37,7 +37,8 @@ namespace mscorlib
 				__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean");
 				__parameter_types__[4] = Global::GetType("mscorlib", "System", "Boolean");
 				__parameters__[0] = &keyChar;
-				__parameters__[1] = reinterpret_cast<void*>(key);
+				int __param_key__ = key;
+				__parameters__[1] = &__param_key__;
 				__parameters__[2] = reinterpret_cast<void*>(shift);
 				__parameters__[3] = reinterpret_cast<void*>(alt);
 				__parameters__[4] = reinterpret_cast<void*>(control);

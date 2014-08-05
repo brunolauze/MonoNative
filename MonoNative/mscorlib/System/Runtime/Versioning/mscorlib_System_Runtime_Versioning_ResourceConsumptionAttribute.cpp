@@ -19,7 +19,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  ResourceConsumptionAttribute::get_ConsumptionScope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Versioning", "ResourceConsumptionAttribute", 0, NULL, "get_ConsumptionScope", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__>(*(mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -27,7 +27,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__  ResourceConsumptionAttribute::get_ResourceScope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Versioning", "ResourceConsumptionAttribute", 0, NULL, "get_ResourceScope", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__>(*(mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

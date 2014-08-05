@@ -26,7 +26,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Runtime.Versioning", "TargetFrameworkAttribute", 0, NULL, "set_FrameworkName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -43,7 +43,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Runtime.Versioning", "TargetFrameworkAttribute", 0, NULL, "set_FrameworkDisplayName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

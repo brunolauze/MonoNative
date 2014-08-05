@@ -49,7 +49,9 @@ namespace mscorlib
 
 
 					static mscorlib::System::String  MakeVersionSafeName(mscorlib::System::String name, mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__ from, mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__ to);
+					static mscorlib::System::String  MakeVersionSafeName(const char *name, mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__ from, mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__ to);
 					static mscorlib::System::String  MakeVersionSafeName(mscorlib::System::String name, mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__ from, mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__ to, mscorlib::System::Type type);
+					static mscorlib::System::String  MakeVersionSafeName(const char *name, mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__ from, mscorlib::System::Runtime::Versioning::ResourceScope::__ENUM__ to, mscorlib::System::Type type);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

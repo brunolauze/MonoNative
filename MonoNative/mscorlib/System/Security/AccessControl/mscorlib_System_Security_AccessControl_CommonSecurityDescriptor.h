@@ -93,7 +93,8 @@ namespace mscorlib
 						__parameter_types__[6] = Global::GetType("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl");
 						__parameters__[0] = reinterpret_cast<void*>(isContainer);
 						__parameters__[1] = reinterpret_cast<void*>(isDS);
-						__parameters__[2] = reinterpret_cast<void*>(flags);
+						int __param_flags__ = flags;
+						__parameters__[2] = &__param_flags__;
 						__parameters__[3] = (MonoObject*)owner;
 						__parameters__[4] = (MonoObject*)group;
 						__parameters__[5] = (MonoObject*)systemAcl;

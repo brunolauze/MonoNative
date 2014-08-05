@@ -147,6 +147,7 @@ namespace mscorlib
 					virtual mscorlib::System::Object  Invoke(mscorlib::System::Reflection::BindingFlags::__ENUM__ invokeAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> parameters, mscorlib::System::Globalization::CultureInfo culture) override;
 					void  AddDeclarativeSecurity(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__ action, mscorlib::System::Security::PermissionSet pset);
 					mscorlib::System::Reflection::Emit::ParameterBuilder  DefineParameter(mscorlib::System::Int32 iSequence, mscorlib::System::Reflection::ParameterAttributes::__ENUM__ attributes, mscorlib::System::String strParamName);
+					mscorlib::System::Reflection::Emit::ParameterBuilder  DefineParameter(mscorlib::System::Int32 iSequence, mscorlib::System::Reflection::ParameterAttributes::__ENUM__ attributes, const char *strParamName);
 					virtual mscorlib::System::Boolean  IsDefined(mscorlib::System::Type attributeType, mscorlib::System::Boolean inherit) override;
 					virtual std::vector<mscorlib::System::Object*>  GetCustomAttributes(mscorlib::System::Boolean inherit) override;
 					virtual std::vector<mscorlib::System::Object*>  GetCustomAttributes(mscorlib::System::Type attributeType, mscorlib::System::Boolean inherit) override;
@@ -158,6 +159,7 @@ namespace mscorlib
 					mscorlib::System::Reflection::Module  GetModule();
 					mscorlib::System::Reflection::Emit::MethodToken  GetToken();
 					void  SetSymCustomAttribute(mscorlib::System::String name, std::vector<mscorlib::System::Byte*> data);
+					void  SetSymCustomAttribute(const char *name, std::vector<mscorlib::System::Byte*> data);
 					virtual mscorlib::System::String  ToString() override;
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

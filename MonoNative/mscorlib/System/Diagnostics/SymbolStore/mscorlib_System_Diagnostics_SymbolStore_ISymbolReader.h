@@ -63,6 +63,7 @@ namespace mscorlib
 
 
 					virtual mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument  GetDocument(mscorlib::System::String url, mscorlib::System::Guid language, mscorlib::System::Guid languageVendor, mscorlib::System::Guid documentType);
+					virtual mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument  GetDocument(const char *url, mscorlib::System::Guid language, mscorlib::System::Guid languageVendor, mscorlib::System::Guid documentType);
 					virtual std::vector<mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument*>  GetDocuments();
 					virtual std::vector<mscorlib::System::Diagnostics::SymbolStore::ISymbolVariable*>  GetGlobalVariables();
 					virtual mscorlib::System::Diagnostics::SymbolStore::ISymbolMethod  GetMethod(mscorlib::System::Diagnostics::SymbolStore::SymbolToken method);
@@ -70,6 +71,7 @@ namespace mscorlib
 					virtual mscorlib::System::Diagnostics::SymbolStore::ISymbolMethod  GetMethodFromDocumentPosition(mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument document, mscorlib::System::Int32 line, mscorlib::System::Int32 column);
 					virtual std::vector<mscorlib::System::Diagnostics::SymbolStore::ISymbolNamespace*>  GetNamespaces();
 					virtual std::vector<mscorlib::System::Byte*>  GetSymAttribute(mscorlib::System::Diagnostics::SymbolStore::SymbolToken parent, mscorlib::System::String name);
+					virtual std::vector<mscorlib::System::Byte*>  GetSymAttribute(mscorlib::System::Diagnostics::SymbolStore::SymbolToken parent, const char *name);
 					virtual std::vector<mscorlib::System::Diagnostics::SymbolStore::ISymbolVariable*>  GetVariables(mscorlib::System::Diagnostics::SymbolStore::SymbolToken parent);
 
 

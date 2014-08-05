@@ -55,6 +55,7 @@ namespace mscorlib
 				static mscorlib::System::Boolean  IsLogging();
 				static mscorlib::System::Boolean  Launch();
 				static void  Log(mscorlib::System::Int32 level, mscorlib::System::String category, mscorlib::System::String message);
+				static void  Log(mscorlib::System::Int32 level, const char *category, const char *message);
 				static void  NotifyOfCrossThreadDependency();
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

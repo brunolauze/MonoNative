@@ -203,15 +203,18 @@ namespace mscorlib
 				virtual void  Write(mscorlib::System::Char value) override;
 				virtual void  Write(std::vector<mscorlib::System::Char*> buffer) override;
 				virtual void  Write(mscorlib::System::String value) override;
+				virtual void  Write(const char *value) override;
 				virtual void  Close() override;
 				virtual mscorlib::System::Threading::Tasks::TaskBase  FlushAsync() override;
 				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteAsync(mscorlib::System::Char value) override;
 				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteAsync(std::vector<mscorlib::System::Char*> buffer, mscorlib::System::Int32 index, mscorlib::System::Int32 count) override;
 				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteAsync(mscorlib::System::String value) override;
+				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteAsync(const char *value) override;
 				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteLineAsync() override;
 				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteLineAsync(mscorlib::System::Char value) override;
 				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteLineAsync(std::vector<mscorlib::System::Char*> buffer, mscorlib::System::Int32 index, mscorlib::System::Int32 count) override;
 				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteLineAsync(mscorlib::System::String value) override;
+				virtual mscorlib::System::Threading::Tasks::TaskBase  WriteLineAsync(const char *value) override;
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

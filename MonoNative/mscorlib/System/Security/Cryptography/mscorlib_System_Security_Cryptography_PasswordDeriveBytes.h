@@ -183,6 +183,7 @@ namespace mscorlib
 
 
 					std::vector<mscorlib::System::Byte*>  CryptDeriveKey(mscorlib::System::String algname, mscorlib::System::String alghashname, mscorlib::System::Int32 keySize, std::vector<mscorlib::System::Byte*> rgbIV);
+					std::vector<mscorlib::System::Byte*>  CryptDeriveKey(const char *algname, const char *alghashname, mscorlib::System::Int32 keySize, std::vector<mscorlib::System::Byte*> rgbIV);
 					virtual std::vector<mscorlib::System::Byte*>  GetBytes(mscorlib::System::Int32 cb) override;
 					virtual void  Reset() override;
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

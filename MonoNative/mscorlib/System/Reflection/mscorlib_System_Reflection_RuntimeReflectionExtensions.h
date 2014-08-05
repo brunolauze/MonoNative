@@ -68,14 +68,18 @@ namespace mscorlib
 				static mscorlib::System::Reflection::MethodInfo  GetMethodInfo(mscorlib::System::Delegate del);
 				static mscorlib::System::Reflection::MethodInfo  GetRuntimeBaseDefinition(mscorlib::System::Reflection::MethodInfo method);
 				static mscorlib::System::Reflection::EventInfo  GetRuntimeEvent(mscorlib::System::Type type, mscorlib::System::String name);
+				static mscorlib::System::Reflection::EventInfo  GetRuntimeEvent(mscorlib::System::Type type, const char *name);
 				static mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::EventInfo>  GetRuntimeEvents(mscorlib::System::Type type);
 				static mscorlib::System::Reflection::FieldInfo  GetRuntimeField(mscorlib::System::Type type, mscorlib::System::String name);
+				static mscorlib::System::Reflection::FieldInfo  GetRuntimeField(mscorlib::System::Type type, const char *name);
 				static mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::FieldInfo>  GetRuntimeFields(mscorlib::System::Type type);
 				static mscorlib::System::Reflection::InterfaceMapping  GetRuntimeInterfaceMap(mscorlib::System::Reflection::TypeInfo typeInfo, mscorlib::System::Type interfaceType);
 				static mscorlib::System::Reflection::MethodInfo  GetRuntimeMethod(mscorlib::System::Type type, mscorlib::System::String name, std::vector<mscorlib::System::Type*> parameters);
+				static mscorlib::System::Reflection::MethodInfo  GetRuntimeMethod(mscorlib::System::Type type, const char *name, std::vector<mscorlib::System::Type*> parameters);
 				static mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::MethodInfo>  GetRuntimeMethods(mscorlib::System::Type type);
 				static mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::PropertyInfo>  GetRuntimeProperties(mscorlib::System::Type type);
 				static mscorlib::System::Reflection::PropertyInfo  GetRuntimeProperty(mscorlib::System::Type type, mscorlib::System::String name);
+				static mscorlib::System::Reflection::PropertyInfo  GetRuntimeProperty(mscorlib::System::Type type, const char *name);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

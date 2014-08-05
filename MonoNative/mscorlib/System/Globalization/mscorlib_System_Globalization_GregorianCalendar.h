@@ -40,7 +40,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType("mscorlib", "System.Globalization", "GregorianCalendarTypes");
-					__parameters__[0] = reinterpret_cast<void*>(type);
+					int __param_type__ = type;
+					__parameters__[0] = &__param_type__;
 					__native_object__ = Global::New("mscorlib", "System.Globalization", "GregorianCalendar", 1, __parameter_types__, __parameters__);
 				};
 			

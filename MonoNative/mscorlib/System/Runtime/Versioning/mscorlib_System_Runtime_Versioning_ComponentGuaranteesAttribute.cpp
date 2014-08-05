@@ -19,7 +19,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::Versioning::ComponentGuaranteesOptions::__ENUM__  ComponentGuaranteesAttribute::get_Guarantees() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Versioning", "ComponentGuaranteesAttribute", 0, NULL, "get_Guarantees", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Runtime::Versioning::ComponentGuaranteesOptions::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Runtime::Versioning::ComponentGuaranteesOptions::__ENUM__>(*(mscorlib::System::Runtime::Versioning::ComponentGuaranteesOptions::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

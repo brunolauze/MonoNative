@@ -32,7 +32,7 @@ namespace mscorlib
 		mscorlib::System::ConsoleSpecialKey::__ENUM__  ConsoleCancelEventArgs::get_SpecialKey() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ConsoleCancelEventArgs", 0, NULL, "get_SpecialKey", __native_object__, 0, NULL, NULL, NULL);
-			return *(mscorlib::System::ConsoleSpecialKey::__ENUM__*)mono_object_unbox(__result__);
+			return static_cast<mscorlib::System::ConsoleSpecialKey::__ENUM__>(*(mscorlib::System::ConsoleSpecialKey::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 

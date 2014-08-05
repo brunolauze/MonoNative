@@ -74,7 +74,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.Threading", "EventResetMode");
 					__parameters__[0] = reinterpret_cast<void*>(initialState);
-					__parameters__[1] = reinterpret_cast<void*>(mode);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
 					__native_object__ = Global::New("mscorlib", "System.Threading", "EventWaitHandle", 2, __parameter_types__, __parameters__);
 				};
 			
@@ -88,7 +89,8 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.Threading", "EventResetMode");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = reinterpret_cast<void*>(initialState);
-					__parameters__[1] = reinterpret_cast<void*>(mode);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
 					__parameters__[2] = (MonoObject*)name;
 					__native_object__ = Global::New("mscorlib", "System.Threading", "EventWaitHandle", 3, __parameter_types__, __parameters__);
 				};
@@ -104,7 +106,8 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean&");
 					__parameters__[0] = reinterpret_cast<void*>(initialState);
-					__parameters__[1] = reinterpret_cast<void*>(mode);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
 					__parameters__[2] = (MonoObject*)name;
 					__parameters__[3] = &createdNew;
 					__native_object__ = Global::New("mscorlib", "System.Threading", "EventWaitHandle", 4, __parameter_types__, __parameters__);
@@ -122,7 +125,8 @@ namespace mscorlib
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean&");
 					__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.AccessControl", "EventWaitHandleSecurity");
 					__parameters__[0] = reinterpret_cast<void*>(initialState);
-					__parameters__[1] = reinterpret_cast<void*>(mode);
+					int __param_mode__ = mode;
+					__parameters__[1] = &__param_mode__;
 					__parameters__[2] = (MonoObject*)name;
 					__parameters__[3] = &createdNew;
 					__parameters__[4] = (MonoObject*)eventSecurity;
@@ -153,9 +157,13 @@ namespace mscorlib
 
 				mscorlib::System::Security::AccessControl::EventWaitHandleSecurity  GetAccessControl();
 				static mscorlib::System::Threading::EventWaitHandle  OpenExisting(mscorlib::System::String name);
+				static mscorlib::System::Threading::EventWaitHandle  OpenExisting(const char *name);
 				static mscorlib::System::Threading::EventWaitHandle  OpenExisting(mscorlib::System::String name, mscorlib::System::Security::AccessControl::EventWaitHandleRights::__ENUM__ rights);
+				static mscorlib::System::Threading::EventWaitHandle  OpenExisting(const char *name, mscorlib::System::Security::AccessControl::EventWaitHandleRights::__ENUM__ rights);
 				static mscorlib::System::Boolean  TryOpenExisting(mscorlib::System::String name, mscorlib::System::Threading::EventWaitHandle result);
+				static mscorlib::System::Boolean  TryOpenExisting(const char *name, mscorlib::System::Threading::EventWaitHandle result);
 				static mscorlib::System::Boolean  TryOpenExisting(mscorlib::System::String name, mscorlib::System::Security::AccessControl::EventWaitHandleRights::__ENUM__ rights, mscorlib::System::Threading::EventWaitHandle result);
+				static mscorlib::System::Boolean  TryOpenExisting(const char *name, mscorlib::System::Security::AccessControl::EventWaitHandleRights::__ENUM__ rights, mscorlib::System::Threading::EventWaitHandle result);
 				mscorlib::System::Boolean  Reset();
 				mscorlib::System::Boolean  Set();
 				void  SetAccessControl(mscorlib::System::Security::AccessControl::EventWaitHandleSecurity eventSecurity);

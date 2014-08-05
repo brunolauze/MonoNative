@@ -57,6 +57,7 @@ namespace mscorlib
 
 
 					virtual mscorlib::System::Diagnostics::SymbolStore::ISymbolReader  GetReader(mscorlib::System::Int32 importer, mscorlib::System::String filename, mscorlib::System::String searchPath);
+					virtual mscorlib::System::Diagnostics::SymbolStore::ISymbolReader  GetReader(mscorlib::System::Int32 importer, const char *filename, const char *searchPath);
 
 
 				

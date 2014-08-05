@@ -79,7 +79,20 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(memberName).name());
 						__parameter_types__[2] = Global::GetType(typeid(objectRequired).name());
 						__parameters__[0] = &objectToBeFixed;
-						__parameters__[1] = (MonoObject*)memberName;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), memberName);
+						__parameters__[2] = &objectRequired;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "ObjectManager", 0, NULL, "RecordDelayedFixup", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ObjectManager::RecordDelayedFixup(mscorlib::System::Int64 objectToBeFixed, const char *memberName, mscorlib::System::Int64 objectRequired)
+				{
+						MonoType *__parameter_types__[3];
+						void *__parameters__[3];
+						__parameter_types__[0] = Global::GetType(typeid(objectToBeFixed).name());
+						__parameter_types__[1] = Global::GetType(typeid(memberName).name());
+						__parameter_types__[2] = Global::GetType(typeid(objectRequired).name());
+						__parameters__[0] = &objectToBeFixed;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), memberName);
 						__parameters__[2] = &objectRequired;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "ObjectManager", 0, NULL, "RecordDelayedFixup", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 				}

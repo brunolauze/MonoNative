@@ -130,6 +130,7 @@ namespace mscorlib
 					virtual void  Emit(mscorlib::System::Reflection::Emit::OpCode opcode, mscorlib::System::Reflection::Emit::SignatureHelper signature);
 					virtual void  Emit(mscorlib::System::Reflection::Emit::OpCode opcode, mscorlib::System::Single arg);
 					virtual void  Emit(mscorlib::System::Reflection::Emit::OpCode opcode, mscorlib::System::String str);
+					virtual void  Emit(mscorlib::System::Reflection::Emit::OpCode opcode, const char *str);
 					virtual void  Emit(mscorlib::System::Reflection::Emit::OpCode opcode, mscorlib::System::Type cls);
 					virtual void  EmitCall(mscorlib::System::Reflection::Emit::OpCode opcode, mscorlib::System::Reflection::MethodInfo methodInfo, std::vector<mscorlib::System::Type*> optionalParameterTypes);
 					virtual void  EmitCalli(mscorlib::System::Reflection::Emit::OpCode opcode, mscorlib::System::Runtime::InteropServices::CallingConvention::__ENUM__ unmanagedCallConv, mscorlib::System::Type returnType, std::vector<mscorlib::System::Type*> parameterTypes);
@@ -137,12 +138,14 @@ namespace mscorlib
 					virtual void  EmitWriteLine(mscorlib::System::Reflection::FieldInfo fld);
 					virtual void  EmitWriteLine(mscorlib::System::Reflection::Emit::LocalBuilder localBuilder);
 					virtual void  EmitWriteLine(mscorlib::System::String value);
+					virtual void  EmitWriteLine(const char *value);
 					virtual void  EndExceptionBlock();
 					virtual void  EndScope();
 					virtual void  MarkLabel(mscorlib::System::Reflection::Emit::Label loc);
 					virtual void  MarkSequencePoint(mscorlib::System::Diagnostics::SymbolStore::ISymbolDocumentWriter document, mscorlib::System::Int32 startLine, mscorlib::System::Int32 startColumn, mscorlib::System::Int32 endLine, mscorlib::System::Int32 endColumn);
 					virtual void  ThrowException(mscorlib::System::Type excType);
 					virtual void  UsingNamespace(mscorlib::System::String usingNamespace);
+					virtual void  UsingNamespace(const char *usingNamespace);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

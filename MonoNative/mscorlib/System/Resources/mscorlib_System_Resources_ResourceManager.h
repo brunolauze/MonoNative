@@ -113,13 +113,20 @@ namespace mscorlib
 
 
 				static mscorlib::System::Resources::ResourceManager  CreateFileBasedResourceManager(mscorlib::System::String baseName, mscorlib::System::String resourceDir, mscorlib::System::Type usingResourceSet);
+				static mscorlib::System::Resources::ResourceManager  CreateFileBasedResourceManager(const char *baseName, const char *resourceDir, mscorlib::System::Type usingResourceSet);
 				virtual mscorlib::System::Object  GetObject(mscorlib::System::String name);
+				virtual mscorlib::System::Object  GetObject(const char *name);
 				virtual mscorlib::System::Object  GetObject(mscorlib::System::String name, mscorlib::System::Globalization::CultureInfo culture);
+				virtual mscorlib::System::Object  GetObject(const char *name, mscorlib::System::Globalization::CultureInfo culture);
 				virtual mscorlib::System::Resources::ResourceSet  GetResourceSet(mscorlib::System::Globalization::CultureInfo culture, mscorlib::System::Boolean createIfNotExists, mscorlib::System::Boolean tryParents);
 				virtual mscorlib::System::String  GetString(mscorlib::System::String name);
+				virtual mscorlib::System::String  GetString(const char *name);
 				virtual mscorlib::System::String  GetString(mscorlib::System::String name, mscorlib::System::Globalization::CultureInfo culture);
+				virtual mscorlib::System::String  GetString(const char *name, mscorlib::System::Globalization::CultureInfo culture);
 				mscorlib::System::IO::UnmanagedMemoryStream  GetStream(mscorlib::System::String name);
+				mscorlib::System::IO::UnmanagedMemoryStream  GetStream(const char *name);
 				mscorlib::System::IO::UnmanagedMemoryStream  GetStream(mscorlib::System::String name, mscorlib::System::Globalization::CultureInfo culture);
+				mscorlib::System::IO::UnmanagedMemoryStream  GetStream(const char *name, mscorlib::System::Globalization::CultureInfo culture);
 				virtual void  ReleaseAllResources();
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

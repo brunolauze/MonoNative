@@ -123,14 +123,20 @@ namespace mscorlib
 
 
 				mscorlib::System::Reflection::FieldInfo  GetField(mscorlib::System::String name);
+				mscorlib::System::Reflection::FieldInfo  GetField(const char *name);
 				std::vector<mscorlib::System::Reflection::FieldInfo*>  GetFields();
 				mscorlib::System::Reflection::MethodInfo  GetMethod(mscorlib::System::String name);
+				mscorlib::System::Reflection::MethodInfo  GetMethod(const char *name);
 				mscorlib::System::Reflection::MethodInfo  GetMethod(mscorlib::System::String name, std::vector<mscorlib::System::Type*> types);
+				mscorlib::System::Reflection::MethodInfo  GetMethod(const char *name, std::vector<mscorlib::System::Type*> types);
 				mscorlib::System::Reflection::MethodInfo  GetMethod(mscorlib::System::String name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, mscorlib::System::Reflection::CallingConventions::__ENUM__ callConvention, std::vector<mscorlib::System::Type*> types, std::vector<mscorlib::System::Reflection::ParameterModifier*> modifiers);
+				mscorlib::System::Reflection::MethodInfo  GetMethod(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, mscorlib::System::Reflection::CallingConventions::__ENUM__ callConvention, std::vector<mscorlib::System::Type*> types, std::vector<mscorlib::System::Reflection::ParameterModifier*> modifiers);
 				std::vector<mscorlib::System::Reflection::MethodInfo*>  GetMethods();
 				virtual void  GetObjectData(mscorlib::System::Runtime::Serialization::SerializationInfo info, mscorlib::System::Runtime::Serialization::StreamingContext context);
 				virtual mscorlib::System::Type  GetType(mscorlib::System::String className);
+				virtual mscorlib::System::Type  GetType(const char *className);
 				virtual mscorlib::System::Type  GetType(mscorlib::System::String className, mscorlib::System::Boolean ignoreCase);
+				virtual mscorlib::System::Type  GetType(const char *className, mscorlib::System::Boolean ignoreCase);
 				virtual mscorlib::System::String  ToString() override;
 				mscorlib::System::Reflection::FieldInfo  ResolveField(mscorlib::System::Int32 metadataToken);
 				mscorlib::System::Reflection::MemberInfo  ResolveMember(mscorlib::System::Int32 metadataToken);
@@ -144,10 +150,12 @@ namespace mscorlib
 				virtual std::vector<mscorlib::System::Object*>  GetCustomAttributes(mscorlib::System::Type attributeType, mscorlib::System::Boolean inherit);
 				virtual mscorlib::System::Collections::Generic::IList<mscorlib::System::Reflection::CustomAttributeData>  GetCustomAttributesData();
 				virtual mscorlib::System::Reflection::FieldInfo  GetField(mscorlib::System::String name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr);
+				virtual mscorlib::System::Reflection::FieldInfo  GetField(const char *name, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr);
 				virtual std::vector<mscorlib::System::Reflection::FieldInfo*>  GetFields(mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingFlags);
 				virtual std::vector<mscorlib::System::Reflection::MethodInfo*>  GetMethods(mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingFlags);
 				virtual void  GetPEKind(mscorlib::System::Reflection::PortableExecutableKinds::__ENUM__ peKind, mscorlib::System::Reflection::ImageFileMachine::__ENUM__ machine);
 				virtual mscorlib::System::Type  GetType(mscorlib::System::String className, mscorlib::System::Boolean throwOnError, mscorlib::System::Boolean ignoreCase);
+				virtual mscorlib::System::Type  GetType(const char *className, mscorlib::System::Boolean throwOnError, mscorlib::System::Boolean ignoreCase);
 				virtual mscorlib::System::Boolean  IsDefined(mscorlib::System::Type attributeType, mscorlib::System::Boolean inherit);
 				virtual mscorlib::System::Reflection::FieldInfo  ResolveField(mscorlib::System::Int32 metadataToken, std::vector<mscorlib::System::Type*> genericTypeArguments, std::vector<mscorlib::System::Type*> genericMethodArguments);
 				virtual mscorlib::System::Reflection::MemberInfo  ResolveMember(mscorlib::System::Int32 metadataToken, std::vector<mscorlib::System::Type*> genericTypeArguments, std::vector<mscorlib::System::Type*> genericMethodArguments);

@@ -145,8 +145,10 @@ namespace mscorlib
 					std::vector<mscorlib::System::Byte*>  SignData(mscorlib::System::IO::Stream inputStream, mscorlib::System::Object halg);
 					std::vector<mscorlib::System::Byte*>  SignData(std::vector<mscorlib::System::Byte*> buffer, mscorlib::System::Int32 offset, mscorlib::System::Int32 count, mscorlib::System::Object halg);
 					std::vector<mscorlib::System::Byte*>  SignHash(std::vector<mscorlib::System::Byte*> rgbHash, mscorlib::System::String str);
+					std::vector<mscorlib::System::Byte*>  SignHash(std::vector<mscorlib::System::Byte*> rgbHash, const char *str);
 					mscorlib::System::Boolean  VerifyData(std::vector<mscorlib::System::Byte*> buffer, mscorlib::System::Object halg, std::vector<mscorlib::System::Byte*> signature);
 					mscorlib::System::Boolean  VerifyHash(std::vector<mscorlib::System::Byte*> rgbHash, mscorlib::System::String str, std::vector<mscorlib::System::Byte*> rgbSignature);
+					mscorlib::System::Boolean  VerifyHash(std::vector<mscorlib::System::Byte*> rgbHash, const char *str, std::vector<mscorlib::System::Byte*> rgbSignature);
 					virtual std::vector<mscorlib::System::Byte*>  ExportCspBlob(mscorlib::System::Boolean includePrivateParameters);
 					virtual void  ImportCspBlob(std::vector<mscorlib::System::Byte*> keyBlob);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

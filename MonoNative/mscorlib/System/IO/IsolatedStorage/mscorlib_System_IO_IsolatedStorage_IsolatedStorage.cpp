@@ -75,7 +75,7 @@ namespace mscorlib
 				mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__  IsolatedStorage::get_Scope() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorage", 0, NULL, "get_Scope", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__>(*(mscorlib::System::IO::IsolatedStorage::IsolatedStorageScope::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

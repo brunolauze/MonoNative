@@ -101,6 +101,7 @@ namespace mscorlib
 						};
 						
 						static mscorlib::System::IntPtr  StringToHString(mscorlib::System::String s);
+						static mscorlib::System::IntPtr  StringToHString(const char *s);
 						virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

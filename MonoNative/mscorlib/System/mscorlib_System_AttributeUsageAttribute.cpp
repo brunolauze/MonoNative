@@ -49,7 +49,7 @@ namespace mscorlib
 		mscorlib::System::AttributeTargets::__ENUM__  AttributeUsageAttribute::get_ValidOn() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AttributeUsageAttribute", 0, NULL, "get_ValidOn", __native_object__, 0, NULL, NULL, NULL);
-			return *(mscorlib::System::AttributeTargets::__ENUM__*)mono_object_unbox(__result__);
+			return static_cast<mscorlib::System::AttributeTargets::__ENUM__>(*(mscorlib::System::AttributeTargets::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 

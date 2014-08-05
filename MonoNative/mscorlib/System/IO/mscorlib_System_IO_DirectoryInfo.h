@@ -130,33 +130,48 @@ namespace mscorlib
 
 				void  Create();
 				mscorlib::System::IO::DirectoryInfo  CreateSubdirectory(mscorlib::System::String path);
+				mscorlib::System::IO::DirectoryInfo  CreateSubdirectory(const char *path);
 				std::vector<mscorlib::System::IO::FileInfo*>  GetFiles();
 				std::vector<mscorlib::System::IO::FileInfo*>  GetFiles(mscorlib::System::String searchPattern);
+				std::vector<mscorlib::System::IO::FileInfo*>  GetFiles(const char *searchPattern);
 				std::vector<mscorlib::System::IO::DirectoryInfo*>  GetDirectories();
 				std::vector<mscorlib::System::IO::DirectoryInfo*>  GetDirectories(mscorlib::System::String searchPattern);
+				std::vector<mscorlib::System::IO::DirectoryInfo*>  GetDirectories(const char *searchPattern);
 				std::vector<mscorlib::System::IO::FileSystemInfo*>  GetFileSystemInfos();
 				std::vector<mscorlib::System::IO::FileSystemInfo*>  GetFileSystemInfos(mscorlib::System::String searchPattern);
+				std::vector<mscorlib::System::IO::FileSystemInfo*>  GetFileSystemInfos(const char *searchPattern);
 				std::vector<mscorlib::System::IO::FileSystemInfo*>  GetFileSystemInfos(mscorlib::System::String searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
+				std::vector<mscorlib::System::IO::FileSystemInfo*>  GetFileSystemInfos(const char *searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
 				virtual void  Delete() override;
 				void  Delete(mscorlib::System::Boolean recursive);
 				void  MoveTo(mscorlib::System::String destDirName);
+				void  MoveTo(const char *destDirName);
 				virtual mscorlib::System::String  ToString() override;
 				std::vector<mscorlib::System::IO::DirectoryInfo*>  GetDirectories(mscorlib::System::String searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
+				std::vector<mscorlib::System::IO::DirectoryInfo*>  GetDirectories(const char *searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
 				std::vector<mscorlib::System::IO::FileInfo*>  GetFiles(mscorlib::System::String searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
+				std::vector<mscorlib::System::IO::FileInfo*>  GetFiles(const char *searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
 				void  Create(mscorlib::System::Security::AccessControl::DirectorySecurity directorySecurity);
 				mscorlib::System::IO::DirectoryInfo  CreateSubdirectory(mscorlib::System::String path, mscorlib::System::Security::AccessControl::DirectorySecurity directorySecurity);
+				mscorlib::System::IO::DirectoryInfo  CreateSubdirectory(const char *path, mscorlib::System::Security::AccessControl::DirectorySecurity directorySecurity);
 				mscorlib::System::Security::AccessControl::DirectorySecurity  GetAccessControl();
 				mscorlib::System::Security::AccessControl::DirectorySecurity  GetAccessControl(mscorlib::System::Security::AccessControl::AccessControlSections::__ENUM__ includeSections);
 				void  SetAccessControl(mscorlib::System::Security::AccessControl::DirectorySecurity directorySecurity);
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>  EnumerateDirectories();
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>  EnumerateDirectories(mscorlib::System::String searchPattern);
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>  EnumerateDirectories(const char *searchPattern);
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>  EnumerateDirectories(mscorlib::System::String searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>  EnumerateDirectories(const char *searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>  EnumerateFiles();
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>  EnumerateFiles(mscorlib::System::String searchPattern);
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>  EnumerateFiles(const char *searchPattern);
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>  EnumerateFiles(mscorlib::System::String searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>  EnumerateFiles(const char *searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>  EnumerateFileSystemInfos();
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>  EnumerateFileSystemInfos(mscorlib::System::String searchPattern);
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>  EnumerateFileSystemInfos(const char *searchPattern);
 				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>  EnumerateFileSystemInfos(mscorlib::System::String searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
+				mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>  EnumerateFileSystemInfos(const char *searchPattern, mscorlib::System::IO::SearchOption::__ENUM__ searchOption);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

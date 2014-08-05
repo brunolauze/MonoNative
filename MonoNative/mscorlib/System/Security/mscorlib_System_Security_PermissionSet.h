@@ -64,7 +64,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "PermissionState");
-					__parameters__[0] = reinterpret_cast<void*>(state);
+					int __param_state__ = state;
+					__parameters__[0] = &__param_state__;
 					__native_object__ = Global::New("mscorlib", "System.Security", "PermissionSet", 1, __parameter_types__, __parameters__);
 				};
 			
@@ -125,6 +126,7 @@ namespace mscorlib
 				virtual void  PermitOnly();
 				mscorlib::System::Boolean  ContainsNonCodeAccessPermissions();
 				static std::vector<mscorlib::System::Byte*>  ConvertPermissionSet(mscorlib::System::String inFormat, std::vector<mscorlib::System::Byte*> inData, mscorlib::System::String outFormat);
+				static std::vector<mscorlib::System::Byte*>  ConvertPermissionSet(const char *inFormat, std::vector<mscorlib::System::Byte*> inData, const char *outFormat);
 				mscorlib::System::Security::IPermission  GetPermission(mscorlib::System::Type permClass);
 				mscorlib::System::Security::PermissionSet  Intersect(mscorlib::System::Security::PermissionSet other);
 				mscorlib::System::Boolean  IsEmpty();

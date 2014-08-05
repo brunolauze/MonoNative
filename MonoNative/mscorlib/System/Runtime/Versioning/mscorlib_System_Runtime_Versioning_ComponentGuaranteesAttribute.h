@@ -38,7 +38,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.Versioning", "ComponentGuaranteesOptions");
-						__parameters__[0] = reinterpret_cast<void*>(guarantees);
+						int __param_guarantees__ = guarantees;
+						__parameters__[0] = &__param_guarantees__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Versioning", "ComponentGuaranteesAttribute", 1, __parameter_types__, __parameters__);
 					};
 				

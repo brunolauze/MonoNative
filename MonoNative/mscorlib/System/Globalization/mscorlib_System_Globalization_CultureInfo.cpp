@@ -54,7 +54,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(types).name());
-					__parameters__[0] = reinterpret_cast<void*>(types);
+					int __param_types__ = types;
+					__parameters__[0] = &__param_types__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "GetCultures", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -114,7 +115,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "GetCultureInfo", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Globalization::CultureInfo(__result__);
+			}
+
+			mscorlib::System::Globalization::CultureInfo CultureInfo::GetCultureInfo(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "GetCultureInfo", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Globalization::CultureInfo(__result__);
 			}
@@ -125,8 +136,20 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(altName).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = (MonoObject*)altName;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), altName);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "GetCultureInfo", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Globalization::CultureInfo(__result__);
+			}
+
+			mscorlib::System::Globalization::CultureInfo CultureInfo::GetCultureInfo(const char *name, const char *altName)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(altName).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), altName);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "GetCultureInfo", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Globalization::CultureInfo(__result__);
 			}
@@ -136,7 +159,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "GetCultureInfoByIetfLanguageTag", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Globalization::CultureInfo(__result__);
+			}
+
+			mscorlib::System::Globalization::CultureInfo CultureInfo::GetCultureInfoByIetfLanguageTag(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "GetCultureInfoByIetfLanguageTag", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Globalization::CultureInfo(__result__);
 			}
@@ -146,7 +179,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "CreateSpecificCulture", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Globalization::CultureInfo(__result__);
+			}
+
+			mscorlib::System::Globalization::CultureInfo CultureInfo::CreateSpecificCulture(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "CreateSpecificCulture", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Globalization::CultureInfo(__result__);
 			}
@@ -156,7 +199,7 @@ namespace mscorlib
 			mscorlib::System::Globalization::CultureTypes::__ENUM__  CultureInfo::get_CultureTypes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "CultureInfo", 0, NULL, "get_CultureTypes", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Globalization::CultureTypes::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Globalization::CultureTypes::__ENUM__>(*(mscorlib::System::Globalization::CultureTypes::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

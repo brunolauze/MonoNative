@@ -167,7 +167,8 @@ namespace mscorlib
 					__parameters__[2] = (MonoObject*)grant;
 					__parameters__[3] = (MonoObject*)refused;
 					__parameters__[4] = (MonoObject*)method;
-					__parameters__[5] = reinterpret_cast<void*>(action);
+					int __param_action__ = action;
+					__parameters__[5] = &__param_action__;
 					__parameters__[6] = (MonoObject*)demanded;
 					__parameters__[7] = (MonoObject*)permThatFailed;
 					__parameters__[8] = (MonoObject*)evidence;

@@ -134,9 +134,13 @@ namespace mscorlib
 				virtual mscorlib::System::Object  GetFormat(mscorlib::System::Type formatType);
 				static mscorlib::System::Globalization::CultureInfo  GetCultureInfo(mscorlib::System::Int32 culture);
 				static mscorlib::System::Globalization::CultureInfo  GetCultureInfo(mscorlib::System::String name);
+				static mscorlib::System::Globalization::CultureInfo  GetCultureInfo(const char *name);
 				static mscorlib::System::Globalization::CultureInfo  GetCultureInfo(mscorlib::System::String name, mscorlib::System::String altName);
+				static mscorlib::System::Globalization::CultureInfo  GetCultureInfo(const char *name, const char *altName);
 				static mscorlib::System::Globalization::CultureInfo  GetCultureInfoByIetfLanguageTag(mscorlib::System::String name);
+				static mscorlib::System::Globalization::CultureInfo  GetCultureInfoByIetfLanguageTag(const char *name);
 				static mscorlib::System::Globalization::CultureInfo  CreateSpecificCulture(mscorlib::System::String name);
+				static mscorlib::System::Globalization::CultureInfo  CreateSpecificCulture(const char *name);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

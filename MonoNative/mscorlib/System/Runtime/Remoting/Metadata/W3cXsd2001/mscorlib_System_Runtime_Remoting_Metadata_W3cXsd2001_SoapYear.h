@@ -89,6 +89,7 @@ namespace mscorlib
 
 							virtual mscorlib::System::String  GetXsdType();
 							static mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapYear  Parse(mscorlib::System::String value);
+							static mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapYear  Parse(const char *value);
 							virtual mscorlib::System::String  ToString() override;
 							virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

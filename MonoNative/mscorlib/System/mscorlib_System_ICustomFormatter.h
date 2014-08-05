@@ -38,6 +38,7 @@ namespace mscorlib
 
 
 			virtual mscorlib::System::String  Format(mscorlib::System::String format, mscorlib::System::Object arg, mscorlib::System::IFormatProvider formatProvider);
+			virtual mscorlib::System::String  Format(const char *format, mscorlib::System::Object arg, mscorlib::System::IFormatProvider formatProvider);
 
 
 		

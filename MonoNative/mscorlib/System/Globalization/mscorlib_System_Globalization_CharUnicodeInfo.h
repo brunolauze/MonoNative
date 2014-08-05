@@ -48,12 +48,16 @@ namespace mscorlib
 
 				static mscorlib::System::Int32  GetDecimalDigitValue(mscorlib::System::Char ch);
 				static mscorlib::System::Int32  GetDecimalDigitValue(mscorlib::System::String s, mscorlib::System::Int32 index);
+				static mscorlib::System::Int32  GetDecimalDigitValue(const char *s, mscorlib::System::Int32 index);
 				static mscorlib::System::Int32  GetDigitValue(mscorlib::System::Char ch);
 				static mscorlib::System::Int32  GetDigitValue(mscorlib::System::String s, mscorlib::System::Int32 index);
+				static mscorlib::System::Int32  GetDigitValue(const char *s, mscorlib::System::Int32 index);
 				static mscorlib::System::Double  GetNumericValue(mscorlib::System::Char ch);
 				static mscorlib::System::Double  GetNumericValue(mscorlib::System::String s, mscorlib::System::Int32 index);
+				static mscorlib::System::Double  GetNumericValue(const char *s, mscorlib::System::Int32 index);
 				static mscorlib::System::Globalization::UnicodeCategory::__ENUM__  GetUnicodeCategory(mscorlib::System::Char ch);
 				static mscorlib::System::Globalization::UnicodeCategory::__ENUM__  GetUnicodeCategory(mscorlib::System::String s, mscorlib::System::Int32 index);
+				static mscorlib::System::Globalization::UnicodeCategory::__ENUM__  GetUnicodeCategory(const char *s, mscorlib::System::Int32 index);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

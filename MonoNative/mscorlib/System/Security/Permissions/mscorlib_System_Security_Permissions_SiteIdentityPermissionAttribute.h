@@ -39,7 +39,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "SecurityAction");
-						__parameters__[0] = reinterpret_cast<void*>(action);
+						int __param_action__ = action;
+						__parameters__[0] = &__param_action__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "SiteIdentityPermissionAttribute", 1, __parameter_types__, __parameters__);
 					};
 				

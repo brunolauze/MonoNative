@@ -73,6 +73,7 @@ namespace mscorlib
 					mscorlib::System::Int32  GetTokenFor(mscorlib::System::RuntimeMethodHandle method);
 					mscorlib::System::Int32  GetTokenFor(mscorlib::System::RuntimeTypeHandle type);
 					mscorlib::System::Int32  GetTokenFor(mscorlib::System::String literal);
+					mscorlib::System::Int32  GetTokenFor(const char *literal);
 					mscorlib::System::Int32  GetTokenFor(mscorlib::System::RuntimeMethodHandle method, mscorlib::System::RuntimeTypeHandle contextType);
 					mscorlib::System::Int32  GetTokenFor(mscorlib::System::RuntimeFieldHandle field, mscorlib::System::RuntimeTypeHandle contextType);
 					void  SetCode(std::vector<mscorlib::System::Byte*> code, mscorlib::System::Int32 maxStackSize);

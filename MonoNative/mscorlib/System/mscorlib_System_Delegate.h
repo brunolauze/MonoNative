@@ -86,11 +86,17 @@ namespace mscorlib
 			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Reflection::MethodInfo method, mscorlib::System::Boolean throwOnBindFailure);
 			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Reflection::MethodInfo method);
 			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Object target, mscorlib::System::String method);
+			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Object target, const char *method);
 			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Type target, mscorlib::System::String method, mscorlib::System::Boolean ignoreCase, mscorlib::System::Boolean throwOnBindFailure);
+			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Type target, const char *method, mscorlib::System::Boolean ignoreCase, mscorlib::System::Boolean throwOnBindFailure);
 			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Type target, mscorlib::System::String method);
+			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Type target, const char *method);
 			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Type target, mscorlib::System::String method, mscorlib::System::Boolean ignoreCase);
+			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Type target, const char *method, mscorlib::System::Boolean ignoreCase);
 			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Object target, mscorlib::System::String method, mscorlib::System::Boolean ignoreCase, mscorlib::System::Boolean throwOnBindFailure);
+			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Object target, const char *method, mscorlib::System::Boolean ignoreCase, mscorlib::System::Boolean throwOnBindFailure);
 			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Object target, mscorlib::System::String method, mscorlib::System::Boolean ignoreCase);
+			static mscorlib::System::Delegate  CreateDelegate(mscorlib::System::Type type, mscorlib::System::Object target, const char *method, mscorlib::System::Boolean ignoreCase);
 			mscorlib::System::Object  DynamicInvoke(std::vector<mscorlib::System::Object*> args);
 			virtual mscorlib::System::Object  Clone();
 			virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object obj) override;

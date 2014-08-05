@@ -59,6 +59,7 @@ namespace mscorlib
 
 
 							static mscorlib::System::DateTime  Parse(mscorlib::System::String value);
+							static mscorlib::System::DateTime  Parse(const char *value);
 							static mscorlib::System::String  ToString(mscorlib::System::DateTime value);
 							virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

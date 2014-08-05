@@ -20,8 +20,20 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
 						__parameter_types__[1] = Global::GetType(typeid(typeName).name());
-						__parameters__[0] = (MonoObject*)assemblyName;
-						__parameters__[1] = (MonoObject*)typeName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationBinder", 0, NULL, "BindToType", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Type(__result__);
+				}
+
+				mscorlib::System::Type SerializationBinder::BindToType(const char *assemblyName, const char *typeName)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+						__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationBinder", 0, NULL, "BindToType", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Type(__result__);
 				}

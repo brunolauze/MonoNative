@@ -23,8 +23,20 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateComInstanceFrom", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateComInstanceFrom(const char *assemblyName, const char *typeName)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateComInstanceFrom", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
 		}
@@ -37,10 +49,28 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
 				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(hashValue).name()))->eklass);
 				__parameter_types__[3] = Global::GetType(typeid(hashAlgorithm).name());
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(hashValue, typeid(mscorlib::System::Byte).name());
-				__parameters__[3] = reinterpret_cast<void*>(hashAlgorithm);
+				int __param_hashAlgorithm__ = hashAlgorithm;
+				__parameters__[3] = &__param_hashAlgorithm__;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateComInstanceFrom", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateComInstanceFrom(const char *assemblyName, const char *typeName, std::vector<mscorlib::System::Byte*> hashValue, mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__ hashAlgorithm)
+		{
+				MonoType *__parameter_types__[4];
+				void *__parameters__[4];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(hashValue).name()))->eklass);
+				__parameter_types__[3] = Global::GetType(typeid(hashAlgorithm).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(hashValue, typeid(mscorlib::System::Byte).name());
+				int __param_hashAlgorithm__ = hashAlgorithm;
+				__parameters__[3] = &__param_hashAlgorithm__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateComInstanceFrom", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
 		}
@@ -51,8 +81,20 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
-				__parameters__[0] = (MonoObject*)assemblyFile;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstanceFrom(const char *assemblyFile, const char *typeName)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
 		}
@@ -64,8 +106,22 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
 				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
-				__parameters__[0] = (MonoObject*)assemblyFile;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstanceFrom(const char *assemblyFile, const char *typeName, std::vector<mscorlib::System::Object*> activationAttributes)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
@@ -84,10 +140,38 @@ namespace mscorlib
 				__parameter_types__[6] = Global::GetType(typeid(culture).name());
 				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameter_types__[8] = Global::GetType(typeid(securityInfo).name());
-				__parameters__[0] = (MonoObject*)assemblyFile;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[3] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
+				__parameters__[4] = (MonoObject*)binder;
+				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[6] = (MonoObject*)culture;
+				__parameters__[7] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				__parameters__[8] = (MonoObject*)securityInfo;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 9, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstanceFrom(const char *assemblyFile, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes, mscorlib::System::Security::Policy::Evidence securityInfo)
+		{
+				MonoType *__parameter_types__[9];
+				void *__parameters__[9];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[3] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[4] = Global::GetType(typeid(binder).name());
+				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[6] = Global::GetType(typeid(culture).name());
+				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameter_types__[8] = Global::GetType(typeid(securityInfo).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
 				__parameters__[4] = (MonoObject*)binder;
 				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[6] = (MonoObject*)culture;
@@ -103,8 +187,20 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstance(const char *assemblyName, const char *typeName)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
 		}
@@ -116,8 +212,22 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
 				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstance(const char *assemblyName, const char *typeName, std::vector<mscorlib::System::Object*> activationAttributes)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
@@ -136,10 +246,38 @@ namespace mscorlib
 				__parameter_types__[6] = Global::GetType(typeid(culture).name());
 				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameter_types__[8] = Global::GetType(typeid(securityInfo).name());
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[3] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
+				__parameters__[4] = (MonoObject*)binder;
+				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[6] = (MonoObject*)culture;
+				__parameters__[7] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				__parameters__[8] = (MonoObject*)securityInfo;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 9, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstance(const char *assemblyName, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes, mscorlib::System::Security::Policy::Evidence securityInfo)
+		{
+				MonoType *__parameter_types__[9];
+				void *__parameters__[9];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[3] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[4] = Global::GetType(typeid(binder).name());
+				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[6] = Global::GetType(typeid(culture).name());
+				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameter_types__[8] = Global::GetType(typeid(securityInfo).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
 				__parameters__[4] = (MonoObject*)binder;
 				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[6] = (MonoObject*)culture;
@@ -179,8 +317,22 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(assemblyFile).name());
 				__parameter_types__[2] = Global::GetType(typeid(typeName).name());
 				__parameters__[0] = (MonoObject*)domain;
-				__parameters__[1] = (MonoObject*)assemblyFile;
-				__parameters__[2] = (MonoObject*)typeName;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstanceFrom(mscorlib::System::AppDomain domain, const char *assemblyFile, const char *typeName)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(domain).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[2] = Global::GetType(typeid(typeName).name());
+				__parameters__[0] = (MonoObject*)domain;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
 		}
@@ -200,10 +352,40 @@ namespace mscorlib
 				__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameter_types__[9] = Global::GetType(typeid(securityAttributes).name());
 				__parameters__[0] = (MonoObject*)domain;
-				__parameters__[1] = (MonoObject*)assemblyFile;
-				__parameters__[2] = (MonoObject*)typeName;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[4] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[4] = &__param_bindingAttr__;
+				__parameters__[5] = (MonoObject*)binder;
+				__parameters__[6] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[7] = (MonoObject*)culture;
+				__parameters__[8] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				__parameters__[9] = (MonoObject*)securityAttributes;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 10, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstanceFrom(mscorlib::System::AppDomain domain, const char *assemblyFile, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes, mscorlib::System::Security::Policy::Evidence securityAttributes)
+		{
+				MonoType *__parameter_types__[10];
+				void *__parameters__[10];
+				__parameter_types__[0] = Global::GetType(typeid(domain).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[2] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[4] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[5] = Global::GetType(typeid(binder).name());
+				__parameter_types__[6] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[7] = Global::GetType(typeid(culture).name());
+				__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameter_types__[9] = Global::GetType(typeid(securityAttributes).name());
+				__parameters__[0] = (MonoObject*)domain;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[4] = &__param_bindingAttr__;
 				__parameters__[5] = (MonoObject*)binder;
 				__parameters__[6] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[7] = (MonoObject*)culture;
@@ -221,8 +403,22 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(assemblyName).name());
 				__parameter_types__[2] = Global::GetType(typeid(typeName).name());
 				__parameters__[0] = (MonoObject*)domain;
-				__parameters__[1] = (MonoObject*)assemblyName;
-				__parameters__[2] = (MonoObject*)typeName;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstance(mscorlib::System::AppDomain domain, const char *assemblyName, const char *typeName)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(domain).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[2] = Global::GetType(typeid(typeName).name());
+				__parameters__[0] = (MonoObject*)domain;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
 		}
@@ -242,10 +438,40 @@ namespace mscorlib
 				__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameter_types__[9] = Global::GetType(typeid(securityAttributes).name());
 				__parameters__[0] = (MonoObject*)domain;
-				__parameters__[1] = (MonoObject*)assemblyName;
-				__parameters__[2] = (MonoObject*)typeName;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[4] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[4] = &__param_bindingAttr__;
+				__parameters__[5] = (MonoObject*)binder;
+				__parameters__[6] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[7] = (MonoObject*)culture;
+				__parameters__[8] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				__parameters__[9] = (MonoObject*)securityAttributes;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 10, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstance(mscorlib::System::AppDomain domain, const char *assemblyName, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes, mscorlib::System::Security::Policy::Evidence securityAttributes)
+		{
+				MonoType *__parameter_types__[10];
+				void *__parameters__[10];
+				__parameter_types__[0] = Global::GetType(typeid(domain).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[2] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[4] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[5] = Global::GetType(typeid(binder).name());
+				__parameter_types__[6] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[7] = Global::GetType(typeid(culture).name());
+				__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameter_types__[9] = Global::GetType(typeid(securityAttributes).name());
+				__parameters__[0] = (MonoObject*)domain;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[4] = &__param_bindingAttr__;
 				__parameters__[5] = (MonoObject*)binder;
 				__parameters__[6] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[7] = (MonoObject*)culture;
@@ -301,7 +527,8 @@ namespace mscorlib
 				__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
 				__parameter_types__[4] = Global::GetType(typeid(culture).name());
 				__parameters__[0] = (MonoObject*)type;
-				__parameters__[1] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[1] = &__param_bindingAttr__;
 				__parameters__[2] = (MonoObject*)binder;
 				__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[4] = (MonoObject*)culture;
@@ -320,7 +547,8 @@ namespace mscorlib
 				__parameter_types__[4] = Global::GetType(typeid(culture).name());
 				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameters__[0] = (MonoObject*)type;
-				__parameters__[1] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[1] = &__param_bindingAttr__;
 				__parameters__[2] = (MonoObject*)binder;
 				__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[4] = (MonoObject*)culture;
@@ -348,7 +576,19 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(type).name());
 				__parameter_types__[1] = Global::GetType(typeid(url).name());
 				__parameters__[0] = (MonoObject*)type;
-				__parameters__[1] = (MonoObject*)url;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), url);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "GetObject", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Object(__result__);
+		}
+
+		mscorlib::System::Object Activator::GetObject(mscorlib::System::Type type, const char *url)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(type).name());
+				__parameter_types__[1] = Global::GetType(typeid(url).name());
+				__parameters__[0] = (MonoObject*)type;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), url);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "GetObject", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
 		}
@@ -361,7 +601,21 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(url).name());
 				__parameter_types__[2] = Global::GetType(typeid(state).name());
 				__parameters__[0] = (MonoObject*)type;
-				__parameters__[1] = (MonoObject*)url;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), url);
+				__parameters__[2] = (MonoObject*)state;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "GetObject", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Object(__result__);
+		}
+
+		mscorlib::System::Object Activator::GetObject(mscorlib::System::Type type, const char *url, mscorlib::System::Object state)
+		{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(type).name());
+				__parameter_types__[1] = Global::GetType(typeid(url).name());
+				__parameter_types__[2] = Global::GetType(typeid(state).name());
+				__parameters__[0] = (MonoObject*)type;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), url);
 				__parameters__[2] = (MonoObject*)state;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "GetObject", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
@@ -379,10 +633,36 @@ namespace mscorlib
 				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
 				__parameter_types__[6] = Global::GetType(typeid(culture).name());
 				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
-				__parameters__[0] = (MonoObject*)assemblyName;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[3] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
+				__parameters__[4] = (MonoObject*)binder;
+				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[6] = (MonoObject*)culture;
+				__parameters__[7] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 8, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstance(const char *assemblyName, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes)
+		{
+				MonoType *__parameter_types__[8];
+				void *__parameters__[8];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[3] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[4] = Global::GetType(typeid(binder).name());
+				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[6] = Global::GetType(typeid(culture).name());
+				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
 				__parameters__[4] = (MonoObject*)binder;
 				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[6] = (MonoObject*)culture;
@@ -405,10 +685,38 @@ namespace mscorlib
 				__parameter_types__[7] = Global::GetType(typeid(culture).name());
 				__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameters__[0] = (MonoObject*)domain;
-				__parameters__[1] = (MonoObject*)assemblyName;
-				__parameters__[2] = (MonoObject*)typeName;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[4] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[4] = &__param_bindingAttr__;
+				__parameters__[5] = (MonoObject*)binder;
+				__parameters__[6] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[7] = (MonoObject*)culture;
+				__parameters__[8] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 9, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstance(mscorlib::System::AppDomain domain, const char *assemblyName, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes)
+		{
+				MonoType *__parameter_types__[9];
+				void *__parameters__[9];
+				__parameter_types__[0] = Global::GetType(typeid(domain).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblyName).name());
+				__parameter_types__[2] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[4] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[5] = Global::GetType(typeid(binder).name());
+				__parameter_types__[6] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[7] = Global::GetType(typeid(culture).name());
+				__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameters__[0] = (MonoObject*)domain;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyName);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[4] = &__param_bindingAttr__;
 				__parameters__[5] = (MonoObject*)binder;
 				__parameters__[6] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[7] = (MonoObject*)culture;
@@ -429,10 +737,36 @@ namespace mscorlib
 				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
 				__parameter_types__[6] = Global::GetType(typeid(culture).name());
 				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
-				__parameters__[0] = (MonoObject*)assemblyFile;
-				__parameters__[1] = (MonoObject*)typeName;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[3] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
+				__parameters__[4] = (MonoObject*)binder;
+				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[6] = (MonoObject*)culture;
+				__parameters__[7] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 8, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstanceFrom(const char *assemblyFile, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes)
+		{
+				MonoType *__parameter_types__[8];
+				void *__parameters__[8];
+				__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[1] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[2] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[3] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[4] = Global::GetType(typeid(binder).name());
+				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[6] = Global::GetType(typeid(culture).name());
+				__parameter_types__[7] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[1] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[3] = &__param_bindingAttr__;
 				__parameters__[4] = (MonoObject*)binder;
 				__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[6] = (MonoObject*)culture;
@@ -455,10 +789,38 @@ namespace mscorlib
 				__parameter_types__[7] = Global::GetType(typeid(culture).name());
 				__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
 				__parameters__[0] = (MonoObject*)domain;
-				__parameters__[1] = (MonoObject*)assemblyFile;
-				__parameters__[2] = (MonoObject*)typeName;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
 				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
-				__parameters__[4] = reinterpret_cast<void*>(bindingAttr);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[4] = &__param_bindingAttr__;
+				__parameters__[5] = (MonoObject*)binder;
+				__parameters__[6] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+				__parameters__[7] = (MonoObject*)culture;
+				__parameters__[8] = Global::FromArray<mscorlib::System::Object*>(activationAttributes, typeid(mscorlib::System::Object).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstanceFrom", NullMonoObject, 9, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Runtime::Remoting::ObjectHandle(__result__);
+		}
+
+		mscorlib::System::Runtime::Remoting::ObjectHandle Activator::CreateInstanceFrom(mscorlib::System::AppDomain domain, const char *assemblyFile, const char *typeName, mscorlib::System::Boolean ignoreCase, mscorlib::System::Reflection::BindingFlags::__ENUM__ bindingAttr, mscorlib::System::Reflection::Binder binder, std::vector<mscorlib::System::Object*> args, mscorlib::System::Globalization::CultureInfo culture, std::vector<mscorlib::System::Object*> activationAttributes)
+		{
+				MonoType *__parameter_types__[9];
+				void *__parameters__[9];
+				__parameter_types__[0] = Global::GetType(typeid(domain).name());
+				__parameter_types__[1] = Global::GetType(typeid(assemblyFile).name());
+				__parameter_types__[2] = Global::GetType(typeid(typeName).name());
+				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[4] = Global::GetType(typeid(bindingAttr).name());
+				__parameter_types__[5] = Global::GetType(typeid(binder).name());
+				__parameter_types__[6] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[7] = Global::GetType(typeid(culture).name());
+				__parameter_types__[8] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(activationAttributes).name()))->eklass);
+				__parameters__[0] = (MonoObject*)domain;
+				__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyFile);
+				__parameters__[2] = mono_string_new(Global::GetDomain(), typeName);
+				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
+				int __param_bindingAttr__ = bindingAttr;
+				__parameters__[4] = &__param_bindingAttr__;
 				__parameters__[5] = (MonoObject*)binder;
 				__parameters__[6] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				__parameters__[7] = (MonoObject*)culture;

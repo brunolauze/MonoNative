@@ -62,25 +62,37 @@ namespace mscorlib
 
 
 					static mscorlib::System::String  CodeXmlNamespaceForClrTypeNamespace(mscorlib::System::String typeNamespace, mscorlib::System::String assemblyName);
+					static mscorlib::System::String  CodeXmlNamespaceForClrTypeNamespace(const char *typeNamespace, const char *assemblyName);
 					static mscorlib::System::Boolean  DecodeXmlNamespaceForClrTypeNamespace(mscorlib::System::String inNamespace, mscorlib::System::String typeNamespace, mscorlib::System::String assemblyName);
+					static mscorlib::System::Boolean  DecodeXmlNamespaceForClrTypeNamespace(const char *inNamespace, const char *typeNamespace, const char *assemblyName);
 					static void  GetInteropFieldTypeAndNameFromXmlAttribute(mscorlib::System::Type containingType, mscorlib::System::String xmlAttribute, mscorlib::System::String xmlNamespace, mscorlib::System::Type type, mscorlib::System::String name);
+					static void  GetInteropFieldTypeAndNameFromXmlAttribute(mscorlib::System::Type containingType, const char *xmlAttribute, const char *xmlNamespace, mscorlib::System::Type type, const char *name);
 					static void  GetInteropFieldTypeAndNameFromXmlElement(mscorlib::System::Type containingType, mscorlib::System::String xmlElement, mscorlib::System::String xmlNamespace, mscorlib::System::Type type, mscorlib::System::String name);
+					static void  GetInteropFieldTypeAndNameFromXmlElement(mscorlib::System::Type containingType, const char *xmlElement, const char *xmlNamespace, mscorlib::System::Type type, const char *name);
 					static mscorlib::System::Type  GetInteropTypeFromXmlElement(mscorlib::System::String xmlElement, mscorlib::System::String xmlNamespace);
+					static mscorlib::System::Type  GetInteropTypeFromXmlElement(const char *xmlElement, const char *xmlNamespace);
 					static mscorlib::System::Type  GetInteropTypeFromXmlType(mscorlib::System::String xmlType, mscorlib::System::String xmlTypeNamespace);
+					static mscorlib::System::Type  GetInteropTypeFromXmlType(const char *xmlType, const char *xmlTypeNamespace);
 					static mscorlib::System::String  GetSoapActionFromMethodBase(mscorlib::System::Reflection::MethodBase mb);
 					static mscorlib::System::Boolean  GetTypeAndMethodNameFromSoapAction(mscorlib::System::String soapAction, mscorlib::System::String typeName, mscorlib::System::String methodName);
+					static mscorlib::System::Boolean  GetTypeAndMethodNameFromSoapAction(const char *soapAction, const char *typeName, const char *methodName);
 					static mscorlib::System::Boolean  GetXmlElementForInteropType(mscorlib::System::Type type, mscorlib::System::String xmlElement, mscorlib::System::String xmlNamespace);
 					static mscorlib::System::String  GetXmlNamespaceForMethodCall(mscorlib::System::Reflection::MethodBase mb);
 					static mscorlib::System::String  GetXmlNamespaceForMethodResponse(mscorlib::System::Reflection::MethodBase mb);
 					static mscorlib::System::Boolean  GetXmlTypeForInteropType(mscorlib::System::Type type, mscorlib::System::String xmlType, mscorlib::System::String xmlTypeNamespace);
 					static mscorlib::System::Boolean  IsClrTypeNamespace(mscorlib::System::String namespaceString);
+					static mscorlib::System::Boolean  IsClrTypeNamespace(const char *namespaceString);
 					static mscorlib::System::Boolean  IsSoapActionValidForMethodBase(mscorlib::System::String soapAction, mscorlib::System::Reflection::MethodBase mb);
+					static mscorlib::System::Boolean  IsSoapActionValidForMethodBase(const char *soapAction, mscorlib::System::Reflection::MethodBase mb);
 					static void  PreLoad(mscorlib::System::Reflection::Assembly assembly);
 					static void  PreLoad(mscorlib::System::Type type);
 					static void  RegisterInteropXmlElement(mscorlib::System::String xmlElement, mscorlib::System::String xmlNamespace, mscorlib::System::Type type);
+					static void  RegisterInteropXmlElement(const char *xmlElement, const char *xmlNamespace, mscorlib::System::Type type);
 					static void  RegisterInteropXmlType(mscorlib::System::String xmlType, mscorlib::System::String xmlTypeNamespace, mscorlib::System::Type type);
+					static void  RegisterInteropXmlType(const char *xmlType, const char *xmlTypeNamespace, mscorlib::System::Type type);
 					static void  RegisterSoapActionForMethodBase(mscorlib::System::Reflection::MethodBase mb);
 					static void  RegisterSoapActionForMethodBase(mscorlib::System::Reflection::MethodBase mb, mscorlib::System::String soapAction);
+					static void  RegisterSoapActionForMethodBase(mscorlib::System::Reflection::MethodBase mb, const char *soapAction);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

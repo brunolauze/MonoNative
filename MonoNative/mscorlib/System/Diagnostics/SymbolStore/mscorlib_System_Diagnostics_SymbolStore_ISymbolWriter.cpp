@@ -50,7 +50,23 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(language).name());
 						__parameter_types__[2] = Global::GetType(typeid(languageVendor).name());
 						__parameter_types__[3] = Global::GetType(typeid(documentType).name());
-						__parameters__[0] = (MonoObject*)url;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), url);
+						__parameters__[1] = (MonoObject*)language;
+						__parameters__[2] = (MonoObject*)languageVendor;
+						__parameters__[3] = (MonoObject*)documentType;
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "DefineDocument", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 4, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Diagnostics::SymbolStore::ISymbolDocumentWriter(__result__);
+				}
+
+				mscorlib::System::Diagnostics::SymbolStore::ISymbolDocumentWriter ISymbolWriter::DefineDocument(const char *url, mscorlib::System::Guid language, mscorlib::System::Guid languageVendor, mscorlib::System::Guid documentType)
+				{
+						MonoType *__parameter_types__[4];
+						void *__parameters__[4];
+						__parameter_types__[0] = Global::GetType(typeid(url).name());
+						__parameter_types__[1] = Global::GetType(typeid(language).name());
+						__parameter_types__[2] = Global::GetType(typeid(languageVendor).name());
+						__parameter_types__[3] = Global::GetType(typeid(documentType).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), url);
 						__parameters__[1] = (MonoObject*)language;
 						__parameters__[2] = (MonoObject*)languageVendor;
 						__parameters__[3] = (MonoObject*)documentType;
@@ -71,10 +87,37 @@ namespace mscorlib
 						__parameter_types__[6] = Global::GetType(typeid(addr2).name());
 						__parameter_types__[7] = Global::GetType(typeid(addr3).name());
 						__parameters__[0] = (MonoObject*)parent;
-						__parameters__[1] = (MonoObject*)name;
-						__parameters__[2] = reinterpret_cast<void*>(attributes);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
+						int __param_attributes__ = attributes;
+						__parameters__[2] = &__param_attributes__;
 						__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(signature, typeid(mscorlib::System::Byte).name());
-						__parameters__[4] = reinterpret_cast<void*>(addrKind);
+						int __param_addrKind__ = addrKind;
+						__parameters__[4] = &__param_addrKind__;
+						__parameters__[5] = &addr1;
+						__parameters__[6] = &addr2;
+						__parameters__[7] = &addr3;
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "DefineField", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 8, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ISymbolWriter::DefineField(mscorlib::System::Diagnostics::SymbolStore::SymbolToken parent, const char *name, mscorlib::System::Reflection::FieldAttributes::__ENUM__ attributes, std::vector<mscorlib::System::Byte*> signature, mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__ addrKind, mscorlib::System::Int32 addr1, mscorlib::System::Int32 addr2, mscorlib::System::Int32 addr3)
+				{
+						MonoType *__parameter_types__[8];
+						void *__parameters__[8];
+						__parameter_types__[0] = Global::GetType(typeid(parent).name());
+						__parameter_types__[1] = Global::GetType(typeid(name).name());
+						__parameter_types__[2] = Global::GetType(typeid(attributes).name());
+						__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(signature).name()))->eklass);
+						__parameter_types__[4] = Global::GetType(typeid(addrKind).name());
+						__parameter_types__[5] = Global::GetType(typeid(addr1).name());
+						__parameter_types__[6] = Global::GetType(typeid(addr2).name());
+						__parameter_types__[7] = Global::GetType(typeid(addr3).name());
+						__parameters__[0] = (MonoObject*)parent;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
+						int __param_attributes__ = attributes;
+						__parameters__[2] = &__param_attributes__;
+						__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(signature, typeid(mscorlib::System::Byte).name());
+						int __param_addrKind__ = addrKind;
+						__parameters__[4] = &__param_addrKind__;
 						__parameters__[5] = &addr1;
 						__parameters__[6] = &addr2;
 						__parameters__[7] = &addr3;
@@ -92,10 +135,35 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType(typeid(addr1).name());
 						__parameter_types__[5] = Global::GetType(typeid(addr2).name());
 						__parameter_types__[6] = Global::GetType(typeid(addr3).name());
-						__parameters__[0] = (MonoObject*)name;
-						__parameters__[1] = reinterpret_cast<void*>(attributes);
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						int __param_attributes__ = attributes;
+						__parameters__[1] = &__param_attributes__;
 						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(signature, typeid(mscorlib::System::Byte).name());
-						__parameters__[3] = reinterpret_cast<void*>(addrKind);
+						int __param_addrKind__ = addrKind;
+						__parameters__[3] = &__param_addrKind__;
+						__parameters__[4] = &addr1;
+						__parameters__[5] = &addr2;
+						__parameters__[6] = &addr3;
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "DefineGlobalVariable", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 7, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ISymbolWriter::DefineGlobalVariable(const char *name, mscorlib::System::Reflection::FieldAttributes::__ENUM__ attributes, std::vector<mscorlib::System::Byte*> signature, mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__ addrKind, mscorlib::System::Int32 addr1, mscorlib::System::Int32 addr2, mscorlib::System::Int32 addr3)
+				{
+						MonoType *__parameter_types__[7];
+						void *__parameters__[7];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(attributes).name());
+						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(signature).name()))->eklass);
+						__parameter_types__[3] = Global::GetType(typeid(addrKind).name());
+						__parameter_types__[4] = Global::GetType(typeid(addr1).name());
+						__parameter_types__[5] = Global::GetType(typeid(addr2).name());
+						__parameter_types__[6] = Global::GetType(typeid(addr3).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						int __param_attributes__ = attributes;
+						__parameters__[1] = &__param_attributes__;
+						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(signature, typeid(mscorlib::System::Byte).name());
+						int __param_addrKind__ = addrKind;
+						__parameters__[3] = &__param_addrKind__;
 						__parameters__[4] = &addr1;
 						__parameters__[5] = &addr2;
 						__parameters__[6] = &addr3;
@@ -115,10 +183,39 @@ namespace mscorlib
 						__parameter_types__[6] = Global::GetType(typeid(addr3).name());
 						__parameter_types__[7] = Global::GetType(typeid(startOffset).name());
 						__parameter_types__[8] = Global::GetType(typeid(endOffset).name());
-						__parameters__[0] = (MonoObject*)name;
-						__parameters__[1] = reinterpret_cast<void*>(attributes);
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						int __param_attributes__ = attributes;
+						__parameters__[1] = &__param_attributes__;
 						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(signature, typeid(mscorlib::System::Byte).name());
-						__parameters__[3] = reinterpret_cast<void*>(addrKind);
+						int __param_addrKind__ = addrKind;
+						__parameters__[3] = &__param_addrKind__;
+						__parameters__[4] = &addr1;
+						__parameters__[5] = &addr2;
+						__parameters__[6] = &addr3;
+						__parameters__[7] = &startOffset;
+						__parameters__[8] = &endOffset;
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "DefineLocalVariable", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 9, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ISymbolWriter::DefineLocalVariable(const char *name, mscorlib::System::Reflection::FieldAttributes::__ENUM__ attributes, std::vector<mscorlib::System::Byte*> signature, mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__ addrKind, mscorlib::System::Int32 addr1, mscorlib::System::Int32 addr2, mscorlib::System::Int32 addr3, mscorlib::System::Int32 startOffset, mscorlib::System::Int32 endOffset)
+				{
+						MonoType *__parameter_types__[9];
+						void *__parameters__[9];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(attributes).name());
+						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(signature).name()))->eklass);
+						__parameter_types__[3] = Global::GetType(typeid(addrKind).name());
+						__parameter_types__[4] = Global::GetType(typeid(addr1).name());
+						__parameter_types__[5] = Global::GetType(typeid(addr2).name());
+						__parameter_types__[6] = Global::GetType(typeid(addr3).name());
+						__parameter_types__[7] = Global::GetType(typeid(startOffset).name());
+						__parameter_types__[8] = Global::GetType(typeid(endOffset).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						int __param_attributes__ = attributes;
+						__parameters__[1] = &__param_attributes__;
+						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(signature, typeid(mscorlib::System::Byte).name());
+						int __param_addrKind__ = addrKind;
+						__parameters__[3] = &__param_addrKind__;
 						__parameters__[4] = &addr1;
 						__parameters__[5] = &addr2;
 						__parameters__[6] = &addr3;
@@ -138,10 +235,35 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType(typeid(addr1).name());
 						__parameter_types__[5] = Global::GetType(typeid(addr2).name());
 						__parameter_types__[6] = Global::GetType(typeid(addr3).name());
-						__parameters__[0] = (MonoObject*)name;
-						__parameters__[1] = reinterpret_cast<void*>(attributes);
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						int __param_attributes__ = attributes;
+						__parameters__[1] = &__param_attributes__;
 						__parameters__[2] = &sequence;
-						__parameters__[3] = reinterpret_cast<void*>(addrKind);
+						int __param_addrKind__ = addrKind;
+						__parameters__[3] = &__param_addrKind__;
+						__parameters__[4] = &addr1;
+						__parameters__[5] = &addr2;
+						__parameters__[6] = &addr3;
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "DefineParameter", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 7, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ISymbolWriter::DefineParameter(const char *name, mscorlib::System::Reflection::ParameterAttributes::__ENUM__ attributes, mscorlib::System::Int32 sequence, mscorlib::System::Diagnostics::SymbolStore::SymAddressKind::__ENUM__ addrKind, mscorlib::System::Int32 addr1, mscorlib::System::Int32 addr2, mscorlib::System::Int32 addr3)
+				{
+						MonoType *__parameter_types__[7];
+						void *__parameters__[7];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(attributes).name());
+						__parameter_types__[2] = Global::GetType(typeid(sequence).name());
+						__parameter_types__[3] = Global::GetType(typeid(addrKind).name());
+						__parameter_types__[4] = Global::GetType(typeid(addr1).name());
+						__parameter_types__[5] = Global::GetType(typeid(addr2).name());
+						__parameter_types__[6] = Global::GetType(typeid(addr3).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						int __param_attributes__ = attributes;
+						__parameters__[1] = &__param_attributes__;
+						__parameters__[2] = &sequence;
+						int __param_addrKind__ = addrKind;
+						__parameters__[3] = &__param_addrKind__;
 						__parameters__[4] = &addr1;
 						__parameters__[5] = &addr2;
 						__parameters__[6] = &addr3;
@@ -175,7 +297,20 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(filename).name());
 						__parameter_types__[2] = Global::GetType(typeid(fFullBuild).name());
 						__parameters__[0] = (MonoObject*)emitter;
-						__parameters__[1] = (MonoObject*)filename;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), filename);
+						__parameters__[2] = reinterpret_cast<void*>(fFullBuild);
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "Initialize", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 3, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ISymbolWriter::Initialize(mscorlib::System::IntPtr emitter, const char *filename, mscorlib::System::Boolean fFullBuild)
+				{
+						MonoType *__parameter_types__[3];
+						void *__parameters__[3];
+						__parameter_types__[0] = Global::GetType(typeid(emitter).name());
+						__parameter_types__[1] = Global::GetType(typeid(filename).name());
+						__parameter_types__[2] = Global::GetType(typeid(fFullBuild).name());
+						__parameters__[0] = (MonoObject*)emitter;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), filename);
 						__parameters__[2] = reinterpret_cast<void*>(fFullBuild);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "Initialize", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 3, __parameter_types__, __parameters__, NULL);
 				}
@@ -194,7 +329,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "OpenNamespace", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ISymbolWriter::OpenNamespace(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "OpenNamespace", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -248,7 +392,20 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(name).name());
 						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(data).name()))->eklass);
 						__parameters__[0] = (MonoObject*)parent;
-						__parameters__[1] = (MonoObject*)name;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(data, typeid(mscorlib::System::Byte).name());
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "SetSymAttribute", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 3, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ISymbolWriter::SetSymAttribute(mscorlib::System::Diagnostics::SymbolStore::SymbolToken parent, const char *name, std::vector<mscorlib::System::Byte*> data)
+				{
+						MonoType *__parameter_types__[3];
+						void *__parameters__[3];
+						__parameter_types__[0] = Global::GetType(typeid(parent).name());
+						__parameter_types__[1] = Global::GetType(typeid(name).name());
+						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(data).name()))->eklass);
+						__parameters__[0] = (MonoObject*)parent;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(data, typeid(mscorlib::System::Byte).name());
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "SetSymAttribute", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 3, __parameter_types__, __parameters__, NULL);
 				}
@@ -276,7 +433,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(fullName).name());
-						__parameters__[0] = (MonoObject*)fullName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), fullName);
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "UsingNamespace", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void ISymbolWriter::UsingNamespace(const char *fullName)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(fullName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), fullName);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "UsingNamespace", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 1, __parameter_types__, __parameters__, NULL);
 				}
 

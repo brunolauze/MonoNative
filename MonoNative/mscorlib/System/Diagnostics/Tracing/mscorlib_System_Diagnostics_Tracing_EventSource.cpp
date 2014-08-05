@@ -26,8 +26,10 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(level).name());
 						__parameter_types__[1] = Global::GetType(typeid(keywords).name());
-						__parameters__[0] = reinterpret_cast<void*>(level);
-						__parameters__[1] = reinterpret_cast<void*>(keywords);
+						int __param_level__ = level;
+						__parameters__[0] = &__param_level__;
+						int __param_keywords__ = keywords;
+						__parameters__[1] = &__param_keywords__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Tracing", "EventSource", 0, NULL, "IsEnabled", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}

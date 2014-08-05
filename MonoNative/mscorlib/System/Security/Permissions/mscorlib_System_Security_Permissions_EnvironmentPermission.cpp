@@ -20,8 +20,21 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(flag).name());
 						__parameter_types__[1] = Global::GetType(typeid(pathList).name());
-						__parameters__[0] = reinterpret_cast<void*>(flag);
-						__parameters__[1] = (MonoObject*)pathList;
+						int __param_flag__ = flag;
+						__parameters__[0] = &__param_flag__;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), pathList);
+						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "EnvironmentPermission", 0, NULL, "AddPathList", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void EnvironmentPermission::AddPathList(mscorlib::System::Security::Permissions::EnvironmentPermissionAccess::__ENUM__ flag, const char *pathList)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(flag).name());
+						__parameter_types__[1] = Global::GetType(typeid(pathList).name());
+						int __param_flag__ = flag;
+						__parameters__[0] = &__param_flag__;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), pathList);
 						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "EnvironmentPermission", 0, NULL, "AddPathList", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -45,7 +58,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(flag).name());
-						__parameters__[0] = reinterpret_cast<void*>(flag);
+						int __param_flag__ = flag;
+						__parameters__[0] = &__param_flag__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "EnvironmentPermission", 0, NULL, "GetPathList", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -82,8 +96,21 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(flag).name());
 						__parameter_types__[1] = Global::GetType(typeid(pathList).name());
-						__parameters__[0] = reinterpret_cast<void*>(flag);
-						__parameters__[1] = (MonoObject*)pathList;
+						int __param_flag__ = flag;
+						__parameters__[0] = &__param_flag__;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), pathList);
+						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "EnvironmentPermission", 0, NULL, "SetPathList", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void EnvironmentPermission::SetPathList(mscorlib::System::Security::Permissions::EnvironmentPermissionAccess::__ENUM__ flag, const char *pathList)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(flag).name());
+						__parameter_types__[1] = Global::GetType(typeid(pathList).name());
+						int __param_flag__ = flag;
+						__parameters__[0] = &__param_flag__;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), pathList);
 						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "EnvironmentPermission", 0, NULL, "SetPathList", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 

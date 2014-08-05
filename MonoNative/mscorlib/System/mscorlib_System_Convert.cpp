@@ -41,7 +41,25 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(s).name());
-				__parameters__[0] = (MonoObject*)s;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "FromBase64String", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				MonoArray *__array_ptr__ = (MonoArray*)__result__;
+				uintptr_t __array_length__ = mono_array_length(__array_ptr__);
+				std::vector<mscorlib::System::Byte*>  __array_result__(__array_length__);
+				for(uintptr_t __array_index__ = 0; __array_index__ < __array_length__; __array_index__++)
+				{
+					MonoObject *__array_item__ = mono_array_get(__array_ptr__,MonoObject*,__array_index__);
+					__array_result__.push_back(new mscorlib::System::Byte (__array_item__));
+				}
+				return __array_result__;
+		}
+
+		std::vector<mscorlib::System::Byte*> Convert::FromBase64String(const char *s)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(s).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "FromBase64String", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
 				uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -61,7 +79,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameters__[0] = (MonoObject*)value;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "GetTypeCode", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-				return *(mscorlib::System::TypeCode::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::TypeCode::__ENUM__>(*(mscorlib::System::TypeCode::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 		mscorlib::System::Boolean Convert::IsDBNull(mscorlib::System::Object value)
@@ -123,7 +141,8 @@ namespace mscorlib
 				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(inArray).name()))->eklass);
 				__parameter_types__[1] = Global::GetType(typeid(options).name());
 				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(inArray, typeid(mscorlib::System::Byte).name());
-				__parameters__[1] = reinterpret_cast<void*>(options);
+				int __param_options__ = options;
+				__parameters__[1] = &__param_options__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToBase64String", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -139,7 +158,8 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(inArray, typeid(mscorlib::System::Byte).name());
 				__parameters__[1] = &offset;
 				__parameters__[2] = &length;
-				__parameters__[3] = reinterpret_cast<void*>(options);
+				int __param_options__ = options;
+				__parameters__[3] = &__param_options__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToBase64String", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -159,7 +179,8 @@ namespace mscorlib
 				__parameters__[2] = &length;
 				__parameters__[3] = Global::FromArray<mscorlib::System::Char*>(outArray, typeid(mscorlib::System::Char).name());
 				__parameters__[4] = &offsetOut;
-				__parameters__[5] = reinterpret_cast<void*>(options);
+				int __param_options__ = options;
+				__parameters__[5] = &__param_options__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToBase64CharArray", NullMonoObject, 6, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 		}
@@ -279,7 +300,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToBoolean", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Boolean Convert::ToBoolean(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToBoolean", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 		}
@@ -290,7 +321,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToBoolean", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Boolean Convert::ToBoolean(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToBoolean", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -463,7 +506,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToByte", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Byte(__result__);
+		}
+
+		mscorlib::System::Byte Convert::ToByte(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToByte", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Byte(__result__);
 		}
@@ -474,7 +527,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Byte(__result__);
+		}
+
+		mscorlib::System::Byte Convert::ToByte(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Byte(__result__);
@@ -486,7 +551,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = &fromBase;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Byte(__result__);
+		}
+
+		mscorlib::System::Byte Convert::ToByte(const char *value, mscorlib::System::Int32 fromBase)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = &fromBase;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Byte(__result__);
@@ -659,7 +736,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToChar", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Char*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Char Convert::ToChar(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToChar", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Char*)mono_object_unbox(__result__);
 		}
@@ -670,7 +757,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToChar", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Char*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Char Convert::ToChar(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToChar", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Char*)mono_object_unbox(__result__);
@@ -733,7 +832,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDateTime", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::DateTime(__result__);
+		}
+
+		mscorlib::System::DateTime Convert::ToDateTime(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDateTime", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::DateTime(__result__);
 		}
@@ -744,7 +853,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDateTime", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::DateTime(__result__);
+		}
+
+		mscorlib::System::DateTime Convert::ToDateTime(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDateTime", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::DateTime(__result__);
@@ -1027,7 +1148,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDecimal", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Decimal(__result__);
+		}
+
+		mscorlib::System::Decimal Convert::ToDecimal(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDecimal", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Decimal(__result__);
 		}
@@ -1038,7 +1169,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDecimal", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::Decimal(__result__);
+		}
+
+		mscorlib::System::Decimal Convert::ToDecimal(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDecimal", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Decimal(__result__);
@@ -1211,7 +1354,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDouble", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Double*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Double Convert::ToDouble(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDouble", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Double*)mono_object_unbox(__result__);
 		}
@@ -1222,7 +1375,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDouble", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Double*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Double Convert::ToDouble(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToDouble", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Double*)mono_object_unbox(__result__);
@@ -1395,7 +1560,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt16", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int16 Convert::ToInt16(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt16", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
 		}
@@ -1406,7 +1581,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int16 Convert::ToInt16(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
@@ -1418,7 +1605,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = &fromBase;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int16 Convert::ToInt16(const char *value, mscorlib::System::Int32 fromBase)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = &fromBase;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
@@ -1591,7 +1790,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt32", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int32 Convert::ToInt32(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt32", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 		}
@@ -1602,7 +1811,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int32 Convert::ToInt32(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -1614,7 +1835,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = &fromBase;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int32 Convert::ToInt32(const char *value, mscorlib::System::Int32 fromBase)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = &fromBase;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -1787,7 +2020,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt64", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int64 Convert::ToInt64(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt64", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
 		}
@@ -1798,7 +2041,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int64 Convert::ToInt64(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -1810,7 +2065,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = &fromBase;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Int64 Convert::ToInt64(const char *value, mscorlib::System::Int32 fromBase)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = &fromBase;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -1983,7 +2250,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSByte", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::SByte(__result__);
+		}
+
+		mscorlib::System::SByte Convert::ToSByte(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSByte", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::SByte(__result__);
 		}
@@ -1994,7 +2271,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::SByte(__result__);
+		}
+
+		mscorlib::System::SByte Convert::ToSByte(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::SByte(__result__);
@@ -2006,7 +2295,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = &fromBase;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::SByte(__result__);
+		}
+
+		mscorlib::System::SByte Convert::ToSByte(const char *value, mscorlib::System::Int32 fromBase)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = &fromBase;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::SByte(__result__);
@@ -2179,7 +2480,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSingle", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Single*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Single Convert::ToSingle(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSingle", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Single*)mono_object_unbox(__result__);
 		}
@@ -2190,7 +2501,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSingle", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Single*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::Single Convert::ToSingle(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToSingle", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Single*)mono_object_unbox(__result__);
@@ -2565,7 +2888,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::String(__result__);
+		}
+
+		mscorlib::System::String Convert::ToString(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -2576,7 +2909,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToString", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::String(__result__);
+		}
+
+		mscorlib::System::String Convert::ToString(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToString", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
@@ -2763,7 +3108,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt16", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt16*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt16 Convert::ToUInt16(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt16", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt16*)mono_object_unbox(__result__);
 		}
@@ -2774,7 +3129,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt16*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt16 Convert::ToUInt16(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt16*)mono_object_unbox(__result__);
@@ -2786,7 +3153,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = &fromBase;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt16*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt16 Convert::ToUInt16(const char *value, mscorlib::System::Int32 fromBase)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = &fromBase;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt16*)mono_object_unbox(__result__);
@@ -2959,7 +3338,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt32", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt32 Convert::ToUInt32(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt32", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt32*)mono_object_unbox(__result__);
 		}
@@ -2970,7 +3359,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt32 Convert::ToUInt32(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt32*)mono_object_unbox(__result__);
@@ -2982,7 +3383,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = &fromBase;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt32*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt32 Convert::ToUInt32(const char *value, mscorlib::System::Int32 fromBase)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = &fromBase;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt32*)mono_object_unbox(__result__);
@@ -3155,7 +3568,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt64", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt64 Convert::ToUInt64(const char *value)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt64", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
 		}
@@ -3166,7 +3589,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)provider;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt64 Convert::ToUInt64(const char *value, mscorlib::System::IFormatProvider provider)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(provider).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
@@ -3178,7 +3613,19 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = &fromBase;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
+		}
+
+		mscorlib::System::UInt64 Convert::ToUInt64(const char *value, mscorlib::System::Int32 fromBase)
+		{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(fromBase).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = &fromBase;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToUInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
@@ -3255,7 +3702,8 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(typeCode).name());
 				__parameters__[0] = (MonoObject*)value;
-				__parameters__[1] = reinterpret_cast<void*>(typeCode);
+				int __param_typeCode__ = typeCode;
+				__parameters__[1] = &__param_typeCode__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ChangeType", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
 		}
@@ -3282,7 +3730,8 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(typeCode).name());
 				__parameter_types__[2] = Global::GetType(typeid(provider).name());
 				__parameters__[0] = (MonoObject*)value;
-				__parameters__[1] = reinterpret_cast<void*>(typeCode);
+				int __param_typeCode__ = typeCode;
+				__parameters__[1] = &__param_typeCode__;
 				__parameters__[2] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ChangeType", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);

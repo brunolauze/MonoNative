@@ -470,7 +470,8 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(d).name());
 				__parameter_types__[1] = Global::GetType(typeid(mode).name());
 				__parameters__[0] = (MonoObject*)d;
-				__parameters__[1] = reinterpret_cast<void*>(mode);
+				int __param_mode__ = mode;
+				__parameters__[1] = &__param_mode__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Math", 0, NULL, "Round", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Decimal(__result__);
 		}
@@ -484,7 +485,8 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(mode).name());
 				__parameters__[0] = (MonoObject*)d;
 				__parameters__[1] = &decimals;
-				__parameters__[2] = reinterpret_cast<void*>(mode);
+				int __param_mode__ = mode;
+				__parameters__[2] = &__param_mode__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Math", 0, NULL, "Round", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Decimal(__result__);
 		}
@@ -518,7 +520,8 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(mode).name());
 				__parameters__[0] = &value;
-				__parameters__[1] = reinterpret_cast<void*>(mode);
+				int __param_mode__ = mode;
+				__parameters__[1] = &__param_mode__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Math", 0, NULL, "Round", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Double*)mono_object_unbox(__result__);
 		}
@@ -532,7 +535,8 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(mode).name());
 				__parameters__[0] = &value;
 				__parameters__[1] = &digits;
-				__parameters__[2] = reinterpret_cast<void*>(mode);
+				int __param_mode__ = mode;
+				__parameters__[2] = &__param_mode__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Math", 0, NULL, "Round", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Double*)mono_object_unbox(__result__);
 		}

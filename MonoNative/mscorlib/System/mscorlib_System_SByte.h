@@ -73,15 +73,23 @@ namespace mscorlib
 			virtual mscorlib::System::Int32  CompareTo(mscorlib::System::SByte value);
 			virtual mscorlib::System::Boolean  Equals(mscorlib::System::SByte obj);
 			static mscorlib::System::SByte  Parse(mscorlib::System::String s, mscorlib::System::IFormatProvider provider);
+			static mscorlib::System::SByte  Parse(const char *s, mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::SByte  Parse(mscorlib::System::String s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style);
+			static mscorlib::System::SByte  Parse(const char *s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style);
 			static mscorlib::System::SByte  Parse(mscorlib::System::String s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style, mscorlib::System::IFormatProvider provider);
+			static mscorlib::System::SByte  Parse(const char *s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style, mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::SByte  Parse(mscorlib::System::String s);
+			static mscorlib::System::SByte  Parse(const char *s);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String s, mscorlib::System::SByte result);
+			static mscorlib::System::Boolean  TryParse(const char *s, mscorlib::System::SByte result);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style, mscorlib::System::IFormatProvider provider, mscorlib::System::SByte result);
+			static mscorlib::System::Boolean  TryParse(const char *s, mscorlib::System::Globalization::NumberStyles::__ENUM__ style, mscorlib::System::IFormatProvider provider, mscorlib::System::SByte result);
 			virtual mscorlib::System::String  ToString() override;
 			virtual mscorlib::System::String  ToString(mscorlib::System::IFormatProvider provider);
 			mscorlib::System::String  ToString(mscorlib::System::String format);
+			mscorlib::System::String  ToString(const char *format);
 			virtual mscorlib::System::String  ToString(mscorlib::System::String format, mscorlib::System::IFormatProvider provider);
+			virtual mscorlib::System::String  ToString(const char *format, mscorlib::System::IFormatProvider provider);
 			virtual mscorlib::System::TypeCode::__ENUM__  GetTypeCode();
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

@@ -60,8 +60,11 @@ namespace mscorlib
 
 
 				static void  SetValue(mscorlib::System::String keyName, mscorlib::System::String valueName, mscorlib::System::Object value);
+				static void  SetValue(const char *keyName, const char *valueName, mscorlib::System::Object value);
 				static void  SetValue(mscorlib::System::String keyName, mscorlib::System::String valueName, mscorlib::System::Object value, mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__ valueKind);
+				static void  SetValue(const char *keyName, const char *valueName, mscorlib::System::Object value, mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__ valueKind);
 				static mscorlib::System::Object  GetValue(mscorlib::System::String keyName, mscorlib::System::String valueName, mscorlib::System::Object defaultValue);
+				static mscorlib::System::Object  GetValue(const char *keyName, const char *valueName, mscorlib::System::Object defaultValue);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

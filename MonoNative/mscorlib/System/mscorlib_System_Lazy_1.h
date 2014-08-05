@@ -70,7 +70,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType("mscorlib", "System.Threading", "LazyThreadSafetyMode");
-				__parameters__[0] = reinterpret_cast<void*>(mode);
+				int __param_mode__ = mode;
+				__parameters__[0] = &__param_mode__;
 				__native_object__ = Global::New("mscorlib", "System", "Lazy`1", 1, __generic_types__, __parameters__);
 			};
 		
@@ -84,7 +85,8 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType("mscorlib", "System", "Func`1");
 				__parameter_types__[1] = Global::GetType("mscorlib", "System.Threading", "LazyThreadSafetyMode");
 				__parameters__[0] = &valueFactory;
-				__parameters__[1] = reinterpret_cast<void*>(mode);
+				int __param_mode__ = mode;
+				__parameters__[1] = &__param_mode__;
 				__native_object__ = Global::New("mscorlib", "System", "Lazy`1", 1, __generic_types__, __parameters__);
 			};
 		

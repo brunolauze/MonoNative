@@ -92,7 +92,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography", "CryptoStreamMode");
 						__parameters__[0] = (MonoObject*)stream;
 						__parameters__[1] = (MonoObject*)transform;
-						__parameters__[2] = reinterpret_cast<void*>(mode);
+						int __param_mode__ = mode;
+						__parameters__[2] = &__param_mode__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "CryptoStream", 3, __parameter_types__, __parameters__);
 					};
 				

@@ -46,23 +46,35 @@ namespace mscorlib
 
 
 				static mscorlib::System::String  ChangeExtension(mscorlib::System::String path, mscorlib::System::String extension);
+				static mscorlib::System::String  ChangeExtension(const char *path, const char *extension);
 				static mscorlib::System::String  Combine(mscorlib::System::String path1, mscorlib::System::String path2);
+				static mscorlib::System::String  Combine(const char *path1, const char *path2);
 				static mscorlib::System::String  GetDirectoryName(mscorlib::System::String path);
+				static mscorlib::System::String  GetDirectoryName(const char *path);
 				static mscorlib::System::String  GetExtension(mscorlib::System::String path);
+				static mscorlib::System::String  GetExtension(const char *path);
 				static mscorlib::System::String  GetFileName(mscorlib::System::String path);
+				static mscorlib::System::String  GetFileName(const char *path);
 				static mscorlib::System::String  GetFileNameWithoutExtension(mscorlib::System::String path);
+				static mscorlib::System::String  GetFileNameWithoutExtension(const char *path);
 				static mscorlib::System::String  GetFullPath(mscorlib::System::String path);
+				static mscorlib::System::String  GetFullPath(const char *path);
 				static mscorlib::System::String  GetPathRoot(mscorlib::System::String path);
+				static mscorlib::System::String  GetPathRoot(const char *path);
 				static mscorlib::System::String  GetTempFileName();
 				static mscorlib::System::String  GetTempPath();
 				static mscorlib::System::Boolean  HasExtension(mscorlib::System::String path);
+				static mscorlib::System::Boolean  HasExtension(const char *path);
 				static mscorlib::System::Boolean  IsPathRooted(mscorlib::System::String path);
+				static mscorlib::System::Boolean  IsPathRooted(const char *path);
 				static std::vector<mscorlib::System::Char*>  GetInvalidFileNameChars();
 				static std::vector<mscorlib::System::Char*>  GetInvalidPathChars();
 				static mscorlib::System::String  GetRandomFileName();
 				static mscorlib::System::String  Combine(std::vector<mscorlib::System::String*> paths);
 				static mscorlib::System::String  Combine(mscorlib::System::String path1, mscorlib::System::String path2, mscorlib::System::String path3);
+				static mscorlib::System::String  Combine(const char *path1, const char *path2, const char *path3);
 				static mscorlib::System::String  Combine(mscorlib::System::String path1, mscorlib::System::String path2, mscorlib::System::String path3, mscorlib::System::String path4);
+				static mscorlib::System::String  Combine(const char *path1, const char *path2, const char *path3, const char *path4);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

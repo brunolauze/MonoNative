@@ -55,11 +55,16 @@ namespace mscorlib
 
 
 					static mscorlib::System::Object  CreateFromName(mscorlib::System::String name);
+					static mscorlib::System::Object  CreateFromName(const char *name);
 					static mscorlib::System::Object  CreateFromName(mscorlib::System::String name, std::vector<mscorlib::System::Object*> args);
+					static mscorlib::System::Object  CreateFromName(const char *name, std::vector<mscorlib::System::Object*> args);
 					static mscorlib::System::String  MapNameToOID(mscorlib::System::String name);
+					static mscorlib::System::String  MapNameToOID(const char *name);
 					static void  AddAlgorithm(mscorlib::System::Type algorithm, std::vector<mscorlib::System::String*> names);
 					static void  AddOID(mscorlib::System::String oid, std::vector<mscorlib::System::String*> names);
+					static void  AddOID(const char *oid, std::vector<mscorlib::System::String*> names);
 					static std::vector<mscorlib::System::Byte*>  EncodeOID(mscorlib::System::String str);
+					static std::vector<mscorlib::System::Byte*>  EncodeOID(const char *str);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

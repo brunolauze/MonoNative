@@ -61,7 +61,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "PermissionState");
-						__parameters__[0] = reinterpret_cast<void*>(state);
+						int __param_state__ = state;
+						__parameters__[0] = &__param_state__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "EnvironmentPermission", 1, __parameter_types__, __parameters__);
 					};
 				
@@ -76,7 +77,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "EnvironmentPermissionAccess");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
-						__parameters__[0] = reinterpret_cast<void*>(flag);
+						int __param_flag__ = flag;
+						__parameters__[0] = &__param_flag__;
 						__parameters__[1] = (MonoObject*)pathList;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "EnvironmentPermission", 2, __parameter_types__, __parameters__);
 					};
@@ -110,6 +112,7 @@ namespace mscorlib
 
 
 					void  AddPathList(mscorlib::System::Security::Permissions::EnvironmentPermissionAccess::__ENUM__ flag, mscorlib::System::String pathList);
+					void  AddPathList(mscorlib::System::Security::Permissions::EnvironmentPermissionAccess::__ENUM__ flag, const char *pathList);
 					virtual mscorlib::System::Security::IPermission  Copy() override;
 					virtual void  FromXml(mscorlib::System::Security::SecurityElement esd) override;
 					mscorlib::System::String  GetPathList(mscorlib::System::Security::Permissions::EnvironmentPermissionAccess::__ENUM__ flag);
@@ -117,6 +120,7 @@ namespace mscorlib
 					virtual mscorlib::System::Boolean  IsSubsetOf(mscorlib::System::Security::IPermission target) override;
 					virtual mscorlib::System::Boolean  IsUnrestricted();
 					void  SetPathList(mscorlib::System::Security::Permissions::EnvironmentPermissionAccess::__ENUM__ flag, mscorlib::System::String pathList);
+					void  SetPathList(mscorlib::System::Security::Permissions::EnvironmentPermissionAccess::__ENUM__ flag, const char *pathList);
 					virtual mscorlib::System::Security::SecurityElement  ToXml() override;
 					virtual mscorlib::System::Security::IPermission  Union(mscorlib::System::Security::IPermission other) override;
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

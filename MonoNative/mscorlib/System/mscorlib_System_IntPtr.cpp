@@ -56,7 +56,17 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(format).name());
-				__parameters__[0] = (MonoObject*)format;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IntPtr", 0, NULL, "ToString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				return mscorlib::System::String(__result__);
+		}
+
+		mscorlib::System::String IntPtr::ToString(const char *format)
+		{
+				MonoType *__parameter_types__[1];
+				void *__parameters__[1];
+				__parameter_types__[0] = Global::GetType(typeid(format).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IntPtr", 0, NULL, "ToString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}

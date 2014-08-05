@@ -17,7 +17,7 @@ namespace mscorlib
 			mscorlib::System::Diagnostics::DebuggerBrowsableState::__ENUM__  DebuggerBrowsableAttribute::get_State() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggerBrowsableAttribute", 0, NULL, "get_State", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Diagnostics::DebuggerBrowsableState::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Diagnostics::DebuggerBrowsableState::__ENUM__>(*(mscorlib::System::Diagnostics::DebuggerBrowsableState::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

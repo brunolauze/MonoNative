@@ -53,7 +53,9 @@ namespace mscorlib
 
 
 					void  SetLocalSymInfo(mscorlib::System::String name, mscorlib::System::Int32 startOffset, mscorlib::System::Int32 endOffset);
+					void  SetLocalSymInfo(const char *name, mscorlib::System::Int32 startOffset, mscorlib::System::Int32 endOffset);
 					void  SetLocalSymInfo(mscorlib::System::String name);
+					void  SetLocalSymInfo(const char *name);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

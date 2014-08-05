@@ -158,12 +158,14 @@ namespace mscorlib
 					mscorlib::System::Reflection::Emit::ILGenerator  GetILGenerator();
 					mscorlib::System::Reflection::Emit::ILGenerator  GetILGenerator(mscorlib::System::Int32 size);
 					mscorlib::System::Reflection::Emit::ParameterBuilder  DefineParameter(mscorlib::System::Int32 position, mscorlib::System::Reflection::ParameterAttributes::__ENUM__ attributes, mscorlib::System::String strParamName);
+					mscorlib::System::Reflection::Emit::ParameterBuilder  DefineParameter(mscorlib::System::Int32 position, mscorlib::System::Reflection::ParameterAttributes::__ENUM__ attributes, const char *strParamName);
 					void  SetCustomAttribute(mscorlib::System::Reflection::Emit::CustomAttributeBuilder customBuilder);
 					void  SetCustomAttribute(mscorlib::System::Reflection::ConstructorInfo con, std::vector<mscorlib::System::Byte*> binaryAttribute);
 					void  SetImplementationFlags(mscorlib::System::Reflection::MethodImplAttributes::__ENUM__ attributes);
 					void  AddDeclarativeSecurity(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__ action, mscorlib::System::Security::PermissionSet pset);
 					void  SetMarshal(mscorlib::System::Reflection::Emit::UnmanagedMarshal unmanagedMarshal);
 					void  SetSymCustomAttribute(mscorlib::System::String name, std::vector<mscorlib::System::Byte*> data);
+					void  SetSymCustomAttribute(const char *name, std::vector<mscorlib::System::Byte*> data);
 					virtual mscorlib::System::String  ToString() override;
 					virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object obj) override;
 					virtual mscorlib::System::Int32  GetHashCode() override;

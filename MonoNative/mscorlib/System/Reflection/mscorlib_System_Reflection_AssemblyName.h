@@ -145,6 +145,7 @@ namespace mscorlib
 				virtual mscorlib::System::Object  Clone();
 				virtual void  OnDeserialization(mscorlib::System::Object sender);
 				static mscorlib::System::Reflection::AssemblyName  GetAssemblyName(mscorlib::System::String assemblyFile);
+				static mscorlib::System::Reflection::AssemblyName  GetAssemblyName(const char *assemblyFile);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

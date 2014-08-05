@@ -19,7 +19,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(flags).name());
-						__parameters__[0] = reinterpret_cast<void*>(flags);
+						int __param_flags__ = flags;
+						__parameters__[0] = &__param_flags__;
 						Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "RawSecurityDescriptor", 0, NULL, "SetFlags", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -28,7 +29,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  RawSecurityDescriptor::get_ControlFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "RawSecurityDescriptor", 0, NULL, "get_ControlFlags", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

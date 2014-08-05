@@ -156,11 +156,14 @@ namespace mscorlib
 
 
 				static mscorlib::System::LocalDataStoreSlot  AllocateNamedDataSlot(mscorlib::System::String name);
+				static mscorlib::System::LocalDataStoreSlot  AllocateNamedDataSlot(const char *name);
 				static void  FreeNamedDataSlot(mscorlib::System::String name);
+				static void  FreeNamedDataSlot(const char *name);
 				static mscorlib::System::LocalDataStoreSlot  AllocateDataSlot();
 				static mscorlib::System::Object  GetData(mscorlib::System::LocalDataStoreSlot slot);
 				static void  SetData(mscorlib::System::LocalDataStoreSlot slot, mscorlib::System::Object data);
 				static mscorlib::System::LocalDataStoreSlot  GetNamedDataSlot(mscorlib::System::String name);
+				static mscorlib::System::LocalDataStoreSlot  GetNamedDataSlot(const char *name);
 				static mscorlib::System::AppDomain  GetDomain();
 				static mscorlib::System::Int32  GetDomainID();
 				static void  ResetAbort();

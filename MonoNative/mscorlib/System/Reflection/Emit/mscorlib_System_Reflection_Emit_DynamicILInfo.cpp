@@ -74,7 +74,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(literal).name());
-						__parameters__[0] = (MonoObject*)literal;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), literal);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicILInfo", 0, NULL, "GetTokenFor", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Int32 DynamicILInfo::GetTokenFor(const char *literal)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(literal).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), literal);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicILInfo", 0, NULL, "GetTokenFor", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 				}

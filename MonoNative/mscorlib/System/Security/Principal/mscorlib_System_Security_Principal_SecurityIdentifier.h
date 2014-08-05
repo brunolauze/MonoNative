@@ -76,7 +76,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Principal", "WellKnownSidType");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Principal", "SecurityIdentifier");
-						__parameters__[0] = reinterpret_cast<void*>(sidType);
+						int __param_sidType__ = sidType;
+						__parameters__[0] = &__param_sidType__;
 						__parameters__[1] = (MonoObject*)domainSid;
 						__native_object__ = Global::New("mscorlib", "System.Security.Principal", "SecurityIdentifier", 2, __parameter_types__, __parameters__);
 					};

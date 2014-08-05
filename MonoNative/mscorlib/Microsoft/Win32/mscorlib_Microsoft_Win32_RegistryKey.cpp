@@ -36,7 +36,18 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = (MonoObject*)value;
+					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "SetValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+			}
+
+			void RegistryKey::SetValue(const char *name, mscorlib::System::Object value)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "SetValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 			}
@@ -48,9 +59,24 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
 					__parameter_types__[2] = Global::GetType(typeid(valueKind).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = (MonoObject*)value;
-					__parameters__[2] = reinterpret_cast<void*>(valueKind);
+					int __param_valueKind__ = valueKind;
+					__parameters__[2] = &__param_valueKind__;
+					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "SetValue", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+			}
+
+			void RegistryKey::SetValue(const char *name, mscorlib::System::Object value, mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__ valueKind)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(value).name());
+					__parameter_types__[2] = Global::GetType(typeid(valueKind).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = (MonoObject*)value;
+					int __param_valueKind__ = valueKind;
+					__parameters__[2] = &__param_valueKind__;
 					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "SetValue", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -59,7 +85,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenSubKey", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::OpenSubKey(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenSubKey", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -70,7 +106,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(writable).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = reinterpret_cast<void*>(writable);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenSubKey", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::OpenSubKey(const char *name, mscorlib::System::Boolean writable)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(writable).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = reinterpret_cast<void*>(writable);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenSubKey", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
@@ -81,7 +129,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetValue", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Object(__result__);
+			}
+
+			mscorlib::System::Object RegistryKey::GetValue(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetValue", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Object(__result__);
 			}
@@ -92,7 +150,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(defaultValue).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = (MonoObject*)defaultValue;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Object(__result__);
+			}
+
+			mscorlib::System::Object RegistryKey::GetValue(const char *name, mscorlib::System::Object defaultValue)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(defaultValue).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = (MonoObject*)defaultValue;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Object(__result__);
@@ -105,9 +175,25 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(defaultValue).name());
 					__parameter_types__[2] = Global::GetType(typeid(options).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = (MonoObject*)defaultValue;
-					__parameters__[2] = reinterpret_cast<void*>(options);
+					int __param_options__ = options;
+					__parameters__[2] = &__param_options__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetValue", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Object(__result__);
+			}
+
+			mscorlib::System::Object RegistryKey::GetValue(const char *name, mscorlib::System::Object defaultValue, mscorlib::Microsoft::Win32::RegistryValueOptions::__ENUM__ options)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(defaultValue).name());
+					__parameter_types__[2] = Global::GetType(typeid(options).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = (MonoObject*)defaultValue;
+					int __param_options__ = options;
+					__parameters__[2] = &__param_options__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetValue", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Object(__result__);
 			}
@@ -117,9 +203,19 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetValueKind", __native_object__, 1, __parameter_types__, __parameters__, NULL);
-					return *(mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__>(*(mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__*)mono_object_unbox(__result__));
+			}
+
+			mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__ RegistryKey::GetValueKind(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetValueKind", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return static_cast<mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__>(*(mscorlib::Microsoft::Win32::RegistryValueKind::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::CreateSubKey(mscorlib::System::String subkey)
@@ -127,7 +223,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
-					__parameters__[0] = (MonoObject*)subkey;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::CreateSubKey(const char *subkey)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -138,8 +244,22 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
 					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
-					__parameters__[0] = (MonoObject*)subkey;
-					__parameters__[1] = reinterpret_cast<void*>(permissionCheck);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::CreateSubKey(const char *subkey, mscorlib::Microsoft::Win32::RegistryKeyPermissionCheck::__ENUM__ permissionCheck)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -151,8 +271,24 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
 					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
 					__parameter_types__[2] = Global::GetType(typeid(registrySecurity).name());
-					__parameters__[0] = (MonoObject*)subkey;
-					__parameters__[1] = reinterpret_cast<void*>(permissionCheck);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					__parameters__[2] = (MonoObject*)registrySecurity;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::CreateSubKey(const char *subkey, mscorlib::Microsoft::Win32::RegistryKeyPermissionCheck::__ENUM__ permissionCheck, mscorlib::System::Security::AccessControl::RegistrySecurity registrySecurity)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
+					__parameter_types__[2] = Global::GetType(typeid(registrySecurity).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
 					__parameters__[2] = (MonoObject*)registrySecurity;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
@@ -165,9 +301,27 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
 					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
 					__parameter_types__[2] = Global::GetType(typeid(options).name());
-					__parameters__[0] = (MonoObject*)subkey;
-					__parameters__[1] = reinterpret_cast<void*>(permissionCheck);
-					__parameters__[2] = reinterpret_cast<void*>(options);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					int __param_options__ = options;
+					__parameters__[2] = &__param_options__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::CreateSubKey(const char *subkey, mscorlib::Microsoft::Win32::RegistryKeyPermissionCheck::__ENUM__ permissionCheck, mscorlib::Microsoft::Win32::RegistryOptions::__ENUM__ options)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
+					__parameter_types__[2] = Global::GetType(typeid(options).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					int __param_options__ = options;
+					__parameters__[2] = &__param_options__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -180,9 +334,29 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
 					__parameter_types__[2] = Global::GetType(typeid(registryOptions).name());
 					__parameter_types__[3] = Global::GetType(typeid(registrySecurity).name());
-					__parameters__[0] = (MonoObject*)subkey;
-					__parameters__[1] = reinterpret_cast<void*>(permissionCheck);
-					__parameters__[2] = reinterpret_cast<void*>(registryOptions);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					int __param_registryOptions__ = registryOptions;
+					__parameters__[2] = &__param_registryOptions__;
+					__parameters__[3] = (MonoObject*)registrySecurity;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 4, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::CreateSubKey(const char *subkey, mscorlib::Microsoft::Win32::RegistryKeyPermissionCheck::__ENUM__ permissionCheck, mscorlib::Microsoft::Win32::RegistryOptions::__ENUM__ registryOptions, mscorlib::System::Security::AccessControl::RegistrySecurity registrySecurity)
+			{
+					MonoType *__parameter_types__[4];
+					void *__parameters__[4];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
+					__parameter_types__[2] = Global::GetType(typeid(registryOptions).name());
+					__parameter_types__[3] = Global::GetType(typeid(registrySecurity).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					int __param_registryOptions__ = registryOptions;
+					__parameters__[2] = &__param_registryOptions__;
 					__parameters__[3] = (MonoObject*)registrySecurity;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "CreateSubKey", __native_object__, 4, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
@@ -193,7 +367,16 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
-					__parameters__[0] = (MonoObject*)subkey;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteSubKey", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+			}
+
+			void RegistryKey::DeleteSubKey(const char *subkey)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
 					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteSubKey", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -203,7 +386,18 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
 					__parameter_types__[1] = Global::GetType(typeid(throwOnMissingSubKey).name());
-					__parameters__[0] = (MonoObject*)subkey;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					__parameters__[1] = reinterpret_cast<void*>(throwOnMissingSubKey);
+					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteSubKey", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+			}
+
+			void RegistryKey::DeleteSubKey(const char *subkey, mscorlib::System::Boolean throwOnMissingSubKey)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameter_types__[1] = Global::GetType(typeid(throwOnMissingSubKey).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
 					__parameters__[1] = reinterpret_cast<void*>(throwOnMissingSubKey);
 					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteSubKey", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 			}
@@ -213,7 +407,16 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
-					__parameters__[0] = (MonoObject*)subkey;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteSubKeyTree", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+			}
+
+			void RegistryKey::DeleteSubKeyTree(const char *subkey)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
 					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteSubKeyTree", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -223,7 +426,18 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
 					__parameter_types__[1] = Global::GetType(typeid(throwOnMissingSubKey).name());
-					__parameters__[0] = (MonoObject*)subkey;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
+					__parameters__[1] = reinterpret_cast<void*>(throwOnMissingSubKey);
+					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteSubKeyTree", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+			}
+
+			void RegistryKey::DeleteSubKeyTree(const char *subkey, mscorlib::System::Boolean throwOnMissingSubKey)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(subkey).name());
+					__parameter_types__[1] = Global::GetType(typeid(throwOnMissingSubKey).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), subkey);
 					__parameters__[1] = reinterpret_cast<void*>(throwOnMissingSubKey);
 					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteSubKeyTree", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 			}
@@ -233,7 +447,16 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteValue", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+			}
+
+			void RegistryKey::DeleteValue(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteValue", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -243,7 +466,18 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(throwOnMissingValue).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = reinterpret_cast<void*>(throwOnMissingValue);
+					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+			}
+
+			void RegistryKey::DeleteValue(const char *name, mscorlib::System::Boolean throwOnMissingValue)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(throwOnMissingValue).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = reinterpret_cast<void*>(throwOnMissingValue);
 					Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "DeleteValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 			}
@@ -259,7 +493,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(includeSections).name());
-					__parameters__[0] = reinterpret_cast<void*>(includeSections);
+					int __param_includeSections__ = includeSections;
+					__parameters__[0] = &__param_includeSections__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "GetAccessControl", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::AccessControl::RegistrySecurity(__result__);
 			}
@@ -309,7 +544,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(handle).name());
 					__parameter_types__[1] = Global::GetType(typeid(view).name());
 					__parameters__[0] = (MonoObject*)handle;
-					__parameters__[1] = reinterpret_cast<void*>(view);
+					int __param_view__ = view;
+					__parameters__[1] = &__param_view__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "FromHandle", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -320,8 +556,22 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(hKey).name());
 					__parameter_types__[1] = Global::GetType(typeid(machineName).name());
-					__parameters__[0] = reinterpret_cast<void*>(hKey);
-					__parameters__[1] = (MonoObject*)machineName;
+					int __param_hKey__ = hKey;
+					__parameters__[0] = &__param_hKey__;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), machineName);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenRemoteBaseKey", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::OpenRemoteBaseKey(mscorlib::Microsoft::Win32::RegistryHive::__ENUM__ hKey, const char *machineName)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(hKey).name());
+					__parameter_types__[1] = Global::GetType(typeid(machineName).name());
+					int __param_hKey__ = hKey;
+					__parameters__[0] = &__param_hKey__;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), machineName);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenRemoteBaseKey", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -333,9 +583,27 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(hKey).name());
 					__parameter_types__[1] = Global::GetType(typeid(machineName).name());
 					__parameter_types__[2] = Global::GetType(typeid(view).name());
-					__parameters__[0] = reinterpret_cast<void*>(hKey);
-					__parameters__[1] = (MonoObject*)machineName;
-					__parameters__[2] = reinterpret_cast<void*>(view);
+					int __param_hKey__ = hKey;
+					__parameters__[0] = &__param_hKey__;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), machineName);
+					int __param_view__ = view;
+					__parameters__[2] = &__param_view__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenRemoteBaseKey", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::OpenRemoteBaseKey(mscorlib::Microsoft::Win32::RegistryHive::__ENUM__ hKey, const char *machineName, mscorlib::Microsoft::Win32::RegistryView::__ENUM__ view)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(hKey).name());
+					__parameter_types__[1] = Global::GetType(typeid(machineName).name());
+					__parameter_types__[2] = Global::GetType(typeid(view).name());
+					int __param_hKey__ = hKey;
+					__parameters__[0] = &__param_hKey__;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), machineName);
+					int __param_view__ = view;
+					__parameters__[2] = &__param_view__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenRemoteBaseKey", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -346,8 +614,10 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(hKey).name());
 					__parameter_types__[1] = Global::GetType(typeid(view).name());
-					__parameters__[0] = reinterpret_cast<void*>(hKey);
-					__parameters__[1] = reinterpret_cast<void*>(view);
+					int __param_hKey__ = hKey;
+					__parameters__[0] = &__param_hKey__;
+					int __param_view__ = view;
+					__parameters__[1] = &__param_view__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenBaseKey", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -358,8 +628,22 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(permissionCheck);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenSubKey", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::OpenSubKey(const char *name, mscorlib::Microsoft::Win32::RegistryKeyPermissionCheck::__ENUM__ permissionCheck)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenSubKey", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -371,9 +655,27 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
 					__parameter_types__[2] = Global::GetType(typeid(rights).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(permissionCheck);
-					__parameters__[2] = reinterpret_cast<void*>(rights);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					int __param_rights__ = rights;
+					__parameters__[2] = &__param_rights__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenSubKey", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
+			}
+
+			mscorlib::Microsoft::Win32::RegistryKey RegistryKey::OpenSubKey(const char *name, mscorlib::Microsoft::Win32::RegistryKeyPermissionCheck::__ENUM__ permissionCheck, mscorlib::System::Security::AccessControl::RegistryRights::__ENUM__ rights)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(permissionCheck).name());
+					__parameter_types__[2] = Global::GetType(typeid(rights).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_permissionCheck__ = permissionCheck;
+					__parameters__[1] = &__param_permissionCheck__;
+					int __param_rights__ = rights;
+					__parameters__[2] = &__param_rights__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "OpenSubKey", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::Microsoft::Win32::RegistryKey(__result__);
 			}
@@ -430,7 +732,7 @@ namespace mscorlib
 			mscorlib::Microsoft::Win32::RegistryView::__ENUM__  RegistryKey::get_View() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "Microsoft.Win32", "RegistryKey", 0, NULL, "get_View", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::Microsoft::Win32::RegistryView::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::Microsoft::Win32::RegistryView::__ENUM__>(*(mscorlib::Microsoft::Win32::RegistryView::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

@@ -54,7 +54,7 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(time).name());
 					__parameters__[0] = (MonoObject*)time;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "ThaiBuddhistCalendar", 0, NULL, "GetDayOfWeek", __native_object__, 1, __parameter_types__, __parameters__, NULL);
-					return *(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::DayOfWeek::__ENUM__>(*(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 			mscorlib::System::Int32 ThaiBuddhistCalendar::GetDayOfYear(mscorlib::System::DateTime time)
@@ -145,8 +145,10 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(rule).name());
 					__parameter_types__[2] = Global::GetType(typeid(firstDayOfWeek).name());
 					__parameters__[0] = (MonoObject*)time;
-					__parameters__[1] = reinterpret_cast<void*>(rule);
-					__parameters__[2] = reinterpret_cast<void*>(firstDayOfWeek);
+					int __param_rule__ = rule;
+					__parameters__[1] = &__param_rule__;
+					int __param_firstDayOfWeek__ = firstDayOfWeek;
+					__parameters__[2] = &__param_firstDayOfWeek__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "ThaiBuddhistCalendar", 0, NULL, "GetWeekOfYear", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			}
@@ -275,7 +277,7 @@ namespace mscorlib
 			mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  ThaiBuddhistCalendar::get_AlgorithmType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "ThaiBuddhistCalendar", 0, NULL, "get_AlgorithmType", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__>(*(mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 

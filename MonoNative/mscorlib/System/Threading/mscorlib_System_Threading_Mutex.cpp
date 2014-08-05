@@ -26,7 +26,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Mutex", 0, NULL, "OpenExisting", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Threading::Mutex(__result__);
+			}
+
+			mscorlib::System::Threading::Mutex Mutex::OpenExisting(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Mutex", 0, NULL, "OpenExisting", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Threading::Mutex(__result__);
 			}
@@ -37,8 +47,22 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(rights).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(rights);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_rights__ = rights;
+					__parameters__[1] = &__param_rights__;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Mutex", 0, NULL, "OpenExisting", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Threading::Mutex(__result__);
+			}
+
+			mscorlib::System::Threading::Mutex Mutex::OpenExisting(const char *name, mscorlib::System::Security::AccessControl::MutexRights::__ENUM__ rights)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(rights).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_rights__ = rights;
+					__parameters__[1] = &__param_rights__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Mutex", 0, NULL, "OpenExisting", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Threading::Mutex(__result__);
 			}
@@ -49,7 +73,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(result).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = (MonoObject*)result;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Mutex", 0, NULL, "TryOpenExisting", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Boolean Mutex::TryOpenExisting(const char *name, mscorlib::System::Threading::Mutex result)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(result).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = (MonoObject*)result;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Mutex", 0, NULL, "TryOpenExisting", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -62,8 +98,24 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(rights).name());
 					__parameter_types__[2] = Global::GetType(typeid(result).name());
-					__parameters__[0] = (MonoObject*)name;
-					__parameters__[1] = reinterpret_cast<void*>(rights);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_rights__ = rights;
+					__parameters__[1] = &__param_rights__;
+					__parameters__[2] = (MonoObject*)result;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Mutex", 0, NULL, "TryOpenExisting", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			}
+
+			mscorlib::System::Boolean Mutex::TryOpenExisting(const char *name, mscorlib::System::Security::AccessControl::MutexRights::__ENUM__ rights, mscorlib::System::Threading::Mutex result)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(rights).name());
+					__parameter_types__[2] = Global::GetType(typeid(result).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					int __param_rights__ = rights;
+					__parameters__[1] = &__param_rights__;
 					__parameters__[2] = (MonoObject*)result;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Mutex", 0, NULL, "TryOpenExisting", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

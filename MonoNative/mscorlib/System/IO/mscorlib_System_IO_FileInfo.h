@@ -145,13 +145,18 @@ namespace mscorlib
 				mscorlib::System::IO::FileStream  Open(mscorlib::System::IO::FileMode::__ENUM__ mode, mscorlib::System::IO::FileAccess::__ENUM__ access, mscorlib::System::IO::FileShare::__ENUM__ share);
 				virtual void  Delete() override;
 				void  MoveTo(mscorlib::System::String destFileName);
+				void  MoveTo(const char *destFileName);
 				mscorlib::System::IO::FileInfo  CopyTo(mscorlib::System::String destFileName);
+				mscorlib::System::IO::FileInfo  CopyTo(const char *destFileName);
 				mscorlib::System::IO::FileInfo  CopyTo(mscorlib::System::String destFileName, mscorlib::System::Boolean overwrite);
+				mscorlib::System::IO::FileInfo  CopyTo(const char *destFileName, mscorlib::System::Boolean overwrite);
 				virtual mscorlib::System::String  ToString() override;
 				mscorlib::System::Security::AccessControl::FileSecurity  GetAccessControl();
 				mscorlib::System::Security::AccessControl::FileSecurity  GetAccessControl(mscorlib::System::Security::AccessControl::AccessControlSections::__ENUM__ includeSections);
 				mscorlib::System::IO::FileInfo  Replace(mscorlib::System::String destinationFileName, mscorlib::System::String destinationBackupFileName);
+				mscorlib::System::IO::FileInfo  Replace(const char *destinationFileName, const char *destinationBackupFileName);
 				mscorlib::System::IO::FileInfo  Replace(mscorlib::System::String destinationFileName, mscorlib::System::String destinationBackupFileName, mscorlib::System::Boolean ignoreMetadataErrors);
+				mscorlib::System::IO::FileInfo  Replace(const char *destinationFileName, const char *destinationBackupFileName, mscorlib::System::Boolean ignoreMetadataErrors);
 				void  SetAccessControl(mscorlib::System::Security::AccessControl::FileSecurity fileSecurity);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

@@ -92,8 +92,10 @@ namespace mscorlib
 
 
 					static void  DebugOutChnl(mscorlib::System::String s);
+					static void  DebugOutChnl(const char *s);
 					static mscorlib::System::Runtime::Remoting::Metadata::SoapAttribute  GetCachedSoapAttribute(mscorlib::System::Object reflectionObject);
 					static void  RemotingAssert(mscorlib::System::Boolean condition, mscorlib::System::String message);
+					static void  RemotingAssert(mscorlib::System::Boolean condition, const char *message);
 					static void  RemotingTrace(std::vector<mscorlib::System::Object*> messages);
 					static void  SetServerIdentity(mscorlib::System::Runtime::Remoting::Messaging::MethodCall m, mscorlib::System::Object srvID);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

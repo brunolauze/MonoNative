@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../usr/home/bruno/Projects/MonoNative/MonoNative/mscorlib/System/mscorlib_System_String.h">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../usr/home/bruno/Projects/MonoNative/MonoNative.Generator/TypeGenerator.cs">
     <Files>
-      <File FileName="../../../../usr/home/bruno/Projects/MonoNative/MonoNative/Global.h" Line="4" Column="4" />
-      <File FileName="../../../../usr/home/bruno/Projects/MonoNative/MonoNative/mscorlib/System/mscorlib_System_String.h" Line="3" Column="3" />
+      <File FileName="../../../../usr/home/bruno/Projects/MonoNative/MonoNative.Generator/TypeGenerator.cs" Line="54" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

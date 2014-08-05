@@ -51,7 +51,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Threading.Tasks", "TaskCreationOptions");
-						__parameters__[0] = reinterpret_cast<void*>(creationOptions);
+						int __param_creationOptions__ = creationOptions;
+						__parameters__[0] = &__param_creationOptions__;
 						__native_object__ = Global::New("mscorlib", "System.Threading.Tasks", "TaskCompletionSource`1", 1, __generic_types__, __parameters__);
 					};
 				
@@ -65,7 +66,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "Object");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Threading.Tasks", "TaskCreationOptions");
 						__parameters__[0] = (MonoObject*)state;
-						__parameters__[1] = reinterpret_cast<void*>(creationOptions);
+						int __param_creationOptions__ = creationOptions;
+						__parameters__[1] = &__param_creationOptions__;
 						__native_object__ = Global::New("mscorlib", "System.Threading.Tasks", "TaskCompletionSource`1", 1, __generic_types__, __parameters__);
 					};
 				

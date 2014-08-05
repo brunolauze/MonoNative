@@ -124,7 +124,8 @@ namespace mscorlib
 							__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography.X509Certificates", "X509KeyStorageFlags");
 							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
 							__parameters__[1] = (MonoObject*)password;
-							__parameters__[2] = reinterpret_cast<void*>(keyStorageFlags);
+							int __param_keyStorageFlags__ = keyStorageFlags;
+							__parameters__[2] = &__param_keyStorageFlags__;
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 3, __parameter_types__, __parameters__);
 						};
 					
@@ -140,7 +141,8 @@ namespace mscorlib
 							__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography.X509Certificates", "X509KeyStorageFlags");
 							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
 							__parameters__[1] = (MonoObject*)password;
-							__parameters__[2] = reinterpret_cast<void*>(keyStorageFlags);
+							int __param_keyStorageFlags__ = keyStorageFlags;
+							__parameters__[2] = &__param_keyStorageFlags__;
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 3, __parameter_types__, __parameters__);
 						};
 					
@@ -196,7 +198,8 @@ namespace mscorlib
 							__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography.X509Certificates", "X509KeyStorageFlags");
 							__parameters__[0] = (MonoObject*)fileName;
 							__parameters__[1] = (MonoObject*)password;
-							__parameters__[2] = reinterpret_cast<void*>(keyStorageFlags);
+							int __param_keyStorageFlags__ = keyStorageFlags;
+							__parameters__[2] = &__param_keyStorageFlags__;
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 3, __parameter_types__, __parameters__);
 						};
 					
@@ -212,7 +215,8 @@ namespace mscorlib
 							__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography.X509Certificates", "X509KeyStorageFlags");
 							__parameters__[0] = (MonoObject*)fileName;
 							__parameters__[1] = (MonoObject*)password;
-							__parameters__[2] = reinterpret_cast<void*>(keyStorageFlags);
+							int __param_keyStorageFlags__ = keyStorageFlags;
+							__parameters__[2] = &__param_keyStorageFlags__;
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 3, __parameter_types__, __parameters__);
 						};
 					
@@ -255,7 +259,9 @@ namespace mscorlib
 
 
 						static mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  CreateFromCertFile(mscorlib::System::String filename);
+						static mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  CreateFromCertFile(const char *filename);
 						static mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  CreateFromSignedFile(mscorlib::System::String filename);
+						static mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate  CreateFromSignedFile(const char *filename);
 						virtual mscorlib::System::Boolean  Equals(mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate other);
 						virtual std::vector<mscorlib::System::Byte*>  GetCertHash();
 						virtual mscorlib::System::String  GetCertHashString();
@@ -279,13 +285,18 @@ namespace mscorlib
 						virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object obj) override;
 						virtual std::vector<mscorlib::System::Byte*>  Export(mscorlib::System::Security::Cryptography::X509Certificates::X509ContentType::__ENUM__ contentType);
 						virtual std::vector<mscorlib::System::Byte*>  Export(mscorlib::System::Security::Cryptography::X509Certificates::X509ContentType::__ENUM__ contentType, mscorlib::System::String password);
+						virtual std::vector<mscorlib::System::Byte*>  Export(mscorlib::System::Security::Cryptography::X509Certificates::X509ContentType::__ENUM__ contentType, const char *password);
 						virtual std::vector<mscorlib::System::Byte*>  Export(mscorlib::System::Security::Cryptography::X509Certificates::X509ContentType::__ENUM__ contentType, mscorlib::System::Security::SecureString password);
 						virtual void  Import(std::vector<mscorlib::System::Byte*> rawData);
 						virtual void  Import(std::vector<mscorlib::System::Byte*> rawData, mscorlib::System::String password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags);
+						virtual void  Import(std::vector<mscorlib::System::Byte*> rawData, const char *password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags);
 						virtual void  Import(std::vector<mscorlib::System::Byte*> rawData, mscorlib::System::Security::SecureString password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags);
 						virtual void  Import(mscorlib::System::String fileName);
+						virtual void  Import(const char *fileName);
 						virtual void  Import(mscorlib::System::String fileName, mscorlib::System::String password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags);
+						virtual void  Import(const char *fileName, const char *password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags);
 						virtual void  Import(mscorlib::System::String fileName, mscorlib::System::Security::SecureString password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags);
+						virtual void  Import(const char *fileName, mscorlib::System::Security::SecureString password, mscorlib::System::Security::Cryptography::X509Certificates::X509KeyStorageFlags::__ENUM__ keyStorageFlags);
 						virtual void  Reset();
 						virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

@@ -19,7 +19,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::ConstrainedExecution::Cer::__ENUM__  ReliabilityContractAttribute::get_Cer() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.ConstrainedExecution", "ReliabilityContractAttribute", 0, NULL, "get_Cer", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Runtime::ConstrainedExecution::Cer::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Runtime::ConstrainedExecution::Cer::__ENUM__>(*(mscorlib::System::Runtime::ConstrainedExecution::Cer::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 
@@ -27,7 +27,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::ConstrainedExecution::Consistency::__ENUM__  ReliabilityContractAttribute::get_ConsistencyGuarantee() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.ConstrainedExecution", "ReliabilityContractAttribute", 0, NULL, "get_ConsistencyGuarantee", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Runtime::ConstrainedExecution::Consistency::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Runtime::ConstrainedExecution::Consistency::__ENUM__>(*(mscorlib::System::Runtime::ConstrainedExecution::Consistency::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 

@@ -74,7 +74,7 @@ namespace mscorlib
 			mscorlib::System::IO::FileAttributes::__ENUM__  FileSystemInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
-				return *(mscorlib::System::IO::FileAttributes::__ENUM__*)mono_object_unbox(__result__);
+				return static_cast<mscorlib::System::IO::FileAttributes::__ENUM__>(*(mscorlib::System::IO::FileAttributes::__ENUM__*)mono_object_unbox(__result__));
 			}
 
 			void FileSystemInfo::set_Attributes(mscorlib::System::IO::FileAttributes::__ENUM__  value)
@@ -82,7 +82,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = reinterpret_cast<void*>(value);
+				int __param_value__ = value;
+				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "set_Attributes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

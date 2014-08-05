@@ -24,7 +24,20 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
 						__parameter_types__[2] = Global::GetType(typeid(type).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = (MonoObject*)value;
+						__parameters__[2] = (MonoObject*)type;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Object value, mscorlib::System::Type type)
+				{
+						MonoType *__parameter_types__[3];
+						void *__parameters__[3];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameter_types__[2] = Global::GetType(typeid(type).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = (MonoObject*)value;
 						__parameters__[2] = (MonoObject*)type;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -36,7 +49,19 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(type).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = (MonoObject*)type;
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Object(__result__);
+				}
+
+				mscorlib::System::Object SerializationInfo::GetValue(const char *name, mscorlib::System::Type type)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(type).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = (MonoObject*)type;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
@@ -63,7 +88,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Int16 value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -74,7 +110,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::UInt16 value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -85,7 +132,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Int32 value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -96,7 +154,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = (MonoObject*)value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Byte value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -107,7 +176,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = reinterpret_cast<void*>(value);
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Boolean value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = reinterpret_cast<void*>(value);
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -118,7 +198,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Char value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -129,7 +220,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = (MonoObject*)value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::SByte value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -140,7 +242,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Double value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -151,7 +264,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = (MonoObject*)value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Decimal value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -162,7 +286,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = (MonoObject*)value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::DateTime value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -173,7 +308,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Single value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -184,7 +330,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::UInt32 value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -195,7 +352,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Int64 value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -206,7 +374,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = &value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::UInt64 value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = &value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -217,7 +396,18 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = (MonoObject*)value;
+						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+				}
+
+				void SerializationInfo::AddValue(const char *name, mscorlib::System::Object value)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "AddValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -227,7 +417,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetBoolean", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Boolean SerializationInfo::GetBoolean(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetBoolean", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}
@@ -237,7 +437,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetByte", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Byte(__result__);
+				}
+
+				mscorlib::System::Byte SerializationInfo::GetByte(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetByte", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Byte(__result__);
 				}
@@ -247,7 +457,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetChar", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Char*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Char SerializationInfo::GetChar(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetChar", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Char*)mono_object_unbox(__result__);
 				}
@@ -257,7 +477,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetDateTime", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::DateTime(__result__);
+				}
+
+				mscorlib::System::DateTime SerializationInfo::GetDateTime(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetDateTime", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::DateTime(__result__);
 				}
@@ -267,7 +497,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetDecimal", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Decimal(__result__);
+				}
+
+				mscorlib::System::Decimal SerializationInfo::GetDecimal(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetDecimal", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Decimal(__result__);
 				}
@@ -277,7 +517,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetDouble", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Double*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Double SerializationInfo::GetDouble(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetDouble", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Double*)mono_object_unbox(__result__);
 				}
@@ -287,7 +537,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetInt16", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Int16 SerializationInfo::GetInt16(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetInt16", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
 				}
@@ -297,7 +557,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetInt32", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Int32 SerializationInfo::GetInt32(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetInt32", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 				}
@@ -307,7 +577,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetInt64", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Int64 SerializationInfo::GetInt64(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetInt64", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
 				}
@@ -317,7 +597,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetSByte", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::SByte(__result__);
+				}
+
+				mscorlib::System::SByte SerializationInfo::GetSByte(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetSByte", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::SByte(__result__);
 				}
@@ -327,7 +617,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetSingle", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::Single*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::Single SerializationInfo::GetSingle(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetSingle", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Single*)mono_object_unbox(__result__);
 				}
@@ -337,7 +637,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::String(__result__);
+				}
+
+				mscorlib::System::String SerializationInfo::GetString(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -347,7 +657,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetUInt16", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::UInt16*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::UInt16 SerializationInfo::GetUInt16(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetUInt16", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::UInt16*)mono_object_unbox(__result__);
 				}
@@ -357,7 +677,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetUInt32", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::UInt32*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::UInt32 SerializationInfo::GetUInt32(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetUInt32", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::UInt32*)mono_object_unbox(__result__);
 				}
@@ -367,7 +697,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = (MonoObject*)name;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetUInt64", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
+				}
+
+				mscorlib::System::UInt64 SerializationInfo::GetUInt64(const char *name)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "GetUInt64", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::UInt64*)mono_object_unbox(__result__);
 				}
@@ -385,7 +725,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "set_AssemblyName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -402,7 +742,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "SerializationInfo", 0, NULL, "set_FullTypeName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

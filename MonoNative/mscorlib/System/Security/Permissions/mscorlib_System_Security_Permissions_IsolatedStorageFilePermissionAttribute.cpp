@@ -25,7 +25,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  IsolatedStorageFilePermissionAttribute::get_UsageAllowed() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "IsolatedStoragePermissionAttribute", 0, NULL, "get_UsageAllowed", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__>(*(mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void IsolatedStorageFilePermissionAttribute::set_UsageAllowed(mscorlib::System::Security::Permissions::IsolatedStorageContainment::__ENUM__  value)
@@ -33,7 +33,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "IsolatedStoragePermissionAttribute", 0, NULL, "set_UsageAllowed", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -76,7 +77,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  IsolatedStorageFilePermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Permissions::SecurityAction::__ENUM__>(*(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void IsolatedStorageFilePermissionAttribute::set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value)
@@ -84,7 +85,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "set_Action", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

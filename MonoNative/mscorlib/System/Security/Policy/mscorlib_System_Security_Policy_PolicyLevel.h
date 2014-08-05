@@ -88,14 +88,17 @@ namespace mscorlib
 					void  AddFullTrustAssembly(mscorlib::System::Security::Policy::StrongNameMembershipCondition snMC);
 					void  AddNamedPermissionSet(mscorlib::System::Security::NamedPermissionSet permSet);
 					mscorlib::System::Security::NamedPermissionSet  ChangeNamedPermissionSet(mscorlib::System::String name, mscorlib::System::Security::PermissionSet pSet);
+					mscorlib::System::Security::NamedPermissionSet  ChangeNamedPermissionSet(const char *name, mscorlib::System::Security::PermissionSet pSet);
 					static mscorlib::System::Security::Policy::PolicyLevel  CreateAppDomainLevel();
 					void  FromXml(mscorlib::System::Security::SecurityElement e);
 					mscorlib::System::Security::NamedPermissionSet  GetNamedPermissionSet(mscorlib::System::String name);
+					mscorlib::System::Security::NamedPermissionSet  GetNamedPermissionSet(const char *name);
 					void  Recover();
 					void  RemoveFullTrustAssembly(mscorlib::System::Security::Policy::StrongName sn);
 					void  RemoveFullTrustAssembly(mscorlib::System::Security::Policy::StrongNameMembershipCondition snMC);
 					mscorlib::System::Security::NamedPermissionSet  RemoveNamedPermissionSet(mscorlib::System::Security::NamedPermissionSet permSet);
 					mscorlib::System::Security::NamedPermissionSet  RemoveNamedPermissionSet(mscorlib::System::String name);
+					mscorlib::System::Security::NamedPermissionSet  RemoveNamedPermissionSet(const char *name);
 					void  Reset();
 					mscorlib::System::Security::Policy::PolicyStatement  Resolve(mscorlib::System::Security::Policy::Evidence evidence);
 					mscorlib::System::Security::Policy::CodeGroup  ResolveMatchingCodeGroups(mscorlib::System::Security::Policy::Evidence evidence);

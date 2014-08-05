@@ -54,6 +54,7 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::RandomNumberGenerator  Create();
 					static mscorlib::System::Security::Cryptography::RandomNumberGenerator  Create(mscorlib::System::String rngName);
+					static mscorlib::System::Security::Cryptography::RandomNumberGenerator  Create(const char *rngName);
 					virtual void  GetBytes(std::vector<mscorlib::System::Byte*> data);
 					virtual void  GetNonZeroBytes(std::vector<mscorlib::System::Byte*> data);
 					virtual void  Dispose();

@@ -30,7 +30,16 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(xmlString).name());
-						__parameters__[0] = (MonoObject*)xmlString;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlString);
+						Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "FromXmlString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+				}
+
+				void AsymmetricAlgorithm::FromXmlString(const char *xmlString)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(xmlString).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlString);
 						Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "FromXmlString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -55,7 +64,17 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(algName).name());
-						__parameters__[0] = (MonoObject*)algName;
+						__parameters__[0] = mono_string_new(Global::GetDomain(), algName);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Security::Cryptography::AsymmetricAlgorithm(__result__);
+				}
+
+				mscorlib::System::Security::Cryptography::AsymmetricAlgorithm AsymmetricAlgorithm::Create(const char *algName)
+				{
+						MonoType *__parameter_types__[1];
+						void *__parameters__[1];
+						__parameter_types__[0] = Global::GetType(typeid(algName).name());
+						__parameters__[0] = mono_string_new(Global::GetDomain(), algName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricAlgorithm", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::AsymmetricAlgorithm(__result__);
 				}

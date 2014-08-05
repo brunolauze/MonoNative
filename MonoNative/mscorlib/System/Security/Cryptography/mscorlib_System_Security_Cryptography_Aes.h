@@ -74,6 +74,7 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::Aes  Create();
 					static mscorlib::System::Security::Cryptography::Aes  Create(mscorlib::System::String algorithmName);
+					static mscorlib::System::Security::Cryptography::Aes  Create(const char *algorithmName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

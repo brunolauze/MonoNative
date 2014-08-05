@@ -44,7 +44,7 @@ namespace mscorlib
 		mscorlib::System::ActivationContext::ContextForm::__ENUM__  ActivationContext::get_Form() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ActivationContext", 0, NULL, "get_Form", __native_object__, 0, NULL, NULL, NULL);
-			return *(mscorlib::System::ActivationContext::ContextForm::__ENUM__*)mono_object_unbox(__result__);
+			return static_cast<mscorlib::System::ActivationContext::ContextForm::__ENUM__>(*(mscorlib::System::ActivationContext::ContextForm::__ENUM__*)mono_object_unbox(__result__));
 		}
 
 

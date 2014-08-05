@@ -83,6 +83,7 @@ namespace mscorlib
 					static std::vector<mscorlib::System::Reflection::MemberInfo*>  GetSerializableMembers(mscorlib::System::Type type);
 					static std::vector<mscorlib::System::Reflection::MemberInfo*>  GetSerializableMembers(mscorlib::System::Type type, mscorlib::System::Runtime::Serialization::StreamingContext context);
 					static mscorlib::System::Type  GetTypeFromAssembly(mscorlib::System::Reflection::Assembly assem, mscorlib::System::String name);
+					static mscorlib::System::Type  GetTypeFromAssembly(mscorlib::System::Reflection::Assembly assem, const char *name);
 					static mscorlib::System::Object  GetUninitializedObject(mscorlib::System::Type type);
 					static mscorlib::System::Object  PopulateObjectMembers(mscorlib::System::Object obj, std::vector<mscorlib::System::Reflection::MemberInfo*> members, std::vector<mscorlib::System::Object*> data);
 					static void  CheckTypeSecurity(mscorlib::System::Type t, mscorlib::System::Runtime::Serialization::Formatters::TypeFilterLevel::__ENUM__ securityLevel);

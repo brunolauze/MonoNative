@@ -82,7 +82,19 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(assem).name());
 						__parameter_types__[1] = Global::GetType(typeid(name).name());
 						__parameters__[0] = (MonoObject*)assem;
-						__parameters__[1] = (MonoObject*)name;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "FormatterServices", 0, NULL, "GetTypeFromAssembly", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						return mscorlib::System::Type(__result__);
+				}
+
+				mscorlib::System::Type FormatterServices::GetTypeFromAssembly(mscorlib::System::Reflection::Assembly assem, const char *name)
+				{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(assem).name());
+						__parameter_types__[1] = Global::GetType(typeid(name).name());
+						__parameters__[0] = (MonoObject*)assem;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "FormatterServices", 0, NULL, "GetTypeFromAssembly", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Type(__result__);
 				}
@@ -118,7 +130,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(t).name());
 						__parameter_types__[1] = Global::GetType(typeid(securityLevel).name());
 						__parameters__[0] = (MonoObject*)t;
-						__parameters__[1] = reinterpret_cast<void*>(securityLevel);
+						int __param_securityLevel__ = securityLevel;
+						__parameters__[1] = &__param_securityLevel__;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "FormatterServices", 0, NULL, "CheckTypeSecurity", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 

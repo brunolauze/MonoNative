@@ -36,7 +36,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.AccessControl", "AuditFlags");
 						__parameters__[0] = (MonoObject*)identity;
 						__parameters__[1] = (MonoObject*)rights;
-						__parameters__[2] = reinterpret_cast<void*>(flags);
+						int __param_flags__ = flags;
+						__parameters__[2] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "AuditRule`1", 1, __generic_types__, __parameters__);
 					};
 				
@@ -52,7 +53,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.AccessControl", "AuditFlags");
 						__parameters__[0] = (MonoObject*)identity;
 						__parameters__[1] = (MonoObject*)rights;
-						__parameters__[2] = reinterpret_cast<void*>(flags);
+						int __param_flags__ = flags;
+						__parameters__[2] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "AuditRule`1", 1, __generic_types__, __parameters__);
 					};
 				
@@ -70,9 +72,12 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.AccessControl", "AuditFlags");
 						__parameters__[0] = (MonoObject*)identity;
 						__parameters__[1] = (MonoObject*)rights;
-						__parameters__[2] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[3] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[4] = reinterpret_cast<void*>(flags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[2] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[3] = &__param_propagationFlags__;
+						int __param_flags__ = flags;
+						__parameters__[4] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "AuditRule`1", 1, __generic_types__, __parameters__);
 					};
 				
@@ -90,9 +95,12 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.AccessControl", "AuditFlags");
 						__parameters__[0] = (MonoObject*)identity;
 						__parameters__[1] = (MonoObject*)rights;
-						__parameters__[2] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[3] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[4] = reinterpret_cast<void*>(flags);
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[2] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[3] = &__param_propagationFlags__;
+						int __param_flags__ = flags;
+						__parameters__[4] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "AuditRule`1", 1, __generic_types__, __parameters__);
 					};
 				
@@ -141,7 +149,7 @@ namespace mscorlib
 					mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__  get_AuditFlags() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuditRule", 0, NULL, "get_AuditFlags", __native_object__, 0, NULL, NULL, NULL);
-						return *(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__);
+						return static_cast<mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::AuditFlags::__ENUM__*)mono_object_unbox(__result__));
 					}
 
 					//	Get:IdentityReference
@@ -155,7 +163,7 @@ namespace mscorlib
 					mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  get_InheritanceFlags() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
-						return *(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__);
+						return static_cast<mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__));
 					}
 
 					//	Get:IsInherited
@@ -169,7 +177,7 @@ namespace mscorlib
 					mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  get_PropagationFlags() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
-						return *(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__);
+						return static_cast<mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__));
 					}
 
 				

@@ -153,21 +153,35 @@ namespace mscorlib
 			virtual mscorlib::System::Int32  GetHashCode() override;
 			mscorlib::System::TimeSpan  Negate();
 			static mscorlib::System::TimeSpan  Parse(mscorlib::System::String s);
+			static mscorlib::System::TimeSpan  Parse(const char *s);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String s, mscorlib::System::TimeSpan result);
+			static mscorlib::System::Boolean  TryParse(const char *s, mscorlib::System::TimeSpan result);
 			static mscorlib::System::TimeSpan  Parse(mscorlib::System::String input, mscorlib::System::IFormatProvider formatProvider);
+			static mscorlib::System::TimeSpan  Parse(const char *input, mscorlib::System::IFormatProvider formatProvider);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String input, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result);
+			static mscorlib::System::Boolean  TryParse(const char *input, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result);
 			static mscorlib::System::TimeSpan  ParseExact(mscorlib::System::String input, mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider);
+			static mscorlib::System::TimeSpan  ParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider);
 			static mscorlib::System::TimeSpan  ParseExact(mscorlib::System::String input, mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles);
+			static mscorlib::System::TimeSpan  ParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles);
 			static mscorlib::System::TimeSpan  ParseExact(mscorlib::System::String input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider);
+			static mscorlib::System::TimeSpan  ParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider);
 			static mscorlib::System::TimeSpan  ParseExact(mscorlib::System::String input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles);
+			static mscorlib::System::TimeSpan  ParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String input, mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result);
+			static mscorlib::System::Boolean  TryParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String input, mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles, mscorlib::System::TimeSpan result);
+			static mscorlib::System::Boolean  TryParseExact(const char *input, const char *format, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles, mscorlib::System::TimeSpan result);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result);
+			static mscorlib::System::Boolean  TryParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::TimeSpan result);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles, mscorlib::System::TimeSpan result);
+			static mscorlib::System::Boolean  TryParseExact(const char *input, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider formatProvider, mscorlib::System::Globalization::TimeSpanStyles::__ENUM__ styles, mscorlib::System::TimeSpan result);
 			mscorlib::System::TimeSpan  Subtract(mscorlib::System::TimeSpan ts);
 			virtual mscorlib::System::String  ToString() override;
 			mscorlib::System::String  ToString(mscorlib::System::String format);
+			mscorlib::System::String  ToString(const char *format);
 			virtual mscorlib::System::String  ToString(mscorlib::System::String format, mscorlib::System::IFormatProvider formatProvider);
+			virtual mscorlib::System::String  ToString(const char *format, mscorlib::System::IFormatProvider formatProvider);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

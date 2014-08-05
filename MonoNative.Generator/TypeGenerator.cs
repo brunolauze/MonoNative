@@ -759,6 +759,20 @@ namespace MonoNative.Generator
 					sb.AppendLine(indent + "\t};");
 					sb.AppendLine (indent + "\t");
 				}
+
+				if (method.GetParameters ().Any (x => x.ParameterType == typeof(string))) {
+					if (method.IsGenericMethod)
+						sb.AppendLine(indent + "\ttemplate<" + string.Join(", ", method.GetGenericArguments().Select(x => "typename " + (x.FullName == null ? x.Name : x.FullName))) + ">");
+					sb.AppendLine(indent + "\t" + (method.IsStatic ? "static " : "") + (method.IsVirtual ? "virtual " : "") + method.ReturnType.ToParameterTypeName() + (method.Name == "GetEnumerator" ? "* " : " ") + method.Name + "(" + method.GetSignature().Replace("mscorlib::System::String ", "const char *") + ")" + (method.GetBaseDefinition() != method ? " override" : "") + (type.IsGenericType || method.IsGenericMethod ? "" : ";"));
+					if (type.IsGenericType || method.IsGenericMethod)
+					{
+						sb.AppendLine(indent + "\t{");
+						WriteInvoke(type, sb, indent, method, true);
+						sb.AppendLine(indent + "\t};");
+						sb.AppendLine (indent + "\t");
+					}
+				}
+
             }
 
 			if (!type.IsInterface) {
@@ -1079,7 +1093,7 @@ namespace MonoNative.Generator
 			sb.AppendLine (indent + "\treturn __array_result__;");
 		}
 
-		private static void WriteInvoke(Type type, StringBuilder sb, string indent, MethodInfo method)
+		private static void WriteInvoke(Type type, StringBuilder sb, string indent, MethodInfo method, bool withNativeCharPtr = false)
 		{
 			indent += "\t";
 			if (WriteCustomInvoke (type, sb, indent, method))
@@ -1087,7 +1101,7 @@ namespace MonoNative.Generator
 			var parameters = method.GetParameters();
 			if (parameters.Count() > 0)
 			{
-				WriteParameters (type, parameters, sb, indent);
+				WriteParameters (type, parameters, sb, indent, false, true);
 			}
 			if (method.DeclaringType.IsGenericType)
 			{
@@ -1134,13 +1148,14 @@ namespace MonoNative.Generator
 					if (method.ReturnType.IsDelegate ()) {
 						sb.AppendLine (indent + "\tvoid* __delegate_result__ = mono_object_unbox(__result__);");
 						sb.AppendLine (indent + "\treturn " + method.ReturnType.SanitizedName () + "();");
-					}
-					else if (method.ReturnType.IsArray) {
+					} else if (method.ReturnType.IsArray) {
 						var arrayType = method.ReturnType;
+
 						WriteReturnArray (sb, indent, arrayType);
-					}
-					else if (method.ReturnType == typeof(void*)) {
+					} else if (method.ReturnType == typeof(void*)) {
 						sb.AppendLine (indent + "\treturn mono_object_unbox (__result__);");
+					} else if (method.ReturnType.IsReallyEnum ()) {
+						sb.AppendLine (indent + "\treturn static_cast<" + method.ReturnType.SanitizedName() + ">(*(" + method.ReturnType.SanitizedName () + "*)mono_object_unbox(__result__)" + ");");
 					}
 					else {
 						sb.AppendLine (indent + "\treturn " + (method.Name == "GetEnumerator" || method.ReturnType.Name.EndsWith("*") ? "new " : "") + (method.ReturnType.IsReallyEnum() || method.ReturnType.IsReallyPrimitive() ? "*(" + method.ReturnType.SanitizedName () + "*)mono_object_unbox(__result__)" : method.ReturnType.SanitizedName ().Replace("*", "") + "(__result__)") + ";");
@@ -1149,7 +1164,7 @@ namespace MonoNative.Generator
 			}
 		}
 
-		static void WriteParameters (Type type, ParameterInfo[] parameters, StringBuilder sb, string indent, bool isConstructor = false)
+		private static void WriteParameters (Type type, ParameterInfo[] parameters, StringBuilder sb, string indent, bool isConstructor = false, bool withNativeCharPtr = false)
 		{
 			sb.AppendLine (indent + "\tMonoType *__parameter_types__[" + parameters.Count () + "];");
 			sb.AppendLine (indent + "\tvoid *__parameters__[" + parameters.Count () + "];");
@@ -1183,9 +1198,16 @@ namespace MonoNative.Generator
 			}
 			for (int i = 0; i < parameters.Count (); i++) {
 				var parameter = parameters [i];
-				if (parameter.ParameterType == typeof(bool) || parameter.ParameterType.IsReallyEnum ()) {
+				if (parameter.ParameterType == typeof(string) && withNativeCharPtr) {
+					sb.AppendLine (indent + "\t__parameters__[" + i + "] = mono_string_new(Global::GetDomain(), " + parameter.GetName () + ");");
+				}
+				else if (parameter.ParameterType == typeof(bool)) {
 					sb.AppendLine (indent + "\t__parameters__[" + i + "] = reinterpret_cast<void*>(" + parameter.GetName () + ");");
-				} else if (parameter.ParameterType.IsArray) {
+				} else if (parameter.ParameterType.IsReallyEnum ()) {
+					sb.AppendLine (indent + "\tint __param_" + parameter.GetName() + "__ = " + parameter.GetName() + ";");
+					sb.AppendLine (indent + "\t__parameters__[" + i + "] = &__param_" + parameter.GetName() + "__;");
+				}
+				else if (parameter.ParameterType.IsArray) {
 					var arrayType = parameter.ParameterType.GetElementType ();
 					if (isConstructor) {
 						sb.AppendLine (indent + "\t__parameters__[" + i + "] = Global::FromArray<" + parameter.ParameterType.GetElementType ().SanitizedName () + "*>(" + parameter.GetName () + ", \"" + arrayType.Assembly.GetName () + "\", \"" + arrayType.Namespace + "\", \"" + arrayType.Name + "\");");
@@ -1277,6 +1299,15 @@ namespace MonoNative.Generator
 				WriteInvoke(type, sb, indent, method);
 				sb.AppendLine(indent + "}");
 				sb.AppendLine ();
+
+				if (method.GetParameters ().Any (x => x.ParameterType == typeof(string))) {
+					sb.AppendLine(indent + "" + method.ReturnType.ToParameterTypeName().Trim() + (method.Name == "GetEnumerator" ? "* " : " ") + classPrefix + type.ClassName() + "::" + method.Name + "(" + method.GetSignature().Replace("mscorlib::System::String ", "const char *") + ")");
+					sb.AppendLine(indent + "{");
+					WriteInvoke(type, sb, indent, method, true);
+					sb.AppendLine(indent + "}");
+					sb.AppendLine ();
+				}
+
 			}
 		}
 

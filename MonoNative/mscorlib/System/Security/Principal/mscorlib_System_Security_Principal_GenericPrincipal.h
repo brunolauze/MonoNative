@@ -66,6 +66,7 @@ namespace mscorlib
 
 
 					virtual mscorlib::System::Boolean  IsInRole(mscorlib::System::String role);
+					virtual mscorlib::System::Boolean  IsInRole(const char *role);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

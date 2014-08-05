@@ -33,7 +33,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_All", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -50,7 +50,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_Append", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -67,7 +67,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_PathDiscovery", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -84,7 +84,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_Read", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -101,7 +101,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_Write", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -110,7 +110,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermissionAttribute::get_AllFiles() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_AllFiles", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__>(*(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void FileIOPermissionAttribute::set_AllFiles(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  value)
@@ -118,7 +118,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_AllFiles", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -127,7 +128,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  FileIOPermissionAttribute::get_AllLocalFiles() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "get_AllLocalFiles", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__>(*(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void FileIOPermissionAttribute::set_AllLocalFiles(mscorlib::System::Security::Permissions::FileIOPermissionAccess::__ENUM__  value)
@@ -135,7 +136,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_AllLocalFiles", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -152,7 +154,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_ChangeAccessControl", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -169,7 +171,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_ViewAccessControl", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -186,7 +188,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileIOPermissionAttribute", 0, NULL, "set_ViewAndModify", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -212,7 +214,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  FileIOPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Permissions::SecurityAction::__ENUM__>(*(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void FileIOPermissionAttribute::set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value)
@@ -220,7 +222,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "set_Action", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

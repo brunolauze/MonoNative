@@ -61,16 +61,21 @@ namespace mscorlib
 
 						static mscorlib::System::Boolean  RegisterDynamicProperty(mscorlib::System::Runtime::Remoting::Contexts::IDynamicProperty prop, mscorlib::System::ContextBoundObject obj, mscorlib::System::Runtime::Remoting::Contexts::Context ctx);
 						static mscorlib::System::Boolean  UnregisterDynamicProperty(mscorlib::System::String name, mscorlib::System::ContextBoundObject obj, mscorlib::System::Runtime::Remoting::Contexts::Context ctx);
+						static mscorlib::System::Boolean  UnregisterDynamicProperty(const char *name, mscorlib::System::ContextBoundObject obj, mscorlib::System::Runtime::Remoting::Contexts::Context ctx);
 						virtual mscorlib::System::Runtime::Remoting::Contexts::IContextProperty  GetProperty(mscorlib::System::String name);
+						virtual mscorlib::System::Runtime::Remoting::Contexts::IContextProperty  GetProperty(const char *name);
 						virtual void  SetProperty(mscorlib::System::Runtime::Remoting::Contexts::IContextProperty prop);
 						virtual void  Freeze();
 						virtual mscorlib::System::String  ToString() override;
 						void  DoCallBack(mscorlib::Callback<void  ()> deleg);
 						static mscorlib::System::LocalDataStoreSlot  AllocateDataSlot();
 						static mscorlib::System::LocalDataStoreSlot  AllocateNamedDataSlot(mscorlib::System::String name);
+						static mscorlib::System::LocalDataStoreSlot  AllocateNamedDataSlot(const char *name);
 						static void  FreeNamedDataSlot(mscorlib::System::String name);
+						static void  FreeNamedDataSlot(const char *name);
 						static mscorlib::System::Object  GetData(mscorlib::System::LocalDataStoreSlot slot);
 						static mscorlib::System::LocalDataStoreSlot  GetNamedDataSlot(mscorlib::System::String name);
+						static mscorlib::System::LocalDataStoreSlot  GetNamedDataSlot(const char *name);
 						static void  SetData(mscorlib::System::LocalDataStoreSlot slot, mscorlib::System::Object data);
 						virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

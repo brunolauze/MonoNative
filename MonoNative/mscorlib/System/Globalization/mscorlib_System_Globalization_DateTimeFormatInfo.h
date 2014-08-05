@@ -83,6 +83,7 @@ namespace mscorlib
 				mscorlib::System::String  GetAbbreviatedEraName(mscorlib::System::Int32 era);
 				mscorlib::System::String  GetAbbreviatedMonthName(mscorlib::System::Int32 month);
 				mscorlib::System::Int32  GetEra(mscorlib::System::String eraName);
+				mscorlib::System::Int32  GetEra(const char *eraName);
 				mscorlib::System::String  GetEraName(mscorlib::System::Int32 era);
 				mscorlib::System::String  GetMonthName(mscorlib::System::Int32 month);
 				std::vector<mscorlib::System::String*>  GetAllDateTimePatterns();

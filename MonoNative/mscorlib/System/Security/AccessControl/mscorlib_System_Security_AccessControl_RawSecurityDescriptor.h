@@ -65,7 +65,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Principal", "SecurityIdentifier");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.Security.AccessControl", "RawAcl");
 						__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.AccessControl", "RawAcl");
-						__parameters__[0] = reinterpret_cast<void*>(flags);
+						int __param_flags__ = flags;
+						__parameters__[0] = &__param_flags__;
 						__parameters__[1] = (MonoObject*)owner;
 						__parameters__[2] = (MonoObject*)group;
 						__parameters__[3] = (MonoObject*)systemAcl;

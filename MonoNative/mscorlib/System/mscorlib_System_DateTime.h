@@ -227,7 +227,8 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType("mscorlib", "System", "Int64");
 				__parameter_types__[1] = Global::GetType("mscorlib", "System", "DateTimeKind");
 				__parameters__[0] = &ticks;
-				__parameters__[1] = reinterpret_cast<void*>(kind);
+				int __param_kind__ = kind;
+				__parameters__[1] = &__param_kind__;
 				__native_object__ = Global::New("mscorlib", "System", "DateTime", 2, __parameter_types__, __parameters__);
 			};
 		
@@ -255,7 +256,8 @@ namespace mscorlib
 				__parameters__[3] = &hour;
 				__parameters__[4] = &minute;
 				__parameters__[5] = &second;
-				__parameters__[6] = reinterpret_cast<void*>(kind);
+				int __param_kind__ = kind;
+				__parameters__[6] = &__param_kind__;
 				__native_object__ = Global::New("mscorlib", "System", "DateTime", 7, __parameter_types__, __parameters__);
 			};
 		
@@ -285,7 +287,8 @@ namespace mscorlib
 				__parameters__[4] = &minute;
 				__parameters__[5] = &second;
 				__parameters__[6] = &millisecond;
-				__parameters__[7] = reinterpret_cast<void*>(kind);
+				int __param_kind__ = kind;
+				__parameters__[7] = &__param_kind__;
 				__native_object__ = Global::New("mscorlib", "System", "DateTime", 8, __parameter_types__, __parameters__);
 			};
 		
@@ -317,7 +320,8 @@ namespace mscorlib
 				__parameters__[5] = &second;
 				__parameters__[6] = &millisecond;
 				__parameters__[7] = (MonoObject*)calendar;
-				__parameters__[8] = reinterpret_cast<void*>(kind);
+				int __param_kind__ = kind;
+				__parameters__[8] = &__param_kind__;
 				__native_object__ = Global::New("mscorlib", "System", "DateTime", 9, __parameter_types__, __parameters__);
 			};
 		
@@ -384,15 +388,25 @@ namespace mscorlib
 			virtual mscorlib::System::TypeCode::__ENUM__  GetTypeCode();
 			static mscorlib::System::Boolean  IsLeapYear(mscorlib::System::Int32 year);
 			static mscorlib::System::DateTime  Parse(mscorlib::System::String s);
+			static mscorlib::System::DateTime  Parse(const char *s);
 			static mscorlib::System::DateTime  Parse(mscorlib::System::String s, mscorlib::System::IFormatProvider provider);
+			static mscorlib::System::DateTime  Parse(const char *s, mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::DateTime  Parse(mscorlib::System::String s, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles);
+			static mscorlib::System::DateTime  Parse(const char *s, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles);
 			static mscorlib::System::DateTime  ParseExact(mscorlib::System::String s, mscorlib::System::String format, mscorlib::System::IFormatProvider provider);
+			static mscorlib::System::DateTime  ParseExact(const char *s, const char *format, mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::DateTime  ParseExact(mscorlib::System::String s, mscorlib::System::String format, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ style);
+			static mscorlib::System::DateTime  ParseExact(const char *s, const char *format, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ style);
 			static mscorlib::System::DateTime  ParseExact(mscorlib::System::String s, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ style);
+			static mscorlib::System::DateTime  ParseExact(const char *s, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ style);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String s, mscorlib::System::DateTime result);
+			static mscorlib::System::Boolean  TryParse(const char *s, mscorlib::System::DateTime result);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String s, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles, mscorlib::System::DateTime result);
+			static mscorlib::System::Boolean  TryParse(const char *s, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ styles, mscorlib::System::DateTime result);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String s, mscorlib::System::String format, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ style, mscorlib::System::DateTime result);
+			static mscorlib::System::Boolean  TryParseExact(const char *s, const char *format, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ style, mscorlib::System::DateTime result);
 			static mscorlib::System::Boolean  TryParseExact(mscorlib::System::String s, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ style, mscorlib::System::DateTime result);
+			static mscorlib::System::Boolean  TryParseExact(const char *s, std::vector<mscorlib::System::String*> formats, mscorlib::System::IFormatProvider provider, mscorlib::System::Globalization::DateTimeStyles::__ENUM__ style, mscorlib::System::DateTime result);
 			mscorlib::System::TimeSpan  Subtract(mscorlib::System::DateTime value);
 			mscorlib::System::DateTime  Subtract(mscorlib::System::TimeSpan value);
 			mscorlib::System::Int64  ToFileTime();
@@ -405,7 +419,9 @@ namespace mscorlib
 			virtual mscorlib::System::String  ToString() override;
 			virtual mscorlib::System::String  ToString(mscorlib::System::IFormatProvider provider);
 			mscorlib::System::String  ToString(mscorlib::System::String format);
+			mscorlib::System::String  ToString(const char *format);
 			virtual mscorlib::System::String  ToString(mscorlib::System::String format, mscorlib::System::IFormatProvider provider);
+			virtual mscorlib::System::String  ToString(const char *format, mscorlib::System::IFormatProvider provider);
 			mscorlib::System::DateTime  ToLocalTime();
 			mscorlib::System::DateTime  ToUniversalTime();
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

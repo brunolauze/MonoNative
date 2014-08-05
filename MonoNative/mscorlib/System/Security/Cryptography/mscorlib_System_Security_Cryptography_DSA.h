@@ -72,9 +72,11 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::DSA  Create();
 					static mscorlib::System::Security::Cryptography::DSA  Create(mscorlib::System::String algName);
+					static mscorlib::System::Security::Cryptography::DSA  Create(const char *algName);
 					virtual std::vector<mscorlib::System::Byte*>  CreateSignature(std::vector<mscorlib::System::Byte*> rgbHash);
 					virtual mscorlib::System::Security::Cryptography::DSAParameters  ExportParameters(mscorlib::System::Boolean includePrivateParameters);
 					virtual void  FromXmlString(mscorlib::System::String xmlString) override;
+					virtual void  FromXmlString(const char *xmlString) override;
 					virtual void  ImportParameters(mscorlib::System::Security::Cryptography::DSAParameters parameters);
 					virtual mscorlib::System::String  ToXmlString(mscorlib::System::Boolean includePrivateParameters) override;
 					virtual mscorlib::System::Boolean  VerifySignature(std::vector<mscorlib::System::Byte*> rgbHash, std::vector<mscorlib::System::Byte*> rgbSignature);

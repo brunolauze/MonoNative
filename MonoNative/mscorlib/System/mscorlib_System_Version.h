@@ -146,7 +146,9 @@ namespace mscorlib
 			virtual mscorlib::System::String  ToString() override;
 			mscorlib::System::String  ToString(mscorlib::System::Int32 fieldCount);
 			static mscorlib::System::Version  Parse(mscorlib::System::String input);
+			static mscorlib::System::Version  Parse(const char *input);
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String input, mscorlib::System::Version result);
+			static mscorlib::System::Boolean  TryParse(const char *input, mscorlib::System::Version result);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

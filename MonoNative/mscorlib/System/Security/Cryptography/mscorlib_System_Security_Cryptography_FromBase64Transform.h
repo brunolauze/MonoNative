@@ -49,7 +49,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Cryptography", "FromBase64TransformMode");
-						__parameters__[0] = reinterpret_cast<void*>(whitespaces);
+						int __param_whitespaces__ = whitespaces;
+						__parameters__[0] = &__param_whitespaces__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "FromBase64Transform", 1, __parameter_types__, __parameters__);
 					};
 				

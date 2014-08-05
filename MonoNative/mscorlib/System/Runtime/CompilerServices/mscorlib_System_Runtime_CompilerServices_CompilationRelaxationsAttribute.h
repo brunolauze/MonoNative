@@ -49,7 +49,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.CompilerServices", "CompilationRelaxations");
-						__parameters__[0] = reinterpret_cast<void*>(relaxations);
+						int __param_relaxations__ = relaxations;
+						__parameters__[0] = &__param_relaxations__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.CompilerServices", "CompilationRelaxationsAttribute", 1, __parameter_types__, __parameters__);
 					};
 				

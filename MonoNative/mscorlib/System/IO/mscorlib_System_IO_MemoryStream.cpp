@@ -62,7 +62,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(offset).name());
 					__parameter_types__[1] = Global::GetType(typeid(loc).name());
 					__parameters__[0] = &offset;
-					__parameters__[1] = reinterpret_cast<void*>(loc);
+					int __param_loc__ = loc;
+					__parameters__[1] = &__param_loc__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "MemoryStream", 0, NULL, "Seek", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
 			}

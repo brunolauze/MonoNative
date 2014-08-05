@@ -74,6 +74,7 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::RC2  Create();
 					static mscorlib::System::Security::Cryptography::RC2  Create(mscorlib::System::String AlgName);
+					static mscorlib::System::Security::Cryptography::RC2  Create(const char *AlgName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

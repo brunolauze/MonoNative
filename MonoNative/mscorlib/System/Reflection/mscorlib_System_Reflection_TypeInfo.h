@@ -131,11 +131,17 @@ namespace mscorlib
 
 				virtual mscorlib::System::Type  AsType();
 				virtual mscorlib::System::Reflection::EventInfo  GetDeclaredEvent(mscorlib::System::String name);
+				virtual mscorlib::System::Reflection::EventInfo  GetDeclaredEvent(const char *name);
 				virtual mscorlib::System::Reflection::FieldInfo  GetDeclaredField(mscorlib::System::String name);
+				virtual mscorlib::System::Reflection::FieldInfo  GetDeclaredField(const char *name);
 				virtual mscorlib::System::Reflection::MethodInfo  GetDeclaredMethod(mscorlib::System::String name);
+				virtual mscorlib::System::Reflection::MethodInfo  GetDeclaredMethod(const char *name);
 				virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::MethodInfo>  GetDeclaredMethods(mscorlib::System::String name);
+				virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Reflection::MethodInfo>  GetDeclaredMethods(const char *name);
 				virtual mscorlib::System::Reflection::TypeInfo  GetDeclaredNestedType(mscorlib::System::String name);
+				virtual mscorlib::System::Reflection::TypeInfo  GetDeclaredNestedType(const char *name);
 				virtual mscorlib::System::Reflection::PropertyInfo  GetDeclaredProperty(mscorlib::System::String name);
+				virtual mscorlib::System::Reflection::PropertyInfo  GetDeclaredProperty(const char *name);
 				virtual mscorlib::System::Boolean  IsAssignableFrom(mscorlib::System::Reflection::TypeInfo typeInfo);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

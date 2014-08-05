@@ -36,7 +36,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType("mscorlib", "System.Configuration.Assemblies", "AssemblyHashAlgorithm");
-					__parameters__[0] = reinterpret_cast<void*>(algorithmId);
+					int __param_algorithmId__ = algorithmId;
+					__parameters__[0] = &__param_algorithmId__;
 					__native_object__ = Global::New("mscorlib", "System.Reflection", "AssemblyAlgorithmIdAttribute", 1, __parameter_types__, __parameters__);
 				};
 			

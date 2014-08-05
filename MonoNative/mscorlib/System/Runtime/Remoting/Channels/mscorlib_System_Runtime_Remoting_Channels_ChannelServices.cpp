@@ -41,7 +41,7 @@ namespace mscorlib
 							__parameters__[1] = (MonoObject*)msg;
 							__parameters__[2] = (MonoObject*)replyMsg;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "ChannelServices", 0, NULL, "DispatchMessage", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
-							return *(mscorlib::System::Runtime::Remoting::Channels::ServerProcessing::__ENUM__*)mono_object_unbox(__result__);
+							return static_cast<mscorlib::System::Runtime::Remoting::Channels::ServerProcessing::__ENUM__>(*(mscorlib::System::Runtime::Remoting::Channels::ServerProcessing::__ENUM__*)mono_object_unbox(__result__));
 					}
 
 					mscorlib::System::Runtime::Remoting::Channels::IChannel ChannelServices::GetChannel(mscorlib::System::String name)
@@ -49,7 +49,17 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = (MonoObject*)name;
+							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "ChannelServices", 0, NULL, "GetChannel", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+							return mscorlib::System::Runtime::Remoting::Channels::IChannel(__result__);
+					}
+
+					mscorlib::System::Runtime::Remoting::Channels::IChannel ChannelServices::GetChannel(const char *name)
+					{
+							MonoType *__parameter_types__[1];
+							void *__parameters__[1];
+							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "ChannelServices", 0, NULL, "GetChannel", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Runtime::Remoting::Channels::IChannel(__result__);
 					}

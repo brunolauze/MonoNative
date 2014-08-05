@@ -200,10 +200,13 @@ namespace mscorlib
 					virtual mscorlib::System::Security::Claims::ClaimsIdentity  Clone();
 					virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  FindAll(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Security::Claims::Claim )> match);
 					virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  FindAll(mscorlib::System::String type);
+					virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>  FindAll(const char *type);
 					virtual mscorlib::System::Security::Claims::Claim  FindFirst(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Security::Claims::Claim )> match);
 					virtual mscorlib::System::Security::Claims::Claim  FindFirst(mscorlib::System::String type);
+					virtual mscorlib::System::Security::Claims::Claim  FindFirst(const char *type);
 					virtual mscorlib::System::Boolean  HasClaim(mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Security::Claims::Claim )> match);
 					virtual mscorlib::System::Boolean  HasClaim(mscorlib::System::String type, mscorlib::System::String value);
+					virtual mscorlib::System::Boolean  HasClaim(const char *type, const char *value);
 					virtual void  RemoveClaim(mscorlib::System::Security::Claims::Claim claim);
 					virtual mscorlib::System::Boolean  TryRemoveClaim(mscorlib::System::Security::Claims::Claim claim);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

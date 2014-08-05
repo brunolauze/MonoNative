@@ -77,7 +77,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::FileDialogPermissionAccess::__ENUM__  FileDialogPermission::get_Access() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileDialogPermission", 0, NULL, "get_Access", __native_object__, 0, NULL, NULL, NULL);
-					return *(mscorlib::System::Security::Permissions::FileDialogPermissionAccess::__ENUM__*)mono_object_unbox(__result__);
+					return static_cast<mscorlib::System::Security::Permissions::FileDialogPermissionAccess::__ENUM__>(*(mscorlib::System::Security::Permissions::FileDialogPermissionAccess::__ENUM__*)mono_object_unbox(__result__));
 				}
 
 				void FileDialogPermission::set_Access(mscorlib::System::Security::Permissions::FileDialogPermissionAccess::__ENUM__  value)
@@ -85,7 +85,8 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = reinterpret_cast<void*>(value);
+					int __param_value__ = value;
+					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "FileDialogPermission", 0, NULL, "set_Access", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

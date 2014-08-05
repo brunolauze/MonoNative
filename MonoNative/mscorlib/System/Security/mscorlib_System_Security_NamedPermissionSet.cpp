@@ -24,7 +24,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "NamedPermissionSet", 0, NULL, "Copy", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Security::NamedPermissionSet(__result__);
+			}
+
+			mscorlib::System::Security::NamedPermissionSet NamedPermissionSet::Copy(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "NamedPermissionSet", 0, NULL, "Copy", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::NamedPermissionSet(__result__);
 			}
@@ -73,7 +83,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Security", "NamedPermissionSet", 0, NULL, "set_Description", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -90,7 +100,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.Security", "NamedPermissionSet", 0, NULL, "set_Name", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

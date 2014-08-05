@@ -98,8 +98,20 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(oldValue).name());
 					__parameter_types__[1] = Global::GetType(typeid(newValue).name());
-					__parameters__[0] = (MonoObject*)oldValue;
-					__parameters__[1] = (MonoObject*)newValue;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), oldValue);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), newValue);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Replace", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::Replace(const char *oldValue, const char *newValue)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(oldValue).name());
+					__parameter_types__[1] = Global::GetType(typeid(newValue).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), oldValue);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), newValue);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Replace", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::StringBuilder(__result__);
 			}
@@ -112,8 +124,24 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(newValue).name());
 					__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 					__parameter_types__[3] = Global::GetType(typeid(count).name());
-					__parameters__[0] = (MonoObject*)oldValue;
-					__parameters__[1] = (MonoObject*)newValue;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), oldValue);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), newValue);
+					__parameters__[2] = &startIndex;
+					__parameters__[3] = &count;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Replace", __native_object__, 4, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::Replace(const char *oldValue, const char *newValue, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count)
+			{
+					MonoType *__parameter_types__[4];
+					void *__parameters__[4];
+					__parameter_types__[0] = Global::GetType(typeid(oldValue).name());
+					__parameter_types__[1] = Global::GetType(typeid(newValue).name());
+					__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
+					__parameter_types__[3] = Global::GetType(typeid(count).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), oldValue);
+					__parameters__[1] = mono_string_new(Global::GetDomain(), newValue);
 					__parameters__[2] = &startIndex;
 					__parameters__[3] = &count;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Replace", __native_object__, 4, __parameter_types__, __parameters__, NULL);
@@ -135,7 +163,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Append", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::Append(const char *value)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Append", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::StringBuilder(__result__);
 			}
@@ -313,7 +351,21 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
 					__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[1] = &startIndex;
+					__parameters__[2] = &count;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Append", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::Append(const char *value, mscorlib::System::Int32 startIndex, mscorlib::System::Int32 count)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(value).name());
+					__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
+					__parameter_types__[2] = Global::GetType(typeid(count).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					__parameters__[1] = &startIndex;
 					__parameters__[2] = &count;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Append", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -337,7 +389,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendLine", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::AppendLine(const char *value)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendLine", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::StringBuilder(__result__);
 			}
@@ -348,7 +410,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(format).name());
 					__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
-					__parameters__[0] = (MonoObject*)format;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+					__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::AppendFormat(const char *format, std::vector<mscorlib::System::Object*> args)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(format).name());
+					__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+					__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 					__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::StringBuilder(__result__);
@@ -362,7 +436,21 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(format).name());
 					__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
 					__parameters__[0] = (MonoObject*)provider;
-					__parameters__[1] = (MonoObject*)format;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), format);
+					__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::AppendFormat(mscorlib::System::IFormatProvider provider, const char *format, std::vector<mscorlib::System::Object*> args)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(provider).name());
+					__parameter_types__[1] = Global::GetType(typeid(format).name());
+					__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+					__parameters__[0] = (MonoObject*)provider;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), format);
 					__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::StringBuilder(__result__);
@@ -374,7 +462,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(format).name());
 					__parameter_types__[1] = Global::GetType(typeid(arg0).name());
-					__parameters__[0] = (MonoObject*)format;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+					__parameters__[1] = (MonoObject*)arg0;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::AppendFormat(const char *format, mscorlib::System::Object arg0)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(format).name());
+					__parameter_types__[1] = Global::GetType(typeid(arg0).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 					__parameters__[1] = (MonoObject*)arg0;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::StringBuilder(__result__);
@@ -387,7 +487,21 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(format).name());
 					__parameter_types__[1] = Global::GetType(typeid(arg0).name());
 					__parameter_types__[2] = Global::GetType(typeid(arg1).name());
-					__parameters__[0] = (MonoObject*)format;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+					__parameters__[1] = (MonoObject*)arg0;
+					__parameters__[2] = (MonoObject*)arg1;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::AppendFormat(const char *format, mscorlib::System::Object arg0, mscorlib::System::Object arg1)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(format).name());
+					__parameter_types__[1] = Global::GetType(typeid(arg0).name());
+					__parameter_types__[2] = Global::GetType(typeid(arg1).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 					__parameters__[1] = (MonoObject*)arg0;
 					__parameters__[2] = (MonoObject*)arg1;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -402,7 +516,23 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(arg0).name());
 					__parameter_types__[2] = Global::GetType(typeid(arg1).name());
 					__parameter_types__[3] = Global::GetType(typeid(arg2).name());
-					__parameters__[0] = (MonoObject*)format;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+					__parameters__[1] = (MonoObject*)arg0;
+					__parameters__[2] = (MonoObject*)arg1;
+					__parameters__[3] = (MonoObject*)arg2;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "AppendFormat", __native_object__, 4, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::AppendFormat(const char *format, mscorlib::System::Object arg0, mscorlib::System::Object arg1, mscorlib::System::Object arg2)
+			{
+					MonoType *__parameter_types__[4];
+					void *__parameters__[4];
+					__parameter_types__[0] = Global::GetType(typeid(format).name());
+					__parameter_types__[1] = Global::GetType(typeid(arg0).name());
+					__parameter_types__[2] = Global::GetType(typeid(arg1).name());
+					__parameter_types__[3] = Global::GetType(typeid(arg2).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 					__parameters__[1] = (MonoObject*)arg0;
 					__parameters__[2] = (MonoObject*)arg1;
 					__parameters__[3] = (MonoObject*)arg2;
@@ -429,7 +559,19 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(index).name());
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
 					__parameters__[0] = &index;
-					__parameters__[1] = (MonoObject*)value;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), value);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Insert", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::Insert(mscorlib::System::Int32 index, const char *value)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(index).name());
+					__parameter_types__[1] = Global::GetType(typeid(value).name());
+					__parameters__[0] = &index;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), value);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Insert", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::StringBuilder(__result__);
 			}
@@ -610,7 +752,21 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
 					__parameters__[0] = &index;
-					__parameters__[1] = (MonoObject*)value;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[2] = &count;
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Insert", __native_object__, 3, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Text::StringBuilder(__result__);
+			}
+
+			mscorlib::System::Text::StringBuilder StringBuilder::Insert(mscorlib::System::Int32 index, const char *value, mscorlib::System::Int32 count)
+			{
+					MonoType *__parameter_types__[3];
+					void *__parameters__[3];
+					__parameter_types__[0] = Global::GetType(typeid(index).name());
+					__parameter_types__[1] = Global::GetType(typeid(value).name());
+					__parameter_types__[2] = Global::GetType(typeid(count).name());
+					__parameters__[0] = &index;
+					__parameters__[1] = mono_string_new(Global::GetDomain(), value);
 					__parameters__[2] = &count;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "StringBuilder", 0, NULL, "Insert", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::StringBuilder(__result__);

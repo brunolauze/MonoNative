@@ -68,7 +68,9 @@ namespace mscorlib
 			static mscorlib::System::Boolean  IsDefined(mscorlib::System::Type enumType, mscorlib::System::Object value);
 			static mscorlib::System::Type  GetUnderlyingType(mscorlib::System::Type enumType);
 			static mscorlib::System::Object  Parse(mscorlib::System::Type enumType, mscorlib::System::String value);
+			static mscorlib::System::Object  Parse(mscorlib::System::Type enumType, const char *value);
 			static mscorlib::System::Object  Parse(mscorlib::System::Type enumType, mscorlib::System::String value, mscorlib::System::Boolean ignoreCase);
+			static mscorlib::System::Object  Parse(mscorlib::System::Type enumType, const char *value, mscorlib::System::Boolean ignoreCase);
 			template<typename TEnum>
 			static mscorlib::System::Boolean  TryParse(mscorlib::System::String value, TEnum result)
 			{
@@ -76,7 +78,20 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(result).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)result;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			};
+			
+			template<typename TEnum>
+			static mscorlib::System::Boolean  TryParse(const char *value, TEnum result)
+			{
+				MonoType *__parameter_types__[2];
+				void *__parameters__[2];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(result).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)result;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -90,7 +105,22 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = Global::GetType(typeid(ignoreCase).name());
 				__parameter_types__[2] = Global::GetType(typeid(result).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = reinterpret_cast<void*>(ignoreCase);
+				__parameters__[2] = (MonoObject*)result;
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
+			};
+			
+			template<typename TEnum>
+			static mscorlib::System::Boolean  TryParse(const char *value, mscorlib::System::Boolean ignoreCase, TEnum result)
+			{
+				MonoType *__parameter_types__[3];
+				void *__parameters__[3];
+				__parameter_types__[0] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType(typeid(ignoreCase).name());
+				__parameter_types__[2] = Global::GetType(typeid(result).name());
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = reinterpret_cast<void*>(ignoreCase);
 				__parameters__[2] = (MonoObject*)result;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -101,7 +131,9 @@ namespace mscorlib
 			virtual mscorlib::System::String  ToString() override;
 			virtual mscorlib::System::String  ToString(mscorlib::System::IFormatProvider provider);
 			mscorlib::System::String  ToString(mscorlib::System::String format);
+			mscorlib::System::String  ToString(const char *format);
 			virtual mscorlib::System::String  ToString(mscorlib::System::String format, mscorlib::System::IFormatProvider provider);
+			virtual mscorlib::System::String  ToString(const char *format, mscorlib::System::IFormatProvider provider);
 			static mscorlib::System::Object  ToObject(mscorlib::System::Type enumType, mscorlib::System::Byte value);
 			static mscorlib::System::Object  ToObject(mscorlib::System::Type enumType, mscorlib::System::Int16 value);
 			static mscorlib::System::Object  ToObject(mscorlib::System::Type enumType, mscorlib::System::Int32 value);
@@ -114,6 +146,7 @@ namespace mscorlib
 			virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object obj) override;
 			virtual mscorlib::System::Int32  GetHashCode() override;
 			static mscorlib::System::String  Format(mscorlib::System::Type enumType, mscorlib::System::Object value, mscorlib::System::String format);
+			static mscorlib::System::String  Format(mscorlib::System::Type enumType, mscorlib::System::Object value, const char *format);
 			mscorlib::System::Boolean  HasFlag(mscorlib::System::Enum flag);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

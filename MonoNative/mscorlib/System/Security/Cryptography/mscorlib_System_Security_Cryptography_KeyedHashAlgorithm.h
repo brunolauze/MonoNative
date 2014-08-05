@@ -72,6 +72,7 @@ namespace mscorlib
 
 					static mscorlib::System::Security::Cryptography::KeyedHashAlgorithm  Create();
 					static mscorlib::System::Security::Cryptography::KeyedHashAlgorithm  Create(mscorlib::System::String algName);
+					static mscorlib::System::Security::Cryptography::KeyedHashAlgorithm  Create(const char *algName);
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

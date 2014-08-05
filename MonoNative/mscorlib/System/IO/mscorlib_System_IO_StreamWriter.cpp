@@ -55,7 +55,16 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "Write", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+			}
+
+			void StreamWriter::Write(const char *value)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "Write", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -99,7 +108,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "WriteAsync", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Threading::Tasks::TaskBase(__result__);
+			}
+
+			mscorlib::System::Threading::Tasks::TaskBase StreamWriter::WriteAsync(const char *value)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "WriteAsync", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Threading::Tasks::TaskBase(__result__);
 			}
@@ -139,7 +158,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "WriteLineAsync", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Threading::Tasks::TaskBase(__result__);
+			}
+
+			mscorlib::System::Threading::Tasks::TaskBase StreamWriter::WriteLineAsync(const char *value)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(value).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "WriteLineAsync", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Threading::Tasks::TaskBase(__result__);
 			}
@@ -198,7 +227,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				Global::InvokeMethod("mscorlib", "System.IO", "TextWriter", 0, NULL, "set_NewLine", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

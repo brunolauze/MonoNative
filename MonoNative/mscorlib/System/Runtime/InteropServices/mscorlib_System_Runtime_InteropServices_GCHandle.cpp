@@ -38,7 +38,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
 						__parameter_types__[1] = Global::GetType(typeid(type).name());
 						__parameters__[0] = (MonoObject*)value;
-						__parameters__[1] = reinterpret_cast<void*>(type);
+						int __param_type__ = type;
+						__parameters__[1] = &__param_type__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "GCHandle", 0, NULL, "Alloc", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Runtime::InteropServices::GCHandle(__result__);
 				}

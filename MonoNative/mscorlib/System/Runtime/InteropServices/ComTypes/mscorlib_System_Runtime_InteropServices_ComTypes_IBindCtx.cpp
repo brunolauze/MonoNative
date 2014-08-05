@@ -72,7 +72,18 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(pszKey).name());
 							__parameter_types__[1] = Global::GetType(typeid(punk).name());
-							__parameters__[0] = (MonoObject*)pszKey;
+							__parameters__[0] = mono_string_new(Global::GetDomain(), pszKey);
+							__parameters__[1] = (MonoObject*)punk;
+							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IBindCtx", 0, NULL, "RegisterObjectParam", __mscorlib_System_Runtime_InteropServices_ComTypes_IBindCtx, 2, __parameter_types__, __parameters__, NULL);
+					}
+
+					void IBindCtx::RegisterObjectParam(const char *pszKey, mscorlib::System::Object punk)
+					{
+							MonoType *__parameter_types__[2];
+							void *__parameters__[2];
+							__parameter_types__[0] = Global::GetType(typeid(pszKey).name());
+							__parameter_types__[1] = Global::GetType(typeid(punk).name());
+							__parameters__[0] = mono_string_new(Global::GetDomain(), pszKey);
 							__parameters__[1] = (MonoObject*)punk;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IBindCtx", 0, NULL, "RegisterObjectParam", __mscorlib_System_Runtime_InteropServices_ComTypes_IBindCtx, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -83,7 +94,18 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(pszKey).name());
 							__parameter_types__[1] = Global::GetType(typeid(ppunk).name());
-							__parameters__[0] = (MonoObject*)pszKey;
+							__parameters__[0] = mono_string_new(Global::GetDomain(), pszKey);
+							__parameters__[1] = (MonoObject*)ppunk;
+							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IBindCtx", 0, NULL, "GetObjectParam", __mscorlib_System_Runtime_InteropServices_ComTypes_IBindCtx, 2, __parameter_types__, __parameters__, NULL);
+					}
+
+					void IBindCtx::GetObjectParam(const char *pszKey, mscorlib::System::Object ppunk)
+					{
+							MonoType *__parameter_types__[2];
+							void *__parameters__[2];
+							__parameter_types__[0] = Global::GetType(typeid(pszKey).name());
+							__parameter_types__[1] = Global::GetType(typeid(ppunk).name());
+							__parameters__[0] = mono_string_new(Global::GetDomain(), pszKey);
 							__parameters__[1] = (MonoObject*)ppunk;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IBindCtx", 0, NULL, "GetObjectParam", __mscorlib_System_Runtime_InteropServices_ComTypes_IBindCtx, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -102,7 +124,17 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(pszKey).name());
-							__parameters__[0] = (MonoObject*)pszKey;
+							__parameters__[0] = mono_string_new(Global::GetDomain(), pszKey);
+							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IBindCtx", 0, NULL, "RevokeObjectParam", __mscorlib_System_Runtime_InteropServices_ComTypes_IBindCtx, 1, __parameter_types__, __parameters__, NULL);
+							return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
+					}
+
+					mscorlib::System::Int32 IBindCtx::RevokeObjectParam(const char *pszKey)
+					{
+							MonoType *__parameter_types__[1];
+							void *__parameters__[1];
+							__parameter_types__[0] = Global::GetType(typeid(pszKey).name());
+							__parameters__[0] = mono_string_new(Global::GetDomain(), pszKey);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IBindCtx", 0, NULL, "RevokeObjectParam", __mscorlib_System_Runtime_InteropServices_ComTypes_IBindCtx, 1, __parameter_types__, __parameters__, NULL);
 							return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 					}

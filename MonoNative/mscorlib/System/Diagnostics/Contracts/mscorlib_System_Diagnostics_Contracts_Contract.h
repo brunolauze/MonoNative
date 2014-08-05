@@ -66,11 +66,14 @@ namespace mscorlib
 
 					static void  Assert(mscorlib::System::Boolean condition);
 					static void  Assert(mscorlib::System::Boolean condition, mscorlib::System::String userMessage);
+					static void  Assert(mscorlib::System::Boolean condition, const char *userMessage);
 					static void  Assume(mscorlib::System::Boolean condition);
 					static void  Assume(mscorlib::System::Boolean condition, mscorlib::System::String userMessage);
+					static void  Assume(mscorlib::System::Boolean condition, const char *userMessage);
 					static void  EndContractBlock();
 					static void  Ensures(mscorlib::System::Boolean condition);
 					static void  Ensures(mscorlib::System::Boolean condition, mscorlib::System::String userMessage);
+					static void  Ensures(mscorlib::System::Boolean condition, const char *userMessage);
 					template<typename TException>
 					static void  EnsuresOnThrow(mscorlib::System::Boolean condition)
 					{
@@ -89,7 +92,19 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						__parameters__[1] = (MonoObject*)userMessage;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "EnsuresOnThrow", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					};
+					
+					template<typename TException>
+					static void  EnsuresOnThrow(mscorlib::System::Boolean condition, const char *userMessage)
+					{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(condition).name());
+						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
+						__parameters__[0] = reinterpret_cast<void*>(condition);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "EnsuresOnThrow", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					};
 					
@@ -123,6 +138,7 @@ namespace mscorlib
 					static mscorlib::System::Boolean  ForAll(mscorlib::System::Int32 fromInclusive, mscorlib::System::Int32 toExclusive, mscorlib::Callback<mscorlib::System::Boolean  (mscorlib::System::Int32 )> predicate);
 					static void  Invariant(mscorlib::System::Boolean condition);
 					static void  Invariant(mscorlib::System::Boolean condition, mscorlib::System::String userMessage);
+					static void  Invariant(mscorlib::System::Boolean condition, const char *userMessage);
 					template<typename T>
 					static T  OldValue(T value)
 					{
@@ -136,6 +152,7 @@ namespace mscorlib
 					
 					static void  Requires(mscorlib::System::Boolean condition);
 					static void  Requires(mscorlib::System::Boolean condition, mscorlib::System::String userMessage);
+					static void  Requires(mscorlib::System::Boolean condition, const char *userMessage);
 					template<typename TException>
 					static void  Requires(mscorlib::System::Boolean condition)
 					{
@@ -154,7 +171,19 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						__parameters__[1] = (MonoObject*)userMessage;
+						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					};
+					
+					template<typename TException>
+					static void  Requires(mscorlib::System::Boolean condition, const char *userMessage)
+					{
+						MonoType *__parameter_types__[2];
+						void *__parameters__[2];
+						__parameter_types__[0] = Global::GetType(typeid(condition).name());
+						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
+						__parameters__[0] = reinterpret_cast<void*>(condition);
+						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					};
 					

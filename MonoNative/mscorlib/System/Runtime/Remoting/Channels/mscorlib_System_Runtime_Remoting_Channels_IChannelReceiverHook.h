@@ -43,6 +43,7 @@ namespace mscorlib
 
 
 						virtual void  AddHookChannelUri(mscorlib::System::String channelUri);
+						virtual void  AddHookChannelUri(const char *channelUri);
 
 
 						//Public Properties

@@ -44,10 +44,14 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.Security.AccessControl", "PropagationFlags");
 						__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.AccessControl", "AuditFlags");
 						__parameters__[0] = (MonoObject*)identity;
-						__parameters__[1] = reinterpret_cast<void*>(registryRights);
-						__parameters__[2] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[3] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[4] = reinterpret_cast<void*>(flags);
+						int __param_registryRights__ = registryRights;
+						__parameters__[1] = &__param_registryRights__;
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[2] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[3] = &__param_propagationFlags__;
+						int __param_flags__ = flags;
+						__parameters__[4] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "RegistryAuditRule", 5, __parameter_types__, __parameters__);
 					};
 				
@@ -62,10 +66,14 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.Security.AccessControl", "PropagationFlags");
 						__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.AccessControl", "AuditFlags");
 						__parameters__[0] = (MonoObject*)identity;
-						__parameters__[1] = reinterpret_cast<void*>(registryRights);
-						__parameters__[2] = reinterpret_cast<void*>(inheritanceFlags);
-						__parameters__[3] = reinterpret_cast<void*>(propagationFlags);
-						__parameters__[4] = reinterpret_cast<void*>(flags);
+						int __param_registryRights__ = registryRights;
+						__parameters__[1] = &__param_registryRights__;
+						int __param_inheritanceFlags__ = inheritanceFlags;
+						__parameters__[2] = &__param_inheritanceFlags__;
+						int __param_propagationFlags__ = propagationFlags;
+						__parameters__[3] = &__param_propagationFlags__;
+						int __param_flags__ = flags;
+						__parameters__[4] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "RegistryAuditRule", 5, __parameter_types__, __parameters__);
 					};
 				

@@ -60,7 +60,8 @@ namespace mscorlib
 					__parameters__[0] = (MonoObject*)buffer;
 					__parameters__[1] = &offset;
 					__parameters__[2] = &capacity;
-					__parameters__[3] = reinterpret_cast<void*>(access);
+					int __param_access__ = access;
+					__parameters__[3] = &__param_access__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 4, __parameter_types__, __parameters__);
 				};
 			

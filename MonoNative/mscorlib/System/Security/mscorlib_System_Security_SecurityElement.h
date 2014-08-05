@@ -82,18 +82,28 @@ namespace mscorlib
 
 
 				void  AddAttribute(mscorlib::System::String name, mscorlib::System::String value);
+				void  AddAttribute(const char *name, const char *value);
 				void  AddChild(mscorlib::System::Security::SecurityElement child);
 				mscorlib::System::String  Attribute(mscorlib::System::String name);
+				mscorlib::System::String  Attribute(const char *name);
 				mscorlib::System::Security::SecurityElement  Copy();
 				mscorlib::System::Boolean  Equal(mscorlib::System::Security::SecurityElement other);
 				static mscorlib::System::String  Escape(mscorlib::System::String str);
+				static mscorlib::System::String  Escape(const char *str);
 				static mscorlib::System::Security::SecurityElement  FromString(mscorlib::System::String xml);
+				static mscorlib::System::Security::SecurityElement  FromString(const char *xml);
 				static mscorlib::System::Boolean  IsValidAttributeName(mscorlib::System::String name);
+				static mscorlib::System::Boolean  IsValidAttributeName(const char *name);
 				static mscorlib::System::Boolean  IsValidAttributeValue(mscorlib::System::String value);
+				static mscorlib::System::Boolean  IsValidAttributeValue(const char *value);
 				static mscorlib::System::Boolean  IsValidTag(mscorlib::System::String tag);
+				static mscorlib::System::Boolean  IsValidTag(const char *tag);
 				static mscorlib::System::Boolean  IsValidText(mscorlib::System::String text);
+				static mscorlib::System::Boolean  IsValidText(const char *text);
 				mscorlib::System::Security::SecurityElement  SearchForChildByTag(mscorlib::System::String tag);
+				mscorlib::System::Security::SecurityElement  SearchForChildByTag(const char *tag);
 				mscorlib::System::String  SearchForTextOfTag(mscorlib::System::String tag);
+				mscorlib::System::String  SearchForTextOfTag(const char *tag);
 				virtual mscorlib::System::String  ToString() override;
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 

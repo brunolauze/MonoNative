@@ -54,11 +54,17 @@ namespace mscorlib
 				virtual mscorlib::System::Boolean  Equals(mscorlib::System::Object obj) override;
 				virtual mscorlib::System::Int32  GetHashCode() override;
 				mscorlib::System::String  GetAscii(mscorlib::System::String unicode);
+				mscorlib::System::String  GetAscii(const char *unicode);
 				mscorlib::System::String  GetAscii(mscorlib::System::String unicode, mscorlib::System::Int32 index);
+				mscorlib::System::String  GetAscii(const char *unicode, mscorlib::System::Int32 index);
 				mscorlib::System::String  GetAscii(mscorlib::System::String unicode, mscorlib::System::Int32 index, mscorlib::System::Int32 count);
+				mscorlib::System::String  GetAscii(const char *unicode, mscorlib::System::Int32 index, mscorlib::System::Int32 count);
 				mscorlib::System::String  GetUnicode(mscorlib::System::String ascii);
+				mscorlib::System::String  GetUnicode(const char *ascii);
 				mscorlib::System::String  GetUnicode(mscorlib::System::String ascii, mscorlib::System::Int32 index);
+				mscorlib::System::String  GetUnicode(const char *ascii, mscorlib::System::Int32 index);
 				mscorlib::System::String  GetUnicode(mscorlib::System::String ascii, mscorlib::System::Int32 index, mscorlib::System::Int32 count);
+				mscorlib::System::String  GetUnicode(const char *ascii, mscorlib::System::Int32 index, mscorlib::System::Int32 count);
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 

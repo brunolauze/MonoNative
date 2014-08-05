@@ -44,7 +44,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceSet", 0, NULL, "GetObject", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Object(__result__);
+			}
+
+			mscorlib::System::Object ResourceSet::GetObject(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceSet", 0, NULL, "GetObject", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Object(__result__);
 			}
@@ -55,7 +65,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(ignoreCase).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = reinterpret_cast<void*>(ignoreCase);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceSet", 0, NULL, "GetObject", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::Object(__result__);
+			}
+
+			mscorlib::System::Object ResourceSet::GetObject(const char *name, mscorlib::System::Boolean ignoreCase)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(ignoreCase).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = reinterpret_cast<void*>(ignoreCase);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceSet", 0, NULL, "GetObject", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Object(__result__);
@@ -66,7 +88,17 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceSet", 0, NULL, "GetString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String ResourceSet::GetString(const char *name)
+			{
+					MonoType *__parameter_types__[1];
+					void *__parameters__[1];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceSet", 0, NULL, "GetString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -77,7 +109,19 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(ignoreCase).name());
-					__parameters__[0] = (MonoObject*)name;
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[1] = reinterpret_cast<void*>(ignoreCase);
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceSet", 0, NULL, "GetString", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					return mscorlib::System::String(__result__);
+			}
+
+			mscorlib::System::String ResourceSet::GetString(const char *name, mscorlib::System::Boolean ignoreCase)
+			{
+					MonoType *__parameter_types__[2];
+					void *__parameters__[2];
+					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[1] = Global::GetType(typeid(ignoreCase).name());
+					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = reinterpret_cast<void*>(ignoreCase);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceSet", 0, NULL, "GetString", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);

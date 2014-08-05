@@ -69,10 +69,15 @@ namespace mscorlib
 
 
 						static void  FreeNamedDataSlot(mscorlib::System::String name);
+						static void  FreeNamedDataSlot(const char *name);
 						static mscorlib::System::Object  GetData(mscorlib::System::String name);
+						static mscorlib::System::Object  GetData(const char *name);
 						static void  SetData(mscorlib::System::String name, mscorlib::System::Object data);
+						static void  SetData(const char *name, mscorlib::System::Object data);
 						static mscorlib::System::Object  LogicalGetData(mscorlib::System::String name);
+						static mscorlib::System::Object  LogicalGetData(const char *name);
 						static void  LogicalSetData(mscorlib::System::String name, mscorlib::System::Object data);
+						static void  LogicalSetData(const char *name, mscorlib::System::Object data);
 						static std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*>  GetHeaders();
 						static void  SetHeaders(std::vector<mscorlib::System::Runtime::Remoting::Messaging::Header*> headers);
 						virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

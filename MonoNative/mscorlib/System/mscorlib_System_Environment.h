@@ -122,18 +122,25 @@ namespace mscorlib
 
 			static void  Exit(mscorlib::System::Int32 exitCode);
 			static mscorlib::System::String  ExpandEnvironmentVariables(mscorlib::System::String name);
+			static mscorlib::System::String  ExpandEnvironmentVariables(const char *name);
 			static std::vector<mscorlib::System::String*>  GetCommandLineArgs();
 			static mscorlib::System::String  GetEnvironmentVariable(mscorlib::System::String variable);
+			static mscorlib::System::String  GetEnvironmentVariable(const char *variable);
 			static mscorlib::System::Collections::IDictionary  GetEnvironmentVariables();
 			static mscorlib::System::String  GetFolderPath(mscorlib::System::Environment::SpecialFolder::__ENUM__ folder);
 			static mscorlib::System::String  GetFolderPath(mscorlib::System::Environment::SpecialFolder::__ENUM__ folder, mscorlib::System::Environment::SpecialFolderOption::__ENUM__ option);
 			static std::vector<mscorlib::System::String*>  GetLogicalDrives();
 			static mscorlib::System::String  GetEnvironmentVariable(mscorlib::System::String variable, mscorlib::System::EnvironmentVariableTarget::__ENUM__ target);
+			static mscorlib::System::String  GetEnvironmentVariable(const char *variable, mscorlib::System::EnvironmentVariableTarget::__ENUM__ target);
 			static mscorlib::System::Collections::IDictionary  GetEnvironmentVariables(mscorlib::System::EnvironmentVariableTarget::__ENUM__ target);
 			static void  SetEnvironmentVariable(mscorlib::System::String variable, mscorlib::System::String value);
+			static void  SetEnvironmentVariable(const char *variable, const char *value);
 			static void  SetEnvironmentVariable(mscorlib::System::String variable, mscorlib::System::String value, mscorlib::System::EnvironmentVariableTarget::__ENUM__ target);
+			static void  SetEnvironmentVariable(const char *variable, const char *value, mscorlib::System::EnvironmentVariableTarget::__ENUM__ target);
 			static void  FailFast(mscorlib::System::String message);
+			static void  FailFast(const char *message);
 			static void  FailFast(mscorlib::System::String message, mscorlib::System::Exception exception);
+			static void  FailFast(const char *message, mscorlib::System::Exception exception);
 			virtual MonoObject* GetNativeObject()  override  { return __native_object__; };
 
 
