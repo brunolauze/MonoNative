@@ -62,7 +62,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "PermissionState");
-						int __param_state__ = state;
+						mscorlib::System::Int32 __param_state__ = state;
 						__parameters__[0] = &__param_state__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "UIPermission", 1, __parameter_types__, __parameters__);
 					};
@@ -77,7 +77,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "UIPermissionClipboard");
-						int __param_clipboardFlag__ = clipboardFlag;
+						mscorlib::System::Int32 __param_clipboardFlag__ = clipboardFlag;
 						__parameters__[0] = &__param_clipboardFlag__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "UIPermission", 1, __parameter_types__, __parameters__);
 					};
@@ -92,7 +92,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "UIPermissionWindow");
-						int __param_windowFlag__ = windowFlag;
+						mscorlib::System::Int32 __param_windowFlag__ = windowFlag;
 						__parameters__[0] = &__param_windowFlag__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "UIPermission", 1, __parameter_types__, __parameters__);
 					};
@@ -108,9 +108,9 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "UIPermissionWindow");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Permissions", "UIPermissionClipboard");
-						int __param_windowFlag__ = windowFlag;
+						mscorlib::System::Int32 __param_windowFlag__ = windowFlag;
 						__parameters__[0] = &__param_windowFlag__;
-						int __param_clipboardFlag__ = clipboardFlag;
+						mscorlib::System::Int32 __param_clipboardFlag__ = clipboardFlag;
 						__parameters__[1] = &__param_clipboardFlag__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "UIPermission", 2, __parameter_types__, __parameters__);
 					};

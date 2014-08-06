@@ -47,7 +47,7 @@ namespace mscorlib
 				mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__  EventCommandEventArgs::get_Command() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Tracing", "EventCommandEventArgs", 0, NULL, "get_Command", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__>(*(mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Diagnostics::Tracing::EventCommand::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

@@ -35,7 +35,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.Serialization", "StreamingContextStates");
-						int __param_state__ = state;
+						mscorlib::System::Int32 __param_state__ = state;
 						__parameters__[0] = &__param_state__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Serialization", "StreamingContext", 1, __parameter_types__, __parameters__);
 					};
@@ -47,7 +47,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.Serialization", "StreamingContextStates");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "Object");
-						int __param_state__ = state;
+						mscorlib::System::Int32 __param_state__ = state;
 						__parameters__[0] = &__param_state__;
 						__parameters__[1] = (MonoObject*)additional;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Serialization", "StreamingContext", 2, __parameter_types__, __parameters__);

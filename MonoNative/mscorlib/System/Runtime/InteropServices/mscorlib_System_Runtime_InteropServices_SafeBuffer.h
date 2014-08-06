@@ -85,7 +85,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[4];
 						void *__parameters__[4];
 						__parameter_types__[0] = Global::GetType(typeid(byteOffset).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(array).name()))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.InteropServices", "T")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(index).name());
 						__parameter_types__[3] = Global::GetType(typeid(count).name());
 						__parameters__[0] = &byteOffset;
@@ -113,7 +113,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[4];
 						void *__parameters__[4];
 						__parameter_types__[0] = Global::GetType(typeid(byteOffset).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(array).name()))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.InteropServices", "T")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(index).name());
 						__parameter_types__[3] = Global::GetType(typeid(count).name());
 						__parameters__[0] = &byteOffset;

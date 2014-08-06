@@ -17,7 +17,7 @@ namespace mscorlib
 			mscorlib::System::Security::SecurityCriticalScope::__ENUM__  SecurityCriticalAttribute::get_Scope() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityCriticalAttribute", 0, NULL, "get_Scope", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Security::SecurityCriticalScope::__ENUM__>(*(mscorlib::System::Security::SecurityCriticalScope::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Security::SecurityCriticalScope::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 

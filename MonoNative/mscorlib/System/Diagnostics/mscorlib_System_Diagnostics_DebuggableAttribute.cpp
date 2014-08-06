@@ -18,7 +18,7 @@ namespace mscorlib
 			mscorlib::System::Diagnostics::DebuggableAttribute::DebuggingModes::__ENUM__  DebuggableAttribute::get_DebuggingFlags() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics", "DebuggableAttribute", 0, NULL, "get_DebuggingFlags", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Diagnostics::DebuggableAttribute::DebuggingModes::__ENUM__>(*(mscorlib::System::Diagnostics::DebuggableAttribute::DebuggingModes::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Diagnostics::DebuggableAttribute::DebuggingModes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 

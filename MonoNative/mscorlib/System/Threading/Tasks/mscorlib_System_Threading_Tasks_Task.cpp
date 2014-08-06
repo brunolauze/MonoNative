@@ -67,7 +67,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(continuationAction).name());
 						__parameter_types__[1] = Global::GetType(typeid(continuationOptions).name());
 						__parameters__[0] = &continuationAction;
-						int __param_continuationOptions__ = continuationOptions;
+						mscorlib::System::Int32 __param_continuationOptions__ = continuationOptions;
 						__parameters__[1] = &__param_continuationOptions__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "ContinueWith", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::TaskBase(__result__);
@@ -107,7 +107,7 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType(typeid(scheduler).name());
 						__parameters__[0] = &continuationAction;
 						__parameters__[1] = (MonoObject*)cancellationToken;
-						int __param_continuationOptions__ = continuationOptions;
+						mscorlib::System::Int32 __param_continuationOptions__ = continuationOptions;
 						__parameters__[2] = &__param_continuationOptions__;
 						__parameters__[3] = (MonoObject*)scheduler;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "ContinueWith", __native_object__, 4, __parameter_types__, __parameters__, NULL);
@@ -164,7 +164,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "WaitAll", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -173,7 +173,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(cancellationToken).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						__parameters__[1] = (MonoObject*)cancellationToken;
@@ -184,7 +184,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(timeout).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						__parameters__[1] = (MonoObject*)timeout;
@@ -196,7 +196,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(millisecondsTimeout).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						__parameters__[1] = &millisecondsTimeout;
@@ -208,7 +208,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(millisecondsTimeout).name());
 						__parameter_types__[2] = Global::GetType(typeid(cancellationToken).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
@@ -222,7 +222,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "WaitAny", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -232,7 +232,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(timeout).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						__parameters__[1] = (MonoObject*)timeout;
@@ -244,7 +244,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(millisecondsTimeout).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						__parameters__[1] = &millisecondsTimeout;
@@ -256,7 +256,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(cancellationToken).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						__parameters__[1] = (MonoObject*)cancellationToken;
@@ -268,7 +268,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(millisecondsTimeout).name());
 						__parameter_types__[2] = Global::GetType(typeid(cancellationToken).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
@@ -295,7 +295,7 @@ namespace mscorlib
 						__parameters__[0] = &continuationAction;
 						__parameters__[1] = (MonoObject*)state;
 						__parameters__[2] = (MonoObject*)cancellationToken;
-						int __param_continuationOptions__ = continuationOptions;
+						mscorlib::System::Int32 __param_continuationOptions__ = continuationOptions;
 						__parameters__[3] = &__param_continuationOptions__;
 						__parameters__[4] = (MonoObject*)scheduler;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "ContinueWith", __native_object__, 5, __parameter_types__, __parameters__, NULL);
@@ -347,7 +347,7 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(continuationOptions).name());
 						__parameters__[0] = &continuationAction;
 						__parameters__[1] = (MonoObject*)state;
-						int __param_continuationOptions__ = continuationOptions;
+						mscorlib::System::Int32 __param_continuationOptions__ = continuationOptions;
 						__parameters__[2] = &__param_continuationOptions__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "ContinueWith", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::TaskBase(__result__);
@@ -465,7 +465,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tasks).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading.Tasks", "Task")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Threading::Tasks::TaskBase*>(tasks, typeid(mscorlib::System::Threading::Tasks::TaskBase).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "WhenAll", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::TaskBase(__result__);
@@ -524,7 +524,7 @@ namespace mscorlib
 				mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__  TaskBase::get_CreationOptions() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_CreationOptions", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__>(*(mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Threading::Tasks::TaskCreationOptions::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -532,7 +532,7 @@ namespace mscorlib
 				mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  TaskBase::get_Status() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "get_Status", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__>(*(mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 				void TaskBase::set_Status(mscorlib::System::Threading::Tasks::TaskStatus::__ENUM__  value)
@@ -540,7 +540,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					int __param_value__ = value;
+					mscorlib::System::Int32 __param_value__ = value;
 					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Task", 0, NULL, "set_Status", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}

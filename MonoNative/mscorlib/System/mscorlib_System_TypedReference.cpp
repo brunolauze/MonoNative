@@ -43,7 +43,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(target).name());
-				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(flds).name()))->eklass);
+				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Reflection", "FieldInfo")), 1));
 				__parameters__[0] = (MonoObject*)target;
 				__parameters__[1] = Global::FromArray<mscorlib::System::Reflection::FieldInfo*>(flds, typeid(mscorlib::System::Reflection::FieldInfo).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TypedReference", 0, NULL, "MakeTypedReference", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);

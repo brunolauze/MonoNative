@@ -40,7 +40,7 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
 							__parameter_types__[1] = Global::GetType(typeid(obj).name());
 							__parameter_types__[2] = Global::GetType(typeid(ctx).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							__parameters__[1] = (MonoObject*)obj;
 							__parameters__[2] = (MonoObject*)ctx;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "UnregisterDynamicProperty", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -51,7 +51,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(obj).name());
 							__parameter_types__[2] = Global::GetType(typeid(ctx).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
@@ -66,7 +66,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "GetProperty", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(__result__);
 					}
@@ -75,7 +75,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "GetProperty", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Runtime::Remoting::Contexts::IContextProperty(__result__);
@@ -121,7 +121,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "AllocateNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::LocalDataStoreSlot(__result__);
 					}
@@ -130,7 +130,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "AllocateNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::LocalDataStoreSlot(__result__);
@@ -141,7 +141,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "FreeNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -149,7 +149,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "FreeNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					}
@@ -169,7 +169,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "GetNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::LocalDataStoreSlot(__result__);
 					}
@@ -178,7 +178,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Contexts", "Context", 0, NULL, "GetNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::LocalDataStoreSlot(__result__);

@@ -78,7 +78,7 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(method).name());
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), method);
+				__parameters__[2] = (MonoObject*)method;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "CreateDelegate", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Delegate(__result__);
 		}
@@ -89,7 +89,7 @@ namespace mscorlib
 				void *__parameters__[3];
 				__parameter_types__[0] = Global::GetType(typeid(type).name());
 				__parameter_types__[1] = Global::GetType(typeid(target).name());
-				__parameter_types__[2] = Global::GetType(typeid(method).name());
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
 				__parameters__[2] = mono_string_new(Global::GetDomain(), method);
@@ -108,7 +108,7 @@ namespace mscorlib
 				__parameter_types__[4] = Global::GetType(typeid(throwOnBindFailure).name());
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), method);
+				__parameters__[2] = (MonoObject*)method;
 				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
 				__parameters__[4] = reinterpret_cast<void*>(throwOnBindFailure);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "CreateDelegate", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
@@ -121,7 +121,7 @@ namespace mscorlib
 				void *__parameters__[5];
 				__parameter_types__[0] = Global::GetType(typeid(type).name());
 				__parameter_types__[1] = Global::GetType(typeid(target).name());
-				__parameter_types__[2] = Global::GetType(typeid(method).name());
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
 				__parameter_types__[4] = Global::GetType(typeid(throwOnBindFailure).name());
 				__parameters__[0] = (MonoObject*)type;
@@ -142,7 +142,7 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(method).name());
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), method);
+				__parameters__[2] = (MonoObject*)method;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "CreateDelegate", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Delegate(__result__);
 		}
@@ -153,7 +153,7 @@ namespace mscorlib
 				void *__parameters__[3];
 				__parameter_types__[0] = Global::GetType(typeid(type).name());
 				__parameter_types__[1] = Global::GetType(typeid(target).name());
-				__parameter_types__[2] = Global::GetType(typeid(method).name());
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
 				__parameters__[2] = mono_string_new(Global::GetDomain(), method);
@@ -171,7 +171,7 @@ namespace mscorlib
 				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), method);
+				__parameters__[2] = (MonoObject*)method;
 				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "CreateDelegate", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Delegate(__result__);
@@ -183,7 +183,7 @@ namespace mscorlib
 				void *__parameters__[4];
 				__parameter_types__[0] = Global::GetType(typeid(type).name());
 				__parameter_types__[1] = Global::GetType(typeid(target).name());
-				__parameter_types__[2] = Global::GetType(typeid(method).name());
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
@@ -204,7 +204,7 @@ namespace mscorlib
 				__parameter_types__[4] = Global::GetType(typeid(throwOnBindFailure).name());
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), method);
+				__parameters__[2] = (MonoObject*)method;
 				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
 				__parameters__[4] = reinterpret_cast<void*>(throwOnBindFailure);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "CreateDelegate", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
@@ -217,7 +217,7 @@ namespace mscorlib
 				void *__parameters__[5];
 				__parameter_types__[0] = Global::GetType(typeid(type).name());
 				__parameter_types__[1] = Global::GetType(typeid(target).name());
-				__parameter_types__[2] = Global::GetType(typeid(method).name());
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
 				__parameter_types__[4] = Global::GetType(typeid(throwOnBindFailure).name());
 				__parameters__[0] = (MonoObject*)type;
@@ -239,7 +239,7 @@ namespace mscorlib
 				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), method);
+				__parameters__[2] = (MonoObject*)method;
 				__parameters__[3] = reinterpret_cast<void*>(ignoreCase);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "CreateDelegate", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Delegate(__result__);
@@ -251,7 +251,7 @@ namespace mscorlib
 				void *__parameters__[4];
 				__parameter_types__[0] = Global::GetType(typeid(type).name());
 				__parameter_types__[1] = Global::GetType(typeid(target).name());
-				__parameter_types__[2] = Global::GetType(typeid(method).name());
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[3] = Global::GetType(typeid(ignoreCase).name());
 				__parameters__[0] = (MonoObject*)type;
 				__parameters__[1] = (MonoObject*)target;
@@ -265,7 +265,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "DynamicInvoke", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
@@ -334,7 +334,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(delegates).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Delegate")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::Delegate*>(delegates, typeid(mscorlib::System::Delegate).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Delegate", 0, NULL, "Combine", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Delegate(__result__);

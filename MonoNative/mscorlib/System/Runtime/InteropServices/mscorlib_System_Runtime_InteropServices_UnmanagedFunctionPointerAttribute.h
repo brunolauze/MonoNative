@@ -39,7 +39,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.InteropServices", "CallingConvention");
-						int __param_callingConvention__ = callingConvention;
+						mscorlib::System::Int32 __param_callingConvention__ = callingConvention;
 						__parameters__[0] = &__param_callingConvention__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.InteropServices", "UnmanagedFunctionPointerAttribute", 1, __parameter_types__, __parameters__);
 					};

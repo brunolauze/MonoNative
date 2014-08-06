@@ -24,7 +24,7 @@ namespace mscorlib
 				mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__  IsolatedStorageSecurityState::get_Options() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageSecurityState", 0, NULL, "get_Options", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__>(*(mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::IO::IsolatedStorage::IsolatedStorageSecurityOptions::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

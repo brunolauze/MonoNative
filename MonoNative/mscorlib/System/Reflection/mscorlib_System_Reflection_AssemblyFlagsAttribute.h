@@ -58,7 +58,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType("mscorlib", "System.Reflection", "AssemblyNameFlags");
-					int __param_assemblyFlags__ = assemblyFlags;
+					mscorlib::System::Int32 __param_assemblyFlags__ = assemblyFlags;
 					__parameters__[0] = &__param_assemblyFlags__;
 					__native_object__ = Global::New("mscorlib", "System.Reflection", "AssemblyFlagsAttribute", 1, __parameter_types__, __parameters__);
 				};

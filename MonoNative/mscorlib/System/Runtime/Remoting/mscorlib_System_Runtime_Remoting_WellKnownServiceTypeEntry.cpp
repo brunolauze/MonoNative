@@ -38,7 +38,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.Remoting.Contexts", "IContextAttribute")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute*>(value, typeid(mscorlib::System::Runtime::Remoting::Contexts::IContextAttribute).name());
 					Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownServiceTypeEntry", 0, NULL, "set_ContextAttributes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -48,7 +48,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__  WellKnownServiceTypeEntry::get_Mode() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "WellKnownServiceTypeEntry", 0, NULL, "get_Mode", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__>(*(mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Runtime::Remoting::WellKnownObjectMode::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -80,7 +80,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "TypeEntry", 0, NULL, "set_AssemblyName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -97,7 +97,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "TypeEntry", 0, NULL, "set_TypeName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

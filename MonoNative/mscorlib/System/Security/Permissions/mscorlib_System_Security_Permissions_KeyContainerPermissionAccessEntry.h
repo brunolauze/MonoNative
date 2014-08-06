@@ -37,7 +37,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Cryptography", "CspParameters");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Permissions", "KeyContainerPermissionFlags");
 						__parameters__[0] = (MonoObject*)parameters;
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[1] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry", 2, __parameter_types__, __parameters__);
 					};
@@ -50,7 +50,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Permissions", "KeyContainerPermissionFlags");
 						__parameters__[0] = (MonoObject*)keyContainerName;
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[1] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry", 2, __parameter_types__, __parameters__);
 					};
@@ -71,7 +71,7 @@ namespace mscorlib
 						__parameters__[2] = &providerType;
 						__parameters__[3] = (MonoObject*)keyContainerName;
 						__parameters__[4] = &keySpec;
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[5] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry", 6, __parameter_types__, __parameters__);
 					};

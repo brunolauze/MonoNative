@@ -20,7 +20,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(objectURI).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), objectURI);
+							__parameters__[0] = (MonoObject*)objectURI;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelReceiver", 0, NULL, "GetUrlsForUri", __mscorlib_System_Runtime_Remoting_Channels_IChannelReceiver, 1, __parameter_types__, __parameters__, NULL);
 							MonoArray *__array_ptr__ = (MonoArray*)__result__;
 							uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -37,7 +37,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(objectURI).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), objectURI);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelReceiver", 0, NULL, "GetUrlsForUri", __mscorlib_System_Runtime_Remoting_Channels_IChannelReceiver, 1, __parameter_types__, __parameters__, NULL);
 							MonoArray *__array_ptr__ = (MonoArray*)__result__;

@@ -45,8 +45,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
 					__parameter_types__[1] = Global::GetType(typeid(type).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
-					int __param_type__ = type;
+					__parameters__[0] = (MonoObject*)path;
+					mscorlib::System::Int32 __param_type__ = type;
 					__parameters__[1] = &__param_type__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityManager", 0, NULL, "LoadPolicyLevelFromFile", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::Policy::PolicyLevel(__result__);
@@ -56,10 +56,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(type).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
-					int __param_type__ = type;
+					mscorlib::System::Int32 __param_type__ = type;
 					__parameters__[1] = &__param_type__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityManager", 0, NULL, "LoadPolicyLevelFromFile", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::Policy::PolicyLevel(__result__);
@@ -71,8 +71,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
 					__parameter_types__[1] = Global::GetType(typeid(type).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
-					int __param_type__ = type;
+					__parameters__[0] = (MonoObject*)str;
+					mscorlib::System::Int32 __param_type__ = type;
 					__parameters__[1] = &__param_type__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityManager", 0, NULL, "LoadPolicyLevelFromString", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::Policy::PolicyLevel(__result__);
@@ -82,10 +82,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(type).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
-					int __param_type__ = type;
+					mscorlib::System::Int32 __param_type__ = type;
 					__parameters__[1] = &__param_type__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityManager", 0, NULL, "LoadPolicyLevelFromString", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::Policy::PolicyLevel(__result__);
@@ -111,7 +111,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(evidences).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Security.Policy", "Evidence")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Security::Policy::Evidence*>(evidences, typeid(mscorlib::System::Security::Policy::Evidence).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "SecurityManager", 0, NULL, "ResolvePolicy", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::PermissionSet(__result__);

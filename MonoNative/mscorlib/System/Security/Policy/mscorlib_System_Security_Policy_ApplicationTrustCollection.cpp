@@ -30,7 +30,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(trusts).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Security.Policy", "ApplicationTrust")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Security::Policy::ApplicationTrust*>(trusts, typeid(mscorlib::System::Security::Policy::ApplicationTrust).name());
 						Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "AddRange", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -53,7 +53,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(array).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Security.Policy", "ApplicationTrust")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(index).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Security::Policy::ApplicationTrust*>(array, typeid(mscorlib::System::Security::Policy::ApplicationTrust).name());
 						__parameters__[1] = &index;
@@ -67,7 +67,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(applicationIdentity).name());
 						__parameter_types__[1] = Global::GetType(typeid(versionMatch).name());
 						__parameters__[0] = (MonoObject*)applicationIdentity;
-						int __param_versionMatch__ = versionMatch;
+						mscorlib::System::Int32 __param_versionMatch__ = versionMatch;
 						__parameters__[1] = &__param_versionMatch__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "Find", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Policy::ApplicationTrustCollection(__result__);
@@ -95,7 +95,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(applicationIdentity).name());
 						__parameter_types__[1] = Global::GetType(typeid(versionMatch).name());
 						__parameters__[0] = (MonoObject*)applicationIdentity;
-						int __param_versionMatch__ = versionMatch;
+						mscorlib::System::Int32 __param_versionMatch__ = versionMatch;
 						__parameters__[1] = &__param_versionMatch__;
 						Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "Remove", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -104,7 +104,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(trusts).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Security.Policy", "ApplicationTrust")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Security::Policy::ApplicationTrust*>(trusts, typeid(mscorlib::System::Security::Policy::ApplicationTrust).name());
 						Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "RemoveRange", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -161,7 +161,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(appFullName).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), appFullName);
+					__parameters__[0] = (MonoObject*)appFullName;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "ApplicationTrustCollection", 0, NULL, "get_Item", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::Policy::ApplicationTrust(__result__);
 				}

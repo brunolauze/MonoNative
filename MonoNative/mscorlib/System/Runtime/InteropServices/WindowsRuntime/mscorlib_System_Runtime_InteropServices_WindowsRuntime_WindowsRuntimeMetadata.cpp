@@ -24,7 +24,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(namespaceName).name());
 							__parameter_types__[1] = Global::GetType(typeid(packageGraphFilePaths).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), namespaceName);
+							__parameters__[0] = (MonoObject*)namespaceName;
 							__parameters__[1] = (MonoObject*)packageGraphFilePaths;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMetadata", 0, NULL, "ResolveNamespace", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String>(__result__);
@@ -34,7 +34,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = Global::GetType(typeid(namespaceName).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(packageGraphFilePaths).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), namespaceName);
 							__parameters__[1] = (MonoObject*)packageGraphFilePaths;
@@ -49,8 +49,8 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(namespaceName).name());
 							__parameter_types__[1] = Global::GetType(typeid(windowsSdkFilePath).name());
 							__parameter_types__[2] = Global::GetType(typeid(packageGraphFilePaths).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), namespaceName);
-							__parameters__[1] = mono_string_new(Global::GetDomain(), windowsSdkFilePath);
+							__parameters__[0] = (MonoObject*)namespaceName;
+							__parameters__[1] = (MonoObject*)windowsSdkFilePath;
 							__parameters__[2] = (MonoObject*)packageGraphFilePaths;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMetadata", 0, NULL, "ResolveNamespace", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::String>(__result__);
@@ -60,8 +60,8 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = Global::GetType(typeid(namespaceName).name());
-							__parameter_types__[1] = Global::GetType(typeid(windowsSdkFilePath).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+							__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[2] = Global::GetType(typeid(packageGraphFilePaths).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), namespaceName);
 							__parameters__[1] = mono_string_new(Global::GetDomain(), windowsSdkFilePath);

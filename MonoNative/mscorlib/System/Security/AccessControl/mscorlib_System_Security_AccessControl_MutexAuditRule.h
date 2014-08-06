@@ -42,9 +42,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.AccessControl", "MutexRights");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.AccessControl", "AuditFlags");
 						__parameters__[0] = (MonoObject*)identity;
-						int __param_eventRights__ = eventRights;
+						mscorlib::System::Int32 __param_eventRights__ = eventRights;
 						__parameters__[1] = &__param_eventRights__;
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[2] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "MutexAuditRule", 3, __parameter_types__, __parameters__);
 					};

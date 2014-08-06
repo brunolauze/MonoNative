@@ -38,7 +38,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.InteropServices", "IDispatchImplType");
-						int __param_implType__ = implType;
+						mscorlib::System::Int32 __param_implType__ = implType;
 						__parameters__[0] = &__param_implType__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.InteropServices", "IDispatchImplAttribute", 1, __parameter_types__, __parameters__);
 					};

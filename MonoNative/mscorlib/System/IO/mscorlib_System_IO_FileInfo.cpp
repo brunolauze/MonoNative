@@ -71,7 +71,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(mode).name());
-					int __param_mode__ = mode;
+					mscorlib::System::Int32 __param_mode__ = mode;
 					__parameters__[0] = &__param_mode__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "Open", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::FileStream(__result__);
@@ -83,9 +83,9 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(mode).name());
 					__parameter_types__[1] = Global::GetType(typeid(access).name());
-					int __param_mode__ = mode;
+					mscorlib::System::Int32 __param_mode__ = mode;
 					__parameters__[0] = &__param_mode__;
-					int __param_access__ = access;
+					mscorlib::System::Int32 __param_access__ = access;
 					__parameters__[1] = &__param_access__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "Open", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::FileStream(__result__);
@@ -98,11 +98,11 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(mode).name());
 					__parameter_types__[1] = Global::GetType(typeid(access).name());
 					__parameter_types__[2] = Global::GetType(typeid(share).name());
-					int __param_mode__ = mode;
+					mscorlib::System::Int32 __param_mode__ = mode;
 					__parameters__[0] = &__param_mode__;
-					int __param_access__ = access;
+					mscorlib::System::Int32 __param_access__ = access;
 					__parameters__[1] = &__param_access__;
-					int __param_share__ = share;
+					mscorlib::System::Int32 __param_share__ = share;
 					__parameters__[2] = &__param_share__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "Open", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::FileStream(__result__);
@@ -118,7 +118,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(destFileName).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), destFileName);
+					__parameters__[0] = (MonoObject*)destFileName;
 					Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "MoveTo", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -126,7 +126,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(destFileName).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), destFileName);
 					Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "MoveTo", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -136,7 +136,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(destFileName).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), destFileName);
+					__parameters__[0] = (MonoObject*)destFileName;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "CopyTo", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::FileInfo(__result__);
 			}
@@ -145,7 +145,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(destFileName).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), destFileName);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "CopyTo", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::FileInfo(__result__);
@@ -157,7 +157,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(destFileName).name());
 					__parameter_types__[1] = Global::GetType(typeid(overwrite).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), destFileName);
+					__parameters__[0] = (MonoObject*)destFileName;
 					__parameters__[1] = reinterpret_cast<void*>(overwrite);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "CopyTo", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::FileInfo(__result__);
@@ -167,7 +167,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(destFileName).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(overwrite).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), destFileName);
 					__parameters__[1] = reinterpret_cast<void*>(overwrite);
@@ -192,7 +192,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(includeSections).name());
-					int __param_includeSections__ = includeSections;
+					mscorlib::System::Int32 __param_includeSections__ = includeSections;
 					__parameters__[0] = &__param_includeSections__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "GetAccessControl", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::AccessControl::FileSecurity(__result__);
@@ -204,8 +204,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(destinationFileName).name());
 					__parameter_types__[1] = Global::GetType(typeid(destinationBackupFileName).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), destinationFileName);
-					__parameters__[1] = mono_string_new(Global::GetDomain(), destinationBackupFileName);
+					__parameters__[0] = (MonoObject*)destinationFileName;
+					__parameters__[1] = (MonoObject*)destinationBackupFileName;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "Replace", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::FileInfo(__result__);
 			}
@@ -214,8 +214,8 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(destinationFileName).name());
-					__parameter_types__[1] = Global::GetType(typeid(destinationBackupFileName).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+					__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), destinationFileName);
 					__parameters__[1] = mono_string_new(Global::GetDomain(), destinationBackupFileName);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "Replace", __native_object__, 2, __parameter_types__, __parameters__, NULL);
@@ -229,8 +229,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(destinationFileName).name());
 					__parameter_types__[1] = Global::GetType(typeid(destinationBackupFileName).name());
 					__parameter_types__[2] = Global::GetType(typeid(ignoreMetadataErrors).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), destinationFileName);
-					__parameters__[1] = mono_string_new(Global::GetDomain(), destinationBackupFileName);
+					__parameters__[0] = (MonoObject*)destinationFileName;
+					__parameters__[1] = (MonoObject*)destinationBackupFileName;
 					__parameters__[2] = reinterpret_cast<void*>(ignoreMetadataErrors);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileInfo", 0, NULL, "Replace", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::FileInfo(__result__);
@@ -240,8 +240,8 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = Global::GetType(typeid(destinationFileName).name());
-					__parameter_types__[1] = Global::GetType(typeid(destinationBackupFileName).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+					__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[2] = Global::GetType(typeid(ignoreMetadataErrors).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), destinationFileName);
 					__parameters__[1] = mono_string_new(Global::GetDomain(), destinationBackupFileName);
@@ -337,7 +337,7 @@ namespace mscorlib
 			mscorlib::System::IO::FileAttributes::__ENUM__  FileInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::IO::FileAttributes::__ENUM__>(*(mscorlib::System::IO::FileAttributes::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::IO::FileAttributes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void FileInfo::set_Attributes(mscorlib::System::IO::FileAttributes::__ENUM__  value)
@@ -345,7 +345,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "set_Attributes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}

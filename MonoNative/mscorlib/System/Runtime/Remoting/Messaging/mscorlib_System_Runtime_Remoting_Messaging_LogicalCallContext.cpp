@@ -23,7 +23,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "LogicalCallContext", 0, NULL, "FreeNamedDataSlot", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -31,7 +31,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "LogicalCallContext", 0, NULL, "FreeNamedDataSlot", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
@@ -41,7 +41,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "LogicalCallContext", 0, NULL, "GetData", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Object(__result__);
 					}
@@ -50,7 +50,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "LogicalCallContext", 0, NULL, "GetData", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Object(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
 							__parameter_types__[1] = Global::GetType(typeid(data).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							__parameters__[1] = (MonoObject*)data;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "LogicalCallContext", 0, NULL, "SetData", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -82,7 +82,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(data).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							__parameters__[1] = (MonoObject*)data;

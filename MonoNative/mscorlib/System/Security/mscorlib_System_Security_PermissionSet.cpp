@@ -98,11 +98,11 @@ namespace mscorlib
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
 					__parameter_types__[0] = Global::GetType(typeid(inFormat).name());
-					__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(inData).name()))->eklass);
+					__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[2] = Global::GetType(typeid(outFormat).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), inFormat);
+					__parameters__[0] = (MonoObject*)inFormat;
 					__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(inData, typeid(mscorlib::System::Byte).name());
-					__parameters__[2] = mono_string_new(Global::GetDomain(), outFormat);
+					__parameters__[2] = (MonoObject*)outFormat;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security", "PermissionSet", 0, NULL, "ConvertPermissionSet", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -119,9 +119,9 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = Global::GetType(typeid(inFormat).name());
-					__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(inData).name()))->eklass);
-					__parameter_types__[2] = Global::GetType(typeid(outFormat).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+					__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
+					__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), inFormat);
 					__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(inData, typeid(mscorlib::System::Byte).name());
 					__parameters__[2] = mono_string_new(Global::GetDomain(), outFormat);

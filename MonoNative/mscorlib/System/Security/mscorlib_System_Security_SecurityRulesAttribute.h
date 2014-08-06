@@ -36,7 +36,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType("mscorlib", "System.Security", "SecurityRuleSet");
-					int __param_ruleSet__ = ruleSet;
+					mscorlib::System::Int32 __param_ruleSet__ = ruleSet;
 					__parameters__[0] = &__param_ruleSet__;
 					__native_object__ = Global::New("mscorlib", "System.Security", "SecurityRulesAttribute", 1, __parameter_types__, __parameters__);
 				};

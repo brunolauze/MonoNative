@@ -34,7 +34,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType("mscorlib", "System", "AttributeTargets");
-				int __param_validOn__ = validOn;
+				mscorlib::System::Int32 __param_validOn__ = validOn;
 				__parameters__[0] = &__param_validOn__;
 				__native_object__ = Global::New("mscorlib", "System", "AttributeUsageAttribute", 1, __parameter_types__, __parameters__);
 			};

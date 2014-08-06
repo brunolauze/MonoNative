@@ -49,7 +49,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(classToProxy).name());
 						__parameter_types__[1] = Global::GetType(typeid(url).name());
 						__parameters__[0] = (MonoObject*)classToProxy;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), url);
+						__parameters__[1] = (MonoObject*)url;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "Connect", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
 				}
@@ -59,7 +59,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(classToProxy).name());
-						__parameter_types__[1] = Global::GetType(typeid(url).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = (MonoObject*)classToProxy;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), url);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "Connect", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -74,7 +74,7 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(url).name());
 						__parameter_types__[2] = Global::GetType(typeid(data).name());
 						__parameters__[0] = (MonoObject*)classToProxy;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), url);
+						__parameters__[1] = (MonoObject*)url;
 						__parameters__[2] = (MonoObject*)data;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "Connect", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
 						__parameter_types__[0] = Global::GetType(typeid(classToProxy).name());
-						__parameter_types__[1] = Global::GetType(typeid(url).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType(typeid(data).name());
 						__parameters__[0] = (MonoObject*)classToProxy;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), url);
@@ -109,7 +109,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(URI).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), URI);
+						__parameters__[0] = (MonoObject*)URI;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "GetServerTypeForUri", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Type(__result__);
 				}
@@ -118,7 +118,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(URI).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), URI);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "GetServerTypeForUri", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Type(__result__);
@@ -173,7 +173,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(Obj).name());
 						__parameter_types__[1] = Global::GetType(typeid(URI).name());
 						__parameters__[0] = (MonoObject*)Obj;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), URI);
+						__parameters__[1] = (MonoObject*)URI;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "Marshal", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Runtime::Remoting::ObjRef(__result__);
 				}
@@ -183,7 +183,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(Obj).name());
-						__parameter_types__[1] = Global::GetType(typeid(URI).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = (MonoObject*)Obj;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), URI);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "Marshal", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -198,7 +198,7 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(ObjURI).name());
 						__parameter_types__[2] = Global::GetType(typeid(RequestedType).name());
 						__parameters__[0] = (MonoObject*)Obj;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), ObjURI);
+						__parameters__[1] = (MonoObject*)ObjURI;
 						__parameters__[2] = (MonoObject*)RequestedType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "Marshal", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Runtime::Remoting::ObjRef(__result__);
@@ -209,7 +209,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
 						__parameter_types__[0] = Global::GetType(typeid(Obj).name());
-						__parameter_types__[1] = Global::GetType(typeid(ObjURI).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType(typeid(RequestedType).name());
 						__parameters__[0] = (MonoObject*)Obj;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), ObjURI);
@@ -347,7 +347,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(obj).name());
 						__parameter_types__[1] = Global::GetType(typeid(uri).name());
 						__parameters__[0] = (MonoObject*)obj;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), uri);
+						__parameters__[1] = (MonoObject*)uri;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "SetObjectUriForMarshal", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -356,7 +356,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(obj).name());
-						__parameter_types__[1] = Global::GetType(typeid(uri).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = (MonoObject*)obj;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), uri);
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "RemotingServices", 0, NULL, "SetObjectUriForMarshal", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);

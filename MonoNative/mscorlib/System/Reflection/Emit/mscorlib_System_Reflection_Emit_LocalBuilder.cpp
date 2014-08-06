@@ -21,7 +21,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(startOffset).name());
 						__parameter_types__[2] = Global::GetType(typeid(endOffset).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = &startOffset;
 						__parameters__[2] = &endOffset;
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "LocalBuilder", 0, NULL, "SetLocalSymInfo", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -31,7 +31,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
-						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType(typeid(startOffset).name());
 						__parameter_types__[2] = Global::GetType(typeid(endOffset).name());
 						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
@@ -45,7 +45,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[0] = (MonoObject*)name;
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "LocalBuilder", 0, NULL, "SetLocalSymInfo", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -53,7 +53,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "LocalBuilder", 0, NULL, "SetLocalSymInfo", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}

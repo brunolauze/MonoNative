@@ -36,8 +36,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbKey).name()))->eklass);
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbIV).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rgbKey, typeid(mscorlib::System::Byte).name());
 						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbIV, typeid(mscorlib::System::Byte).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "CreateDecryptor", __native_object__, 2, __parameter_types__, __parameters__, NULL);
@@ -54,8 +54,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbKey).name()))->eklass);
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbIV).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rgbKey, typeid(mscorlib::System::Byte).name());
 						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbIV, typeid(mscorlib::System::Byte).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "CreateEncryptor", __native_object__, 2, __parameter_types__, __parameters__, NULL);
@@ -93,7 +93,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(algName).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), algName);
+						__parameters__[0] = (MonoObject*)algName;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::SymmetricAlgorithm(__result__);
 				}
@@ -102,7 +102,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(algName).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), algName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::SymmetricAlgorithm(__result__);
@@ -162,7 +162,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, typeid(mscorlib::System::Byte).name());
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "set_IV", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -187,7 +187,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, typeid(mscorlib::System::Byte).name());
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "set_Key", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -246,7 +246,7 @@ namespace mscorlib
 				mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  SymmetricAlgorithm::get_Mode() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_Mode", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::Cryptography::CipherMode::__ENUM__>(*(mscorlib::System::Security::Cryptography::CipherMode::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::Cryptography::CipherMode::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 				void SymmetricAlgorithm::set_Mode(mscorlib::System::Security::Cryptography::CipherMode::__ENUM__  value)
@@ -254,7 +254,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					int __param_value__ = value;
+					mscorlib::System::Int32 __param_value__ = value;
 					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "set_Mode", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -264,7 +264,7 @@ namespace mscorlib
 				mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  SymmetricAlgorithm::get_Padding() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "get_Padding", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__>(*(mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 				void SymmetricAlgorithm::set_Padding(mscorlib::System::Security::Cryptography::PaddingMode::__ENUM__  value)
@@ -272,7 +272,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					int __param_value__ = value;
+					mscorlib::System::Int32 __param_value__ = value;
 					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "SymmetricAlgorithm", 0, NULL, "set_Padding", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}

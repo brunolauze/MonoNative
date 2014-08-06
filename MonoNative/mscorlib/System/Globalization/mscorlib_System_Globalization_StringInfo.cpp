@@ -55,7 +55,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					__parameters__[0] = (MonoObject*)str;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "GetNextTextElement", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -64,7 +64,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "GetNextTextElement", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -76,7 +76,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					__parameters__[0] = (MonoObject*)str;
 					__parameters__[1] = &index;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "GetNextTextElement", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -86,7 +86,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					__parameters__[1] = &index;
@@ -99,7 +99,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					__parameters__[0] = (MonoObject*)str;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "GetTextElementEnumerator", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Globalization::TextElementEnumerator(__result__);
 			}
@@ -108,7 +108,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "GetTextElementEnumerator", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Globalization::TextElementEnumerator(__result__);
@@ -120,7 +120,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					__parameters__[0] = (MonoObject*)str;
 					__parameters__[1] = &index;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "GetTextElementEnumerator", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Globalization::TextElementEnumerator(__result__);
@@ -130,7 +130,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					__parameters__[1] = &index;
@@ -143,7 +143,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					__parameters__[0] = (MonoObject*)str;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "ParseCombiningCharacters", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -160,7 +160,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "ParseCombiningCharacters", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -195,7 +195,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "StringInfo", 0, NULL, "set_String", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

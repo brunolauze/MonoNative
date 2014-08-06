@@ -35,10 +35,6 @@ namespace MonoNative.Generator
 		{
 			var sb = new StringBuilder ();
 			AddFixtureComments (type, sb);
-			//var defineName = "__MONO_NATIVE_" + type.Assembly.GetName ().Name.ToUpper () + "_" + type.FullName.Replace (".", "_").Replace ("`", "_").ToUpper () + "__FIXTURE_H";
-			//sb.AppendLine ("#ifndef " + defineName);
-			//sb.AppendLine ("#define " + defineName);
-
 			sb.AppendLine ("#include <gtest/gtest.h>");
 			if (type.IsGenericType) {
 				sb.AppendLine ("#include <mscorlib.h>");
@@ -48,7 +44,6 @@ namespace MonoNative.Generator
 				AddImplIncludes (type, sb);
 			}
 			NameSpaceWriter.Write (type, sb, RenderFixture);
-			//sb.AppendLine ("#endif");
 			FileGenerator.SaveFixture (type, sb.ToString());
 		}
 
@@ -1101,7 +1096,7 @@ namespace MonoNative.Generator
 			var parameters = method.GetParameters();
 			if (parameters.Count() > 0)
 			{
-				WriteParameters (type, parameters, sb, indent, false, true);
+				WriteParameters (type, parameters, sb, indent, false, withNativeCharPtr);
 			}
 			if (method.DeclaringType.IsGenericType)
 			{
@@ -1155,7 +1150,7 @@ namespace MonoNative.Generator
 					} else if (method.ReturnType == typeof(void*)) {
 						sb.AppendLine (indent + "\treturn mono_object_unbox (__result__);");
 					} else if (method.ReturnType.IsReallyEnum ()) {
-						sb.AppendLine (indent + "\treturn static_cast<" + method.ReturnType.SanitizedName() + ">(*(" + method.ReturnType.SanitizedName () + "*)mono_object_unbox(__result__)" + ");");
+						sb.AppendLine (indent + "\treturn static_cast<" + method.ReturnType.SanitizedName() + ">(*(mscorlib::System::Int32*)mono_object_unbox(__result__)" + ");");
 					}
 					else {
 						sb.AppendLine (indent + "\treturn " + (method.Name == "GetEnumerator" || method.ReturnType.Name.EndsWith("*") ? "new " : "") + (method.ReturnType.IsReallyEnum() || method.ReturnType.IsReallyPrimitive() ? "*(" + method.ReturnType.SanitizedName () + "*)mono_object_unbox(__result__)" : method.ReturnType.SanitizedName ().Replace("*", "") + "(__result__)") + ";");
@@ -1171,26 +1166,23 @@ namespace MonoNative.Generator
 			for (int i = 0; i < parameters.Count (); i++) {
 				var parameter = parameters [i];
 				if (parameter.ParameterType.IsArray) {
-					if (isConstructor) {
-						var arrayType = parameter.ParameterType.GetElementType ();
-						sb.AppendLine (indent + "\t__parameter_types__[" + i + "] = mono_class_get_type(mono_type_get_array_type(Global::GetType(\"" + arrayType.Assembly.GetName ().Name + "\", \"" + arrayType.Namespace + "\", \"" + arrayType.Name + "\"))->eklass);");
-					}
-					else {
-						sb.AppendLine (indent + "\t__parameter_types__[" + i + "] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(" + parameter.GetName () + ").name()))->eklass);");
-					}
+					var arrayType = parameter.ParameterType.GetElementType ();
+					sb.AppendLine (indent + "\t__parameter_types__[" + i + "] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType(\"" + arrayType.Assembly.GetName ().Name + "\", \"" + arrayType.Namespace + "\", \"" + arrayType.Name + "\")), 1));");
 				}
 				else {
 					if (isConstructor) {
 						if (parameter.ParameterType.IsGenericType && !type.IsGenericType) {
 							var genericTypes = parameter.ParameterType.GetGenericArguments ();
-							sb.AppendLine (indent + "\tMonoType *__generic_types__" + parameter.GetName() + "__[" + genericTypes.Count () + "];");
+							sb.AppendLine (indent + "\tMonoType *__generic_types__" + parameter.GetName () + "__[" + genericTypes.Count () + "];");
 							for (int j = 0; j < genericTypes.Count (); j++) {
-								sb.AppendLine (indent + "\t__generic_types__" + parameter.GetName() + "__[" + j + "] = Global::GetType(\"" + parameter.ParameterType.Assembly.GetName ().Name + "\", \"" + parameter.ParameterType.Namespace + "\", \"" + parameter.ParameterType.Name + "\");");
+								sb.AppendLine (indent + "\t__generic_types__" + parameter.GetName () + "__[" + j + "] = Global::GetType(\"" + parameter.ParameterType.Assembly.GetName ().Name + "\", \"" + parameter.ParameterType.Namespace + "\", \"" + parameter.ParameterType.Name + "\");");
 							}
-							sb.AppendLine (indent + "\t__parameter_types__[" + i + "] = Global::GetType(\"" + parameter.ParameterType.Assembly.GetName ().Name + "\", \"" + parameter.ParameterType.Namespace + "\", \"" + parameter.ParameterType.Name + "\", " + genericTypes.Count () + ",__generic_types__" + parameter.GetName() + "__);");
+							sb.AppendLine (indent + "\t__parameter_types__[" + i + "] = Global::GetType(\"" + parameter.ParameterType.Assembly.GetName ().Name + "\", \"" + parameter.ParameterType.Namespace + "\", \"" + parameter.ParameterType.Name + "\", " + genericTypes.Count () + ",__generic_types__" + parameter.GetName () + "__);");
 						} else {
 							sb.AppendLine (indent + "\t__parameter_types__[" + i + "] = Global::GetType(\"" + parameter.ParameterType.Assembly.GetName ().Name + "\", \"" + parameter.ParameterType.Namespace + "\", \"" + parameter.ParameterType.Name + "\");");
 						}
+					} else if (parameter.ParameterType == typeof(string) && withNativeCharPtr) {
+						sb.AppendLine (indent + "\t__parameter_types__[" + i + "] = Global::GetType(\"mscorlib\", \"System\", \"String\");");
 					} else {
 						sb.AppendLine (indent + "\t__parameter_types__[" + i + "] = Global::GetType(typeid(" + parameter.GetName () + ").name());");
 					}
@@ -1204,7 +1196,7 @@ namespace MonoNative.Generator
 				else if (parameter.ParameterType == typeof(bool)) {
 					sb.AppendLine (indent + "\t__parameters__[" + i + "] = reinterpret_cast<void*>(" + parameter.GetName () + ");");
 				} else if (parameter.ParameterType.IsReallyEnum ()) {
-					sb.AppendLine (indent + "\tint __param_" + parameter.GetName() + "__ = " + parameter.GetName() + ";");
+					sb.AppendLine (indent + "\tmscorlib::System::Int32 __param_" + parameter.GetName() + "__ = " + parameter.GetName() + ";");
 					sb.AppendLine (indent + "\t__parameters__[" + i + "] = &__param_" + parameter.GetName() + "__;");
 				}
 				else if (parameter.ParameterType.IsArray) {

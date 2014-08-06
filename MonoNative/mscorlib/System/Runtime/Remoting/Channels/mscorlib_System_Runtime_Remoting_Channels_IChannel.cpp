@@ -21,7 +21,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(url).name());
 							__parameter_types__[1] = Global::GetType(typeid(objectURI).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), url);
+							__parameters__[0] = (MonoObject*)url;
 							__parameters__[1] = (MonoObject*)objectURI;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannel", 0, NULL, "Parse", __mscorlib_System_Runtime_Remoting_Channels_IChannel, 2, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::String(__result__);
@@ -31,7 +31,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = Global::GetType(typeid(url).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(objectURI).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), url);
 							__parameters__[1] = (MonoObject*)objectURI;

@@ -55,7 +55,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Boolean"))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Boolean")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Boolean*>(values, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Boolean");
 					__native_object__ = Global::New("mscorlib", "System.Collections", "BitArray", 1, __parameter_types__, __parameters__);
 				};
@@ -68,7 +68,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
 					__native_object__ = Global::New("mscorlib", "System.Collections", "BitArray", 1, __parameter_types__, __parameters__);
 				};
@@ -81,7 +81,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Int32"))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(values, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Int32");
 					__native_object__ = Global::New("mscorlib", "System.Collections", "BitArray", 1, __parameter_types__, __parameters__);
 				};

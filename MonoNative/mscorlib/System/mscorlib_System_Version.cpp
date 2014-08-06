@@ -82,7 +82,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(input).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[0] = (MonoObject*)input;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "Parse", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Version(__result__);
 		}
@@ -91,7 +91,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "Parse", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Version(__result__);
@@ -103,7 +103,7 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(input).name());
 				__parameter_types__[1] = Global::GetType(typeid(result).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
+				__parameters__[0] = (MonoObject*)input;
 				__parameters__[1] = (MonoObject*)result;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Version", 0, NULL, "TryParse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -113,7 +113,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
-				__parameter_types__[0] = Global::GetType(typeid(input).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[1] = Global::GetType(typeid(result).name());
 				__parameters__[0] = mono_string_new(Global::GetDomain(), input);
 				__parameters__[1] = (MonoObject*)result;

@@ -234,7 +234,7 @@ namespace mscorlib
 							__parameter_types__[4] = Global::GetType(typeid(ppmkOut).name());
 							__parameters__[0] = (MonoObject*)pbc;
 							__parameters__[1] = (MonoObject*)pmkToLeft;
-							__parameters__[2] = mono_string_new(Global::GetDomain(), pszDisplayName);
+							__parameters__[2] = (MonoObject*)pszDisplayName;
 							__parameters__[3] = &pchEaten;
 							__parameters__[4] = (MonoObject*)ppmkOut;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IMoniker", 0, NULL, "ParseDisplayName", __mscorlib_System_Runtime_InteropServices_ComTypes_IMoniker, 5, __parameter_types__, __parameters__, NULL);
@@ -246,7 +246,7 @@ namespace mscorlib
 							void *__parameters__[5];
 							__parameter_types__[0] = Global::GetType(typeid(pbc).name());
 							__parameter_types__[1] = Global::GetType(typeid(pmkToLeft).name());
-							__parameter_types__[2] = Global::GetType(typeid(pszDisplayName).name());
+							__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[3] = Global::GetType(typeid(pchEaten).name());
 							__parameter_types__[4] = Global::GetType(typeid(ppmkOut).name());
 							__parameters__[0] = (MonoObject*)pbc;

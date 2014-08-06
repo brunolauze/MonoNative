@@ -37,7 +37,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(pszFileName).name());
 							__parameter_types__[1] = Global::GetType(typeid(dwMode).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), pszFileName);
+							__parameters__[0] = (MonoObject*)pszFileName;
 							__parameters__[1] = &dwMode;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IPersistFile", 0, NULL, "Load", __mscorlib_System_Runtime_InteropServices_ComTypes_IPersistFile, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -46,7 +46,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = Global::GetType(typeid(pszFileName).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(dwMode).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), pszFileName);
 							__parameters__[1] = &dwMode;
@@ -59,7 +59,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(pszFileName).name());
 							__parameter_types__[1] = Global::GetType(typeid(fRemember).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), pszFileName);
+							__parameters__[0] = (MonoObject*)pszFileName;
 							__parameters__[1] = reinterpret_cast<void*>(fRemember);
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IPersistFile", 0, NULL, "Save", __mscorlib_System_Runtime_InteropServices_ComTypes_IPersistFile, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -68,7 +68,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = Global::GetType(typeid(pszFileName).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(fRemember).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), pszFileName);
 							__parameters__[1] = reinterpret_cast<void*>(fRemember);
@@ -80,7 +80,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(pszFileName).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), pszFileName);
+							__parameters__[0] = (MonoObject*)pszFileName;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IPersistFile", 0, NULL, "SaveCompleted", __mscorlib_System_Runtime_InteropServices_ComTypes_IPersistFile, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -88,7 +88,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(pszFileName).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), pszFileName);
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IPersistFile", 0, NULL, "SaveCompleted", __mscorlib_System_Runtime_InteropServices_ComTypes_IPersistFile, 1, __parameter_types__, __parameters__, NULL);
 					}

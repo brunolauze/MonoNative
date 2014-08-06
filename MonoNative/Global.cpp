@@ -320,6 +320,11 @@ MonoType* Global::GetType(const char *mangledName)
 {
 	int status = 0;
 	std::string demangledName = abi::__cxa_demangle(mangledName, 0, 0, &status);
+	int enumIndex = demangledName.find("::__ENUM__");
+	if (enumIndex != -1)
+	{
+		demangledName = demangledName.substr(0, enumIndex);
+	}
 	int assemblyIndex = demangledName.find("::");
 	std::string assemblyName = demangledName.substr(0, assemblyIndex);
 	std::string fullName = demangledName.substr(assemblyIndex + 2);

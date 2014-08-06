@@ -48,8 +48,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
 				__parameter_types__[0] = Global::GetType(typeid(typeToken).name());
-				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(typeInstantiationContext).name()))->eklass);
-				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(methodInstantiationContext).name()))->eklass);
+				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "RuntimeTypeHandle")), 1));
+				__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "RuntimeTypeHandle")), 1));
 				__parameters__[0] = &typeToken;
 				__parameters__[1] = Global::FromArray<mscorlib::System::RuntimeTypeHandle*>(typeInstantiationContext, typeid(mscorlib::System::RuntimeTypeHandle).name());
 				__parameters__[2] = Global::FromArray<mscorlib::System::RuntimeTypeHandle*>(methodInstantiationContext, typeid(mscorlib::System::RuntimeTypeHandle).name());
@@ -62,8 +62,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
 				__parameter_types__[0] = Global::GetType(typeid(methodToken).name());
-				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(typeInstantiationContext).name()))->eklass);
-				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(methodInstantiationContext).name()))->eklass);
+				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "RuntimeTypeHandle")), 1));
+				__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "RuntimeTypeHandle")), 1));
 				__parameters__[0] = &methodToken;
 				__parameters__[1] = Global::FromArray<mscorlib::System::RuntimeTypeHandle*>(typeInstantiationContext, typeid(mscorlib::System::RuntimeTypeHandle).name());
 				__parameters__[2] = Global::FromArray<mscorlib::System::RuntimeTypeHandle*>(methodInstantiationContext, typeid(mscorlib::System::RuntimeTypeHandle).name());
@@ -76,8 +76,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
 				__parameter_types__[0] = Global::GetType(typeid(fieldToken).name());
-				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(typeInstantiationContext).name()))->eklass);
-				__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(methodInstantiationContext).name()))->eklass);
+				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "RuntimeTypeHandle")), 1));
+				__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "RuntimeTypeHandle")), 1));
 				__parameters__[0] = &fieldToken;
 				__parameters__[1] = Global::FromArray<mscorlib::System::RuntimeTypeHandle*>(typeInstantiationContext, typeid(mscorlib::System::RuntimeTypeHandle).name());
 				__parameters__[2] = Global::FromArray<mscorlib::System::RuntimeTypeHandle*>(methodInstantiationContext, typeid(mscorlib::System::RuntimeTypeHandle).name());

@@ -55,7 +55,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
 						__parameter_types__[1] = Global::GetType(typeid(pSet).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = (MonoObject*)pSet;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "ChangeNamedPermissionSet", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::NamedPermissionSet(__result__);
@@ -65,7 +65,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType(typeid(pSet).name());
 						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = (MonoObject*)pSet;
@@ -93,7 +93,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[0] = (MonoObject*)name;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "GetNamedPermissionSet", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::NamedPermissionSet(__result__);
 				}
@@ -102,7 +102,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "GetNamedPermissionSet", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::NamedPermissionSet(__result__);
@@ -146,7 +146,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[0] = (MonoObject*)name;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "RemoveNamedPermissionSet", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::NamedPermissionSet(__result__);
 				}
@@ -155,7 +155,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "RemoveNamedPermissionSet", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::NamedPermissionSet(__result__);
@@ -246,7 +246,7 @@ namespace mscorlib
 				mscorlib::System::Security::PolicyLevelType::__ENUM__  PolicyLevel::get_Type() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Policy", "PolicyLevel", 0, NULL, "get_Type", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::PolicyLevelType::__ENUM__>(*(mscorlib::System::Security::PolicyLevelType::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::PolicyLevelType::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

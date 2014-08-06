@@ -67,7 +67,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(publicKey).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(publicKey, typeid(mscorlib::System::Byte).name());
 					Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "SetPublicKey", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -76,7 +76,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(publicKeyToken).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(publicKeyToken, typeid(mscorlib::System::Byte).name());
 					Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "SetPublicKeyToken", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -112,7 +112,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
+					__parameters__[0] = (MonoObject*)assemblyFile;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "GetAssemblyName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::AssemblyName(__result__);
 			}
@@ -121,7 +121,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(assemblyFile).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), assemblyFile);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "GetAssemblyName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Reflection::AssemblyName(__result__);
@@ -132,7 +132,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__  AssemblyName::get_ProcessorArchitecture() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_ProcessorArchitecture", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__>(*(mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void AssemblyName::set_ProcessorArchitecture(mscorlib::System::Reflection::ProcessorArchitecture::__ENUM__  value)
@@ -140,7 +140,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "set_ProcessorArchitecture", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -158,7 +158,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "set_Name", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -175,7 +175,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "set_CodeBase", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -209,7 +209,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__  AssemblyName::get_Flags() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__>(*(mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void AssemblyName::set_Flags(mscorlib::System::Reflection::AssemblyNameFlags::__ENUM__  value)
@@ -217,7 +217,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "set_Flags", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -235,7 +235,7 @@ namespace mscorlib
 			mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  AssemblyName::get_HashAlgorithm() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_HashAlgorithm", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__>(*(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void AssemblyName::set_HashAlgorithm(mscorlib::System::Configuration::Assemblies::AssemblyHashAlgorithm::__ENUM__  value)
@@ -243,7 +243,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "set_HashAlgorithm", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -287,7 +287,7 @@ namespace mscorlib
 			mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__  AssemblyName::get_VersionCompatibility() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_VersionCompatibility", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__>(*(mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void AssemblyName::set_VersionCompatibility(mscorlib::System::Configuration::Assemblies::AssemblyVersionCompatibility::__ENUM__  value)
@@ -295,7 +295,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "set_VersionCompatibility", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -313,7 +313,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::AssemblyContentType::__ENUM__  AssemblyName::get_ContentType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "get_ContentType", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Reflection::AssemblyContentType::__ENUM__>(*(mscorlib::System::Reflection::AssemblyContentType::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Reflection::AssemblyContentType::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void AssemblyName::set_ContentType(mscorlib::System::Reflection::AssemblyContentType::__ENUM__  value)
@@ -321,7 +321,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Reflection", "AssemblyName", 0, NULL, "set_ContentType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}

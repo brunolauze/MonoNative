@@ -103,7 +103,7 @@ namespace mscorlib
 						{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "Header"))->eklass);
+							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "Header")), 1));
 							__parameter_types__[1] = Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodCallMessage");
 							__parameters__[0] = Global::FromArray<mscorlib::System::Runtime::Remoting::Messaging::Header*>(h, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Runtime.Remoting.Messaging", "Header");
 							__parameters__[1] = (MonoObject*)mcm;

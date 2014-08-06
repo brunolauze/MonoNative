@@ -23,10 +23,10 @@ namespace mscorlib
 							void *__parameters__[5];
 							__parameter_types__[0] = Global::GetType(typeid(szNameBuf).name());
 							__parameter_types__[1] = Global::GetType(typeid(lHashVal).name());
-							__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(ppTInfo).name()))->eklass);
-							__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgMemId).name()))->eklass);
+							__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeInfo")), 1));
+							__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 							__parameter_types__[4] = Global::GetType(typeid(pcFound).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), szNameBuf);
+							__parameters__[0] = (MonoObject*)szNameBuf;
 							__parameters__[1] = &lHashVal;
 							__parameters__[2] = Global::FromArray<mscorlib::System::Runtime::InteropServices::ComTypes::ITypeInfo*>(ppTInfo, typeid(mscorlib::System::Runtime::InteropServices::ComTypes::ITypeInfo).name());
 							__parameters__[3] = Global::FromArray<mscorlib::System::Int32*>(rgMemId, typeid(mscorlib::System::Int32).name());
@@ -38,10 +38,10 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[5];
 							void *__parameters__[5];
-							__parameter_types__[0] = Global::GetType(typeid(szNameBuf).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(lHashVal).name());
-							__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(ppTInfo).name()))->eklass);
-							__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgMemId).name()))->eklass);
+							__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeInfo")), 1));
+							__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 							__parameter_types__[4] = Global::GetType(typeid(pcFound).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), szNameBuf);
 							__parameters__[1] = &lHashVal;
@@ -161,7 +161,7 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(index).name());
 							__parameter_types__[1] = Global::GetType(typeid(pTKind).name());
 							__parameters__[0] = &index;
-							int __param_pTKind__ = pTKind;
+							mscorlib::System::Int32 __param_pTKind__ = pTKind;
 							__parameters__[1] = &__param_pTKind__;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeLib2", 0, NULL, "GetTypeInfoType", __mscorlib_System_Runtime_InteropServices_ComTypes_ITypeLib2, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -172,7 +172,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(szNameBuf).name());
 							__parameter_types__[1] = Global::GetType(typeid(lHashVal).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), szNameBuf);
+							__parameters__[0] = (MonoObject*)szNameBuf;
 							__parameters__[1] = &lHashVal;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeLib2", 0, NULL, "IsName", __mscorlib_System_Runtime_InteropServices_ComTypes_ITypeLib2, 2, __parameter_types__, __parameters__, NULL);
 							return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -182,7 +182,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = Global::GetType(typeid(szNameBuf).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(lHashVal).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), szNameBuf);
 							__parameters__[1] = &lHashVal;

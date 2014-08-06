@@ -20,9 +20,9 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(access).name());
 						__parameter_types__[1] = Global::GetType(typeid(pathList).name());
-						int __param_access__ = access;
+						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[0] = &__param_access__;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), pathList);
+						__parameters__[1] = (MonoObject*)pathList;
 						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermission", 0, NULL, "AddPathList", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -31,8 +31,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(access).name());
-						__parameter_types__[1] = Global::GetType(typeid(pathList).name());
-						int __param_access__ = access;
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
+						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[0] = &__param_access__;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), pathList);
 						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermission", 0, NULL, "AddPathList", __native_object__, 2, __parameter_types__, __parameters__, NULL);
@@ -45,11 +45,11 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(access).name());
 						__parameter_types__[1] = Global::GetType(typeid(control).name());
 						__parameter_types__[2] = Global::GetType(typeid(pathList).name());
-						int __param_access__ = access;
+						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[0] = &__param_access__;
-						int __param_control__ = control;
+						mscorlib::System::Int32 __param_control__ = control;
 						__parameters__[1] = &__param_control__;
-						__parameters__[2] = mono_string_new(Global::GetDomain(), pathList);
+						__parameters__[2] = (MonoObject*)pathList;
 						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermission", 0, NULL, "AddPathList", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -59,10 +59,10 @@ namespace mscorlib
 						void *__parameters__[3];
 						__parameter_types__[0] = Global::GetType(typeid(access).name());
 						__parameter_types__[1] = Global::GetType(typeid(control).name());
-						__parameter_types__[2] = Global::GetType(typeid(pathList).name());
-						int __param_access__ = access;
+						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
+						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[0] = &__param_access__;
-						int __param_control__ = control;
+						mscorlib::System::Int32 __param_control__ = control;
 						__parameters__[1] = &__param_control__;
 						__parameters__[2] = mono_string_new(Global::GetDomain(), pathList);
 						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermission", 0, NULL, "AddPathList", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -73,7 +73,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(access).name());
-						int __param_access__ = access;
+						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[0] = &__param_access__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermission", 0, NULL, "GetPathList", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
@@ -85,9 +85,9 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(access).name());
 						__parameter_types__[1] = Global::GetType(typeid(pathList).name());
-						int __param_access__ = access;
+						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[0] = &__param_access__;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), pathList);
+						__parameters__[1] = (MonoObject*)pathList;
 						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermission", 0, NULL, "SetPathList", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -96,8 +96,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(access).name());
-						__parameter_types__[1] = Global::GetType(typeid(pathList).name());
-						int __param_access__ = access;
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
+						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[0] = &__param_access__;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), pathList);
 						Global::InvokeMethod("mscorlib", "System.Security.Permissions", "RegistryPermission", 0, NULL, "SetPathList", __native_object__, 2, __parameter_types__, __parameters__, NULL);

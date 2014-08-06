@@ -76,7 +76,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(eraName).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), eraName);
+					__parameters__[0] = (MonoObject*)eraName;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "GetEra", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			}
@@ -85,7 +85,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(eraName).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), eraName);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "GetEra", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -148,7 +148,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(dayofweek).name());
-					int __param_dayofweek__ = dayofweek;
+					mscorlib::System::Int32 __param_dayofweek__ = dayofweek;
 					__parameters__[0] = &__param_dayofweek__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "GetDayName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -159,7 +159,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(dayofweek).name());
-					int __param_dayofweek__ = dayofweek;
+					mscorlib::System::Int32 __param_dayofweek__ = dayofweek;
 					__parameters__[0] = &__param_dayofweek__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "GetAbbreviatedDayName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -170,7 +170,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(dayOfWeek).name());
-					int __param_dayOfWeek__ = dayOfWeek;
+					mscorlib::System::Int32 __param_dayOfWeek__ = dayOfWeek;
 					__parameters__[0] = &__param_dayOfWeek__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "GetShortestDayName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -180,7 +180,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(patterns).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(format).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::String*>(patterns, typeid(mscorlib::System::String).name());
 					__parameters__[1] = &format;
@@ -215,7 +215,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::String*>(value, typeid(mscorlib::System::String).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_AbbreviatedDayNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -240,7 +240,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::String*>(value, typeid(mscorlib::System::String).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_AbbreviatedMonthNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -265,7 +265,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::String*>(value, typeid(mscorlib::System::String).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_DayNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -290,7 +290,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::String*>(value, typeid(mscorlib::System::String).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_MonthNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -315,7 +315,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::String*>(value, typeid(mscorlib::System::String).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_AbbreviatedMonthGenitiveNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -340,7 +340,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::String*>(value, typeid(mscorlib::System::String).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_MonthGenitiveNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -373,7 +373,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::String*>(value, typeid(mscorlib::System::String).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_ShortestDayNames", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -391,7 +391,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_AMDesignator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -408,7 +408,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_PMDesignator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -425,7 +425,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_DateSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -442,7 +442,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_TimeSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -459,7 +459,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_LongDatePattern", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -476,7 +476,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_ShortDatePattern", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -493,7 +493,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_ShortTimePattern", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -510,7 +510,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_LongTimePattern", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -527,7 +527,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_MonthDayPattern", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -544,7 +544,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_YearMonthPattern", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -561,7 +561,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_FullDateTimePattern", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -570,7 +570,7 @@ namespace mscorlib
 			mscorlib::System::DayOfWeek::__ENUM__  DateTimeFormatInfo::get_FirstDayOfWeek() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_FirstDayOfWeek", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::DayOfWeek::__ENUM__>(*(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::DayOfWeek::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void DateTimeFormatInfo::set_FirstDayOfWeek(mscorlib::System::DayOfWeek::__ENUM__  value)
@@ -578,7 +578,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_FirstDayOfWeek", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -605,7 +605,7 @@ namespace mscorlib
 			mscorlib::System::Globalization::CalendarWeekRule::__ENUM__  DateTimeFormatInfo::get_CalendarWeekRule() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "get_CalendarWeekRule", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Globalization::CalendarWeekRule::__ENUM__>(*(mscorlib::System::Globalization::CalendarWeekRule::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Globalization::CalendarWeekRule::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void DateTimeFormatInfo::set_CalendarWeekRule(mscorlib::System::Globalization::CalendarWeekRule::__ENUM__  value)
@@ -613,7 +613,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "DateTimeFormatInfo", 0, NULL, "set_CalendarWeekRule", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}

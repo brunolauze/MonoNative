@@ -55,7 +55,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security", "SecurityZone");
-						int __param_zone__ = zone;
+						mscorlib::System::Int32 __param_zone__ = zone;
 						__parameters__[0] = &__param_zone__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Policy", "Zone", 1, __parameter_types__, __parameters__);
 					};

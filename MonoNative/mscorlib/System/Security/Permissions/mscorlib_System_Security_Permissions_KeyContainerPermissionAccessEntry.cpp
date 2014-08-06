@@ -34,7 +34,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  KeyContainerPermissionAccessEntry::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__>(*(mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 				void KeyContainerPermissionAccessEntry::set_Flags(mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  value)
@@ -42,7 +42,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					int __param_value__ = value;
+					mscorlib::System::Int32 __param_value__ = value;
 					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry", 0, NULL, "set_Flags", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -60,7 +60,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry", 0, NULL, "set_KeyContainerName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -94,7 +94,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry", 0, NULL, "set_KeyStore", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -111,7 +111,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry", 0, NULL, "set_ProviderName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

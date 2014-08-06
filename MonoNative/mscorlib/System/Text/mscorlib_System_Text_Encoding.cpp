@@ -31,7 +31,7 @@ namespace mscorlib
 					void *__parameters__[3];
 					__parameter_types__[0] = Global::GetType(typeid(srcEncoding).name());
 					__parameter_types__[1] = Global::GetType(typeid(dstEncoding).name());
-					__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = (MonoObject*)srcEncoding;
 					__parameters__[1] = (MonoObject*)dstEncoding;
 					__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
@@ -53,7 +53,7 @@ namespace mscorlib
 					void *__parameters__[5];
 					__parameter_types__[0] = Global::GetType(typeid(srcEncoding).name());
 					__parameter_types__[1] = Global::GetType(typeid(dstEncoding).name());
-					__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[3] = Global::GetType(typeid(index).name());
 					__parameter_types__[4] = Global::GetType(typeid(count).name());
 					__parameters__[0] = (MonoObject*)srcEncoding;
@@ -87,7 +87,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(chars).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
@@ -102,7 +102,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(s).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+					__parameters__[0] = (MonoObject*)s;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetByteCount", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			}
@@ -111,7 +111,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(s).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetByteCount", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -121,7 +121,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(chars).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetByteCount", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -131,10 +131,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[5];
 					void *__parameters__[5];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(chars).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(charIndex).name());
 					__parameter_types__[2] = Global::GetType(typeid(charCount).name());
-					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[4] = Global::GetType(typeid(byteIndex).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					__parameters__[1] = &charIndex;
@@ -152,9 +152,9 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(s).name());
 					__parameter_types__[1] = Global::GetType(typeid(charIndex).name());
 					__parameter_types__[2] = Global::GetType(typeid(charCount).name());
-					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[4] = Global::GetType(typeid(byteIndex).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+					__parameters__[0] = (MonoObject*)s;
 					__parameters__[1] = &charIndex;
 					__parameters__[2] = &charCount;
 					__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
@@ -167,10 +167,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[5];
 					void *__parameters__[5];
-					__parameter_types__[0] = Global::GetType(typeid(s).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(charIndex).name());
 					__parameter_types__[2] = Global::GetType(typeid(charCount).name());
-					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[4] = Global::GetType(typeid(byteIndex).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 					__parameters__[1] = &charIndex;
@@ -186,7 +186,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(s).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+					__parameters__[0] = (MonoObject*)s;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetBytes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -203,7 +203,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(s).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetBytes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -221,7 +221,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(chars).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
@@ -243,7 +243,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(chars).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetBytes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -261,7 +261,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
@@ -275,7 +275,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetCharCount", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -285,10 +285,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[5];
 					void *__parameters__[5];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(byteIndex).name());
 					__parameter_types__[2] = Global::GetType(typeid(byteCount).name());
-					__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(chars).name()))->eklass);
+					__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameter_types__[4] = Global::GetType(typeid(charIndex).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
 					__parameters__[1] = &byteIndex;
@@ -303,7 +303,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
@@ -325,7 +325,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetChars", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -388,7 +388,7 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(encoderFallback).name());
 					__parameter_types__[2] = Global::GetType(typeid(decoderFallback).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[0] = (MonoObject*)name;
 					__parameters__[1] = (MonoObject*)encoderFallback;
 					__parameters__[2] = (MonoObject*)decoderFallback;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetEncoding", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -399,7 +399,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(encoderFallback).name());
 					__parameter_types__[2] = Global::GetType(typeid(decoderFallback).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
@@ -434,7 +434,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(form).name());
-					int __param_form__ = form;
+					mscorlib::System::Int32 __param_form__ = form;
 					__parameters__[0] = &__param_form__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "IsAlwaysNormalized", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -445,7 +445,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[0] = (MonoObject*)name;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetEncoding", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::Encoding(__result__);
 			}
@@ -454,7 +454,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetEncoding", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Text::Encoding(__result__);
@@ -504,7 +504,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
@@ -518,7 +518,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(bytes).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Encoding", 0, NULL, "GetString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);

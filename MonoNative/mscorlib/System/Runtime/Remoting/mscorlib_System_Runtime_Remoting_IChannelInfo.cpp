@@ -31,7 +31,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Object*>(value, typeid(mscorlib::System::Object).name());
 					Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "IChannelInfo", 0, NULL, "set_ChannelData", __mscorlib_System_Runtime_Remoting_IChannelInfo, 1, __parameter_types__, __parameters__, NULL);
 				}

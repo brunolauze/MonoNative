@@ -38,7 +38,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.InteropServices", "CharSet");
-						int __param_charSet__ = charSet;
+						mscorlib::System::Int32 __param_charSet__ = charSet;
 						__parameters__[0] = &__param_charSet__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.InteropServices", "DefaultCharSetAttribute", 1, __parameter_types__, __parameters__);
 					};

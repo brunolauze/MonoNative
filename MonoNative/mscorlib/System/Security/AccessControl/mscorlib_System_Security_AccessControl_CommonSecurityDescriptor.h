@@ -70,7 +70,7 @@ namespace mscorlib
 						void *__parameters__[4];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "Boolean");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "Boolean");
-						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
+						__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
 						__parameters__[0] = reinterpret_cast<void*>(isContainer);
 						__parameters__[1] = reinterpret_cast<void*>(isDS);
@@ -93,7 +93,7 @@ namespace mscorlib
 						__parameter_types__[6] = Global::GetType("mscorlib", "System.Security.AccessControl", "DiscretionaryAcl");
 						__parameters__[0] = reinterpret_cast<void*>(isContainer);
 						__parameters__[1] = reinterpret_cast<void*>(isDS);
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[2] = &__param_flags__;
 						__parameters__[3] = (MonoObject*)owner;
 						__parameters__[4] = (MonoObject*)group;

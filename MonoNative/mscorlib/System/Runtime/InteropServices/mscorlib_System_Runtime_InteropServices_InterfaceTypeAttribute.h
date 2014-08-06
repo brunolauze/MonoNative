@@ -38,7 +38,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.InteropServices", "ComInterfaceType");
-						int __param_interfaceType__ = interfaceType;
+						mscorlib::System::Int32 __param_interfaceType__ = interfaceType;
 						__parameters__[0] = &__param_interfaceType__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.InteropServices", "InterfaceTypeAttribute", 1, __parameter_types__, __parameters__);
 					};

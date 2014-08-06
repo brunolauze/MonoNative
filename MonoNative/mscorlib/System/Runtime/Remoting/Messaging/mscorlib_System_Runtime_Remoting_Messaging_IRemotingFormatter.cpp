@@ -34,7 +34,7 @@ namespace mscorlib
 							void *__parameters__[3];
 							__parameter_types__[0] = Global::GetType(typeid(serializationStream).name());
 							__parameter_types__[1] = Global::GetType(typeid(graph).name());
-							__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(headers).name()))->eklass);
+							__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "Header")), 1));
 							__parameters__[0] = (MonoObject*)serializationStream;
 							__parameters__[1] = (MonoObject*)graph;
 							__parameters__[2] = Global::FromArray<mscorlib::System::Runtime::Remoting::Messaging::Header*>(headers, typeid(mscorlib::System::Runtime::Remoting::Messaging::Header).name());

@@ -227,7 +227,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType("mscorlib", "System", "Int64");
 				__parameter_types__[1] = Global::GetType("mscorlib", "System", "DateTimeKind");
 				__parameters__[0] = &ticks;
-				int __param_kind__ = kind;
+				mscorlib::System::Int32 __param_kind__ = kind;
 				__parameters__[1] = &__param_kind__;
 				__native_object__ = Global::New("mscorlib", "System", "DateTime", 2, __parameter_types__, __parameters__);
 			};
@@ -256,7 +256,7 @@ namespace mscorlib
 				__parameters__[3] = &hour;
 				__parameters__[4] = &minute;
 				__parameters__[5] = &second;
-				int __param_kind__ = kind;
+				mscorlib::System::Int32 __param_kind__ = kind;
 				__parameters__[6] = &__param_kind__;
 				__native_object__ = Global::New("mscorlib", "System", "DateTime", 7, __parameter_types__, __parameters__);
 			};
@@ -287,7 +287,7 @@ namespace mscorlib
 				__parameters__[4] = &minute;
 				__parameters__[5] = &second;
 				__parameters__[6] = &millisecond;
-				int __param_kind__ = kind;
+				mscorlib::System::Int32 __param_kind__ = kind;
 				__parameters__[7] = &__param_kind__;
 				__native_object__ = Global::New("mscorlib", "System", "DateTime", 8, __parameter_types__, __parameters__);
 			};
@@ -320,7 +320,7 @@ namespace mscorlib
 				__parameters__[5] = &second;
 				__parameters__[6] = &millisecond;
 				__parameters__[7] = (MonoObject*)calendar;
-				int __param_kind__ = kind;
+				mscorlib::System::Int32 __param_kind__ = kind;
 				__parameters__[8] = &__param_kind__;
 				__native_object__ = Global::New("mscorlib", "System", "DateTime", 9, __parameter_types__, __parameters__);
 			};

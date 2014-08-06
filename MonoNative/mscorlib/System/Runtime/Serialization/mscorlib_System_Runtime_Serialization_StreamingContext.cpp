@@ -43,7 +43,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__  StreamingContext::get_State() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "StreamingContext", 0, NULL, "get_State", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__>(*(mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Runtime::Serialization::StreamingContextStates::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

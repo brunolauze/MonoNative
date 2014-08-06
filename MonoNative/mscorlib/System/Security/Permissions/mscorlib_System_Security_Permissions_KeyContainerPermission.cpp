@@ -87,7 +87,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__  KeyContainerPermission::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "KeyContainerPermission", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__>(*(mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::Permissions::KeyContainerPermissionFlags::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

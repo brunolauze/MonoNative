@@ -102,7 +102,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Exception"))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Exception")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::Exception*>(innerExceptions, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Exception");
 				__native_object__ = Global::New("mscorlib", "System", "AggregateException", 1, __parameter_types__, __parameters__);
 			};
@@ -115,7 +115,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
-				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Exception"))->eklass);
+				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Exception")), 1));
 				__parameters__[0] = (MonoObject*)message;
 				__parameters__[1] = Global::FromArray<mscorlib::System::Exception*>(innerExceptions, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Exception");
 				__native_object__ = Global::New("mscorlib", "System", "AggregateException", 2, __parameter_types__, __parameters__);

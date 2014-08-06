@@ -21,9 +21,9 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(algname).name());
 						__parameter_types__[1] = Global::GetType(typeid(alghashname).name());
 						__parameter_types__[2] = Global::GetType(typeid(keySize).name());
-						__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbIV).name()))->eklass);
-						__parameters__[0] = mono_string_new(Global::GetDomain(), algname);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), alghashname);
+						__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
+						__parameters__[0] = (MonoObject*)algname;
+						__parameters__[1] = (MonoObject*)alghashname;
 						__parameters__[2] = &keySize;
 						__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(rgbIV, typeid(mscorlib::System::Byte).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 0, NULL, "CryptDeriveKey", __native_object__, 4, __parameter_types__, __parameters__, NULL);
@@ -42,10 +42,10 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[4];
 						void *__parameters__[4];
-						__parameter_types__[0] = Global::GetType(typeid(algname).name());
-						__parameter_types__[1] = Global::GetType(typeid(alghashname).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType(typeid(keySize).name());
-						__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgbIV).name()))->eklass);
+						__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameters__[0] = mono_string_new(Global::GetDomain(), algname);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), alghashname);
 						__parameters__[2] = &keySize;
@@ -98,7 +98,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 0, NULL, "set_HashName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -139,7 +139,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, typeid(mscorlib::System::Byte).name());
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 0, NULL, "set_Salt", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}

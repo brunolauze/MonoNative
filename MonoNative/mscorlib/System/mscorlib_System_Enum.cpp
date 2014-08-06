@@ -13,7 +13,7 @@ namespace mscorlib
 		mscorlib::System::TypeCode::__ENUM__ Enum::GetTypeCode()
 		{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "GetTypeCode", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::TypeCode::__ENUM__>(*(mscorlib::System::TypeCode::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::TypeCode::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 		}
 
 		mscorlib::System::Array Enum::GetValues(mscorlib::System::Type enumType)
@@ -85,7 +85,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(enumType).name());
 				__parameter_types__[1] = Global::GetType(typeid(value).name());
 				__parameters__[0] = (MonoObject*)enumType;
-				__parameters__[1] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)value;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "Parse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
 		}
@@ -95,7 +95,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(enumType).name());
-				__parameter_types__[1] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = (MonoObject*)enumType;
 				__parameters__[1] = mono_string_new(Global::GetDomain(), value);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "Parse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -110,7 +110,7 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(value).name());
 				__parameter_types__[2] = Global::GetType(typeid(ignoreCase).name());
 				__parameters__[0] = (MonoObject*)enumType;
-				__parameters__[1] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[1] = (MonoObject*)value;
 				__parameters__[2] = reinterpret_cast<void*>(ignoreCase);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "Parse", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
@@ -121,7 +121,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
 				__parameter_types__[0] = Global::GetType(typeid(enumType).name());
-				__parameter_types__[1] = Global::GetType(typeid(value).name());
+				__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[2] = Global::GetType(typeid(ignoreCase).name());
 				__parameters__[0] = (MonoObject*)enumType;
 				__parameters__[1] = mono_string_new(Global::GetDomain(), value);
@@ -161,7 +161,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(format).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+				__parameters__[0] = (MonoObject*)format;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "ToString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -170,7 +170,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = Global::GetType(typeid(format).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "ToString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
@@ -182,7 +182,7 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(format).name());
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
+				__parameters__[0] = (MonoObject*)format;
 				__parameters__[1] = (MonoObject*)provider;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "ToString", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
@@ -192,7 +192,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
-				__parameter_types__[0] = Global::GetType(typeid(format).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[1] = Global::GetType(typeid(provider).name());
 				__parameters__[0] = mono_string_new(Global::GetDomain(), format);
 				__parameters__[1] = (MonoObject*)provider;
@@ -333,7 +333,7 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(format).name());
 				__parameters__[0] = (MonoObject*)enumType;
 				__parameters__[1] = (MonoObject*)value;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), format);
+				__parameters__[2] = (MonoObject*)format;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "Format", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -344,7 +344,7 @@ namespace mscorlib
 				void *__parameters__[3];
 				__parameter_types__[0] = Global::GetType(typeid(enumType).name());
 				__parameter_types__[1] = Global::GetType(typeid(value).name());
-				__parameter_types__[2] = Global::GetType(typeid(format).name());
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = (MonoObject*)enumType;
 				__parameters__[1] = (MonoObject*)value;
 				__parameters__[2] = mono_string_new(Global::GetDomain(), format);

@@ -22,7 +22,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(obj).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(members).name()))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Reflection", "MemberInfo")), 1));
 						__parameters__[0] = (MonoObject*)obj;
 						__parameters__[1] = Global::FromArray<mscorlib::System::Reflection::MemberInfo*>(members, typeid(mscorlib::System::Reflection::MemberInfo).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "FormatterServices", 0, NULL, "GetObjectData", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -82,7 +82,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(assem).name());
 						__parameter_types__[1] = Global::GetType(typeid(name).name());
 						__parameters__[0] = (MonoObject*)assem;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[1] = (MonoObject*)name;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "FormatterServices", 0, NULL, "GetTypeFromAssembly", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Type(__result__);
 				}
@@ -92,7 +92,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(assem).name());
-						__parameter_types__[1] = Global::GetType(typeid(name).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = (MonoObject*)assem;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "FormatterServices", 0, NULL, "GetTypeFromAssembly", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -114,8 +114,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
 						__parameter_types__[0] = Global::GetType(typeid(obj).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(members).name()))->eklass);
-						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(data).name()))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Reflection", "MemberInfo")), 1));
+						__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 						__parameters__[0] = (MonoObject*)obj;
 						__parameters__[1] = Global::FromArray<mscorlib::System::Reflection::MemberInfo*>(members, typeid(mscorlib::System::Reflection::MemberInfo).name());
 						__parameters__[2] = Global::FromArray<mscorlib::System::Object*>(data, typeid(mscorlib::System::Object).name());
@@ -130,7 +130,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(t).name());
 						__parameter_types__[1] = Global::GetType(typeid(securityLevel).name());
 						__parameters__[0] = (MonoObject*)t;
-						int __param_securityLevel__ = securityLevel;
+						mscorlib::System::Int32 __param_securityLevel__ = securityLevel;
 						__parameters__[1] = &__param_securityLevel__;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "FormatterServices", 0, NULL, "CheckTypeSecurity", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}

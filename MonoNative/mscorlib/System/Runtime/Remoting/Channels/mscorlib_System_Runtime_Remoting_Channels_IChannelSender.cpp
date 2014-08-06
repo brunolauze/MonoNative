@@ -22,7 +22,7 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(url).name());
 							__parameter_types__[1] = Global::GetType(typeid(remoteChannelData).name());
 							__parameter_types__[2] = Global::GetType(typeid(objectURI).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), url);
+							__parameters__[0] = (MonoObject*)url;
 							__parameters__[1] = (MonoObject*)remoteChannelData;
 							__parameters__[2] = (MonoObject*)objectURI;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelSender", 0, NULL, "CreateMessageSink", __mscorlib_System_Runtime_Remoting_Channels_IChannelSender, 3, __parameter_types__, __parameters__, NULL);
@@ -33,7 +33,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = Global::GetType(typeid(url).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(remoteChannelData).name());
 							__parameter_types__[2] = Global::GetType(typeid(objectURI).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), url);

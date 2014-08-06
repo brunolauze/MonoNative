@@ -27,7 +27,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					__parameters__[0] = (MonoObject*)path;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "CreateSubdirectory", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::DirectoryInfo(__result__);
 			}
@@ -36,7 +36,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "CreateSubdirectory", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::DirectoryInfo(__result__);
@@ -61,7 +61,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
+					__parameters__[0] = (MonoObject*)searchPattern;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetFiles", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -78,7 +78,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetFiles", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -111,7 +111,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
+					__parameters__[0] = (MonoObject*)searchPattern;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetDirectories", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -128,7 +128,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetDirectories", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -161,7 +161,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
+					__parameters__[0] = (MonoObject*)searchPattern;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetFileSystemInfos", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
 					uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -178,7 +178,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetFileSystemInfos", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -198,8 +198,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					__parameters__[0] = (MonoObject*)searchPattern;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetFileSystemInfos", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -217,10 +217,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetFileSystemInfos", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -253,7 +253,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(destDirName).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), destDirName);
+					__parameters__[0] = (MonoObject*)destDirName;
 					Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "MoveTo", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -261,7 +261,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(destDirName).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), destDirName);
 					Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "MoveTo", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
@@ -278,8 +278,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					__parameters__[0] = (MonoObject*)searchPattern;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetDirectories", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -297,10 +297,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetDirectories", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -320,8 +320,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					__parameters__[0] = (MonoObject*)searchPattern;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetFiles", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -339,10 +339,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetFiles", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -371,7 +371,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(path).name());
 					__parameter_types__[1] = Global::GetType(typeid(directorySecurity).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
+					__parameters__[0] = (MonoObject*)path;
 					__parameters__[1] = (MonoObject*)directorySecurity;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "CreateSubdirectory", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::DirectoryInfo(__result__);
@@ -381,7 +381,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(path).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(directorySecurity).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), path);
 					__parameters__[1] = (MonoObject*)directorySecurity;
@@ -400,7 +400,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(includeSections).name());
-					int __param_includeSections__ = includeSections;
+					mscorlib::System::Int32 __param_includeSections__ = includeSections;
 					__parameters__[0] = &__param_includeSections__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "GetAccessControl", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Security::AccessControl::DirectorySecurity(__result__);
@@ -426,7 +426,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
+					__parameters__[0] = (MonoObject*)searchPattern;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateDirectories", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>(__result__);
 			}
@@ -435,7 +435,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateDirectories", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>(__result__);
@@ -447,8 +447,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					__parameters__[0] = (MonoObject*)searchPattern;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateDirectories", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>(__result__);
@@ -458,10 +458,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateDirectories", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::DirectoryInfo>(__result__);
@@ -478,7 +478,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
+					__parameters__[0] = (MonoObject*)searchPattern;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateFiles", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>(__result__);
 			}
@@ -487,7 +487,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateFiles", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>(__result__);
@@ -499,8 +499,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					__parameters__[0] = (MonoObject*)searchPattern;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateFiles", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>(__result__);
@@ -510,10 +510,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateFiles", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileInfo>(__result__);
@@ -530,7 +530,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
+					__parameters__[0] = (MonoObject*)searchPattern;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateFileSystemInfos", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>(__result__);
 			}
@@ -539,7 +539,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateFileSystemInfos", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>(__result__);
@@ -551,8 +551,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					__parameters__[0] = (MonoObject*)searchPattern;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateFileSystemInfos", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>(__result__);
@@ -562,10 +562,10 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(searchPattern).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(searchOption).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), searchPattern);
-					int __param_searchOption__ = searchOption;
+					mscorlib::System::Int32 __param_searchOption__ = searchOption;
 					__parameters__[1] = &__param_searchOption__;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "DirectoryInfo", 0, NULL, "EnumerateFileSystemInfos", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::IO::FileSystemInfo>(__result__);
@@ -624,7 +624,7 @@ namespace mscorlib
 			mscorlib::System::IO::FileAttributes::__ENUM__  DirectoryInfo::get_Attributes() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::IO::FileAttributes::__ENUM__>(*(mscorlib::System::IO::FileAttributes::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::IO::FileAttributes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 			void DirectoryInfo::set_Attributes(mscorlib::System::IO::FileAttributes::__ENUM__  value)
@@ -632,7 +632,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				int __param_value__ = value;
+				mscorlib::System::Int32 __param_value__ = value;
 				__parameters__[0] = &__param_value__;
 				Global::InvokeMethod("mscorlib", "System.IO", "FileSystemInfo", 0, NULL, "set_Attributes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}

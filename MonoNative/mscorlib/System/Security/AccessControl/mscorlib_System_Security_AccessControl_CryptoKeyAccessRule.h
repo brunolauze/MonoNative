@@ -42,9 +42,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.AccessControl", "CryptoKeyRights");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.AccessControl", "AccessControlType");
 						__parameters__[0] = (MonoObject*)identity;
-						int __param_cryptoKeyRights__ = cryptoKeyRights;
+						mscorlib::System::Int32 __param_cryptoKeyRights__ = cryptoKeyRights;
 						__parameters__[1] = &__param_cryptoKeyRights__;
-						int __param_type__ = type;
+						mscorlib::System::Int32 __param_type__ = type;
 						__parameters__[2] = &__param_type__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "CryptoKeyAccessRule", 3, __parameter_types__, __parameters__);
 					};
@@ -58,9 +58,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.AccessControl", "CryptoKeyRights");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.AccessControl", "AccessControlType");
 						__parameters__[0] = (MonoObject*)identity;
-						int __param_cryptoKeyRights__ = cryptoKeyRights;
+						mscorlib::System::Int32 __param_cryptoKeyRights__ = cryptoKeyRights;
 						__parameters__[1] = &__param_cryptoKeyRights__;
-						int __param_type__ = type;
+						mscorlib::System::Int32 __param_type__ = type;
 						__parameters__[2] = &__param_type__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "CryptoKeyAccessRule", 3, __parameter_types__, __parameters__);
 					};

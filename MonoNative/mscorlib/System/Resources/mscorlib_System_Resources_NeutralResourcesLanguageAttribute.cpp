@@ -24,7 +24,7 @@ namespace mscorlib
 			mscorlib::System::Resources::UltimateResourceFallbackLocation::__ENUM__  NeutralResourcesLanguageAttribute::get_Location() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "NeutralResourcesLanguageAttribute", 0, NULL, "get_Location", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Resources::UltimateResourceFallbackLocation::__ENUM__>(*(mscorlib::System::Resources::UltimateResourceFallbackLocation::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Resources::UltimateResourceFallbackLocation::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 

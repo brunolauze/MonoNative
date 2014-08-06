@@ -233,7 +233,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::EventAttributes::__ENUM__  _EventInfo::get_Attributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_Attributes", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Reflection::EventAttributes::__ENUM__>(*(mscorlib::System::Reflection::EventAttributes::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Reflection::EventAttributes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -273,7 +273,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::MemberTypes::__ENUM__  _EventInfo::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_EventInfo", 0, NULL, "get_MemberType", __mscorlib_System_Runtime_InteropServices__EventInfo, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

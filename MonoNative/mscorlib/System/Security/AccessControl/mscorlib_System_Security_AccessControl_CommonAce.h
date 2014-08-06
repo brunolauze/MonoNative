@@ -62,10 +62,10 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System", "Int32");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.Security.Principal", "SecurityIdentifier");
 						__parameter_types__[4] = Global::GetType("mscorlib", "System", "Boolean");
-						__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
-						int __param_flags__ = flags;
+						__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[0] = &__param_flags__;
-						int __param_qualifier__ = qualifier;
+						mscorlib::System::Int32 __param_qualifier__ = qualifier;
 						__parameters__[1] = &__param_qualifier__;
 						__parameters__[2] = &accessMask;
 						__parameters__[3] = (MonoObject*)sid;

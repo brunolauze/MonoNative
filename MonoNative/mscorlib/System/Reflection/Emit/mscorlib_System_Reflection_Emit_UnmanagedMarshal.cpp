@@ -40,7 +40,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(elemType).name());
-						int __param_elemType__ = elemType;
+						mscorlib::System::Int32 __param_elemType__ = elemType;
 						__parameters__[0] = &__param_elemType__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "DefineLPArray", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Reflection::Emit::UnmanagedMarshal(__result__);
@@ -51,7 +51,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(elemType).name());
-						int __param_elemType__ = elemType;
+						mscorlib::System::Int32 __param_elemType__ = elemType;
 						__parameters__[0] = &__param_elemType__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "DefineSafeArray", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Reflection::Emit::UnmanagedMarshal(__result__);
@@ -62,7 +62,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(unmanagedType).name());
-						int __param_unmanagedType__ = unmanagedType;
+						mscorlib::System::Int32 __param_unmanagedType__ = unmanagedType;
 						__parameters__[0] = &__param_unmanagedType__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "DefineUnmanagedMarshal", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Reflection::Emit::UnmanagedMarshal(__result__);
@@ -73,7 +73,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  UnmanagedMarshal::get_BaseType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "get_BaseType", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__>(*(mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -89,7 +89,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__  UnmanagedMarshal::get_GetUnmanagedType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "UnmanagedMarshal", 0, NULL, "get_GetUnmanagedType", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__>(*(mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Runtime::InteropServices::UnmanagedType::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

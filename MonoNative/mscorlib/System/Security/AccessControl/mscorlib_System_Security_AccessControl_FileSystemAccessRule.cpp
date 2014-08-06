@@ -18,7 +18,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::FileSystemRights::__ENUM__  FileSystemAccessRule::get_FileSystemRights() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "FileSystemAccessRule", 0, NULL, "get_FileSystemRights", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::AccessControl::FileSystemRights::__ENUM__>(*(mscorlib::System::Security::AccessControl::FileSystemRights::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::AccessControl::FileSystemRights::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -26,7 +26,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__  FileSystemAccessRule::get_AccessControlType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AccessRule", 0, NULL, "get_AccessControlType", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__>(*(mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::AccessControl::AccessControlType::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -42,7 +42,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__  FileSystemAccessRule::get_InheritanceFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_InheritanceFlags", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::AccessControl::InheritanceFlags::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -58,7 +58,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__  FileSystemAccessRule::get_PropagationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "AuthorizationRule", 0, NULL, "get_PropagationFlags", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::AccessControl::PropagationFlags::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

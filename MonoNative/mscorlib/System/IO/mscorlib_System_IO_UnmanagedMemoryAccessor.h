@@ -60,7 +60,7 @@ namespace mscorlib
 					__parameters__[0] = (MonoObject*)buffer;
 					__parameters__[1] = &offset;
 					__parameters__[2] = &capacity;
-					int __param_access__ = access;
+					mscorlib::System::Int32 __param_access__ = access;
 					__parameters__[3] = &__param_access__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 4, __parameter_types__, __parameters__);
 				};
@@ -119,7 +119,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[4];
 					void *__parameters__[4];
 					__parameter_types__[0] = Global::GetType(typeid(position).name());
-					__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(array).name()))->eklass);
+					__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.IO", "T")), 1));
 					__parameter_types__[2] = Global::GetType(typeid(offset).name());
 					__parameter_types__[3] = Global::GetType(typeid(count).name());
 					__parameters__[0] = &position;
@@ -161,7 +161,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[4];
 					void *__parameters__[4];
 					__parameter_types__[0] = Global::GetType(typeid(position).name());
-					__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(array).name()))->eklass);
+					__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.IO", "T")), 1));
 					__parameter_types__[2] = Global::GetType(typeid(offset).name());
 					__parameter_types__[3] = Global::GetType(typeid(count).name());
 					__parameters__[0] = &position;

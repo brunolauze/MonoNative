@@ -77,7 +77,7 @@ namespace mscorlib
 			mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__  KoreanLunisolarCalendar::get_AlgorithmType() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "EastAsianLunisolarCalendar", 0, NULL, "get_AlgorithmType", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__>(*(mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Globalization::CalendarAlgorithmType::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 

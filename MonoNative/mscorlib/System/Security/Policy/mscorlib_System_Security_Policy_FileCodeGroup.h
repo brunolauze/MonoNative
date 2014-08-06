@@ -70,7 +70,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Policy", "IMembershipCondition");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Permissions", "FileIOPermissionAccess");
 						__parameters__[0] = (MonoObject*)membershipCondition;
-						int __param_access__ = access;
+						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[1] = &__param_access__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Policy", "FileCodeGroup", 2, __parameter_types__, __parameters__);
 					};

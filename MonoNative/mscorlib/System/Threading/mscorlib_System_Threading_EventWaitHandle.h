@@ -74,7 +74,7 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.Threading", "EventResetMode");
 					__parameters__[0] = reinterpret_cast<void*>(initialState);
-					int __param_mode__ = mode;
+					mscorlib::System::Int32 __param_mode__ = mode;
 					__parameters__[1] = &__param_mode__;
 					__native_object__ = Global::New("mscorlib", "System.Threading", "EventWaitHandle", 2, __parameter_types__, __parameters__);
 				};
@@ -89,7 +89,7 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.Threading", "EventResetMode");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = reinterpret_cast<void*>(initialState);
-					int __param_mode__ = mode;
+					mscorlib::System::Int32 __param_mode__ = mode;
 					__parameters__[1] = &__param_mode__;
 					__parameters__[2] = (MonoObject*)name;
 					__native_object__ = Global::New("mscorlib", "System.Threading", "EventWaitHandle", 3, __parameter_types__, __parameters__);
@@ -106,7 +106,7 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean&");
 					__parameters__[0] = reinterpret_cast<void*>(initialState);
-					int __param_mode__ = mode;
+					mscorlib::System::Int32 __param_mode__ = mode;
 					__parameters__[1] = &__param_mode__;
 					__parameters__[2] = (MonoObject*)name;
 					__parameters__[3] = &createdNew;
@@ -125,7 +125,7 @@ namespace mscorlib
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean&");
 					__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.AccessControl", "EventWaitHandleSecurity");
 					__parameters__[0] = reinterpret_cast<void*>(initialState);
-					int __param_mode__ = mode;
+					mscorlib::System::Int32 __param_mode__ = mode;
 					__parameters__[1] = &__param_mode__;
 					__parameters__[2] = (MonoObject*)name;
 					__parameters__[3] = &createdNew;

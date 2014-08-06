@@ -39,7 +39,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					__parameters__[0] = (MonoObject*)str;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "ToTitleCase", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -48,7 +48,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "ToTitleCase", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -79,7 +79,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					__parameters__[0] = (MonoObject*)str;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "ToLower", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -88,7 +88,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "ToLower", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -99,7 +99,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(str).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+					__parameters__[0] = (MonoObject*)str;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "ToUpper", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -108,7 +108,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(str).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "ToUpper", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -167,7 +167,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+				__parameters__[0] = (MonoObject*)value;
 				Global::InvokeMethod("mscorlib", "System.Globalization", "TextInfo", 0, NULL, "set_ListSeparator", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

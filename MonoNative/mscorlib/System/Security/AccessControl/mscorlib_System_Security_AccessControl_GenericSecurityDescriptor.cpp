@@ -21,7 +21,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(binaryForm).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(offset).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(binaryForm, typeid(mscorlib::System::Byte).name());
 						__parameters__[1] = &offset;
@@ -33,7 +33,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(includeSections).name());
-						int __param_includeSections__ = includeSections;
+						mscorlib::System::Int32 __param_includeSections__ = includeSections;
 						__parameters__[0] = &__param_includeSections__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericSecurityDescriptor", 0, NULL, "GetSddlForm", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
@@ -58,7 +58,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  GenericSecurityDescriptor::get_ControlFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "GenericSecurityDescriptor", 0, NULL, "get_ControlFlags", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

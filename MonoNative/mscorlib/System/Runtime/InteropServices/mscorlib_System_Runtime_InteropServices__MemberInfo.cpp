@@ -166,7 +166,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::MemberTypes::__ENUM__  _MemberInfo::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_MemberInfo", 0, NULL, "get_MemberType", __mscorlib_System_Runtime_InteropServices__MemberInfo, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

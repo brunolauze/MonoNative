@@ -35,7 +35,7 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(resourceName).name());
 					__parameter_types__[1] = Global::GetType(typeid(resourceType).name());
 					__parameter_types__[2] = Global::GetType(typeid(resourceData).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), resourceName);
+					__parameters__[0] = (MonoObject*)resourceName;
 					__parameters__[1] = (MonoObject*)resourceType;
 					__parameters__[2] = (MonoObject*)resourceData;
 					Global::InvokeMethod("mscorlib", "System.Resources", "ResourceReader", 0, NULL, "GetResourceData", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -45,7 +45,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = Global::GetType(typeid(resourceName).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(resourceType).name());
 					__parameter_types__[2] = Global::GetType(typeid(resourceData).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), resourceName);

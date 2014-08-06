@@ -84,7 +84,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security", "PermissionSet");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Policy", "PolicyStatementAttribute");
 						__parameters__[0] = (MonoObject*)permSet;
-						int __param_attributes__ = attributes;
+						mscorlib::System::Int32 __param_attributes__ = attributes;
 						__parameters__[1] = &__param_attributes__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Policy", "PolicyStatement", 2, __parameter_types__, __parameters__);
 					};

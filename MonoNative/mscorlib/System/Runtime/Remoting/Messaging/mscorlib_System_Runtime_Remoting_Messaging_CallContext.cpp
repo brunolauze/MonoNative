@@ -23,7 +23,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "FreeNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -31,7 +31,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "FreeNamedDataSlot", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					}
@@ -41,7 +41,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "GetData", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Object(__result__);
 					}
@@ -50,7 +50,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "GetData", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Object(__result__);
@@ -62,7 +62,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
 							__parameter_types__[1] = Global::GetType(typeid(data).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							__parameters__[1] = (MonoObject*)data;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "SetData", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -71,7 +71,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(data).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							__parameters__[1] = (MonoObject*)data;
@@ -83,7 +83,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "LogicalGetData", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Object(__result__);
 					}
@@ -92,7 +92,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "LogicalGetData", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Object(__result__);
@@ -104,7 +104,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(name).name());
 							__parameter_types__[1] = Global::GetType(typeid(data).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+							__parameters__[0] = (MonoObject*)name;
 							__parameters__[1] = (MonoObject*)data;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "LogicalSetData", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -113,7 +113,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
-							__parameter_types__[0] = Global::GetType(typeid(name).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(data).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 							__parameters__[1] = (MonoObject*)data;
@@ -138,7 +138,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(headers).name()))->eklass);
+							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "Header")), 1));
 							__parameters__[0] = Global::FromArray<mscorlib::System::Runtime::Remoting::Messaging::Header*>(headers, typeid(mscorlib::System::Runtime::Remoting::Messaging::Header).name());
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Messaging", "CallContext", 0, NULL, "SetHeaders", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					}

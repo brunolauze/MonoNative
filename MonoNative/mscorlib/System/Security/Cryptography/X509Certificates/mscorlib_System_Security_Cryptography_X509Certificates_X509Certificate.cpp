@@ -21,7 +21,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(filename).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), filename);
+							__parameters__[0] = (MonoObject*)filename;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "CreateFromCertFile", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate(__result__);
 					}
@@ -30,7 +30,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(filename).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), filename);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "CreateFromCertFile", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate(__result__);
@@ -41,7 +41,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(filename).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), filename);
+							__parameters__[0] = (MonoObject*)filename;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "CreateFromSignedFile", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate(__result__);
 					}
@@ -50,7 +50,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(filename).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), filename);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "CreateFromSignedFile", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Security::Cryptography::X509Certificates::X509Certificate(__result__);
@@ -239,7 +239,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(contentType).name());
-							int __param_contentType__ = contentType;
+							mscorlib::System::Int32 __param_contentType__ = contentType;
 							__parameters__[0] = &__param_contentType__;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Export", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 							MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -259,9 +259,9 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(contentType).name());
 							__parameter_types__[1] = Global::GetType(typeid(password).name());
-							int __param_contentType__ = contentType;
+							mscorlib::System::Int32 __param_contentType__ = contentType;
 							__parameters__[0] = &__param_contentType__;
-							__parameters__[1] = mono_string_new(Global::GetDomain(), password);
+							__parameters__[1] = (MonoObject*)password;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Export", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 							MonoArray *__array_ptr__ = (MonoArray*)__result__;
 							uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -279,8 +279,8 @@ namespace mscorlib
 							MonoType *__parameter_types__[2];
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(contentType).name());
-							__parameter_types__[1] = Global::GetType(typeid(password).name());
-							int __param_contentType__ = contentType;
+							__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
+							mscorlib::System::Int32 __param_contentType__ = contentType;
 							__parameters__[0] = &__param_contentType__;
 							__parameters__[1] = mono_string_new(Global::GetDomain(), password);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Export", __native_object__, 2, __parameter_types__, __parameters__, NULL);
@@ -301,7 +301,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = Global::GetType(typeid(contentType).name());
 							__parameter_types__[1] = Global::GetType(typeid(password).name());
-							int __param_contentType__ = contentType;
+							mscorlib::System::Int32 __param_contentType__ = contentType;
 							__parameters__[0] = &__param_contentType__;
 							__parameters__[1] = (MonoObject*)password;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Export", __native_object__, 2, __parameter_types__, __parameters__, NULL);
@@ -320,7 +320,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rawData).name()))->eklass);
+							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, typeid(mscorlib::System::Byte).name());
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
@@ -329,12 +329,12 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rawData).name()))->eklass);
+							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 							__parameter_types__[1] = Global::GetType(typeid(password).name());
 							__parameter_types__[2] = Global::GetType(typeid(keyStorageFlags).name());
 							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, typeid(mscorlib::System::Byte).name());
-							__parameters__[1] = mono_string_new(Global::GetDomain(), password);
-							int __param_keyStorageFlags__ = keyStorageFlags;
+							__parameters__[1] = (MonoObject*)password;
+							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					}
@@ -343,12 +343,12 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rawData).name()))->eklass);
-							__parameter_types__[1] = Global::GetType(typeid(password).name());
+							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
+							__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[2] = Global::GetType(typeid(keyStorageFlags).name());
 							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, typeid(mscorlib::System::Byte).name());
 							__parameters__[1] = mono_string_new(Global::GetDomain(), password);
-							int __param_keyStorageFlags__ = keyStorageFlags;
+							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					}
@@ -357,12 +357,12 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rawData).name()))->eklass);
+							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 							__parameter_types__[1] = Global::GetType(typeid(password).name());
 							__parameter_types__[2] = Global::GetType(typeid(keyStorageFlags).name());
 							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, typeid(mscorlib::System::Byte).name());
 							__parameters__[1] = (MonoObject*)password;
-							int __param_keyStorageFlags__ = keyStorageFlags;
+							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					}
@@ -372,7 +372,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(fileName).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), fileName);
+							__parameters__[0] = (MonoObject*)fileName;
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -380,7 +380,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(fileName).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), fileName);
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
@@ -392,9 +392,9 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(fileName).name());
 							__parameter_types__[1] = Global::GetType(typeid(password).name());
 							__parameter_types__[2] = Global::GetType(typeid(keyStorageFlags).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), fileName);
-							__parameters__[1] = mono_string_new(Global::GetDomain(), password);
-							int __param_keyStorageFlags__ = keyStorageFlags;
+							__parameters__[0] = (MonoObject*)fileName;
+							__parameters__[1] = (MonoObject*)password;
+							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					}
@@ -403,12 +403,12 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = Global::GetType(typeid(fileName).name());
-							__parameter_types__[1] = Global::GetType(typeid(password).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+							__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[2] = Global::GetType(typeid(keyStorageFlags).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), fileName);
 							__parameters__[1] = mono_string_new(Global::GetDomain(), password);
-							int __param_keyStorageFlags__ = keyStorageFlags;
+							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					}
@@ -420,9 +420,9 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(fileName).name());
 							__parameter_types__[1] = Global::GetType(typeid(password).name());
 							__parameter_types__[2] = Global::GetType(typeid(keyStorageFlags).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), fileName);
+							__parameters__[0] = (MonoObject*)fileName;
 							__parameters__[1] = (MonoObject*)password;
-							int __param_keyStorageFlags__ = keyStorageFlags;
+							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					}
@@ -431,12 +431,12 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = Global::GetType(typeid(fileName).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[1] = Global::GetType(typeid(password).name());
 							__parameter_types__[2] = Global::GetType(typeid(keyStorageFlags).name());
 							__parameters__[0] = mono_string_new(Global::GetDomain(), fileName);
 							__parameters__[1] = (MonoObject*)password;
-							int __param_keyStorageFlags__ = keyStorageFlags;
+							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
 							Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "Import", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 					}

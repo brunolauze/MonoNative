@@ -26,8 +26,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(typeNamespace).name());
 						__parameter_types__[1] = Global::GetType(typeid(assemblyName).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), typeNamespace);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyName);
+						__parameters__[0] = (MonoObject*)typeNamespace;
+						__parameters__[1] = (MonoObject*)assemblyName;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "CodeXmlNamespaceForClrTypeNamespace", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -36,8 +36,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = Global::GetType(typeid(typeNamespace).name());
-						__parameter_types__[1] = Global::GetType(typeid(assemblyName).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), typeNamespace);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), assemblyName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "CodeXmlNamespaceForClrTypeNamespace", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -51,7 +51,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(inNamespace).name());
 						__parameter_types__[1] = Global::GetType(typeid(typeNamespace).name());
 						__parameter_types__[2] = Global::GetType(typeid(assemblyName).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), inNamespace);
+						__parameters__[0] = (MonoObject*)inNamespace;
 						__parameters__[1] = (MonoObject*)typeNamespace;
 						__parameters__[2] = (MonoObject*)assemblyName;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "DecodeXmlNamespaceForClrTypeNamespace", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -62,7 +62,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
-						__parameter_types__[0] = Global::GetType(typeid(inNamespace).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType(typeid(typeNamespace).name());
 						__parameter_types__[2] = Global::GetType(typeid(assemblyName).name());
 						__parameters__[0] = mono_string_new(Global::GetDomain(), inNamespace);
@@ -82,8 +82,8 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType(typeid(type).name());
 						__parameter_types__[4] = Global::GetType(typeid(name).name());
 						__parameters__[0] = (MonoObject*)containingType;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlAttribute);
-						__parameters__[2] = mono_string_new(Global::GetDomain(), xmlNamespace);
+						__parameters__[1] = (MonoObject*)xmlAttribute;
+						__parameters__[2] = (MonoObject*)xmlNamespace;
 						__parameters__[3] = (MonoObject*)type;
 						__parameters__[4] = (MonoObject*)name;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "GetInteropFieldTypeAndNameFromXmlAttribute", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
@@ -94,8 +94,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[5];
 						void *__parameters__[5];
 						__parameter_types__[0] = Global::GetType(typeid(containingType).name());
-						__parameter_types__[1] = Global::GetType(typeid(xmlAttribute).name());
-						__parameter_types__[2] = Global::GetType(typeid(xmlNamespace).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[3] = Global::GetType(typeid(type).name());
 						__parameter_types__[4] = Global::GetType(typeid(name).name());
 						__parameters__[0] = (MonoObject*)containingType;
@@ -116,8 +116,8 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType(typeid(type).name());
 						__parameter_types__[4] = Global::GetType(typeid(name).name());
 						__parameters__[0] = (MonoObject*)containingType;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlElement);
-						__parameters__[2] = mono_string_new(Global::GetDomain(), xmlNamespace);
+						__parameters__[1] = (MonoObject*)xmlElement;
+						__parameters__[2] = (MonoObject*)xmlNamespace;
 						__parameters__[3] = (MonoObject*)type;
 						__parameters__[4] = (MonoObject*)name;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "GetInteropFieldTypeAndNameFromXmlElement", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
@@ -128,8 +128,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[5];
 						void *__parameters__[5];
 						__parameter_types__[0] = Global::GetType(typeid(containingType).name());
-						__parameter_types__[1] = Global::GetType(typeid(xmlElement).name());
-						__parameter_types__[2] = Global::GetType(typeid(xmlNamespace).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[3] = Global::GetType(typeid(type).name());
 						__parameter_types__[4] = Global::GetType(typeid(name).name());
 						__parameters__[0] = (MonoObject*)containingType;
@@ -146,8 +146,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(xmlElement).name());
 						__parameter_types__[1] = Global::GetType(typeid(xmlNamespace).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlElement);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlNamespace);
+						__parameters__[0] = (MonoObject*)xmlElement;
+						__parameters__[1] = (MonoObject*)xmlNamespace;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "GetInteropTypeFromXmlElement", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Type(__result__);
 				}
@@ -156,8 +156,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = Global::GetType(typeid(xmlElement).name());
-						__parameter_types__[1] = Global::GetType(typeid(xmlNamespace).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlElement);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlNamespace);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "GetInteropTypeFromXmlElement", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -170,8 +170,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(xmlType).name());
 						__parameter_types__[1] = Global::GetType(typeid(xmlTypeNamespace).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlType);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlTypeNamespace);
+						__parameters__[0] = (MonoObject*)xmlType;
+						__parameters__[1] = (MonoObject*)xmlTypeNamespace;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "GetInteropTypeFromXmlType", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Type(__result__);
 				}
@@ -180,8 +180,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = Global::GetType(typeid(xmlType).name());
-						__parameter_types__[1] = Global::GetType(typeid(xmlTypeNamespace).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlType);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlTypeNamespace);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "GetInteropTypeFromXmlType", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -205,7 +205,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(soapAction).name());
 						__parameter_types__[1] = Global::GetType(typeid(typeName).name());
 						__parameter_types__[2] = Global::GetType(typeid(methodName).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), soapAction);
+						__parameters__[0] = (MonoObject*)soapAction;
 						__parameters__[1] = (MonoObject*)typeName;
 						__parameters__[2] = (MonoObject*)methodName;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "GetTypeAndMethodNameFromSoapAction", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -216,7 +216,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
-						__parameter_types__[0] = Global::GetType(typeid(soapAction).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType(typeid(typeName).name());
 						__parameter_types__[2] = Global::GetType(typeid(methodName).name());
 						__parameters__[0] = mono_string_new(Global::GetDomain(), soapAction);
@@ -279,7 +279,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(namespaceString).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), namespaceString);
+						__parameters__[0] = (MonoObject*)namespaceString;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "IsClrTypeNamespace", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}
@@ -288,7 +288,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(namespaceString).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), namespaceString);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "IsClrTypeNamespace", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -300,7 +300,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(soapAction).name());
 						__parameter_types__[1] = Global::GetType(typeid(mb).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), soapAction);
+						__parameters__[0] = (MonoObject*)soapAction;
 						__parameters__[1] = (MonoObject*)mb;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "IsSoapActionValidForMethodBase", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -310,7 +310,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = Global::GetType(typeid(soapAction).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType(typeid(mb).name());
 						__parameters__[0] = mono_string_new(Global::GetDomain(), soapAction);
 						__parameters__[1] = (MonoObject*)mb;
@@ -343,8 +343,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(xmlElement).name());
 						__parameter_types__[1] = Global::GetType(typeid(xmlNamespace).name());
 						__parameter_types__[2] = Global::GetType(typeid(type).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlElement);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlNamespace);
+						__parameters__[0] = (MonoObject*)xmlElement;
+						__parameters__[1] = (MonoObject*)xmlNamespace;
 						__parameters__[2] = (MonoObject*)type;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "RegisterInteropXmlElement", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				}
@@ -353,8 +353,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
-						__parameter_types__[0] = Global::GetType(typeid(xmlElement).name());
-						__parameter_types__[1] = Global::GetType(typeid(xmlNamespace).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType(typeid(type).name());
 						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlElement);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlNamespace);
@@ -369,8 +369,8 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(xmlType).name());
 						__parameter_types__[1] = Global::GetType(typeid(xmlTypeNamespace).name());
 						__parameter_types__[2] = Global::GetType(typeid(type).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlType);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlTypeNamespace);
+						__parameters__[0] = (MonoObject*)xmlType;
+						__parameters__[1] = (MonoObject*)xmlTypeNamespace;
 						__parameters__[2] = (MonoObject*)type;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "RegisterInteropXmlType", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				}
@@ -379,8 +379,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
-						__parameter_types__[0] = Global::GetType(typeid(xmlType).name());
-						__parameter_types__[1] = Global::GetType(typeid(xmlTypeNamespace).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType(typeid(type).name());
 						__parameters__[0] = mono_string_new(Global::GetDomain(), xmlType);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), xmlTypeNamespace);
@@ -404,7 +404,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(mb).name());
 						__parameter_types__[1] = Global::GetType(typeid(soapAction).name());
 						__parameters__[0] = (MonoObject*)mb;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), soapAction);
+						__parameters__[1] = (MonoObject*)soapAction;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "RegisterSoapActionForMethodBase", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -413,7 +413,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(mb).name());
-						__parameter_types__[1] = Global::GetType(typeid(soapAction).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = (MonoObject*)mb;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), soapAction);
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting", "SoapServices", 0, NULL, "RegisterSoapActionForMethodBase", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);

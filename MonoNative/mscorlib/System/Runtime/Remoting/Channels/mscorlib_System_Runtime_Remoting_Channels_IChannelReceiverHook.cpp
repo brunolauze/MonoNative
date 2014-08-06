@@ -20,7 +20,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(channelUri).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), channelUri);
+							__parameters__[0] = (MonoObject*)channelUri;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelReceiverHook", 0, NULL, "AddHookChannelUri", __mscorlib_System_Runtime_Remoting_Channels_IChannelReceiverHook, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -28,7 +28,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(channelUri).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), channelUri);
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IChannelReceiverHook", 0, NULL, "AddHookChannelUri", __mscorlib_System_Runtime_Remoting_Channels_IChannelReceiverHook, 1, __parameter_types__, __parameters__, NULL);
 					}

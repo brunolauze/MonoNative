@@ -50,7 +50,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Runtime.InteropServices", "LayoutKind");
-						int __param_layoutKind__ = layoutKind;
+						mscorlib::System::Int32 __param_layoutKind__ = layoutKind;
 						__parameters__[0] = &__param_layoutKind__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.InteropServices", "StructLayoutAttribute", 1, __parameter_types__, __parameters__);
 					};

@@ -30,7 +30,7 @@ namespace mscorlib
 								MonoType *__parameter_types__[1];
 								void *__parameters__[1];
 								__parameter_types__[0] = Global::GetType(typeid(value).name());
-								__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+								__parameters__[0] = (MonoObject*)value;
 								MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapTime", 0, NULL, "Parse", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 								return mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapTime(__result__);
 						}
@@ -39,7 +39,7 @@ namespace mscorlib
 						{
 								MonoType *__parameter_types__[1];
 								void *__parameters__[1];
-								__parameter_types__[0] = Global::GetType(typeid(value).name());
+								__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 								__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 								MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapTime", 0, NULL, "Parse", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 								return mscorlib::System::Runtime::Remoting::Metadata::W3cXsd2001::SoapTime(__result__);

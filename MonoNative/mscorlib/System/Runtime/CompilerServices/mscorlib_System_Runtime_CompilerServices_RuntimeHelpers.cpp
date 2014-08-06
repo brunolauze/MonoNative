@@ -134,7 +134,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(method).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(instantiation).name()))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "RuntimeTypeHandle")), 1));
 						__parameters__[0] = (MonoObject*)method;
 						__parameters__[1] = Global::FromArray<mscorlib::System::RuntimeTypeHandle*>(instantiation, typeid(mscorlib::System::RuntimeTypeHandle).name());
 						Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "RuntimeHelpers", 0, NULL, "PrepareMethod", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);

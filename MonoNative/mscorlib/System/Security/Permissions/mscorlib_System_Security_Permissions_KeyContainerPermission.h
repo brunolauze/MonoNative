@@ -78,7 +78,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "PermissionState");
-						int __param_state__ = state;
+						mscorlib::System::Int32 __param_state__ = state;
 						__parameters__[0] = &__param_state__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "KeyContainerPermission", 1, __parameter_types__, __parameters__);
 					};
@@ -93,7 +93,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "KeyContainerPermissionFlags");
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[0] = &__param_flags__;
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "KeyContainerPermission", 1, __parameter_types__, __parameters__);
 					};
@@ -108,8 +108,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Permissions", "KeyContainerPermissionFlags");
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry"))->eklass);
-						int __param_flags__ = flags;
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry")), 1));
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[0] = &__param_flags__;
 						__parameters__[1] = Global::FromArray<mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntry*>(accessList, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Security.Permissions", "KeyContainerPermissionAccessEntry");
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "KeyContainerPermission", 2, __parameter_types__, __parameters__);

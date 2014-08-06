@@ -29,7 +29,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+						__parameters__[0] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapMethodAttribute", 0, NULL, "set_ResponseXmlElementName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -46,7 +46,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+						__parameters__[0] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapMethodAttribute", 0, NULL, "set_ResponseXmlNamespace", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -63,7 +63,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+						__parameters__[0] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapMethodAttribute", 0, NULL, "set_ReturnXmlElementName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -80,7 +80,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+						__parameters__[0] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapMethodAttribute", 0, NULL, "set_SoapAction", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -114,7 +114,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+						__parameters__[0] = (MonoObject*)value;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Metadata", "SoapMethodAttribute", 0, NULL, "set_XmlNamespace", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
 

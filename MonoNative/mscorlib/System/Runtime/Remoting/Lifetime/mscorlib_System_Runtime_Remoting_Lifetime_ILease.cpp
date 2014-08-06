@@ -68,7 +68,7 @@ namespace mscorlib
 					mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__  ILease::get_CurrentState() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Lifetime", "ILease", 0, NULL, "get_CurrentState", __mscorlib_System_Runtime_Remoting_Lifetime_ILease, 0, NULL, NULL, NULL);
-						return static_cast<mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__>(*(mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__*)mono_object_unbox(__result__));
+						return static_cast<mscorlib::System::Runtime::Remoting::Lifetime::LeaseState::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 					}
 
 

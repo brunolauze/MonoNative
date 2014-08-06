@@ -32,7 +32,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::ResourceLocation::__ENUM__  ManifestResourceInfo::get_ResourceLocation() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ManifestResourceInfo", 0, NULL, "get_ResourceLocation", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Reflection::ResourceLocation::__ENUM__>(*(mscorlib::System::Reflection::ResourceLocation::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Reflection::ResourceLocation::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 

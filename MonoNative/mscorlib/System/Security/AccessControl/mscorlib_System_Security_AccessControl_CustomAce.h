@@ -41,10 +41,10 @@ namespace mscorlib
 						void *__parameters__[3];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.AccessControl", "AceType");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.AccessControl", "AceFlags");
-						__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
-						int __param_type__ = type;
+						__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
+						mscorlib::System::Int32 __param_type__ = type;
 						__parameters__[0] = &__param_type__;
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[1] = &__param_flags__;
 						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(opaque, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "CustomAce", 3, __parameter_types__, __parameters__);

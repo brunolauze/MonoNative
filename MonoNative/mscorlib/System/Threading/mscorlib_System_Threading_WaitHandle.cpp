@@ -20,7 +20,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "WaitHandle", 0, NULL, "WaitAll", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -30,7 +30,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(millisecondsTimeout).name());
 					__parameter_types__[2] = Global::GetType(typeid(exitContext).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
@@ -44,7 +44,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(timeout).name());
 					__parameter_types__[2] = Global::GetType(typeid(exitContext).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
@@ -58,7 +58,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "WaitHandle", 0, NULL, "WaitAny", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -68,7 +68,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(millisecondsTimeout).name());
 					__parameter_types__[2] = Global::GetType(typeid(exitContext).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
@@ -82,7 +82,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(timeout).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
 					__parameters__[1] = (MonoObject*)timeout;
@@ -94,7 +94,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(millisecondsTimeout).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
 					__parameters__[1] = &millisecondsTimeout;
@@ -106,7 +106,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(timeout).name());
 					__parameter_types__[2] = Global::GetType(typeid(exitContext).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
@@ -224,7 +224,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(millisecondsTimeout).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
 					__parameters__[1] = &millisecondsTimeout;
@@ -236,7 +236,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(waitHandles).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "WaitHandle")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(timeout).name());
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::WaitHandle*>(waitHandles, typeid(mscorlib::System::Threading::WaitHandle).name());
 					__parameters__[1] = (MonoObject*)timeout;

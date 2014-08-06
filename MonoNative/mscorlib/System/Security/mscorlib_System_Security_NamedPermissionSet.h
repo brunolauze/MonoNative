@@ -83,7 +83,7 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Permissions", "PermissionState");
 					__parameters__[0] = (MonoObject*)name;
-					int __param_state__ = state;
+					mscorlib::System::Int32 __param_state__ = state;
 					__parameters__[1] = &__param_state__;
 					__native_object__ = Global::New("mscorlib", "System.Security", "NamedPermissionSet", 2, __parameter_types__, __parameters__);
 				};

@@ -19,7 +19,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(role).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), role);
+						__parameters__[0] = (MonoObject*)role;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "GenericPrincipal", 0, NULL, "IsInRole", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}
@@ -28,7 +28,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(role).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), role);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "GenericPrincipal", 0, NULL, "IsInRole", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

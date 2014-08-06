@@ -50,7 +50,7 @@ namespace mscorlib
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "Int32");
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(binaryForm, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
 						__parameters__[1] = &offset;
@@ -76,7 +76,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Security.Principal", "WellKnownSidType");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.Principal", "SecurityIdentifier");
-						int __param_sidType__ = sidType;
+						mscorlib::System::Int32 __param_sidType__ = sidType;
 						__parameters__[0] = &__param_sidType__;
 						__parameters__[1] = (MonoObject*)domainSid;
 						__native_object__ = Global::New("mscorlib", "System.Security.Principal", "SecurityIdentifier", 2, __parameter_types__, __parameters__);

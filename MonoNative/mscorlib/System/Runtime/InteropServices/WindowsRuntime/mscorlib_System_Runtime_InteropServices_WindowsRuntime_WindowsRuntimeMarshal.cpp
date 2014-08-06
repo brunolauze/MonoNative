@@ -61,7 +61,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(s).name());
-							__parameters__[0] = mono_string_new(Global::GetDomain(), s);
+							__parameters__[0] = (MonoObject*)s;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "StringToHString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::IntPtr(__result__);
 					}
@@ -70,7 +70,7 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
-							__parameter_types__[0] = Global::GetType(typeid(s).name());
+							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "StringToHString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::IntPtr(__result__);

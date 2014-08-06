@@ -85,7 +85,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Security.AccessControl", "AccessControlSections");
 						__parameters__[0] = (MonoObject*)name;
-						int __param_includeSections__ = includeSections;
+						mscorlib::System::Int32 __param_includeSections__ = includeSections;
 						__parameters__[1] = &__param_includeSections__;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "DirectorySecurity", 2, __parameter_types__, __parameters__);
 					};

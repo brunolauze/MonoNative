@@ -37,7 +37,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
 						__parameter_types__[1] = Global::GetType(typeid(typeCode).name());
 						__parameters__[0] = (MonoObject*)value;
-						int __param_typeCode__ = typeCode;
+						mscorlib::System::Int32 __param_typeCode__ = typeCode;
 						__parameters__[1] = &__param_typeCode__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "IFormatterConverter", 0, NULL, "Convert", __mscorlib_System_Runtime_Serialization_IFormatterConverter, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);

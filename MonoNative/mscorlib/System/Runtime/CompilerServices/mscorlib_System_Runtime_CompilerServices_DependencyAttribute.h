@@ -40,7 +40,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System.Runtime.CompilerServices", "LoadHint");
 						__parameters__[0] = (MonoObject*)dependentAssemblyArgument;
-						int __param_loadHintArgument__ = loadHintArgument;
+						mscorlib::System::Int32 __param_loadHintArgument__ = loadHintArgument;
 						__parameters__[1] = &__param_loadHintArgument__;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.CompilerServices", "DependencyAttribute", 2, __parameter_types__, __parameters__);
 					};

@@ -20,7 +20,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgb).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rgb, typeid(mscorlib::System::Byte).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricKeyExchangeDeformatter", 0, NULL, "DecryptKeyExchange", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -56,7 +56,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "AsymmetricKeyExchangeDeformatter", 0, NULL, "set_Parameters", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

@@ -26,7 +26,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(friendlyName).name());
 				__parameter_types__[1] = Global::GetType(typeid(securityInfo).name());
 				__parameter_types__[2] = Global::GetType(typeid(appDomainInfo).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), friendlyName);
+				__parameters__[0] = (MonoObject*)friendlyName;
 				__parameters__[1] = (MonoObject*)securityInfo;
 				__parameters__[2] = (MonoObject*)appDomainInfo;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainManager", 0, NULL, "CreateDomain", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -37,7 +37,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
-				__parameter_types__[0] = Global::GetType(typeid(friendlyName).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[1] = Global::GetType(typeid(securityInfo).name());
 				__parameter_types__[2] = Global::GetType(typeid(appDomainInfo).name());
 				__parameters__[0] = mono_string_new(Global::GetDomain(), friendlyName);
@@ -103,7 +103,7 @@ namespace mscorlib
 		mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__  AppDomainManager::get_InitializationFlags() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainManager", 0, NULL, "get_InitializationFlags", __native_object__, 0, NULL, NULL, NULL);
-			return static_cast<mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__>(*(mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__*)mono_object_unbox(__result__));
+			return static_cast<mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 		}
 
 		void AppDomainManager::set_InitializationFlags(mscorlib::System::AppDomainManagerInitializationOptions::__ENUM__  value)
@@ -111,7 +111,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			int __param_value__ = value;
+			mscorlib::System::Int32 __param_value__ = value;
 			__parameters__[0] = &__param_value__;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainManager", 0, NULL, "set_InitializationFlags", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}

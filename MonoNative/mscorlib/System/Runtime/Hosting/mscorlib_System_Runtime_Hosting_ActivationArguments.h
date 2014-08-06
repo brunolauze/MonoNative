@@ -56,7 +56,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "ActivationContext");
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "String"))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 						__parameters__[0] = (MonoObject*)activationContext;
 						__parameters__[1] = Global::FromArray<mscorlib::System::String*>(activationData, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "String");
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Hosting", "ActivationArguments", 2, __parameter_types__, __parameters__);
@@ -68,7 +68,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "ApplicationIdentity");
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "String"))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 						__parameters__[0] = (MonoObject*)applicationIdentity;
 						__parameters__[1] = Global::FromArray<mscorlib::System::String*>(activationData, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "String");
 						__native_object__ = Global::New("mscorlib", "System.Runtime.Hosting", "ActivationArguments", 2, __parameter_types__, __parameters__);

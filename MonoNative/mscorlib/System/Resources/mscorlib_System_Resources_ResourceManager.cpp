@@ -20,8 +20,8 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(baseName).name());
 					__parameter_types__[1] = Global::GetType(typeid(resourceDir).name());
 					__parameter_types__[2] = Global::GetType(typeid(usingResourceSet).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), baseName);
-					__parameters__[1] = mono_string_new(Global::GetDomain(), resourceDir);
+					__parameters__[0] = (MonoObject*)baseName;
+					__parameters__[1] = (MonoObject*)resourceDir;
 					__parameters__[2] = (MonoObject*)usingResourceSet;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "CreateFileBasedResourceManager", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Resources::ResourceManager(__result__);
@@ -31,8 +31,8 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[3];
 					void *__parameters__[3];
-					__parameter_types__[0] = Global::GetType(typeid(baseName).name());
-					__parameter_types__[1] = Global::GetType(typeid(resourceDir).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+					__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[2] = Global::GetType(typeid(usingResourceSet).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), baseName);
 					__parameters__[1] = mono_string_new(Global::GetDomain(), resourceDir);
@@ -46,7 +46,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[0] = (MonoObject*)name;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetObject", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Object(__result__);
 			}
@@ -55,7 +55,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetObject", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Object(__result__);
@@ -67,7 +67,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(culture).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[0] = (MonoObject*)name;
 					__parameters__[1] = (MonoObject*)culture;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetObject", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Object(__result__);
@@ -77,7 +77,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(culture).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = (MonoObject*)culture;
@@ -104,7 +104,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[0] = (MonoObject*)name;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
 			}
@@ -113,7 +113,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetString", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -125,7 +125,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(culture).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[0] = (MonoObject*)name;
 					__parameters__[1] = (MonoObject*)culture;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetString", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::String(__result__);
@@ -135,7 +135,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(culture).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = (MonoObject*)culture;
@@ -148,7 +148,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[0] = (MonoObject*)name;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetStream", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::UnmanagedMemoryStream(__result__);
 			}
@@ -157,7 +157,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetStream", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::UnmanagedMemoryStream(__result__);
@@ -169,7 +169,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(name).name());
 					__parameter_types__[1] = Global::GetType(typeid(culture).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+					__parameters__[0] = (MonoObject*)name;
 					__parameters__[1] = (MonoObject*)culture;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Resources", "ResourceManager", 0, NULL, "GetStream", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::IO::UnmanagedMemoryStream(__result__);
@@ -179,7 +179,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[2];
 					void *__parameters__[2];
-					__parameter_types__[0] = Global::GetType(typeid(name).name());
+					__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 					__parameter_types__[1] = Global::GetType(typeid(culture).name());
 					__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 					__parameters__[1] = (MonoObject*)culture;

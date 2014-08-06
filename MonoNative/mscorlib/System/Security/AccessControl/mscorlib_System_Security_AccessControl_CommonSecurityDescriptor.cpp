@@ -59,7 +59,7 @@ namespace mscorlib
 				mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__  CommonSecurityDescriptor::get_ControlFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 0, NULL, "get_ControlFlags", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__>(*(mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::AccessControl::ControlFlags::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

@@ -61,7 +61,7 @@ namespace mscorlib
 			{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(tokens).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Threading", "CancellationToken")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Threading::CancellationToken*>(tokens, typeid(mscorlib::System::Threading::CancellationToken).name());
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "CancellationTokenSource", 0, NULL, "CreateLinkedTokenSource", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Threading::CancellationTokenSource(__result__);

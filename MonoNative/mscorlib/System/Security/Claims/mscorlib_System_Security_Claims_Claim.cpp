@@ -48,7 +48,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "set_Type", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -65,7 +65,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "set_Value", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -82,7 +82,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "set_ValueType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -99,7 +99,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "set_Issuer", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -116,7 +116,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "Claim", 0, NULL, "set_OriginalIssuer", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

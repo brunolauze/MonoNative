@@ -53,7 +53,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(type).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), type);
+						__parameters__[0] = (MonoObject*)type;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "FindAll", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>(__result__);
 				}
@@ -62,7 +62,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(type).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), type);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "FindAll", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Security::Claims::Claim>(__result__);
@@ -83,7 +83,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(type).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), type);
+						__parameters__[0] = (MonoObject*)type;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "FindFirst", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Claims::Claim(__result__);
 				}
@@ -92,7 +92,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(type).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), type);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "FindFirst", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Claims::Claim(__result__);
@@ -114,8 +114,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(type).name());
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), type);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), value);
+						__parameters__[0] = (MonoObject*)type;
+						__parameters__[1] = (MonoObject*)value;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "HasClaim", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}
@@ -124,8 +124,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = Global::GetType(typeid(type).name());
-						__parameter_types__[1] = Global::GetType(typeid(value).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), type);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), value);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "HasClaim", __native_object__, 2, __parameter_types__, __parameters__, NULL);
@@ -206,7 +206,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "set_Label", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -231,7 +231,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "set_NameClaimType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -248,7 +248,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+					__parameters__[0] = (MonoObject*)value;
 					Global::InvokeMethod("mscorlib", "System.Security.Claims", "ClaimsIdentity", 0, NULL, "set_RoleClaimType", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

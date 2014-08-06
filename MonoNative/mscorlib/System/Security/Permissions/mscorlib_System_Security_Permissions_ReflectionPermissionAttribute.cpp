@@ -25,7 +25,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__  ReflectionPermissionAttribute::get_Flags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ReflectionPermissionAttribute", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__>(*(mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 				void ReflectionPermissionAttribute::set_Flags(mscorlib::System::Security::Permissions::ReflectionPermissionFlag::__ENUM__  value)
@@ -33,7 +33,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					int __param_value__ = value;
+					mscorlib::System::Int32 __param_value__ = value;
 					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "ReflectionPermissionAttribute", 0, NULL, "set_Flags", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
@@ -128,7 +128,7 @@ namespace mscorlib
 				mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  ReflectionPermissionAttribute::get_Action() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "get_Action", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::Permissions::SecurityAction::__ENUM__>(*(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::Permissions::SecurityAction::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 				void ReflectionPermissionAttribute::set_Action(mscorlib::System::Security::Permissions::SecurityAction::__ENUM__  value)
@@ -136,7 +136,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					int __param_value__ = value;
+					mscorlib::System::Int32 __param_value__ = value;
 					__parameters__[0] = &__param_value__;
 					Global::InvokeMethod("mscorlib", "System.Security.Permissions", "SecurityAttribute", 0, NULL, "set_Action", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}

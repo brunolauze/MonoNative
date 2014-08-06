@@ -27,7 +27,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(identity).name());
-				__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(manifestPaths).name()))->eklass);
+				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 				__parameters__[0] = (MonoObject*)identity;
 				__parameters__[1] = Global::FromArray<mscorlib::System::String*>(manifestPaths, typeid(mscorlib::System::String).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ActivationContext", 0, NULL, "CreatePartialActivationContext", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -44,7 +44,7 @@ namespace mscorlib
 		mscorlib::System::ActivationContext::ContextForm::__ENUM__  ActivationContext::get_Form() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "ActivationContext", 0, NULL, "get_Form", __native_object__, 0, NULL, NULL, NULL);
-			return static_cast<mscorlib::System::ActivationContext::ContextForm::__ENUM__>(*(mscorlib::System::ActivationContext::ContextForm::__ENUM__*)mono_object_unbox(__result__));
+			return static_cast<mscorlib::System::ActivationContext::ContextForm::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 		}
 
 

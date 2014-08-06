@@ -26,7 +26,7 @@ namespace mscorlib
 							__parameter_types__[1] = Global::GetType(typeid(invKind).name());
 							__parameter_types__[2] = Global::GetType(typeid(ppv).name());
 							__parameters__[0] = &memid;
-							int __param_invKind__ = invKind;
+							mscorlib::System::Int32 __param_invKind__ = invKind;
 							__parameters__[1] = &__param_invKind__;
 							__parameters__[2] = (MonoObject*)ppv;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeInfo2", 0, NULL, "AddressOfMember", __mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2, 3, __parameter_types__, __parameters__, NULL);
@@ -66,7 +66,7 @@ namespace mscorlib
 							__parameter_types__[3] = Global::GetType(typeid(pBstrName).name());
 							__parameter_types__[4] = Global::GetType(typeid(pwOrdinal).name());
 							__parameters__[0] = &memid;
-							int __param_invKind__ = invKind;
+							mscorlib::System::Int32 __param_invKind__ = invKind;
 							__parameters__[1] = &__param_invKind__;
 							__parameters__[2] = (MonoObject*)pBstrDllName;
 							__parameters__[3] = (MonoObject*)pBstrName;
@@ -95,9 +95,9 @@ namespace mscorlib
 					{
 							MonoType *__parameter_types__[3];
 							void *__parameters__[3];
-							__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgszNames).name()))->eklass);
+							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 							__parameter_types__[1] = Global::GetType(typeid(cNames).name());
-							__parameter_types__[2] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(pMemId).name()))->eklass);
+							__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 							__parameters__[0] = Global::FromArray<mscorlib::System::String*>(rgszNames, typeid(mscorlib::System::String).name());
 							__parameters__[1] = &cNames;
 							__parameters__[2] = Global::FromArray<mscorlib::System::Int32*>(pMemId, typeid(mscorlib::System::Int32).name());
@@ -111,7 +111,7 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(index).name());
 							__parameter_types__[1] = Global::GetType(typeid(pImplTypeFlags).name());
 							__parameters__[0] = &index;
-							int __param_pImplTypeFlags__ = pImplTypeFlags;
+							mscorlib::System::Int32 __param_pImplTypeFlags__ = pImplTypeFlags;
 							__parameters__[1] = &__param_pImplTypeFlags__;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeInfo2", 0, NULL, "GetImplTypeFlags", __mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2, 2, __parameter_types__, __parameters__, NULL);
 					}
@@ -121,7 +121,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(pTypeKind).name());
-							int __param_pTypeKind__ = pTypeKind;
+							mscorlib::System::Int32 __param_pTypeKind__ = pTypeKind;
 							__parameters__[0] = &__param_pTypeKind__;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeInfo2", 0, NULL, "GetTypeKind", __mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2, 1, __parameter_types__, __parameters__, NULL);
 					}
@@ -162,7 +162,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[4];
 							void *__parameters__[4];
 							__parameter_types__[0] = Global::GetType(typeid(memid).name());
-							__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(rgBstrNames).name()))->eklass);
+							__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 							__parameter_types__[2] = Global::GetType(typeid(cMaxNames).name());
 							__parameter_types__[3] = Global::GetType(typeid(pcNames).name());
 							__parameters__[0] = &memid;
@@ -231,7 +231,7 @@ namespace mscorlib
 							__parameter_types__[1] = Global::GetType(typeid(invKind).name());
 							__parameter_types__[2] = Global::GetType(typeid(pFuncIndex).name());
 							__parameters__[0] = &memid;
-							int __param_invKind__ = invKind;
+							mscorlib::System::Int32 __param_invKind__ = invKind;
 							__parameters__[1] = &__param_invKind__;
 							__parameters__[2] = &pFuncIndex;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "ITypeInfo2", 0, NULL, "GetFuncIndexOfMemId", __mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo2, 3, __parameter_types__, __parameters__, NULL);

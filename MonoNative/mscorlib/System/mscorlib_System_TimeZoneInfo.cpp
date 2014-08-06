@@ -65,7 +65,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(dateTime).name());
 				__parameter_types__[1] = Global::GetType(typeid(destinationTimeZoneId).name());
 				__parameters__[0] = (MonoObject*)dateTime;
-				__parameters__[1] = mono_string_new(Global::GetDomain(), destinationTimeZoneId);
+				__parameters__[1] = (MonoObject*)destinationTimeZoneId;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "ConvertTimeBySystemTimeZoneId", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::DateTime(__result__);
 		}
@@ -75,7 +75,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(dateTime).name());
-				__parameter_types__[1] = Global::GetType(typeid(destinationTimeZoneId).name());
+				__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = (MonoObject*)dateTime;
 				__parameters__[1] = mono_string_new(Global::GetDomain(), destinationTimeZoneId);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "ConvertTimeBySystemTimeZoneId", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -90,8 +90,8 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(sourceTimeZoneId).name());
 				__parameter_types__[2] = Global::GetType(typeid(destinationTimeZoneId).name());
 				__parameters__[0] = (MonoObject*)dateTime;
-				__parameters__[1] = mono_string_new(Global::GetDomain(), sourceTimeZoneId);
-				__parameters__[2] = mono_string_new(Global::GetDomain(), destinationTimeZoneId);
+				__parameters__[1] = (MonoObject*)sourceTimeZoneId;
+				__parameters__[2] = (MonoObject*)destinationTimeZoneId;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "ConvertTimeBySystemTimeZoneId", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::DateTime(__result__);
 		}
@@ -101,8 +101,8 @@ namespace mscorlib
 				MonoType *__parameter_types__[3];
 				void *__parameters__[3];
 				__parameter_types__[0] = Global::GetType(typeid(dateTime).name());
-				__parameter_types__[1] = Global::GetType(typeid(sourceTimeZoneId).name());
-				__parameter_types__[2] = Global::GetType(typeid(destinationTimeZoneId).name());
+				__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = (MonoObject*)dateTime;
 				__parameters__[1] = mono_string_new(Global::GetDomain(), sourceTimeZoneId);
 				__parameters__[2] = mono_string_new(Global::GetDomain(), destinationTimeZoneId);
@@ -117,7 +117,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(dateTimeOffset).name());
 				__parameter_types__[1] = Global::GetType(typeid(destinationTimeZoneId).name());
 				__parameters__[0] = (MonoObject*)dateTimeOffset;
-				__parameters__[1] = mono_string_new(Global::GetDomain(), destinationTimeZoneId);
+				__parameters__[1] = (MonoObject*)destinationTimeZoneId;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "ConvertTimeBySystemTimeZoneId", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::DateTimeOffset(__result__);
 		}
@@ -127,7 +127,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
 				__parameter_types__[0] = Global::GetType(typeid(dateTimeOffset).name());
-				__parameter_types__[1] = Global::GetType(typeid(destinationTimeZoneId).name());
+				__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = (MonoObject*)dateTimeOffset;
 				__parameters__[1] = mono_string_new(Global::GetDomain(), destinationTimeZoneId);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "ConvertTimeBySystemTimeZoneId", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -176,10 +176,10 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(baseUtcOffset).name());
 				__parameter_types__[2] = Global::GetType(typeid(displayName).name());
 				__parameter_types__[3] = Global::GetType(typeid(standardDisplayName).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), id);
+				__parameters__[0] = (MonoObject*)id;
 				__parameters__[1] = (MonoObject*)baseUtcOffset;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), displayName);
-				__parameters__[3] = mono_string_new(Global::GetDomain(), standardDisplayName);
+				__parameters__[2] = (MonoObject*)displayName;
+				__parameters__[3] = (MonoObject*)standardDisplayName;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "CreateCustomTimeZone", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeZoneInfo(__result__);
 		}
@@ -188,10 +188,10 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[4];
 				void *__parameters__[4];
-				__parameter_types__[0] = Global::GetType(typeid(id).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[1] = Global::GetType(typeid(baseUtcOffset).name());
-				__parameter_types__[2] = Global::GetType(typeid(displayName).name());
-				__parameter_types__[3] = Global::GetType(typeid(standardDisplayName).name());
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
+				__parameter_types__[3] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = mono_string_new(Global::GetDomain(), id);
 				__parameters__[1] = (MonoObject*)baseUtcOffset;
 				__parameters__[2] = mono_string_new(Global::GetDomain(), displayName);
@@ -209,12 +209,12 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(displayName).name());
 				__parameter_types__[3] = Global::GetType(typeid(standardDisplayName).name());
 				__parameter_types__[4] = Global::GetType(typeid(daylightDisplayName).name());
-				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(adjustmentRules).name()))->eklass);
-				__parameters__[0] = mono_string_new(Global::GetDomain(), id);
+				__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "AdjustmentRule")), 1));
+				__parameters__[0] = (MonoObject*)id;
 				__parameters__[1] = (MonoObject*)baseUtcOffset;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), displayName);
-				__parameters__[3] = mono_string_new(Global::GetDomain(), standardDisplayName);
-				__parameters__[4] = mono_string_new(Global::GetDomain(), daylightDisplayName);
+				__parameters__[2] = (MonoObject*)displayName;
+				__parameters__[3] = (MonoObject*)standardDisplayName;
+				__parameters__[4] = (MonoObject*)daylightDisplayName;
 				__parameters__[5] = Global::FromArray<mscorlib::System::TimeZoneInfo::AdjustmentRule*>(adjustmentRules, typeid(mscorlib::System::TimeZoneInfo::AdjustmentRule).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "CreateCustomTimeZone", NullMonoObject, 6, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeZoneInfo(__result__);
@@ -224,12 +224,12 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[6];
 				void *__parameters__[6];
-				__parameter_types__[0] = Global::GetType(typeid(id).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[1] = Global::GetType(typeid(baseUtcOffset).name());
-				__parameter_types__[2] = Global::GetType(typeid(displayName).name());
-				__parameter_types__[3] = Global::GetType(typeid(standardDisplayName).name());
-				__parameter_types__[4] = Global::GetType(typeid(daylightDisplayName).name());
-				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(adjustmentRules).name()))->eklass);
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
+				__parameter_types__[3] = Global::GetType("mscorlib", "System", "String");
+				__parameter_types__[4] = Global::GetType("mscorlib", "System", "String");
+				__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "AdjustmentRule")), 1));
 				__parameters__[0] = mono_string_new(Global::GetDomain(), id);
 				__parameters__[1] = (MonoObject*)baseUtcOffset;
 				__parameters__[2] = mono_string_new(Global::GetDomain(), displayName);
@@ -249,13 +249,13 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(displayName).name());
 				__parameter_types__[3] = Global::GetType(typeid(standardDisplayName).name());
 				__parameter_types__[4] = Global::GetType(typeid(daylightDisplayName).name());
-				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(adjustmentRules).name()))->eklass);
+				__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "AdjustmentRule")), 1));
 				__parameter_types__[6] = Global::GetType(typeid(disableDaylightSavingTime).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), id);
+				__parameters__[0] = (MonoObject*)id;
 				__parameters__[1] = (MonoObject*)baseUtcOffset;
-				__parameters__[2] = mono_string_new(Global::GetDomain(), displayName);
-				__parameters__[3] = mono_string_new(Global::GetDomain(), standardDisplayName);
-				__parameters__[4] = mono_string_new(Global::GetDomain(), daylightDisplayName);
+				__parameters__[2] = (MonoObject*)displayName;
+				__parameters__[3] = (MonoObject*)standardDisplayName;
+				__parameters__[4] = (MonoObject*)daylightDisplayName;
 				__parameters__[5] = Global::FromArray<mscorlib::System::TimeZoneInfo::AdjustmentRule*>(adjustmentRules, typeid(mscorlib::System::TimeZoneInfo::AdjustmentRule).name());
 				__parameters__[6] = reinterpret_cast<void*>(disableDaylightSavingTime);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "CreateCustomTimeZone", NullMonoObject, 7, __parameter_types__, __parameters__, NULL);
@@ -266,12 +266,12 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[7];
 				void *__parameters__[7];
-				__parameter_types__[0] = Global::GetType(typeid(id).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[1] = Global::GetType(typeid(baseUtcOffset).name());
-				__parameter_types__[2] = Global::GetType(typeid(displayName).name());
-				__parameter_types__[3] = Global::GetType(typeid(standardDisplayName).name());
-				__parameter_types__[4] = Global::GetType(typeid(daylightDisplayName).name());
-				__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(adjustmentRules).name()))->eklass);
+				__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
+				__parameter_types__[3] = Global::GetType("mscorlib", "System", "String");
+				__parameter_types__[4] = Global::GetType("mscorlib", "System", "String");
+				__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "AdjustmentRule")), 1));
 				__parameter_types__[6] = Global::GetType(typeid(disableDaylightSavingTime).name());
 				__parameters__[0] = mono_string_new(Global::GetDomain(), id);
 				__parameters__[1] = (MonoObject*)baseUtcOffset;
@@ -309,7 +309,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(id).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), id);
+				__parameters__[0] = (MonoObject*)id;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "FindSystemTimeZoneById", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeZoneInfo(__result__);
 		}
@@ -318,7 +318,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = Global::GetType(typeid(id).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = mono_string_new(Global::GetDomain(), id);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "FindSystemTimeZoneById", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeZoneInfo(__result__);
@@ -329,7 +329,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(source).name());
-				__parameters__[0] = mono_string_new(Global::GetDomain(), source);
+				__parameters__[0] = (MonoObject*)source;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "FromSerializedString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeZoneInfo(__result__);
 		}
@@ -338,7 +338,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = Global::GetType(typeid(source).name());
+				__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 				__parameters__[0] = mono_string_new(Global::GetDomain(), source);
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo", 0, NULL, "FromSerializedString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeZoneInfo(__result__);
@@ -602,7 +602,7 @@ namespace mscorlib
 				__parameters__[0] = (MonoObject*)timeOfDay;
 				__parameters__[1] = &month;
 				__parameters__[2] = &week;
-				int __param_dayOfWeek__ = dayOfWeek;
+				mscorlib::System::Int32 __param_dayOfWeek__ = dayOfWeek;
 				__parameters__[3] = &__param_dayOfWeek__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+TransitionTime", 0, NULL, "CreateFloatingDateRule", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::TimeZoneInfo::TransitionTime(__result__);
@@ -671,7 +671,7 @@ namespace mscorlib
 		mscorlib::System::DayOfWeek::__ENUM__  TimeZoneInfo::TransitionTime::get_DayOfWeek() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "TimeZoneInfo+TransitionTime", 0, NULL, "get_DayOfWeek", __native_object__, 0, NULL, NULL, NULL);
-			return static_cast<mscorlib::System::DayOfWeek::__ENUM__>(*(mscorlib::System::DayOfWeek::__ENUM__*)mono_object_unbox(__result__));
+			return static_cast<mscorlib::System::DayOfWeek::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 		}
 
 

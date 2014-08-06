@@ -27,7 +27,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(algName).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), algName);
+						__parameters__[0] = (MonoObject*)algName;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "KeyedHashAlgorithm", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::KeyedHashAlgorithm(__result__);
 				}
@@ -36,7 +36,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(algName).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), algName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "KeyedHashAlgorithm", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::KeyedHashAlgorithm(__result__);
@@ -62,7 +62,7 @@ namespace mscorlib
 				{
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
-					__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, typeid(mscorlib::System::Byte).name());
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "KeyedHashAlgorithm", 0, NULL, "set_Key", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}

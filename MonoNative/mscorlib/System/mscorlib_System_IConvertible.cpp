@@ -17,7 +17,7 @@ namespace mscorlib
 		mscorlib::System::TypeCode::__ENUM__ IConvertible::GetTypeCode()
 		{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "IConvertible", 0, NULL, "GetTypeCode", __mscorlib_System_IConvertible, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::TypeCode::__ENUM__>(*(mscorlib::System::TypeCode::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::TypeCode::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 		}
 
 		mscorlib::System::Boolean IConvertible::ToBoolean(mscorlib::System::IFormatProvider provider)

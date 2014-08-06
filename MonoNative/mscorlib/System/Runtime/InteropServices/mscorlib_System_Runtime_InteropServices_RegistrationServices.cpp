@@ -57,7 +57,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(assembly).name());
 						__parameter_types__[1] = Global::GetType(typeid(flags).name());
 						__parameters__[0] = (MonoObject*)assembly;
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[1] = &__param_flags__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "RegistrationServices", 0, NULL, "RegisterAssembly", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
@@ -112,9 +112,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(classContext).name());
 						__parameter_types__[2] = Global::GetType(typeid(flags).name());
 						__parameters__[0] = (MonoObject*)type;
-						int __param_classContext__ = classContext;
+						mscorlib::System::Int32 __param_classContext__ = classContext;
 						__parameters__[1] = &__param_classContext__;
-						int __param_flags__ = flags;
+						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[2] = &__param_flags__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "RegistrationServices", 0, NULL, "RegisterTypeForComClients", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);

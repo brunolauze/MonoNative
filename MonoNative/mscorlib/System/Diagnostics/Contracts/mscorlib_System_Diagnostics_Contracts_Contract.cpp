@@ -30,7 +30,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
+						__parameters__[1] = (MonoObject*)userMessage;
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Assert", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -39,7 +39,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
-						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Assert", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -61,7 +61,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
+						__parameters__[1] = (MonoObject*)userMessage;
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Assume", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -70,7 +70,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
-						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Assume", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -97,7 +97,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
+						__parameters__[1] = (MonoObject*)userMessage;
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Ensures", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -106,7 +106,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
-						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Ensures", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -156,7 +156,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
+						__parameters__[1] = (MonoObject*)userMessage;
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Invariant", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -165,7 +165,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
-						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Invariant", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -187,7 +187,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
+						__parameters__[1] = (MonoObject*)userMessage;
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -196,7 +196,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
-						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);

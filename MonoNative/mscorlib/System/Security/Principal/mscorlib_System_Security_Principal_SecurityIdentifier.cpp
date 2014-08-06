@@ -48,7 +48,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(binaryForm).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(offset).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(binaryForm, typeid(mscorlib::System::Byte).name());
 						__parameters__[1] = &offset;
@@ -92,7 +92,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(type).name());
-						int __param_type__ = type;
+						mscorlib::System::Int32 __param_type__ = type;
 						__parameters__[0] = &__param_type__;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "SecurityIdentifier", 0, NULL, "IsWellKnown", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);

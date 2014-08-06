@@ -21,7 +21,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[0] = (MonoObject*)name;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "CreateFromName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
 				}
@@ -30,7 +30,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "CreateFromName", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
@@ -41,8 +41,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
-						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
+						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "CreateFromName", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
@@ -52,8 +52,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(args).name()))->eklass);
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(args, typeid(mscorlib::System::Object).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "CreateFromName", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -65,7 +65,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(name).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
+						__parameters__[0] = (MonoObject*)name;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "MapNameToOID", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -74,7 +74,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(name).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), name);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "MapNameToOID", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
@@ -85,7 +85,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(algorithm).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(names).name()))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 						__parameters__[0] = (MonoObject*)algorithm;
 						__parameters__[1] = Global::FromArray<mscorlib::System::String*>(names, typeid(mscorlib::System::String).name());
 						Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "AddAlgorithm", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -96,8 +96,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(oid).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(names).name()))->eklass);
-						__parameters__[0] = mono_string_new(Global::GetDomain(), oid);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
+						__parameters__[0] = (MonoObject*)oid;
 						__parameters__[1] = Global::FromArray<mscorlib::System::String*>(names, typeid(mscorlib::System::String).name());
 						Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "AddOID", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -106,8 +106,8 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = Global::GetType(typeid(oid).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(names).name()))->eklass);
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 						__parameters__[0] = mono_string_new(Global::GetDomain(), oid);
 						__parameters__[1] = Global::FromArray<mscorlib::System::String*>(names, typeid(mscorlib::System::String).name());
 						Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "AddOID", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
@@ -118,7 +118,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(str).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), str);
+						__parameters__[0] = (MonoObject*)str;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "EncodeOID", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
 						uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -135,7 +135,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(str).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), str);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoConfig", 0, NULL, "EncodeOID", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;

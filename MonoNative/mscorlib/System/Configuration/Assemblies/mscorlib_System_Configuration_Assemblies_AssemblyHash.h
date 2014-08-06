@@ -39,8 +39,8 @@ namespace mscorlib
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Configuration.Assemblies", "AssemblyHashAlgorithm");
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
-						int __param_algorithm__ = algorithm;
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
+						mscorlib::System::Int32 __param_algorithm__ = algorithm;
 						__parameters__[0] = &__param_algorithm__;
 						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(value, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Configuration.Assemblies", "AssemblyHash", 2, __parameter_types__, __parameters__);
@@ -52,7 +52,7 @@ namespace mscorlib
 					{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Configuration.Assemblies", "AssemblyHash", 1, __parameter_types__, __parameters__);
 					};

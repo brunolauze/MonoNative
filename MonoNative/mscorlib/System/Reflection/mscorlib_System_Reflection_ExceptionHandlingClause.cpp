@@ -39,7 +39,7 @@ namespace mscorlib
 			mscorlib::System::Reflection::ExceptionHandlingClauseOptions::__ENUM__  ExceptionHandlingClause::get_Flags() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "ExceptionHandlingClause", 0, NULL, "get_Flags", __native_object__, 0, NULL, NULL, NULL);
-				return static_cast<mscorlib::System::Reflection::ExceptionHandlingClauseOptions::__ENUM__>(*(mscorlib::System::Reflection::ExceptionHandlingClauseOptions::__ENUM__*)mono_object_unbox(__result__));
+				return static_cast<mscorlib::System::Reflection::ExceptionHandlingClauseOptions::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 			}
 
 

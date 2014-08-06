@@ -61,7 +61,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[5];
 							void *__parameters__[5];
 							__parameter_types__[0] = Global::GetType("mscorlib", "System", "Object");
-							__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Object"))->eklass);
+							__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 							__parameter_types__[2] = Global::GetType("mscorlib", "System", "Int32");
 							__parameter_types__[3] = Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "LogicalCallContext");
 							__parameter_types__[4] = Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodCallMessage");

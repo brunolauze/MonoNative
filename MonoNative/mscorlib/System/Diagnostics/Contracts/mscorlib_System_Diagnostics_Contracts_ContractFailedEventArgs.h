@@ -39,7 +39,7 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Exception");
-						int __param_failureKind__ = failureKind;
+						mscorlib::System::Int32 __param_failureKind__ = failureKind;
 						__parameters__[0] = &__param_failureKind__;
 						__parameters__[1] = (MonoObject*)message;
 						__parameters__[2] = (MonoObject*)condition;

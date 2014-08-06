@@ -30,7 +30,7 @@ namespace mscorlib
 			{
 				MonoType *__parameter_types__[5];
 				void *__parameters__[5];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType("mscorlib", "System", "Byte"))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 				__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[2] = Global::GetType("mscorlib", "System", "Version");
 				__parameter_types__[3] = Global::GetType("mscorlib", "System", "String");

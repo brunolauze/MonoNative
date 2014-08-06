@@ -60,7 +60,7 @@ namespace mscorlib
 				mscorlib::System::Security::Cryptography::KeyNumber::__ENUM__  CspKeyContainerInfo::get_KeyNumber() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CspKeyContainerInfo", 0, NULL, "get_KeyNumber", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Security::Cryptography::KeyNumber::__ENUM__>(*(mscorlib::System::Security::Cryptography::KeyNumber::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Security::Cryptography::KeyNumber::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

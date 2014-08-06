@@ -27,7 +27,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(hashName).name());
-						__parameters__[0] = mono_string_new(Global::GetDomain(), hashName);
+						__parameters__[0] = (MonoObject*)hashName;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RIPEMD160", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::RIPEMD160(__result__);
 				}
@@ -36,7 +36,7 @@ namespace mscorlib
 				{
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
-						__parameter_types__[0] = Global::GetType(typeid(hashName).name());
+						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), hashName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "RIPEMD160", 0, NULL, "Create", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Cryptography::RIPEMD160(__result__);

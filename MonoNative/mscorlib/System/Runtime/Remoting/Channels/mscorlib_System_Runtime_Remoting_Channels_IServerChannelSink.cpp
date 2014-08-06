@@ -68,7 +68,7 @@ namespace mscorlib
 							__parameters__[5] = (MonoObject*)responseHeaders;
 							__parameters__[6] = (MonoObject*)responseStream;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Channels", "IServerChannelSink", 0, NULL, "ProcessMessage", __mscorlib_System_Runtime_Remoting_Channels_IServerChannelSink, 7, __parameter_types__, __parameters__, NULL);
-							return static_cast<mscorlib::System::Runtime::Remoting::Channels::ServerProcessing::__ENUM__>(*(mscorlib::System::Runtime::Remoting::Channels::ServerProcessing::__ENUM__*)mono_object_unbox(__result__));
+							return static_cast<mscorlib::System::Runtime::Remoting::Channels::ServerProcessing::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 					}
 
 					//Get Set Properties Methods

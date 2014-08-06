@@ -19,7 +19,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::InteropServices::TypeLibVarFlags::__ENUM__  TypeLibVarAttribute::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "TypeLibVarAttribute", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Runtime::InteropServices::TypeLibVarFlags::__ENUM__>(*(mscorlib::System::Runtime::InteropServices::TypeLibVarFlags::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Runtime::InteropServices::TypeLibVarFlags::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

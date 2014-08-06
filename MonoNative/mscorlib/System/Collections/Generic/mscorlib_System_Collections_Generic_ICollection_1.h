@@ -78,7 +78,7 @@ namespace mscorlib
 					{
 						MonoType *__parameter_types__[2];
 						void *__parameters__[2];
-						__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(array).name()))->eklass);
+						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Collections.Generic", "T")), 1));
 						__parameter_types__[1] = Global::GetType(typeid(arrayIndex).name());
 						__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 						__parameters__[1] = &arrayIndex;

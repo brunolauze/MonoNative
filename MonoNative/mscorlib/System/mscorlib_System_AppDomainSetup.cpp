@@ -30,7 +30,7 @@ namespace mscorlib
 		{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
-				__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, typeid(mscorlib::System::Byte).name());
 				Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "SetConfigurationBytes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
@@ -57,7 +57,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_ApplicationBase", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -74,7 +74,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_ApplicationName", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -91,7 +91,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_CachePath", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -108,7 +108,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_ConfigurationFile", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -142,7 +142,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_DynamicBase", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -159,7 +159,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_LicenseFile", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -168,7 +168,7 @@ namespace mscorlib
 		mscorlib::System::LoaderOptimization::__ENUM__  AppDomainSetup::get_LoaderOptimization() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "get_LoaderOptimization", __native_object__, 0, NULL, NULL, NULL);
-			return static_cast<mscorlib::System::LoaderOptimization::__ENUM__>(*(mscorlib::System::LoaderOptimization::__ENUM__*)mono_object_unbox(__result__));
+			return static_cast<mscorlib::System::LoaderOptimization::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 		}
 
 		void AppDomainSetup::set_LoaderOptimization(mscorlib::System::LoaderOptimization::__ENUM__  value)
@@ -176,7 +176,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			int __param_value__ = value;
+			mscorlib::System::Int32 __param_value__ = value;
 			__parameters__[0] = &__param_value__;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_LoaderOptimization", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
@@ -194,7 +194,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_PrivateBinPath", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -211,7 +211,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_PrivateBinPathProbe", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -228,7 +228,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_ShadowCopyDirectories", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -245,7 +245,7 @@ namespace mscorlib
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
 			__parameter_types__[0] = Global::GetType(typeid(value).name());
-			__parameters__[0] = mono_string_new(Global::GetDomain(), value);
+			__parameters__[0] = (MonoObject*)value;
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_ShadowCopyFiles", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -338,7 +338,7 @@ namespace mscorlib
 		{
 			MonoType *__parameter_types__[1];
 			void *__parameters__[1];
-			__parameter_types__[0] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(value).name()))->eklass);
+			__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 			__parameters__[0] = Global::FromArray<mscorlib::System::String*>(value, typeid(mscorlib::System::String).name());
 			Global::InvokeMethod("mscorlib", "System", "AppDomainSetup", 0, NULL, "set_AppDomainInitializerArguments", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 		}

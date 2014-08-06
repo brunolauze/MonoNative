@@ -63,7 +63,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
 						__parameter_types__[0] = Global::GetType(typeid(arrayToBeFixed).name());
-						__parameter_types__[1] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(indices).name()))->eklass);
+						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(objectRequired).name());
 						__parameters__[0] = &arrayToBeFixed;
 						__parameters__[1] = Global::FromArray<mscorlib::System::Int32*>(indices, typeid(mscorlib::System::Int32).name());
@@ -79,7 +79,7 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(memberName).name());
 						__parameter_types__[2] = Global::GetType(typeid(objectRequired).name());
 						__parameters__[0] = &objectToBeFixed;
-						__parameters__[1] = mono_string_new(Global::GetDomain(), memberName);
+						__parameters__[1] = (MonoObject*)memberName;
 						__parameters__[2] = &objectRequired;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "ObjectManager", 0, NULL, "RecordDelayedFixup", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 				}
@@ -89,7 +89,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[3];
 						void *__parameters__[3];
 						__parameter_types__[0] = Global::GetType(typeid(objectToBeFixed).name());
-						__parameter_types__[1] = Global::GetType(typeid(memberName).name());
+						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType(typeid(objectRequired).name());
 						__parameters__[0] = &objectToBeFixed;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), memberName);
@@ -160,7 +160,7 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(info).name());
 						__parameter_types__[3] = Global::GetType(typeid(idOfContainingObj).name());
 						__parameter_types__[4] = Global::GetType(typeid(member).name());
-						__parameter_types__[5] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(arrayIndex).name()))->eklass);
+						__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameters__[0] = (MonoObject*)obj;
 						__parameters__[1] = &objectID;
 						__parameters__[2] = (MonoObject*)info;

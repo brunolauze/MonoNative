@@ -30,7 +30,7 @@ namespace mscorlib
 					mscorlib::System::Runtime::Remoting::Activation::ActivatorLevel::__ENUM__  IActivator::get_Level() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Activation", "IActivator", 0, NULL, "get_Level", __mscorlib_System_Runtime_Remoting_Activation_IActivator, 0, NULL, NULL, NULL);
-						return static_cast<mscorlib::System::Runtime::Remoting::Activation::ActivatorLevel::__ENUM__>(*(mscorlib::System::Runtime::Remoting::Activation::ActivatorLevel::__ENUM__*)mono_object_unbox(__result__));
+						return static_cast<mscorlib::System::Runtime::Remoting::Activation::ActivatorLevel::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 					}
 
 

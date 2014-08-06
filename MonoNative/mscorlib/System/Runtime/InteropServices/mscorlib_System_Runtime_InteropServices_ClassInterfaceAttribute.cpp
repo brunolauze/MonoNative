@@ -19,7 +19,7 @@ namespace mscorlib
 				mscorlib::System::Runtime::InteropServices::ClassInterfaceType::__ENUM__  ClassInterfaceAttribute::get_Value() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ClassInterfaceAttribute", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Runtime::InteropServices::ClassInterfaceType::__ENUM__>(*(mscorlib::System::Runtime::InteropServices::ClassInterfaceType::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Runtime::InteropServices::ClassInterfaceType::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 

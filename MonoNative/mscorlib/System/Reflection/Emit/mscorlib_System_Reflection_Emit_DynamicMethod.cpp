@@ -52,9 +52,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(attributes).name());
 						__parameter_types__[2] = Global::GetType(typeid(parameterName).name());
 						__parameters__[0] = &position;
-						int __param_attributes__ = attributes;
+						mscorlib::System::Int32 __param_attributes__ = attributes;
 						__parameters__[1] = &__param_attributes__;
-						__parameters__[2] = mono_string_new(Global::GetDomain(), parameterName);
+						__parameters__[2] = (MonoObject*)parameterName;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "DefineParameter", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Reflection::Emit::ParameterBuilder(__result__);
 				}
@@ -65,9 +65,9 @@ namespace mscorlib
 						void *__parameters__[3];
 						__parameter_types__[0] = Global::GetType(typeid(position).name());
 						__parameter_types__[1] = Global::GetType(typeid(attributes).name());
-						__parameter_types__[2] = Global::GetType(typeid(parameterName).name());
+						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = &position;
-						int __param_attributes__ = attributes;
+						mscorlib::System::Int32 __param_attributes__ = attributes;
 						__parameters__[1] = &__param_attributes__;
 						__parameters__[2] = mono_string_new(Global::GetDomain(), parameterName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "DefineParameter", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -143,7 +143,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::MethodImplAttributes::__ENUM__ DynamicMethod::GetMethodImplementationFlags()
 				{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "GetMethodImplementationFlags", __native_object__, 0, NULL, NULL, NULL);
-						return static_cast<mscorlib::System::Reflection::MethodImplAttributes::__ENUM__>(*(mscorlib::System::Reflection::MethodImplAttributes::__ENUM__*)mono_object_unbox(__result__));
+						return static_cast<mscorlib::System::Reflection::MethodImplAttributes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 				std::vector<mscorlib::System::Reflection::ParameterInfo*> DynamicMethod::GetParameters()
@@ -167,10 +167,10 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(obj).name());
 						__parameter_types__[1] = Global::GetType(typeid(invokeAttr).name());
 						__parameter_types__[2] = Global::GetType(typeid(binder).name());
-						__parameter_types__[3] = mono_class_get_type(mono_type_get_array_type(Global::GetType(typeid(parameters).name()))->eklass);
+						__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 						__parameter_types__[4] = Global::GetType(typeid(culture).name());
 						__parameters__[0] = (MonoObject*)obj;
-						int __param_invokeAttr__ = invokeAttr;
+						mscorlib::System::Int32 __param_invokeAttr__ = invokeAttr;
 						__parameters__[1] = &__param_invokeAttr__;
 						__parameters__[2] = (MonoObject*)binder;
 						__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(parameters, typeid(mscorlib::System::Object).name());
@@ -202,7 +202,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::MethodAttributes::__ENUM__  DynamicMethod::get_Attributes() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_Attributes", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Reflection::MethodAttributes::__ENUM__>(*(mscorlib::System::Reflection::MethodAttributes::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Reflection::MethodAttributes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -210,7 +210,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::CallingConventions::__ENUM__  DynamicMethod::get_CallingConvention() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "DynamicMethod", 0, NULL, "get_CallingConvention", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Reflection::CallingConventions::__ENUM__>(*(mscorlib::System::Reflection::CallingConventions::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Reflection::CallingConventions::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -299,7 +299,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::MemberTypes::__ENUM__  DynamicMethod::get_MemberType() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodInfo", 0, NULL, "get_MemberType", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Reflection::MemberTypes::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Reflection::MemberTypes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
@@ -459,7 +459,7 @@ namespace mscorlib
 				mscorlib::System::Reflection::MethodImplAttributes::__ENUM__  DynamicMethod::get_MethodImplementationFlags() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "MethodBase", 0, NULL, "get_MethodImplementationFlags", __native_object__, 0, NULL, NULL, NULL);
-					return static_cast<mscorlib::System::Reflection::MethodImplAttributes::__ENUM__>(*(mscorlib::System::Reflection::MethodImplAttributes::__ENUM__*)mono_object_unbox(__result__));
+					return static_cast<mscorlib::System::Reflection::MethodImplAttributes::__ENUM__>(*(mscorlib::System::Int32*)mono_object_unbox(__result__));
 				}
 
 
