@@ -62,7 +62,7 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType(typeid(destinationIndex).name());
 				__parameter_types__[3] = Global::GetType(typeid(count).name());
 				__parameters__[0] = &sourceIndex;
-				__parameters__[1] = Global::FromArray<mscorlib::System::Char*>(destination, typeid(mscorlib::System::Char).name());
+				__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Char*>(destination, typeid(mscorlib::System::Char).name());
 				__parameters__[2] = &destinationIndex;
 				__parameters__[3] = &count;
 				Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "CopyTo", __native_object__, 4, __parameter_types__, __parameters__, NULL);
@@ -107,7 +107,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(separator, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(separator, typeid(mscorlib::System::Char).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Split", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
 				uintptr_t __array_length__ = mono_array_length(__array_ptr__);
@@ -126,7 +126,7 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType(typeid(count).name());
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(separator, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(separator, typeid(mscorlib::System::Char).name());
 				__parameters__[1] = &count;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Split", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -146,7 +146,7 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType(typeid(options).name());
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(separator, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(separator, typeid(mscorlib::System::Char).name());
 				mscorlib::System::Int32 __param_options__ = options;
 				__parameters__[1] = &__param_options__;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Split", __native_object__, 2, __parameter_types__, __parameters__, NULL);
@@ -168,7 +168,7 @@ namespace mscorlib
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType(typeid(count).name());
 				__parameter_types__[2] = Global::GetType(typeid(options).name());
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(separator, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(separator, typeid(mscorlib::System::Char).name());
 				__parameters__[1] = &count;
 				mscorlib::System::Int32 __param_options__ = options;
 				__parameters__[2] = &__param_options__;
@@ -261,7 +261,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(trimChars, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(trimChars, typeid(mscorlib::System::Char).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Trim", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -271,7 +271,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(trimChars, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(trimChars, typeid(mscorlib::System::Char).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "TrimStart", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -281,7 +281,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(trimChars, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(trimChars, typeid(mscorlib::System::Char).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "TrimEnd", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 		}
@@ -841,7 +841,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "IndexOfAny", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 		}
@@ -852,7 +852,7 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
 				__parameters__[1] = &startIndex;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "IndexOfAny", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -865,7 +865,7 @@ namespace mscorlib
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 				__parameter_types__[2] = Global::GetType(typeid(count).name());
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
 				__parameters__[1] = &startIndex;
 				__parameters__[2] = &count;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "IndexOfAny", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -1165,7 +1165,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "LastIndexOfAny", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 		}
@@ -1176,7 +1176,7 @@ namespace mscorlib
 				void *__parameters__[2];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
 				__parameters__[1] = &startIndex;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "LastIndexOfAny", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -1189,7 +1189,7 @@ namespace mscorlib
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 				__parameter_types__[2] = Global::GetType(typeid(count).name());
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(anyOf, typeid(mscorlib::System::Char).name());
 				__parameters__[1] = &startIndex;
 				__parameters__[2] = &count;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "LastIndexOfAny", __native_object__, 3, __parameter_types__, __parameters__, NULL);

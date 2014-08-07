@@ -11,9 +11,8 @@
     <Target>Bin</Target>
     <Packages>
       <Packages>
-        <Package file="/usr/local/libdata/pkgconfig/mono-2.pc" name="Mono" IsProject="False" />
         <Package file="/usr/local/libdata/pkgconfig/glib-2.0.pc" name="GLib" IsProject="False" />
-        <Package file="/usr/home/bruno/Projects/MonoNative/MonoNative/MonoNative.md.pc" name="MonoNative" IsProject="True" />
+        <Package file="/home/bruno/Projects/MonoNative/MonoNative/MonoNative.md.pc" name="MonoNative" IsProject="True" />
       </Packages>
     </Packages>
   </PropertyGroup>
@@ -25,14 +24,14 @@
     <CompileTarget>Bin</CompileTarget>
     <DefineSymbols>DEBUG MONODEVELOP</DefineSymbols>
     <SourceDirectory>.</SourceDirectory>
-    <ExtraCompilerArguments>`llvm-config --cflags` -std=c++11 -stdlib=libc++ -fms-extensions</ExtraCompilerArguments>
+    <ExtraCompilerArguments>`llvm-config --cflags` -std=c++11 -stdlib=libc++ -fms-extensions -I/usr/local/include/mono-2.0</ExtraCompilerArguments>
     <Includes>
       <Includes>
         <Include>${ProjectDir}</Include>
         <Include>/usr/local/include</Include>
       </Includes>
     </Includes>
-    <ExtraLinkerArguments>`llvm-config --ldflags` `llvm-config --libs` -L/usr/local/lib -lgtest -lz -pthread -lffi -lexecinfo -ltinfo -lm</ExtraLinkerArguments>
+    <ExtraLinkerArguments>/usr/local/lib/libmonoboehm-2.0.a `llvm-config --ldflags` `llvm-config --libs` -L/usr/local/lib -lgtest -lz -pthread -lffi -lexecinfo -ltinfo -lm</ExtraLinkerArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release</OutputPath>
@@ -129,7 +128,6 @@
     <Compile Include="mscorlib\System\mscorlib_System_IndexOutOfRangeException_Fixture.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InsufficientExecutionStackException_Fixture.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InsufficientMemoryException_Fixture.cpp" />
-    <Compile Include="mscorlib\System\mscorlib_System_IntPtr_Fixture.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InvalidCastException_Fixture.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InvalidOperationException_Fixture.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InvalidProgramException_Fixture.cpp" />

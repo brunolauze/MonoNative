@@ -2,7 +2,7 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_CRYPTOGRAPHY_X509CERTIFICATES_X509CERTIFICATE_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_SecureString.h>
 #include <mscorlib/System/Security/Cryptography/X509Certificates/mscorlib_System_Security_Cryptography_X509Certificates_X509KeyStorageFlags.h>
@@ -17,7 +17,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class Type;
 		
 
@@ -48,7 +47,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
-							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(data, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(data, "mscorlib", "System", "Byte");
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 1, __parameter_types__, __parameters__);
 						};
 					
@@ -60,7 +59,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType("mscorlib", "System", "IntPtr");
-							__parameters__[0] = (MonoObject*)handle;
+							__parameters__[0] = handle;
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 1, __parameter_types__, __parameters__);
 						};
 					
@@ -93,7 +92,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 							__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
-							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib", "System", "Byte");
 							__parameters__[1] = (MonoObject*)password;
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 2, __parameter_types__, __parameters__);
 						};
@@ -107,7 +106,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 							__parameter_types__[1] = Global::GetType("mscorlib", "System.Security", "SecureString");
-							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib", "System", "Byte");
 							__parameters__[1] = (MonoObject*)password;
 							__native_object__ = Global::New("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 2, __parameter_types__, __parameters__);
 						};
@@ -122,7 +121,7 @@ namespace mscorlib
 							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 							__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 							__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography.X509Certificates", "X509KeyStorageFlags");
-							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib", "System", "Byte");
 							__parameters__[1] = (MonoObject*)password;
 							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
@@ -139,7 +138,7 @@ namespace mscorlib
 							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 							__parameter_types__[1] = Global::GetType("mscorlib", "System.Security", "SecureString");
 							__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography.X509Certificates", "X509KeyStorageFlags");
-							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+							__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(rawData, "mscorlib", "System", "Byte");
 							__parameters__[1] = (MonoObject*)password;
 							mscorlib::System::Int32 __param_keyStorageFlags__ = keyStorageFlags;
 							__parameters__[2] = &__param_keyStorageFlags__;
@@ -254,6 +253,7 @@ namespace mscorlib
 					
 
 						X509Certificate & operator=(X509Certificate &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(X509Certificate &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

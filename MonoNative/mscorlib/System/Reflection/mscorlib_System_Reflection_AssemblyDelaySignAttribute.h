@@ -57,6 +57,7 @@ namespace mscorlib
 			
 
 				AssemblyDelaySignAttribute & operator=(AssemblyDelaySignAttribute &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(AssemblyDelaySignAttribute &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

@@ -46,6 +46,7 @@ namespace mscorlib
 				
 
 					EventCommandEventArgs & operator=(EventCommandEventArgs &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(EventCommandEventArgs &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

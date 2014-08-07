@@ -1,5 +1,4 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_SafeHandle.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 
@@ -32,7 +31,7 @@ namespace mscorlib
 				mscorlib::System::IntPtr SafeHandle::DangerousGetHandle()
 				{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeHandle", 0, NULL, "DangerousGetHandle", __native_object__, 0, NULL, NULL, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				void SafeHandle::DangerousRelease()

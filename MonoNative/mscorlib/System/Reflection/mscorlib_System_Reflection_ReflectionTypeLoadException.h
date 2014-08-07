@@ -2,23 +2,14 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_REFLECTION_REFLECTIONTYPELOADEXCEPTION_H
 
 #include <mscorlib/System/mscorlib_System_SystemException.h>
+#include <mscorlib/System/mscorlib_System_Type.h>
+#include <mscorlib/System/mscorlib_System_Exception.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__Exception.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
-namespace mscorlib
-{
-	namespace System
-	{
-
-		class Type;
-		class Exception;
-		
-
-	}
-}
 namespace mscorlib
 {
 	namespace System
@@ -71,8 +62,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Type")), 1));
 					__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Exception")), 1));
-					__parameters__[0] = Global::FromArray<mscorlib::System::Type*>(classes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
-					__parameters__[1] = Global::FromArray<mscorlib::System::Exception*>(exceptions, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Exception");
+					__parameters__[0] = Global::FromArray<mscorlib::System::Type*>(classes, "mscorlib", "System", "Type");
+					__parameters__[1] = Global::FromArray<mscorlib::System::Exception*>(exceptions, "mscorlib", "System", "Exception");
 					__native_object__ = Global::New("mscorlib", "System.Reflection", "ReflectionTypeLoadException", 2, __parameter_types__, __parameters__);
 				};
 			
@@ -86,8 +77,8 @@ namespace mscorlib
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Type")), 1));
 					__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Exception")), 1));
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
-					__parameters__[0] = Global::FromArray<mscorlib::System::Type*>(classes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
-					__parameters__[1] = Global::FromArray<mscorlib::System::Exception*>(exceptions, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Exception");
+					__parameters__[0] = Global::FromArray<mscorlib::System::Type*>(classes, "mscorlib", "System", "Type");
+					__parameters__[1] = Global::FromArray<mscorlib::System::Exception*>(exceptions, "mscorlib", "System", "Exception");
 					__parameters__[2] = (MonoObject*)message;
 					__native_object__ = Global::New("mscorlib", "System.Reflection", "ReflectionTypeLoadException", 3, __parameter_types__, __parameters__);
 				};
@@ -112,6 +103,7 @@ namespace mscorlib
 			
 
 				ReflectionTypeLoadException & operator=(ReflectionTypeLoadException &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(ReflectionTypeLoadException &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

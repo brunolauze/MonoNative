@@ -1,5 +1,4 @@
 #include <mscorlib/System/Runtime/Hosting/mscorlib_System_Runtime_Hosting_ActivationArguments.h>
-#include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 
 

@@ -131,6 +131,7 @@ namespace mscorlib
 			
 
 				AssemblyName & operator=(AssemblyName &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(AssemblyName &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

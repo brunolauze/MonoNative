@@ -1,7 +1,6 @@
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_PARAMDESC.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -20,7 +19,7 @@ namespace mscorlib
 					//	Get/Set:lpVarValue
 					mscorlib::System::IntPtr PARAMDESC::get_lpVarValue() const
 					{
-						return Global::GetFieldValue(__native_object__, "lpVarValue");
+						return Global::GetFieldIntPtrValue(__native_object__, "lpVarValue");
 					}
 
 					void PARAMDESC::set_lpVarValue(mscorlib::System::IntPtr  value)

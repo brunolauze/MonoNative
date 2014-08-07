@@ -7,7 +7,6 @@
 
 #include <gtest/gtest.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_ICustomMarshaler.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 

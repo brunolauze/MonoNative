@@ -1,7 +1,6 @@
 #include <mscorlib/System/Threading/mscorlib_System_Threading_Interlocked.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -152,11 +151,11 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType(typeid(location1).name());
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
 					__parameter_types__[2] = Global::GetType(typeid(comparand).name());
-					__parameters__[0] = (MonoObject*)location1;
-					__parameters__[1] = (MonoObject*)value;
-					__parameters__[2] = (MonoObject*)comparand;
+					__parameters__[0] = &location1;
+					__parameters__[1] = value;
+					__parameters__[2] = comparand;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Interlocked", 0, NULL, "CompareExchange", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
-					return mscorlib::System::IntPtr(__result__);
+					return mono_object_unbox (__result__);
 			}
 
 			mscorlib::System::Double Interlocked::CompareExchange(mscorlib::System::Double location1, mscorlib::System::Double value, mscorlib::System::Double comparand)
@@ -191,10 +190,10 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(location1).name());
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)location1;
-					__parameters__[1] = (MonoObject*)value;
+					__parameters__[0] = &location1;
+					__parameters__[1] = value;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Interlocked", 0, NULL, "Exchange", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-					return mscorlib::System::IntPtr(__result__);
+					return mono_object_unbox (__result__);
 			}
 
 			mscorlib::System::Double Interlocked::Exchange(mscorlib::System::Double location1, mscorlib::System::Double value)

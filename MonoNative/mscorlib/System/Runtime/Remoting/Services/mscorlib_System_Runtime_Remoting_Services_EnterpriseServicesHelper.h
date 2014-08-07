@@ -13,7 +13,6 @@ namespace mscorlib
 		class Type;
 		class String;
 		class MarshalByRefObject;
-		class IntPtr;
 		
 
 	}
@@ -74,6 +73,7 @@ namespace mscorlib
 					
 
 						EnterpriseServicesHelper & operator=(EnterpriseServicesHelper &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(EnterpriseServicesHelper &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

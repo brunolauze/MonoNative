@@ -15,7 +15,6 @@ namespace mscorlib
 		class Type;
 		class String;
 		class Guid;
-		class IntPtr;
 		class RuntimeTypeHandle;
 		
 

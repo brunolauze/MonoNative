@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/mscorlib_System_IConvertible.h>
-#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
+#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_TypeCode.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_String.h>
@@ -31,23 +31,23 @@ namespace mscorlib
 		class Enum
 			: public mscorlib::System::ValueType
 			, public virtual mscorlib::System::IConvertible
-			, public virtual mscorlib::System::IFormattable
 			, public virtual mscorlib::System::IObjectComparable
+			, public virtual mscorlib::System::IFormattable
 		{
 		public:
 			Enum(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			{
 			};
 		
 			Enum(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
 			, mscorlib::System::IConvertible(nativeObject)
-			, mscorlib::System::IFormattable(nativeObject)
 			, mscorlib::System::IObjectComparable(nativeObject)
+			, mscorlib::System::IFormattable(nativeObject)
 			{
 			};
 		
@@ -57,6 +57,7 @@ namespace mscorlib
 		
 
 			Enum & operator=(Enum &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(Enum &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -80,7 +81,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(result).name());
 				__parameters__[0] = (MonoObject*)value;
 				__parameters__[1] = (MonoObject*)result;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(TEnum).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			};
 			
@@ -93,7 +96,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(result).name());
 				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = (MonoObject*)result;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(TEnum).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			};
 			
@@ -108,7 +113,9 @@ namespace mscorlib
 				__parameters__[0] = (MonoObject*)value;
 				__parameters__[1] = reinterpret_cast<void*>(ignoreCase);
 				__parameters__[2] = (MonoObject*)result;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(TEnum).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			};
 			
@@ -123,7 +130,9 @@ namespace mscorlib
 				__parameters__[0] = mono_string_new(Global::GetDomain(), value);
 				__parameters__[1] = reinterpret_cast<void*>(ignoreCase);
 				__parameters__[2] = (MonoObject*)result;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(TEnum).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Enum", 0, NULL, "TryParse", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			};
 			

@@ -7,7 +7,6 @@
 
 #include <gtest/gtest.h>
 #include <mscorlib/System/Threading/mscorlib_System_Threading_WaitHandle.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/Microsoft/Win32/SafeHandles/mscorlib_Microsoft_Win32_SafeHandles_SafeWaitHandle.h>
 #include <mscorlib/System/mscorlib_System_TimeSpan.h>
 #include <mscorlib/System/Runtime/Remoting/mscorlib_System_Runtime_Remoting_ObjRef.h>

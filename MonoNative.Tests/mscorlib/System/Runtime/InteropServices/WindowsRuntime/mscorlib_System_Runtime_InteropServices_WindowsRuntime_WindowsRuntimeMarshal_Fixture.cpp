@@ -10,7 +10,6 @@
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Runtime/InteropServices/WindowsRuntime/mscorlib_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 

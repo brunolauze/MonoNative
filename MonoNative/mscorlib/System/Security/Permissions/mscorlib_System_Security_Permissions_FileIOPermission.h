@@ -97,7 +97,7 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
 						mscorlib::System::Int32 __param_access__ = access;
 						__parameters__[0] = &__param_access__;
-						__parameters__[1] = Global::FromArray<mscorlib::System::String*>(pathList, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "String");
+						__parameters__[1] = Global::FromArray<mscorlib::System::String*>(pathList, "mscorlib", "System", "String");
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileIOPermission", 2, __parameter_types__, __parameters__);
 					};
 				
@@ -137,7 +137,7 @@ namespace mscorlib
 						__parameters__[0] = &__param_access__;
 						mscorlib::System::Int32 __param_control__ = control;
 						__parameters__[1] = &__param_control__;
-						__parameters__[2] = Global::FromArray<mscorlib::System::String*>(pathList, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "String");
+						__parameters__[2] = Global::FromArray<mscorlib::System::String*>(pathList, "mscorlib", "System", "String");
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "FileIOPermission", 3, __parameter_types__, __parameters__);
 					};
 				
@@ -165,6 +165,7 @@ namespace mscorlib
 				
 
 					FileIOPermission & operator=(FileIOPermission &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(FileIOPermission &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

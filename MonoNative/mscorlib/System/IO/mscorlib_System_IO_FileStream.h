@@ -2,7 +2,6 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_IO_FILESTREAM_H
 
 #include <mscorlib/System/IO/mscorlib_System_IO_Stream.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/IO/mscorlib_System_IO_FileAccess.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/IO/mscorlib_System_IO_FileMode.h>
@@ -93,7 +92,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "IntPtr");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileAccess");
-					__parameters__[0] = (MonoObject*)handle;
+					__parameters__[0] = handle;
 					mscorlib::System::Int32 __param_access__ = access;
 					__parameters__[1] = &__param_access__;
 					__native_object__ = Global::New("mscorlib", "System.IO", "FileStream", 2, __parameter_types__, __parameters__);
@@ -108,7 +107,7 @@ namespace mscorlib
 					__parameter_types__[0] = Global::GetType("mscorlib", "System", "IntPtr");
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Boolean");
-					__parameters__[0] = (MonoObject*)handle;
+					__parameters__[0] = handle;
 					mscorlib::System::Int32 __param_access__ = access;
 					__parameters__[1] = &__param_access__;
 					__parameters__[2] = reinterpret_cast<void*>(ownsHandle);
@@ -125,7 +124,7 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType("mscorlib", "System.IO", "FileAccess");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
-					__parameters__[0] = (MonoObject*)handle;
+					__parameters__[0] = handle;
 					mscorlib::System::Int32 __param_access__ = access;
 					__parameters__[1] = &__param_access__;
 					__parameters__[2] = reinterpret_cast<void*>(ownsHandle);
@@ -144,7 +143,7 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[4] = Global::GetType("mscorlib", "System", "Boolean");
-					__parameters__[0] = (MonoObject*)handle;
+					__parameters__[0] = handle;
 					mscorlib::System::Int32 __param_access__ = access;
 					__parameters__[1] = &__param_access__;
 					__parameters__[2] = reinterpret_cast<void*>(ownsHandle);
@@ -393,6 +392,7 @@ namespace mscorlib
 			
 
 				FileStream & operator=(FileStream &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(FileStream &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

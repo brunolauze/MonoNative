@@ -10,7 +10,6 @@ namespace mscorlib
 
 		class Type;
 		class String;
-		class IntPtr;
 		
 
 	}
@@ -42,6 +41,7 @@ namespace mscorlib
 			
 
 				Interlocked & operator=(Interlocked &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(Interlocked &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -70,7 +70,9 @@ namespace mscorlib
 					__parameters__[0] = (MonoObject*)location1;
 					__parameters__[1] = (MonoObject*)value;
 					__parameters__[2] = (MonoObject*)comparand;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Interlocked", 0, NULL, "CompareExchange", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Interlocked", 0, NULL, "CompareExchange", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -86,7 +88,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
 					__parameters__[0] = (MonoObject*)location1;
 					__parameters__[1] = (MonoObject*)value;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Interlocked", 0, NULL, "Exchange", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Interlocked", 0, NULL, "Exchange", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				

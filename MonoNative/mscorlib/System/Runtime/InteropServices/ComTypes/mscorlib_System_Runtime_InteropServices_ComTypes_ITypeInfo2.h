@@ -14,7 +14,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class IntPtr;
 		class Guid;
 		class String;
 		

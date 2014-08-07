@@ -64,6 +64,7 @@ namespace mscorlib
 			
 
 				TransitionTime & operator=(TransitionTime &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(TransitionTime &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -139,6 +140,7 @@ namespace mscorlib
 			
 
 				AdjustmentRule & operator=(AdjustmentRule &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(AdjustmentRule &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -201,6 +203,7 @@ namespace mscorlib
 		
 
 			TimeZoneInfo & operator=(TimeZoneInfo &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(TimeZoneInfo &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

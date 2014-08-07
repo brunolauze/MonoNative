@@ -1,5 +1,4 @@
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_StrongNamePublicKeyBlob.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 

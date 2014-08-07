@@ -20,7 +20,6 @@ namespace mscorlib
 		class EventArgs;
 		class UnhandledExceptionEventArgs;
 		class Guid;
-		class IntPtr;
 		
 
 	}

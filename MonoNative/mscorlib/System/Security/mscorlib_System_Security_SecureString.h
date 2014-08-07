@@ -65,6 +65,7 @@ namespace mscorlib
 			
 
 				SecureString & operator=(SecureString &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(SecureString &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

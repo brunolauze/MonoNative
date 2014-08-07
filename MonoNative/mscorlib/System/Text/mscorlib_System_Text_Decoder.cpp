@@ -41,7 +41,7 @@ namespace mscorlib
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
 					__parameters__[1] = &byteIndex;
 					__parameters__[2] = &byteCount;
-					__parameters__[3] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
+					__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					__parameters__[4] = &charIndex;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Decoder", 0, NULL, "GetChars", __native_object__, 5, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -90,7 +90,7 @@ namespace mscorlib
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
 					__parameters__[1] = &byteIndex;
 					__parameters__[2] = &byteCount;
-					__parameters__[3] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
+					__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					__parameters__[4] = &charIndex;
 					__parameters__[5] = reinterpret_cast<void*>(flush);
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Text", "Decoder", 0, NULL, "GetChars", __native_object__, 6, __parameter_types__, __parameters__, NULL);
@@ -160,7 +160,7 @@ namespace mscorlib
 					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
 					__parameters__[1] = &byteIndex;
 					__parameters__[2] = &byteCount;
-					__parameters__[3] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
+					__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					__parameters__[4] = &charIndex;
 					__parameters__[5] = &charCount;
 					__parameters__[6] = reinterpret_cast<void*>(flush);

@@ -3,6 +3,7 @@
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/Configuration/Assemblies/mscorlib_System_Configuration_Assemblies_AssemblyHashAlgorithm.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
@@ -11,7 +12,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class String;
 		class Type;
 		
@@ -42,7 +42,7 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						mscorlib::System::Int32 __param_algorithm__ = algorithm;
 						__parameters__[0] = &__param_algorithm__;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(value, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(value, "mscorlib", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Configuration.Assemblies", "AssemblyHash", 2, __parameter_types__, __parameters__);
 					};
 				
@@ -53,7 +53,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
-						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, "mscorlib", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Configuration.Assemblies", "AssemblyHash", 1, __parameter_types__, __parameters__);
 					};
 				
@@ -75,6 +75,7 @@ namespace mscorlib
 				
 
 					AssemblyHash & operator=(AssemblyHash &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(AssemblyHash &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

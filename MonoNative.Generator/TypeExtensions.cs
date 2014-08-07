@@ -143,6 +143,8 @@ namespace MonoNative.Generator
 				return type.IsPrimitive;
 			if (type == typeof(void))
 				return true;
+			if (type == typeof(IntPtr))
+				return true;
 			if (type.Name.Contains ("[]"))
 				return type.IsPrimitive;
 			if (type.Name.EndsWith ("&")) {
@@ -189,6 +191,8 @@ namespace MonoNative.Generator
 			if (type.FullName == null)
 				return true;
 			if (type == typeof(void))
+				return true;
+			if (type == typeof(IntPtr))
 				return true;
 			if (type.Name.EndsWith ("&"))
 				return Type.GetType (type.FullName.Replace("&", "")).IsBaseType ();
@@ -277,6 +281,10 @@ namespace MonoNative.Generator
 				foreach (var parameter in constructor.GetParameters()) {
 					if (parameter.ParameterType == type)
 						return true;
+					if (parameter.ParameterType.IsArray) {
+						if (parameter.ParameterType.GetElementType () == type)
+							return true;
+					}
 				}
 			}
 
@@ -288,10 +296,18 @@ namespace MonoNative.Generator
 					foreach (var parameter in method.GetParameters()) {
 						if (parameter.ParameterType == type)
 							return true;
+						if (parameter.ParameterType.IsArray) {
+							if (parameter.ParameterType.GetElementType () == type)
+								return true;
+						}
 					}
 				} else if (method.Name == "GetEnumerator") {
 					if (method.ReturnType.ToIncludeType () == type)
 						return true;
+					if (method.ReturnType.IsArray) {
+						if (method.ReturnType.GetElementType () == type)
+							return true;
+					}
 					if (method.ReturnType.IsGenericType) {
 						var genMethods = method.ReturnType.GetGenericArguments ();
 						foreach (var item in genMethods) {
@@ -307,9 +323,17 @@ namespace MonoNative.Generator
 				if (method.IsGenericMethod) {
 					if (method.ReturnType.ToIncludeType () == type)
 						return true;
+					if (method.ReturnType.IsArray) {
+						if (method.ReturnType.GetElementType () == type)
+							return true;
+					}
 					foreach (var parameter in method.GetParameters()) {
 						if (parameter.ParameterType == type)
 							return true;
+						if (parameter.ParameterType.IsArray) {
+							if (parameter.ParameterType.GetElementType () == type)
+								return true;
+						}
 					}
 				}
 			}

@@ -133,6 +133,7 @@ namespace mscorlib
 		
 
 			Version & operator=(Version &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(Version &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

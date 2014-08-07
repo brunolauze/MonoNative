@@ -236,6 +236,11 @@ MonoClass* Global::GetClass(const char* assemblyName, const char* nameSpace, con
 	return kclass;
 }
 
+MonoType* Global::MakeArrayType(MonoType *type)
+{
+	return mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(type), 1));
+}
+
 MonoMethod* Global::GetMethod(MonoObject *obj, const char* name, int pcount, MonoType **parameters)
 {
 	return GetMethod(mono_object_get_class(obj), name, pcount, parameters);
@@ -294,6 +299,25 @@ MonoMethod*	Global::GetMethod(MonoClass *kclass, const char* name, int pcount, M
 	return method;
 }
 
+MonoMethod* Global::GetMethod(MonoClass *kclass, const char* name, int genericMethodTypesCount, MonoType **genericMethodTypes, int pcount, MonoType **parameters)
+{
+	MonoMethod *baseMethod = Global::GetMethod(kclass, name, pcount, parameters);
+	MonoReflectionMethod *methodObj = mono_method_get_object(Global::GetDomain(), baseMethod, kclass);
+	MonoType *__make_gen_types__[1];
+	MonoType *type = GetType("mscorlib", "System", "Type");
+	__make_gen_types__[0] = MakeArrayType(type);
+	MonoClass *typeClass = mono_object_get_class((MonoObject*)methodObj);
+	MonoMethod *method = mono_class_get_method_from_name(typeClass, "MakeGenericMethod", 1);
+	void *__parameters__[1];
+	MonoArray *array_items = mono_array_new(__domain__, mono_type_get_class(type), 1);
+	for(int i = 0; i < genericMethodTypesCount; i++) {
+		mono_array_set(array_items, MonoObject*, 0, (MonoObject*)mono_type_get_object(__domain__, genericMethodTypes[i]));
+	}
+	__parameters__[0] = array_items;
+	MonoReflectionMethod *newMethodReflection = (MonoReflectionMethod*)mono_runtime_invoke(method, (MonoObject*)methodObj, __parameters__, NULL);
+	return newMethodReflection->method;
+}
+
 MonoObject* Global::InvokeMethod(MonoClass *kclass, const char *name, MonoObject *thisArg, int pcount, MonoType **parameterTypes, void **parameters, MonoObject **exc)
 {
 	MonoMethod *method = NULL;
@@ -314,6 +338,13 @@ MonoObject* Global::InvokeMethod(const char* assemblyName, const char* nameSpace
 	MonoClass *kclass = GetClass(assemblyName, nameSpace, typeName, genericTypeCount, genericTypes);
 	//else kclass = mono_object_get_class(thisArg);
 	return InvokeMethod(kclass, name, thisArg, pcount, parameterTypes, parameters, exc);
+}
+
+MonoObject* Global::InvokeMethod(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char* name, MonoObject *thisArg, int genericMethodTypesCount, MonoType **genericMethodTypes, int pcount, MonoType **parameterTypes, void **parameters, MonoObject **exc)
+{
+	MonoClass *kclass = GetClass(assemblyName, nameSpace, typeName, genericTypeCount, genericTypes);
+	MonoMethod *method = GetMethod(kclass, name, genericMethodTypesCount, genericMethodTypes, pcount, parameterTypes);
+	return mono_runtime_invoke(method, thisArg, parameters, exc);
 }
 
 MonoType* Global::GetType(const char *mangledName)

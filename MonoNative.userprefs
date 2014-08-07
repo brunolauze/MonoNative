@@ -1,12 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../usr/home/bruno/Projects/MonoNative/MonoNative.Generator/TypeGenerator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../usr/home/bruno/Projects/MonoNative/MonoNative.Tests/SampleFixture.cpp">
     <Files>
-      <File FileName="../../../../usr/home/bruno/Projects/MonoNative/MonoNative.Generator/TypeGenerator.cs" Line="54" Column="54" />
+      <File FileName="../../../../usr/home/bruno/Projects/MonoNative/MonoNative.Tests/SampleFixture.cpp" Line="2" Column="2" />
+      <File FileName="../../../../usr/home/bruno/Projects/MonoNative/MonoNative/Global.cpp" Line="4" Column="4" />
+      <File FileName="../../../../usr/home/bruno/Projects/MonoNative/MonoNative.Generator/Program.cs" Line="1" Column="1" />
+      <File FileName="../../../../usr/home/bruno/Projects/MonoNative/MonoNativeHelper/Delegates.cs" Line="2" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/usr/home/bruno/Projects/MonoNative/MonoNative.Generator/Program.cs" line="31" column="35" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

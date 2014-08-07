@@ -9,7 +9,6 @@
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_ITypeLib.h>
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_ITypeInfo.h>
 #include <mscorlib/System/mscorlib_System_Guid.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 
 

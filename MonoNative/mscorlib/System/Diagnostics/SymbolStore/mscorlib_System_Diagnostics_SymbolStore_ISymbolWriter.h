@@ -31,7 +31,6 @@ namespace mscorlib
 		class String;
 		class Guid;
 		class Byte;
-		class IntPtr;
 		
 
 	}

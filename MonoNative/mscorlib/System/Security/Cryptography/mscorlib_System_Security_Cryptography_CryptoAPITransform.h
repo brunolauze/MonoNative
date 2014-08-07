@@ -10,7 +10,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class IntPtr;
 		class Byte;
 		class Type;
 		class String;
@@ -53,6 +52,7 @@ namespace mscorlib
 				
 
 					CryptoAPITransform & operator=(CryptoAPITransform &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(CryptoAPITransform &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

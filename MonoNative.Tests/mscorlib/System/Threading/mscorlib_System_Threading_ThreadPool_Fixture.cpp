@@ -9,7 +9,6 @@
 #include <mscorlib/System/Threading/mscorlib_System_Threading_ThreadPool.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_SafeHandle.h>
 #include <mscorlib/System/Threading/mscorlib_System_Threading_RegisteredWaitHandle.h>
 #include <mscorlib/System/Threading/mscorlib_System_Threading_WaitHandle.h>

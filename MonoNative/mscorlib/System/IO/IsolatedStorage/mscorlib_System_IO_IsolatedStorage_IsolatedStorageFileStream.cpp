@@ -1,6 +1,5 @@
 #include <mscorlib/System/IO/IsolatedStorage/mscorlib_System_IO_IsolatedStorage_IsolatedStorageFileStream.h>
 #include <mscorlib/Microsoft/Win32/SafeHandles/mscorlib_Microsoft_Win32_SafeHandles_SafeFileHandle.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_FileSecurity.h>
 #include <mscorlib/System/Threading/Tasks/mscorlib_System_Threading_Tasks_Task.h>
@@ -191,7 +190,7 @@ namespace mscorlib
 				mscorlib::System::IntPtr  IsolatedStorageFileStream::get_Handle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO.IsolatedStorage", "IsolatedStorageFileStream", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
-					return mscorlib::System::IntPtr(__result__);
+					return mono_object_unbox (__result__);
 				}
 
 

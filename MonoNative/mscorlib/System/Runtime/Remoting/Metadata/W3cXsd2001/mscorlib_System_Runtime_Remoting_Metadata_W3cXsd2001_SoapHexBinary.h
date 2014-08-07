@@ -2,6 +2,7 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_METADATA_W3CXSD2001_SOAPHEXBINARY_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Runtime/Remoting/Metadata/W3cXsd2001/mscorlib_System_Runtime_Remoting_Metadata_W3cXsd2001_ISoapXsd.h>
 
 namespace mscorlib
@@ -9,7 +10,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class String;
 		class Type;
 		
@@ -48,7 +48,7 @@ namespace mscorlib
 								MonoType *__parameter_types__[1];
 								void *__parameters__[1];
 								__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
-								__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+								__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(value, "mscorlib", "System", "Byte");
 								__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting.Metadata.W3cXsd2001", "SoapHexBinary", 1, __parameter_types__, __parameters__);
 							};
 						
@@ -70,6 +70,7 @@ namespace mscorlib
 						
 
 							SoapHexBinary & operator=(SoapHexBinary &value) { __native_object__ = value.GetNativeObject(); return value; };
+							bool operator==(SoapHexBinary &value) { return mscorlib::System::Object::Equals(value); };
 							operator MonoObject*() { return __native_object__; };
 							MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

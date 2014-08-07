@@ -8,7 +8,6 @@
 #include <gtest/gtest.h>
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_IEnumConnections.h>
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_CONNECTDATA.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 

@@ -2,6 +2,7 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_COLLECTIONS_BITARRAY_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_ICollection.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
@@ -12,7 +13,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class Array;
 		class Type;
 		class String;
@@ -56,7 +56,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Boolean")), 1));
-					__parameters__[0] = Global::FromArray<mscorlib::System::Boolean*>(values, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Boolean");
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Boolean*>(values, typeid(mscorlib::System::Boolean).name());
 					__native_object__ = Global::New("mscorlib", "System.Collections", "BitArray", 1, __parameter_types__, __parameters__);
 				};
 			
@@ -69,7 +69,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
-					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(bytes, "mscorlib", "System", "Byte");
 					__native_object__ = Global::New("mscorlib", "System.Collections", "BitArray", 1, __parameter_types__, __parameters__);
 				};
 			
@@ -82,7 +82,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
-					__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(values, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Int32");
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(values, typeid(mscorlib::System::Int32).name());
 					__native_object__ = Global::New("mscorlib", "System.Collections", "BitArray", 1, __parameter_types__, __parameters__);
 				};
 			
@@ -136,6 +136,7 @@ namespace mscorlib
 			
 
 				BitArray & operator=(BitArray &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(BitArray &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

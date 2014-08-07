@@ -57,6 +57,7 @@ namespace mscorlib
 		
 
 			Progress & operator=(Progress &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(Progress &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

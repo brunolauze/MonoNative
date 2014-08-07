@@ -1,5 +1,4 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_ICustomMarshaler.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -27,7 +26,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pNativeData).name());
-						__parameters__[0] = (MonoObject*)pNativeData;
+						__parameters__[0] = pNativeData;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ICustomMarshaler", 0, NULL, "CleanUpNativeData", __mscorlib_System_Runtime_InteropServices_ICustomMarshaler, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -44,7 +43,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(ManagedObj).name());
 						__parameters__[0] = (MonoObject*)ManagedObj;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ICustomMarshaler", 0, NULL, "MarshalManagedToNative", __mscorlib_System_Runtime_InteropServices_ICustomMarshaler, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Object ICustomMarshaler::MarshalNativeToManaged(mscorlib::System::IntPtr pNativeData)
@@ -52,7 +51,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pNativeData).name());
-						__parameters__[0] = (MonoObject*)pNativeData;
+						__parameters__[0] = pNativeData;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "ICustomMarshaler", 0, NULL, "MarshalNativeToManaged", __mscorlib_System_Runtime_InteropServices_ICustomMarshaler, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
 				}

@@ -60,6 +60,7 @@ namespace mscorlib
 				
 
 					Contract & operator=(Contract &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(Contract &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -81,7 +82,9 @@ namespace mscorlib
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "EnsuresOnThrow", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TException).name());
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "EnsuresOnThrow", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename TException>
@@ -93,7 +96,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = (MonoObject*)userMessage;
-						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "EnsuresOnThrow", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TException).name());
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "EnsuresOnThrow", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename TException>
@@ -105,7 +110,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
-						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "EnsuresOnThrow", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TException).name());
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "EnsuresOnThrow", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename T>
@@ -117,7 +124,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(predicate).name());
 						__parameters__[0] = (MonoObject*)collection;
 						__parameters__[1] = &predicate;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Exists", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Exists", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 					};
 					
@@ -131,7 +140,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(predicate).name());
 						__parameters__[0] = (MonoObject*)collection;
 						__parameters__[1] = &predicate;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "ForAll", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "ForAll", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 					};
 					
@@ -146,7 +157,9 @@ namespace mscorlib
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
 						__parameters__[0] = (MonoObject*)value;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "OldValue", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "OldValue", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 						return T(__result__);
 					};
 					
@@ -160,7 +173,9 @@ namespace mscorlib
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(condition).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
-						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TException).name());
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename TException>
@@ -172,7 +187,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(userMessage).name());
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = (MonoObject*)userMessage;
-						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TException).name());
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename TException>
@@ -184,13 +201,17 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = reinterpret_cast<void*>(condition);
 						__parameters__[1] = mono_string_new(Global::GetDomain(), userMessage);
-						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TException).name());
+						Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Requires", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename T>
 					static T  Result()
 					{
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Result", NullMonoObject, 0, NULL, NULL, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "Result", NullMonoObject, 1, __generic_types__, 0, NULL, NULL, NULL);
 						return T(__result__);
 					};
 					
@@ -201,7 +222,9 @@ namespace mscorlib
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
 						__parameters__[0] = (MonoObject*)value;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "ValueAtReturn", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.Contracts", "Contract", 0, NULL, "ValueAtReturn", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 						return T(__result__);
 					};
 					

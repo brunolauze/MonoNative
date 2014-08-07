@@ -2,24 +2,13 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_IO_MEMORYSTREAM_H
 
 #include <mscorlib/System/IO/mscorlib_System_IO_Stream.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/IO/mscorlib_System_IO_SeekOrigin.h>
 #include <mscorlib/System/Threading/Tasks/mscorlib_System_Threading_Tasks_Task_1.h>
 #include <mscorlib/System/mscorlib_System_IAsyncResult.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
-namespace mscorlib
-{
-	namespace System
-	{
-
-		class Byte;
-		class Type;
-		class String;
-		
-
-	}
-}
 namespace mscorlib
 {
 	namespace System
@@ -69,6 +58,17 @@ namespace mscorlib
 {
 	namespace System
 	{
+
+		class Type;
+		class String;
+		
+
+	}
+}
+namespace mscorlib
+{
+	namespace System
+	{
 		namespace IO
 		{
 
@@ -102,7 +102,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
-					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib", "System", "Byte");
 					__native_object__ = Global::New("mscorlib", "System.IO", "MemoryStream", 1, __parameter_types__, __parameters__);
 				};
 			
@@ -114,7 +114,7 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[1] = Global::GetType("mscorlib", "System", "Boolean");
-					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib", "System", "Byte");
 					__parameters__[1] = reinterpret_cast<void*>(writable);
 					__native_object__ = Global::New("mscorlib", "System.IO", "MemoryStream", 2, __parameter_types__, __parameters__);
 				};
@@ -128,7 +128,7 @@ namespace mscorlib
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[1] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Int32");
-					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib", "System", "Byte");
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					__native_object__ = Global::New("mscorlib", "System.IO", "MemoryStream", 3, __parameter_types__, __parameters__);
@@ -144,7 +144,7 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean");
-					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib", "System", "Byte");
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					__parameters__[3] = reinterpret_cast<void*>(writable);
@@ -162,7 +162,7 @@ namespace mscorlib
 					__parameter_types__[2] = Global::GetType("mscorlib", "System", "Int32");
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean");
 					__parameter_types__[4] = Global::GetType("mscorlib", "System", "Boolean");
-					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+					__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(buffer, "mscorlib", "System", "Byte");
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					__parameters__[3] = reinterpret_cast<void*>(writable);
@@ -188,6 +188,7 @@ namespace mscorlib
 			
 
 				MemoryStream & operator=(MemoryStream &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(MemoryStream &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

@@ -1,7 +1,6 @@
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_VARDESC.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_ELEMDESC.h>
 
 
@@ -83,7 +82,7 @@ namespace mscorlib
 					//	Get/Set:lpvarValue
 					mscorlib::System::IntPtr VARDESC::DESCUNION::get_lpvarValue() const
 					{
-						return Global::GetFieldValue(__native_object__, "lpvarValue");
+						return Global::GetFieldIntPtrValue(__native_object__, "lpvarValue");
 					}
 
 					void VARDESC::DESCUNION::set_lpvarValue(mscorlib::System::IntPtr  value)

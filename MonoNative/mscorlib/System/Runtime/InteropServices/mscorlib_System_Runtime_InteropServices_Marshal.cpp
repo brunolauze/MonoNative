@@ -29,7 +29,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pUnk).name());
-						__parameters__[0] = (MonoObject*)pUnk;
+						__parameters__[0] = pUnk;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "AddRef", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 				}
@@ -41,7 +41,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(cb).name());
 						__parameters__[0] = &cb;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "AllocCoTaskMem", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::AllocHGlobal(mscorlib::System::IntPtr cb)
@@ -49,9 +49,9 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(cb).name());
-						__parameters__[0] = (MonoObject*)cb;
+						__parameters__[0] = cb;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "AllocHGlobal", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::AllocHGlobal(mscorlib::System::Int32 cb)
@@ -61,7 +61,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(cb).name());
 						__parameters__[0] = &cb;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "AllocHGlobal", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Object Marshal::BindToMoniker(mscorlib::System::String monikerName)
@@ -105,7 +105,7 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(source, typeid(mscorlib::System::Byte).name());
 						__parameters__[1] = &startIndex;
-						__parameters__[2] = (MonoObject*)destination;
+						__parameters__[2] = destination;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				}
@@ -118,9 +118,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[2] = Global::GetType(typeid(destination).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(source, typeid(mscorlib::System::Char).name());
+						__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(source, typeid(mscorlib::System::Char).name());
 						__parameters__[1] = &startIndex;
-						__parameters__[2] = (MonoObject*)destination;
+						__parameters__[2] = destination;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				}
@@ -133,9 +133,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[2] = Global::GetType(typeid(destination).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = Global::FromArray<mscorlib::System::Int16*>(source, typeid(mscorlib::System::Int16).name());
+						__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int16*>(source, typeid(mscorlib::System::Int16).name());
 						__parameters__[1] = &startIndex;
-						__parameters__[2] = (MonoObject*)destination;
+						__parameters__[2] = destination;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				}
@@ -148,9 +148,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[2] = Global::GetType(typeid(destination).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(source, typeid(mscorlib::System::Int32).name());
+						__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(source, typeid(mscorlib::System::Int32).name());
 						__parameters__[1] = &startIndex;
-						__parameters__[2] = (MonoObject*)destination;
+						__parameters__[2] = destination;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				}
@@ -163,9 +163,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[2] = Global::GetType(typeid(destination).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = Global::FromArray<mscorlib::System::Int64*>(source, typeid(mscorlib::System::Int64).name());
+						__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int64*>(source, typeid(mscorlib::System::Int64).name());
 						__parameters__[1] = &startIndex;
-						__parameters__[2] = (MonoObject*)destination;
+						__parameters__[2] = destination;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				}
@@ -178,9 +178,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[2] = Global::GetType(typeid(destination).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = Global::FromArray<mscorlib::System::Single*>(source, typeid(mscorlib::System::Single).name());
+						__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Single*>(source, typeid(mscorlib::System::Single).name());
 						__parameters__[1] = &startIndex;
-						__parameters__[2] = (MonoObject*)destination;
+						__parameters__[2] = destination;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				}
@@ -193,9 +193,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[2] = Global::GetType(typeid(destination).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = Global::FromArray<mscorlib::System::Double*>(source, typeid(mscorlib::System::Double).name());
+						__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Double*>(source, typeid(mscorlib::System::Double).name());
 						__parameters__[1] = &startIndex;
-						__parameters__[2] = (MonoObject*)destination;
+						__parameters__[2] = destination;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				}
@@ -208,9 +208,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[2] = Global::GetType(typeid(destination).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = Global::FromArray<mscorlib::System::IntPtr*>(source, typeid(mscorlib::System::IntPtr).name());
+						__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::IntPtr*>(source, typeid(mscorlib::System::IntPtr).name());
 						__parameters__[1] = &startIndex;
-						__parameters__[2] = (MonoObject*)destination;
+						__parameters__[2] = destination;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
 				}
@@ -223,7 +223,7 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = (MonoObject*)source;
+						__parameters__[0] = source;
 						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(destination, typeid(mscorlib::System::Byte).name());
 						__parameters__[2] = &startIndex;
 						__parameters__[3] = &length;
@@ -238,8 +238,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = (MonoObject*)source;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Char*>(destination, typeid(mscorlib::System::Char).name());
+						__parameters__[0] = source;
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Char*>(destination, typeid(mscorlib::System::Char).name());
 						__parameters__[2] = &startIndex;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
@@ -253,8 +253,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int16")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = (MonoObject*)source;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Int16*>(destination, typeid(mscorlib::System::Int16).name());
+						__parameters__[0] = source;
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int16*>(destination, typeid(mscorlib::System::Int16).name());
 						__parameters__[2] = &startIndex;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
@@ -268,8 +268,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = (MonoObject*)source;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Int32*>(destination, typeid(mscorlib::System::Int32).name());
+						__parameters__[0] = source;
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(destination, typeid(mscorlib::System::Int32).name());
 						__parameters__[2] = &startIndex;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
@@ -283,8 +283,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int64")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = (MonoObject*)source;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Int64*>(destination, typeid(mscorlib::System::Int64).name());
+						__parameters__[0] = source;
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int64*>(destination, typeid(mscorlib::System::Int64).name());
 						__parameters__[2] = &startIndex;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
@@ -298,8 +298,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Single")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = (MonoObject*)source;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Single*>(destination, typeid(mscorlib::System::Single).name());
+						__parameters__[0] = source;
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Single*>(destination, typeid(mscorlib::System::Single).name());
 						__parameters__[2] = &startIndex;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
@@ -313,8 +313,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Double")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = (MonoObject*)source;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Double*>(destination, typeid(mscorlib::System::Double).name());
+						__parameters__[0] = source;
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Double*>(destination, typeid(mscorlib::System::Double).name());
 						__parameters__[2] = &startIndex;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
@@ -328,8 +328,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "IntPtr")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(startIndex).name());
 						__parameter_types__[3] = Global::GetType(typeid(length).name());
-						__parameters__[0] = (MonoObject*)source;
-						__parameters__[1] = Global::FromArray<mscorlib::System::IntPtr*>(destination, typeid(mscorlib::System::IntPtr).name());
+						__parameters__[0] = source;
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::IntPtr*>(destination, typeid(mscorlib::System::IntPtr).name());
 						__parameters__[2] = &startIndex;
 						__parameters__[3] = &length;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Copy", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
@@ -341,10 +341,10 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(pOuter).name());
 						__parameter_types__[1] = Global::GetType(typeid(o).name());
-						__parameters__[0] = (MonoObject*)pOuter;
+						__parameters__[0] = pOuter;
 						__parameters__[1] = (MonoObject*)o;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "CreateAggregatedObject", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Object Marshal::CreateWrapperOfType(mscorlib::System::Object o, mscorlib::System::Type t)
@@ -365,7 +365,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(structuretype).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = (MonoObject*)structuretype;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "DestroyStructure", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -375,7 +375,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "FreeBSTR", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -384,7 +384,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "FreeCoTaskMem", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -393,7 +393,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(hglobal).name());
-						__parameters__[0] = (MonoObject*)hglobal;
+						__parameters__[0] = hglobal;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "FreeHGlobal", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -402,7 +402,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
-						__parameters__[0] = (MonoObject*)s;
+						__parameters__[0] = s;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ZeroFreeBSTR", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -411,7 +411,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
-						__parameters__[0] = (MonoObject*)s;
+						__parameters__[0] = s;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ZeroFreeCoTaskMemAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -420,7 +420,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
-						__parameters__[0] = (MonoObject*)s;
+						__parameters__[0] = s;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ZeroFreeCoTaskMemUnicode", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -429,7 +429,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
-						__parameters__[0] = (MonoObject*)s;
+						__parameters__[0] = s;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ZeroFreeGlobalAllocAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -438,7 +438,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
-						__parameters__[0] = (MonoObject*)s;
+						__parameters__[0] = s;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ZeroFreeGlobalAllocUnicode", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -491,7 +491,7 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)o;
 						__parameters__[1] = (MonoObject*)T;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetComInterfaceForObject", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::GetComInterfaceForObjectInContext(mscorlib::System::Object o, mscorlib::System::Type t)
@@ -503,7 +503,7 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)o;
 						__parameters__[1] = (MonoObject*)t;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetComInterfaceForObjectInContext", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Object Marshal::GetComObjectData(mscorlib::System::Object obj, mscorlib::System::Object key)
@@ -547,7 +547,7 @@ namespace mscorlib
 				mscorlib::System::IntPtr Marshal::GetExceptionPointers()
 				{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetExceptionPointers", NullMonoObject, 0, NULL, NULL, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::GetHINSTANCE(mscorlib::System::Reflection::Module m)
@@ -557,7 +557,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(m).name());
 						__parameters__[0] = (MonoObject*)m;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetHINSTANCE", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Int32 Marshal::GetHRForException(mscorlib::System::Exception e)
@@ -583,7 +583,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(o).name());
 						__parameters__[0] = (MonoObject*)o;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetIDispatchForObject", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::GetIDispatchForObjectInContext(mscorlib::System::Object o)
@@ -593,7 +593,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(o).name());
 						__parameters__[0] = (MonoObject*)o;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetIDispatchForObjectInContext", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::GetITypeInfoForType(mscorlib::System::Type t)
@@ -603,7 +603,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(t).name());
 						__parameters__[0] = (MonoObject*)t;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetITypeInfoForType", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::GetIUnknownForObject(mscorlib::System::Object o)
@@ -613,7 +613,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(o).name());
 						__parameters__[0] = (MonoObject*)o;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetIUnknownForObject", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::GetIUnknownForObjectInContext(mscorlib::System::Object o)
@@ -623,7 +623,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(o).name());
 						__parameters__[0] = (MonoObject*)o;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetIUnknownForObjectInContext", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::GetManagedThunkForUnmanagedMethodPtr(mscorlib::System::IntPtr pfnMethodToWrap, mscorlib::System::IntPtr pbSignature, mscorlib::System::Int32 cbSignature)
@@ -633,11 +633,11 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(pfnMethodToWrap).name());
 						__parameter_types__[1] = Global::GetType(typeid(pbSignature).name());
 						__parameter_types__[2] = Global::GetType(typeid(cbSignature).name());
-						__parameters__[0] = (MonoObject*)pfnMethodToWrap;
-						__parameters__[1] = (MonoObject*)pbSignature;
+						__parameters__[0] = pfnMethodToWrap;
+						__parameters__[1] = pbSignature;
 						__parameters__[2] = &cbSignature;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetManagedThunkForUnmanagedMethodPtr", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Reflection::MemberInfo Marshal::GetMethodInfoForComSlot(mscorlib::System::Type t, mscorlib::System::Int32 slot, mscorlib::System::Runtime::InteropServices::ComMemberType::__ENUM__ memberType)
@@ -662,7 +662,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(obj).name());
 						__parameter_types__[1] = Global::GetType(typeid(pDstNativeVariant).name());
 						__parameters__[0] = (MonoObject*)obj;
-						__parameters__[1] = (MonoObject*)pDstNativeVariant;
+						__parameters__[1] = pDstNativeVariant;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetNativeVariantForObject", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -671,7 +671,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pUnk).name());
-						__parameters__[0] = (MonoObject*)pUnk;
+						__parameters__[0] = pUnk;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetObjectForIUnknown", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
 				}
@@ -681,7 +681,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pSrcNativeVariant).name());
-						__parameters__[0] = (MonoObject*)pSrcNativeVariant;
+						__parameters__[0] = pSrcNativeVariant;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetObjectForNativeVariant", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
 				}
@@ -692,7 +692,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(aSrcNativeVariant).name());
 						__parameter_types__[1] = Global::GetType(typeid(cVars).name());
-						__parameters__[0] = (MonoObject*)aSrcNativeVariant;
+						__parameters__[0] = aSrcNativeVariant;
 						__parameters__[1] = &cVars;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetObjectsForNativeVariants", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						MonoArray *__array_ptr__ = (MonoArray*)__result__;
@@ -732,7 +732,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(pUnk).name());
 						__parameter_types__[1] = Global::GetType(typeid(t).name());
-						__parameters__[0] = (MonoObject*)pUnk;
+						__parameters__[0] = pUnk;
 						__parameters__[1] = (MonoObject*)t;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetTypedObjectForIUnknown", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
@@ -743,7 +743,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(piTypeInfo).name());
-						__parameters__[0] = (MonoObject*)piTypeInfo;
+						__parameters__[0] = piTypeInfo;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetTypeForITypeInfo", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Type(__result__);
 				}
@@ -866,7 +866,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(unknown).name());
-						__parameters__[0] = (MonoObject*)unknown;
+						__parameters__[0] = unknown;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetUniqueObjectForIUnknown", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
 				}
@@ -878,11 +878,11 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(pfnMethodToWrap).name());
 						__parameter_types__[1] = Global::GetType(typeid(pbSignature).name());
 						__parameter_types__[2] = Global::GetType(typeid(cbSignature).name());
-						__parameters__[0] = (MonoObject*)pfnMethodToWrap;
-						__parameters__[1] = (MonoObject*)pbSignature;
+						__parameters__[0] = pfnMethodToWrap;
+						__parameters__[1] = pbSignature;
 						__parameters__[2] = &cbSignature;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetUnmanagedThunkForManagedMethodPtr", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Boolean Marshal::IsComObject(mscorlib::System::Object o)
@@ -930,7 +930,7 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)t;
 						__parameters__[1] = (MonoObject*)fieldName;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "OffsetOf", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::OffsetOf(mscorlib::System::Type t, const char *fieldName)
@@ -942,7 +942,7 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)t;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), fieldName);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "OffsetOf", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				void Marshal::Prelink(mscorlib::System::Reflection::MethodInfo m)
@@ -968,7 +968,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStringAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -979,7 +979,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(len).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &len;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStringAnsi", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
@@ -990,7 +990,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStringAuto", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -1001,7 +1001,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(len).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &len;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStringAuto", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
@@ -1012,7 +1012,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStringUni", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -1023,7 +1023,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(len).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &len;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStringUni", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
@@ -1034,7 +1034,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStringBSTR", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::String(__result__);
 				}
@@ -1045,7 +1045,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(structure).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = (MonoObject*)structure;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStructure", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -1056,7 +1056,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(structureType).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = (MonoObject*)structureType;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "PtrToStructure", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Object(__result__);
@@ -1069,9 +1069,9 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(pUnk).name());
 						__parameter_types__[1] = Global::GetType(typeid(iid).name());
 						__parameter_types__[2] = Global::GetType(typeid(ppv).name());
-						__parameters__[0] = (MonoObject*)pUnk;
+						__parameters__[0] = pUnk;
 						__parameters__[1] = (MonoObject*)iid;
-						__parameters__[2] = (MonoObject*)ppv;
+						__parameters__[2] = &ppv;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "QueryInterface", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 				}
@@ -1081,7 +1081,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadByte", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Byte(__result__);
 				}
@@ -1092,7 +1092,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Byte(__result__);
@@ -1115,7 +1115,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadInt16", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
 				}
@@ -1126,7 +1126,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int16*)mono_object_unbox(__result__);
@@ -1149,7 +1149,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadInt32", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 				}
@@ -1160,7 +1160,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -1183,7 +1183,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadInt64", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
 				}
@@ -1194,7 +1194,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int64*)mono_object_unbox(__result__);
@@ -1217,9 +1217,9 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadIntPtr", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::ReadIntPtr(mscorlib::System::IntPtr ptr, mscorlib::System::Int32 ofs)
@@ -1228,10 +1228,10 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadIntPtr", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::ReadIntPtr(mscorlib::System::Object ptr, mscorlib::System::Int32 ofs)
@@ -1243,7 +1243,7 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)ptr;
 						__parameters__[1] = &ofs;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReadIntPtr", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::ReAllocCoTaskMem(mscorlib::System::IntPtr pv, mscorlib::System::Int32 cb)
@@ -1252,10 +1252,10 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(pv).name());
 						__parameter_types__[1] = Global::GetType(typeid(cb).name());
-						__parameters__[0] = (MonoObject*)pv;
+						__parameters__[0] = pv;
 						__parameters__[1] = &cb;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReAllocCoTaskMem", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::ReAllocHGlobal(mscorlib::System::IntPtr pv, mscorlib::System::IntPtr cb)
@@ -1264,10 +1264,10 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(pv).name());
 						__parameter_types__[1] = Global::GetType(typeid(cb).name());
-						__parameters__[0] = (MonoObject*)pv;
-						__parameters__[1] = (MonoObject*)cb;
+						__parameters__[0] = pv;
+						__parameters__[1] = cb;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ReAllocHGlobal", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Int32 Marshal::Release(mscorlib::System::IntPtr pUnk)
@@ -1275,7 +1275,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pUnk).name());
-						__parameters__[0] = (MonoObject*)pUnk;
+						__parameters__[0] = pUnk;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "Release", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 				}
@@ -1336,7 +1336,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToBSTR", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToBSTR(const char *s)
@@ -1346,7 +1346,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToBSTR", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToCoTaskMemAnsi(mscorlib::System::String s)
@@ -1356,7 +1356,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToCoTaskMemAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToCoTaskMemAnsi(const char *s)
@@ -1366,7 +1366,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToCoTaskMemAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToCoTaskMemAuto(mscorlib::System::String s)
@@ -1376,7 +1376,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToCoTaskMemAuto", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToCoTaskMemAuto(const char *s)
@@ -1386,7 +1386,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToCoTaskMemAuto", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToCoTaskMemUni(mscorlib::System::String s)
@@ -1396,7 +1396,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToCoTaskMemUni", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToCoTaskMemUni(const char *s)
@@ -1406,7 +1406,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToCoTaskMemUni", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToHGlobalAnsi(mscorlib::System::String s)
@@ -1416,7 +1416,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToHGlobalAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToHGlobalAnsi(const char *s)
@@ -1426,7 +1426,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToHGlobalAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToHGlobalAuto(mscorlib::System::String s)
@@ -1436,7 +1436,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToHGlobalAuto", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToHGlobalAuto(const char *s)
@@ -1446,7 +1446,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToHGlobalAuto", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToHGlobalUni(mscorlib::System::String s)
@@ -1456,7 +1456,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToHGlobalUni", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::StringToHGlobalUni(const char *s)
@@ -1466,7 +1466,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StringToHGlobalUni", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::SecureStringToBSTR(mscorlib::System::Security::SecureString s)
@@ -1476,7 +1476,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "SecureStringToBSTR", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::SecureStringToCoTaskMemAnsi(mscorlib::System::Security::SecureString s)
@@ -1486,7 +1486,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "SecureStringToCoTaskMemAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::SecureStringToCoTaskMemUnicode(mscorlib::System::Security::SecureString s)
@@ -1496,7 +1496,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "SecureStringToCoTaskMemUnicode", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::SecureStringToGlobalAllocAnsi(mscorlib::System::Security::SecureString s)
@@ -1506,7 +1506,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "SecureStringToGlobalAllocAnsi", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::IntPtr Marshal::SecureStringToGlobalAllocUnicode(mscorlib::System::Security::SecureString s)
@@ -1516,7 +1516,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(s).name());
 						__parameters__[0] = (MonoObject*)s;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "SecureStringToGlobalAllocUnicode", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				void Marshal::StructureToPtr(mscorlib::System::Object structure, mscorlib::System::IntPtr ptr, mscorlib::System::Boolean fDeleteOld)
@@ -1527,7 +1527,7 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[2] = Global::GetType(typeid(fDeleteOld).name());
 						__parameters__[0] = (MonoObject*)structure;
-						__parameters__[1] = (MonoObject*)ptr;
+						__parameters__[1] = ptr;
 						__parameters__[2] = reinterpret_cast<void*>(fDeleteOld);
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "StructureToPtr", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				}
@@ -1548,7 +1548,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(errorCode).name());
 						__parameter_types__[1] = Global::GetType(typeid(errorInfo).name());
 						__parameters__[0] = &errorCode;
-						__parameters__[1] = (MonoObject*)errorInfo;
+						__parameters__[1] = errorInfo;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "ThrowExceptionForHR", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -1561,7 +1561,7 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)arr;
 						__parameters__[1] = &index;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "UnsafeAddrOfPinnedArrayElement", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				void Marshal::WriteByte(mscorlib::System::IntPtr ptr, mscorlib::System::Byte val)
@@ -1570,7 +1570,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = (MonoObject*)val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteByte", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -1582,7 +1582,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
 						__parameter_types__[2] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						__parameters__[2] = (MonoObject*)val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteByte", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -1607,7 +1607,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -1619,7 +1619,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
 						__parameter_types__[2] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						__parameters__[2] = &val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteInt16", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -1644,7 +1644,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteInt16", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -1656,7 +1656,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
 						__parameter_types__[2] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						__parameters__[2] = &val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteInt16", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -1681,7 +1681,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteInt32", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -1693,7 +1693,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
 						__parameter_types__[2] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						__parameters__[2] = &val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteInt32", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -1718,7 +1718,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteInt64", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
@@ -1730,7 +1730,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
 						__parameter_types__[2] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
 						__parameters__[2] = &val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteInt64", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -1755,8 +1755,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
-						__parameters__[1] = (MonoObject*)val;
+						__parameters__[0] = ptr;
+						__parameters__[1] = val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteIntPtr", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -1767,9 +1767,9 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(ofs).name());
 						__parameter_types__[2] = Global::GetType(typeid(val).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = &ofs;
-						__parameters__[2] = (MonoObject*)val;
+						__parameters__[2] = val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteIntPtr", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -1782,7 +1782,7 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(val).name());
 						__parameters__[0] = (MonoObject*)ptr;
 						__parameters__[1] = &ofs;
-						__parameters__[2] = (MonoObject*)val;
+						__parameters__[2] = val;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "WriteIntPtr", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -1803,7 +1803,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(errorCode).name());
 						__parameter_types__[1] = Global::GetType(typeid(errorInfo).name());
 						__parameters__[0] = &errorCode;
-						__parameters__[1] = (MonoObject*)errorInfo;
+						__parameters__[1] = errorInfo;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetExceptionForHR", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Exception(__result__);
 				}
@@ -1824,7 +1824,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType(typeid(ptr).name());
 						__parameter_types__[1] = Global::GetType(typeid(t).name());
-						__parameters__[0] = (MonoObject*)ptr;
+						__parameters__[0] = ptr;
 						__parameters__[1] = (MonoObject*)t;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetDelegateForFunctionPointer", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Delegate(__result__);
@@ -1837,7 +1837,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(d).name());
 						__parameters__[0] = (MonoObject*)d;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "Marshal", 0, NULL, "GetFunctionPointerForDelegate", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 					//	Get/Set:SystemMaxDBCSCharSize

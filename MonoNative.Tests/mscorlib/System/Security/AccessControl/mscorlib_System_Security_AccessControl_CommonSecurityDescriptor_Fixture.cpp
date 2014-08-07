@@ -7,7 +7,6 @@
 
 #include <gtest/gtest.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_CommonSecurityDescriptor.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 
 

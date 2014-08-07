@@ -2,7 +2,6 @@
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Runtime/InteropServices/WindowsRuntime/mscorlib_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -23,7 +22,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-							__parameters__[0] = (MonoObject*)ptr;
+							__parameters__[0] = ptr;
 							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "FreeHString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -42,7 +41,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(ptr).name());
-							__parameters__[0] = (MonoObject*)ptr;
+							__parameters__[0] = ptr;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "PtrToStringHString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::String(__result__);
 					}
@@ -63,7 +62,7 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(s).name());
 							__parameters__[0] = (MonoObject*)s;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "StringToHString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-							return mscorlib::System::IntPtr(__result__);
+							return mono_object_unbox (__result__);
 					}
 
 					mscorlib::System::IntPtr WindowsRuntimeMarshal::StringToHString(const char *s)
@@ -73,7 +72,7 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 							__parameters__[0] = mono_string_new(Global::GetDomain(), s);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "StringToHString", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-							return mscorlib::System::IntPtr(__result__);
+							return mono_object_unbox (__result__);
 					}
 
 

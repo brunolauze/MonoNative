@@ -1,7 +1,6 @@
 #include <mscorlib/System/Threading/mscorlib_System_Threading_NativeOverlapped.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -16,7 +15,7 @@ namespace mscorlib
 			//	Get/Set:InternalLow
 			mscorlib::System::IntPtr NativeOverlapped::get_InternalLow() const
 			{
-				return Global::GetFieldValue(__native_object__, "InternalLow");
+				return Global::GetFieldIntPtrValue(__native_object__, "InternalLow");
 			}
 
 			void NativeOverlapped::set_InternalLow(mscorlib::System::IntPtr  value)
@@ -26,7 +25,7 @@ namespace mscorlib
 			//	Get/Set:InternalHigh
 			mscorlib::System::IntPtr NativeOverlapped::get_InternalHigh() const
 			{
-				return Global::GetFieldValue(__native_object__, "InternalHigh");
+				return Global::GetFieldIntPtrValue(__native_object__, "InternalHigh");
 			}
 
 			void NativeOverlapped::set_InternalHigh(mscorlib::System::IntPtr  value)
@@ -56,7 +55,7 @@ namespace mscorlib
 			//	Get/Set:EventHandle
 			mscorlib::System::IntPtr NativeOverlapped::get_EventHandle() const
 			{
-				return Global::GetFieldValue(__native_object__, "EventHandle");
+				return Global::GetFieldIntPtrValue(__native_object__, "EventHandle");
 			}
 
 			void NativeOverlapped::set_EventHandle(mscorlib::System::IntPtr  value)

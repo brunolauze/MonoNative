@@ -2,32 +2,13 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_MESSAGING_METHODCALL_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_Header.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IDictionary.h>
 
-namespace mscorlib
-{
-	namespace System
-	{
-		namespace Runtime
-		{
-			namespace Remoting
-			{
-				namespace Messaging
-				{
-
-					class Header;
-					class LogicalCallContext;
-					
-
-				}
-			}
-		}
-	}
-}
 namespace mscorlib
 {
 	namespace System
@@ -41,6 +22,25 @@ namespace mscorlib
 				class StreamingContext;
 				
 
+			}
+		}
+	}
+}
+namespace mscorlib
+{
+	namespace System
+	{
+		namespace Runtime
+		{
+			namespace Remoting
+			{
+				namespace Messaging
+				{
+
+					class LogicalCallContext;
+					
+
+				}
 			}
 		}
 	}
@@ -98,7 +98,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "Header")), 1));
-							__parameters__[0] = Global::FromArray<mscorlib::System::Runtime::Remoting::Messaging::Header*>(h1, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Runtime.Remoting.Messaging", "Header");
+							__parameters__[0] = Global::FromArray<mscorlib::System::Runtime::Remoting::Messaging::Header*>(h1, "mscorlib", "System.Runtime.Remoting.Messaging", "Header");
 							__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting.Messaging", "MethodCall", 1, __parameter_types__, __parameters__);
 						};
 					
@@ -140,6 +140,7 @@ namespace mscorlib
 					
 
 						MethodCall & operator=(MethodCall &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(MethodCall &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

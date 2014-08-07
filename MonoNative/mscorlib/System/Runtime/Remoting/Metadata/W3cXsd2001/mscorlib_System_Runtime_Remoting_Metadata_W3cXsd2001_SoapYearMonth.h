@@ -83,6 +83,7 @@ namespace mscorlib
 						
 
 							SoapYearMonth & operator=(SoapYearMonth &value) { __native_object__ = value.GetNativeObject(); return value; };
+							bool operator==(SoapYearMonth &value) { return mscorlib::System::Object::Equals(value); };
 							operator MonoObject*() { return __native_object__; };
 							MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

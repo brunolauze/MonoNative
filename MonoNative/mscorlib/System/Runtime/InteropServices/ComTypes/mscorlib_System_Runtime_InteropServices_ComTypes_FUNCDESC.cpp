@@ -1,7 +1,6 @@
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_FUNCDESC.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_ELEMDESC.h>
 
 
@@ -31,7 +30,7 @@ namespace mscorlib
 					//	Get/Set:lprgscode
 					mscorlib::System::IntPtr FUNCDESC::get_lprgscode() const
 					{
-						return Global::GetFieldValue(__native_object__, "lprgscode");
+						return Global::GetFieldIntPtrValue(__native_object__, "lprgscode");
 					}
 
 					void FUNCDESC::set_lprgscode(mscorlib::System::IntPtr  value)
@@ -41,7 +40,7 @@ namespace mscorlib
 					//	Get/Set:lprgelemdescParam
 					mscorlib::System::IntPtr FUNCDESC::get_lprgelemdescParam() const
 					{
-						return Global::GetFieldValue(__native_object__, "lprgelemdescParam");
+						return Global::GetFieldIntPtrValue(__native_object__, "lprgelemdescParam");
 					}
 
 					void FUNCDESC::set_lprgelemdescParam(mscorlib::System::IntPtr  value)

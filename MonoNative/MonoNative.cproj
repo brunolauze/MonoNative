@@ -11,7 +11,6 @@
     <Target>Bin</Target>
     <Packages>
       <Packages>
-        <Package file="/usr/local/libdata/pkgconfig/mono-2.pc" name="Mono" IsProject="False" />
         <Package file="/usr/local/libdata/pkgconfig/glib-2.0.pc" name="GLib" IsProject="False" />
       </Packages>
     </Packages>
@@ -23,13 +22,13 @@
     <CompileTarget>SharedLibrary</CompileTarget>
     <DefineSymbols>DEBUG MONODEVELOP</DefineSymbols>
     <SourceDirectory>.</SourceDirectory>
-    <ExtraCompilerArguments>`llvm-config --cflags` -std=c++11 -stdlib=libc++ -fms-extensions</ExtraCompilerArguments>
+    <ExtraCompilerArguments>`llvm-config --cflags` -std=c++11 -stdlib=libc++ -fms-extensions -I/usr/local/include/mono-2.0</ExtraCompilerArguments>
     <Includes>
       <Includes>
         <Include>${ProjectDir}</Include>
       </Includes>
     </Includes>
-    <ExtraLinkerArguments>`llvm-config --ldflags` `llvm-config --libs` -lz -pthread -lffi -lexecinfo -ltinfo -lm</ExtraLinkerArguments>
+    <ExtraLinkerArguments>/usr/local/lib/libmonoboehm-2.0.a `llvm-config --ldflags` `llvm-config --libs` -lz -pthread -lffi -lexecinfo -ltinfo -lm</ExtraLinkerArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release</OutputPath>
@@ -143,7 +142,6 @@
     <None Include="mscorlib\System\mscorlib_System_IndexOutOfRangeException.h" />
     <None Include="mscorlib\System\mscorlib_System_InsufficientExecutionStackException.h" />
     <None Include="mscorlib\System\mscorlib_System_InsufficientMemoryException.h" />
-    <None Include="mscorlib\System\mscorlib_System_IntPtr.h" />
     <None Include="mscorlib\System\mscorlib_System_InvalidCastException.h" />
     <None Include="mscorlib\System\mscorlib_System_InvalidOperationException.h" />
     <None Include="mscorlib\System\mscorlib_System_InvalidProgramException.h" />
@@ -1513,7 +1511,6 @@
     <Compile Include="mscorlib\System\mscorlib_System_IndexOutOfRangeException.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InsufficientExecutionStackException.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InsufficientMemoryException.cpp" />
-    <Compile Include="mscorlib\System\mscorlib_System_IntPtr.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InvalidCastException.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InvalidOperationException.cpp" />
     <Compile Include="mscorlib\System\mscorlib_System_InvalidProgramException.cpp" />

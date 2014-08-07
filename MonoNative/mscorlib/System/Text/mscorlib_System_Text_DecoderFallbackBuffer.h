@@ -42,6 +42,7 @@ namespace mscorlib
 			
 
 				DecoderFallbackBuffer & operator=(DecoderFallbackBuffer &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(DecoderFallbackBuffer &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

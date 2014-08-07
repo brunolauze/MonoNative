@@ -1,5 +1,4 @@
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_RNGCryptoServiceProvider.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 
 

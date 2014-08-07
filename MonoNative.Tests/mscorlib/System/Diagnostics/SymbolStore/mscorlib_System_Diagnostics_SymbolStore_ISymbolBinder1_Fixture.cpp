@@ -8,7 +8,6 @@
 #include <gtest/gtest.h>
 #include <mscorlib/System/Diagnostics/SymbolStore/mscorlib_System_Diagnostics_SymbolStore_ISymbolBinder1.h>
 #include <mscorlib/System/Diagnostics/SymbolStore/mscorlib_System_Diagnostics_SymbolStore_ISymbolReader.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 
 

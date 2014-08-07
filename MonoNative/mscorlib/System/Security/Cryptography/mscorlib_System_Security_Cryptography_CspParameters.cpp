@@ -70,7 +70,7 @@ namespace mscorlib
 				mscorlib::System::IntPtr  CspParameters::get_ParentWindowHandle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CspParameters", 0, NULL, "get_ParentWindowHandle", __native_object__, 0, NULL, NULL, NULL);
-					return mscorlib::System::IntPtr(__result__);
+					return mono_object_unbox (__result__);
 				}
 
 				void CspParameters::set_ParentWindowHandle(mscorlib::System::IntPtr  value)
@@ -78,7 +78,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)value;
+					__parameters__[0] = value;
 					Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CspParameters", 0, NULL, "set_ParentWindowHandle", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				}
 

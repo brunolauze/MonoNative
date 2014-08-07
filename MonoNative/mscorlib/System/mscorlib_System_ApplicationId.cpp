@@ -1,5 +1,4 @@
 #include <mscorlib/System/mscorlib_System_ApplicationId.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 
 

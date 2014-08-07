@@ -1,5 +1,4 @@
 #include <mscorlib/System/IO/mscorlib_System_IO_MemoryStream.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Threading/Tasks/mscorlib_System_Threading_Tasks_Task.h>
 #include <mscorlib/System/Threading/mscorlib_System_Threading_CancellationToken.h>
 #include <mscorlib/System/Runtime/Remoting/mscorlib_System_Runtime_Remoting_ObjRef.h>

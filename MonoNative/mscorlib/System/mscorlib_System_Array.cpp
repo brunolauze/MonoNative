@@ -45,7 +45,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(indices, typeid(mscorlib::System::Int32).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(indices, typeid(mscorlib::System::Int32).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "GetValue", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
 		}
@@ -57,7 +57,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 				__parameters__[0] = (MonoObject*)value;
-				__parameters__[1] = Global::FromArray<mscorlib::System::Int32*>(indices, typeid(mscorlib::System::Int32).name());
+				__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(indices, typeid(mscorlib::System::Int32).name());
 				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "SetValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 		}
 
@@ -276,7 +276,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(elementType).name());
 				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 				__parameters__[0] = (MonoObject*)elementType;
-				__parameters__[1] = Global::FromArray<mscorlib::System::Int32*>(lengths, typeid(mscorlib::System::Int32).name());
+				__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(lengths, typeid(mscorlib::System::Int32).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "CreateInstance", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Array(__result__);
 		}
@@ -289,8 +289,8 @@ namespace mscorlib
 				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 				__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 				__parameters__[0] = (MonoObject*)elementType;
-				__parameters__[1] = Global::FromArray<mscorlib::System::Int32*>(lengths, typeid(mscorlib::System::Int32).name());
-				__parameters__[2] = Global::FromArray<mscorlib::System::Int32*>(lowerBounds, typeid(mscorlib::System::Int32).name());
+				__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(lengths, typeid(mscorlib::System::Int32).name());
+				__parameters__[2] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(lowerBounds, typeid(mscorlib::System::Int32).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "CreateInstance", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Array(__result__);
 		}
@@ -302,7 +302,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(elementType).name());
 				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int64")), 1));
 				__parameters__[0] = (MonoObject*)elementType;
-				__parameters__[1] = Global::FromArray<mscorlib::System::Int64*>(lengths, typeid(mscorlib::System::Int64).name());
+				__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int64*>(lengths, typeid(mscorlib::System::Int64).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "CreateInstance", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Array(__result__);
 		}
@@ -312,7 +312,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int64")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Int64*>(indices, typeid(mscorlib::System::Int64).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int64*>(indices, typeid(mscorlib::System::Int64).name());
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "GetValue", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Object(__result__);
 		}
@@ -324,7 +324,7 @@ namespace mscorlib
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
 				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int64")), 1));
 				__parameters__[0] = (MonoObject*)value;
-				__parameters__[1] = Global::FromArray<mscorlib::System::Int64*>(indices, typeid(mscorlib::System::Int64).name());
+				__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int64*>(indices, typeid(mscorlib::System::Int64).name());
 				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "SetValue", __native_object__, 2, __parameter_types__, __parameters__, NULL);
 		}
 

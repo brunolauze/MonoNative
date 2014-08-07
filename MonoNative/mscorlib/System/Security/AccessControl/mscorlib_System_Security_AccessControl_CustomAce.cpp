@@ -1,5 +1,4 @@
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_CustomAce.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 

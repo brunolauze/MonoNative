@@ -13,7 +13,6 @@ namespace mscorlib
 
 		class Type;
 		class Guid;
-		class IntPtr;
 		class TypedReference;
 		class String;
 		class RuntimeFieldHandle;

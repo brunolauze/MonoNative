@@ -9,7 +9,6 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_FUNCDESC.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_ELEMDESC.h>
 
 

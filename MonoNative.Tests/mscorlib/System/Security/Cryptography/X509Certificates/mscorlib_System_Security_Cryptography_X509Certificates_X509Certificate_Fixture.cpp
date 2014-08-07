@@ -7,7 +7,6 @@
 
 #include <gtest/gtest.h>
 #include <mscorlib/System/Security/Cryptography/X509Certificates/mscorlib_System_Security_Cryptography_X509Certificates_X509Certificate.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 
 

@@ -7,8 +7,6 @@
 
 #include <gtest/gtest.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ReflectionTypeLoadException.h>
-#include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_Exception.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_SerializationInfo.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MethodBase.h>

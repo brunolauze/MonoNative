@@ -37,6 +37,7 @@ namespace mscorlib
 		typedef unsigned long UInt64;
 		typedef float Float;
 		typedef double Double;
+		typedef void* IntPtr;
 	}
 }
 
@@ -59,11 +60,14 @@ public:
 	static MonoImage* GetImage(const char *name);
 	static MonoClass* GetClass(const char* assemblyName, const char* nameSpace, const char* typeName);
 	static MonoClass* GetClass(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes);
+	static MonoType* MakeArrayType(MonoType *type);
 	static MonoMethod* GetMethod(MonoObject *obj, const char* name, int pcount, MonoType **parameters);
 	static MonoMethod* GetMethod(MonoClass *kclass, const char* name, int pcount, MonoType **parameters);
+	static MonoMethod* GetMethod(MonoClass *kclass, const char* name, int genericMethodTypesCount, MonoType **genericMethodTypes, int pcount, MonoType **parameters);
 	static MonoObject* InvokeMethod(MonoClass *kclass, const char* name, MonoObject *thisArg, int pcount, MonoType **parameterTypes, void **parameters, MonoObject **exc);
 	static MonoObject* InvokeMethod(MonoMethod *method, MonoObject *thisArgs, void **parameters, MonoObject **exc);
 	static MonoObject* InvokeMethod(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char* name, MonoObject *thisArg, int pcount, MonoType **parameterTypes, void **parameters, MonoObject **exc);
+	static MonoObject* InvokeMethod(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char* name, MonoObject *thisArg, int genericMethodTypesCount, MonoType **genericMethodTypes, int pcount, MonoType **parameterTypes, void **parameters, MonoObject **exc);
 	static MonoObject* GetTypeObject(const char *typeName);
 	static mscorlib::System::Boolean GetFieldBooleanValue(MonoObject *obj, const char *name);
 	static mscorlib::System::Boolean GetFieldBooleanValue(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char *name);
@@ -73,7 +77,6 @@ public:
 	static mscorlib::System::Int32 GetFieldInt32Value(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char *name);
 	static mscorlib::System::Int64 GetFieldInt64Value(MonoObject *obj, const char *name);
 	static mscorlib::System::Int64 GetFieldInt64Value(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char *name);
-
 	static mscorlib::System::UInt16 GetFieldUInt16Value(MonoObject *obj, const char *name);
 	static mscorlib::System::UInt16 GetFieldUInt16Value(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char *name);
 	static mscorlib::System::UInt32 GetFieldUInt32Value(MonoObject *obj, const char *name);
@@ -88,6 +91,7 @@ public:
 	static MonoString* GetFieldStringValue(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char *name);
 	static MonoObject* GetFieldValue(MonoObject *obj, const char *name);
 	static MonoObject* GetFieldValue(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char *name);
+	static mscorlib::System::IntPtr GetFieldIntPtrValue(MonoObject *obj, const char *name) { return mono_object_unbox(GetFieldValue(obj, name)); };
 	static void SetFieldValue(MonoObject *obj, const char *name, MonoObject *value);
 	static void SetFieldValue(MonoObject *obj, const char *name, void *value);
 	static void SetFieldValue(const char* assemblyName, const char* nameSpace, const char* typeName, int genericTypeCount, MonoType **genericTypes, const char *name, MonoObject *value);
@@ -101,7 +105,7 @@ public:
 		MonoArray *array_items = mono_array_new(__domain__, mono_type_get_class(GetType(mangledName)), items.size());
 		int i = 0;
 		for(typename std::vector<T>::iterator it = items.begin(); it != items.end(); ++it) {
-			mono_array_set(array_items, MonoObject*, i++, (MonoObject*)(*it));
+			mono_array_set(array_items, MonoObject*, i++, (MonoObject*)*(*it));
 		}
 		return (MonoObject*)array_items;
 	};
@@ -112,7 +116,18 @@ public:
 		MonoArray *array_items = mono_array_new(__domain__, GetClass(assemblyName, nameSpace, typeName), items.size());
 		int i = 0;
 		for(typename std::vector<T>::iterator it = items.begin(); it != items.end(); ++it) {
-			mono_array_set(array_items, MonoObject*, i++, (MonoObject*)(*it));
+			mono_array_set(array_items, MonoObject*, i++, (MonoObject*)*(*it));
+		}
+		return (MonoObject*)array_items;
+	};
+
+	template<typename T>
+	static MonoObject* FromPrimitiveArray(std::vector<T> items, const char *mangledName)
+	{
+		MonoArray *array_items = mono_array_new(__domain__, mono_type_get_class(GetType(mangledName)), items.size());
+		int i = 0;
+		for(typename std::vector<T>::iterator it = items.begin(); it != items.end(); ++it) {
+			mono_array_set(array_items, T, i++, (*it));
 		}
 		return (MonoObject*)array_items;
 	};

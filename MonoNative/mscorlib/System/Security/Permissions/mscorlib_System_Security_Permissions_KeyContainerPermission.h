@@ -4,6 +4,7 @@
 #include <mscorlib/System/Security/mscorlib_System_Security_CodeAccessPermission.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_PermissionState.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_KeyContainerPermissionFlags.h>
+#include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_KeyContainerPermissionAccessEntry.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_IUnrestrictedPermission.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_ISecurityEncodable.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_IPermission.h>
@@ -19,7 +20,6 @@ namespace mscorlib
 			namespace Permissions
 			{
 
-				class KeyContainerPermissionAccessEntry;
 				class KeyContainerPermissionAccessEntryCollection;
 				
 
@@ -111,7 +111,7 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry")), 1));
 						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[0] = &__param_flags__;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntry*>(accessList, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Security.Permissions", "KeyContainerPermissionAccessEntry");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Security::Permissions::KeyContainerPermissionAccessEntry*>(accessList, "mscorlib", "System.Security.Permissions", "KeyContainerPermissionAccessEntry");
 						__native_object__ = Global::New("mscorlib", "System.Security.Permissions", "KeyContainerPermission", 2, __parameter_types__, __parameters__);
 					};
 				
@@ -139,6 +139,7 @@ namespace mscorlib
 				
 
 					KeyContainerPermission & operator=(KeyContainerPermission &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(KeyContainerPermission &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

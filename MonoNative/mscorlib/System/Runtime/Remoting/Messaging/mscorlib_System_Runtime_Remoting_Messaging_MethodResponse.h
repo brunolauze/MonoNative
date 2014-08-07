@@ -2,6 +2,7 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_MESSAGING_METHODRESPONSE_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_Header.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodCallMessage.h>
 #include <mscorlib/System/Runtime/Remoting/Messaging/mscorlib_System_Runtime_Remoting_Messaging_IMethodMessage.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
@@ -13,6 +14,18 @@ namespace mscorlib
 {
 	namespace System
 	{
+
+		class Exception;
+		class String;
+		class Type;
+		
+
+	}
+}
+namespace mscorlib
+{
+	namespace System
+	{
 		namespace Runtime
 		{
 			namespace Remoting
@@ -20,25 +33,12 @@ namespace mscorlib
 				namespace Messaging
 				{
 
-					class Header;
 					class LogicalCallContext;
 					
 
 				}
 			}
 		}
-	}
-}
-namespace mscorlib
-{
-	namespace System
-	{
-
-		class Exception;
-		class String;
-		class Type;
-		
-
 	}
 }
 namespace mscorlib
@@ -101,7 +101,7 @@ namespace mscorlib
 							void *__parameters__[2];
 							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "Header")), 1));
 							__parameter_types__[1] = Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodCallMessage");
-							__parameters__[0] = Global::FromArray<mscorlib::System::Runtime::Remoting::Messaging::Header*>(h1, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Runtime.Remoting.Messaging", "Header");
+							__parameters__[0] = Global::FromArray<mscorlib::System::Runtime::Remoting::Messaging::Header*>(h1, "mscorlib", "System.Runtime.Remoting.Messaging", "Header");
 							__parameters__[1] = (MonoObject*)mcm;
 							__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting.Messaging", "MethodResponse", 2, __parameter_types__, __parameters__);
 						};
@@ -130,6 +130,7 @@ namespace mscorlib
 					
 
 						MethodResponse & operator=(MethodResponse &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(MethodResponse &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

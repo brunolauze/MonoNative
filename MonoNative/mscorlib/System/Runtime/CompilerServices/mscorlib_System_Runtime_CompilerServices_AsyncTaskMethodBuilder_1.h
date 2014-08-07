@@ -39,6 +39,7 @@ namespace mscorlib
 				
 
 					AsyncTaskMethodBuilder & operator=(AsyncTaskMethodBuilder &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(AsyncTaskMethodBuilder &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -52,6 +53,12 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(stateMachine).name());
 						__parameters__[0] = (MonoObject*)awaiter;
 						__parameters__[1] = (MonoObject*)stateMachine;
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TResult).name());
+						MonoType *__generic_types__method__[2];
+						__generic_types__method__[0] = Global::GetType(typeid(TAwaiter).name());
+						__generic_types__method__[1] = Global::GetType(typeid(TStateMachine).name());
+						Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "AsyncTaskMethodBuilder`1", 1, __generic_types__, "AwaitOnCompleted", __native_object__, 2, __generic_types__method__, 2, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename TAwaiter, typename TStateMachine>
@@ -63,6 +70,12 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(stateMachine).name());
 						__parameters__[0] = (MonoObject*)awaiter;
 						__parameters__[1] = (MonoObject*)stateMachine;
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TResult).name());
+						MonoType *__generic_types__method__[2];
+						__generic_types__method__[0] = Global::GetType(typeid(TAwaiter).name());
+						__generic_types__method__[1] = Global::GetType(typeid(TStateMachine).name());
+						Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "AsyncTaskMethodBuilder`1", 1, __generic_types__, "AwaitUnsafeOnCompleted", __native_object__, 2, __generic_types__method__, 2, __parameter_types__, __parameters__, NULL);
 					};
 					
 					static mscorlib::System::Runtime::CompilerServices::AsyncTaskMethodBuilder<TResult>  Create()
@@ -113,6 +126,11 @@ namespace mscorlib
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(stateMachine).name());
 						__parameters__[0] = (MonoObject*)stateMachine;
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TResult).name());
+						MonoType *__generic_types__method__[1];
+						__generic_types__method__[0] = Global::GetType(typeid(TStateMachine).name());
+						Global::InvokeMethod("mscorlib", "System.Runtime.CompilerServices", "AsyncTaskMethodBuilder`1", 1, __generic_types__, "Start", __native_object__, 1, __generic_types__method__, 1, __parameter_types__, __parameters__, NULL);
 					};
 					
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

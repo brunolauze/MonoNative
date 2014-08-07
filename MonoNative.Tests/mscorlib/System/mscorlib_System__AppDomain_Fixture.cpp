@@ -24,7 +24,6 @@
 #include <mscorlib/System/mscorlib_System_EventArgs.h>
 #include <mscorlib/System/mscorlib_System_UnhandledExceptionEventArgs.h>
 #include <mscorlib/System/mscorlib_System_Guid.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 

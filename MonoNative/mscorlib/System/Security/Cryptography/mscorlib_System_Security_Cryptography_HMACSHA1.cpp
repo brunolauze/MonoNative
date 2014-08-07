@@ -1,5 +1,4 @@
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_HMACSHA1.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/IO/mscorlib_System_IO_Stream.h>
 #include <mscorlib/System/mscorlib_System_Type.h>

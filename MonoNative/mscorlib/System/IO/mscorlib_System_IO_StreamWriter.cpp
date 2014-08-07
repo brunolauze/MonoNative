@@ -26,7 +26,7 @@ namespace mscorlib
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
-					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(buffer, typeid(mscorlib::System::Char).name());
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(buffer, typeid(mscorlib::System::Char).name());
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "Write", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -46,7 +46,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
-					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(buffer, typeid(mscorlib::System::Char).name());
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(buffer, typeid(mscorlib::System::Char).name());
 					Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "Write", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -96,7 +96,7 @@ namespace mscorlib
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
-					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(buffer, typeid(mscorlib::System::Char).name());
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(buffer, typeid(mscorlib::System::Char).name());
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "WriteAsync", __native_object__, 3, __parameter_types__, __parameters__, NULL);
@@ -146,7 +146,7 @@ namespace mscorlib
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
-					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(buffer, typeid(mscorlib::System::Char).name());
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(buffer, typeid(mscorlib::System::Char).name());
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "StreamWriter", 0, NULL, "WriteLineAsync", __native_object__, 3, __parameter_types__, __parameters__, NULL);

@@ -7,10 +7,10 @@
 #include <mscorlib/System/Globalization/mscorlib_System_Globalization_Calendar.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_IDeserializationCallback.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
+#include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_IFormattable.h>
-#include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/mscorlib_System_DayOfWeek.h>
@@ -36,20 +36,20 @@ namespace mscorlib
 			: public mscorlib::System::ValueType
 			, public virtual mscorlib::System::Runtime::Serialization::IDeserializationCallback
 			, public virtual mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>
+			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>
 			, public virtual mscorlib::System::Runtime::Serialization::ISerializable
 			, public virtual mscorlib::System::IFormattable
-			, public virtual mscorlib::System::IObjectComparable
 		{
 		public:
 			DateTimeOffset(mscorlib::System::DateTime dateTime)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
@@ -62,10 +62,10 @@ namespace mscorlib
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
@@ -80,10 +80,10 @@ namespace mscorlib
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[2];
 				void *__parameters__[2];
@@ -98,10 +98,10 @@ namespace mscorlib
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[7];
 				void *__parameters__[7];
@@ -126,10 +126,10 @@ namespace mscorlib
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[8];
 				void *__parameters__[8];
@@ -156,10 +156,10 @@ namespace mscorlib
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.DateTimeOffset"))
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			{
 				MonoType *__parameter_types__[9];
 				void *__parameters__[9];
@@ -188,10 +188,10 @@ namespace mscorlib
 			: mscorlib::System::ValueType(nativeTypeInfo)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(NULL)
 			, mscorlib::System::Runtime::Serialization::ISerializable(NULL)
 			, mscorlib::System::IFormattable(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			{
 			};
 		
@@ -199,10 +199,10 @@ namespace mscorlib
 			: mscorlib::System::ValueType(nativeObject)
 			, mscorlib::System::Runtime::Serialization::IDeserializationCallback(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::DateTimeOffset>(nativeObject)
+			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::DateTimeOffset>(nativeObject)
 			, mscorlib::System::Runtime::Serialization::ISerializable(nativeObject)
 			, mscorlib::System::IFormattable(nativeObject)
-			, mscorlib::System::IObjectComparable(nativeObject)
 			{
 			};
 		
@@ -212,6 +212,7 @@ namespace mscorlib
 		
 
 			DateTimeOffset & operator=(DateTimeOffset &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(DateTimeOffset &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

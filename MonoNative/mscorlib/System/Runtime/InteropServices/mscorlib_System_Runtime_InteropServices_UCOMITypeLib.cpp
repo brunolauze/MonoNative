@@ -1,7 +1,6 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_UCOMITypeLib.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_UCOMITypeInfo.h>
 #include <mscorlib/System/mscorlib_System_Guid.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 
 
@@ -61,7 +60,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ppTLibAttr).name());
-						__parameters__[0] = (MonoObject*)ppTLibAttr;
+						__parameters__[0] = &ppTLibAttr;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeLib", 0, NULL, "GetLibAttr", __mscorlib_System_Runtime_InteropServices_UCOMITypeLib, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -127,7 +126,7 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)szNameBuf;
 						__parameters__[1] = &lHashVal;
 						__parameters__[2] = Global::FromArray<mscorlib::System::Runtime::InteropServices::UCOMITypeInfo*>(ppTInfo, typeid(mscorlib::System::Runtime::InteropServices::UCOMITypeInfo).name());
-						__parameters__[3] = Global::FromArray<mscorlib::System::Int32*>(rgMemId, typeid(mscorlib::System::Int32).name());
+						__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(rgMemId, typeid(mscorlib::System::Int32).name());
 						__parameters__[4] = &pcFound;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeLib", 0, NULL, "FindName", __mscorlib_System_Runtime_InteropServices_UCOMITypeLib, 5, __parameter_types__, __parameters__, NULL);
 				}
@@ -144,7 +143,7 @@ namespace mscorlib
 						__parameters__[0] = mono_string_new(Global::GetDomain(), szNameBuf);
 						__parameters__[1] = &lHashVal;
 						__parameters__[2] = Global::FromArray<mscorlib::System::Runtime::InteropServices::UCOMITypeInfo*>(ppTInfo, typeid(mscorlib::System::Runtime::InteropServices::UCOMITypeInfo).name());
-						__parameters__[3] = Global::FromArray<mscorlib::System::Int32*>(rgMemId, typeid(mscorlib::System::Int32).name());
+						__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(rgMemId, typeid(mscorlib::System::Int32).name());
 						__parameters__[4] = &pcFound;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeLib", 0, NULL, "FindName", __mscorlib_System_Runtime_InteropServices_UCOMITypeLib, 5, __parameter_types__, __parameters__, NULL);
 				}
@@ -154,7 +153,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pTLibAttr).name());
-						__parameters__[0] = (MonoObject*)pTLibAttr;
+						__parameters__[0] = pTLibAttr;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeLib", 0, NULL, "ReleaseTLibAttr", __mscorlib_System_Runtime_InteropServices_UCOMITypeLib, 1, __parameter_types__, __parameters__, NULL);
 				}
 

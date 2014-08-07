@@ -45,6 +45,7 @@ namespace mscorlib
 			
 
 				Missing & operator=(Missing &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(Missing &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

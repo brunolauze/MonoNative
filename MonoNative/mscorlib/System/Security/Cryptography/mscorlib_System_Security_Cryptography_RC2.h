@@ -68,6 +68,7 @@ namespace mscorlib
 				
 
 					RC2 & operator=(RC2 &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(RC2 &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

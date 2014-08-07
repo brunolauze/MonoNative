@@ -66,7 +66,7 @@ namespace mscorlib
 							__parameter_types__[3] = Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "LogicalCallContext");
 							__parameter_types__[4] = Global::GetType("mscorlib", "System.Runtime.Remoting.Messaging", "IMethodCallMessage");
 							__parameters__[0] = (MonoObject*)ret;
-							__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(outArgs, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
+							__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(outArgs, "mscorlib", "System", "Object");
 							__parameters__[2] = &outArgsCount;
 							__parameters__[3] = (MonoObject*)callCtx;
 							__parameters__[4] = (MonoObject*)mcm;
@@ -110,6 +110,7 @@ namespace mscorlib
 					
 
 						ReturnMessage & operator=(ReturnMessage &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(ReturnMessage &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

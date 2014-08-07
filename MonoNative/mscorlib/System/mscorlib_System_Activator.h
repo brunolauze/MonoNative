@@ -106,6 +106,7 @@ namespace mscorlib
 		
 
 			Activator & operator=(Activator &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(Activator &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -139,7 +140,9 @@ namespace mscorlib
 			template<typename T>
 			static T  CreateInstance()
 			{
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 0, NULL, NULL, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Activator", 0, NULL, "CreateInstance", NullMonoObject, 1, __generic_types__, 0, NULL, NULL, NULL);
 				return T(__result__);
 			};
 			

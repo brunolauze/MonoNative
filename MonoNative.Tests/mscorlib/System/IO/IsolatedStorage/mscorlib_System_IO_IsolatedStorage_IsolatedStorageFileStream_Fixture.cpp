@@ -8,7 +8,6 @@
 #include <gtest/gtest.h>
 #include <mscorlib/System/IO/IsolatedStorage/mscorlib_System_IO_IsolatedStorage_IsolatedStorageFileStream.h>
 #include <mscorlib/Microsoft/Win32/SafeHandles/mscorlib_Microsoft_Win32_SafeHandles_SafeFileHandle.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_FileSecurity.h>
 #include <mscorlib/System/Threading/Tasks/mscorlib_System_Threading_Tasks_Task.h>

@@ -21,7 +21,7 @@ namespace mscorlib
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType(typeid(offset).name());
 				__parameter_types__[2] = Global::GetType(typeid(length).name());
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(inArray, typeid(mscorlib::System::Char).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(inArray, typeid(mscorlib::System::Char).name());
 				__parameters__[1] = &offset;
 				__parameters__[2] = &length;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "FromBase64CharArray", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
@@ -104,7 +104,7 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(inArray, typeid(mscorlib::System::Byte).name());
 				__parameters__[1] = &offsetIn;
 				__parameters__[2] = &length;
-				__parameters__[3] = Global::FromArray<mscorlib::System::Char*>(outArray, typeid(mscorlib::System::Char).name());
+				__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Char*>(outArray, typeid(mscorlib::System::Char).name());
 				__parameters__[4] = &offsetOut;
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Convert", 0, NULL, "ToBase64CharArray", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
@@ -177,7 +177,7 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(inArray, typeid(mscorlib::System::Byte).name());
 				__parameters__[1] = &offsetIn;
 				__parameters__[2] = &length;
-				__parameters__[3] = Global::FromArray<mscorlib::System::Char*>(outArray, typeid(mscorlib::System::Char).name());
+				__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Char*>(outArray, typeid(mscorlib::System::Char).name());
 				__parameters__[4] = &offsetOut;
 				mscorlib::System::Int32 __param_options__ = options;
 				__parameters__[5] = &__param_options__;

@@ -4,7 +4,6 @@
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_CryptoKeySecurity.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_SecureString.h>
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_CspProviderFlags.h>
 
@@ -87,7 +86,7 @@ namespace mscorlib
 						__parameters__[1] = (MonoObject*)providerName;
 						__parameters__[2] = (MonoObject*)keyContainerName;
 						__parameters__[3] = (MonoObject*)cryptoKeySecurity;
-						__parameters__[4] = (MonoObject*)parentWindowHandle;
+						__parameters__[4] = parentWindowHandle;
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "CspParameters", 5, __parameter_types__, __parameters__);
 					};
 				
@@ -125,6 +124,7 @@ namespace mscorlib
 				
 
 					CspParameters & operator=(CspParameters &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(CspParameters &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

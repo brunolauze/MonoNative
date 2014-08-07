@@ -96,7 +96,6 @@
 #include <mscorlib/System/mscorlib_System_IndexOutOfRangeException.h>
 #include <mscorlib/System/mscorlib_System_InsufficientExecutionStackException.h>
 #include <mscorlib/System/mscorlib_System_InsufficientMemoryException.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_InvalidCastException.h>
 #include <mscorlib/System/mscorlib_System_InvalidOperationException.h>
 #include <mscorlib/System/mscorlib_System_InvalidProgramException.h>

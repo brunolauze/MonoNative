@@ -8,8 +8,8 @@
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
 #include <mscorlib/System/mscorlib_System_IConvertible.h>
-#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
+#include <mscorlib/System/Collections/Generic/mscorlib_System_Collections_Generic_IEnumerable_1.h>
 #include <mscorlib/System/Collections/mscorlib_System_Collections_IEnumerable.h>
 #include <mscorlib/System/mscorlib_System_TypeCode.h>
 #include <mscorlib/System/mscorlib_System_StringSplitOptions.h>
@@ -77,8 +77,8 @@ namespace mscorlib
 			, public virtual mscorlib::System::ICloneable
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::String>
 			, public virtual mscorlib::System::IConvertible
-			, public virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>
 			, public virtual mscorlib::System::IObjectComparable
+			, public virtual mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>
 			, public virtual mscorlib::System::Collections::IEnumerable
 		{
 		public:
@@ -88,8 +88,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				__native_object__ = (MonoObject*)mono_string_new(Global::GetDomain(), value);
@@ -101,8 +101,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				MonoType *__parameter_types__[1];
@@ -118,8 +118,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				MonoType *__parameter_types__[3];
@@ -139,8 +139,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				MonoType *__parameter_types__[1];
@@ -156,8 +156,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				MonoType *__parameter_types__[3];
@@ -177,8 +177,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				MonoType *__parameter_types__[4];
@@ -200,8 +200,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				MonoType *__parameter_types__[3];
@@ -209,7 +209,7 @@ namespace mscorlib
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
 				__parameter_types__[1] = Global::GetType("mscorlib", "System", "Int32");
 				__parameter_types__[2] = Global::GetType("mscorlib", "System", "Int32");
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(value, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Char");
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(value, typeid(mscorlib::System::Char).name());
 				__parameters__[1] = &startIndex;
 				__parameters__[2] = &length;
 				__native_object__ = Global::New("mscorlib", "System", "String", 3, __parameter_types__, __parameters__);
@@ -221,14 +221,14 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Char")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(value, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Char");
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(value, typeid(mscorlib::System::Char).name());
 				__native_object__ = Global::New("mscorlib", "System", "String", 1, __parameter_types__, __parameters__);
 			};
 		
@@ -238,8 +238,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 				MonoType *__parameter_types__[2];
@@ -257,8 +257,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(NULL)
 			, mscorlib::System::IConvertible(NULL)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(NULL)
 			, mscorlib::System::Collections::IEnumerable(NULL)
 			{
 			};
@@ -269,8 +269,8 @@ namespace mscorlib
 			, mscorlib::System::ICloneable(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::String>(nativeObject)
 			, mscorlib::System::IConvertible(nativeObject)
-			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(nativeObject)
 			, mscorlib::System::IObjectComparable(nativeObject)
+			, mscorlib::System::Collections::Generic::IEnumerable<mscorlib::System::Char>(nativeObject)
 			, mscorlib::System::Collections::IEnumerable(nativeObject)
 			{
 			};
@@ -281,6 +281,7 @@ namespace mscorlib
 		
 
 			String & operator=(String &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(String &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 			operator MonoString*() { return mono_object_to_string(__native_object__, NULL); };
@@ -473,7 +474,9 @@ namespace mscorlib
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(values).name());
 				__parameters__[0] = (MonoObject*)values;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Concat", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Concat", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 			};
 			
@@ -490,7 +493,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(values).name());
 				__parameters__[0] = (MonoObject*)separator;
 				__parameters__[1] = (MonoObject*)values;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Join", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Join", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 			};
 			
@@ -503,7 +508,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(values).name());
 				__parameters__[0] = mono_string_new(Global::GetDomain(), separator);
 				__parameters__[1] = (MonoObject*)values;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Join", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "String", 0, NULL, "Join", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::String(__result__);
 			};
 			

@@ -1,5 +1,4 @@
 #include <mscorlib/System/Text/mscorlib_System_Text_DecoderFallbackException.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_SerializationInfo.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MethodBase.h>

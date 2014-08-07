@@ -66,6 +66,7 @@ namespace mscorlib
 					
 
 						DESCUNION & operator=(DESCUNION &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(DESCUNION &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -108,6 +109,7 @@ namespace mscorlib
 				
 
 					ELEMDESC & operator=(ELEMDESC &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(ELEMDESC &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

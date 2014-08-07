@@ -59,6 +59,7 @@ namespace mscorlib
 				
 
 					PermissionRequestEvidence & operator=(PermissionRequestEvidence &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(PermissionRequestEvidence &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

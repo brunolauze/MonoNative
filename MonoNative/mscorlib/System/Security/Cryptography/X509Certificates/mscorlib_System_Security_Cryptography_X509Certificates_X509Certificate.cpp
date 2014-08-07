@@ -1,5 +1,4 @@
 #include <mscorlib/System/Security/Cryptography/X509Certificates/mscorlib_System_Security_Cryptography_X509Certificates_X509Certificate.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 
 
@@ -467,7 +466,7 @@ namespace mscorlib
 					mscorlib::System::IntPtr  X509Certificate::get_Handle() const
 					{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography.X509Certificates", "X509Certificate", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 					}
 
 

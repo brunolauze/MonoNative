@@ -1,5 +1,4 @@
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_IEnumConnectionPoints.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -24,7 +23,7 @@ namespace mscorlib
 							__parameter_types__[2] = Global::GetType(typeid(pceltFetched).name());
 							__parameters__[0] = &celt;
 							__parameters__[1] = Global::FromArray<mscorlib::System::Runtime::InteropServices::ComTypes::IConnectionPoint*>(rgelt, typeid(mscorlib::System::Runtime::InteropServices::ComTypes::IConnectionPoint).name());
-							__parameters__[2] = (MonoObject*)pceltFetched;
+							__parameters__[2] = pceltFetched;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.ComTypes", "IEnumConnectionPoints", 0, NULL, "Next", __mscorlib_System_Runtime_InteropServices_ComTypes_IEnumConnectionPoints, 3, __parameter_types__, __parameters__, NULL);
 							return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 					}

@@ -12,7 +12,6 @@
 #include <mscorlib/System/mscorlib_System_Guid.h>
 #include <mscorlib/System/Diagnostics/SymbolStore/mscorlib_System_Diagnostics_SymbolStore_SymbolToken.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 

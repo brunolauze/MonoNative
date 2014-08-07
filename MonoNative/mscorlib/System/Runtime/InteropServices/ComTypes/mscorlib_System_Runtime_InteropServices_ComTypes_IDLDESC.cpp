@@ -1,7 +1,6 @@
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_IDLDESC.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -20,7 +19,7 @@ namespace mscorlib
 					//	Get/Set:dwReserved
 					mscorlib::System::IntPtr IDLDESC::get_dwReserved() const
 					{
-						return Global::GetFieldValue(__native_object__, "dwReserved");
+						return Global::GetFieldIntPtrValue(__native_object__, "dwReserved");
 					}
 
 					void IDLDESC::set_dwReserved(mscorlib::System::IntPtr  value)

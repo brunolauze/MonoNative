@@ -23,7 +23,7 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(index).name());
 					__parameter_types__[2] = Global::GetType(typeid(count).name());
 					__parameter_types__[3] = Global::GetType(typeid(flush).name());
-					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					__parameters__[1] = &index;
 					__parameters__[2] = &count;
 					__parameters__[3] = reinterpret_cast<void*>(flush);
@@ -41,7 +41,7 @@ namespace mscorlib
 					__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 					__parameter_types__[4] = Global::GetType(typeid(byteIndex).name());
 					__parameter_types__[5] = Global::GetType(typeid(flush).name());
-					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					__parameters__[1] = &charIndex;
 					__parameters__[2] = &charCount;
 					__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());
@@ -125,7 +125,7 @@ namespace mscorlib
 					__parameter_types__[7] = Global::GetType(typeid(charsUsed).name());
 					__parameter_types__[8] = Global::GetType(typeid(bytesUsed).name());
 					__parameter_types__[9] = Global::GetType(typeid(completed).name());
-					__parameters__[0] = Global::FromArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Char*>(chars, typeid(mscorlib::System::Char).name());
 					__parameters__[1] = &charIndex;
 					__parameters__[2] = &charCount;
 					__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(bytes, typeid(mscorlib::System::Byte).name());

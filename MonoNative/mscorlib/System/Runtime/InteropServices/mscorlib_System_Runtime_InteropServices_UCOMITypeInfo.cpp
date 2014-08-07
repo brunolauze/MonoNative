@@ -1,5 +1,4 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_UCOMITypeInfo.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_UCOMITypeComp.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_DISPPARAMS.h>
@@ -24,7 +23,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(ppTypeAttr).name());
-						__parameters__[0] = (MonoObject*)ppTypeAttr;
+						__parameters__[0] = &ppTypeAttr;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeInfo", 0, NULL, "GetTypeAttr", __mscorlib_System_Runtime_InteropServices_UCOMITypeInfo, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -44,7 +43,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(index).name());
 						__parameter_types__[1] = Global::GetType(typeid(ppFuncDesc).name());
 						__parameters__[0] = &index;
-						__parameters__[1] = (MonoObject*)ppFuncDesc;
+						__parameters__[1] = &ppFuncDesc;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeInfo", 0, NULL, "GetFuncDesc", __mscorlib_System_Runtime_InteropServices_UCOMITypeInfo, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -55,7 +54,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(index).name());
 						__parameter_types__[1] = Global::GetType(typeid(ppVarDesc).name());
 						__parameters__[0] = &index;
-						__parameters__[1] = (MonoObject*)ppVarDesc;
+						__parameters__[1] = &ppVarDesc;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeInfo", 0, NULL, "GetVarDesc", __mscorlib_System_Runtime_InteropServices_UCOMITypeInfo, 2, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -105,7 +104,7 @@ namespace mscorlib
 						__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::String*>(rgszNames, typeid(mscorlib::System::String).name());
 						__parameters__[1] = &cNames;
-						__parameters__[2] = Global::FromArray<mscorlib::System::Int32*>(pMemId, typeid(mscorlib::System::Int32).name());
+						__parameters__[2] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(pMemId, typeid(mscorlib::System::Int32).name());
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeInfo", 0, NULL, "GetIDsOfNames", __mscorlib_System_Runtime_InteropServices_UCOMITypeInfo, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -186,7 +185,7 @@ namespace mscorlib
 						__parameters__[0] = &memid;
 						mscorlib::System::Int32 __param_invKind__ = invKind;
 						__parameters__[1] = &__param_invKind__;
-						__parameters__[2] = (MonoObject*)ppv;
+						__parameters__[2] = &ppv;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeInfo", 0, NULL, "AddressOfMember", __mscorlib_System_Runtime_InteropServices_UCOMITypeInfo, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -230,7 +229,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pTypeAttr).name());
-						__parameters__[0] = (MonoObject*)pTypeAttr;
+						__parameters__[0] = pTypeAttr;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeInfo", 0, NULL, "ReleaseTypeAttr", __mscorlib_System_Runtime_InteropServices_UCOMITypeInfo, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -239,7 +238,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pFuncDesc).name());
-						__parameters__[0] = (MonoObject*)pFuncDesc;
+						__parameters__[0] = pFuncDesc;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeInfo", 0, NULL, "ReleaseFuncDesc", __mscorlib_System_Runtime_InteropServices_UCOMITypeInfo, 1, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -248,7 +247,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(pVarDesc).name());
-						__parameters__[0] = (MonoObject*)pVarDesc;
+						__parameters__[0] = pVarDesc;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMITypeInfo", 0, NULL, "ReleaseVarDesc", __mscorlib_System_Runtime_InteropServices_UCOMITypeInfo, 1, __parameter_types__, __parameters__, NULL);
 				}
 

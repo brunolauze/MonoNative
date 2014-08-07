@@ -3,6 +3,7 @@
 
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_DeriveBytes.h>
 #include <mscorlib/System/mscorlib_System_String.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_CspParameters.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -12,7 +13,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class Type;
 		
 
@@ -41,7 +41,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameters__[0] = (MonoObject*)strPassword;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbSalt, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbSalt, "mscorlib", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 2, __parameter_types__, __parameters__);
 					};
 				
@@ -55,7 +55,7 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography", "CspParameters");
 						__parameters__[0] = (MonoObject*)strPassword;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbSalt, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbSalt, "mscorlib", "System", "Byte");
 						__parameters__[2] = (MonoObject*)cspParams;
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 3, __parameter_types__, __parameters__);
 					};
@@ -71,7 +71,7 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
 						__parameters__[0] = (MonoObject*)strPassword;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbSalt, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbSalt, "mscorlib", "System", "Byte");
 						__parameters__[2] = (MonoObject*)strHashName;
 						__parameters__[3] = &iterations;
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 4, __parameter_types__, __parameters__);
@@ -89,7 +89,7 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
 						__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.Cryptography", "CspParameters");
 						__parameters__[0] = (MonoObject*)strPassword;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbSalt, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(rgbSalt, "mscorlib", "System", "Byte");
 						__parameters__[2] = (MonoObject*)strHashName;
 						__parameters__[3] = &iterations;
 						__parameters__[4] = (MonoObject*)cspParams;
@@ -104,8 +104,8 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
-						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(password, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(salt, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(password, "mscorlib", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(salt, "mscorlib", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 2, __parameter_types__, __parameters__);
 					};
 				
@@ -118,8 +118,8 @@ namespace mscorlib
 						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Cryptography", "CspParameters");
-						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(password, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(salt, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(password, "mscorlib", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(salt, "mscorlib", "System", "Byte");
 						__parameters__[2] = (MonoObject*)cspParams;
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 3, __parameter_types__, __parameters__);
 					};
@@ -134,8 +134,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
 						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
-						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(password, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(salt, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(password, "mscorlib", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(salt, "mscorlib", "System", "Byte");
 						__parameters__[2] = (MonoObject*)hashName;
 						__parameters__[3] = &iterations;
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "PasswordDeriveBytes", 4, __parameter_types__, __parameters__);
@@ -152,8 +152,8 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
 						__parameter_types__[4] = Global::GetType("mscorlib", "System.Security.Cryptography", "CspParameters");
-						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(password, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
-						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(salt, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(password, "mscorlib", "System", "Byte");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Byte*>(salt, "mscorlib", "System", "Byte");
 						__parameters__[2] = (MonoObject*)hashName;
 						__parameters__[3] = &iterations;
 						__parameters__[4] = (MonoObject*)cspParams;
@@ -178,6 +178,7 @@ namespace mscorlib
 				
 
 					PasswordDeriveBytes & operator=(PasswordDeriveBytes &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(PasswordDeriveBytes &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

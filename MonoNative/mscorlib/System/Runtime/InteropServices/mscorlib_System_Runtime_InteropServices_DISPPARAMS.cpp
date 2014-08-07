@@ -1,7 +1,6 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_DISPPARAMS.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -18,7 +17,7 @@ namespace mscorlib
 				//	Get/Set:rgvarg
 				mscorlib::System::IntPtr DISPPARAMS::get_rgvarg() const
 				{
-					return Global::GetFieldValue(__native_object__, "rgvarg");
+					return Global::GetFieldIntPtrValue(__native_object__, "rgvarg");
 				}
 
 				void DISPPARAMS::set_rgvarg(mscorlib::System::IntPtr  value)
@@ -28,7 +27,7 @@ namespace mscorlib
 				//	Get/Set:rgdispidNamedArgs
 				mscorlib::System::IntPtr DISPPARAMS::get_rgdispidNamedArgs() const
 				{
-					return Global::GetFieldValue(__native_object__, "rgdispidNamedArgs");
+					return Global::GetFieldIntPtrValue(__native_object__, "rgdispidNamedArgs");
 				}
 
 				void DISPPARAMS::set_rgdispidNamedArgs(mscorlib::System::IntPtr  value)

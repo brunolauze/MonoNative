@@ -1,5 +1,4 @@
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_CryptoAPITransform.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
@@ -100,7 +99,7 @@ namespace mscorlib
 				mscorlib::System::IntPtr  CryptoAPITransform::get_KeyHandle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Cryptography", "CryptoAPITransform", 0, NULL, "get_KeyHandle", __native_object__, 0, NULL, NULL, NULL);
-					return mscorlib::System::IntPtr(__result__);
+					return mono_object_unbox (__result__);
 				}
 
 

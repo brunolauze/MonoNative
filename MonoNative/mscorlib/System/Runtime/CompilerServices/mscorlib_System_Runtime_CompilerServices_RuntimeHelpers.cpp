@@ -1,6 +1,5 @@
 #include <mscorlib/System/Runtime/CompilerServices/mscorlib_System_Runtime_CompilerServices_RuntimeHelpers.h>
 #include <mscorlib/System/mscorlib_System_MulticastDelegate.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_SerializationInfo.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
 #include <mscorlib/System/mscorlib_System_Delegate.h>

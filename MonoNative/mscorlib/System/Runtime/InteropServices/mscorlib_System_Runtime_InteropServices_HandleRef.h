@@ -3,7 +3,6 @@
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 namespace mscorlib
 {
@@ -37,7 +36,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "Object");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "IntPtr");
 						__parameters__[0] = (MonoObject*)wrapper;
-						__parameters__[1] = (MonoObject*)handle;
+						__parameters__[1] = handle;
 						__native_object__ = Global::New("mscorlib", "System.Runtime.InteropServices", "HandleRef", 2, __parameter_types__, __parameters__);
 					};
 				
@@ -57,6 +56,7 @@ namespace mscorlib
 				
 
 					HandleRef & operator=(HandleRef &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(HandleRef &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

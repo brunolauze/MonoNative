@@ -7,16 +7,6 @@ namespace mscorlib
 {
 	namespace System
 	{
-
-		class IntPtr;
-		
-
-	}
-}
-namespace mscorlib
-{
-	namespace System
-	{
 		namespace Runtime
 		{
 			namespace InteropServices

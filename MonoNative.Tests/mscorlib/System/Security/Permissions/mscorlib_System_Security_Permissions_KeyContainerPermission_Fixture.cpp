@@ -7,7 +7,6 @@
 
 #include <gtest/gtest.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_KeyContainerPermission.h>
-#include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_KeyContainerPermissionAccessEntry.h>
 #include <mscorlib/System/Security/Permissions/mscorlib_System_Security_Permissions_KeyContainerPermissionAccessEntryCollection.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_SecurityElement.h>
 #include <mscorlib/System/mscorlib_System_String.h>

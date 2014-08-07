@@ -21,7 +21,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
 						__parameters__[0] = (MonoObject*)value;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "HandleRef", 0, NULL, "ToIntPtr", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				//Get Set Properties Methods
@@ -29,7 +29,7 @@ namespace mscorlib
 				mscorlib::System::IntPtr  HandleRef::get_Handle() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "HandleRef", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
-					return mscorlib::System::IntPtr(__result__);
+					return mono_object_unbox (__result__);
 				}
 
 

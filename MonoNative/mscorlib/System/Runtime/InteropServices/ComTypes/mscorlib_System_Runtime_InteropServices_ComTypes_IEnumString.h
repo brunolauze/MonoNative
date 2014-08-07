@@ -9,7 +9,6 @@ namespace mscorlib
 	{
 
 		class String;
-		class IntPtr;
 		
 
 	}

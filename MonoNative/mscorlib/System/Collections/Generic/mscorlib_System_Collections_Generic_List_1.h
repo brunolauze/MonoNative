@@ -71,6 +71,7 @@ namespace mscorlib
 					
 
 						Enumerator & operator=(Enumerator &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(Enumerator &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -201,6 +202,7 @@ namespace mscorlib
 				
 
 					List & operator=(List &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(List &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -305,7 +307,11 @@ namespace mscorlib
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(converter).name());
 						__parameters__[0] = &converter;
-						MonoObject* __result__ = NULL;
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						MonoType *__generic_types__method__[1];
+						__generic_types__method__[0] = Global::GetType(typeid(TOutput).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Collections.Generic", "List`1", 1, __generic_types__, "ConvertAll", __native_object__, 1, __generic_types__method__, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Collections::Generic::List<TOutput>(__result__);
 					};
 					

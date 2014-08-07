@@ -109,7 +109,7 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System.Reflection", "Module");
 						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = (MonoObject*)returnType;
-						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib", "System", "Type");
 						__parameters__[3] = (MonoObject*)m;
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "DynamicMethod", 4, __parameter_types__, __parameters__);
 					};
@@ -129,7 +129,7 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Type");
 						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = (MonoObject*)returnType;
-						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib", "System", "Type");
 						__parameters__[3] = (MonoObject*)owner;
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "DynamicMethod", 4, __parameter_types__, __parameters__);
 					};
@@ -150,7 +150,7 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType("mscorlib", "System", "Boolean");
 						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = (MonoObject*)returnType;
-						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib", "System", "Type");
 						__parameters__[3] = (MonoObject*)m;
 						__parameters__[4] = reinterpret_cast<void*>(skipVisibility);
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "DynamicMethod", 5, __parameter_types__, __parameters__);
@@ -172,7 +172,7 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType("mscorlib", "System", "Boolean");
 						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = (MonoObject*)returnType;
-						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib", "System", "Type");
 						__parameters__[3] = (MonoObject*)owner;
 						__parameters__[4] = reinterpret_cast<void*>(skipVisibility);
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "DynamicMethod", 5, __parameter_types__, __parameters__);
@@ -200,7 +200,7 @@ namespace mscorlib
 						mscorlib::System::Int32 __param_callingConvention__ = callingConvention;
 						__parameters__[2] = &__param_callingConvention__;
 						__parameters__[3] = (MonoObject*)returnType;
-						__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
+						__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib", "System", "Type");
 						__parameters__[5] = (MonoObject*)owner;
 						__parameters__[6] = reinterpret_cast<void*>(skipVisibility);
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "DynamicMethod", 7, __parameter_types__, __parameters__);
@@ -228,7 +228,7 @@ namespace mscorlib
 						mscorlib::System::Int32 __param_callingConvention__ = callingConvention;
 						__parameters__[2] = &__param_callingConvention__;
 						__parameters__[3] = (MonoObject*)returnType;
-						__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
+						__parameters__[4] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib", "System", "Type");
 						__parameters__[5] = (MonoObject*)m;
 						__parameters__[6] = reinterpret_cast<void*>(skipVisibility);
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "DynamicMethod", 7, __parameter_types__, __parameters__);
@@ -248,7 +248,7 @@ namespace mscorlib
 						__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Type")), 1));
 						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = (MonoObject*)returnType;
-						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib", "System", "Type");
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "DynamicMethod", 3, __parameter_types__, __parameters__);
 					};
 				
@@ -267,7 +267,7 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean");
 						__parameters__[0] = (MonoObject*)name;
 						__parameters__[1] = (MonoObject*)returnType;
-						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Type");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Type*>(parameterTypes, "mscorlib", "System", "Type");
 						__parameters__[3] = reinterpret_cast<void*>(restrictedSkipVisibility);
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "DynamicMethod", 4, __parameter_types__, __parameters__);
 					};
@@ -296,6 +296,7 @@ namespace mscorlib
 				
 
 					DynamicMethod & operator=(DynamicMethod &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(DynamicMethod &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

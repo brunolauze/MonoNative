@@ -2,7 +2,6 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_PRINCIPAL_WINDOWSIDENTITY_H
 
 #include <mscorlib/System/Security/Claims/mscorlib_System_Security_Claims_ClaimsIdentity.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_WindowsAccountType.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_SerializationInfo.h>
@@ -87,7 +86,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "IntPtr");
-						__parameters__[0] = (MonoObject*)userToken;
+						__parameters__[0] = userToken;
 						__native_object__ = Global::New("mscorlib", "System.Security.Principal", "WindowsIdentity", 1, __parameter_types__, __parameters__);
 					};
 				
@@ -102,7 +101,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "IntPtr");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
-						__parameters__[0] = (MonoObject*)userToken;
+						__parameters__[0] = userToken;
 						__parameters__[1] = (MonoObject*)type;
 						__native_object__ = Global::New("mscorlib", "System.Security.Principal", "WindowsIdentity", 2, __parameter_types__, __parameters__);
 					};
@@ -119,7 +118,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "IntPtr");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Principal", "WindowsAccountType");
-						__parameters__[0] = (MonoObject*)userToken;
+						__parameters__[0] = userToken;
 						__parameters__[1] = (MonoObject*)type;
 						mscorlib::System::Int32 __param_acctType__ = acctType;
 						__parameters__[2] = &__param_acctType__;
@@ -139,7 +138,7 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType("mscorlib", "System.Security.Principal", "WindowsAccountType");
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Boolean");
-						__parameters__[0] = (MonoObject*)userToken;
+						__parameters__[0] = userToken;
 						__parameters__[1] = (MonoObject*)type;
 						mscorlib::System::Int32 __param_acctType__ = acctType;
 						__parameters__[2] = &__param_acctType__;
@@ -217,6 +216,7 @@ namespace mscorlib
 				
 
 					WindowsIdentity & operator=(WindowsIdentity &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(WindowsIdentity &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

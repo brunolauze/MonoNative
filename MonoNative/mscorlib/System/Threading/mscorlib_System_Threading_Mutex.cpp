@@ -1,5 +1,4 @@
 #include <mscorlib/System/Threading/mscorlib_System_Threading_Mutex.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/Microsoft/Win32/SafeHandles/mscorlib_Microsoft_Win32_SafeHandles_SafeWaitHandle.h>
 #include <mscorlib/System/mscorlib_System_TimeSpan.h>
 #include <mscorlib/System/Runtime/Remoting/mscorlib_System_Runtime_Remoting_ObjRef.h>
@@ -140,7 +139,7 @@ namespace mscorlib
 			mscorlib::System::IntPtr  Mutex::get_Handle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "WaitHandle", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
-				return mscorlib::System::IntPtr(__result__);
+				return mono_object_unbox (__result__);
 			}
 
 			void Mutex::set_Handle(mscorlib::System::IntPtr  value)
@@ -148,7 +147,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = value;
 				Global::InvokeMethod("mscorlib", "System.Threading", "WaitHandle", 0, NULL, "set_Handle", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

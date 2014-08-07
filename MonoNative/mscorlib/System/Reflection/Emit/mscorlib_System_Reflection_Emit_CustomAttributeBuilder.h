@@ -3,22 +3,10 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ConstructorInfo.h>
+#include <mscorlib/System/Reflection/mscorlib_System_Reflection_FieldInfo.h>
+#include <mscorlib/System/Reflection/mscorlib_System_Reflection_PropertyInfo.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices__CustomAttributeBuilder.h>
 
-namespace mscorlib
-{
-	namespace System
-	{
-		namespace Reflection
-		{
-
-			class FieldInfo;
-			class PropertyInfo;
-			
-
-		}
-	}
-}
 namespace mscorlib
 {
 	namespace System
@@ -53,7 +41,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType("mscorlib", "System.Reflection", "ConstructorInfo");
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 						__parameters__[0] = (MonoObject*)con;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(constructorArgs, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(constructorArgs, "mscorlib", "System", "Object");
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "CustomAttributeBuilder", 2, __parameter_types__, __parameters__);
 					};
 				
@@ -68,9 +56,9 @@ namespace mscorlib
 						__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Reflection", "FieldInfo")), 1));
 						__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 						__parameters__[0] = (MonoObject*)con;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(constructorArgs, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
-						__parameters__[2] = Global::FromArray<mscorlib::System::Reflection::FieldInfo*>(namedFields, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Reflection", "FieldInfo");
-						__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(fieldValues, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(constructorArgs, "mscorlib", "System", "Object");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Reflection::FieldInfo*>(namedFields, "mscorlib", "System.Reflection", "FieldInfo");
+						__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(fieldValues, "mscorlib", "System", "Object");
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "CustomAttributeBuilder", 4, __parameter_types__, __parameters__);
 					};
 				
@@ -85,9 +73,9 @@ namespace mscorlib
 						__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Reflection", "PropertyInfo")), 1));
 						__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 						__parameters__[0] = (MonoObject*)con;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(constructorArgs, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
-						__parameters__[2] = Global::FromArray<mscorlib::System::Reflection::PropertyInfo*>(namedProperties, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Reflection", "PropertyInfo");
-						__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(propertyValues, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(constructorArgs, "mscorlib", "System", "Object");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Reflection::PropertyInfo*>(namedProperties, "mscorlib", "System.Reflection", "PropertyInfo");
+						__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(propertyValues, "mscorlib", "System", "Object");
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "CustomAttributeBuilder", 4, __parameter_types__, __parameters__);
 					};
 				
@@ -104,11 +92,11 @@ namespace mscorlib
 						__parameter_types__[4] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System.Reflection", "FieldInfo")), 1));
 						__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Object")), 1));
 						__parameters__[0] = (MonoObject*)con;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(constructorArgs, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
-						__parameters__[2] = Global::FromArray<mscorlib::System::Reflection::PropertyInfo*>(namedProperties, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Reflection", "PropertyInfo");
-						__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(propertyValues, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
-						__parameters__[4] = Global::FromArray<mscorlib::System::Reflection::FieldInfo*>(namedFields, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System.Reflection", "FieldInfo");
-						__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(fieldValues, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Object");
+						__parameters__[1] = Global::FromArray<mscorlib::System::Object*>(constructorArgs, "mscorlib", "System", "Object");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Reflection::PropertyInfo*>(namedProperties, "mscorlib", "System.Reflection", "PropertyInfo");
+						__parameters__[3] = Global::FromArray<mscorlib::System::Object*>(propertyValues, "mscorlib", "System", "Object");
+						__parameters__[4] = Global::FromArray<mscorlib::System::Reflection::FieldInfo*>(namedFields, "mscorlib", "System.Reflection", "FieldInfo");
+						__parameters__[5] = Global::FromArray<mscorlib::System::Object*>(fieldValues, "mscorlib", "System", "Object");
 						__native_object__ = Global::New("mscorlib", "System.Reflection.Emit", "CustomAttributeBuilder", 6, __parameter_types__, __parameters__);
 					};
 				
@@ -130,6 +118,7 @@ namespace mscorlib
 				
 
 					CustomAttributeBuilder & operator=(CustomAttributeBuilder &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(CustomAttributeBuilder &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

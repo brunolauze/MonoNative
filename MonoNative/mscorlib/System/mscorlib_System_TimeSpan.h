@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
-#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
+#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
@@ -29,16 +29,16 @@ namespace mscorlib
 		class TimeSpan
 			: public mscorlib::System::ValueType
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::TimeSpan>
-			, public virtual mscorlib::System::IFormattable
 			, public virtual mscorlib::System::IObjectComparable
+			, public virtual mscorlib::System::IFormattable
 			, public virtual mscorlib::System::IComparable<mscorlib::System::TimeSpan>
 		{
 		public:
 			TimeSpan(mscorlib::System::Int64 ticks)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.TimeSpan"))
 			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
 			{
 				MonoType *__parameter_types__[1];
@@ -51,8 +51,8 @@ namespace mscorlib
 			TimeSpan(mscorlib::System::Int32 hours, mscorlib::System::Int32 minutes, mscorlib::System::Int32 seconds)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.TimeSpan"))
 			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
 			{
 				MonoType *__parameter_types__[3];
@@ -69,8 +69,8 @@ namespace mscorlib
 			TimeSpan(mscorlib::System::Int32 days, mscorlib::System::Int32 hours, mscorlib::System::Int32 minutes, mscorlib::System::Int32 seconds)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.TimeSpan"))
 			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
 			{
 				MonoType *__parameter_types__[4];
@@ -89,8 +89,8 @@ namespace mscorlib
 			TimeSpan(mscorlib::System::Int32 days, mscorlib::System::Int32 hours, mscorlib::System::Int32 minutes, mscorlib::System::Int32 seconds, mscorlib::System::Int32 milliseconds)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.TimeSpan"))
 			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
 			{
 				MonoType *__parameter_types__[5];
@@ -111,8 +111,8 @@ namespace mscorlib
 			TimeSpan(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
 			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(NULL)
-			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IObjectComparable(NULL)
+			, mscorlib::System::IFormattable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(NULL)
 			{
 			};
@@ -120,8 +120,8 @@ namespace mscorlib
 			TimeSpan(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::TimeSpan>(nativeObject)
-			, mscorlib::System::IFormattable(nativeObject)
 			, mscorlib::System::IObjectComparable(nativeObject)
+			, mscorlib::System::IFormattable(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::TimeSpan>(nativeObject)
 			{
 			};
@@ -132,6 +132,7 @@ namespace mscorlib
 		
 
 			TimeSpan & operator=(TimeSpan &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(TimeSpan &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

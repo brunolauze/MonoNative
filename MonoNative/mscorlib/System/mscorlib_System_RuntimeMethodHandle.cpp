@@ -1,5 +1,4 @@
 #include <mscorlib/System/mscorlib_System_RuntimeMethodHandle.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_SerializationInfo.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
 #include <mscorlib/System/mscorlib_System_String.h>
@@ -27,7 +26,7 @@ namespace mscorlib
 		mscorlib::System::IntPtr RuntimeMethodHandle::GetFunctionPointer()
 		{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "RuntimeMethodHandle", 0, NULL, "GetFunctionPointer", __native_object__, 0, NULL, NULL, NULL);
-				return mscorlib::System::IntPtr(__result__);
+				return mono_object_unbox (__result__);
 		}
 
 		mscorlib::System::Boolean RuntimeMethodHandle::Equals(mscorlib::System::Object obj)
@@ -61,7 +60,7 @@ namespace mscorlib
 		mscorlib::System::IntPtr  RuntimeMethodHandle::get_Value() const
 		{
 			MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "RuntimeMethodHandle", 0, NULL, "get_Value", __native_object__, 0, NULL, NULL, NULL);
-			return mscorlib::System::IntPtr(__result__);
+			return mono_object_unbox (__result__);
 		}
 
 

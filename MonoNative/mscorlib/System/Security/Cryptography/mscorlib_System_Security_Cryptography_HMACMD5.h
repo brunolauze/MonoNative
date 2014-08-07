@@ -2,6 +2,7 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_SECURITY_CRYPTOGRAPHY_HMACMD5_H
 
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_HMAC.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/Security/Cryptography/mscorlib_System_Security_Cryptography_ICryptoTransform.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
@@ -11,7 +12,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class String;
 		class Type;
 		
@@ -62,7 +62,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
-						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(key, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(key, "mscorlib", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Security.Cryptography", "HMACMD5", 1, __parameter_types__, __parameters__);
 					};
 				
@@ -86,6 +86,7 @@ namespace mscorlib
 				
 
 					HMACMD5 & operator=(HMACMD5 &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(HMACMD5 &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

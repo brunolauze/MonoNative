@@ -47,6 +47,7 @@ namespace mscorlib
 			
 
 				CustomAttributeExtensions & operator=(CustomAttributeExtensions &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(CustomAttributeExtensions &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -58,7 +59,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(element).name());
 					__parameters__[0] = (MonoObject*)element;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -69,7 +72,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(element).name());
 					__parameters__[0] = (MonoObject*)element;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -80,7 +85,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(element).name());
 					__parameters__[0] = (MonoObject*)element;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -91,7 +98,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(element).name());
 					__parameters__[0] = (MonoObject*)element;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -104,7 +113,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(inherit).name());
 					__parameters__[0] = (MonoObject*)element;
 					__parameters__[1] = reinterpret_cast<void*>(inherit);
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -117,7 +128,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(inherit).name());
 					__parameters__[0] = (MonoObject*)element;
 					__parameters__[1] = reinterpret_cast<void*>(inherit);
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttribute", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -146,7 +159,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(element).name());
 					__parameters__[0] = (MonoObject*)element;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<T>(__result__);
 				};
 				
@@ -157,7 +172,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(element).name());
 					__parameters__[0] = (MonoObject*)element;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<T>(__result__);
 				};
 				
@@ -170,7 +187,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(inherit).name());
 					__parameters__[0] = (MonoObject*)element;
 					__parameters__[1] = reinterpret_cast<void*>(inherit);
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<T>(__result__);
 				};
 				
@@ -181,7 +200,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(element).name());
 					__parameters__[0] = (MonoObject*)element;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<T>(__result__);
 				};
 				
@@ -192,7 +213,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(element).name());
 					__parameters__[0] = (MonoObject*)element;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<T>(__result__);
 				};
 				
@@ -205,7 +228,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(inherit).name());
 					__parameters__[0] = (MonoObject*)element;
 					__parameters__[1] = reinterpret_cast<void*>(inherit);
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Reflection", "CustomAttributeExtensions", 0, NULL, "GetCustomAttributes", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					return mscorlib::System::Collections::Generic::IEnumerable<T>(__result__);
 				};
 				

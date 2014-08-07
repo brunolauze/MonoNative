@@ -41,6 +41,7 @@ namespace mscorlib
 			
 
 				LazyInitializer & operator=(LazyInitializer &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(LazyInitializer &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -52,7 +53,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(target).name());
 					__parameters__[0] = (MonoObject*)target;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "LazyInitializer", 0, NULL, "EnsureInitialized", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "LazyInitializer", 0, NULL, "EnsureInitialized", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -65,7 +68,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(valueFactory).name());
 					__parameters__[0] = (MonoObject*)target;
 					__parameters__[1] = &valueFactory;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "LazyInitializer", 0, NULL, "EnsureInitialized", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "LazyInitializer", 0, NULL, "EnsureInitialized", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -80,7 +85,9 @@ namespace mscorlib
 					__parameters__[0] = (MonoObject*)target;
 					__parameters__[1] = &initialized;
 					__parameters__[2] = (MonoObject*)syncLock;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "LazyInitializer", 0, NULL, "EnsureInitialized", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "LazyInitializer", 0, NULL, "EnsureInitialized", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -97,7 +104,9 @@ namespace mscorlib
 					__parameters__[1] = &initialized;
 					__parameters__[2] = (MonoObject*)syncLock;
 					__parameters__[3] = &valueFactory;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "LazyInitializer", 0, NULL, "EnsureInitialized", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "LazyInitializer", 0, NULL, "EnsureInitialized", NullMonoObject, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				

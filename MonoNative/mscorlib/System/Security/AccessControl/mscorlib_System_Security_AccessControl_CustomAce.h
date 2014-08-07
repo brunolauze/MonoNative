@@ -4,6 +4,7 @@
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_GenericAce.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_AceType.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_AceFlags.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_AuditFlags.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_InheritanceFlags.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_PropagationFlags.h>
@@ -14,7 +15,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class Type;
 		class String;
 		
@@ -46,7 +46,7 @@ namespace mscorlib
 						__parameters__[0] = &__param_type__;
 						mscorlib::System::Int32 __param_flags__ = flags;
 						__parameters__[1] = &__param_flags__;
-						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(opaque, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(opaque, "mscorlib", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "CustomAce", 3, __parameter_types__, __parameters__);
 					};
 				
@@ -66,6 +66,7 @@ namespace mscorlib
 				
 
 					CustomAce & operator=(CustomAce &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(CustomAce &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

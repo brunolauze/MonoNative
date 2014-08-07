@@ -125,6 +125,7 @@ namespace mscorlib
 			
 
 				TypeInfo & operator=(TypeInfo &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(TypeInfo &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

@@ -3,7 +3,6 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IAsyncResult.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 namespace mscorlib
 {
@@ -73,7 +72,7 @@ namespace mscorlib
 					__parameter_types__[3] = Global::GetType("mscorlib", "System", "IAsyncResult");
 					__parameters__[0] = &offsetLo;
 					__parameters__[1] = &offsetHi;
-					__parameters__[2] = (MonoObject*)hEvent;
+					__parameters__[2] = hEvent;
 					__parameters__[3] = (MonoObject*)ar;
 					__native_object__ = Global::New("mscorlib", "System.Threading", "Overlapped", 4, __parameter_types__, __parameters__);
 				};
@@ -94,6 +93,7 @@ namespace mscorlib
 			
 
 				Overlapped & operator=(Overlapped &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(Overlapped &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

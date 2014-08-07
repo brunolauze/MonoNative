@@ -1,7 +1,6 @@
 #include <mscorlib/System/Reflection/Emit/mscorlib_System_Reflection_Emit_MethodRental.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -26,7 +25,7 @@ namespace mscorlib
 						__parameter_types__[4] = Global::GetType(typeid(flags).name());
 						__parameters__[0] = (MonoObject*)cls;
 						__parameters__[1] = &methodtoken;
-						__parameters__[2] = (MonoObject*)rgIL;
+						__parameters__[2] = rgIL;
 						__parameters__[3] = &methodSize;
 						__parameters__[4] = &flags;
 						Global::InvokeMethod("mscorlib", "System.Reflection.Emit", "MethodRental", 0, NULL, "SwapMethodBody", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);

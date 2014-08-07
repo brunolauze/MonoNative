@@ -56,6 +56,7 @@ namespace mscorlib
 					
 
 						YieldAwaiter & operator=(YieldAwaiter &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(YieldAwaiter &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -96,6 +97,7 @@ namespace mscorlib
 				
 
 					YieldAwaitable & operator=(YieldAwaitable &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(YieldAwaitable &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

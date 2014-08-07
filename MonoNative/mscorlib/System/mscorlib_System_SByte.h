@@ -3,9 +3,9 @@
 
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/mscorlib_System_IConvertible.h>
+#include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
-#include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
@@ -31,18 +31,18 @@ namespace mscorlib
 		class SByte
 			: public mscorlib::System::ValueType
 			, public virtual mscorlib::System::IConvertible
+			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IComparable<mscorlib::System::SByte>
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::SByte>
-			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IFormattable
 		{
 		public:
 			SByte(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
 			, mscorlib::System::IConvertible(NULL)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::SByte>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::SByte>(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			{
 			};
@@ -50,9 +50,9 @@ namespace mscorlib
 			SByte(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
 			, mscorlib::System::IConvertible(nativeObject)
+			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::SByte>(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::SByte>(nativeObject)
-			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IFormattable(nativeObject)
 			{
 			};
@@ -63,6 +63,7 @@ namespace mscorlib
 		
 
 			SByte & operator=(SByte &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(SByte &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

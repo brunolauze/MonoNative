@@ -297,7 +297,7 @@ namespace mscorlib
 			mscorlib::System::IntPtr  FileStream::get_Handle() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "FileStream", 0, NULL, "get_Handle", __native_object__, 0, NULL, NULL, NULL);
-				return mscorlib::System::IntPtr(__result__);
+				return mono_object_unbox (__result__);
 			}
 
 

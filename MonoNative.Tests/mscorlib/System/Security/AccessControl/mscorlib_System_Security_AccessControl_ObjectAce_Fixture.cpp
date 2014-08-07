@@ -7,7 +7,6 @@
 
 #include <gtest/gtest.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_ObjectAce.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_GenericAce.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>

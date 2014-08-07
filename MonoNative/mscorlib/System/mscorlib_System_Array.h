@@ -67,6 +67,7 @@ namespace mscorlib
 		
 
 			Array & operator=(Array &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(Array &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -132,7 +133,9 @@ namespace mscorlib
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "T")), 1));
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename TKey, typename TValue>
@@ -144,7 +147,10 @@ namespace mscorlib
 				__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "TValue")), 1));
 				__parameters__[0] = Global::FromArray<TKey*>(keys, typeid(TKey).name());
 				__parameters__[1] = Global::FromArray<TValue*>(items, typeid(TValue).name());
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[2];
+				__generic_types__[0] = Global::GetType(typeid(TKey).name());
+				__generic_types__[1] = Global::GetType(typeid(TValue).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 2, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename T>
@@ -156,7 +162,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(comparer).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = (MonoObject*)comparer;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename TKey, typename TValue>
@@ -170,7 +178,10 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<TKey*>(keys, typeid(TKey).name());
 				__parameters__[1] = Global::FromArray<TValue*>(items, typeid(TValue).name());
 				__parameters__[2] = (MonoObject*)comparer;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[2];
+				__generic_types__[0] = Global::GetType(typeid(TKey).name());
+				__generic_types__[1] = Global::GetType(typeid(TValue).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 2, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename T>
@@ -184,7 +195,9 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &index;
 				__parameters__[2] = &length;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename TKey, typename TValue>
@@ -200,7 +213,10 @@ namespace mscorlib
 				__parameters__[1] = Global::FromArray<TValue*>(items, typeid(TValue).name());
 				__parameters__[2] = &index;
 				__parameters__[3] = &length;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[2];
+				__generic_types__[0] = Global::GetType(typeid(TKey).name());
+				__generic_types__[1] = Global::GetType(typeid(TValue).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 2, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename T>
@@ -216,7 +232,9 @@ namespace mscorlib
 				__parameters__[1] = &index;
 				__parameters__[2] = &length;
 				__parameters__[3] = (MonoObject*)comparer;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename TKey, typename TValue>
@@ -234,7 +252,10 @@ namespace mscorlib
 				__parameters__[2] = &index;
 				__parameters__[3] = &length;
 				__parameters__[4] = (MonoObject*)comparer;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[2];
+				__generic_types__[0] = Global::GetType(typeid(TKey).name());
+				__generic_types__[1] = Global::GetType(typeid(TValue).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 2, __generic_types__, 5, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename T>
@@ -246,7 +267,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(comparison).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &comparison;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Sort", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 			};
 			
 			virtual void  CopyTo(mscorlib::System::Array array, mscorlib::System::Int32 index);
@@ -260,7 +283,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(newSize).name());
 				__parameters__[0] = (MonoObject*)array;
 				__parameters__[1] = &newSize;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Resize", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Resize", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename T>
@@ -272,7 +297,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(match).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "TrueForAll", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "TrueForAll", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			};
 			
@@ -285,7 +312,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(action).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &action;
-				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "ForEach", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 			};
 			
 			template<typename TInput, typename TOutput>
@@ -297,7 +326,10 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(converter).name());
 				__parameters__[0] = Global::FromArray<TInput*>(array, typeid(TInput).name());
 				__parameters__[1] = &converter;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "ConvertAll", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[2];
+				__generic_types__[0] = Global::GetType(typeid(TInput).name());
+				__generic_types__[1] = Global::GetType(typeid(TOutput).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "ConvertAll", NullMonoObject, 2, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
 				uintptr_t __array_length__ = mono_array_length(__array_ptr__);
 				std::vector<TOutput*>  __array_result__(__array_length__);
@@ -318,7 +350,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(match).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindLastIndex", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindLastIndex", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -333,7 +367,9 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &startIndex;
 				__parameters__[2] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindLastIndex", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindLastIndex", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -350,7 +386,9 @@ namespace mscorlib
 				__parameters__[1] = &startIndex;
 				__parameters__[2] = &count;
 				__parameters__[3] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindLastIndex", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindLastIndex", NullMonoObject, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -363,7 +401,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(match).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindIndex", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindIndex", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -378,7 +418,9 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &startIndex;
 				__parameters__[2] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindIndex", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindIndex", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -395,7 +437,9 @@ namespace mscorlib
 				__parameters__[1] = &startIndex;
 				__parameters__[2] = &count;
 				__parameters__[3] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindIndex", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindIndex", NullMonoObject, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -408,7 +452,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(value).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = (MonoObject*)value;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "BinarySearch", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "BinarySearch", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -423,7 +469,9 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = (MonoObject*)value;
 				__parameters__[2] = (MonoObject*)comparer;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "BinarySearch", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "BinarySearch", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -440,7 +488,9 @@ namespace mscorlib
 				__parameters__[1] = &index;
 				__parameters__[2] = &length;
 				__parameters__[3] = (MonoObject*)value;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "BinarySearch", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "BinarySearch", NullMonoObject, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -459,7 +509,9 @@ namespace mscorlib
 				__parameters__[2] = &length;
 				__parameters__[3] = (MonoObject*)value;
 				__parameters__[4] = (MonoObject*)comparer;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "BinarySearch", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "BinarySearch", NullMonoObject, 1, __generic_types__, 5, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -472,7 +524,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(value).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = (MonoObject*)value;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "IndexOf", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "IndexOf", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -487,7 +541,9 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = (MonoObject*)value;
 				__parameters__[2] = &startIndex;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "IndexOf", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "IndexOf", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -504,7 +560,9 @@ namespace mscorlib
 				__parameters__[1] = (MonoObject*)value;
 				__parameters__[2] = &startIndex;
 				__parameters__[3] = &count;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "IndexOf", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "IndexOf", NullMonoObject, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -517,7 +575,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(value).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = (MonoObject*)value;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "LastIndexOf", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "LastIndexOf", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -532,7 +592,9 @@ namespace mscorlib
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = (MonoObject*)value;
 				__parameters__[2] = &startIndex;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "LastIndexOf", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "LastIndexOf", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -549,7 +611,9 @@ namespace mscorlib
 				__parameters__[1] = (MonoObject*)value;
 				__parameters__[2] = &startIndex;
 				__parameters__[3] = &count;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "LastIndexOf", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "LastIndexOf", NullMonoObject, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -562,7 +626,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(match).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindAll", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindAll", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				MonoArray *__array_ptr__ = (MonoArray*)__result__;
 				uintptr_t __array_length__ = mono_array_length(__array_ptr__);
 				std::vector<T*>  __array_result__(__array_length__);
@@ -583,7 +649,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(match).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Exists", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Exists", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			};
 			
@@ -594,7 +662,9 @@ namespace mscorlib
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "T")), 1));
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "AsReadOnly", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "AsReadOnly", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 				return mscorlib::System::Collections::ObjectModel::ReadOnlyCollection<T>(__result__);
 			};
 			
@@ -607,7 +677,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(match).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Find", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "Find", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return T(__result__);
 			};
 			
@@ -620,7 +692,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(match).name());
 				__parameters__[0] = Global::FromArray<T*>(array, typeid(T).name());
 				__parameters__[1] = &match;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindLast", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Array", 0, NULL, "FindLast", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return T(__result__);
 			};
 			

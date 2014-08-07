@@ -11,7 +11,6 @@ namespace mscorlib
 
 		class String;
 		class Type;
-		class IntPtr;
 		
 
 	}
@@ -47,6 +46,7 @@ namespace mscorlib
 					
 
 						TYPEDESC & operator=(TYPEDESC &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(TYPEDESC &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

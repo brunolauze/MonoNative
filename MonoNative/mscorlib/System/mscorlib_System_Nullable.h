@@ -40,6 +40,7 @@ namespace mscorlib
 		
 
 			NullableBase & operator=(NullableBase &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(NullableBase &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -53,7 +54,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(n2).name());
 				__parameters__[0] = (MonoObject*)n1;
 				__parameters__[1] = (MonoObject*)n2;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Nullable", 0, NULL, "Compare", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Nullable", 0, NULL, "Compare", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 			};
 			
@@ -66,7 +69,9 @@ namespace mscorlib
 				__parameter_types__[1] = Global::GetType(typeid(n2).name());
 				__parameters__[0] = (MonoObject*)n1;
 				__parameters__[1] = (MonoObject*)n2;
-				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Nullable", 0, NULL, "Equals", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+				MonoType *__generic_types__[1];
+				__generic_types__[0] = Global::GetType(typeid(T).name());
+				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System", "Nullable", 0, NULL, "Equals", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			};
 			

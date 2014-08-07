@@ -174,7 +174,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(bits, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Int32");
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(bits, typeid(mscorlib::System::Int32).name());
 				__native_object__ = Global::New("mscorlib", "System", "Decimal", 1, __parameter_types__, __parameters__);
 			};
 		
@@ -206,6 +206,7 @@ namespace mscorlib
 		
 
 			Decimal & operator=(Decimal &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(Decimal &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

@@ -3,7 +3,6 @@
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_MarshalByRefObject.h>
 #include <mscorlib/System/Runtime/Remoting/Proxies/mscorlib_System_Runtime_Remoting_Proxies_RealProxy.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -47,7 +46,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(punk).name());
-							__parameters__[0] = (MonoObject*)punk;
+							__parameters__[0] = punk;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Services", "EnterpriseServicesHelper", 0, NULL, "WrapIUnknownWithComObject", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 							return mscorlib::System::Object(__result__);
 					}

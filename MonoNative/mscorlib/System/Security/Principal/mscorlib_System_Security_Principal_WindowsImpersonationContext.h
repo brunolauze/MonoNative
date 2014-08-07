@@ -47,6 +47,7 @@ namespace mscorlib
 				
 
 					WindowsImpersonationContext & operator=(WindowsImpersonationContext &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(WindowsImpersonationContext &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

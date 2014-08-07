@@ -2,7 +2,6 @@
 #define __MONO_NATIVE_MSCORLIB_MICROSOFT_WIN32_SAFEHANDLES_SAFEREGISTRYHANDLE_H
 
 #include <mscorlib/Microsoft/Win32/SafeHandles/mscorlib_Microsoft_Win32_SafeHandles_SafeHandleZeroOrMinusOneIsInvalid.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_IDisposable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
@@ -39,7 +38,7 @@ namespace mscorlib
 						void *__parameters__[2];
 						__parameter_types__[0] = Global::GetType("mscorlib", "System", "IntPtr");
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "Boolean");
-						__parameters__[0] = (MonoObject*)preexistingHandle;
+						__parameters__[0] = preexistingHandle;
 						__parameters__[1] = reinterpret_cast<void*>(ownsHandle);
 						__native_object__ = Global::New("mscorlib", "Microsoft.Win32.SafeHandles", "SafeRegistryHandle", 2, __parameter_types__, __parameters__);
 					};
@@ -62,6 +61,7 @@ namespace mscorlib
 				
 
 					SafeRegistryHandle & operator=(SafeRegistryHandle &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(SafeRegistryHandle &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

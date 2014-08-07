@@ -2,6 +2,7 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_RUNTIME_REMOTING_CHANNELS_CHANNELDATASTORE_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Runtime/Remoting/Channels/mscorlib_System_Runtime_Remoting_Channels_IChannelDataStore.h>
 
 namespace mscorlib
@@ -9,7 +10,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class String;
 		class Type;
 		
 
@@ -38,7 +38,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "String")), 1));
-							__parameters__[0] = Global::FromArray<mscorlib::System::String*>(channelURIs, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "String");
+							__parameters__[0] = Global::FromArray<mscorlib::System::String*>(channelURIs, "mscorlib", "System", "String");
 							__native_object__ = Global::New("mscorlib", "System.Runtime.Remoting.Channels", "ChannelDataStore", 1, __parameter_types__, __parameters__);
 						};
 					
@@ -60,6 +60,7 @@ namespace mscorlib
 					
 
 						ChannelDataStore & operator=(ChannelDataStore &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(ChannelDataStore &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

@@ -2,6 +2,7 @@
 #define __MONO_NATIVE_MSCORLIB_SYSTEM_APPLICATIONID_H
 
 #include <mscorlib/System/mscorlib_System_Object.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Version.h>
 
@@ -10,7 +11,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class Type;
 		
 
@@ -35,7 +35,7 @@ namespace mscorlib
 				__parameter_types__[2] = Global::GetType("mscorlib", "System", "Version");
 				__parameter_types__[3] = Global::GetType("mscorlib", "System", "String");
 				__parameter_types__[4] = Global::GetType("mscorlib", "System", "String");
-				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(publicKeyToken, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(publicKeyToken, "mscorlib", "System", "Byte");
 				__parameters__[1] = (MonoObject*)name;
 				__parameters__[2] = (MonoObject*)version;
 				__parameters__[3] = (MonoObject*)processorArchitecture;
@@ -59,6 +59,7 @@ namespace mscorlib
 		
 
 			ApplicationId & operator=(ApplicationId &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(ApplicationId &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

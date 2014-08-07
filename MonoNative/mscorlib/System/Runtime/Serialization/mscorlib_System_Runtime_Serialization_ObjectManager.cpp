@@ -66,7 +66,7 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameter_types__[2] = Global::GetType(typeid(objectRequired).name());
 						__parameters__[0] = &arrayToBeFixed;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Int32*>(indices, typeid(mscorlib::System::Int32).name());
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(indices, typeid(mscorlib::System::Int32).name());
 						__parameters__[2] = &objectRequired;
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "ObjectManager", 0, NULL, "RecordArrayElementFixup", __native_object__, 3, __parameter_types__, __parameters__, NULL);
 				}
@@ -166,7 +166,7 @@ namespace mscorlib
 						__parameters__[2] = (MonoObject*)info;
 						__parameters__[3] = &idOfContainingObj;
 						__parameters__[4] = (MonoObject*)member;
-						__parameters__[5] = Global::FromArray<mscorlib::System::Int32*>(arrayIndex, typeid(mscorlib::System::Int32).name());
+						__parameters__[5] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(arrayIndex, typeid(mscorlib::System::Int32).name());
 						Global::InvokeMethod("mscorlib", "System.Runtime.Serialization", "ObjectManager", 0, NULL, "RegisterObject", __native_object__, 6, __parameter_types__, __parameters__, NULL);
 				}
 

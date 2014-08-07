@@ -9,19 +9,6 @@ namespace mscorlib
 {
 	namespace System
 	{
-
-		class IntPtr;
-		class ModuleHandle;
-		class String;
-		class Type;
-		
-
-	}
-}
-namespace mscorlib
-{
-	namespace System
-	{
 		namespace Runtime
 		{
 			namespace Serialization
@@ -33,6 +20,18 @@ namespace mscorlib
 
 			}
 		}
+	}
+}
+namespace mscorlib
+{
+	namespace System
+	{
+
+		class ModuleHandle;
+		class String;
+		class Type;
+		
+
 	}
 }
 namespace mscorlib
@@ -63,6 +62,7 @@ namespace mscorlib
 		
 
 			RuntimeTypeHandle & operator=(RuntimeTypeHandle &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(RuntimeTypeHandle &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

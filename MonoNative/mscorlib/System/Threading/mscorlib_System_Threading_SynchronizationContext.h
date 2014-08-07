@@ -8,7 +8,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class IntPtr;
 		class Type;
 		class String;
 		
@@ -48,6 +47,7 @@ namespace mscorlib
 			
 
 				SynchronizationContext & operator=(SynchronizationContext &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(SynchronizationContext &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

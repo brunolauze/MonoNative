@@ -14,7 +14,6 @@ namespace mscorlib
 		class String;
 		class Type;
 		class Guid;
-		class IntPtr;
 		
 
 	}
@@ -65,6 +64,7 @@ namespace mscorlib
 				
 
 					TYPEATTR & operator=(TYPEATTR &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(TYPEATTR &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

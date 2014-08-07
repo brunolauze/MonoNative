@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_Attribute.h>
 #include <mscorlib/System/mscorlib_System_IConvertible.h>
-#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
+#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_TypeCode.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
@@ -90,6 +90,7 @@ namespace mscorlib
 			
 
 				DebuggableAttribute & operator=(DebuggableAttribute &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(DebuggableAttribute &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

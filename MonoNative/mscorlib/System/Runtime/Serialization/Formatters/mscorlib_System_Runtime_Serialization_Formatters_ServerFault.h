@@ -59,6 +59,7 @@ namespace mscorlib
 					
 
 						ServerFault & operator=(ServerFault &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(ServerFault &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

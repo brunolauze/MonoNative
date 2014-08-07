@@ -13,7 +13,6 @@ namespace mscorlib
 		class Delegate;
 		class Type;
 		class Guid;
-		class IntPtr;
 		class String;
 		
 

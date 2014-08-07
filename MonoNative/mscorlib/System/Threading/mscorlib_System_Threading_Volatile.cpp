@@ -3,7 +3,6 @@
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_SByte.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_UIntPtr.h>
 
 
@@ -111,9 +110,9 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(location).name());
-					__parameters__[0] = (MonoObject*)location;
+					__parameters__[0] = &location;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Volatile", 0, NULL, "Read", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-					return mscorlib::System::IntPtr(__result__);
+					return mono_object_unbox (__result__);
 			}
 
 			mscorlib::System::UIntPtr Volatile::Read(mscorlib::System::UIntPtr location)
@@ -251,8 +250,8 @@ namespace mscorlib
 					void *__parameters__[2];
 					__parameter_types__[0] = Global::GetType(typeid(location).name());
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
-					__parameters__[0] = (MonoObject*)location;
-					__parameters__[1] = (MonoObject*)value;
+					__parameters__[0] = &location;
+					__parameters__[1] = value;
 					Global::InvokeMethod("mscorlib", "System.Threading", "Volatile", 0, NULL, "Write", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
 			}
 

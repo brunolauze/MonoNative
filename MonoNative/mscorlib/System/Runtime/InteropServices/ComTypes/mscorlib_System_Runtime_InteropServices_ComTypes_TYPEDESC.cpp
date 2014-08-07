@@ -1,7 +1,6 @@
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_TYPEDESC.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -20,7 +19,7 @@ namespace mscorlib
 					//	Get/Set:lpValue
 					mscorlib::System::IntPtr TYPEDESC::get_lpValue() const
 					{
-						return Global::GetFieldValue(__native_object__, "lpValue");
+						return Global::GetFieldIntPtrValue(__native_object__, "lpValue");
 					}
 
 					void TYPEDESC::set_lpValue(mscorlib::System::IntPtr  value)

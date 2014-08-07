@@ -115,7 +115,7 @@ namespace mscorlib
 			mscorlib::System::IntPtr  Overlapped::get_EventHandleIntPtr() const
 			{
 				MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Overlapped", 0, NULL, "get_EventHandleIntPtr", __native_object__, 0, NULL, NULL, NULL);
-				return mscorlib::System::IntPtr(__result__);
+				return mono_object_unbox (__result__);
 			}
 
 			void Overlapped::set_EventHandleIntPtr(mscorlib::System::IntPtr  value)
@@ -123,7 +123,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = Global::GetType(typeid(value).name());
-				__parameters__[0] = (MonoObject*)value;
+				__parameters__[0] = value;
 				Global::InvokeMethod("mscorlib", "System.Threading", "Overlapped", 0, NULL, "set_EventHandleIntPtr", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

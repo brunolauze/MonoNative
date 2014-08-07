@@ -12,7 +12,6 @@ namespace mscorlib
 		class String;
 		class Byte;
 		class SByte;
-		class IntPtr;
 		class UIntPtr;
 		
 
@@ -45,6 +44,7 @@ namespace mscorlib
 			
 
 				Volatile & operator=(Volatile &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(Volatile &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -69,7 +69,9 @@ namespace mscorlib
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(location).name());
 					__parameters__[0] = (MonoObject*)location;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Volatile", 0, NULL, "Read", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "Volatile", 0, NULL, "Read", NullMonoObject, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					return T(__result__);
 				};
 				
@@ -95,7 +97,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(value).name());
 					__parameters__[0] = (MonoObject*)location;
 					__parameters__[1] = (MonoObject*)value;
-					Global::InvokeMethod("mscorlib", "System.Threading", "Volatile", 0, NULL, "Write", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					Global::InvokeMethod("mscorlib", "System.Threading", "Volatile", 0, NULL, "Write", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				};
 				
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

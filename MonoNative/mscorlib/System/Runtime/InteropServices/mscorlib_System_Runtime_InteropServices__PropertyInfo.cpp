@@ -3,7 +3,6 @@
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_ParameterInfo.h>
 #include <mscorlib/System/mscorlib_System_Guid.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_Binder.h>
 #include <mscorlib/System/Globalization/mscorlib_System_Globalization_CultureInfo.h>
 #include <mscorlib/System/mscorlib_System_String.h>
@@ -162,10 +161,10 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType(typeid(lcid).name());
 						__parameter_types__[4] = Global::GetType(typeid(rgDispId).name());
 						__parameters__[0] = (MonoObject*)riid;
-						__parameters__[1] = (MonoObject*)rgszNames;
+						__parameters__[1] = rgszNames;
 						__parameters__[2] = &cNames;
 						__parameters__[3] = &lcid;
-						__parameters__[4] = (MonoObject*)rgDispId;
+						__parameters__[4] = rgDispId;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_PropertyInfo", 0, NULL, "GetIDsOfNames", __mscorlib_System_Runtime_InteropServices__PropertyInfo, 5, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -178,7 +177,7 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(ppTInfo).name());
 						__parameters__[0] = &iTInfo;
 						__parameters__[1] = &lcid;
-						__parameters__[2] = (MonoObject*)ppTInfo;
+						__parameters__[2] = ppTInfo;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_PropertyInfo", 0, NULL, "GetTypeInfo", __mscorlib_System_Runtime_InteropServices__PropertyInfo, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -207,10 +206,10 @@ namespace mscorlib
 						__parameters__[1] = (MonoObject*)riid;
 						__parameters__[2] = &lcid;
 						__parameters__[3] = &wFlags;
-						__parameters__[4] = (MonoObject*)pDispParams;
-						__parameters__[5] = (MonoObject*)pVarResult;
-						__parameters__[6] = (MonoObject*)pExcepInfo;
-						__parameters__[7] = (MonoObject*)puArgErr;
+						__parameters__[4] = pDispParams;
+						__parameters__[5] = pVarResult;
+						__parameters__[6] = pExcepInfo;
+						__parameters__[7] = puArgErr;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "_PropertyInfo", 0, NULL, "Invoke", __mscorlib_System_Runtime_InteropServices__PropertyInfo, 8, __parameter_types__, __parameters__, NULL);
 				}
 

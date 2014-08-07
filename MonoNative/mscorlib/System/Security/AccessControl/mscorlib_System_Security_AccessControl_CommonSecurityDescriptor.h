@@ -4,6 +4,7 @@
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_GenericSecurityDescriptor.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_RawSecurityDescriptor.h>
 #include <mscorlib/System/mscorlib_System_String.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_ControlFlags.h>
 #include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_SecurityIdentifier.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_SystemAcl.h>
@@ -16,7 +17,6 @@ namespace mscorlib
 	namespace System
 	{
 
-		class Byte;
 		class Type;
 		
 
@@ -74,7 +74,7 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType("mscorlib", "System", "Int32");
 						__parameters__[0] = reinterpret_cast<void*>(isContainer);
 						__parameters__[1] = reinterpret_cast<void*>(isDS);
-						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(binaryForm, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[2] = Global::FromArray<mscorlib::System::Byte*>(binaryForm, "mscorlib", "System", "Byte");
 						__parameters__[3] = &offset;
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "CommonSecurityDescriptor", 4, __parameter_types__, __parameters__);
 					};
@@ -118,6 +118,7 @@ namespace mscorlib
 				
 
 					CommonSecurityDescriptor & operator=(CommonSecurityDescriptor &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(CommonSecurityDescriptor &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

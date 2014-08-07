@@ -606,6 +606,9 @@ namespace MonoNative.Generator
 
 				sb.AppendLine(indent + "\t" + type.ClassName() + " & operator=(" + type.ClassName() + " &value) { " + GetNativeObjectPrefix(type) + "__native_object__ = value.GetNativeObject(); return value; };");
 
+				sb.AppendLine(indent + "\tbool operator==(" + type.ClassName() + " &value) { return mscorlib::System::Object::Equals(value); };");
+
+
 				sb.AppendLine(indent + "\toperator MonoObject*() { return " + GetNativeObjectPrefix(type) + "__native_object__; };");
 				sb.AppendLine(indent + "\tMonoObject* operator=(MonoObject* value) { return " + GetNativeObjectPrefix(type) + "__native_object__ = value; };");
 
@@ -1100,11 +1103,22 @@ namespace MonoNative.Generator
 			}
 			if (method.DeclaringType.IsGenericType)
 			{
+				var genericTypes = method.DeclaringType.GetGenericArguments();
+				sb.AppendLine(indent + "\tMonoType *__generic_types__[" + genericTypes.Count() + "];");
+				for (int i = 0; i < genericTypes.Count(); i++)
+				{
+					sb.AppendLine(indent + "\t__generic_types__[" + i + "] = Global::GetType(typeid(" + genericTypes[i].Name + ").name());");
+				}
 				if (method.IsGenericMethod)
 				{
+					var genericTypesMethod = method.GetGenericArguments();
+					sb.AppendLine (indent + "\tMonoType *__generic_types__method__[" + genericTypesMethod.Count () + "];");
+					for (int j = 0; j < genericTypesMethod.Count (); j++) {
+						sb.AppendLine (indent + "\t__generic_types__method__[" + j + "] = Global::GetType(typeid(" + genericTypesMethod[j].Name + ").name());");
+					}
+					sb.AppendLine(indent + "\t" + (method.ReturnType != typeof(void) ? "MonoObject *__result__ = " : "") + "Global::InvokeMethod(\"" + method.DeclaringType.Assembly.GetName().Name + "\", \"" + method.DeclaringType.Namespace + "\", \"" + method.DeclaringType.FullName.Replace(method.DeclaringType.Namespace + ".", "") + "\", " + genericTypes.Count() + ", __generic_types__, \"" + method.Name + "\", " + (method.IsStatic ? "NullMonoObject" : GetNativeObjectPrefix(type) + type.ToNativeObjectVariable()) + ", " + genericTypesMethod.Count() + ", __generic_types__method__, " + parameters.Count() + ", " + (parameters.Count() == 0 ? "NULL" : "__parameter_types__") + ", " + (parameters.Count() == 0 ? "NULL" : "__parameters__") + ", NULL);");
 					if (method.ReturnType != typeof(void))
 					{
-						sb.AppendLine (indent + "\tMonoObject* __result__ = NULL;");
 						if (method.ReturnType == typeof(void*)) {
 							sb.AppendLine (indent + "\treturn mono_object_unbox (__result__);");
 						}
@@ -1114,12 +1128,6 @@ namespace MonoNative.Generator
 				}
 				else
 				{
-					var genericTypes = method.DeclaringType.GetGenericArguments();
-					sb.AppendLine(indent + "\tMonoType *__generic_types__[" + genericTypes.Count() + "];");
-					for (int i = 0; i < genericTypes.Count(); i++)
-					{
-						sb.AppendLine(indent + "\t__generic_types__[" + i + "] = Global::GetType(typeid(" + genericTypes[i].Name + ").name());");
-					}
 					sb.AppendLine(indent + "\t" + (method.ReturnType != typeof(void) ? "MonoObject *__result__ = " : "") + "Global::InvokeMethod(\"" + method.DeclaringType.Assembly.GetName().Name + "\", \"" + method.DeclaringType.Namespace + "\", \"" + method.DeclaringType.FullName.Replace(method.DeclaringType.Namespace + ".", "") + "\", " + genericTypes.Count() + ", __generic_types__, \"" + method.Name + "\", " + (method.IsStatic ? "NullMonoObject" : GetNativeObjectPrefix(type) + type.ToNativeObjectVariable()) + ", " + parameters.Count() + ", " + (parameters.Count() == 0 ? "NULL" : "__parameter_types__") + ", " + (parameters.Count() == 0 ? "NULL" : "__parameters__") + ", NULL);");
 					if (method.ReturnType != typeof(void))
 					{
@@ -1137,23 +1145,43 @@ namespace MonoNative.Generator
 			}
 			else
 			{
-				sb.AppendLine(indent + "\t" + (method.ReturnType != typeof(void) ? "MonoObject *__result__ = " : "") + "Global::InvokeMethod(\"" + method.DeclaringType.Assembly.GetName().Name + "\", \"" + method.DeclaringType.Namespace + "\", \"" + method.DeclaringType.FullName.Replace(method.DeclaringType.Namespace + ".", "") + "\", 0, NULL, \"" + method.Name + "\", " + (method.IsStatic ? "NullMonoObject" : type.ToNativeObjectVariable()) + ", " + parameters.Count() + ", " + (parameters.Count() == 0 ? "NULL" : "__parameter_types__") + ", " + (parameters.Count() == 0 ? "NULL" : "__parameters__") + ", NULL);");
-				if (method.ReturnType != typeof(void))
-				{
-					if (method.ReturnType.IsDelegate ()) {
-						sb.AppendLine (indent + "\tvoid* __delegate_result__ = mono_object_unbox(__result__);");
-						sb.AppendLine (indent + "\treturn " + method.ReturnType.SanitizedName () + "();");
-					} else if (method.ReturnType.IsArray) {
-						var arrayType = method.ReturnType;
-
-						WriteReturnArray (sb, indent, arrayType);
-					} else if (method.ReturnType == typeof(void*)) {
-						sb.AppendLine (indent + "\treturn mono_object_unbox (__result__);");
-					} else if (method.ReturnType.IsReallyEnum ()) {
-						sb.AppendLine (indent + "\treturn static_cast<" + method.ReturnType.SanitizedName() + ">(*(mscorlib::System::Int32*)mono_object_unbox(__result__)" + ");");
+				if (method.IsGenericMethod) {
+					var genericTypes = method.GetGenericArguments();
+					sb.AppendLine (indent + "\tMonoType *__generic_types__[" + genericTypes.Count () + "];");
+					for (int j = 0; j < genericTypes.Count (); j++) {
+						sb.AppendLine (indent + "\t__generic_types__[" + j + "] = Global::GetType(typeid(" + genericTypes[j].Name + ").name());");
 					}
-					else {
-						sb.AppendLine (indent + "\treturn " + (method.Name == "GetEnumerator" || method.ReturnType.Name.EndsWith("*") ? "new " : "") + (method.ReturnType.IsReallyEnum() || method.ReturnType.IsReallyPrimitive() ? "*(" + method.ReturnType.SanitizedName () + "*)mono_object_unbox(__result__)" : method.ReturnType.SanitizedName ().Replace("*", "") + "(__result__)") + ";");
+					sb.AppendLine(indent + "\t" + (method.ReturnType != typeof(void) ? "MonoObject *__result__ = " : "") + "Global::InvokeMethod(\"" + method.DeclaringType.Assembly.GetName().Name + "\", \"" + method.DeclaringType.Namespace + "\", \"" + method.DeclaringType.FullName.Replace(method.DeclaringType.Namespace + ".", "") + "\", 0, NULL, \"" + method.Name + "\", " + (method.IsStatic ? "NullMonoObject" : GetNativeObjectPrefix(type) + type.ToNativeObjectVariable()) + ", " + genericTypes.Count() + ", __generic_types__, " + parameters.Count() + ", " + (parameters.Count() == 0 ? "NULL" : "__parameter_types__") + ", " + (parameters.Count() == 0 ? "NULL" : "__parameters__") + ", NULL);");
+					if (method.ReturnType != typeof(void))
+					{
+						if (method.ReturnType.IsArray) {
+							var arrayType = method.ReturnType;
+							WriteReturnArray (sb, indent, arrayType);
+						} else if (method.ReturnType == typeof(void*) || method.ReturnType == typeof(IntPtr)) {
+							sb.AppendLine (indent + "\treturn mono_object_unbox (__result__);");
+						}
+						else {
+							sb.AppendLine (indent + "\treturn " + (method.Name == "GetEnumerator" ? "new " : "") + (method.ReturnType.IsReallyEnum() || method.ReturnType.IsReallyPrimitive() ? "*(" + method.ReturnType.SanitizedName () + "*)mono_object_unbox(__result__)" : method.ReturnType.SanitizedName () + "(__result__)") + ";");
+						}
+					}
+				}
+				else {
+					sb.AppendLine (indent + "\t" + (method.ReturnType != typeof(void) ? "MonoObject *__result__ = " : "") + "Global::InvokeMethod(\"" + method.DeclaringType.Assembly.GetName ().Name + "\", \"" + method.DeclaringType.Namespace + "\", \"" + method.DeclaringType.FullName.Replace (method.DeclaringType.Namespace + ".", "") + "\", 0, NULL, \"" + method.Name + "\", " + (method.IsStatic ? "NullMonoObject" : type.ToNativeObjectVariable ()) + ", " + parameters.Count () + ", " + (parameters.Count () == 0 ? "NULL" : "__parameter_types__") + ", " + (parameters.Count () == 0 ? "NULL" : "__parameters__") + ", NULL);");
+					if (method.ReturnType != typeof(void)) {
+						if (method.ReturnType.IsDelegate ()) {
+							sb.AppendLine (indent + "\tvoid* __delegate_result__ = mono_object_unbox(__result__);");
+							sb.AppendLine (indent + "\treturn " + method.ReturnType.SanitizedName () + "();");
+						} else if (method.ReturnType.IsArray) {
+							var arrayType = method.ReturnType;
+
+							WriteReturnArray (sb, indent, arrayType);
+						} else if (method.ReturnType == typeof(void*) || method.ReturnType == typeof(IntPtr)) {
+							sb.AppendLine (indent + "\treturn mono_object_unbox (__result__);");
+						} else if (method.ReturnType.IsReallyEnum ()) {
+							sb.AppendLine (indent + "\treturn static_cast<" + method.ReturnType.SanitizedName () + ">(*(mscorlib::System::Int32*)mono_object_unbox(__result__)" + ");");
+						} else {
+							sb.AppendLine (indent + "\treturn " + (method.Name == "GetEnumerator" || method.ReturnType.Name.EndsWith ("*") ? "new " : "") + (method.ReturnType.IsReallyEnum () || method.ReturnType.IsReallyPrimitive () ? "*(" + method.ReturnType.SanitizedName () + "*)mono_object_unbox(__result__)" : method.ReturnType.SanitizedName ().Replace ("*", "") + "(__result__)") + ";");
+						}
 					}
 				}
 			}
@@ -1192,21 +1220,23 @@ namespace MonoNative.Generator
 				var parameter = parameters [i];
 				if (parameter.ParameterType == typeof(string) && withNativeCharPtr) {
 					sb.AppendLine (indent + "\t__parameters__[" + i + "] = mono_string_new(Global::GetDomain(), " + parameter.GetName () + ");");
-				}
-				else if (parameter.ParameterType == typeof(bool)) {
+				} else if (parameter.ParameterType == typeof(bool)) {
 					sb.AppendLine (indent + "\t__parameters__[" + i + "] = reinterpret_cast<void*>(" + parameter.GetName () + ");");
 				} else if (parameter.ParameterType.IsReallyEnum ()) {
-					sb.AppendLine (indent + "\tmscorlib::System::Int32 __param_" + parameter.GetName() + "__ = " + parameter.GetName() + ";");
-					sb.AppendLine (indent + "\t__parameters__[" + i + "] = &__param_" + parameter.GetName() + "__;");
-				}
-				else if (parameter.ParameterType.IsArray) {
+					sb.AppendLine (indent + "\tmscorlib::System::Int32 __param_" + parameter.GetName () + "__ = " + parameter.GetName () + ";");
+					sb.AppendLine (indent + "\t__parameters__[" + i + "] = &__param_" + parameter.GetName () + "__;");
+				} else if (parameter.ParameterType.IsArray) {
 					var arrayType = parameter.ParameterType.GetElementType ();
-					if (isConstructor) {
-						sb.AppendLine (indent + "\t__parameters__[" + i + "] = Global::FromArray<" + parameter.ParameterType.GetElementType ().SanitizedName () + "*>(" + parameter.GetName () + ", \"" + arrayType.Assembly.GetName () + "\", \"" + arrayType.Namespace + "\", \"" + arrayType.Name + "\");");
+					if (arrayType == typeof(char) || arrayType.IsReallyPrimitive ()) {
+						sb.AppendLine (indent + "\t__parameters__[" + i + "] = Global::FromPrimitiveArray<" + parameter.ParameterType.GetElementType ().SanitizedName () + "*>(" + parameter.GetName () + ", typeid(" + arrayType.SanitizedName () + ").name());");
 					} else {
-						sb.AppendLine (indent + "\t__parameters__[" + i + "] = Global::FromArray<" + parameter.ParameterType.GetElementType ().SanitizedName () + "*>(" + parameter.GetName () + ", typeid(" + arrayType.SanitizedName () + ").name());");
+						if (isConstructor) {
+							sb.AppendLine (indent + "\t__parameters__[" + i + "] = " + (arrayType.IsDelegate () ? "NULL; //" : "") + "Global::FromArray<" + parameter.ParameterType.GetElementType ().SanitizedName () + "*>(" + parameter.GetName () + ", \"" + arrayType.Assembly.GetName ().Name + "\", \"" + arrayType.Namespace + "\", \"" + arrayType.Name + "\");");
+						} else {
+							sb.AppendLine (indent + "\t__parameters__[" + i + "] = " + (arrayType.IsDelegate () ? "NULL; //" : "") + "Global::FromArray<" + parameter.ParameterType.GetElementType ().SanitizedName () + "*>(" + parameter.GetName () + ", typeid(" + arrayType.SanitizedName () + ").name());");
+						}
 					}
-				} else if (parameter.ParameterType.IsPointer || parameter.ParameterType.Name.EndsWith ("*")) {
+				} else if (parameter.ParameterType == typeof(IntPtr) || parameter.ParameterType.IsPointer || parameter.ParameterType.Name.EndsWith ("*")) {
 					sb.AppendLine (indent + "\t__parameters__[" + i + "] = " + parameter.GetName () + (parameter.ParameterType.IsReallyPrimitive () ? "" : "->GetNativeObject()") + ";");
 				} else {
 					sb.AppendLine (indent + "\t__parameters__[" + i + "] = " + (parameter.ParameterType.IsDelegate () || parameter.ParameterType.IsReallyEnum () || parameter.ParameterType.IsReallyPrimitive () ? "&" : "(MonoObject*)") + parameter.GetName () + ";");

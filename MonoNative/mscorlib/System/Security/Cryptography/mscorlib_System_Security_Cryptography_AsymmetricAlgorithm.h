@@ -63,6 +63,7 @@ namespace mscorlib
 				
 
 					AsymmetricAlgorithm & operator=(AsymmetricAlgorithm &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(AsymmetricAlgorithm &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

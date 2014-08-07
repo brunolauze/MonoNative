@@ -2,7 +2,6 @@
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_Guid.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_TYPEDESC.h>
 #include <mscorlib/System/Runtime/InteropServices/ComTypes/mscorlib_System_Runtime_InteropServices_ComTypes_IDLDESC.h>
 
@@ -73,7 +72,7 @@ namespace mscorlib
 					//	Get/Set:lpstrSchema
 					mscorlib::System::IntPtr TYPEATTR::get_lpstrSchema() const
 					{
-						return Global::GetFieldValue(__native_object__, "lpstrSchema");
+						return Global::GetFieldIntPtrValue(__native_object__, "lpstrSchema");
 					}
 
 					void TYPEATTR::set_lpstrSchema(mscorlib::System::IntPtr  value)

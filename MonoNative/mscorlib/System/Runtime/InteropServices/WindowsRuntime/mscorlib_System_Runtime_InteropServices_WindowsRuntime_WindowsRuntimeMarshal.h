@@ -11,7 +11,6 @@ namespace mscorlib
 
 		class Type;
 		class String;
-		class IntPtr;
 		
 
 	}
@@ -66,6 +65,7 @@ namespace mscorlib
 					
 
 						WindowsRuntimeMarshal & operator=(WindowsRuntimeMarshal &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(WindowsRuntimeMarshal &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -81,7 +81,9 @@ namespace mscorlib
 							__parameters__[0] = &addMethod;
 							__parameters__[1] = &removeMethod;
 							__parameters__[2] = (MonoObject*)handler;
-							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "AddEventHandler", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+							MonoType *__generic_types__[1];
+							__generic_types__[0] = Global::GetType(typeid(T).name());
+							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "AddEventHandler", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 						};
 						
 						static void  FreeHString(mscorlib::System::IntPtr ptr);
@@ -97,7 +99,9 @@ namespace mscorlib
 							__parameter_types__[1] = Global::GetType(typeid(handler).name());
 							__parameters__[0] = &removeMethod;
 							__parameters__[1] = (MonoObject*)handler;
-							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "RemoveEventHandler", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+							MonoType *__generic_types__[1];
+							__generic_types__[0] = Global::GetType(typeid(T).name());
+							Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices.WindowsRuntime", "WindowsRuntimeMarshal", 0, NULL, "RemoveEventHandler", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 						};
 						
 						static mscorlib::System::IntPtr  StringToHString(mscorlib::System::String s);

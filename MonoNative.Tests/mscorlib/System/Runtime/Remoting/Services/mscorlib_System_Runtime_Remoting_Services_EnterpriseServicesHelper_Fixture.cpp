@@ -11,7 +11,6 @@
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_MarshalByRefObject.h>
 #include <mscorlib/System/Runtime/Remoting/Proxies/mscorlib_System_Runtime_Remoting_Proxies_RealProxy.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 

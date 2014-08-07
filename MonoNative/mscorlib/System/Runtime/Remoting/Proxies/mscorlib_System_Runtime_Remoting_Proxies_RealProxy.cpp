@@ -3,7 +3,6 @@
 #include <mscorlib/System/Runtime/Remoting/mscorlib_System_Runtime_Remoting_ObjRef.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_SerializationInfo.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_StreamingContext.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_Guid.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 
@@ -55,7 +54,7 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(fIsMarshalled).name());
 							__parameters__[0] = reinterpret_cast<void*>(fIsMarshalled);
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Proxies", "RealProxy", 0, NULL, "GetCOMIUnknown", __native_object__, 1, __parameter_types__, __parameters__, NULL);
-							return mscorlib::System::IntPtr(__result__);
+							return mono_object_unbox (__result__);
 					}
 
 					void RealProxy::SetCOMIUnknown(mscorlib::System::IntPtr i)
@@ -63,7 +62,7 @@ namespace mscorlib
 							MonoType *__parameter_types__[1];
 							void *__parameters__[1];
 							__parameter_types__[0] = Global::GetType(typeid(i).name());
-							__parameters__[0] = (MonoObject*)i;
+							__parameters__[0] = i;
 							Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Proxies", "RealProxy", 0, NULL, "SetCOMIUnknown", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 					}
 
@@ -74,7 +73,7 @@ namespace mscorlib
 							__parameter_types__[0] = Global::GetType(typeid(iid).name());
 							__parameters__[0] = (MonoObject*)iid;
 							MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.Remoting.Proxies", "RealProxy", 0, NULL, "SupportsInterface", __native_object__, 1, __parameter_types__, __parameters__, NULL);
-							return mscorlib::System::IntPtr(__result__);
+							return mono_object_unbox (__result__);
 					}
 
 					mscorlib::System::Object RealProxy::GetStubData(mscorlib::System::Runtime::Remoting::Proxies::RealProxy rp)

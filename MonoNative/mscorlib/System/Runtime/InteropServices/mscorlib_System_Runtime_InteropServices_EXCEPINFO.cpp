@@ -1,7 +1,6 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_EXCEPINFO.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -78,7 +77,7 @@ namespace mscorlib
 				//	Get/Set:pvReserved
 				mscorlib::System::IntPtr EXCEPINFO::get_pvReserved() const
 				{
-					return Global::GetFieldValue(__native_object__, "pvReserved");
+					return Global::GetFieldIntPtrValue(__native_object__, "pvReserved");
 				}
 
 				void EXCEPINFO::set_pvReserved(mscorlib::System::IntPtr  value)
@@ -88,7 +87,7 @@ namespace mscorlib
 				//	Get/Set:pfnDeferredFillIn
 				mscorlib::System::IntPtr EXCEPINFO::get_pfnDeferredFillIn() const
 				{
-					return Global::GetFieldValue(__native_object__, "pfnDeferredFillIn");
+					return Global::GetFieldIntPtrValue(__native_object__, "pfnDeferredFillIn");
 				}
 
 				void EXCEPINFO::set_pfnDeferredFillIn(mscorlib::System::IntPtr  value)

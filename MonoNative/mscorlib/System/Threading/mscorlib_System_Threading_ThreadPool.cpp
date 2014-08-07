@@ -1,7 +1,6 @@
 #include <mscorlib/System/Threading/mscorlib_System_Threading_ThreadPool.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_SafeHandle.h>
 #include <mscorlib/System/Threading/mscorlib_System_Threading_RegisteredWaitHandle.h>
 #include <mscorlib/System/Threading/mscorlib_System_Threading_WaitHandle.h>
@@ -23,7 +22,7 @@ namespace mscorlib
 					MonoType *__parameter_types__[1];
 					void *__parameters__[1];
 					__parameter_types__[0] = Global::GetType(typeid(osHandle).name());
-					__parameters__[0] = (MonoObject*)osHandle;
+					__parameters__[0] = osHandle;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "ThreadPool", 0, NULL, "BindHandle", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 			}

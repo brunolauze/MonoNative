@@ -11,18 +11,6 @@
 
 namespace mscorlib
 {
-	namespace System
-	{
-
-		class IntPtr;
-		class TimeSpan;
-		class Type;
-		
-
-	}
-}
-namespace mscorlib
-{
 	namespace Microsoft
 	{
 		namespace Win32
@@ -35,6 +23,17 @@ namespace mscorlib
 
 			}
 		}
+	}
+}
+namespace mscorlib
+{
+	namespace System
+	{
+
+		class TimeSpan;
+		class Type;
+		
+
 	}
 }
 namespace mscorlib
@@ -151,6 +150,7 @@ namespace mscorlib
 			
 
 				EventWaitHandle & operator=(EventWaitHandle &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(EventWaitHandle &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

@@ -1,5 +1,4 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_GCHandle.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 
@@ -18,7 +17,7 @@ namespace mscorlib
 				mscorlib::System::IntPtr GCHandle::AddrOfPinnedObject()
 				{
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "GCHandle", 0, NULL, "AddrOfPinnedObject", __native_object__, 0, NULL, NULL, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				mscorlib::System::Runtime::InteropServices::GCHandle GCHandle::Alloc(mscorlib::System::Object value)
@@ -70,7 +69,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
-						__parameters__[0] = (MonoObject*)value;
+						__parameters__[0] = value;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "GCHandle", 0, NULL, "FromIntPtr", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Runtime::InteropServices::GCHandle(__result__);
 				}
@@ -82,7 +81,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(value).name());
 						__parameters__[0] = (MonoObject*)value;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "GCHandle", 0, NULL, "ToIntPtr", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
-						return mscorlib::System::IntPtr(__result__);
+						return mono_object_unbox (__result__);
 				}
 
 				//Get Set Properties Methods

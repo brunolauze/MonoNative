@@ -122,7 +122,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(value, typeid(mscorlib::System::Int32).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(value, typeid(mscorlib::System::Int32).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_CurrencyGroupSizes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -351,7 +351,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(value, typeid(mscorlib::System::Int32).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(value, typeid(mscorlib::System::Int32).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_NumberGroupSizes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 
@@ -444,7 +444,7 @@ namespace mscorlib
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(value, typeid(mscorlib::System::Int32).name());
+				__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(value, typeid(mscorlib::System::Int32).name());
 				Global::InvokeMethod("mscorlib", "System.Globalization", "NumberFormatInfo", 0, NULL, "set_PercentGroupSizes", __native_object__, 1, __parameter_types__, __parameters__, NULL);
 			}
 

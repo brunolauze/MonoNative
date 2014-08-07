@@ -4,7 +4,6 @@
 #include <mscorlib/System/mscorlib_System_Guid.h>
 #include <mscorlib/System/Diagnostics/SymbolStore/mscorlib_System_Diagnostics_SymbolStore_SymbolToken.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 
 
 
@@ -281,11 +280,11 @@ namespace mscorlib
 						__parameter_types__[4] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameters__[0] = (MonoObject*)document;
-						__parameters__[1] = Global::FromArray<mscorlib::System::Int32*>(offsets, typeid(mscorlib::System::Int32).name());
-						__parameters__[2] = Global::FromArray<mscorlib::System::Int32*>(lines, typeid(mscorlib::System::Int32).name());
-						__parameters__[3] = Global::FromArray<mscorlib::System::Int32*>(columns, typeid(mscorlib::System::Int32).name());
-						__parameters__[4] = Global::FromArray<mscorlib::System::Int32*>(endLines, typeid(mscorlib::System::Int32).name());
-						__parameters__[5] = Global::FromArray<mscorlib::System::Int32*>(endColumns, typeid(mscorlib::System::Int32).name());
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(offsets, typeid(mscorlib::System::Int32).name());
+						__parameters__[2] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(lines, typeid(mscorlib::System::Int32).name());
+						__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(columns, typeid(mscorlib::System::Int32).name());
+						__parameters__[4] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(endLines, typeid(mscorlib::System::Int32).name());
+						__parameters__[5] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(endColumns, typeid(mscorlib::System::Int32).name());
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "DefineSequencePoints", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 6, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -296,7 +295,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(emitter).name());
 						__parameter_types__[1] = Global::GetType(typeid(filename).name());
 						__parameter_types__[2] = Global::GetType(typeid(fFullBuild).name());
-						__parameters__[0] = (MonoObject*)emitter;
+						__parameters__[0] = emitter;
 						__parameters__[1] = (MonoObject*)filename;
 						__parameters__[2] = reinterpret_cast<void*>(fFullBuild);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "Initialize", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 3, __parameter_types__, __parameters__, NULL);
@@ -309,7 +308,7 @@ namespace mscorlib
 						__parameter_types__[0] = Global::GetType(typeid(emitter).name());
 						__parameter_types__[1] = Global::GetType("mscorlib", "System", "String");
 						__parameter_types__[2] = Global::GetType(typeid(fFullBuild).name());
-						__parameters__[0] = (MonoObject*)emitter;
+						__parameters__[0] = emitter;
 						__parameters__[1] = mono_string_new(Global::GetDomain(), filename);
 						__parameters__[2] = reinterpret_cast<void*>(fFullBuild);
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "Initialize", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 3, __parameter_types__, __parameters__, NULL);
@@ -415,7 +414,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(underlyingWriter).name());
-						__parameters__[0] = (MonoObject*)underlyingWriter;
+						__parameters__[0] = underlyingWriter;
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolWriter", 0, NULL, "SetUnderlyingWriter", __mscorlib_System_Diagnostics_SymbolStore_ISymbolWriter, 1, __parameter_types__, __parameters__, NULL);
 				}
 

@@ -3,7 +3,6 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_MulticastDelegate.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_ICloneable.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
 #include <mscorlib/System/mscorlib_System_IAsyncResult.h>
@@ -53,6 +52,7 @@ namespace mscorlib
 				
 
 					ConditionalWeakTable & operator=(ConditionalWeakTable &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(ConditionalWeakTable &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

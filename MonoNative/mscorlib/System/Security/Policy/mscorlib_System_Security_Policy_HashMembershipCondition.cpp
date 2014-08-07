@@ -1,5 +1,4 @@
 #include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_HashMembershipCondition.h>
-#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_Evidence.h>
 #include <mscorlib/System/Security/mscorlib_System_Security_SecurityElement.h>
 #include <mscorlib/System/Security/Policy/mscorlib_System_Security_Policy_PolicyLevel.h>

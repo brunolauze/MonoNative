@@ -9,7 +9,6 @@ namespace mscorlib
 	{
 
 		class Byte;
-		class IntPtr;
 		
 
 	}

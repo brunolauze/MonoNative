@@ -1,5 +1,4 @@
 #include <mscorlib/System/Threading/mscorlib_System_Threading_SynchronizationContext.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/mscorlib_System_Type.h>
 #include <mscorlib/System/mscorlib_System_String.h>
 
@@ -74,7 +73,7 @@ namespace mscorlib
 					__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "IntPtr")), 1));
 					__parameter_types__[1] = Global::GetType(typeid(waitAll).name());
 					__parameter_types__[2] = Global::GetType(typeid(millisecondsTimeout).name());
-					__parameters__[0] = Global::FromArray<mscorlib::System::IntPtr*>(waitHandles, typeid(mscorlib::System::IntPtr).name());
+					__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::IntPtr*>(waitHandles, typeid(mscorlib::System::IntPtr).name());
 					__parameters__[1] = reinterpret_cast<void*>(waitAll);
 					__parameters__[2] = &millisecondsTimeout;
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading", "SynchronizationContext", 0, NULL, "Wait", __native_object__, 3, __parameter_types__, __parameters__, NULL);

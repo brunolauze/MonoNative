@@ -1,6 +1,5 @@
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_UCOMIStream.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Runtime/InteropServices/mscorlib_System_Runtime_InteropServices_STATSTG.h>
 
 
@@ -24,7 +23,7 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(pcbRead).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(pv, typeid(mscorlib::System::Byte).name());
 						__parameters__[1] = &cb;
-						__parameters__[2] = (MonoObject*)pcbRead;
+						__parameters__[2] = pcbRead;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMIStream", 0, NULL, "Read", __mscorlib_System_Runtime_InteropServices_UCOMIStream, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -37,7 +36,7 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(pcbWritten).name());
 						__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(pv, typeid(mscorlib::System::Byte).name());
 						__parameters__[1] = &cb;
-						__parameters__[2] = (MonoObject*)pcbWritten;
+						__parameters__[2] = pcbWritten;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMIStream", 0, NULL, "Write", __mscorlib_System_Runtime_InteropServices_UCOMIStream, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -50,7 +49,7 @@ namespace mscorlib
 						__parameter_types__[2] = Global::GetType(typeid(plibNewPosition).name());
 						__parameters__[0] = &dlibMove;
 						__parameters__[1] = &dwOrigin;
-						__parameters__[2] = (MonoObject*)plibNewPosition;
+						__parameters__[2] = plibNewPosition;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMIStream", 0, NULL, "Seek", __mscorlib_System_Runtime_InteropServices_UCOMIStream, 3, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -73,8 +72,8 @@ namespace mscorlib
 						__parameter_types__[3] = Global::GetType(typeid(pcbWritten).name());
 						__parameters__[0] = (MonoObject*)pstm;
 						__parameters__[1] = &cb;
-						__parameters__[2] = (MonoObject*)pcbRead;
-						__parameters__[3] = (MonoObject*)pcbWritten;
+						__parameters__[2] = pcbRead;
+						__parameters__[3] = pcbWritten;
 						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "UCOMIStream", 0, NULL, "CopyTo", __mscorlib_System_Runtime_InteropServices_UCOMIStream, 4, __parameter_types__, __parameters__, NULL);
 				}
 

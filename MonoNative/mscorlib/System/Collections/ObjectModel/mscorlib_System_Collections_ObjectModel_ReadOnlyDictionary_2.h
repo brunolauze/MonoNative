@@ -70,6 +70,7 @@ namespace mscorlib
 					
 
 						ValueCollection & operator=(ValueCollection &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(ValueCollection &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -154,6 +155,7 @@ namespace mscorlib
 					
 
 						KeyCollection & operator=(KeyCollection &value) { __native_object__ = value.GetNativeObject(); return value; };
+						bool operator==(KeyCollection &value) { return mscorlib::System::Object::Equals(value); };
 						operator MonoObject*() { return __native_object__; };
 						MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -258,6 +260,7 @@ namespace mscorlib
 				
 
 					ReadOnlyDictionary & operator=(ReadOnlyDictionary &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(ReadOnlyDictionary &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

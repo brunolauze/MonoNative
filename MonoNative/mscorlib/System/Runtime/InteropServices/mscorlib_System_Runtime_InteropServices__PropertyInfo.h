@@ -28,7 +28,6 @@ namespace mscorlib
 
 		class Type;
 		class Guid;
-		class IntPtr;
 		class String;
 		
 

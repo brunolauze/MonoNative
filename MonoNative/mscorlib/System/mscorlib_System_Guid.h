@@ -4,9 +4,9 @@
 #include <mscorlib/System/mscorlib_System_ValueType.h>
 #include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/mscorlib_System_String.h>
+#include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IComparable_1.h>
 #include <mscorlib/System/mscorlib_System_IEquatable_1.h>
-#include <mscorlib/System/mscorlib_System_IComparable.h>
 #include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
@@ -28,31 +28,31 @@ namespace mscorlib
 
 		class Guid
 			: public mscorlib::System::ValueType
+			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IComparable<mscorlib::System::Guid>
 			, public virtual mscorlib::System::IEquatable<mscorlib::System::Guid>
-			, public virtual mscorlib::System::IObjectComparable
 			, public virtual mscorlib::System::IFormattable
 		{
 		public:
 			Guid(std::vector<mscorlib::System::Byte*> b)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Guid"))
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Guid>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Guid>(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
 				void *__parameters__[1];
 				__parameter_types__[0] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Byte")), 1));
-				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(b, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+				__parameters__[0] = Global::FromArray<mscorlib::System::Byte*>(b, "mscorlib", "System", "Byte");
 				__native_object__ = Global::New("mscorlib", "System", "Guid", 1, __parameter_types__, __parameters__);
 			};
 		
 			Guid(mscorlib::System::String g)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Guid"))
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Guid>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Guid>(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[1];
@@ -64,9 +64,9 @@ namespace mscorlib
 		
 			Guid(mscorlib::System::Int32 a, mscorlib::System::Int16 b, mscorlib::System::Int16 c, std::vector<mscorlib::System::Byte*> d)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Guid"))
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Guid>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Guid>(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[4];
@@ -78,15 +78,15 @@ namespace mscorlib
 				__parameters__[0] = &a;
 				__parameters__[1] = &b;
 				__parameters__[2] = &c;
-				__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(d, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+				__parameters__[3] = Global::FromArray<mscorlib::System::Byte*>(d, "mscorlib", "System", "Byte");
 				__native_object__ = Global::New("mscorlib", "System", "Guid", 4, __parameter_types__, __parameters__);
 			};
 		
 			Guid(mscorlib::System::Int32 a, mscorlib::System::Int16 b, mscorlib::System::Int16 c, mscorlib::System::Byte d, mscorlib::System::Byte e, mscorlib::System::Byte f, mscorlib::System::Byte g, mscorlib::System::Byte h, mscorlib::System::Byte i, mscorlib::System::Byte j, mscorlib::System::Byte k)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Guid"))
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Guid>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Guid>(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[11];
@@ -118,9 +118,9 @@ namespace mscorlib
 		
 			Guid(mscorlib::System::UInt32 a, mscorlib::System::UInt16 b, mscorlib::System::UInt16 c, mscorlib::System::Byte d, mscorlib::System::Byte e, mscorlib::System::Byte f, mscorlib::System::Byte g, mscorlib::System::Byte h, mscorlib::System::Byte i, mscorlib::System::Byte j, mscorlib::System::Byte k)
 			: mscorlib::System::ValueType(mscorlib::NativeTypeInfo::GetTypeInfo("mscorlib","System.Guid"))
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Guid>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Guid>(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			{
 				MonoType *__parameter_types__[11];
@@ -152,18 +152,18 @@ namespace mscorlib
 		
 			Guid(mscorlib::NativeTypeInfo *nativeTypeInfo)
 			: mscorlib::System::ValueType(nativeTypeInfo)
+			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IComparable<mscorlib::System::Guid>(NULL)
 			, mscorlib::System::IEquatable<mscorlib::System::Guid>(NULL)
-			, mscorlib::System::IObjectComparable(NULL)
 			, mscorlib::System::IFormattable(NULL)
 			{
 			};
 		
 			Guid(MonoObject *nativeObject)
 			: mscorlib::System::ValueType(nativeObject)
+			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IComparable<mscorlib::System::Guid>(nativeObject)
 			, mscorlib::System::IEquatable<mscorlib::System::Guid>(nativeObject)
-			, mscorlib::System::IObjectComparable(nativeObject)
 			, mscorlib::System::IFormattable(nativeObject)
 			{
 			};
@@ -174,6 +174,7 @@ namespace mscorlib
 		
 
 			Guid & operator=(Guid &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(Guid &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

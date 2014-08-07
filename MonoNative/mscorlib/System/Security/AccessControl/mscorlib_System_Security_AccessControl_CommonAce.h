@@ -5,24 +5,13 @@
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_AceFlags.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_AceQualifier.h>
 #include <mscorlib/System/Security/Principal/mscorlib_System_Security_Principal_SecurityIdentifier.h>
+#include <mscorlib/System/mscorlib_System_Byte.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_AceType.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_AuditFlags.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_InheritanceFlags.h>
 #include <mscorlib/System/Security/AccessControl/mscorlib_System_Security_AccessControl_PropagationFlags.h>
 #include <mscorlib/System/mscorlib_System_Object.h>
 
-namespace mscorlib
-{
-	namespace System
-	{
-
-		class Byte;
-		class Type;
-		class String;
-		
-
-	}
-}
 namespace mscorlib
 {
 	namespace System
@@ -37,6 +26,17 @@ namespace mscorlib
 
 			}
 		}
+	}
+}
+namespace mscorlib
+{
+	namespace System
+	{
+
+		class Type;
+		class String;
+		
+
 	}
 }
 namespace mscorlib
@@ -70,7 +70,7 @@ namespace mscorlib
 						__parameters__[2] = &accessMask;
 						__parameters__[3] = (MonoObject*)sid;
 						__parameters__[4] = reinterpret_cast<void*>(isCallback);
-						__parameters__[5] = Global::FromArray<mscorlib::System::Byte*>(opaque, "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "System", "Byte");
+						__parameters__[5] = Global::FromArray<mscorlib::System::Byte*>(opaque, "mscorlib", "System", "Byte");
 						__native_object__ = Global::New("mscorlib", "System.Security.AccessControl", "CommonAce", 6, __parameter_types__, __parameters__);
 					};
 				
@@ -90,6 +90,7 @@ namespace mscorlib
 				
 
 					CommonAce & operator=(CommonAce &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(CommonAce &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

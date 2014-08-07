@@ -11,7 +11,6 @@ namespace mscorlib
 	{
 
 		class Byte;
-		class IntPtr;
 		class Type;
 		class String;
 		
@@ -50,6 +49,7 @@ namespace mscorlib
 				
 
 					SafeBuffer & operator=(SafeBuffer &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(SafeBuffer &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -63,7 +63,9 @@ namespace mscorlib
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(numElements).name());
 						__parameters__[0] = &numElements;
-						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "Initialize", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "Initialize", __native_object__, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 					};
 					
 					void  AcquirePointer(mscorlib::System::Byte* pointer);
@@ -75,7 +77,9 @@ namespace mscorlib
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(byteOffset).name());
 						__parameters__[0] = &byteOffset;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "Read", __native_object__, 1, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "Read", __native_object__, 1, __generic_types__, 1, __parameter_types__, __parameters__, NULL);
 						return T(__result__);
 					};
 					
@@ -92,7 +96,9 @@ namespace mscorlib
 						__parameters__[1] = Global::FromArray<T*>(array, typeid(T).name());
 						__parameters__[2] = &index;
 						__parameters__[3] = &count;
-						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "ReadArray", __native_object__, 4, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "ReadArray", __native_object__, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename T>
@@ -104,7 +110,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(value).name());
 						__parameters__[0] = &byteOffset;
 						__parameters__[1] = (MonoObject*)value;
-						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "Write", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "Write", __native_object__, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 					};
 					
 					template<typename T>
@@ -120,7 +128,9 @@ namespace mscorlib
 						__parameters__[1] = Global::FromArray<T*>(array, typeid(T).name());
 						__parameters__[2] = &index;
 						__parameters__[3] = &count;
-						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "WriteArray", __native_object__, 4, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(T).name());
+						Global::InvokeMethod("mscorlib", "System.Runtime.InteropServices", "SafeBuffer", 0, NULL, "WriteArray", __native_object__, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 					};
 					
 					virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

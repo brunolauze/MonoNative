@@ -63,6 +63,7 @@ namespace mscorlib
 				
 
 					Parallel & operator=(Parallel &value) { __native_object__ = value.GetNativeObject(); return value; };
+					bool operator==(Parallel &value) { return mscorlib::System::Object::Equals(value); };
 					operator MonoObject*() { return __native_object__; };
 					MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -86,7 +87,9 @@ namespace mscorlib
 						__parameters__[2] = &localInit;
 						__parameters__[3] = &body;
 						__parameters__[4] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "For", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "For", NullMonoObject, 1, __generic_types__, 5, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -107,7 +110,9 @@ namespace mscorlib
 						__parameters__[3] = &localInit;
 						__parameters__[4] = &body;
 						__parameters__[5] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "For", NullMonoObject, 6, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "For", NullMonoObject, 1, __generic_types__, 6, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -130,7 +135,9 @@ namespace mscorlib
 						__parameters__[2] = &localInit;
 						__parameters__[3] = &body;
 						__parameters__[4] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "For", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "For", NullMonoObject, 1, __generic_types__, 5, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -151,7 +158,9 @@ namespace mscorlib
 						__parameters__[3] = &localInit;
 						__parameters__[4] = &body;
 						__parameters__[5] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "For", NullMonoObject, 6, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "For", NullMonoObject, 1, __generic_types__, 6, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -164,7 +173,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(body).name());
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -177,7 +188,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(body).name());
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -190,7 +203,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(body).name());
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -203,7 +218,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(body).name());
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -216,7 +233,9 @@ namespace mscorlib
 						__parameter_types__[1] = Global::GetType(typeid(body).name());
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -231,7 +250,9 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = (MonoObject*)parallelOptions;
 						__parameters__[2] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -246,7 +267,9 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = (MonoObject*)parallelOptions;
 						__parameters__[2] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -261,7 +284,9 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = (MonoObject*)parallelOptions;
 						__parameters__[2] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -276,7 +301,9 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = (MonoObject*)parallelOptions;
 						__parameters__[2] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -291,7 +318,9 @@ namespace mscorlib
 						__parameters__[0] = (MonoObject*)source;
 						__parameters__[1] = (MonoObject*)parallelOptions;
 						__parameters__[2] = &body;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 3, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[1];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 1, __generic_types__, 3, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -308,7 +337,10 @@ namespace mscorlib
 						__parameters__[1] = &localInit;
 						__parameters__[2] = &body;
 						__parameters__[3] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[2];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						__generic_types__[1] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -325,7 +357,10 @@ namespace mscorlib
 						__parameters__[1] = &localInit;
 						__parameters__[2] = &body;
 						__parameters__[3] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[2];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						__generic_types__[1] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -342,7 +377,10 @@ namespace mscorlib
 						__parameters__[1] = &localInit;
 						__parameters__[2] = &body;
 						__parameters__[3] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 4, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[2];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						__generic_types__[1] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -361,7 +399,10 @@ namespace mscorlib
 						__parameters__[2] = &localInit;
 						__parameters__[3] = &body;
 						__parameters__[4] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[2];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						__generic_types__[1] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __generic_types__, 5, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -380,7 +421,10 @@ namespace mscorlib
 						__parameters__[2] = &localInit;
 						__parameters__[3] = &body;
 						__parameters__[4] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[2];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						__generic_types__[1] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __generic_types__, 5, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					
@@ -399,7 +443,10 @@ namespace mscorlib
 						__parameters__[2] = &localInit;
 						__parameters__[3] = &body;
 						__parameters__[4] = &localFinally;
-						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 5, __parameter_types__, __parameters__, NULL);
+						MonoType *__generic_types__[2];
+						__generic_types__[0] = Global::GetType(typeid(TSource).name());
+						__generic_types__[1] = Global::GetType(typeid(TLocal).name());
+						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Threading.Tasks", "Parallel", 0, NULL, "ForEach", NullMonoObject, 2, __generic_types__, 5, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Threading::Tasks::ParallelLoopResult(__result__);
 					};
 					

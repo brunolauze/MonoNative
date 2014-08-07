@@ -8,18 +8,6 @@ namespace mscorlib
 {
 	namespace System
 	{
-
-		class IntPtr;
-		class String;
-		class Guid;
-		
-
-	}
-}
-namespace mscorlib
-{
-	namespace System
-	{
 		namespace Runtime
 		{
 			namespace InteropServices
@@ -33,6 +21,17 @@ namespace mscorlib
 
 			}
 		}
+	}
+}
+namespace mscorlib
+{
+	namespace System
+	{
+
+		class String;
+		class Guid;
+		
+
 	}
 }
 namespace mscorlib

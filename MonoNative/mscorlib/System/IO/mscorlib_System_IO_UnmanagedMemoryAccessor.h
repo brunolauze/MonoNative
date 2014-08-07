@@ -83,6 +83,7 @@ namespace mscorlib
 			
 
 				UnmanagedMemoryAccessor & operator=(UnmanagedMemoryAccessor &value) { __native_object__ = value.GetNativeObject(); return value; };
+				bool operator==(UnmanagedMemoryAccessor &value) { return mscorlib::System::Object::Equals(value); };
 				operator MonoObject*() { return __native_object__; };
 				MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 
@@ -110,7 +111,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(structure).name());
 					__parameters__[0] = &position;
 					__parameters__[1] = (MonoObject*)structure;
-					Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "Read", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "Read", __native_object__, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				};
 				
 				template<typename T>
@@ -126,7 +129,9 @@ namespace mscorlib
 					__parameters__[1] = Global::FromArray<T*>(array, typeid(T).name());
 					__parameters__[2] = &offset;
 					__parameters__[3] = &count;
-					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "ReadArray", __native_object__, 4, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "ReadArray", __native_object__, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 					return *(mscorlib::System::Int32*)mono_object_unbox(__result__);
 				};
 				
@@ -152,7 +157,9 @@ namespace mscorlib
 					__parameter_types__[1] = Global::GetType(typeid(structure).name());
 					__parameters__[0] = &position;
 					__parameters__[1] = (MonoObject*)structure;
-					Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "Write", __native_object__, 2, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "Write", __native_object__, 1, __generic_types__, 2, __parameter_types__, __parameters__, NULL);
 				};
 				
 				template<typename T>
@@ -168,7 +175,9 @@ namespace mscorlib
 					__parameters__[1] = Global::FromArray<T*>(array, typeid(T).name());
 					__parameters__[2] = &offset;
 					__parameters__[3] = &count;
-					Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "WriteArray", __native_object__, 4, __parameter_types__, __parameters__, NULL);
+					MonoType *__generic_types__[1];
+					__generic_types__[0] = Global::GetType(typeid(T).name());
+					Global::InvokeMethod("mscorlib", "System.IO", "UnmanagedMemoryAccessor", 0, NULL, "WriteArray", __native_object__, 1, __generic_types__, 4, __parameter_types__, __parameters__, NULL);
 				};
 				
 				virtual MonoObject* GetNativeObject()  override  { return __native_object__; };

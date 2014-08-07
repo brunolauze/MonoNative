@@ -93,12 +93,12 @@ namespace mscorlib
 						__parameter_types__[3] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameter_types__[4] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameter_types__[5] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
-						__parameters__[0] = Global::FromArray<mscorlib::System::Int32*>(offsets, typeid(mscorlib::System::Int32).name());
+						__parameters__[0] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(offsets, typeid(mscorlib::System::Int32).name());
 						__parameters__[1] = Global::FromArray<mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument*>(documents, typeid(mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument).name());
-						__parameters__[2] = Global::FromArray<mscorlib::System::Int32*>(lines, typeid(mscorlib::System::Int32).name());
-						__parameters__[3] = Global::FromArray<mscorlib::System::Int32*>(columns, typeid(mscorlib::System::Int32).name());
-						__parameters__[4] = Global::FromArray<mscorlib::System::Int32*>(endLines, typeid(mscorlib::System::Int32).name());
-						__parameters__[5] = Global::FromArray<mscorlib::System::Int32*>(endColumns, typeid(mscorlib::System::Int32).name());
+						__parameters__[2] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(lines, typeid(mscorlib::System::Int32).name());
+						__parameters__[3] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(columns, typeid(mscorlib::System::Int32).name());
+						__parameters__[4] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(endLines, typeid(mscorlib::System::Int32).name());
+						__parameters__[5] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(endColumns, typeid(mscorlib::System::Int32).name());
 						Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolMethod", 0, NULL, "GetSequencePoints", __mscorlib_System_Diagnostics_SymbolStore_ISymbolMethod, 6, __parameter_types__, __parameters__, NULL);
 				}
 
@@ -110,8 +110,8 @@ namespace mscorlib
 						__parameter_types__[1] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameter_types__[2] = mono_class_get_type(mono_array_class_get(mono_class_from_mono_type(Global::GetType("mscorlib", "System", "Int32")), 1));
 						__parameters__[0] = Global::FromArray<mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument*>(docs, typeid(mscorlib::System::Diagnostics::SymbolStore::ISymbolDocument).name());
-						__parameters__[1] = Global::FromArray<mscorlib::System::Int32*>(lines, typeid(mscorlib::System::Int32).name());
-						__parameters__[2] = Global::FromArray<mscorlib::System::Int32*>(columns, typeid(mscorlib::System::Int32).name());
+						__parameters__[1] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(lines, typeid(mscorlib::System::Int32).name());
+						__parameters__[2] = Global::FromPrimitiveArray<mscorlib::System::Int32*>(columns, typeid(mscorlib::System::Int32).name());
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Diagnostics.SymbolStore", "ISymbolMethod", 0, NULL, "GetSourceStartEnd", __mscorlib_System_Diagnostics_SymbolStore_ISymbolMethod, 3, __parameter_types__, __parameters__, NULL);
 						return *(mscorlib::System::Boolean*)mono_object_unbox(__result__);
 				}

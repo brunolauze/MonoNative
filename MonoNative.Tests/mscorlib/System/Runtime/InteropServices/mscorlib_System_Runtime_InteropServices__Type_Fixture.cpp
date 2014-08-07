@@ -16,7 +16,6 @@
 #include <mscorlib/System/mscorlib_System_String.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_FieldInfo.h>
 #include <mscorlib/System/mscorlib_System_Guid.h>
-#include <mscorlib/System/mscorlib_System_IntPtr.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_InterfaceMapping.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_MethodInfo.h>
 #include <mscorlib/System/Reflection/mscorlib_System_Reflection_PropertyInfo.h>

@@ -3,8 +3,8 @@
 
 #include <mscorlib/System/mscorlib_System_Object.h>
 #include <mscorlib/System/mscorlib_System_IConvertible.h>
-#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_IComparable.h>
+#include <mscorlib/System/mscorlib_System_IFormattable.h>
 #include <mscorlib/System/mscorlib_System_TypeCode.h>
 #include <mscorlib/System/mscorlib_System_IFormatProvider.h>
 #include <mscorlib/System/Runtime/Serialization/mscorlib_System_Runtime_Serialization_ISerializable.h>
@@ -64,6 +64,7 @@ namespace mscorlib
 		
 
 			ActivationContext & operator=(ActivationContext &value) { __native_object__ = value.GetNativeObject(); return value; };
+			bool operator==(ActivationContext &value) { return mscorlib::System::Object::Equals(value); };
 			operator MonoObject*() { return __native_object__; };
 			MonoObject* operator=(MonoObject* value) { return __native_object__ = value; };
 

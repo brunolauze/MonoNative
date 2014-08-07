@@ -66,7 +66,7 @@ namespace mscorlib
 						MonoType *__parameter_types__[1];
 						void *__parameters__[1];
 						__parameter_types__[0] = Global::GetType(typeid(userToken).name());
-						__parameters__[0] = (MonoObject*)userToken;
+						__parameters__[0] = userToken;
 						MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "Impersonate", NullMonoObject, 1, __parameter_types__, __parameters__, NULL);
 						return mscorlib::System::Security::Principal::WindowsImpersonationContext(__result__);
 				}
@@ -124,7 +124,7 @@ namespace mscorlib
 				mscorlib::System::IntPtr  WindowsIdentity::get_Token() const
 				{
 					MonoObject *__result__ = Global::InvokeMethod("mscorlib", "System.Security.Principal", "WindowsIdentity", 0, NULL, "get_Token", __native_object__, 0, NULL, NULL, NULL);
-					return mscorlib::System::IntPtr(__result__);
+					return mono_object_unbox (__result__);
 				}
 
 
